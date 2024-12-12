@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "pressino/pressino-ui-image",
+	"version": "0.1.0",
+	"title": "Pressino UI Image",
+	"category": "widgets",
+	"description": "A square to put stuff in.",
+	"example": {},
+	"supports": {
+		"html": false,
+		"className": false,
+		"customClassName": false
+	},
+	"textdomain": "pressino-ui-image",
+	"editorScript": "file:./index.js"
+}

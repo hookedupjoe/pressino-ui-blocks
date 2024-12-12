@@ -41,27 +41,6 @@ function getStandardProperty(theProps, theAttName, theLabel, theControlType, the
 		tmpContents.push(getTextControl(theProps, theAttName, theLabel, tmpVal, tmpOnChange, theControlType));
 	} else if (listSources[theControlType]) {
 		tmpContents.push(getSelectControl(theProps, theAttName, theLabel, tmpVal, tmpOnChange, theControlType));
-
-		// if (!tmpOnChange) {
-		// 	tmpOnChange = (value) => {
-		// 		var tmpAddedAtts = {};
-		// 		tmpAddedAtts[theAttName] = value;
-		// 		setAttributes(tmpAddedAtts)
-		// 	}
-		// }
-
-		// tmpContents.push( <SelectControl
-		//     label={theLabel}
-		//     value={ tmpVal }
-		//     options={ [
-		//         { label: 'Default', value: '' },
-		//         { label: 'Black', value: 'black' },
-		//         { label: 'Blue', value: 'blue' },
-		//     ] }
-		//     onChange={tmpOnChange}
-		//     __next40pxDefaultSize
-		//     __nextHasNoMarginBottom
-		// />)
 	}
 
 	return tmpContents;
@@ -127,30 +106,6 @@ function getFunctionForType(theControlType) {
 	return 'getTextControl';
 }
 
-// function standardOnChange() {
-// 	//tmpOnChange = tmpOnChange || standardOnChange.bind({ props: theProps, controltype: theControlType });		
-// 	let tmpOnChange = (value) => {
-// 		var tmpNew = {};
-// 		tmpNew[this.name] = value;
-// 		this.props.setAttributes(tmpNew);
-// 	};
-// 	return tmpOnChange;
-// }
-
-// function getOptionsForControlType(theProp) {
-// 	if (!(theProp)) {
-// 		console.error('no property passed to get list control');
-// 		return <></>
-// 	}
-// 	// let tmpList = ThisApp.controls.getSelListFor(theProp);
-// 	// let tmpListLocal = getSelectionListForAttribute(theProp);
-// 	// console.log('comp',tmpList,tmpListLocal);
-// 	// for (var iPos in tmpList) {
-// 	// 	tmpList[iPos].label = tmpList[iPos].name || tmpList[iPos].value;
-// 	// }
-// 	return getSelectionListForAttribute(theProp);
-
-// }
 
 function getSelectControl(theProps, theName, theLabel, theValue, theOnChange, theControlType) {
 	var tmpOnChange = theOnChange;
@@ -259,12 +214,6 @@ function getBlockIcon(theName) {
 }
 
 
-// export const PressinUICore = {
-// 	iconPaths: iconPaths,
-// 	getBlockIcon: getBlockIcon
-// }
-
-
 function getSelectionListForAttribute(thePropName){
 	var tmpName = thePropName;
 	if( listSources[tmpName] ){
@@ -341,19 +290,6 @@ function getListAsObjects (theList) {
 
 }
 
-function getAutoGenList({start,end,prefix, defaultLabel}){
-	var tmpSelection = [el("option", {value: ""}, "Default")];
-	var tmpMax = 20; 
-	for( var i = start ; i <= end ; i++){
-		tmpSelection.push(el("option", {value: prefix + i}, i));
-	}
-	return BlockEditor.getSelectControl(theCurrentValue,theOnChangeEvent,tmpSelection);
-}
-
-// const blockListSources = {
-// 	"color": "colors",
-// 	"size": "sizes"
-// }
 
 export const listSources = {
     "colors": "Default|,Red|red,Orange|orange,Yellow|yellow,Olive|olive,Green|green,Teal|teal,Blue|blue,Violet|violet,Purple|purple,Pink|pink,Brown|brown,Black|black",
