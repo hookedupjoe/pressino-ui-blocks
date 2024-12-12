@@ -8,6 +8,8 @@ export const PressinoUI = {
 	getStandardProperty: getStandardProperty,
 	istr: istr,
 }
+export const attNamesDef = { mediaID: 'mediaID', mediaURL: 'mediaURL' };
+export const el = wp.element.createElement;
 
 export const PRIMARY_NAMESPACE = 'pressino-ui-blocks';
 export function istr(theString) {
@@ -39,11 +41,64 @@ function getStandardProperty(theProps, theAttName, theLabel, theControlType, the
 		/>)
 	} else if (theControlType == 'text' || theControlType == 'number') {
 		tmpContents.push(getTextControl(theProps, theAttName, theLabel, tmpVal, tmpOnChange, theControlType));
+	} else if (theControlType == 'image') {
+		tmpContents.push(getCustomControl(theProps, theAttName, theLabel, tmpVal, tmpOnChange, theControlType));
 	} else if (listSources[theControlType]) {
 		tmpContents.push(getSelectControl(theProps, theAttName, theLabel, tmpVal, tmpOnChange, theControlType));
 	}
 
 	return tmpContents;
+}
+
+function getCustomControl(theProps, theAttName, theLabel, tmpVal, tmpOnChange, theControlType){
+	if( theControlType == 'image'){
+		return getCustomImageSelection(theProps, theAttName, theLabel, tmpVal, tmpOnChange, theControlType)
+	}
+	return '';
+}
+
+function getCustomImageSelection(theProps, theAttName, theLabel, tmpVal, tmpOnChange, theControlType){
+	var tmpAtts = theProps.attributes;
+	var onSelectImage = function( media ) {
+		var tmpToSet = {};
+		tmpToSet[theAttName['mediaURL']] = media.url;
+		tmpToSet[theAttName['mediaID']] = media.id;
+		return theProps.setAttributes(tmpToSet);
+		
+	};
+
+	var onRemoveImage = function(){
+		var tmpToSet = {};
+		tmpToSet[theAttName['mediaURL']] = '';
+		tmpToSet[theAttName['mediaID']] = '';
+		return theProps.setAttributes(tmpToSet);
+	}
+
+	var tmpMediaURL = tmpAtts[theAttName['mediaURL']];
+
+	//var tmpEl = el('div',{className:'ui label black fluid'},'Card Image');
+  //ToDo: Remove hard coded mediaID and mediaURL references
+	var tmpMediaEl = el( wp.blockEditor.MediaUpload, {
+		onSelect: onSelectImage,
+		type: 'image',
+		value: theProps.attributes[theAttName['mediaID']],
+		render: function( obj ) {
+			
+			if( !theProps.attributes.mediaID ){
+				return el('div',{className:'pad2'},
+					el('div', {className:'ui button blue basic', onClick: obj.open}, 'Select Image')
+				)
+			} else {
+				return el('div',{className:'pad2'},
+					el('div', {className:'ui button blue basic', onClick: obj.open}, 'Replace'),
+					el('div', {className:'ui button blue basic', onClick: onRemoveImage}, 'Remove'),                                            
+					el('div',{className:'pad5'}),
+					el('img',{className:'ui image rounded fluid pad10', src:tmpMediaURL})
+				)
+			}
+		}
+	} )   
+	return (tmpMediaEl);
 }
 
 function getFunctionForType(theControlType) {

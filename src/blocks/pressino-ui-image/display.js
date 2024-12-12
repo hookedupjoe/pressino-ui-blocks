@@ -1,16 +1,13 @@
 /**
  * Return universal display element used by edit and save functions
  */
-import { InnerBlocks } from '@wordpress/block-editor';
-import { PressinoUI } from '../../pressino-ui';
+import { PressinoUI, el, attNamesDef } from '../../pressino-ui';
 
 var classSpecs = {
 	boolean: ['fluid', 'avatar', 'rounded', 'circular', 'bordered', 'centered'],
     string: ['color', 'size', 'alignmentvertical','margin','padding','classes']
 }
 
-const el = wp.element.createElement;
-const attNamesDef = { mediaID: 'mediaID', mediaURL: 'mediaURL' };
 
 function getClass(theAtts, theIsEditMode) {
     var tmpClasses = PressinoUI.getStandardClass('ui image ', classSpecs, theAtts, theIsEditMode);
@@ -60,12 +57,7 @@ export default function display({ props, attributes, editMode }) {
                             el('div', { className: 'ui button blue basic', onClick: obj.open }, 'Select Image')
                         )
                     } else {
-                        return el('div', { className: 'pad2' },
-                            el('div', { className: 'ui button blue basic', onClick: obj.open }, 'Replace'),
-                            el('div', { className: 'ui button blue basic', onClick: function () { } }, 'Remove'),
-                            el('div', { className: 'pad2' }),
-                            el('img', { className: 'ui image rounded fluid', src: tmpAtts.mediaURL })
-                        )
+                        return el('div', { className: 'pad2' }, '')
                     }
                 }
             })
