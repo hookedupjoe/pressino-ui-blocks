@@ -15,7 +15,7 @@ import {PressinoUI} from '../../pressino-ui';
  * Setup Block Attributes
  */
 let tmpAttributes = {};
-PressinoUI.addAttributes('boolean', tmpAttributes, ['fluid', 'avatar', 'rounded', 'circular', 'urlopentab', 'bordered', 'centered']);
+PressinoUI.addAttributes('boolean', tmpAttributes, ['rounded', 'circular', 'urlopentab', 'bordered', 'centered']);
 PressinoUI.addAttributes('text', tmpAttributes, ['text', 'color', 'size', 'alignmentvertical', 'url', 'mediaURL', 'float','margin','padding', 'classes']);
 PressinoUI.addAttributes('number', tmpAttributes, ['mediaID']);
 

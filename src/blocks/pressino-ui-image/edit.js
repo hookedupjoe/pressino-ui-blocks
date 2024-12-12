@@ -19,16 +19,19 @@ export default function Edit(props) {
     var tmpDisplay = display({ props, attributes, editMode: true });
     const blockProps = useBlockProps();
     const { raised, basic, attached } = attributes;
-    const checkboxList = ['fluid', 'avatar', 'rounded', 'circular', 'urlopentab', 'bordered', 'centered'];
+    const checkboxList = ['', '', '', '', '', '', ''];
 
     return <>
         <InspectorControls>
 
             <PanelBody title={istr('General Settings')}>
                 {PressinoUI.getStandardProperty(theProps, attNamesDef, 'Image', 'image')}
-                {PressinoUI.getStandardProperty(theProps, 'size', 'Image size', 'sizes')}
-                {(tmpAtts.avatar || tmpAtts.rounded) && (PressinoUI.getStandardProperty(theProps, 'circular', 'Circular', 'checkbox'))}
+                {PressinoUI.getStandardProperty(theProps, 'size', 'Image size', 'imagesizes')}
+                {PressinoUI.getStandardProperty(theProps, 'rounded', 'Rounded', 'checkbox')}
+                {PressinoUI.getStandardProperty(theProps, 'bordered', 'Bordered', 'checkbox')}
+                {(PressinoUI.getStandardProperty(theProps, 'circular', 'Circular', 'checkbox'))}
 
+                {PressinoUI.getStandardProperty(theProps, 'urlopentab', 'Open URL in new tab?', 'checkbox')}
 
                 {/* {PressinoUI.getStandardProperty(theProps, 'attached', 'Attached', 'attached')}
                 {PressinoUI.getStandardProperty(theProps, 'stacked', 'Stacked', 'checkbox')} */}
@@ -49,12 +52,12 @@ export default function Edit(props) {
                  */}
             </PanelBody>
 
-            {/* <PanelBody title={istr('Formatting Options')}>
-                {PressinoUI.getStandardProperty(theProps, 'padding', 'Padding', 'padding')}
+            <PanelBody title={istr('Formatting Options')}>
+            {PressinoUI.getStandardProperty(theProps, 'centered', 'Centered', 'checkbox')}
+            {PressinoUI.getStandardProperty(theProps, 'padding', 'Padding', 'padding')}
                 {PressinoUI.getStandardProperty(theProps, 'alignment', 'Alignment', 'alignment')}
-                {PressinoUI.getStandardProperty(theProps, 'clearing', 'Contain Floaters', 'checkbox')}
                 {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
-            </PanelBody> */}
+            </PanelBody>
 
         </InspectorControls>
         <div {...blockProps}>

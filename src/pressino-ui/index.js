@@ -353,7 +353,7 @@ export const listSources = {
 	"margin": "Default|,0px|mar0,1px|mar1,2px|mar2,3px|mar3,4px|mar4,5px|mar5,6px|mar6,7px|mar7,8px|mar8,9px|mar9,10px|mar10,11px|mar11,12px|mar12,13px|mar13,14px|mar14,15px|mar15,16px|mar16,17px|mar17,18px|mar18,19px|mar19,20px|mar20",
     "alignment": "Default|,Center|center aligned,Left|left aligned,Right|right aligned",
 	"attached": "Default|,Top|top attached,Middle|attached,Bottom|bottom attached",
-	
+    "imagesizes": "Default|,Full Width|fluid,Mini|mini,Tiny|tiny,Small|small,Medium|medium,Large|large,Big|big,Huge|huge,Massive|massive",
 	
 
 	"yesno": "Yes,No",

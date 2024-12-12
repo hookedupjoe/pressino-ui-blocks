@@ -4,14 +4,17 @@
 import { PressinoUI, el, attNamesDef } from '../../pressino-ui';
 
 var classSpecs = {
-	boolean: ['fluid', 'avatar', 'rounded', 'circular', 'bordered', 'centered'],
-    string: ['color', 'size', 'alignmentvertical','margin','padding','classes']
+	boolean: ['rounded', 'circular', 'bordered', 'centered'],
+    string: ['size', 'color', 'alignmentvertical','margin','padding','classes']
 }
 
 
 function getClass(theAtts, theIsEditMode) {
     var tmpClasses = PressinoUI.getStandardClass('ui image ', classSpecs, theAtts, theIsEditMode);
     
+    if( !theAtts.fluid && theAtts.size ){
+        tmpClasses += ' ' + theAtts.size;
+    }
     if( theAtts.classes ){
         tmpClasses = tmpClasses.trim().replace('  ',' ') + ' ' + theAtts.classes;
     }
