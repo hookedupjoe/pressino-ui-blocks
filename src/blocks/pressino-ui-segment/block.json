@@ -6,7 +6,7 @@
 	"title": "Pressino UI Segment",
 	"category": "widgets",
 	"icon": "smiley",
-	"description": "Example block scaffolded with Create Block tool.",
+	"description": "A square to put stuff in.",
 	"example": {},
 	"supports": {
 		"html": false,

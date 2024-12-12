@@ -30,7 +30,8 @@ export default function Edit(theProps) {
             <PanelBody title={istr('General Settings')}>
                 {PressinoUI.getStandardProperty(theProps, 'basic', 'No Border', 'checkbox')}
                 {!basic && (PressinoUI.getStandardProperty(theProps, 'raised', 'Raised', 'checkbox'))}
-                {PressinoUI.getStandardProperty(theProps, 'color', 'Segment Color', 'color')}
+                {PressinoUI.getStandardProperty(theProps, 'color', 'Segment Color', 'colors')}
+                {PressinoUI.getStandardProperty(theProps, 'size', 'Overall size', 'sizes')}
             </PanelBody>
 
             <PanelBody title={istr('Formatting Options')}>
