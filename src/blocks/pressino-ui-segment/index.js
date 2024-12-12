@@ -24,7 +24,7 @@ import {PressinoUI} from '../../pressino-ui';
 
 let tmpAttributes = {};
 PressinoUI.addAttributes('boolean', tmpAttributes, ['raised', 'stacked', 'vertical', 'clearing', 'inverted']);
-PressinoUI.addAttributes('text', tmpAttributes, ['color', 'size', 'attached', 'alignment', 'basic', 'margin', 'padding', 'classes']);
+PressinoUI.addAttributes('text', tmpAttributes, ['color', 'size', 'attached', 'alignment', 'basic', 'padding', 'classes']);
 
 
 /**

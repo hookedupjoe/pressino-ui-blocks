@@ -2,8 +2,8 @@ import { InnerBlocks } from '@wordpress/block-editor';
 import {PressinoUI} from '../../pressino-ui';
 
 var classSpecs = {
-	boolean: ['raised', 'stacked', 'vertical', 'basic', 'clearing', 'inverted', 'margin', 'padding'],
-	string: ['color', 'size', 'attached', 'alignment']
+	boolean: ['raised', 'stacked', 'vertical', 'basic', 'clearing', 'inverted'],
+	string: ['color', 'size', 'attached', 'alignment', 'padding']
 }
 
 function getClass(theAtts, theIsEditMode) {

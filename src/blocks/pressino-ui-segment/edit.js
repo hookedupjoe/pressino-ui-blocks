@@ -22,7 +22,7 @@ export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
     var tmpDisplay = display({ attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { raised, basic, classes } = attributes;
+    const { raised, basic, attached } = attributes;
 
     return <>
         <InspectorControls>
@@ -32,9 +32,15 @@ export default function Edit(theProps) {
                 {!basic && (PressinoUI.getStandardProperty(theProps, 'raised', 'Raised', 'checkbox'))}
                 {PressinoUI.getStandardProperty(theProps, 'color', 'Segment Color', 'colors')}
                 {PressinoUI.getStandardProperty(theProps, 'size', 'Overall size', 'sizes')}
+                {PressinoUI.getStandardProperty(theProps, 'attached', 'Attached', 'attached')}
+                {PressinoUI.getStandardProperty(theProps, 'stacked', 'Stacked', 'checkbox')}
+
             </PanelBody>
 
             <PanelBody title={istr('Formatting Options')}>
+                {PressinoUI.getStandardProperty(theProps, 'padding', 'Padding', 'padding')}
+                {PressinoUI.getStandardProperty(theProps, 'alignment', 'Alignment', 'alignment')}
+                {PressinoUI.getStandardProperty(theProps, 'clearing', 'Contain Floaters', 'checkbox')}
                 {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
             </PanelBody>
 
