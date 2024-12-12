@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/pressino-ui-segment",
+	"version": "0.1.0",
+	"title": "Pressino UI Segment",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Example block scaffolded with Create Block tool.",
+	"example": {},
+	"attributes": {
+		"raised": {
+			"type": "boolean"
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "pressino-ui-segment",
+	"editorScript": "file:./index.js"
+}
