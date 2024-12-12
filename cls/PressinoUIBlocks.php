@@ -74,7 +74,7 @@ class PressinoUIBlocks {
 
 		$tmpJson = json_encode($tmpConfig);
 		$tmpScript = 'window.ActionAppCore.PressinoUIBlocksConfig = ' . $tmpJson;
-		//ActAppCommon::setup_scripts($theHook);
+
 		wp_add_inline_script( 'app-only-preinit', $tmpScript );
 
 		//--- Load the action app core components and ActionAppCore.common.blocks add on

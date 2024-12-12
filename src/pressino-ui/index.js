@@ -11,6 +11,7 @@ export const PressinoUI = {
 	getParentAttributes: getParentAttributes,
 	getParentBlock: getParentBlock,
 	getCommonBlock: getCommonBlock,
+	refreshBlockEditor: refreshBlockEditor,
 	istr: istr,
 }
 export const attNamesDef = { mediaID: 'mediaID', mediaURL: 'mediaURL' };
@@ -19,6 +20,21 @@ export const el = wp.element.createElement;
 export const PRIMARY_NAMESPACE = 'pressino-ui-blocks';
 export function istr(theString) {
 	return __(theString, PRIMARY_NAMESPACE);
+}
+
+
+
+function refreshBlockEditor(){
+	var tmpBlockClientId = '';
+	var tmpThis = wp.data.select( 'core/block-editor' ).getSelectedBlock();
+	if( tmpThis && tmpThis.clientId){
+		tmpBlockClientId = tmpThis.clientId;
+	}
+	wp.data.dispatch('core/block-editor').synchronizeTemplate();
+	if( tmpBlockClientId ){
+	   wp.data.dispatch( 'core/block-editor' ).selectBlock( tmpBlockClientId )
+	}
+
 }
 
 

@@ -33,21 +33,19 @@ export default function Edit(theProps) {
         }
         
     }
-    if( tmpAtts.itemname == ''){
+    if( !(tmpAtts.itemname) ){
         tmpAtts.itemname = PressinoUI.getRandomID();
     }
 
     var tmpItemName = tmpAtts.itemname || ''
     var tmpTabLabel = tmpAtts.tablabel || '';
 
+    //ToDo: Add refresh option for itemname and label **
     let tmpSidebarControls = <InspectorControls>
 
     <PanelBody title={istr('General Settings')}>
-        {PressinoUI.getStandardProperty(theProps, 'groupname', 'Group Name', 'text')}
-        {PressinoUI.getStandardProperty(theProps, 'color', 'Tabs Color', 'colors')}
-        {PressinoUI.getStandardProperty(theProps, 'inverted', 'Inverted', 'checkbox')}
-        {PressinoUI.getStandardProperty(theProps, 'labelpadding', 'Label Padding', 'slimwidespacing')}
-        {PressinoUI.getStandardProperty(theProps, 'bodyonly', 'Exclude the tabs?', 'checkbox')}
+        {PressinoUI.getStandardProperty(theProps, 'itemname', 'Unique Item Name (Required)', 'text') } 
+        {PressinoUI.getStandardProperty(theProps, 'tablabel', 'Tab Label (Required)', 'text')}
     </PanelBody>
 
     <PanelBody title={istr('Formatting Options')}>
@@ -56,7 +54,22 @@ export default function Edit(theProps) {
 
 </InspectorControls>
 
-    //var tmpSidebarControls = BlockEditor.getSidebarControls(tmpSidebarPanels);
+    // //var tmpSidebarControls = BlockEditor.getSidebarControls(tmpSidebarPanels);
+    // var tmpStandardProperties = [
+    //     BlockEditor.getStandardProperty(props, 'itemname', 'Unique Item Name (Required)', 'text', BlockEditor.standardOnChangeRefresh),
+    //     BlockEditor.getStandardProperty(props, 'tablabel', 'Tab Label (Required)', 'text', BlockEditor.standardOnChangeRefresh),
+    // ];
+
+    // var tmpFormatProperties = [
+    //     BlockEditor.getStandardProperty(props,'classes', 'Additional Classes', 'text' )
+    // ];
+
+    // var tmpSidebarPanels = [
+    //     BlockEditor.getSidebarPanel('Column Options', tmpStandardProperties),
+    //     BlockEditor.getSidebarPanel('Formatting Options', tmpFormatProperties)
+    // ];
+
+    // var tmpSidebarControls = BlockEditor.getSidebarControls(tmpSidebarPanels);
 
     var tmpEditorClass = '';
     if( props.isSelected ){
@@ -86,12 +99,18 @@ export default function Edit(theProps) {
         'div',
         {className: tmpEditorClass},
         [
+            tmpEditHeader,
             tmpSidebarControls,
             tmpDisplayObject
         ]
     );
 
-    return el('div',{},tmpEditHeader, tmpRetEl);
+    return <div {...blockProps}>
+        {tmpRetEl}
+    </div>
+
+    //return el('div',{},tmpEditHeader, tmpRetEl);
+
     //---
 
     return <>
