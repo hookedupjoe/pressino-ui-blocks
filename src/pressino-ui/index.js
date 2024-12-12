@@ -51,79 +51,79 @@ function getStandardProperty(theProps, theAttName, theLabel, theControlType, the
 		// }
 
 		// tmpContents.push( <SelectControl
-        //     label={theLabel}
-        //     value={ tmpVal }
-        //     options={ [
-        //         { label: 'Default', value: '' },
-        //         { label: 'Black', value: 'black' },
-        //         { label: 'Blue', value: 'blue' },
-        //     ] }
-        //     onChange={tmpOnChange}
-        //     __next40pxDefaultSize
-        //     __nextHasNoMarginBottom
-        // />)
+		//     label={theLabel}
+		//     value={ tmpVal }
+		//     options={ [
+		//         { label: 'Default', value: '' },
+		//         { label: 'Black', value: 'black' },
+		//         { label: 'Blue', value: 'blue' },
+		//     ] }
+		//     onChange={tmpOnChange}
+		//     __next40pxDefaultSize
+		//     __nextHasNoMarginBottom
+		// />)
 	}
 
 	return tmpContents;
 }
 
-function getFunctionForType(theControlType){
-	var tmpCT = (theControlType||'').toLowerCase();
-	if( tmpCT == 'text'  || tmpCT == 'number' ){
+function getFunctionForType(theControlType) {
+	var tmpCT = (theControlType || '').toLowerCase();
+	if (tmpCT == 'text' || tmpCT == 'number') {
 		return 'getTextControl';
 	}
-	if( tmpCT == 'color' ){
+	if (tmpCT == 'color') {
 		return 'getColorListControl';
 	}
-	if( tmpCT == 'sizeheader' ){
+	if (tmpCT == 'sizeheader') {
 		return 'getHeaderSizeListControl';
-	}            
-	if( tmpCT == 'size' ){
+	}
+	if (tmpCT == 'size') {
 		return 'getSizeListControl';
-	}            
-	if( tmpCT == 'attached' ){
+	}
+	if (tmpCT == 'attached') {
 		return 'getAttachedListControl';
-	}            
-	if( tmpCT == 'alignment' ){
+	}
+	if (tmpCT == 'alignment') {
 		return 'getAlignmentListControl';
-	}            
-	if( tmpCT == 'alignmentleftright' ){
+	}
+	if (tmpCT == 'alignmentleftright') {
 		return 'getLeftRightAlignmentListControl';
-	}            
-	if( tmpCT == 'alignmentvertical' ){
+	}
+	if (tmpCT == 'alignmentvertical') {
 		return 'getVerticalAlignmentListControl';
-	}                        
-	if( tmpCT == 'floatleftright' ){
+	}
+	if (tmpCT == 'floatleftright') {
 		return 'getLeftRighFloatListControl';
-	}            
-	if( tmpCT == 'tofloat' ){
+	}
+	if (tmpCT == 'tofloat') {
 		return 'getFloatControl';
-	}            
-	if( tmpCT == 'columns' ){
+	}
+	if (tmpCT == 'columns') {
 		return 'getColumnListControl';
-	}            
-	if( tmpCT == 'margin' ){
+	}
+	if (tmpCT == 'margin') {
 		return 'getMarginListControl';
-	}            
-	if( tmpCT == 'topmargin' ){
+	}
+	if (tmpCT == 'topmargin') {
 		return 'getTopMarginListControl';
-	}            
-	if( tmpCT == 'bottommargin' ){
+	}
+	if (tmpCT == 'bottommargin') {
 		return 'getBottomMarginListControl';
-	}            
-	if( tmpCT == 'padding' ){
+	}
+	if (tmpCT == 'padding') {
 		return 'getPaddingListControl';
-	}            
-	if( tmpCT == 'inverted' ){
+	}
+	if (tmpCT == 'inverted') {
 		return 'getInvertedListControl';
-	}            
-	if( tmpCT == 'gridspacing' ){
+	}
+	if (tmpCT == 'gridspacing') {
 		return 'getGridSpacingListControl';
-	}            
-	
-	if( tmpCT == 'dropdown' ){
+	}
+
+	if (tmpCT == 'dropdown') {
 		return 'getDropDownListControl';
-	}            
+	}
 	return 'getTextControl';
 }
 
@@ -137,13 +137,13 @@ function getFunctionForType(theControlType){
 // 	return tmpOnChange;
 // }
 
-function getOptionsForControlType(theProp, theCurrentValue, theOnChangeEvent){
-	if( !(theProp)){
+function getOptionsForControlType(theProp, theCurrentValue, theOnChangeEvent) {
+	if (!(theProp)) {
 		console.error('no property passed to get list control');
 		return <></>
 	}
 	let tmpList = ThisApp.controls.getSelListFor(theProp);
-	for( var iPos in tmpList ){
+	for (var iPos in tmpList) {
 		tmpList[iPos].label = tmpList[iPos].name || tmpList[iPos].value;
 	}
 	return tmpList;
@@ -160,9 +160,9 @@ function getSelectControl(theProps, theName, theLabel, theValue, theOnChange, th
 		}
 	}
 	var tmpOptions = getOptionsForControlType(theControlType);
-	return ( <SelectControl
+	return (<SelectControl
 		label={theLabel}
-		value={ theValue }
+		value={theValue}
 		options={tmpOptions}
 		onChange={tmpOnChange}
 		__next40pxDefaultSize
