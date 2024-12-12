@@ -14,30 +14,16 @@ export function istr(theString) {
 	return __(theString, PRIMARY_NAMESPACE);
 }
 
-function standardOnChange(theEvent) {
-	console.log('debug standardOnChange', theEvent);
-	var tmpObjAtts = {};
-	var tmpVal = (theEvent.target.value);
-	console.log('this.controlType', this.controlType);
-	if (this.controlType == 'number') {
-		tmpVal = parseInt(tmpVal);
-		if (!(tmpVal)) {
-			tmpVal = 0;
-		}
-	}
-	tmpObjAtts[this.attName] = tmpVal;
-	//this.props.setAttributes( tmpObjAtts );
-}
+
 function getStandardProperty(theProps, theAttName, theLabel, theControlType, theOnChange, theSelectionList) {
 	const { attributes, setAttributes } = theProps;
 	var tmpContents = [];
 	var tmpAtts = attributes;
 
 	var tmpOnChange = theOnChange;
+	var tmpVal = tmpAtts[theAttName];
 
-	if (theControlType != 'checkbox') {
-		tmpOnChange = standardOnChange.bind({ props: theProps, controltype: theControlType });
-	} else {
+	if (theControlType == 'checkbox') {
 		if (!tmpOnChange) {
 			tmpOnChange = () => {
 				var tmpAddedAtts = {};
@@ -45,20 +31,14 @@ function getStandardProperty(theProps, theAttName, theLabel, theControlType, the
 				setAttributes(tmpAddedAtts)
 			}
 		}
-	}
 
-	var tmpVal = tmpAtts[theAttName];
-
-
-
-	if (theControlType == 'checkbox') {
 		tmpContents.push(<ToggleControl
 			checked={!!tmpVal}
 			label={istr(theLabel)}
 			onChange={tmpOnChange}
 		/>)
 	} else if (theControlType == 'text' || theControlType == 'number') {
-		tmpContents.push(getTextControl(theProps, theAttName, theLabel, tmpVal));
+		tmpContents.push(getTextControl(theProps, theAttName, theLabel, tmpVal, tmpOnChange, theControlType));
 	}
 
 	return tmpContents;
@@ -69,22 +49,42 @@ function getSelectControl(theValue, theOnChange, theDropDownValues) {
 	</select>
 }
 
-function getTextControl(theProps, theName, theLabel, theValue, theOnChange) {
+// function standardOnChange() {
+// 	//tmpOnChange = tmpOnChange || standardOnChange.bind({ props: theProps, controltype: theControlType });		
+// 	let tmpOnChange = (value) => {
+// 		var tmpNew = {};
+// 		tmpNew[this.name] = value;
+// 		this.props.setAttributes(tmpNew);
+// 	};
+// 	return tmpOnChange;
+// }
+
+function getTextControl(theProps, theName, theLabel, theValue, theOnChange, theControlType) {
 
 	var tmpOnChange = theOnChange;
 	if(!tmpOnChange){
 		tmpOnChange = (value) => {
+			var tmpVal = value;
+            if( theControlType == 'number'){
+               tmpVal = parseInt(tmpVal);
+               if (!(tmpVal)){
+                tmpVal = 0;
+               }
+            }
 			var tmpNew = {};
-			tmpNew[theName] = value;
+			tmpNew[theName] = tmpVal;
 			theProps.setAttributes(tmpNew);
 		};
 	}
+	
+	
 
 	return <TextControl
 		__nextHasNoMarginBottom
 		__next40pxDefaultSize
 		label={istr(theLabel)}
 		value={theValue || ''}
+		type={theControlType}
 
 		onChange={tmpOnChange}
 	/>

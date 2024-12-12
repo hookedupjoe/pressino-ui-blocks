@@ -7,7 +7,12 @@ var classSpecs = {
 }
 
 function getClass(theAtts, theIsEditMode) {
-	return PressinoUI.getStandardClass('ui segment', classSpecs, theAtts, theIsEditMode);
+    var tmpClasses = PressinoUI.getStandardClass('ui segment', classSpecs, theAtts, theIsEditMode);
+    
+    if( theAtts.classes ){
+        tmpClasses = tmpClasses.trim().replace('  ',' ') + ' ' + theAtts.classes;
+    }
+	return tmpClasses
 }
 
 export default function display({ attributes, editMode }) {
