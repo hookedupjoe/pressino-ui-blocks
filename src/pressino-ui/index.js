@@ -1,5 +1,5 @@
 import { __ } from '@wordpress/i18n';
-import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
+import { SelectControl, PanelBody, TextControl, ToggleControl } from '@wordpress/components';
 
 export const PressinoUI = {
 	getBlockIcon: getBlockIcon,
@@ -39,14 +39,92 @@ function getStandardProperty(theProps, theAttName, theLabel, theControlType, the
 		/>)
 	} else if (theControlType == 'text' || theControlType == 'number') {
 		tmpContents.push(getTextControl(theProps, theAttName, theLabel, tmpVal, tmpOnChange, theControlType));
+	} else if (theControlType == 'color') {
+		tmpContents.push(getSelectControl(theProps, theAttName, theLabel, tmpVal, tmpOnChange, theControlType));
+
+		// if (!tmpOnChange) {
+		// 	tmpOnChange = (value) => {
+		// 		var tmpAddedAtts = {};
+		// 		tmpAddedAtts[theAttName] = value;
+		// 		setAttributes(tmpAddedAtts)
+		// 	}
+		// }
+
+		// tmpContents.push( <SelectControl
+        //     label={theLabel}
+        //     value={ tmpVal }
+        //     options={ [
+        //         { label: 'Default', value: '' },
+        //         { label: 'Black', value: 'black' },
+        //         { label: 'Blue', value: 'blue' },
+        //     ] }
+        //     onChange={tmpOnChange}
+        //     __next40pxDefaultSize
+        //     __nextHasNoMarginBottom
+        // />)
 	}
 
 	return tmpContents;
 }
-function getSelectControl(theValue, theOnChange, theDropDownValues) {
-	return <select className='fluid-field' value={theValue} onChange={theOnChange}>
-		{theDropDownValues}
-	</select>
+
+function getFunctionForType(theControlType){
+	var tmpCT = (theControlType||'').toLowerCase();
+	if( tmpCT == 'text'  || tmpCT == 'number' ){
+		return 'getTextControl';
+	}
+	if( tmpCT == 'color' ){
+		return 'getColorListControl';
+	}
+	if( tmpCT == 'sizeheader' ){
+		return 'getHeaderSizeListControl';
+	}            
+	if( tmpCT == 'size' ){
+		return 'getSizeListControl';
+	}            
+	if( tmpCT == 'attached' ){
+		return 'getAttachedListControl';
+	}            
+	if( tmpCT == 'alignment' ){
+		return 'getAlignmentListControl';
+	}            
+	if( tmpCT == 'alignmentleftright' ){
+		return 'getLeftRightAlignmentListControl';
+	}            
+	if( tmpCT == 'alignmentvertical' ){
+		return 'getVerticalAlignmentListControl';
+	}                        
+	if( tmpCT == 'floatleftright' ){
+		return 'getLeftRighFloatListControl';
+	}            
+	if( tmpCT == 'tofloat' ){
+		return 'getFloatControl';
+	}            
+	if( tmpCT == 'columns' ){
+		return 'getColumnListControl';
+	}            
+	if( tmpCT == 'margin' ){
+		return 'getMarginListControl';
+	}            
+	if( tmpCT == 'topmargin' ){
+		return 'getTopMarginListControl';
+	}            
+	if( tmpCT == 'bottommargin' ){
+		return 'getBottomMarginListControl';
+	}            
+	if( tmpCT == 'padding' ){
+		return 'getPaddingListControl';
+	}            
+	if( tmpCT == 'inverted' ){
+		return 'getInvertedListControl';
+	}            
+	if( tmpCT == 'gridspacing' ){
+		return 'getGridSpacingListControl';
+	}            
+	
+	if( tmpCT == 'dropdown' ){
+		return 'getDropDownListControl';
+	}            
+	return 'getTextControl';
 }
 
 // function standardOnChange() {
@@ -59,25 +137,58 @@ function getSelectControl(theValue, theOnChange, theDropDownValues) {
 // 	return tmpOnChange;
 // }
 
+function getOptionsForControlType(theProp, theCurrentValue, theOnChangeEvent){
+	if( !(theProp)){
+		console.error('no property passed to get list control');
+		return <></>
+	}
+	let tmpList = ThisApp.controls.getSelListFor(theProp);
+	for( var iPos in tmpList ){
+		tmpList[iPos].label = tmpList[iPos].name || tmpList[iPos].value;
+	}
+	return tmpList;
+
+}
+
+function getSelectControl(theProps, theName, theLabel, theValue, theOnChange, theControlType) {
+	var tmpOnChange = theOnChange;
+	if (!tmpOnChange) {
+		tmpOnChange = (value) => {
+			var tmpAddedAtts = {};
+			tmpAddedAtts[theName] = value;
+			theProps.setAttributes(tmpAddedAtts)
+		}
+	}
+	var tmpOptions = getOptionsForControlType(theControlType);
+	return ( <SelectControl
+		label={theLabel}
+		value={ theValue }
+		options={tmpOptions}
+		onChange={tmpOnChange}
+		__next40pxDefaultSize
+		__nextHasNoMarginBottom
+	/>)
+}
+
 function getTextControl(theProps, theName, theLabel, theValue, theOnChange, theControlType) {
 
 	var tmpOnChange = theOnChange;
-	if(!tmpOnChange){
+	if (!tmpOnChange) {
 		tmpOnChange = (value) => {
 			var tmpVal = value;
-            if( theControlType == 'number'){
-               tmpVal = parseInt(tmpVal);
-               if (!(tmpVal)){
-                tmpVal = 0;
-               }
-            }
+			if (theControlType == 'number') {
+				tmpVal = parseInt(tmpVal);
+				if (!(tmpVal)) {
+					tmpVal = 0;
+				}
+			}
 			var tmpNew = {};
 			tmpNew[theName] = tmpVal;
 			theProps.setAttributes(tmpNew);
 		};
 	}
-	
-	
+
+
 
 	return <TextControl
 		__nextHasNoMarginBottom

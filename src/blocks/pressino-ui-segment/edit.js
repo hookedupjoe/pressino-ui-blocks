@@ -6,7 +6,7 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
 import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
-import { istr, PressinoUI} from '../../pressino-ui';
+import { istr, PressinoUI } from '../../pressino-ui';
 import './editor.scss';
 import display from './display';
 
@@ -26,23 +26,17 @@ export default function Edit(theProps) {
 
     return <>
         <InspectorControls>
+
             <PanelBody title={istr('General Settings')}>
-            {PressinoUI.getStandardProperty(theProps,'basic','No Border', 'checkbox')}
-            {!basic && (PressinoUI.getStandardProperty(theProps,'raised','Raised', 'checkbox'))}
+                {PressinoUI.getStandardProperty(theProps, 'basic', 'No Border', 'checkbox')}
+                {!basic && (PressinoUI.getStandardProperty(theProps, 'raised', 'Raised', 'checkbox'))}
+                {PressinoUI.getStandardProperty(theProps, 'color', 'Segment Color', 'color')}
             </PanelBody>
+
             <PanelBody title={istr('Formatting Options')}>
-                {PressinoUI.getStandardProperty(theProps,'classes', "Additional CSS Class(es)", 'text')}
-            {/* <TextControl
-                __nextHasNoMarginBottom
-                __next40pxDefaultSize
-                label={ istr('Additional Classes') }
-                value={ classes || '' }
-                onChange={ ( value ) =>
-                    setAttributes( { classes: value } )
-                }
-            /> */}
-         
+                {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
             </PanelBody>
+
         </InspectorControls>
         <div {...blockProps}>
             {tmpDisplay}
