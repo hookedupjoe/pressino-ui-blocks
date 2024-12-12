@@ -59,5 +59,6 @@ require_once PRESSINO_UI_BLOCKS_BASE_DIR . '/cls/PressinoUIBlocks.php';
 function create_block_pressino_ui_blocks_block_init() {
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-segment' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-image' );
+	register_block_type( __DIR__ . '/build/blocks/pressino-ui-tabs' );
 }
 add_action( 'init', 'create_block_pressino_ui_blocks_block_init' );

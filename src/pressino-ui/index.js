@@ -6,6 +6,7 @@ export const PressinoUI = {
 	addAttributes: addAttributes,
 	getStandardClass: getStandardClass,
 	getStandardProperty: getStandardProperty,
+	getBlockInEditor: getBlockInEditor,
 	istr: istr,
 }
 export const attNamesDef = { mediaID: 'mediaID', mediaURL: 'mediaURL' };
@@ -356,6 +357,10 @@ function getListAsObjects (theList) {
 	}
 	return tmpRet;
 
+}
+
+function getBlockInEditor(theObjectOrID){
+	return wp.data.select('core/block-editor').getBlock(theObjectOrID.clientId || theObjectOrID);
 }
 
 
