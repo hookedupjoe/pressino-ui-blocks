@@ -1,5 +1,8 @@
+/**
+ * Return universal display element used by edit and save functions
+ */
 import { InnerBlocks } from '@wordpress/block-editor';
-import {PressinoUI} from '../../pressino-ui';
+import { PressinoUI } from '../../pressino-ui';
 
 var classSpecs = {
 	boolean: ['raised', 'stacked', 'vertical', 'basic', 'clearing', 'inverted'],
