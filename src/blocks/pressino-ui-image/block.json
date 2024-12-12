@@ -4,8 +4,8 @@
 	"name": "pressino/pressino-ui-image",
 	"version": "0.1.0",
 	"title": "Pressino UI Image",
-	"category": "widgets",
-	"description": "A square to put stuff in.",
+	"category": "pressino-ui-blocks",
+	"description": "A picture is worth a thousand words.",
 	"example": {},
 	"supports": {
 		"html": false,
