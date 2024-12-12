@@ -24,11 +24,13 @@ export default function display({ props, editMode }) {
     var tmpClass = getClass(props, true);
     var tmpAtts = props.attributes;
 
+        var tmpAtts = props.attributes;
+
         var tmpItemName = tmpAtts.itemname || ''
         var tmpTabLabel = tmpAtts.tablabel || '';
         var tmpContent = [];
-        var tmpClass = getClass(props, theIsEditMode);
-        // if( theIsEditMode ){
+        var tmpClass = getClass(props, editMode);
+        // if( editMode ){
         //     tmpClass += ' fluid';
         // }
       
@@ -36,8 +38,8 @@ export default function display({ props, editMode }) {
             tmpClass += ' ' + tmpAtts.classes;
         }
 
-        if (theIsEditMode) {
-            tmpContent.push(newEl('div', '', el(wp.blockEditor.InnerBlocks,{})));
+        if (editMode) {
+            tmpContent.push(el('div', {}, el(wp.blockEditor.InnerBlocks,{})));
         } else {
             tmpContent.push(el(wp.blockEditor.InnerBlocks.Content));
         }
@@ -54,8 +56,8 @@ export default function display({ props, editMode }) {
             group: tmpAtts.groupname || '',
         }
 
-        if (theIsEditMode) {
-            return el('div', tmpNewElAtts, [newEl('div', tmpClass, [tmpContent])]);
+        if (editMode) {
+            return el('div', tmpNewElAtts, [el('div', {classname: tmpClass}, [tmpContent])]);
         }
 
         //--- Why do they stick?

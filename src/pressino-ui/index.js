@@ -8,6 +8,9 @@ export const PressinoUI = {
 	getStandardProperty: getStandardProperty,
 	getBlockInEditor: getBlockInEditor,
 	getRandomID: getRandomID,
+	getParentAttributes: getParentAttributes,
+	getParentBlock: getParentBlock,
+	getCommonBlock: getCommonBlock,
 	istr: istr,
 }
 export const attNamesDef = { mediaID: 'mediaID', mediaURL: 'mediaURL' };
@@ -18,6 +21,29 @@ export function istr(theString) {
 	return __(theString, PRIMARY_NAMESPACE);
 }
 
+
+function getParentAttributes(theBlockID){
+	var tmpParentAttributes = {};
+	var tmpParentBlock = BlockEditor.getParentBlock(theBlockID);
+	if( tmpParentBlock && tmpParentBlock.attributes ){
+		tmpParentAttributes = tmpParentBlock.attributes || {};
+	}
+	return tmpParentAttributes;
+}
+
+function getParentBlock(theBlockID){
+	var tmpParents = wp.data.select( 'core/block-editor' ).getBlockParents(theBlockID);
+
+	if( tmpParents && tmpParents.length > 0 ){
+		//--- Get the direct parent ... 0 is top level
+		var tmpParentID = tmpParents[tmpParents.length-1];
+		var tmpParentBlock = wp.data.select('core/block-editor').getBlocksByClientId(tmpParentID);
+		if( tmpParentBlock && tmpParentBlock.length > 0 ){
+			return tmpParentBlock[0];
+		}
+	}
+	return false;
+}
 
 
 function getRandomID(){
@@ -368,6 +394,149 @@ function getListAsObjects (theList) {
 function getBlockInEditor(theObjectOrID){
 	return wp.data.select('core/block-editor').getBlock(theObjectOrID.clientId || theObjectOrID);
 }
+function getCommonBlock(theElementName){
+	return CommonBlocks.getBlock(theElementName);
+}
+
+
+
+export const CommonBlocks = {
+	lookup: {
+		"segment": {
+			type: 'pressino/segment',
+			name: "Segment",
+			attr: {}
+		},
+		"coreparagraph": {
+			type: 'core/paragraph', 
+			name: "Paragraph",
+			attr: {}
+		},
+		"corecolumns": {
+			type: 'core/columns', 
+			name: "Columns",
+			attr: {}
+		},            
+		"button": {
+			type: 'pressino/button', 
+			name: "Button",
+			attr: {}
+		},
+		"header": {
+			type: 'pressino/header', 
+			name: "Message",
+			attr: {}
+		},
+		"image": {
+			type: 'pressino/image', 
+			name: "Image",
+			attr: {}
+		},
+		"message": {
+			type: 'pressino/message', 
+			name: "Message",
+			attr: {}
+		},
+		"grid": {
+			type: 'pressino/grid', 
+			name: "Grid",
+			attr: {}
+		},
+		"gridcolumn": {
+			type: 'pressino/gridcolumn', 
+			name: "Grid Column",
+			attr: {}
+		},            
+		"tabs": {
+			type: 'pressino/tabs', 
+			name: "Tabs",
+			attr: {}
+		},
+		"tab": {
+			type: 'pressino/tab', 
+			name: "Tab",
+			attr: {}
+		},            
+		"cards": {
+			type: 'pressino/cards', 
+			name: "Card",
+			attr: {}
+		},
+		"card": {
+			type: 'pressino/card', 
+			name: "Card",
+			attr: {}
+		},            
+		"cardsection": {
+			type: 'pressino/cardsection', 
+			name: "Card Section",
+			attr: {}
+		},
+		"cardsectionbottom": {
+			type: 'pressino/cardsectionbottom', 
+			name: "Card Bottom Section",
+			attr: {}
+		},
+		"cardbutton": {
+			type: 'pressino/button', 
+			name: "Button",
+			attr: {attached:'bottom attached',color:'blue',circular:true,basic:true}
+		},
+		"bottomattachedbutton": {
+			type: 'pressino/button', 
+			name: "Button",
+			attr: {attached:'bottom attached'}
+		},
+		"standard-header": {
+			type: 'pressino/header', 
+			name: "Standard Header",
+			attr: {
+				size: 'large',
+				color: 'blue'
+			}
+		},
+		"small-header": {
+			type: 'pressino/header', 
+			name: "Small Header",
+			attr: {
+				size: 'small',
+				color: 'blue'
+			}
+		},
+		"blue-message": {
+			type: 'pressino/message', 
+			name: "Blue Message",
+			attr: {
+				color: 'blue'
+			}
+		},
+		"bottomattachedmessage": {
+			type: 'pressino/message', 
+			name: "Blue Message",
+			attr: {
+				attached: 'bottom attached'
+			}
+		},            
+		"field": {
+			type: 'actappdesign/field', 
+			name: "Field",
+			attr: {}
+		},
+		"fieldlist": {
+			type: 'actappdesign/fieldlist', 
+			name: "Field List",
+			attr: {}
+		},
+
+	},
+	getBlock: function(theName){
+		var tmpItem = this.lookup[theName];
+		if( !(tmpItem)){
+			return false;
+		}
+		return wp.blocks.createBlock(tmpItem.type, tmpItem.attr);
+	}
+}
 
 
 export const listSources = {
@@ -389,3 +558,6 @@ export const listSources = {
     "float": "Default|,Floated Left|floated left,Floated Right|floated right",
     "tofloat": "Default|,Float Left|toleft,Float Right|toright"
 }
+
+//--- Global Exposure of Root Entrypoint
+window.PressinoUI = PressinoUI;

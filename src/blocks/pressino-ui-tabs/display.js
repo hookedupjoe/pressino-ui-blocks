@@ -85,7 +85,7 @@ export default function display({ props, editMode }) {
         var tmpBtnBar = ''
         if (props.isSelected) {
             if( tmpAtts.groupname != '' ){
-                tmpAddBtn = el('div', { className: 'ui compact button basic grey ', elementname: 'tab', action: 'beAddElement' }, 'Add New Tab');
+                tmpAddBtn = el('div', { className: 'ui compact button basic grey ', elementname: 'tab', action: 'pressinoAddElement' }, 'Add New Tab');
             } else {
                 tmpAddBtn = el('div', { className: 'ui messsage orange compact small '}, 'Group Name Required. Add in settings.  Each set of tabs should have a unique group name.');
             }

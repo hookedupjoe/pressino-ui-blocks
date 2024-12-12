@@ -132,6 +132,7 @@ class PressinoUIBlocks {
 	}
 
 	
+	
 	public static function init() {
 //		add_action( 'admin_menu', array( 'PressinoUIBlocks', 'registerAdminPageWidgetsSettings' ) );
 		

@@ -60,5 +60,10 @@ function create_block_pressino_ui_blocks_block_init() {
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-segment' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-image' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-tabs' );
+	register_block_type( __DIR__ . '/build/blocks/pressino-ui-tab' );
 }
 add_action( 'init', 'create_block_pressino_ui_blocks_block_init' );
+
+add_action('wp_enqueue_scripts', array('PressinoUIBlocks','setup_scripts'),20);
+
+

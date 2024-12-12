@@ -18,6 +18,8 @@
  * @since actionappwp 1.0.0
  */
 
+//import { PressinoUI } from "../src/pressino-ui";
+
 ( function ( wp,  ActionAppCore) {
     var PressinoUICore = {};
     ActionAppCore.PressinoUICore = PressinoUICore;
@@ -26,7 +28,10 @@
         console.log('PressinoUICore Test Complete');
     }
 
+
     function initPressinoUICore(){
+        
+
         // var tmpBaseURL = ActionAppCore.DesignerConfig.catalogURL;
         // //--- Load stuff we need on startup, can load dynamically as needed, 
         // //      so only use this for suff needed on startup
@@ -54,9 +59,30 @@
     }
 
 
+    function setupActions(){
+	
+        ThisApp.actions.pressinoAddElement = function(theParams, theTarget){
+            var tmpParams = ThisApp.getActionParams(theParams, theTarget, ['elementname']);
+         
+            var tmpThis = wp.data.select( 'core/block-editor' ).getSelectedBlock();
+            var tmpPos = 0;
+            if( tmpThis.innerBlocks && tmpThis.innerBlocks.length ){
+                tmpPos = tmpThis.innerBlocks.length;
+            }
+            var tmpItemToAdd = tmpParams.elementname;
+            if( !(tmpItemToAdd) ){
+                console.error("No elementname attribute found")
+                return;
+            }
+            var tmpToAddElement = PressinoUI.getCommonBlock(tmpItemToAdd);
+            wp.data.dispatch('core/block-editor').insertBlocks(tmpToAddElement,tmpPos,tmpThis.clientId) 
+        }
+        
+    }
+
     ActionAppCore.subscribe('app-loaded', function(){
-        ThisApp.delay(1000).then(function(){
-            
+        ThisApp.delay(100).then(function(){
+            setupActions();
         });
     })
 
