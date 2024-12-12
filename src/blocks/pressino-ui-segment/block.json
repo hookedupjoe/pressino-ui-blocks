@@ -9,7 +9,9 @@
 	"description": "Example block scaffolded with Create Block tool.",
 	"example": {},
 	"supports": {
-		"html": false
+		"html": false,
+		"className": false,
+		"customClassName": false
 	},
 	"textdomain": "pressino-ui-segment",
 	"editorScript": "file:./index.js"

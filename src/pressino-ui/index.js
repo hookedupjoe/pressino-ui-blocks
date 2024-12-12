@@ -14,24 +14,82 @@ export function istr(theString) {
 	return __(theString, PRIMARY_NAMESPACE);
 }
 
+function standardOnChange(theEvent) {
+	console.log('debug standardOnChange', theEvent);
+	var tmpObjAtts = {};
+	var tmpVal = (theEvent.target.value);
+	console.log('this.controlType', this.controlType);
+	if (this.controlType == 'number') {
+		tmpVal = parseInt(tmpVal);
+		if (!(tmpVal)) {
+			tmpVal = 0;
+		}
+	}
+	tmpObjAtts[this.attName] = tmpVal;
+	//this.props.setAttributes( tmpObjAtts );
+}
 function getStandardProperty(theProps, theAttName, theLabel, theControlType, theOnChange, theSelectionList) {
 	const { attributes, setAttributes } = theProps;
+	var tmpContents = [];
 	var tmpAtts = attributes;
-	if (theControlType == 'checkbox') {
-		var tmpVal = tmpAtts[theAttName];
-		return <ToggleControl
-			checked={!!tmpVal}
-			label={istr(theLabel)}
-			onChange={() => {
+
+	var tmpOnChange = theOnChange;
+
+	if (theControlType != 'checkbox') {
+		tmpOnChange = standardOnChange.bind({ props: theProps, controltype: theControlType });
+	} else {
+		if (!tmpOnChange) {
+			tmpOnChange = () => {
 				var tmpAddedAtts = {};
 				tmpAddedAtts[theAttName] = !tmpVal;
 				setAttributes(tmpAddedAtts)
-			}}
-		/>
+			}
+		}
 	}
 
-	return <></>
+	var tmpVal = tmpAtts[theAttName];
+
+
+
+	if (theControlType == 'checkbox') {
+		tmpContents.push(<ToggleControl
+			checked={!!tmpVal}
+			label={istr(theLabel)}
+			onChange={tmpOnChange}
+		/>)
+	} else if (theControlType == 'text' || theControlType == 'number') {
+		tmpContents.push(getTextControl(theProps, theAttName, theLabel, tmpVal));
+	}
+
+	return tmpContents;
 }
+function getSelectControl(theValue, theOnChange, theDropDownValues) {
+	return <select className='fluid-field' value={theValue} onChange={theOnChange}>
+		{theDropDownValues}
+	</select>
+}
+
+function getTextControl(theProps, theName, theLabel, theValue, theOnChange) {
+
+	var tmpOnChange = theOnChange;
+	if(!tmpOnChange){
+		tmpOnChange = (value) => {
+			var tmpNew = {};
+			tmpNew[theName] = value;
+			theProps.setAttributes(tmpNew);
+		};
+	}
+
+	return <TextControl
+		__nextHasNoMarginBottom
+		__next40pxDefaultSize
+		label={istr(theLabel)}
+		value={theValue || ''}
+
+		onChange={tmpOnChange}
+	/>
+}
+
 function addAttributes(theType, theAtts, theList) {
 	theList.map((item, i) => {
 		theAtts[item] = {

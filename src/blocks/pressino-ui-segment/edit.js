@@ -22,13 +22,26 @@ export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
     var tmpDisplay = display({ attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { raised, basic } = attributes;
+    const { raised, basic, classes } = attributes;
 
     return <>
         <InspectorControls>
-            <PanelBody title={istr('Settings')}>
+            <PanelBody title={istr('General Settings')}>
             {PressinoUI.getStandardProperty(theProps,'basic','No Border', 'checkbox')}
             {!basic && (PressinoUI.getStandardProperty(theProps,'raised','Raised', 'checkbox'))}
+            </PanelBody>
+            <PanelBody title={istr('Formatting Options')}>
+                {PressinoUI.getStandardProperty(theProps,'classes', "Additional CSS Class(es)", 'text')}
+            {/* <TextControl
+                __nextHasNoMarginBottom
+                __next40pxDefaultSize
+                label={ istr('Additional Classes') }
+                value={ classes || '' }
+                onChange={ ( value ) =>
+                    setAttributes( { classes: value } )
+                }
+            /> */}
+         
             </PanelBody>
         </InspectorControls>
         <div {...blockProps}>
