@@ -5,12 +5,13 @@ import { InnerBlocks } from '@wordpress/block-editor';
 import { PressinoUI } from '../../pressino-ui';
 
 var classSpecs = {
-	boolean: ['raised', 'stacked', 'vertical', 'basic', 'clearing', 'inverted'],
+	boolean: ['raised', 'stacked', 'vertical', 'basic', 'inverted'],
 	string: ['color', 'size', 'attached', 'alignment', 'padding']
 }
 
 function getClass(theAtts, theIsEditMode) {
-    var tmpClasses = PressinoUI.getStandardClass('ui segment', classSpecs, theAtts, theIsEditMode);
+    //--- Added clearing so that content stays inside, no logical reason to use it other ways
+    var tmpClasses = PressinoUI.getStandardClass('ui segment clearing', classSpecs, theAtts, theIsEditMode);
     
     if( theAtts.classes ){
         tmpClasses = tmpClasses.trim().replace('  ',' ') + ' ' + theAtts.classes;

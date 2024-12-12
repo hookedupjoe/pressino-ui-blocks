@@ -32,7 +32,6 @@ export default function Edit(theProps) {
             <PanelBody title={istr('Formatting Options')}>
                 {PressinoUI.getStandardProperty(theProps, 'padding', 'Padding', 'padding')}
                 {PressinoUI.getStandardProperty(theProps, 'alignment', 'Alignment', 'alignment')}
-                {PressinoUI.getStandardProperty(theProps, 'clearing', 'Contain Floaters', 'checkbox')}
                 {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
             </PanelBody>
 

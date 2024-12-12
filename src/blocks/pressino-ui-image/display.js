@@ -4,7 +4,7 @@
 import { PressinoUI, el, attNamesDef } from '../../pressino-ui';
 
 var classSpecs = {
-	boolean: ['rounded', 'circular', 'bordered', 'centered'],
+	boolean: ['rounded', 'circular', 'bordered', 'centered', 'spaced'],
     string: ['size', 'color', 'alignmentvertical','margin','padding','classes']
 }
 
@@ -15,9 +15,7 @@ function getClass(theAtts, theIsEditMode) {
     if( !theAtts.fluid && theAtts.size ){
         tmpClasses += ' ' + theAtts.size;
     }
-    if( theAtts.classes ){
-        tmpClasses = tmpClasses.trim().replace('  ',' ') + ' ' + theAtts.classes;
-    }
+    tmpClasses = tmpClasses.trim().replace('  ',' ')
 	return tmpClasses
 }
 
@@ -29,9 +27,9 @@ export default function display({ props, attributes, editMode }) {
 
     if (tmpAtts.float) {
         //--- Only do float for final so the image doesn't fly around in edit mode
-        if (!editMode) {
+        //if (!editMode) {
             classNames += ' ' + tmpAtts.float;
-        }
+        //}
     }
     var tmpEl = <img className={classNames} src={tmpAtts.mediaURL} />;
     

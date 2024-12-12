@@ -15,7 +15,7 @@ import {PressinoUI} from '../../pressino-ui';
  * Setup Block Attributes
  */
 let tmpAttributes = {};
-PressinoUI.addAttributes('boolean', tmpAttributes, ['raised', 'stacked', 'vertical', 'clearing', 'inverted']);
+PressinoUI.addAttributes('boolean', tmpAttributes, ['raised', 'stacked', 'vertical', 'inverted']);
 PressinoUI.addAttributes('text', tmpAttributes, ['color', 'size', 'attached', 'alignment', 'basic', 'padding', 'classes']);
 
 /**
