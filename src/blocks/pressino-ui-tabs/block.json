@@ -1,7 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "pressino/pressino-ui-tabs",
+	"name": "pressino/tabs",
 	"version": "0.1.0",
 	"title": "Pressino UI Tabs",
 	"category": "pressino-ui-blocks",

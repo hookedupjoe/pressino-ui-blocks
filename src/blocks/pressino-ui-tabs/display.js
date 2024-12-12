@@ -103,7 +103,7 @@ export default function display({ props, editMode }) {
             tmpHdr,
             el('div', { className: 'edit-tabs' + props.attributes.color + ' ' + props.attributes.columns },
                 [
-                    el(wp.blockEditor.InnerBlocks, { allowedBlocks: ['actappui/tab'], renderAppender: false }),
+                    el(wp.blockEditor.InnerBlocks, { allowedBlocks: ['pressino/tab'], renderAppender: false }),
                 ]
             ));
             

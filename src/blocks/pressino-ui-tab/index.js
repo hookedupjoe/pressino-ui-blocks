@@ -1,5 +1,5 @@
 /**
- * Pressino UI Tabs
+ * Pressino UI Tab
  */
 import { registerBlockType } from '@wordpress/blocks';
 
@@ -15,8 +15,8 @@ import {PressinoUI} from '../../pressino-ui';
  * Setup Block Attributes
  */
 let tmpAttributes = {};
-PressinoUI.addAttributes('boolean', tmpAttributes, ['inverted']);
-PressinoUI.addAttributes('text', tmpAttributes, ['groupname','tabsinfo','labelpadding','bodyonly','color','classes']);
+PressinoUI.addAttributes('number', tmpAttributes, ['tabpos']);
+PressinoUI.addAttributes('text', tmpAttributes, ['itemname', 'groupname', 'tablabel']);
 
 /**
  * Register Block

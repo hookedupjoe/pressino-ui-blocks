@@ -7,6 +7,7 @@ export const PressinoUI = {
 	getStandardClass: getStandardClass,
 	getStandardProperty: getStandardProperty,
 	getBlockInEditor: getBlockInEditor,
+	getRandomID: getRandomID,
 	istr: istr,
 }
 export const attNamesDef = { mediaID: 'mediaID', mediaURL: 'mediaURL' };
@@ -17,6 +18,11 @@ export function istr(theString) {
 	return __(theString, PRIMARY_NAMESPACE);
 }
 
+
+
+function getRandomID(){
+	return window.crypto.randomUUID();
+}
 
 function getStandardProperty(theProps, theAttName, theLabel, theControlType, theOnChange, theSelectionList) {
 	

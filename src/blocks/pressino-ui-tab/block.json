@@ -1,17 +1,17 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "pressino/image",
+	"name": "pressino/tab",
 	"version": "0.1.0",
-	"title": "Pressino UI Image",
+	"title": "Pressino UI Tab",
 	"category": "pressino-ui-blocks",
-	"description": "A picture is worth a thousand words.",
+	"description": "A panel that lives with other tabs.",
 	"example": {},
 	"supports": {
 		"html": false,
 		"className": false,
 		"customClassName": false
 	},
-	"textdomain": "pressino-ui-image",
+	"textdomain": "pressino-ui-tab",
 	"editorScript": "file:./index.js"
 }
