@@ -22,6 +22,11 @@ import save from './save';
 import metadata from './block.json';
 import {PressinoUI} from '../../pressino-ui';
 
+let tmpAttributes = {};
+PressinoUI.addAttributes('boolean', tmpAttributes, ['raised', 'stacked', 'vertical', 'clearing', 'inverted']);
+PressinoUI.addAttributes('text', tmpAttributes, ['color', 'size', 'attached', 'alignment', 'basic', 'margin', 'padding', 'classes']);
+
+
 /**
  * Every block starts by registering a new block type definition.
  *
@@ -33,5 +38,6 @@ registerBlockType( metadata.name, {
 	 */
 	edit: Edit,
 	save,
+	attributes: tmpAttributes,
 	icon: PressinoUI.getBlockIcon('default'),
 } );

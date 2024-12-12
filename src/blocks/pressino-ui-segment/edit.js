@@ -6,9 +6,9 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
 import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
+import { istr, PressinoUI} from '../../pressino-ui';
 import './editor.scss';
 import display from './display';
-const THIS_NAMESPACE = 'pressino-ui-blocks';
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -18,26 +18,17 @@ const THIS_NAMESPACE = 'pressino-ui-blocks';
  *
  * @return {Element} Element to render.
  */
-export default function Edit({attributes, setAttributes}) {
+export default function Edit(theProps) {
+    const { attributes, setAttributes } = theProps;
     var tmpDisplay = display({ attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { raised } = attributes;
+    const { raised, basic } = attributes;
 
     return <>
         <InspectorControls>
-            <PanelBody title={__('Settings', THIS_NAMESPACE)}>
-                <ToggleControl
-                    checked={!!raised}
-                    label={__(
-                        'Raised',
-                        THIS_NAMESPACE
-                    )}
-                    onChange={() =>
-                        setAttributes({
-                            raised: !raised,
-                        })
-                    }
-                />
+            <PanelBody title={istr('Settings')}>
+            {PressinoUI.getStandardProperty(theProps,'basic','No Border', 'checkbox')}
+            {!basic && (PressinoUI.getStandardProperty(theProps,'raised','Raised', 'checkbox'))}
             </PanelBody>
         </InspectorControls>
         <div {...blockProps}>
