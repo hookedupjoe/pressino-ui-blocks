@@ -5,7 +5,7 @@ import { PressinoUI, el } from '../../pressino-ui';
 
 var classSpecs = {
 	boolean: [],
-	string: []
+	string: ['padding']
 }
 
 function getClass(theAtts, theIsEditMode) {
@@ -128,8 +128,12 @@ export default function display({ props, editMode }) {
             tmpMenuClass += ' ' + tmpAtts.labelpadding;
         }
         
+        var tmpSegClass = '';
+        if( tmpAtts.insidepadding ){
+            tmpSegClass = tmpAtts.insidepadding;
+        } 
         tmpTablinksEl = el('div',{className: tmpMenuClass}, tmpTabLinkEls);
-        var tmpContents = el('div', {className:"ui segment theme-default-padding " + tmpTabsColor}, el('div', {className:tmpClass}, el(wp.blockEditor.InnerBlocks.Content)));
+        var tmpContents = el('div', {className:"ui segment theme-default-padding " + tmpSegClass + ' ' + tmpTabsColor}, el('div', {className:tmpClass}, el(wp.blockEditor.InnerBlocks.Content)));
         
         var tmpTabsEl = el('div',{className: ''}, tmpContents);
         if( tmpAtts.bodyonly == true ){

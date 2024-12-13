@@ -16,7 +16,7 @@ import {PressinoUI} from '../../pressino-ui';
  */
 let tmpAttributes = {};
 PressinoUI.addAttributes('boolean', tmpAttributes, ['inverted']);
-PressinoUI.addAttributes('text', tmpAttributes, ['groupname','tabsinfo','labelpadding','bodyonly','color','classes']);
+PressinoUI.addAttributes('text', tmpAttributes, ['outsidepadding','insidepadding', 'firsttabid', 'groupname','tabsinfo','labelpadding','bodyonly','color','classes']);
 
 /**
  * Register Block
