@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "pressino/message",
+	"version": "0.1.0",
+	"title": "Pressino UI Message",
+	"category": "pressino-ui-blocks",
+	"description": "A boxed message.",
+	"example": {},
+	"supports": {
+		"html": false,
+		"className": false,
+		"customClassName": false
+	},
+	"textdomain": "pressino-ui-message",
+	"editorScript": "file:./index.js"
+}
