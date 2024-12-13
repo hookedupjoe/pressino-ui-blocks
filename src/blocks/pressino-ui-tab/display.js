@@ -10,7 +10,6 @@ var classSpecs = {
 }
 
 function getClass(theAtts, theIsEditMode) {
-    //--- Added clearing so that content stays inside, no logical reason to use it other ways
     var tmpClasses = PressinoUI.getStandardClass('ui ', classSpecs, theAtts, theIsEditMode);
     
     if( theAtts.classes ){
@@ -30,16 +29,8 @@ export default function display({ props, editMode }) {
         var tmpTabLabel = tmpAtts.tablabel || '';
         var tmpContent = [];
         var tmpClass = getClass(props, editMode);
-        var tmpIsHidden = true;
-//--- Get Parent Atts
-//--- Find this one to get pos
         var tmpParentAtts = PressinoUI.getParentAttributes(props.clientId);
-        // var tmpTabInfo = false;
-        // var tmpTabPos = 999;
-        // if( tmpParentAtts.tabsinfo){
-        //     tmpTabInfo = JSON.parse(tmpParentAtts.tabsinfo);
-        // }
-        
+
         if( tmpParentAtts.firsttabid ){
             if( tmpParentAtts.firsttabid == tmpAtts.itemname ){
                 tmpAtts.showstatus = 'first';
@@ -63,7 +54,6 @@ export default function display({ props, editMode }) {
        
         tmpContent.push(tmpExtraContent);
         
-        var tmpTabPos = parseInt(tmpAtts.tabpos);
         var tmpNewElAtts = {
             className: tmpClass,
             appuse: 'cards',
@@ -75,7 +65,6 @@ export default function display({ props, editMode }) {
             return el('div', tmpNewElAtts, [el('div', {classname: tmpClass}, [tmpContent])]);
         }
 
-        //--- Why do they stick?
         if(tmpAtts.showstatus != 'first'){
           tmpNewElAtts.className += ' hidden';
         }

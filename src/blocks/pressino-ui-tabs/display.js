@@ -1,7 +1,6 @@
 /**
  * Return universal display element used by edit and save functions
  */
-import { InnerBlocks } from '@wordpress/block-editor';
 import { PressinoUI, el } from '../../pressino-ui';
 
 var classSpecs = {
@@ -10,7 +9,6 @@ var classSpecs = {
 }
 
 function getClass(theAtts, theIsEditMode) {
-    //--- Added clearing so that content stays inside, no logical reason to use it other ways
     var tmpClasses = PressinoUI.getStandardClass('ui tabs', classSpecs, theAtts, theIsEditMode);
     
     if( theAtts.classes ){
@@ -76,8 +74,6 @@ export default function display({ props, editMode }) {
             tmpAtts.tabsinfo = '[]';
             tmpAtts.firsttabid = '';
         }
-        //console.log('tmpAtts.firsttabid',tmpAtts.firsttabid);
-
     }
 
 
@@ -120,21 +116,17 @@ export default function display({ props, editMode }) {
         
         var tmpTabsInfo = props.attributes.tabsinfo ? JSON.parse(props.attributes.tabsinfo) : '';
         var tmpTabLinkEls = [];
-//console.log('tmpTabsInfo',tmpTabsInfo);
+
         for( var iPos in tmpTabsInfo ){
             var tmpTabInfo = tmpTabsInfo[iPos];
             tmpTabLinkEls.push(el('div',tmpTabInfo,tmpTabInfo.label));
         }
-        //---> Can add slim as an option
         var tmpMenuClass = 'mar0 pad0 ui top attached tabular menu ' + tmpInvertedClass;
         
         if( tmpAtts.labelpadding ){
             tmpMenuClass += ' ' + tmpAtts.labelpadding;
         }
         
-        // if( tmpInvertedClass ){
-        //     tmpTabsColor = 'black';
-        // }
         tmpTablinksEl = el('div',{className: tmpMenuClass}, tmpTabLinkEls);
         var tmpContents = el('div', {className:"ui segment theme-default-padding " + tmpTabsColor}, el('div', {className:tmpClass}, el(wp.blockEditor.InnerBlocks.Content)));
         
@@ -148,20 +140,4 @@ export default function display({ props, editMode }) {
     }
 
 
-
-    // let classNames = getClass(attributes,editMode);
-   
-    // if(editMode === true){
-    //     return (
-    //         <div className={classNames} >
-    //             <InnerBlocks />
-    //         </div>
-    //     );
-    // }
-
-    // return (
-    //     <div className={classNames} >
-    //         <InnerBlocks.Content />
-    //     </div>
-    // );
 }

@@ -22,7 +22,6 @@ export default function Edit(theProps) {
     if( !(tmpAtts.groupname) ){
         tmpAtts.groupname = PressinoUI.getRandomID();
     }
-     //console.log('tmpAtts.groupname',tmpAtts.groupname);
    
     return <>
         <InspectorControls>
@@ -39,22 +38,6 @@ export default function Edit(theProps) {
     {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
 </PanelBody> */}
 
-{/* var tmpStandardProperties = [
-BlockEditor.getStandardProperty(props, 'groupname', 'Group Name', 'text'),
-BlockEditor.getStandardProperty(props, 'color', 'Tabs Color', 'color'),
-BlockEditor.getStandardProperty(props, 'inverted', 'Inverted', 'checkbox'),
-BlockEditor.getStandardProperty(props, 'labelpadding', 'Label Padding', 'slimwidespacing'),
-BlockEditor.getStandardProperty(props, 'bodyonly', 'Exclude the tabs?', 'checkbox'),
-];
-
-var tmpFormatProperties = [
-BlockEditor.getStandardProperty(props,'classes', 'Additional Classes', 'text' )
-];
-
-var tmpSidebarPanels = [
-BlockEditor.getSidebarPanel('Columns Container Options', tmpStandardProperties),
-BlockEditor.getSidebarPanel('Formatting Options', tmpFormatProperties)
-]; */}
 
 </InspectorControls>
 <div {...blockProps}>

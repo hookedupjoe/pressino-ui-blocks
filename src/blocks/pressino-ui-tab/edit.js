@@ -54,22 +54,6 @@ export default function Edit(theProps) {
 
 </InspectorControls>
 
-    // //var tmpSidebarControls = BlockEditor.getSidebarControls(tmpSidebarPanels);
-    // var tmpStandardProperties = [
-    //     BlockEditor.getStandardProperty(props, 'itemname', 'Unique Item Name (Required)', 'text', BlockEditor.standardOnChangeRefresh),
-    //     BlockEditor.getStandardProperty(props, 'tablabel', 'Tab Label (Required)', 'text', BlockEditor.standardOnChangeRefresh),
-    // ];
-
-    // var tmpFormatProperties = [
-    //     BlockEditor.getStandardProperty(props,'classes', 'Additional Classes', 'text' )
-    // ];
-
-    // var tmpSidebarPanels = [
-    //     BlockEditor.getSidebarPanel('Column Options', tmpStandardProperties),
-    //     BlockEditor.getSidebarPanel('Formatting Options', tmpFormatProperties)
-    // ];
-
-    // var tmpSidebarControls = BlockEditor.getSidebarControls(tmpSidebarPanels);
 
     var tmpEditorClass = '';
     if( props.isSelected ){
@@ -90,11 +74,8 @@ export default function Edit(theProps) {
         var tmpTabNameLabel = el('div',{className: 'ui label grey basic  padr10'}, 'Every tab entry needs a tab label.', el('span',{'className': 'ui bolder padt8 larger marl10'}, 'Set value in settings.'));
     }
 
-    //var tmpHM = tmpTabLabel;
     var tmpEditHeader = el('div', {className:"ui message bolder center aligned pad8 grey small"}, tmpTabPrefix,tmpTabNameLabel);
 
-
-    
     var tmpRetEl = el(
         'div',
         {className: tmpEditorClass},
@@ -109,46 +90,5 @@ export default function Edit(theProps) {
         {tmpRetEl}
     </div>
 
-    //return el('div',{},tmpEditHeader, tmpRetEl);
-
-    //---
-
-    return <>
-        <InspectorControls>
-
-            <PanelBody title={istr('General Settings')}>
-                {PressinoUI.getStandardProperty(theProps, 'groupname', 'Group Name', 'text')}
-                {PressinoUI.getStandardProperty(theProps, 'color', 'Tabs Color', 'colors')}
-                {PressinoUI.getStandardProperty(theProps, 'inverted', 'Inverted', 'checkbox')}
-                {PressinoUI.getStandardProperty(theProps, 'labelpadding', 'Label Padding', 'slimwidespacing')}
-                {PressinoUI.getStandardProperty(theProps, 'bodyonly', 'Exclude the tabs?', 'checkbox')}
-            </PanelBody>
-
-            <PanelBody title={istr('Formatting Options')}>
-                {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
-            </PanelBody>
-
-            {/* var tmpStandardProperties = [
-    BlockEditor.getStandardProperty(props, 'groupname', 'Group Name', 'text'),
-    BlockEditor.getStandardProperty(props, 'color', 'Tabs Color', 'color'),
-    BlockEditor.getStandardProperty(props, 'inverted', 'Inverted', 'checkbox'),
-    BlockEditor.getStandardProperty(props, 'labelpadding', 'Label Padding', 'slimwidespacing'),
-    BlockEditor.getStandardProperty(props, 'bodyonly', 'Exclude the tabs?', 'checkbox'),
-   ];
-
-    var tmpFormatProperties = [
-        BlockEditor.getStandardProperty(props,'classes', 'Additional Classes', 'text' )
-    ];
-    
-    var tmpSidebarPanels = [
-        BlockEditor.getSidebarPanel('Columns Container Options', tmpStandardProperties),
-        BlockEditor.getSidebarPanel('Formatting Options', tmpFormatProperties)
-    ]; */}
-
-        </InspectorControls>
-        <div {...blockProps}>
-            {tmpDisplay}
-        </div>
-    </>
 
 }
