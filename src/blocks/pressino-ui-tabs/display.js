@@ -2,7 +2,9 @@
  * Return universal display element used by edit and save functions
  */
 import { PressinoUI, el } from '../../pressino-ui';
-
+const { store: blockEditorStore } = wp.blockEditor;
+const { useSelect } = wp.data;
+ 
 var classSpecs = {
 	boolean: [],
 	string: ['padding']
@@ -21,6 +23,9 @@ export default function display({ props, editMode }) {
     var tmpAtts = props.attributes;
     var tmpClass = getClass(props, true);
 
+   
+
+
     var tmpInvertedClass = '';
     if( tmpAtts.inverted == true ){
         tmpInvertedClass = 'inverted'
@@ -29,8 +34,13 @@ export default function display({ props, editMode }) {
 
     var tmpTablinksEl = (el('div',{},''));
     if( editMode ){
-        var tmpMe = PressinoUI.getBlockInEditor(props);
-        var tmpTabs = tmpMe.innerBlocks;
+        //var tmpMe = PressinoUI.getBlockInEditor(props);
+
+        const { clientId } = props;
+        const tmpTabs = useSelect(
+            (select) => select(blockEditorStore).getBlock(clientId).innerBlocks,
+        );
+       // var tmpTabs = tmpMe.innerBlocks;
         var tmpTabCount = tmpTabs.length;
         var tmpTabLinks = [];
         

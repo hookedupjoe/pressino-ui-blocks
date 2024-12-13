@@ -20,19 +20,22 @@ export default function Edit(theProps) {
     var tmpAtts = props.attributes;
 
     var tmpParentBlock = PressinoUI.getParentBlock(props.clientId);
-            
-    var tmpIBs = tmpParentBlock.innerBlocks;
-    for( var iPos in tmpIBs){
-        var tmPIB = tmpIBs[iPos];
-        if( tmPIB.clientId == props.clientId ){
-            //--- This is me
-            if( tmpAtts.tabpos != iPos ){
-                tmpAtts.tabpos = iPos;
-                PressinoUI.refreshBlockEditor();
+    
+    if( tmpParentBlock && tmpParentBlock.innerBlocks ){
+        var tmpIBs = tmpParentBlock.innerBlocks;
+        for( var iPos in tmpIBs){
+            var tmPIB = tmpIBs[iPos];
+            if( tmPIB.clientId == props.clientId ){
+                //--- This is me
+                if( tmpAtts.tabpos != iPos ){
+                    tmpAtts.tabpos = iPos;
+                    PressinoUI.refreshBlockEditor();
+                }
             }
+            
         }
-        
     }
+
     if( !(tmpAtts.itemname) ){
         tmpAtts.itemname = PressinoUI.getRandomID();
     }
@@ -55,11 +58,9 @@ export default function Edit(theProps) {
 </InspectorControls>
 
 
-    var tmpEditorClass = '';
+    var tmpEditorClass = 'pressino block';
     if( props.isSelected ){
-        tmpEditorClass += ' actapp-block-is-selected';
-    } else {
-        tmpEditorClass += ' actapp-block-box';
+        tmpEditorClass += ' selected';
     }
     
     var tmpTabPrefix = el('div',{className: 'ui label grey right pointing'}, 'Tab');
