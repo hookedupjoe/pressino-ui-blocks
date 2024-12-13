@@ -80,12 +80,13 @@ export default function display({ props, editMode }) {
     if (editMode) {
         var tmpUIColor = ''; 
         var tmpHeaderText = 'UI Tabs Container';
-        var tmpIcon = 'smiley'; //PENDING
+        var tmpIcon = <></>;
 
         var tmpHeaderMsg = el('div',{className: 'ui larger bolder'}, tmpHeaderText)
         var tmpAddBtn = '';
         var tmpBtnBar = ''
         if (props.isSelected) {
+            tmpIcon = PressinoUI.getControlImage();
             if( tmpAtts.groupname != '' ){
                 tmpAddBtn = el('div', { className: 'ui compact button basic grey ', elementname: 'tab', action: 'pressinoAddElement' }, 'Add New Tab');
             } else {
