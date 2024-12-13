@@ -40,7 +40,7 @@ function refreshBlockEditor(){
 
 function getParentAttributes(theBlockID){
 	var tmpParentAttributes = {};
-	var tmpParentBlock = BlockEditor.getParentBlock(theBlockID);
+	var tmpParentBlock = getParentBlock(theBlockID);
 	if( tmpParentBlock && tmpParentBlock.attributes ){
 		tmpParentAttributes = tmpParentBlock.attributes || {};
 	}
@@ -286,9 +286,11 @@ function addAttributes(theType, theAtts, theList) {
 
 function getStandardClass(theTypeClass, theSpecs, theAtts, theIsEditMode) {
 	var tmpAtts = theAtts;
-	var tmpCN = theTypeClass;
+	var tmpCN = theTypeClass || '';
 	var tmpSpecs = theSpecs;
-
+	// if( tmpSpecs.boolean.length || tmpSpecs.string.length ){
+	// 	return theTypeClass; 
+	// }
 	for (var iPos = 0; iPos < tmpSpecs.boolean.length; iPos++) {
 		var tmpName = tmpSpecs.boolean[iPos];
 		if (tmpAtts[tmpName]) {

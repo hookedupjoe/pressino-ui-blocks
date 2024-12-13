@@ -16,7 +16,7 @@ import {PressinoUI} from '../../pressino-ui';
  */
 let tmpAttributes = {};
 PressinoUI.addAttributes('number', tmpAttributes, ['tabpos']);
-PressinoUI.addAttributes('text', tmpAttributes, ['itemname', 'groupname', 'tablabel']);
+PressinoUI.addAttributes('text', tmpAttributes, ['itemname', 'groupname', 'tablabel','showstatus']);
 
 /**
  * Register Block

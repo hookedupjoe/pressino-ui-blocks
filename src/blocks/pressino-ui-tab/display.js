@@ -30,10 +30,25 @@ export default function display({ props, editMode }) {
         var tmpTabLabel = tmpAtts.tablabel || '';
         var tmpContent = [];
         var tmpClass = getClass(props, editMode);
-        // if( editMode ){
-        //     tmpClass += ' fluid';
+        var tmpIsHidden = true;
+//--- Get Parent Atts
+//--- Find this one to get pos
+        var tmpParentAtts = PressinoUI.getParentAttributes(props.clientId);
+        // var tmpTabInfo = false;
+        // var tmpTabPos = 999;
+        // if( tmpParentAtts.tabsinfo){
+        //     tmpTabInfo = JSON.parse(tmpParentAtts.tabsinfo);
         // }
-      
+        
+        if( tmpParentAtts.firsttabid ){
+            if( tmpParentAtts.firsttabid == tmpAtts.itemname ){
+                tmpAtts.showstatus = 'first';
+            } else {
+                tmpAtts.showstatus = '';
+            }
+        }
+       
+
         if( tmpAtts.classes ){
             tmpClass += ' ' + tmpAtts.classes;
         }
@@ -61,8 +76,8 @@ export default function display({ props, editMode }) {
         }
 
         //--- Why do they stick?
-        if(tmpTabPos > 0 ){
-            //tmpNewElAtts.className += ' hidden';
+        if(tmpAtts.showstatus != 'first'){
+          tmpNewElAtts.className += ' hidden';
         }
         return el('div', tmpNewElAtts, tmpContent);
 }

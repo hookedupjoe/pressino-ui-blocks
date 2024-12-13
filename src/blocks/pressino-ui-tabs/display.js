@@ -14,7 +14,7 @@ function getClass(theAtts, theIsEditMode) {
     var tmpClasses = PressinoUI.getStandardClass('ui tabs', classSpecs, theAtts, theIsEditMode);
     
     if( theAtts.classes ){
-        tmpClasses = tmpClasses.trim().replace('  ',' ') + ' ' + theAtts.classes;
+        tmpClasses +=  ' ' + theAtts.classes;
     }
 	return tmpClasses
 }
@@ -37,6 +37,7 @@ export default function display({ props, editMode }) {
         var tmpTabLinks = [];
         
         if(tmpTabCount){
+            tmpAtts.firsttabid = '';
             for( var iPos in tmpTabs){
                 var tmpTab = tmpTabs[iPos];
                 var tmpTabAtts = tmpTab.attributes;
@@ -46,6 +47,9 @@ export default function display({ props, editMode }) {
                 var tmpTabGroup = tmpTabAtts.groupname;
                 var tmpTabItem = tmpTabAtts.itemname || 'tab-' + (iPos+1);
                 var tmpTabLabel = tmpTabAtts.tablabel || ('Tab: ' + tmpTabItem)
+                if( !(tmpAtts.firsttabid)){
+                    tmpAtts.firsttabid = tmpTabItem;
+                }
                 var tmpExtraClasses = '';
                 if( iPos == 0){
                     tmpExtraClasses += 'active'
@@ -70,7 +74,9 @@ export default function display({ props, editMode }) {
             
         } else {
             tmpAtts.tabsinfo = '[]';
+            tmpAtts.firsttabid = '';
         }
+        //console.log('tmpAtts.firsttabid',tmpAtts.firsttabid);
 
     }
 
@@ -114,7 +120,7 @@ export default function display({ props, editMode }) {
         
         var tmpTabsInfo = props.attributes.tabsinfo ? JSON.parse(props.attributes.tabsinfo) : '';
         var tmpTabLinkEls = [];
-console.log('tmpTabsInfo',tmpTabsInfo);
+//console.log('tmpTabsInfo',tmpTabsInfo);
         for( var iPos in tmpTabsInfo ){
             var tmpTabInfo = tmpTabsInfo[iPos];
             tmpTabLinkEls.push(el('div',tmpTabInfo,tmpTabInfo.label));
@@ -130,7 +136,7 @@ console.log('tmpTabsInfo',tmpTabsInfo);
         //     tmpTabsColor = 'black';
         // }
         tmpTablinksEl = el('div',{className: tmpMenuClass}, tmpTabLinkEls);
-        var tmpContents = el('div', {className:"ui segment theme-default-padding " + tmpTabsColor}, el('div', tmpClass, el(wp.blockEditor.InnerBlocks.Content)));
+        var tmpContents = el('div', {className:"ui segment theme-default-padding " + tmpTabsColor}, el('div', {className:tmpClass}, el(wp.blockEditor.InnerBlocks.Content)));
         
         var tmpTabsEl = el('div',{className: ''}, tmpContents);
         if( tmpAtts.bodyonly == true ){

@@ -22,7 +22,7 @@ export default function Edit(theProps) {
     if( !(tmpAtts.groupname) ){
         tmpAtts.groupname = PressinoUI.getRandomID();
     }
-     console.log('tmpAtts.groupname',tmpAtts.groupname);
+     //console.log('tmpAtts.groupname',tmpAtts.groupname);
    
     return <>
         <InspectorControls>
