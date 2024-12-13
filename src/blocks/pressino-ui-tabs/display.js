@@ -65,7 +65,7 @@ export default function display({ props, editMode }) {
             var tmpTabLinkText = JSON.stringify(tmpTabLinks);
             if( tmpAtts.tabsinfo != tmpTabLinkText ){
                 tmpAtts.tabsinfo = tmpTabLinkText;
-//PENDING ____ -> BlockEditor.refreshBlockEditor();
+                PressinoUI.refreshBlockEditor();
             }
             
         } else {
@@ -114,7 +114,7 @@ export default function display({ props, editMode }) {
         
         var tmpTabsInfo = props.attributes.tabsinfo ? JSON.parse(props.attributes.tabsinfo) : '';
         var tmpTabLinkEls = [];
-
+console.log('tmpTabsInfo',tmpTabsInfo);
         for( var iPos in tmpTabsInfo ){
             var tmpTabInfo = tmpTabsInfo[iPos];
             tmpTabLinkEls.push(el('div',tmpTabInfo,tmpTabInfo.label));
@@ -137,6 +137,7 @@ export default function display({ props, editMode }) {
             tmpTablinksEl = el('div');
             tmpTabsEl =  el(wp.blockEditor.InnerBlocks.Content);
         }
+        
         return el('div',{}, tmpTablinksEl, tmpTabsEl);
     }
 

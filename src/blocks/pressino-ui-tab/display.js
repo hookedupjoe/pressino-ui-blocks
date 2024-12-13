@@ -62,7 +62,7 @@ export default function display({ props, editMode }) {
 
         //--- Why do they stick?
         if(tmpTabPos > 0 ){
-            tmpNewElAtts.className += ' xhidden';
+            //tmpNewElAtts.className += ' hidden';
         }
         return el('div', tmpNewElAtts, tmpContent);
 }
