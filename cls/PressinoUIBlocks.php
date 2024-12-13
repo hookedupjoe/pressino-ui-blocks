@@ -76,6 +76,10 @@ class PressinoUIBlocks {
 		$tmpScript = 'window.ActionAppCore.PressinoUIBlocksConfig = ' . $tmpJson;
 
 		wp_add_inline_script( 'app-only-preinit', $tmpScript );
+		//--- Add Blocks-Wide CSS
+		
+		wp_register_style( 'pressino-ui-core-css',   PRESSINO_UI_BLOCKS_URL . '/css/pressino-ui.css', false,  PRESSINO_UI_BLOCKS_CORE_VERSION );
+		wp_enqueue_style ( 'pressino-ui-core-css' );
 
 		//--- Load the action app core components and ActionAppCore.common.blocks add on
 		wp_enqueue_script(

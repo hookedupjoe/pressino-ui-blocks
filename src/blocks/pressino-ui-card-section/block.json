@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "pressino/cardsection",
+	"version": "0.1.0",
+	"title": "Pressino UI Card Section",
+	"category": "pressino-ui-blocks",
+	"description": "A way to group things.",
+	"example": {},
+	"supports": {
+		"html": false,
+		"className": false,
+		"customClassName": false
+	},
+	"textdomain": "pressino-ui-cardsection",
+	"editorScript": "file:./index.js"
+}

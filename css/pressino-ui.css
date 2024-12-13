@@ -1,0 +1,13 @@
+.pressino.editor-boxed {
+    border:dashed 1px gray;
+    min-height:30px;
+}
+
+.pressino.editor-boxed.selected {
+    border:dashed 5px #767676;
+    min-height:80px;
+}
+
+.debug-show {
+    border: solid 2px red !important;
+}

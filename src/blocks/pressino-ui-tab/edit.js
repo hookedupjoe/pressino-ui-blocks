@@ -58,11 +58,13 @@ export default function Edit(theProps) {
 </InspectorControls>
 
 
-    var tmpEditorClass = 'pressino block';
+    var tmpEditorClass = '';
+    tmpEditorClass =  PressinoUI.util.addClasses(tmpEditorClass, 'editorbox');
     if( props.isSelected ){
-        tmpEditorClass += ' selected';
+        tmpEditorClass =  PressinoUI.util.addClasses(tmpEditorClass, 'selected');
     }
     
+
     var tmpTabPrefix = el('div',{className: 'ui label grey right pointing'}, 'Tab');
     var tmpAddedInfo = '';
     if(tmpItemName.length < 30){

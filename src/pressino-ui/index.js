@@ -1,20 +1,7 @@
 import { __ } from '@wordpress/i18n';
 import { SelectControl, PanelBody, TextControl, ToggleControl } from '@wordpress/components';
 
-export const PressinoUI = {
-	getBlockIcon: getBlockIcon,
-	addAttributes: addAttributes,
-	getStandardClass: getStandardClass,
-	getStandardProperty: getStandardProperty,
-	getBlockInEditor: getBlockInEditor,
-	getRandomID: getRandomID,
-	getParentAttributes: getParentAttributes,
-	getParentBlock: getParentBlock,
-	getCommonBlock: getCommonBlock,
-	refreshBlockEditor: refreshBlockEditor,
-	getControlImage: getControlImage,
-	istr: istr,
-}
+
 export const attNamesDef = { mediaID: 'mediaID', mediaURL: 'mediaURL' };
 export const el = wp.element.createElement;
 
@@ -604,6 +591,34 @@ export const CommonBlocks = {
 }
 
 
+const clsLookup = {
+	'editorbox': 'pressino editor-boxed',
+	'selected': 'selected'
+}
+
+function getCommonClass(theName){
+	return clsLookup[theName] || '';
+}
+
+function addToList(theItem, theText){
+	var tmpRet = theItem || '';
+	if( (tmpRet.trim()) ){
+		tmpRet = tmpRet.trim() + ' ';
+	}
+	tmpRet += theText;
+	console.log('tmpRet',tmpRet);
+	return tmpRet;
+}
+
+function addClasses(theItem, theName){
+	var tmpAdd = clsLookup[theName];
+	console.log('tmpAdd',tmpAdd);
+	if( tmpAdd ){
+		return addToList(theItem,tmpAdd);
+	}
+}
+
+
 export const listSources = {
     "colors": "Default|,Red|red,Orange|orange,Yellow|yellow,Olive|olive,Green|green,Teal|teal,Blue|blue,Violet|violet,Purple|purple,Pink|pink,Brown|brown,Black|black",
     "sizes": "Default|,Mini|mini,Tiny|tiny,Small|small,Medium|medium,Large|large,Big|big,Huge|huge,Massive|massive",
@@ -629,5 +644,28 @@ export const listSources = {
     "tofloat": "Default|,Float Left|toleft,Float Right|toright"
 }
 
+//--- Code to assist in creating and using blocks in the editor
+export const PressinoUI = {
+	getBlockIcon: getBlockIcon,
+	addAttributes: addAttributes,
+	getStandardClass: getStandardClass,
+	getStandardProperty: getStandardProperty,
+	getBlockInEditor: getBlockInEditor,
+	getRandomID: getRandomID,
+	getParentAttributes: getParentAttributes,
+	getParentBlock: getParentBlock,
+	getCommonBlock: getCommonBlock,
+	refreshBlockEditor: refreshBlockEditor,
+	getControlImage: getControlImage,
+	util: {
+		addClasses: addClasses,
+		addToList: addToList,
+		getCommonClass: getCommonClass
+	},
+	istr: istr
+}
+
 //--- Global Exposure of Root Entrypoint
 window.PressinoUI = PressinoUI;
+
+
