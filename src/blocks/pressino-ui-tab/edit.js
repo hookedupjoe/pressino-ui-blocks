@@ -44,8 +44,8 @@ export default function Edit(theProps) {
     let tmpSidebarControls = <InspectorControls>
 
     <PanelBody title={istr('General Settings')}>
-        {PressinoUI.getStandardProperty(theProps, 'itemname', 'Unique Item Name (Required)', 'text') } 
-        {PressinoUI.getStandardProperty(theProps, 'tablabel', 'Tab Label (Required)', 'text')}
+        {PressinoUI.getStandardProperty(theProps, 'itemname', 'Unique Item Name (Required)', 'text', true) } 
+        {PressinoUI.getStandardProperty(theProps, 'tablabel', 'Tab Label (Required)', 'text', true)}
     </PanelBody>
 {/* 
     <PanelBody title={istr('Formatting Options')}>

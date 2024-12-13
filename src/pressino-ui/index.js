@@ -72,15 +72,25 @@ function getStandardProperty(theProps, theAttName, theLabel, theControlType, the
 	var tmpContents = [];
 	var tmpAtts = attributes;
 
+	
 	var tmpOnChange = theOnChange;
 	var tmpVal = tmpAtts[theAttName];
 
 	if (theControlType == 'checkbox') {
+		var tmpDoRefresh = false;
+		if( theOnChange === true ){
+			tmpDoRefresh = true;
+			theOnChange = undefined;
+		}
+		
 		if (!tmpOnChange) {
 			tmpOnChange = () => {
 				var tmpAddedAtts = {};
 				tmpAddedAtts[theAttName] = !tmpVal;
-				setAttributes(tmpAddedAtts)
+				setAttributes(tmpAddedAtts);
+				if( tmpDoRefresh ){
+					refreshBlockEditor();
+				}
 			}
 		}
 
@@ -98,35 +108,45 @@ function getStandardProperty(theProps, theAttName, theLabel, theControlType, the
 	} else if (listSources[theControlType]) {
 		tmpContents.push(getSelectControl(theProps, theAttName, theLabel, tmpVal, tmpOnChange, theControlType));
 	}
-
+	// if( tmpDoRefresh ){
+	// 	refreshBlockEditor();
+	// }
 	return tmpContents;
 }
 
-function getCustomControl(theProps, theAttName, theLabel, tmpVal, tmpOnChange, theControlType){
-	if( theControlType == 'image'){
-		return getCustomImageSelection(theProps, theAttName, theLabel, tmpVal, tmpOnChange, theControlType)
+function getCustomURLControl(theProps, theAttName, theLabel, theVal, theOnChange, theControlType){
+	var tmpDoRefresh = false;
+	if( theOnChange === true ){
+		tmpDoRefresh = true;
+		theOnChange = undefined;
 	}
-	return '';
-}
-function getCustomURLControl(theProps, theAttName, theLabel, tmpVal, tmpOnChange, theControlType){
+	
 	var tmpAtts = theProps.attributes;
 	var tmpOnChangeFunc = function( theURL, thePost ) {
 		var tmpToSet = {};
 		tmpToSet[theAttName] = theURL;
 		theProps.setAttributes(tmpToSet);
+		if( tmpDoRefresh ){
+			refreshBlockEditor();
+		}
 	}
 	var tmpEl = el(wp.blockEditor.URLInput, {onChange: tmpOnChangeFunc, value: tmpAtts[theAttName] || ''},'Browse for Link');
 	return(tmpEl);
 }
 
-function getCustomImageSelection(theProps, theAttName, theLabel, tmpVal, tmpOnChange, theControlType){
+function getCustomImageSelection(theProps, theAttName, theLabel, theVal, theOnChange, theControlType){
+	if( theOnChange === true ){
+		tmpDoRefresh = true;
+		theOnChange = undefined;
+	}
+	//*** Not supporting refresh on image update .. shouldn't effect other items instantly */
+
 	var tmpAtts = theProps.attributes;
 	var onSelectImage = function( media ) {
 		var tmpToSet = {};
 		tmpToSet[theAttName['mediaURL']] = media.url;
 		tmpToSet[theAttName['mediaID']] = media.id;
 		return theProps.setAttributes(tmpToSet);
-		
 	};
 
 	var onRemoveImage = function(){
@@ -163,76 +183,87 @@ function getCustomImageSelection(theProps, theAttName, theLabel, tmpVal, tmpOnCh
 	return (tmpMediaEl);
 }
 
-function getFunctionForType(theControlType) {
-	var tmpCT = (theControlType || '').toLowerCase();
-	if (tmpCT == 'text' || tmpCT == 'number') {
-		return 'getTextControl';
-	}
-	if (tmpCT == 'color') {
-		return 'getColorListControl';
-	}
-	if (tmpCT == 'sizeheader') {
-		return 'getHeaderSizeListControl';
-	}
-	if (tmpCT == 'size') {
-		return 'getSizeListControl';
-	}
-	if (tmpCT == 'attached') {
-		return 'getAttachedListControl';
-	}
-	if (tmpCT == 'alignment') {
-		return 'getAlignmentListControl';
-	}
-	if (tmpCT == 'alignmentleftright') {
-		return 'getLeftRightAlignmentListControl';
-	}
-	if (tmpCT == 'alignmentvertical') {
-		return 'getVerticalAlignmentListControl';
-	}
-	if (tmpCT == 'floatleftright') {
-		return 'getLeftRighFloatListControl';
-	}
-	if (tmpCT == 'tofloat') {
-		return 'getFloatControl';
-	}
-	if (tmpCT == 'columns') {
-		return 'getColumnListControl';
-	}
-	if (tmpCT == 'margin') {
-		return 'getMarginListControl';
-	}
-	if (tmpCT == 'topmargin') {
-		return 'getTopMarginListControl';
-	}
-	if (tmpCT == 'bottommargin') {
-		return 'getBottomMarginListControl';
-	}
-	if (tmpCT == 'padding') {
-		return 'getPaddingListControl';
-	}
-	if (tmpCT == 'inverted') {
-		return 'getInvertedListControl';
-	}
-	if (tmpCT == 'gridspacing') {
-		return 'getGridSpacingListControl';
-	}
+// function getFunctionForType(theControlType) {
+// 	var tmpCT = (theControlType || '').toLowerCase();
+// 	if (tmpCT == 'text' || tmpCT == 'number') {
+// 		return 'getTextControl';
+// 	}
+// 	if (tmpCT == 'color') {
+// 		return 'getColorListControl';
+// 	}
+// 	if (tmpCT == 'sizeheader') {
+// 		return 'getHeaderSizeListControl';
+// 	}
+// 	if (tmpCT == 'size') {
+// 		return 'getSizeListControl';
+// 	}
+// 	if (tmpCT == 'attached') {
+// 		return 'getAttachedListControl';
+// 	}
+// 	if (tmpCT == 'alignment') {
+// 		return 'getAlignmentListControl';
+// 	}
+// 	if (tmpCT == 'alignmentleftright') {
+// 		return 'getLeftRightAlignmentListControl';
+// 	}
+// 	if (tmpCT == 'alignmentvertical') {
+// 		return 'getVerticalAlignmentListControl';
+// 	}
+// 	if (tmpCT == 'floatleftright') {
+// 		return 'getLeftRighFloatListControl';
+// 	}
+// 	if (tmpCT == 'tofloat') {
+// 		return 'getFloatControl';
+// 	}
+// 	if (tmpCT == 'columns') {
+// 		return 'getColumnListControl';
+// 	}
+// 	if (tmpCT == 'margin') {
+// 		return 'getMarginListControl';
+// 	}
+// 	if (tmpCT == 'topmargin') {
+// 		return 'getTopMarginListControl';
+// 	}
+// 	if (tmpCT == 'bottommargin') {
+// 		return 'getBottomMarginListControl';
+// 	}
+// 	if (tmpCT == 'padding') {
+// 		return 'getPaddingListControl';
+// 	}
+// 	if (tmpCT == 'inverted') {
+// 		return 'getInvertedListControl';
+// 	}
+// 	if (tmpCT == 'gridspacing') {
+// 		return 'getGridSpacingListControl';
+// 	}
 
-	if (tmpCT == 'dropdown') {
-		return 'getDropDownListControl';
-	}
-	return 'getTextControl';
-}
+// 	if (tmpCT == 'dropdown') {
+// 		return 'getDropDownListControl';
+// 	}
+// 	return 'getTextControl';
+// }
 
 
 function getSelectControl(theProps, theName, theLabel, theValue, theOnChange, theControlType) {
+	var tmpDoRefresh = false;
+	if( theOnChange === true ){
+		tmpDoRefresh = true;
+		theOnChange = undefined;
+	}
+	
+
 	var tmpOnChange = theOnChange;
 	if (!tmpOnChange) {
 		tmpOnChange = (value) => {
 			var tmpAddedAtts = {};
 			tmpAddedAtts[theName] = value;
-			theProps.setAttributes(tmpAddedAtts)
+			theProps.setAttributes(tmpAddedAtts);
+			if(tmpDoRefresh){
+				refreshBlockEditor();
+		    }
 		}
 	}
+
 	var tmpOptions = getSelectionListForAttribute(theControlType);
 	return (<SelectControl
 		label={theLabel}
@@ -246,6 +277,12 @@ function getSelectControl(theProps, theName, theLabel, theValue, theOnChange, th
 
 function getTextControl(theProps, theName, theLabel, theValue, theOnChange, theControlType) {
 
+	var tmpDoRefresh = false;
+	if( theOnChange === true ){
+		tmpDoRefresh = true;
+		theOnChange = undefined;
+	}
+	
 	var tmpOnChange = theOnChange;
 	if (!tmpOnChange) {
 		tmpOnChange = (value) => {
@@ -259,6 +296,9 @@ function getTextControl(theProps, theName, theLabel, theValue, theOnChange, theC
 			var tmpNew = {};
 			tmpNew[theName] = tmpVal;
 			theProps.setAttributes(tmpNew);
+			if(tmpDoRefresh){
+				 refreshBlockEditor();
+			}
 		};
 	}
 
