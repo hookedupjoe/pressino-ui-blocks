@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "pressino/button",
+	"version": "0.1.0",
+	"title": "Pressino UI Button",
+	"category": "pressino-ui-blocks",
+	"description": "A button",
+	"example": {},
+	"supports": {
+		"html": false,
+		"className": false,
+		"customClassName": false
+	},
+	"textdomain": "pressino-ui-button",
+	"editorScript": "file:./index.js"
+}
