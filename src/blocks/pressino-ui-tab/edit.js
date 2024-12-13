@@ -47,10 +47,10 @@ export default function Edit(theProps) {
         {PressinoUI.getStandardProperty(theProps, 'itemname', 'Unique Item Name (Required)', 'text') } 
         {PressinoUI.getStandardProperty(theProps, 'tablabel', 'Tab Label (Required)', 'text')}
     </PanelBody>
-
+{/* 
     <PanelBody title={istr('Formatting Options')}>
         {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
-    </PanelBody>
+    </PanelBody> */}
 
 </InspectorControls>
 

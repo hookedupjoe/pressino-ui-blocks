@@ -35,9 +35,9 @@ export default function Edit(theProps) {
     {PressinoUI.getStandardProperty(theProps, 'bodyonly', 'Exclude the tabs?', 'checkbox')}
 </PanelBody>
 
-<PanelBody title={istr('Formatting Options')}>
+{/* <PanelBody title={istr('Formatting Options')}>
     {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
-</PanelBody>
+</PanelBody> */}
 
 {/* var tmpStandardProperties = [
 BlockEditor.getStandardProperty(props, 'groupname', 'Group Name', 'text'),
