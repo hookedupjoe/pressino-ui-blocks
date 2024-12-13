@@ -18,6 +18,7 @@ export default function display({ attributes, editMode }) {
 
     let classNames = getClass(attributes,editMode);
    
+
     if(editMode === true){
         return (
             <div className={classNames} >
