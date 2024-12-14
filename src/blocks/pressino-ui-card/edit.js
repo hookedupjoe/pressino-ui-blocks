@@ -18,7 +18,12 @@ export default function Edit(theProps) {
     var props = theProps;
     //---
     var tmpAtts = props.attributes;
+    var tmpParentAttributes = PressinoUI.getParentAttributes(props.clientId);
+    props.attributes.parentColor = tmpParentAttributes.color || '';
+    props.attributes.parentMaxImgHeight = tmpParentAttributes.imageheight || 0;
+    props.attributes.parentHeaderType = tmpParentAttributes.headertype || 'default';
 
+    
     // var tmpParentBlock = PressinoUI.getParentBlock(props.clientId);
     
     // if( tmpParentBlock && tmpParentBlock.innerBlocks ){

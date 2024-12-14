@@ -34,7 +34,7 @@ export default function Edit(theProps) {
     {PressinoUI.getStandardProperty(theProps, 'cardspacing', 'Space Between Cards', 'slimwidespacing')}
     {PressinoUI.getStandardProperty(theProps, 'imageheight', 'Cards Image Height', 'number', true)}
     {PressinoUI.getStandardProperty(theProps, 'color', 'Cards Color', 'colors')}
-    {PressinoUI.getStandardProperty(theProps, 'headerType', 'Header Type', 'inverted', true)}
+    {PressinoUI.getStandardProperty(theProps, 'headertype', 'Header Type', 'inverted', true)}
 
     {PressinoUI.getStandardProperty(theProps, 'centered', 'Centered', 'checkbox')}
 </PanelBody>

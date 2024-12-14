@@ -77,9 +77,7 @@ export default function display({ props, editMode }) {
     var tmpHeaderSize = 'medium';
     var tmpHeaderColor = tmpAtts.color || tmpAtts.parentColor || '';
     var tmpInverted = '';
-    var headeClass = ' actappui ';
-
-    tmpInverted = ' inverted ';
+    var headeClass = ' actappui ';   tmpInverted = ' inverted ';
     if (tmpAtt.parentHeaderType == 'inverted') {
         var tmpItems = [];
 
