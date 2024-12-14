@@ -28,12 +28,12 @@ export default function Edit(theProps) {
 
 <PanelBody title={istr('General Settings')}>
     {PressinoUI.getStandardProperty(theProps, 'columns', 'Columns', 'columns')}
-    {PressinoUI.getStandardProperty(theProps, 'minColWidth', 'Column Width', 'number')}
+    {PressinoUI.getStandardProperty(theProps, 'mincolwidth', 'Min Column Width', 'number')}
 
 
-    {PressinoUI.getStandardProperty(theProps, 'cardspacing', 'Space Between Columns', 'slimwidespacing')}
-    {PressinoUI.getStandardProperty(theProps, 'imageheight', 'Image Height', 'number', true)}
-    {PressinoUI.getStandardProperty(theProps, 'color', 'minColWidth', 'colors')}
+    {PressinoUI.getStandardProperty(theProps, 'cardspacing', 'Space Between Cards', 'slimwidespacing')}
+    {PressinoUI.getStandardProperty(theProps, 'imageheight', 'Cards Image Height', 'number', true)}
+    {PressinoUI.getStandardProperty(theProps, 'color', 'Cards Color', 'colors')}
     {PressinoUI.getStandardProperty(theProps, 'headerType', 'Header Type', 'inverted', true)}
 
     {PressinoUI.getStandardProperty(theProps, 'centered', 'Centered', 'checkbox')}

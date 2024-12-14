@@ -606,13 +606,11 @@ function addToList(theItem, theText){
 		tmpRet = tmpRet.trim() + ' ';
 	}
 	tmpRet += theText;
-	console.log('tmpRet',tmpRet);
 	return tmpRet;
 }
 
 function addClasses(theItem, theName){
 	var tmpAdd = clsLookup[theName];
-	console.log('tmpAdd',tmpAdd);
 	if( tmpAdd ){
 		return addToList(theItem,tmpAdd);
 	}

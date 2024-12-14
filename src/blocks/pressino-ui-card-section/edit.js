@@ -4,34 +4,32 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
 import { PanelBody } from '@wordpress/components';
-import { istr, PressinoUI } from '../../pressino-ui';
+import { istr, PressinoUI, el } from '../../pressino-ui';
 import display from './display';
 
 /**
  * @return {Element} Element to render.
  */
 export default function Edit(theProps) {
+    
     const { attributes, setAttributes } = theProps;
     var tmpDisplay = display({ attributes, editMode: true });
     const blockProps = useBlockProps();
     //const {  } = attributes;
-
-    var tmpEditorClass = '';
-    tmpEditorClass =  PressinoUI.util.addClasses(tmpEditorClass, 'editorbox');
-    if( props.isSelected ){
-        tmpEditorClass =  PressinoUI.util.addClasses(tmpEditorClass, 'selected');
-    }
+    var tmpContent = [];
     tmpContent.push( tmpDisplay );
 
    
-    if( attributes.extra && props.isSelected ){
+    if( attributes.extra && theProps.isSelected ){
         // tmpContent.push(el('div', {className: 'ui label brown basic fluid pointing up center aligned'}, 'Bottom Area: Optional'));
 
         var tmpAddBtn = '';
         var tmpBtnBar = ''
+        var tmpAddMsg = '';
+        var tmpUIColor = '';
         
-            tmpAddBtn = el('div', { className: 'ui compact button basic brown ', elementname: 'bottomattachedbutton', action: 'beAddElement' }, 'Add Button');
-            tmpAddMsg = el('div', { className: 'ui compact button basic brown ', elementname: 'bottomattachedmessage', action: 'beAddElement' }, 'Add Message');
+            tmpAddBtn = el('div', { className: 'ui compact button basic brown ', elementname: 'bottomattachedbutton', action: 'pressinoAddElement' }, 'Add Button');
+            tmpAddMsg = el('div', { className: 'ui compact button basic brown ', elementname: 'bottomattachedmessage', action: 'pressinoAddElement' }, 'Add Message');
             tmpBtnBar = el('div', { className: 'ui segment raised slim' }, [
                 tmpAddBtn, tmpAddMsg
             ], el('div', { className: 'endfloat' }));
@@ -41,7 +39,15 @@ export default function Edit(theProps) {
         tmpContent.push(tmpFooter);
         
     }
+   
+    var tmpEditorClass = '';
+    tmpEditorClass =  PressinoUI.util.addClasses(tmpEditorClass, 'editorbox');
+    if( theProps.isSelected ){
+        tmpEditorClass =  PressinoUI.util.addClasses(tmpEditorClass, 'selected');
+    }
 
+    tmpContent = el('div', {className: tmpEditorClass}, tmpContent);
+    
 
 
     return <>

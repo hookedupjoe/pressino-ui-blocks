@@ -66,5 +66,7 @@ function create_block_pressino_ui_blocks_block_init() {
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-button' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-container' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-cards' );
+	register_block_type( __DIR__ . '/build/blocks/pressino-ui-card-section' );
+	register_block_type( __DIR__ . '/build/blocks/pressino-ui-card' );
 }
 add_action( 'init', 'create_block_pressino_ui_blocks_block_init' );

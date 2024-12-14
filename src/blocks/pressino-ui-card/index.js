@@ -1,5 +1,5 @@
 /**
- * Pressino UI Tabs
+ * Pressino UI Tab
  */
 import { registerBlockType } from '@wordpress/blocks';
 
@@ -15,10 +15,9 @@ import {PressinoUI} from '../../pressino-ui';
  * Setup Block Attributes
  */
 let tmpAttributes = {};
-PressinoUI.addAttributes('text', tmpAttributes, ['columns', 'color', 'headerType','cardspacing']);
-PressinoUI.addAttributes('boolean', tmpAttributes, ['centered']);
-PressinoUI.addAttributes('number', tmpAttributes, ['mincolwidth']);
-
+PressinoUI.addAttributes('number', tmpAttributes, ['mediaID','parentMaxImgHeight']);
+PressinoUI.addAttributes('boolean', tmpAttributes, ['fluid', 'raised', 'urlopentab', 'includeBottom']);
+PressinoUI.addAttributes('text', tmpAttributes, ['text', 'title', 'text', 'subtitle', 'color', 'headerColor', 'parentColor', 'parentHeaderType', 'url', 'mediaURL']);
 
 /**
  * Register Block
@@ -29,6 +28,7 @@ registerBlockType( metadata.name, {
 	 */
 	edit: Edit,
 	save,
+	parent: "pressino/tabs",
 	attributes: tmpAttributes,
 	icon: PressinoUI.getBlockIcon('default'),
 } );

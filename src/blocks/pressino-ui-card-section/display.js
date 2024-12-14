@@ -10,7 +10,7 @@ var classSpecs = {
 }
 
 function getClass(theAtts, theIsEditMode) {
-    var tmpClasses = PressinoUI.getStandardClass('', classSpecs, theAtts, theIsEditMode);
+    var tmpClasses = PressinoUI.getStandardClass('content', classSpecs, theAtts, theIsEditMode);
     return tmpClasses
 }
 
@@ -18,7 +18,6 @@ export default function display({ attributes, editMode }) {
 
     let classNames = getClass(attributes,editMode);
    
-
     if(editMode === true){
         return (
             <div className={classNames} >

@@ -63,7 +63,8 @@
 	
         ThisApp.actions.pressinoAddElement = function(theParams, theTarget){
             var tmpParams = ThisApp.getActionParams(theParams, theTarget, ['elementname']);
-         
+           
+
             var tmpThis = wp.data.select( 'core/block-editor' ).getSelectedBlock();
             var tmpPos = 0;
             if( tmpThis.innerBlocks && tmpThis.innerBlocks.length ){
@@ -75,6 +76,7 @@
                 return;
             }
             var tmpToAddElement = PressinoUI.getCommonBlock(tmpItemToAdd);
+            console.log('pressinoAddElement', tmpToAddElement);
             wp.data.dispatch('core/block-editor').insertBlocks(tmpToAddElement,tmpPos,tmpThis.clientId) 
         }
         

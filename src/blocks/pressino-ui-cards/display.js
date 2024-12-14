@@ -21,7 +21,7 @@ function getClass(theAtts, theIsEditMode) {
 
 export default function display({ props, editMode }) {
     var tmpAtts = props.attributes;
-    var tmpClass = getClass(props, true);
+    var tmpClass = getClass(props.attributes, true);
 
     if (editMode) {
         var tmpUIColor = ''; //was props.attributes.color || 
@@ -32,7 +32,7 @@ export default function display({ props, editMode }) {
         var tmpAddBtn = '';
         var tmpBtnBar = ''
         if (props.isSelected) {
-            tmpAddBtn = el('div', { className: 'ui compact button basic grey ', action: 'beAddCard' }, 'Add Card');
+            tmpAddBtn = el('div', { className: 'ui compact button basic grey ', elementname: 'card', action: 'pressinoAddElement' }, 'Add Card');
             tmpBtnBar = el('div', { className: 'ui segment raised slim' }, [
                 tmpAddBtn
             ], el('div', { className: 'endfloat' }));
@@ -45,23 +45,23 @@ export default function display({ props, editMode }) {
             tmpHdr,
             el('div', { className: 'edit-cards' + tmpAtts.color + ' ' + tmpAtts.columns },
                 [
-                    el(wp.blockEditor.InnerBlocks, { allowedBlocks: ['actappui/card'], renderAppender: false }),
+                    el(wp.blockEditor.InnerBlocks, { allowedBlocks: ['pressino/card'], renderAppender: false }),
                 ]
             )
 
         )
     } else {
-        if (props.attributes.columns != '') {
-            tmpClass += ' stackable' + props.attributes.columns;
+        if ((props.attributes.columns)) {
+            tmpClass += ' stackable ' + (props.attributes.columns || '');
         }
         var tmpProps = {className: tmpClass};
-        if (props.attributes.columns == '') {
+        if (!(props.attributes.columns)) {
             tmpProps["auto-adapt"] = "cards";
         } else {
             tmpProps["columns"] = props.attributes.columns;
         }
-        if (props.attributes.minColWidth) {
-            tmpProps["mincolwidth"] = props.attributes.minColWidth;
+        if (props.attributes.mincolwidth) {
+            tmpProps["mincolwidth"] = props.attributes.mincolwidth;
         }
 
         return el('div', tmpProps, el(wp.blockEditor.InnerBlocks.Content));
