@@ -55,7 +55,20 @@ export default function display({ props, editMode }) {
 
             )
         } else {
-            return el('div', {className:tmpClass}, el(wp.blockEditor.InnerBlocks.Content));
+            if ((props.attributes.columns)) {
+                tmpClass += ' stackable ' + (props.attributes.columns || '');
+            }
+            var tmpNewAtts = {className: tmpClass};
+            if (!(props.attributes.columns)) {
+                tmpNewAtts["auto-adapt"] = "grid";
+            } else {
+                tmpNewAtts["columns"] = props.attributes.columns;
+            }
+            if (props.attributes.mincolwidth) {
+                tmpNewAtts["mincolwidth"] = props.attributes.mincolwidth;
+            }
+    
+            return el('div', tmpNewAtts, el(wp.blockEditor.InnerBlocks.Content));
         }
    
 

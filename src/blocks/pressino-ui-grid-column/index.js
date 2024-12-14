@@ -15,9 +15,8 @@ import {PressinoUI} from '../../pressino-ui';
  * Setup Block Attributes
  */
 let tmpAttributes = {};
-PressinoUI.addAttributes('number', tmpAttributes, ['mediaID','parentMaxImgHeight']);
-PressinoUI.addAttributes('boolean', tmpAttributes, ['fluid', 'raised', 'urlopentab', 'includeBottom']);
-PressinoUI.addAttributes('text', tmpAttributes, ['text', 'title', 'text', 'subtitle', 'color', 'headerColor', 'parentColor', 'parentHeaderType', 'url', 'mediaURL']);
+PressinoUI.addAttributes('boolean', tmpAttributes, ['centered','flexgrowbox']);
+PressinoUI.addAttributes('text', tmpAttributes, ['classes']);
 
 /**
  * Register Block
@@ -28,7 +27,7 @@ registerBlockType( metadata.name, {
 	 */
 	edit: Edit,
 	save,
-	parent: "pressino/cards",
+	parent: "pressino/grid",
 	attributes: tmpAttributes,
 	icon: PressinoUI.getBlockIcon('default'),
 } );
