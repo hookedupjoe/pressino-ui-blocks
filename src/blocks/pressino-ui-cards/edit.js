@@ -7,6 +7,13 @@ import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
 import { istr, el, PressinoUI } from '../../pressino-ui';
 import display from './display';
 
+import { BlockControls } from '@wordpress/block-editor';
+import { ToolbarGroup, ToolbarButton } from '@wordpress/components';
+import { addCard } from '@wordpress/icons';
+
+function onChangeAlignment(){
+    alert('onChangeAlignment')
+}
 /**
  * @return {Element} Element to render.
  */
@@ -16,7 +23,10 @@ export default function Edit(theProps) {
     const blockProps = useBlockProps();
     const { raised, basic, attached } = attributes;
     var props = theProps;
-    //---
+ 
+    const onAddCard = () => {
+        PressinoUI.addBlock({blockName: 'card'})
+    }
 
     var tmpAtts = props.attributes;
     if( !(tmpAtts.groupname) ){
@@ -24,6 +34,19 @@ export default function Edit(theProps) {
     }
    
     return <>
+    <div {...blockProps}>
+
+    <BlockControls>
+                <ToolbarGroup>
+                <ToolbarButton
+						icon={ addCard }
+						label="Add Card"
+                        text="Add Card"
+						onClick={ onAddCard }
+					/>
+                </ToolbarGroup>
+            </BlockControls>
+        
         <InspectorControls>
 
 <PanelBody title={istr('General Settings')}>
@@ -41,7 +64,7 @@ export default function Edit(theProps) {
 
 
 </InspectorControls>
-<div {...blockProps}>
+
 {tmpDisplay}
 </div>
 </>

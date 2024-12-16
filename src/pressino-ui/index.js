@@ -642,6 +642,22 @@ export const listSources = {
     "tofloat": "Default|,Float Left|toleft,Float Right|toright"
 }
 
+
+const addBlock = ({blockName}) => { 
+	var tmpThis = wp.data.select( 'core/block-editor' ).getSelectedBlock();
+	var tmpPos = 0;
+	if( tmpThis.innerBlocks && tmpThis.innerBlocks.length ){
+		tmpPos = tmpThis.innerBlocks.length;
+	}
+	var tmpItemToAdd = blockName;
+	if( !(tmpItemToAdd) ){
+		console.error("No elementname attribute found")
+		return;
+	}
+	var tmpToAddElement = getCommonBlock(tmpItemToAdd);
+	wp.data.dispatch('core/block-editor').insertBlocks(tmpToAddElement,tmpPos,tmpThis.clientId) 
+}
+
 //--- Code to assist in creating and using blocks in the editor
 export const PressinoUI = {
 	getBlockIcon: getBlockIcon,
@@ -655,6 +671,7 @@ export const PressinoUI = {
 	getCommonBlock: getCommonBlock,
 	refreshBlockEditor: refreshBlockEditor,
 	getControlImage: getControlImage,
+	addBlock: addBlock,
 	util: {
 		addClasses: addClasses,
 		addToList: addToList,
