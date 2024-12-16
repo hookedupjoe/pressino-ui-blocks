@@ -33,17 +33,17 @@ export default function display({ props, editMode }) {
 
           
 
-            var tmpAddBtn = '';
-            var tmpBtnBar = ''
-            if (props.isSelected) {
-                tmpAddBtn = el('div', { className: 'ui compact button basic grey ', elementname: 'gridcolumn', action: 'pressinoAddElement' }, 'Add Column');
-                tmpBtnBar = el('div', { className: 'ui segment raised slim' }, [
-                    tmpAddBtn
-                ], el('div', { className: 'endfloat' }));
+            // var tmpAddBtn = '';
+            // var tmpBtnBar = ''
+            // if (props.isSelected) {
+            //     tmpAddBtn = el('div', { className: 'ui compact button basic grey ', elementname: 'gridcolumn', action: 'pressinoAddElement' }, 'Add Column');
+            //     tmpBtnBar = el('div', { className: 'ui segment raised slim' }, [
+            //         tmpAddBtn
+            //     ], el('div', { className: 'endfloat' }));
                 
-            }
+            // }
             tmpUIColor = 'grey';
-            var tmpHdr = el('div', { className: 'ui mar2 pad5 segment inverted center aligned fluid ' + tmpUIColor }, tmpIcon, tmpHeaderMsg, tmpBtnBar);
+            var tmpHdr = el('div', { className: 'ui mar2 pad5 segment inverted center aligned fluid ' + tmpUIColor }, tmpIcon, tmpHeaderMsg);
 
             return el('div', { className: 'ui segment ' + theProps.attributes.color || '' }, null,
                 tmpHdr,

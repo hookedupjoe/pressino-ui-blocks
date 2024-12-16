@@ -17,26 +17,27 @@ export default function Edit(theProps) {
     const { raised, basic, attached } = attributes;
 
     return <>
-        <InspectorControls>
-
-            <PanelBody title={istr('General Settings')}>
-                {PressinoUI.getStandardProperty(theProps, 'color', 'Message Color', 'colors')}
-                {PressinoUI.getStandardProperty(theProps, 'size', 'Overall Size', 'sizes')}
-                {PressinoUI.getStandardProperty(theProps, 'attached', 'Attached', 'attached')}
-                {PressinoUI.getStandardProperty(theProps, 'floating', 'Floating', 'checkbox')}
-                {PressinoUI.getStandardProperty(theProps, 'compact', 'Compact', 'checkbox')}
-
-            </PanelBody>
-
-            <PanelBody title={istr('Formatting Options')}>
-                {PressinoUI.getStandardProperty(theProps, 'padding', 'Padding', 'padding')}
-                {PressinoUI.getStandardProperty(theProps, 'margin', 'Margin', 'margin')}
-                {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
-            </PanelBody>
-
-
-        </InspectorControls>
         <div {...blockProps}>
+            <InspectorControls>
+
+                <PanelBody title={istr('General Settings')}>
+                    {PressinoUI.getStandardProperty(theProps, 'color', 'Message Color', 'colors')}
+                    {PressinoUI.getStandardProperty(theProps, 'size', 'Overall Size', 'sizes')}
+                    {PressinoUI.getStandardProperty(theProps, 'attached', 'Attached', 'attached')}
+                    {PressinoUI.getStandardProperty(theProps, 'floating', 'Floating', 'checkbox')}
+                    {PressinoUI.getStandardProperty(theProps, 'compact', 'Compact', 'checkbox')}
+
+                </PanelBody>
+
+                <PanelBody title={istr('Formatting Options')}>
+                    {PressinoUI.getStandardProperty(theProps, 'padding', 'Padding', 'padding')}
+                    {PressinoUI.getStandardProperty(theProps, 'margin', 'Margin', 'margin')}
+                    {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
+                </PanelBody>
+
+
+            </InspectorControls>
+
             {tmpDisplay}
         </div>
     </>

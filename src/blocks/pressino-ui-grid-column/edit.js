@@ -39,11 +39,11 @@ export default function Edit(theProps) {
         tmpEditorClass = PressinoUI.util.addClasses(tmpEditorClass, 'selected');
     }
 
-var tmpTabPrefix = el('div',{className: 'ui label grey'}, 'Grid Column');
-var tmpEditHeader = el('div', {className:"ui message bolder center aligned pad8 grey small"}, tmpTabPrefix);
+    var tmpTabPrefix = el('div', { className: 'ui label grey' }, 'Grid Column');
+    var tmpEditHeader = el('div', { className: "ui message bolder center aligned pad8 grey small" }, tmpTabPrefix);
 
 
-    
+
     var tmpRetEl = el(
         'div',
         {},
@@ -52,22 +52,9 @@ var tmpEditHeader = el('div', {className:"ui message bolder center aligned pad8 
             tmpDisplayObject
         ]
     )
-    // return el('div',{}, el('div',{},));
-
-    // var tmpRetEl = el(
-    //     'div',
-    //     { className: tmpEditorClass },
-    //     [
-
-    //         tmpSidebarControls,
-    //         tmpDisplayObject
-    //     ]
-    // );
-
+   
     return <div {...blockProps}>
         {[tmpEditHeader, tmpRetEl]}
     </div>
-
-    // return tmpRetEl;
 
 }

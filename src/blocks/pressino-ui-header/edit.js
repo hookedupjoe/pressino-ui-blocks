@@ -21,32 +21,33 @@ export default function Edit(theProps) {
     const checkboxList = ['', '', '', '', '', '', ''];
 
     return <>
-        <InspectorControls>
-
-            <PanelBody title={istr('General Settings')}>
-            {PressinoUI.getStandardProperty(theProps, 'text', 'Header Text', 'text')}
-            {PressinoUI.getStandardProperty(theProps, 'subtext', 'Sub Text', 'text')}
-            {PressinoUI.getStandardProperty(theProps, 'color', 'Header Color', 'colors')}
-            {PressinoUI.getStandardProperty(theProps, 'size', 'Header size', 'sizes')}
-
-                {PressinoUI.getStandardProperty(theProps, 'inverted', 'Inverted', 'checkbox')}
-                {PressinoUI.getStandardProperty(theProps, 'dividing', 'Line at bottom', 'checkbox')}
-                {PressinoUI.getStandardProperty(theProps, 'block', 'Show as block', 'checkbox')}
-                {PressinoUI.getStandardProperty(theProps, 'attached', 'Attached', 'attached')}
-                {PressinoUI.getStandardProperty(theProps, 'alignment', 'Alignment', 'alignment')}
-
-            </PanelBody>
-
-            <PanelBody title={istr('Formatting Options')}>
-                {PressinoUI.getStandardProperty(theProps, 'margin', 'Margin', 'margin')}
-                {PressinoUI.getStandardProperty(theProps, 'padding', 'Padding', 'padding')}
-                {PressinoUI.getStandardProperty(theProps, 'bottommargin', 'Bottom Margin', 'bottommargin')}
-                {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
-            </PanelBody>
-
-     
-        </InspectorControls>
         <div {...blockProps}>
+            <InspectorControls>
+
+                <PanelBody title={istr('General Settings')}>
+                    {PressinoUI.getStandardProperty(theProps, 'text', 'Header Text', 'text')}
+                    {PressinoUI.getStandardProperty(theProps, 'subtext', 'Sub Text', 'text')}
+                    {PressinoUI.getStandardProperty(theProps, 'color', 'Header Color', 'colors')}
+                    {PressinoUI.getStandardProperty(theProps, 'size', 'Header size', 'sizes')}
+
+                    {PressinoUI.getStandardProperty(theProps, 'inverted', 'Inverted', 'checkbox')}
+                    {PressinoUI.getStandardProperty(theProps, 'dividing', 'Line at bottom', 'checkbox')}
+                    {PressinoUI.getStandardProperty(theProps, 'block', 'Show as block', 'checkbox')}
+                    {PressinoUI.getStandardProperty(theProps, 'attached', 'Attached', 'attached')}
+                    {PressinoUI.getStandardProperty(theProps, 'alignment', 'Alignment', 'alignment')}
+
+                </PanelBody>
+
+                <PanelBody title={istr('Formatting Options')}>
+                    {PressinoUI.getStandardProperty(theProps, 'margin', 'Margin', 'margin')}
+                    {PressinoUI.getStandardProperty(theProps, 'padding', 'Padding', 'padding')}
+                    {PressinoUI.getStandardProperty(theProps, 'bottommargin', 'Bottom Margin', 'bottommargin')}
+                    {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
+                </PanelBody>
+
+
+            </InspectorControls>
+
             {tmpDisplay}
         </div>
     </>

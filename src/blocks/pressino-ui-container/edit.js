@@ -14,7 +14,6 @@ export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
     var tmpDisplay = display({ attributes, editMode: true });
     const blockProps = useBlockProps();
-    //const {  } = attributes;
 
     return <>
         <InspectorControls>

@@ -9,9 +9,11 @@ import display from './display';
 
 import { BlockControls } from '@wordpress/block-editor';
 import { ToolbarGroup, ToolbarButton } from '@wordpress/components';
-import { addCard } from '@wordpress/icons';
+import { plusCircle as blockIcon } from '@wordpress/icons';
 
-function onChangeAlignment(){
+
+
+function onChangeAlignment() {
     alert('onChangeAlignment')
 }
 /**
@@ -23,50 +25,51 @@ export default function Edit(theProps) {
     const blockProps = useBlockProps();
     const { raised, basic, attached } = attributes;
     var props = theProps;
- 
-    const onAddCard = () => {
-        PressinoUI.addBlock({blockName: 'card'})
+
+    const onAddBlock = () => {
+        PressinoUI.addBlock({ blockName: 'pressino/card' })
     }
 
     var tmpAtts = props.attributes;
-    if( !(tmpAtts.groupname) ){
+    if (!(tmpAtts.groupname)) {
         tmpAtts.groupname = PressinoUI.getRandomID();
     }
-   
-    return <>
-    <div {...blockProps}>
 
-    <BlockControls>
+    return <>
+        <div {...blockProps}>
+       
+            <BlockControls>
+          
                 <ToolbarGroup>
-                <ToolbarButton
-						icon={ addCard }
-						label="Add Card"
+                    <ToolbarButton
+                        icon={blockIcon}
+                        label="Add Card"
                         text="Add Card"
-						onClick={ onAddCard }
-					/>
+                        onClick={onAddBlock}
+                    />
                 </ToolbarGroup>
             </BlockControls>
-        
-        <InspectorControls>
 
-<PanelBody title={istr('General Settings')}>
-    {PressinoUI.getStandardProperty(theProps, 'columns', 'Columns', 'columns')}
-    {PressinoUI.getStandardProperty(theProps, 'mincolwidth', 'Min Column Width', 'number')}
+            <InspectorControls>
 
-
-    {PressinoUI.getStandardProperty(theProps, 'cardspacing', 'Space Between Cards', 'slimwidespacing')}
-    {PressinoUI.getStandardProperty(theProps, 'imageheight', 'Cards Image Height', 'number', true)}
-    {PressinoUI.getStandardProperty(theProps, 'color', 'Cards Color', 'colors')}
-    {PressinoUI.getStandardProperty(theProps, 'headertype', 'Header Type', 'inverted', true)}
-
-    {PressinoUI.getStandardProperty(theProps, 'centered', 'Centered', 'checkbox')}
-</PanelBody>
+                <PanelBody title={istr('General Settings')}>
+                    {PressinoUI.getStandardProperty(theProps, 'columns', 'Columns', 'columns')}
+                    {PressinoUI.getStandardProperty(theProps, 'mincolwidth', 'Min Column Width', 'number')}
 
 
-</InspectorControls>
+                    {PressinoUI.getStandardProperty(theProps, 'cardspacing', 'Space Between Cards', 'slimwidespacing')}
+                    {PressinoUI.getStandardProperty(theProps, 'imageheight', 'Cards Image Height', 'number', true)}
+                    {PressinoUI.getStandardProperty(theProps, 'color', 'Cards Color', 'colors')}
+                    {PressinoUI.getStandardProperty(theProps, 'headertype', 'Header Type', 'inverted', true)}
 
-{tmpDisplay}
-</div>
-</>
+                    {PressinoUI.getStandardProperty(theProps, 'centered', 'Centered', 'checkbox')}
+                </PanelBody>
+
+
+            </InspectorControls>
+
+            {tmpDisplay}
+        </div>
+    </>
 
 }

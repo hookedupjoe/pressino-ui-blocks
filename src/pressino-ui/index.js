@@ -581,10 +581,10 @@ export const CommonBlocks = {
 		},
 
 	},
-	getBlock: function(theName){
+	getBlock: function(theName, theBlockOptions){
 		var tmpItem = this.lookup[theName];
 		if( !(tmpItem)){
-			return false;
+			return wp.blocks.createBlock(theName, theBlockOptions || {});;
 		}
 		return wp.blocks.createBlock(tmpItem.type, tmpItem.attr);
 	}
@@ -655,6 +655,9 @@ const addBlock = ({blockName}) => {
 		return;
 	}
 	var tmpToAddElement = getCommonBlock(tmpItemToAdd);
+	if( !(tmpToAddElement) ){
+
+	}
 	wp.data.dispatch('core/block-editor').insertBlocks(tmpToAddElement,tmpPos,tmpThis.clientId) 
 }
 

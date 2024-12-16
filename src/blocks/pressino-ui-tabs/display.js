@@ -109,7 +109,7 @@ export default function display({ props, editMode }) {
         }
         tmpUIColor = 'grey';
        
-        var tmpHdr = el('div', { className: 'ui mar2 pad5 segment inverted center aligned fluid ' + tmpUIColor },  tmpIcon, tmpHeaderMsg, tmpBtnBar);
+        var tmpHdr = el('div', { className: 'ui mar2 pad5 segment inverted center aligned fluid ' + tmpUIColor },  tmpIcon, tmpHeaderMsg);
         var tmpSegClasses = props.attributes.color || '' ;
         
         var tmpRetEl = el('div', { className: 'ui segment ' + tmpSegClasses}, null,

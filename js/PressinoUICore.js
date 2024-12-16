@@ -60,7 +60,7 @@
 
 
     function setupActions(){
-	
+        //--- Deprecated - Backward compatibility
         ThisApp.actions.pressinoAddElement = function(theParams, theTarget){
             var tmpParams = ThisApp.getActionParams(theParams, theTarget, ['elementname']);
            

@@ -7,6 +7,14 @@ import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
 import { istr, el, PressinoUI } from '../../pressino-ui';
 import display from './display';
 
+import { BlockControls } from '@wordpress/block-editor';
+import { ToolbarGroup, ToolbarButton } from '@wordpress/components';
+import { plusCircle as blockIcon } from '@wordpress/icons';
+
+const onAddBlock = () => {
+    PressinoUI.addBlock({ blockName: 'pressino/tab' })
+}
+
 /**
  * @return {Element} Element to render.
  */
@@ -19,32 +27,39 @@ export default function Edit(theProps) {
     //---
 
     var tmpAtts = props.attributes;
-    if( !(tmpAtts.groupname) ){
+    if (!(tmpAtts.groupname)) {
         tmpAtts.groupname = PressinoUI.getRandomID();
     }
-   
+
     return <>
+
+        <BlockControls>
+            <ToolbarGroup>
+                <ToolbarButton
+                    icon={blockIcon}
+                    label="Add Tab"
+                    text="Add Tab"
+                    onClick={onAddBlock}
+                />
+            </ToolbarGroup>
+        </BlockControls>
+
         <InspectorControls>
 
-<PanelBody title={istr('General Settings')}>
-    {PressinoUI.getStandardProperty(theProps, 'groupname', 'Group Name', 'text')}
-    {PressinoUI.getStandardProperty(theProps, 'color', 'Tabs Color', 'colors')}
-    {PressinoUI.getStandardProperty(theProps, 'inverted', 'Inverted', 'checkbox')}
-    {PressinoUI.getStandardProperty(theProps, 'insidepadding', 'Inside Padding', 'padding')}
-    {PressinoUI.getStandardProperty(theProps, 'padding', 'Outside Padding', 'padding')}
-    {PressinoUI.getStandardProperty(theProps, 'labelpadding', 'Label Padding', 'slimwidespacing')}
-    {PressinoUI.getStandardProperty(theProps, 'bodyonly', 'Exclude the tabs?', 'checkbox')}
-</PanelBody>
+            <PanelBody title={istr('General Settings')}>
+                {PressinoUI.getStandardProperty(theProps, 'groupname', 'Group Name', 'text')}
+                {PressinoUI.getStandardProperty(theProps, 'color', 'Tabs Color', 'colors')}
+                {PressinoUI.getStandardProperty(theProps, 'inverted', 'Inverted', 'checkbox')}
+                {PressinoUI.getStandardProperty(theProps, 'insidepadding', 'Inside Padding', 'padding')}
+                {PressinoUI.getStandardProperty(theProps, 'padding', 'Outside Padding', 'padding')}
+                {PressinoUI.getStandardProperty(theProps, 'labelpadding', 'Label Padding', 'slimwidespacing')}
+                {PressinoUI.getStandardProperty(theProps, 'bodyonly', 'Exclude the tabs?', 'checkbox')}
+            </PanelBody>
 
-{/* <PanelBody title={istr('Formatting Options')}>
-    {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
-</PanelBody> */}
-
-
-</InspectorControls>
-<div {...blockProps}>
-{tmpDisplay}
-</div>
-</>
+        </InspectorControls>
+        <div {...blockProps}>
+            {tmpDisplay}
+        </div>
+    </>
 
 }

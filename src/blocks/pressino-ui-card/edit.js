@@ -16,32 +16,11 @@ export default function Edit(theProps) {
     const blockProps = useBlockProps();
     const { raised, basic, attached } = attributes;
     var props = theProps;
-    //---
-    var tmpAtts = props.attributes;
     var tmpParentAttributes = PressinoUI.getParentAttributes(props.clientId);
     props.attributes.parentColor = tmpParentAttributes.color || '';
     props.attributes.parentMaxImgHeight = tmpParentAttributes.imageheight || 0;
     props.attributes.parentHeaderType = tmpParentAttributes.headertype || 'default';
 
-    
-    // var tmpParentBlock = PressinoUI.getParentBlock(props.clientId);
-    
-    // if( tmpParentBlock && tmpParentBlock.innerBlocks ){
-    //     var tmpIBs = tmpParentBlock.innerBlocks;
-    //     for( var iPos in tmpIBs){
-    //         var tmPIB = tmpIBs[iPos];
-    //         if( tmPIB.clientId == props.clientId ){
-    //             //--- This is me
-    //             if( tmpAtts.tabpos != iPos ){
-    //                 tmpAtts.tabpos = iPos;
-    //                 PressinoUI.refreshBlockEditor();
-    //             }
-    //         }
-            
-    //     }
-    // }
-
-    //ToDo: Add refresh option for itemname and label **
     let tmpSidebarControls = <InspectorControls>
 
     <PanelBody title={istr('General Settings')}>
@@ -66,22 +45,6 @@ export default function Edit(theProps) {
     if( props.isSelected ){
         tmpEditorClass =  PressinoUI.util.addClasses(tmpEditorClass, 'selected');
     }
-    
-
-    // var tmpTabPrefix = el('div',{className: 'ui label grey right pointing'}, 'Tab');
-    // var tmpAddedInfo = '';
-    // if(tmpItemName.length < 30){
-    //     tmpAddedInfo = ' [' + tmpItemName + ']'
-    // }
-    // var tmpTabNameLabel = el('div',{className: 'ui label grey basic  padr10'}, tmpTabLabel + tmpAddedInfo);
-
-    // if(tmpTabLabel == '' ){
-    //     var tmpTabPrefix = el('div',{className: 'ui label orange right pointing'}, 'Required: ');
-    //     var tmpTabNameLabel = el('div',{className: 'ui label grey basic  padr10'}, 'Every tab entry needs a tab label.', el('span',{'className': 'ui bolder padt8 larger marl10'}, 'Set value in settings.'));
-    // }
-
-    // var tmpEditHeader = el('div', {className:"ui message bolder center aligned pad8 grey small"}, tmpTabPrefix,tmpTabNameLabel);
-//  tmpEditHeader,
 
     var tmpRetEl = el(
         'div',
@@ -96,7 +59,5 @@ export default function Edit(theProps) {
     return <div {...blockProps}>
         {tmpRetEl}
     </div>
-
-   // return tmpRetEl;
 
 }
