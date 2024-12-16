@@ -18,7 +18,10 @@ function getClass(theAtts, theIsEditMode) {
 export default function display({ props, editMode }) {
     var tmpAtts = props.attributes;
     var tmpContent = [];
-    var tmpClass = getClass(props, editMode);
+    var tmpClass = getClass(tmpAtts, editMode);
+    
+
+
     if( editMode ){
         tmpClass += ' fluid';
     }

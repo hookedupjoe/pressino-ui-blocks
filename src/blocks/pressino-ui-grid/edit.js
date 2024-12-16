@@ -7,6 +7,7 @@ import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
 import { istr, el, PressinoUI } from '../../pressino-ui';
 import display from './display';
 
+
 import { BlockControls } from '@wordpress/block-editor';
 import { ToolbarGroup, ToolbarButton } from '@wordpress/components';
 import { plusCircle as blockIcon } from '@wordpress/icons';
@@ -14,6 +15,7 @@ import { plusCircle as blockIcon } from '@wordpress/icons';
 const onAddBlock = () => {
     PressinoUI.addBlock({ blockName: 'pressino/gridcolumn' })
 }
+
 /**
  * @return {Element} Element to render.
  */

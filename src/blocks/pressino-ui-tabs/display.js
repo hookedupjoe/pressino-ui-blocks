@@ -21,10 +21,7 @@ function getClass(theAtts, theIsEditMode) {
 
 export default function display({ props, editMode }) {
     var tmpAtts = props.attributes;
-    var tmpClass = getClass(props, true);
-
-   
-
+    var tmpClass = getClass(tmpAtts, true);
 
     var tmpInvertedClass = '';
     if( tmpAtts.inverted == true ){
