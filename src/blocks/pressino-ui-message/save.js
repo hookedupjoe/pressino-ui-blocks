@@ -7,9 +7,6 @@ import display from './display';
 export default function save( { attributes } ) {
     const blockProps = useBlockProps.save();
     var tmpDisplay = display({attributes, editMode: false});
-    return (
-        <div { ...blockProps }>
-           {tmpDisplay}
-        </div>
-    );
+    //--- Not using blockprops with extra div, causes css issues
+    return tmpDisplay;
 }
