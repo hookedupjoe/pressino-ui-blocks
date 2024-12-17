@@ -15,10 +15,26 @@ function getClass(theAtts, theIsEditMode) {
 
 export default function display({ attributes, editMode }) {
         var tmpCN = getClass(attributes, true);
+        const {useicon,iconname,iconalign,iconaslabel} = attributes;
         var tmpAtts = attributes;
         var tmpText = tmpAtts.text;
+        var tmpExtraEl = '';
+        var tmpExtraClasses = '';
+        if( useicon && iconname){
+            tmpExtraEl = <i class={'icon ' + iconname}></i>;
 
-        var tmpEl = el('div',{className:tmpCN},[tmpText]);
+            tmpExtraClasses += ' labeled icon';
+            if( ! iconaslabel ){
+                tmpExtraClasses += ' clear';
+            }
+            if(iconalign){
+                tmpExtraClasses += ' east';
+            }
+        }
+
+        tmpCN += tmpExtraClasses;
+    
+        var tmpEl = el('div',{className:tmpCN},[tmpText,tmpExtraEl]);
         
         if(!editMode){
             if (tmpAtts.url) {
