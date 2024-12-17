@@ -81,6 +81,10 @@ class PressinoUIBlocks {
 		wp_register_style( 'pressino-ui-core-css',   PRESSINO_UI_BLOCKS_URL . '/css/pressino-ui.css', false,  PRESSINO_UI_BLOCKS_CORE_VERSION );
 		wp_enqueue_style ( 'pressino-ui-core-css' );
 
+		//--- ToDo: Make this an option?
+		wp_register_style( 'pressino-ui-font-aweseome-css',   PRESSINO_UI_BLOCKS_URL . '/lib/fontawesome/css/all.min.css', false,  PRESSINO_UI_BLOCKS_CORE_VERSION );
+		wp_enqueue_style ( 'pressino-ui-font-aweseome-css' );
+
 		//--- Load the action app core components and ActionAppCore.common.blocks add on
 		wp_enqueue_script(
 			'pressino-ui-core', 
