@@ -29,5 +29,5 @@ registerBlockType( metadata.name, {
 	save,
 	parent: 'pressino/card',
 	attributes: tmpAttributes,
-	icon: PressinoUI.getBlockIcon('default'),
+	icon: PressinoUI.getBlockIcon(metadata.name),
 } );

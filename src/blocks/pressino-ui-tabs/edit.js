@@ -36,7 +36,7 @@ export default function Edit(theProps) {
         <BlockControls>
             <ToolbarGroup>
                 <ToolbarButton
-                    icon={blockIcon}
+                    icon={PressinoUI.getBlockIcon('addtab')}
                     label="Add Tab"
                     text="Add Tab"
                     onClick={onAddBlock}

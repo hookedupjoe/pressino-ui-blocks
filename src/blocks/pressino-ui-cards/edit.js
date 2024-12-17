@@ -42,7 +42,7 @@ export default function Edit(theProps) {
           
                 <ToolbarGroup>
                     <ToolbarButton
-                        icon={blockIcon}
+                        icon={PressinoUI.getBlockIcon('addcard')}
                         label="Add Card"
                         text="Add Card"
                         onClick={onAddBlock}

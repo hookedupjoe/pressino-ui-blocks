@@ -30,5 +30,5 @@ registerBlockType( metadata.name, {
 	edit: Edit,
 	save,
 	attributes: tmpAttributes,
-	icon: PressinoUI.getBlockIcon('default'),
+	icon: PressinoUI.getBlockIcon(metadata.name),
 } );

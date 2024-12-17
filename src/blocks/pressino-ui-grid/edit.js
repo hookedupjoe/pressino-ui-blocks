@@ -36,7 +36,7 @@ export default function Edit(theProps) {
             <BlockControls>
                 <ToolbarGroup>
                     <ToolbarButton
-                        icon={blockIcon}
+                        icon={PressinoUI.getBlockIcon('addgridcolumn')}
                         label="Add Column"
                         text="Add Column"
                         onClick={onAddBlock}
