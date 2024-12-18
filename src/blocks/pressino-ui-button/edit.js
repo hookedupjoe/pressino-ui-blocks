@@ -29,7 +29,7 @@ export default function Edit(theProps) {
 
             <PanelBody title={istr('Icon Options')}>
                 {PressinoUI.getStandardProperty(theProps, 'useicon', 'Use Icon', 'checkbox')}
-                {PressinoUI.getSettingsForIcon({label: 'Select Icon',attname: 'iconnamesel',isInserterOpen,setInserterOpen,isQuickInserterOpen,setQuickInserterOpen,attributes,setAttributes})}
+                {(useicon && PressinoUI.getSettingsForIcon({label: 'Select Icon',attname: 'iconname',isInserterOpen,setInserterOpen,isQuickInserterOpen,setQuickInserterOpen,attributes,setAttributes}))}
                 {/* {PressinoUI.getStandardProperty(theProps, 'iconnamesel', 'Icon', 'icon',false, false,{isQuickInserterOpen, setQuickInserterOpen})} */}
                 {(useicon && PressinoUI.getStandardProperty(theProps, 'iconname', "Icon Name", 'text'))}
                 {(useicon && PressinoUI.getStandardProperty(theProps, 'iconalign', 'Icon on Right Side', 'checkbox'))}

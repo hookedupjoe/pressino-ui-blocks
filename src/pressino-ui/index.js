@@ -80,8 +80,12 @@ function getSettingsForIcon(props) {
 		setAttributes(tmpToSet);
 	}
 
-	function onSelectedItem(){
+	function onSelectedItem(theItem){
 		setInserterOpen(false);
+		var tmpAtts = {}
+		tmpAtts[attname] = theItem.className || 'icon users'
+	
+		setAttributes(tmpAtts)
 		console.log('onsel',arguments);
 	}
 

@@ -20,8 +20,12 @@ export default function display({ attributes, editMode }) {
         var tmpText = tmpAtts.text;
         var tmpExtraEl = '';
         var tmpExtraClasses = '';
+        var tmpIconClasses = ''
+        // if( iconname.trim().startsWith('fa-')){
+        //     tmpIconClasses += '';
+        // }
         if( useicon && iconname){
-            tmpExtraEl = <i class={'icon ' + iconname}></i>;
+            tmpExtraEl = <i class='icon'><i class={tmpIconClasses + ' ' + iconname}></i></i>;
 
             tmpExtraClasses += ' labeled icon';
             if( ! iconaslabel ){

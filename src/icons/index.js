@@ -3,14 +3,6 @@
 export const classIconIndex = {
 	"icons": [
     {
-        "name": "fa-AccessibilityAccessibleIcon",
-        "title": "Accessible Icon",
-        "className": "fa-solid fa-accessible-icon",
-        "categories": [
-            "accessibility"
-        ]
-    },
-    {
         "name": "fa-AccessibilityAddressCard",
         "title": "Address Card",
         "className": "fa-solid fa-address-card",
@@ -12642,15 +12634,7 @@ export const classIconIndex = {
             "media-playback"
         ]
     },
-    {
-        "name": "fa-MedicalHealthAccessibleIcon",
-        "title": "Accessible Icon",
-        "className": "fa-solid fa-accessible-icon",
-        "categories": [
-            "medical+health"
-        ]
-    },
-    {
+     {
         "name": "fa-MedicalHealthBacteria",
         "title": "Bacteria",
         "className": "fa-solid fa-bacteria",
@@ -18371,14 +18355,6 @@ export const classIconIndex = {
         ]
     },
     {
-        "name": "fa-TransportationAccessibleIcon",
-        "title": "Accessible Icon",
-        "className": "fa-solid fa-accessible-icon",
-        "categories": [
-            "transportation"
-        ]
-    },
-    {
         "name": "fa-TransportationBabyCarriage",
         "title": "Baby Carriage",
         "className": "fa-solid fa-baby-carriage",
@@ -18771,14 +18747,6 @@ export const classIconIndex = {
         ]
     },
     {
-        "name": "fa-TravelHotelAccessibleIcon",
-        "title": "Accessible Icon",
-        "className": "fa-solid fa-accessible-icon",
-        "categories": [
-            "travel+hotel"
-        ]
-    },
-    {
         "name": "fa-TravelHotelBabyCarriage",
         "title": "Baby Carriage",
         "className": "fa-solid fa-baby-carriage",
@@ -19168,14 +19136,6 @@ export const classIconIndex = {
         "className": "fa-solid fa-wheelchair-move",
         "categories": [
             "travel+hotel"
-        ]
-    },
-    {
-        "name": "fa-UsersPeopleAccessibleIcon",
-        "title": "Accessible Icon",
-        "className": "fa-solid fa-accessible-icon",
-        "categories": [
-            "users+people"
         ]
     },
     {

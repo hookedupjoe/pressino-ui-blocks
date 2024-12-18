@@ -88,7 +88,7 @@ export default function InserterModal( props ) {
 			return iconsAll.slice(0,500);
 		}
 		//--- Limit to 500
-		return iconsRet.slice(0,500);
+		return iconsRet;
 
 	}, [ searchInput, currentCategory, iconsAll, iconsByType ] );
 
