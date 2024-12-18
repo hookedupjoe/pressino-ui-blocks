@@ -11,3 +11,10 @@
 .debug-show {
     border: solid 2px red !important;
 }
+
+/* URL Control was pushing past the allocated area */
+@media (min-width: 600px) {
+    body .block-editor-block-list__block .block-editor-url-input,.block-editor-url-input,.components-popover .block-editor-url-input {
+        min-width:unset;
+    }
+}
