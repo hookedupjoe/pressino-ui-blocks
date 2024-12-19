@@ -96,6 +96,11 @@ class PressinoUIBlocks {
 	
 
 	public static function actapp_init_blocks_css($theHook) {
+
+		wp_register_style( 'pressino-ui-editor-css',   PRESSINO_UI_BLOCKS_URL . '/css/pressino-editor.css', false,  PRESSINO_UI_BLOCKS_CORE_VERSION );
+		wp_enqueue_style ( 'pressino-ui-editor-css' );
+
+
 		// $tmpConfig = array(
 		// 	'baseURL'=> PRESSINO_UI_BLOCKS_URL,
 		// 	'catalogURL'=> PRESSINO_UI_BLOCKS_URL . '/catalog'
@@ -147,20 +152,20 @@ class PressinoUIBlocks {
 		add_filter('block_categories',  array('PressinoUIBlocks','actapp_block_category'), 10, 2);
 		add_action('enqueue_block_editor_assets',  array('PressinoUIBlocks','actapp_init_blocks_content'),10,2);
 		// add_action('enqueue_block_editor_assets',  array('PressinoUIBlocks','actapp_init_blocks'),10,2);
-		// add_action('wp_enqueue_block_style',  array('PressinoUIBlocks','actapp_init_blocks_css'),20,2);
+		add_action('wp_enqueue_block_style',  array('PressinoUIBlocks','actapp_init_blocks_css'),20,2);
 		// add_action('wp_enqueue_block_style',  array('ActAppCommon','setup_scripts'),20,2);
 		// add_action('enqueue_block_editor_assets',  array('ActAppCommon','setup_scripts'),20,2);
 		
 		
 		// add_action('wp_enqueue_scripts', array('ActAppCommon','setup_scripts'),20);
 		add_action('wp_enqueue_scripts',  array('PressinoUIBlocks','actapp_init_blocks_content'),20,2);
-		// add_action('wp_enqueue_scripts',  array('PressinoUIBlocks','actapp_init_blocks_css'),20,2);
+		add_action('wp_enqueue_scripts',  array('PressinoUIBlocks','actapp_init_blocks_css'),20,2);
 		
 		
 		// add_action('admin_enqueue_scripts', array('ActAppCommon','setup_scripts'),20);
 		add_action('admin_enqueue_scripts',  array('PressinoUIBlocks','actapp_init_blocks_content'),20,2);
 		// add_action('admin_enqueue_scripts',  array('PressinoUIBlocks','actapp_init_admin_scripts'),20);
-		// add_action('admin_enqueue_scripts',  array('PressinoUIBlocks','actapp_init_blocks_css'),20);
+		add_action('admin_enqueue_scripts',  array('PressinoUIBlocks','actapp_init_blocks_css'),20);
 
 		// $tmplibloc = ACTIONAPP_WP_CORE_LIB_URL . '/';
 		// add_editor_style($tmplibloc . 'built-lib/support-libs.css');
