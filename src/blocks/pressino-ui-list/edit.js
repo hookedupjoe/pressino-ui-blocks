@@ -53,17 +53,20 @@ export default function Edit(theProps) {
             <InspectorControls>
 
                 <PanelBody title={istr('General Settings')}>
-                    {PressinoUI.getStandardProperty(theProps, 'columns', 'Columns', 'columns')}
-                    {PressinoUI.getStandardProperty(theProps, 'mincolwidth', 'Min Column Width', 'number')}
+                {/* 'relaxed','animated','selection','inverted','horizontal','link','ordered' */}
+                {/* {PressinoUI.getStandardProperty(theProps, 'ordered', 'ordered', 'checkbox')} */}
 
+                {PressinoUI.getStandardProperty(theProps, 'celled', 'celled', 'checkbox')}
+                {PressinoUI.getStandardProperty(theProps, 'separated', 'separated', 'checkbox')}
+                    {PressinoUI.getStandardProperty(theProps, 'relaxed', 'relaxed', 'checkbox')}
+                    {PressinoUI.getStandardProperty(theProps, 'animated', 'animated', 'checkbox')}
+                    {PressinoUI.getStandardProperty(theProps, 'selection', 'selection', 'checkbox')}
+                    {PressinoUI.getStandardProperty(theProps, 'inverted', 'inverted', 'checkbox')}
+                    {PressinoUI.getStandardProperty(theProps, 'horizontal', 'horizontal', 'checkbox')}
+                    {PressinoUI.getStandardProperty(theProps, 'link', 'link', 'checkbox')}
 
-                    {PressinoUI.getStandardProperty(theProps, 'cardspacing', 'Space Between Cards', 'slimwidespacing')}
-                    {PressinoUI.getStandardProperty(theProps, 'imageheight', 'Cards Image Height', 'number', true)}
-                    {PressinoUI.getStandardProperty(theProps, 'color', 'Cards Color', 'colors')}
-                    {PressinoUI.getStandardProperty(theProps, 'headertype', 'Header Type', 'inverted', true)}
-
-                    {PressinoUI.getStandardProperty(theProps, 'centered', 'Centered', 'checkbox')}
-                    {PressinoUI.getStandardProperty(theProps, 'bottombydefault', 'Has Bottom Section by Default', 'checkbox')}
+                    {PressinoUI.getStandardProperty(theProps, 'valign', 'Vertical Alignment', 'valignment')}
+                   
                 </PanelBody>
 
 

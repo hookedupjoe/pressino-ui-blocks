@@ -5,7 +5,7 @@ import { InnerBlocks } from '@wordpress/block-editor';
 import { PressinoUI, el } from '../../pressino-ui';
 
 var classSpecs = {
-    boolean: [],
+    boolean: ['relaxed','animated','selection','inverted','horizontal','link'],
 	string: [],
 }
 

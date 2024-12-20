@@ -16,7 +16,7 @@ import {PressinoUI} from '../../pressino-ui';
  */
 let tmpAttributes = {};
 PressinoUI.addAttributes('number', tmpAttributes, ['mediaID','parentMaxImgHeight']);
-PressinoUI.addAttributes('boolean', tmpAttributes, ['fluid', 'raised', 'urlopentab', 'includeBottom']);
+PressinoUI.addAttributes('boolean', tmpAttributes, []);
 PressinoUI.addAttributes('text', tmpAttributes, ['text', 'title', 'text', 'subtitle', 'color', 'headerColor', 'parentColor', 'parentHeaderType', 'url', 'mediaURL']);
 
 /**

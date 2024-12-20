@@ -6,8 +6,8 @@ const { store: blockEditorStore } = wp.blockEditor;
 const { useSelect } = wp.data;
  
 var classSpecs = {
-    boolean: ['centered'],
-	string: ['color','cardspacing']
+    boolean: ['relaxed','animated','selection','inverted','horizontal','link','divided','celled','ordered'],
+	string: ['valign']
 }
 
 function getClass(theAtts, theIsEditMode) {
@@ -45,25 +45,13 @@ export default function display({ props, editMode }) {
             tmpHdr,
             el('div', { className: 'edit-cards' + tmpAtts.color + ' ' + tmpAtts.columns },
                 [
-                    el(wp.blockEditor.InnerBlocks, { allowedBlocks: ['pressino/listitem'], renderAppender: false }),
+                    el(wp.blockEditor.InnerBlocks, { allowedBlocks: ['pressino/list','pressino/listitem'], renderAppender: false }),
                 ]
             )
 
         )
     } else {
-        if ((props.attributes.columns)) {
-            tmpClass += ' stackable ' + (props.attributes.columns || '');
-        }
         var tmpProps = {className: tmpClass};
-        if (!(props.attributes.columns)) {
-            tmpProps["auto-adapt"] = "cards";
-        } else {
-            tmpProps["columns"] = props.attributes.columns;
-        }
-        if (props.attributes.mincolwidth) {
-            tmpProps["mincolwidth"] = props.attributes.mincolwidth;
-        }
-
         return el('div', tmpProps, el(wp.blockEditor.InnerBlocks.Content));
     }
    
