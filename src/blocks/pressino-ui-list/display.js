@@ -44,7 +44,7 @@ export default function display({ props, editMode }) {
             tmpHdr,
             el('div', { className: 'edit-cards' + tmpAtts.color + ' ' + tmpAtts.columns },
                 [
-                    el(wp.blockEditor.InnerBlocks, { allowedBlocks: ['pressino/list','pressino/listitem'], renderAppender: false }),
+                    el(wp.blockEditor.InnerBlocks, { allowedBlocks: ['pressino/listitem'], renderAppender: wp.blockEditor.InnerBlocks.DefaultBlockAppender }),
                 ]
             )
 
