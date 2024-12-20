@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "pressino/listitem",
+	"version": "0.1.0",
+	"title": "Pressino UI List Item",
+	"category": "pressino-ui-blocks",
+	"description": "A item that lives with other items in a list.",
+	"example": {},
+	"supports": {
+		"html": false,
+		"className": false,
+		"customClassName": false
+	},
+	"textdomain": "pressino-ui-listitem",
+	"editorScript": "file:./index.js"
+}

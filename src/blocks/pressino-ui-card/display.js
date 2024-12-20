@@ -150,7 +150,7 @@ export default function display({ props, editMode }) {
 
     if (editMode) {
         tmpContent.push(newEl('div', '', el(wp.blockEditor.InnerBlocks, {
-            allowedBlocks: ['pressino/cardsection', 'pressino/cardsectionbottom'], renderAppender: false, norendetemplateLock: "insert",
+            allowedBlocks: ['pressino/cardsection'], renderAppender: false, norendetemplateLock: "insert",
             template: tmpTemplate
         })));
     } else {
