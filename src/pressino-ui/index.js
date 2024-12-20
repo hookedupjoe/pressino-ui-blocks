@@ -792,6 +792,7 @@ export const listSources = {
 	"imagesizes": "Default|,Full Width|fluid,Mini|mini,Tiny|tiny,Small|small,Medium|medium,Large|large,Big|big,Huge|huge,Massive|massive",
 	"lralignment": "Default|,Left|left aligned,Right|right aligned",
 	"valignment": "Default|,Top|top aligned,Middle|middle aligned,Bottom|bottom aligned",
+	"valignbasic": "Default|,Top|top,Middle|middle,Bottom|bottom",
 	"slimwidespacing": "Default|,Slim|slimspace,Wide|widespace",
 	"inverted": "Default|,Light|light,Inverted|inverted",
 	"topmargin": "Default|,0px|mart0,1px|mart1,2px|mart2,3px|mart3,4px|mart4,5px|mart5,6px|mart6,7px|mart7,8px|mart8,9px|mart9,10px|mart10",

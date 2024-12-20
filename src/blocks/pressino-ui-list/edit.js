@@ -42,9 +42,9 @@ export default function Edit(theProps) {
 
     return <>
         <div {...blockProps}>
-       
+
             <BlockControls>
-          
+
                 <ToolbarGroup>
                     <ToolbarButton
                         icon={PressinoUI.getBlockIcon('addlistitem')}
@@ -58,29 +58,18 @@ export default function Edit(theProps) {
             <InspectorControls>
 
                 <PanelBody title={istr('General Settings')}>
-                {/* 'relaxed','animated','selection','inverted','horizontal','link','ordered' */}
-                {/* {PressinoUI.getStandardProperty(theProps, 'ordered', 'ordered', 'checkbox')} */}
-
-
-                {PressinoUI.getStandardProperty(theProps, 'bulletcolor', 'Bullet Color', 'colors', true)}
-                {PressinoUI.getStandardProperty(theProps, 'bulletsize', 'Bullet size', 'sizes', true)}
-
-                {PressinoUI.getStandardProperty(theProps, 'bullettype', 'Bullet Type', 'bullettypes', true)}
-                {(bullettype =='icon' && PressinoUI.getSettingsForIcon({ label: 'Select Icon', isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes, refreshChildren:true }))}
-
-                {PressinoUI.getStandardProperty(theProps, 'celled', 'celled', 'checkbox')}
-                {PressinoUI.getStandardProperty(theProps, 'separated', 'separated', 'checkbox')}
+                    {PressinoUI.getStandardProperty(theProps, 'celled', 'celled', 'checkbox')}
                     {PressinoUI.getStandardProperty(theProps, 'relaxed', 'relaxed', 'checkbox')}
                     {PressinoUI.getStandardProperty(theProps, 'animated', 'animated', 'checkbox')}
-                    {PressinoUI.getStandardProperty(theProps, 'selection', 'selection', 'checkbox')}
-                    {PressinoUI.getStandardProperty(theProps, 'inverted', 'inverted', 'checkbox')}
-                    {PressinoUI.getStandardProperty(theProps, 'horizontal', 'horizontal', 'checkbox')}
-                    {PressinoUI.getStandardProperty(theProps, 'link', 'link', 'checkbox')}
-
-                    {PressinoUI.getStandardProperty(theProps, 'valign', 'Vertical Alignment', 'valignment')}
-                   
                 </PanelBody>
 
+                <PanelBody title={istr('Bullet Settings')}>
+                    {PressinoUI.getStandardProperty(theProps, 'bullettype', 'Bullet Type', 'bullettypes', true)}
+                    {(bullettype == 'icon' && PressinoUI.getSettingsForIcon({ label: 'Select Icon', isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes, refreshChildren: true }))}
+                    {PressinoUI.getStandardProperty(theProps, 'bulletcolor', 'Bullet Color', 'colors', true)}
+                    {PressinoUI.getStandardProperty(theProps, 'bulletsize', 'Bullet size', 'sizes', true)}
+                    {PressinoUI.getStandardProperty(theProps, 'bulletalign', 'Bullet Alignment', 'valignbasic', true)}
+                </PanelBody>
 
             </InspectorControls>
 

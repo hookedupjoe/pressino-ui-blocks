@@ -20,7 +20,7 @@ export default function display({ props, editMode }) {
     var attributes = props.attributes;
     var theProps = props;
 
-    const {parenticonname, parenticontype, parentbullettype, parentbulletcolor, parentbulletsize} = attributes
+    const {parentbulletalign, parenticonname, parenticontype, parentbullettype, parentbulletcolor, parentbulletsize} = attributes
    
 
     // var tmpParentAttributes = PressinoUI.getParentAttributes(props.clientId);
@@ -49,6 +49,11 @@ export default function display({ props, editMode }) {
     if( parentbulletsize != '' ){
         tmpBulletEl.props.class = tmpBulletEl.props?.class + ' ' + parentbulletsize;
     }
+    if( parentbulletalign != '' ){
+        tmpBulletEl.props.class = tmpBulletEl.props?.class + ' ' + parentbulletalign;
+    }
+    
+
     // tmpBulletEl.props.class = tmpBulletEl.props?.class + ' ' + 'blue';
   
     if( editMode ){

@@ -15,8 +15,8 @@ import {PressinoUI} from '../../pressino-ui';
  * Setup Block Attributes
  */
 let tmpAttributes = {};
-PressinoUI.addAttributes('text', tmpAttributes, ['iconname','icontype','bullettype','bulletcolor','bulletsize']);
-PressinoUI.addAttributes('boolean', tmpAttributes, ['useicon','relaxed','animated','selection','inverted','horizontal','link','divided','celled','ordered']);
+PressinoUI.addAttributes('text', tmpAttributes, ['iconname','icontype','bullettype','bulletcolor','bulletsize','bulletalign']);
+PressinoUI.addAttributes('boolean', tmpAttributes, ['relaxed','animated','divided','celled']);
 PressinoUI.addAttributes('number', tmpAttributes, []);
 
 /**

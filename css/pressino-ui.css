@@ -52,3 +52,9 @@ body .icon.inlist.massive {
     min-width:145px;
 }
 
+.ui.list .list>.item>i.icon.middle, .ui.list>.item>i.icon.middle {
+    vertical-align: middle;
+}
+.ui.list .list>.item>i.icon.bottom, .ui.list>.item>i.icon.bottom {
+    vertical-align: bottom;
+}

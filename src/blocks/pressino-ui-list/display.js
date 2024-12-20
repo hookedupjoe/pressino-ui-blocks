@@ -5,8 +5,8 @@ import { PressinoUI, el } from '../../pressino-ui';
 import { getIconEl } from '../../icons';
  
 var classSpecs = {
-    boolean: ['relaxed','animated','selection','inverted','horizontal','link','divided','celled','ordered'],
-	string: ['valign']
+    boolean: ['relaxed','animated','divided','celled'],
+	string: []
 }
 
 function getClass(theAtts, theIsEditMode) {
