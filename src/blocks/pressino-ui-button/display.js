@@ -2,6 +2,7 @@
  * Return universal display element used by edit and save functions
  */
 import { PressinoUI, el } from '../../pressino-ui';
+import { getIconEl } from '../../icons';
 
 var classSpecs = {
 	boolean: ['fluid','compact','basic','circular'],
@@ -13,20 +14,19 @@ function getClass(theAtts, theIsEditMode) {
 	return tmpClasses
 }
 
+
+
 export default function display({ attributes, editMode }) {
         var tmpCN = getClass(attributes, true);
-        const {useicon,iconname,iconalign,iconaslabel} = attributes;
+        const {useicon,iconname,icontype,iconalign,iconaslabel} = attributes;
         var tmpAtts = attributes;
         var tmpText = tmpAtts.text;
         var tmpExtraEl = '';
         var tmpExtraClasses = '';
-        var tmpIconClasses = ''
-        // if( iconname.trim().startsWith('fa-')){
-        //     tmpIconClasses += '';
-        // }
+       
         if( useicon && iconname){
-            tmpExtraEl = <i class='icon'><i class={tmpIconClasses + ' ' + iconname}></i></i>;
 
+            tmpExtraEl = getIconEl(attributes);
             tmpExtraClasses += ' labeled icon';
             if( ! iconaslabel ){
                 tmpExtraClasses += ' clear';

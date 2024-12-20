@@ -6,7 +6,8 @@ import { displayMessages } from './../utils';
 import { QuickInserterPopover, InserterModal } from './../components/';
 
 
-export const attNamesDef = { mediaID: 'mediaID', mediaURL: 'mediaURL' };
+export const attNamesIcon = { iconname: 'iconname', icontype: 'icontype' };
+export const attNamesMedia = { mediaID: 'mediaID', mediaURL: 'mediaURL' };
 export const el = wp.element.createElement;
 
 export const PRIMARY_NAMESPACE = 'pressino-ui-blocks';
@@ -73,20 +74,22 @@ function getSettingsForIcon(props) {
 		setAttributes,
 	} = props;
 
-	var tmpOnChangeFunc = (theURL, thePost) => {
-		var tmpToSet = {};
-		tmpToSet[attname] = theURL;
+	// var tmpOnChangeFunc = (theURL, thePost) => {
+	// 	var tmpToSet = {};
+	// 	tmpToSet[attname] = theURL;
 
-		setAttributes(tmpToSet);
-	}
+	// 	setAttributes(tmpToSet);
+	// }
 
 	function onSelectedItem(theItem){
 		setInserterOpen(false);
 		var tmpAtts = {}
-		tmpAtts[attname] = theItem.className || 'icon users'
+		
+		tmpAtts[attNamesIcon.iconname] = theItem.className || 'icon users'
+		tmpAtts[attNamesIcon.icontype] = theItem.type || 'default'
 	
 		setAttributes(tmpAtts)
-		console.log('onsel',arguments);
+		
 	}
 
 	

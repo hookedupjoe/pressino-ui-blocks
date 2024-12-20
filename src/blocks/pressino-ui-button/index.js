@@ -16,7 +16,7 @@ import {PressinoUI} from '../../pressino-ui';
  */
 let tmpAttributes = {};
 PressinoUI.addAttributes('boolean', tmpAttributes,['fluid','compact','basic','circular','urlopentab','useicon','iconalign', 'iconaslabel']);
-PressinoUI.addAttributes('text', tmpAttributes,['text','color','size', 'attached', 'url', 'float', 'classes','margin','padding','bottommargin','iconname']);
+PressinoUI.addAttributes('text', tmpAttributes,['text','color','size', 'attached', 'url', 'float', 'classes','margin','padding','bottommargin','iconname','icontype']);
 
 /**
  * Register Block

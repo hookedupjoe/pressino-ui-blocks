@@ -23,7 +23,12 @@ body i.icon.fafont{
     font-family: 'Font Awesome 6 Free' !important;
 }
 
+i.icon.faicon{
+    font-weight: unset !important;
+    font-family: "Font Awesome 6 Free" !important;
+}
 
+/*   FIX FOR ICON ISSUE
 body i.icon>i{
     height: 100%;
     font-size: 18px;
@@ -97,7 +102,7 @@ body i.icon>i{
     line-height:52px;
 }
 
-
+ */
 
 
 

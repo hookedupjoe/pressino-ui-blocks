@@ -15,7 +15,7 @@ import { Icon, blockDefault } from '@wordpress/icons';
 /**
  * Internal dependencies
  */
-import { classIconIndex } from './../../icons';
+import { getIconEl, classIconIndex } from './../../icons';
 import { flattenIconsArray, parseIcon } from './../../utils';
 
 export default function QuickInserterPopover( props ) {
@@ -138,7 +138,8 @@ export default function QuickInserterPopover( props ) {
 							} }
 						>
 							<span className="icons-list__item-icon">
-								<i className={'' + (icon.className || '')}></i>
+								{/* <i className={'' + (icon.className || '')}></i> */}
+								{getIconEl({iconclass: icon.className, icontype: icon.type})}
 							</span>
 							<span className="icons-list__item-title">
 								{ icon.title }

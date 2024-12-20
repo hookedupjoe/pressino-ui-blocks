@@ -4,7 +4,7 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
 import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
-import { istr, PressinoUI, attNamesDef } from '../../pressino-ui';
+import { istr, PressinoUI, attNamesMedia } from '../../pressino-ui';
 import display from './display';
 
 

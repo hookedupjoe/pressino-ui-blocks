@@ -4,7 +4,7 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
 import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
-import { istr, PressinoUI, attNamesDef } from '../../pressino-ui';
+import { istr, PressinoUI, attNamesMedia } from '../../pressino-ui';
 import display from './display';
 
 
@@ -26,7 +26,7 @@ export default function Edit(props) {
             <InspectorControls>
 
                 <PanelBody title={istr('General Settings')}>
-                    {PressinoUI.getStandardProperty(theProps, attNamesDef, 'Image', 'image')}
+                    {PressinoUI.getStandardProperty(theProps, attNamesMedia, 'Image', 'image')}
                     {PressinoUI.getStandardProperty(theProps, 'size', 'Image size', 'imagesizes')}
                     {PressinoUI.getStandardProperty(theProps, 'rounded', 'Rounded', 'checkbox')}
                     {PressinoUI.getStandardProperty(theProps, 'bordered', 'Bordered', 'checkbox')}

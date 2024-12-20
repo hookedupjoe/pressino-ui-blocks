@@ -1,12 +1,43 @@
 
+export function getIconEl({iconname, icontype, iconclass}){
+    let tmpClasses = iconname || iconclass || '';
+
+    if( icontype == 'fa' ){
+        if( iconclass ){
+            return <i class={'' + tmpClasses}></i>;
+        } else {
+            return <i class={'icon faicon ' + tmpClasses}></i>;
+        }
+    } else if( icontype == 'dash' ){
+        return <span class={'icon dashicons ' + tmpClasses }></span>;
+    } else {
+        return <i class={'icon  ' + tmpClasses}></i>;
+    }
+}
 
 export const classIconIndex = {
 	"icons": [
+        {
+            "name": "sui-users",
+            "title": "UI Users",
+            "className": "users",
+            "type":"sui","categories": [
+                "accessibility"
+            ]
+        },
+        {
+            "name": "dash-smiley",
+            "title": "Dash Smiley",
+            "className": "dashicons-smiley",
+            "type":"dash","categories": [
+                "accessibility"
+            ]
+        },
     {
         "name": "fa-AccessibilityAddressCard",
         "title": "Address Card",
         "className": "fa-solid fa-address-card",
-        "categories": [
+        "type":"fa","categories": [
             "accessibility"
         ]
     },
@@ -14,7 +45,7 @@ export const classIconIndex = {
         "name": "fa-AccessibilityAudioDescription",
         "title": "Audio Description",
         "className": "fa-solid fa-audio-description",
-        "categories": [
+        "type":"fa","categories": [
             "accessibility"
         ]
     },
@@ -22,7 +53,7 @@ export const classIconIndex = {
         "name": "fa-AccessibilityBraille",
         "title": "Braille",
         "className": "fa-solid fa-braille",
-        "categories": [
+        "type":"fa","categories": [
             "accessibility"
         ]
     },
@@ -30,7 +61,7 @@ export const classIconIndex = {
         "name": "fa-AccessibilityCircleInfo",
         "title": "Circle Info",
         "className": "fa-solid fa-circle-info",
-        "categories": [
+        "type":"fa","categories": [
             "accessibility"
         ]
     },
@@ -38,7 +69,7 @@ export const classIconIndex = {
         "name": "fa-AccessibilityCircleQuestion",
         "title": "Circle Question",
         "className": "fa-solid fa-circle-question",
-        "categories": [
+        "type":"fa","categories": [
             "accessibility"
         ]
     },
@@ -46,7 +77,7 @@ export const classIconIndex = {
         "name": "fa-AccessibilityClosedCaptioning",
         "title": "Closed Captioning",
         "className": "fa-solid fa-closed-captioning",
-        "categories": [
+        "type":"fa","categories": [
             "accessibility"
         ]
     },
@@ -54,7 +85,7 @@ export const classIconIndex = {
         "name": "fa-AccessibilityEarDeaf",
         "title": "Ear Deaf",
         "className": "fa-solid fa-ear-deaf",
-        "categories": [
+        "type":"fa","categories": [
             "accessibility"
         ]
     },
@@ -62,7 +93,7 @@ export const classIconIndex = {
         "name": "fa-AccessibilityEarListen",
         "title": "Ear Listen",
         "className": "fa-solid fa-ear-listen",
-        "categories": [
+        "type":"fa","categories": [
             "accessibility"
         ]
     },
@@ -70,7 +101,7 @@ export const classIconIndex = {
         "name": "fa-AccessibilityEye",
         "title": "Eye",
         "className": "fa-solid fa-eye",
-        "categories": [
+        "type":"fa","categories": [
             "accessibility"
         ]
     },
@@ -78,7 +109,7 @@ export const classIconIndex = {
         "name": "fa-AccessibilityEyeLowVision",
         "title": "Eye Low Vision",
         "className": "fa-solid fa-eye-low-vision",
-        "categories": [
+        "type":"fa","categories": [
             "accessibility"
         ]
     },
@@ -86,7 +117,7 @@ export const classIconIndex = {
         "name": "fa-AccessibilityFingerprint",
         "title": "Fingerprint",
         "className": "fa-solid fa-fingerprint",
-        "categories": [
+        "type":"fa","categories": [
             "accessibility"
         ]
     },
@@ -94,7 +125,7 @@ export const classIconIndex = {
         "name": "fa-AccessibilityHands",
         "title": "Hands",
         "className": "fa-solid fa-hands",
-        "categories": [
+        "type":"fa","categories": [
             "accessibility"
         ]
     },
@@ -102,7 +133,7 @@ export const classIconIndex = {
         "name": "fa-AccessibilityHandsAslInterpreting",
         "title": "Hands Asl Interpreting",
         "className": "fa-solid fa-hands-asl-interpreting",
-        "categories": [
+        "type":"fa","categories": [
             "accessibility"
         ]
     },
@@ -110,7 +141,7 @@ export const classIconIndex = {
         "name": "fa-AccessibilityHandshakeAngle",
         "title": "Handshake Angle",
         "className": "fa-solid fa-handshake-angle",
-        "categories": [
+        "type":"fa","categories": [
             "accessibility"
         ]
     },
@@ -118,7 +149,7 @@ export const classIconIndex = {
         "name": "fa-AccessibilityPersonCane",
         "title": "Person Cane",
         "className": "fa-solid fa-person-cane",
-        "categories": [
+        "type":"fa","categories": [
             "accessibility"
         ]
     },
@@ -126,7 +157,7 @@ export const classIconIndex = {
         "name": "fa-AccessibilityPersonWalkingWithCane",
         "title": "Person Walking With Cane",
         "className": "fa-solid fa-person-walking-with-cane",
-        "categories": [
+        "type":"fa","categories": [
             "accessibility"
         ]
     },
@@ -134,7 +165,7 @@ export const classIconIndex = {
         "name": "fa-AccessibilityPhoneVolume",
         "title": "Phone Volume",
         "className": "fa-solid fa-phone-volume",
-        "categories": [
+        "type":"fa","categories": [
             "accessibility"
         ]
     },
@@ -142,7 +173,7 @@ export const classIconIndex = {
         "name": "fa-AccessibilityQuestion",
         "title": "Question",
         "className": "fa-solid fa-question",
-        "categories": [
+        "type":"fa","categories": [
             "accessibility"
         ]
     },
@@ -150,7 +181,7 @@ export const classIconIndex = {
         "name": "fa-AccessibilityTty",
         "title": "Tty",
         "className": "fa-solid fa-tty",
-        "categories": [
+        "type":"fa","categories": [
             "accessibility"
         ]
     },
@@ -158,7 +189,7 @@ export const classIconIndex = {
         "name": "fa-AccessibilityUniversalAccess",
         "title": "Universal Access",
         "className": "fa-solid fa-universal-access",
-        "categories": [
+        "type":"fa","categories": [
             "accessibility"
         ]
     },
@@ -166,7 +197,7 @@ export const classIconIndex = {
         "name": "fa-AccessibilityWheelchair",
         "title": "Wheelchair",
         "className": "fa-solid fa-wheelchair",
-        "categories": [
+        "type":"fa","categories": [
             "accessibility"
         ]
     },
@@ -174,7 +205,7 @@ export const classIconIndex = {
         "name": "fa-AccessibilityWheelchairMove",
         "title": "Wheelchair Move",
         "className": "fa-solid fa-wheelchair-move",
-        "categories": [
+        "type":"fa","categories": [
             "accessibility"
         ]
     },
@@ -182,7 +213,7 @@ export const classIconIndex = {
         "name": "fa-AlertBell",
         "title": "Bell",
         "className": "fa-solid fa-bell",
-        "categories": [
+        "type":"fa","categories": [
             "alert"
         ]
     },
@@ -190,7 +221,7 @@ export const classIconIndex = {
         "name": "fa-AlertBellSlash",
         "title": "Bell Slash",
         "className": "fa-solid fa-bell-slash",
-        "categories": [
+        "type":"fa","categories": [
             "alert"
         ]
     },
@@ -198,7 +229,7 @@ export const classIconIndex = {
         "name": "fa-AlertCircleExclamation",
         "title": "Circle Exclamation",
         "className": "fa-solid fa-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "alert"
         ]
     },
@@ -206,7 +237,7 @@ export const classIconIndex = {
         "name": "fa-AlertCircleRadiation",
         "title": "Circle Radiation",
         "className": "fa-solid fa-circle-radiation",
-        "categories": [
+        "type":"fa","categories": [
             "alert"
         ]
     },
@@ -214,7 +245,7 @@ export const classIconIndex = {
         "name": "fa-AlertExclamation",
         "title": "Exclamation",
         "className": "fa-solid fa-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "alert"
         ]
     },
@@ -222,7 +253,7 @@ export const classIconIndex = {
         "name": "fa-AlertQuestion",
         "title": "Question",
         "className": "fa-solid fa-question",
-        "categories": [
+        "type":"fa","categories": [
             "alert"
         ]
     },
@@ -230,7 +261,7 @@ export const classIconIndex = {
         "name": "fa-AlertRadiation",
         "title": "Radiation",
         "className": "fa-solid fa-radiation",
-        "categories": [
+        "type":"fa","categories": [
             "alert"
         ]
     },
@@ -238,7 +269,7 @@ export const classIconIndex = {
         "name": "fa-AlertSkullCrossbones",
         "title": "Skull Crossbones",
         "className": "fa-solid fa-skull-crossbones",
-        "categories": [
+        "type":"fa","categories": [
             "alert"
         ]
     },
@@ -246,7 +277,7 @@ export const classIconIndex = {
         "name": "fa-AlertTriangleExclamation",
         "title": "Triangle Exclamation",
         "className": "fa-solid fa-triangle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "alert"
         ]
     },
@@ -254,7 +285,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetA",
         "title": "A",
         "className": "fa-solid fa-a",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -262,7 +293,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetAddressCard",
         "title": "Address Card",
         "className": "fa-solid fa-address-card",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -270,7 +301,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetB",
         "title": "B",
         "className": "fa-solid fa-b",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -278,7 +309,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetC",
         "title": "C",
         "className": "fa-solid fa-c",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -286,7 +317,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetCircleH",
         "title": "Circle H",
         "className": "fa-solid fa-circle-h",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -294,7 +325,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetD",
         "title": "D",
         "className": "fa-solid fa-d",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -302,7 +333,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetE",
         "title": "E",
         "className": "fa-solid fa-e",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -310,7 +341,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetF",
         "title": "F",
         "className": "fa-solid fa-f",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -318,7 +349,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetG",
         "title": "G",
         "className": "fa-solid fa-g",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -326,7 +357,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetH",
         "title": "H",
         "className": "fa-solid fa-h",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -334,7 +365,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetI",
         "title": "I",
         "className": "fa-solid fa-i",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -342,7 +373,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetJ",
         "title": "J",
         "className": "fa-solid fa-j",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -350,7 +381,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetK",
         "title": "K",
         "className": "fa-solid fa-k",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -358,7 +389,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetL",
         "title": "L",
         "className": "fa-solid fa-l",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -366,7 +397,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetM",
         "title": "M",
         "className": "fa-solid fa-m",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -374,7 +405,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetN",
         "title": "N",
         "className": "fa-solid fa-n",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -382,7 +413,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetO",
         "title": "O",
         "className": "fa-solid fa-o",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -390,7 +421,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetP",
         "title": "P",
         "className": "fa-solid fa-p",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -398,7 +429,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetQ",
         "title": "Q",
         "className": "fa-solid fa-q",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -406,7 +437,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetR",
         "title": "R",
         "className": "fa-solid fa-r",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -414,7 +445,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetS",
         "title": "S",
         "className": "fa-solid fa-s",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -422,7 +453,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetSquareH",
         "title": "Square H",
         "className": "fa-solid fa-square-h",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -430,7 +461,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetT",
         "title": "T",
         "className": "fa-solid fa-t",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -438,7 +469,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetU",
         "title": "U",
         "className": "fa-solid fa-u",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -446,7 +477,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetV",
         "title": "V",
         "className": "fa-solid fa-v",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -454,7 +485,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetW",
         "title": "W",
         "className": "fa-solid fa-w",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -462,7 +493,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetX",
         "title": "X",
         "className": "fa-solid fa-x",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -470,7 +501,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetY",
         "title": "Y",
         "className": "fa-solid fa-y",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -478,7 +509,7 @@ export const classIconIndex = {
         "name": "fa-AlphabetZ",
         "title": "Z",
         "className": "fa-solid fa-z",
-        "categories": [
+        "type":"fa","categories": [
             "alphabet"
         ]
     },
@@ -486,7 +517,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsBugs",
         "title": "Bugs",
         "className": "fa-solid fa-bugs",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -494,7 +525,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsCat",
         "title": "Cat",
         "className": "fa-solid fa-cat",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -502,7 +533,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsCow",
         "title": "Cow",
         "className": "fa-solid fa-cow",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -510,7 +541,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsCrow",
         "title": "Crow",
         "className": "fa-solid fa-crow",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -518,7 +549,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsDog",
         "title": "Dog",
         "className": "fa-solid fa-dog",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -526,7 +557,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsDove",
         "title": "Dove",
         "className": "fa-solid fa-dove",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -534,7 +565,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsDragon",
         "title": "Dragon",
         "className": "fa-solid fa-dragon",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -542,7 +573,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsFeather",
         "title": "Feather",
         "className": "fa-solid fa-feather",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -550,7 +581,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsFeatherPointed",
         "title": "Feather Pointed",
         "className": "fa-solid fa-feather-pointed",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -558,7 +589,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsFish",
         "title": "Fish",
         "className": "fa-solid fa-fish",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -566,7 +597,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsFishFins",
         "title": "Fish Fins",
         "className": "fa-solid fa-fish-fins",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -574,7 +605,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsFrog",
         "title": "Frog",
         "className": "fa-solid fa-frog",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -582,7 +613,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsHippo",
         "title": "Hippo",
         "className": "fa-solid fa-hippo",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -590,7 +621,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsHorse",
         "title": "Horse",
         "className": "fa-solid fa-horse",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -598,7 +629,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsHorseHead",
         "title": "Horse Head",
         "className": "fa-solid fa-horse-head",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -606,7 +637,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsKiwiBird",
         "title": "Kiwi Bird",
         "className": "fa-solid fa-kiwi-bird",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -614,7 +645,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsLocust",
         "title": "Locust",
         "className": "fa-solid fa-locust",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -622,7 +653,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsMosquito",
         "title": "Mosquito",
         "className": "fa-solid fa-mosquito",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -630,7 +661,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsOtter",
         "title": "Otter",
         "className": "fa-solid fa-otter",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -638,7 +669,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsPaw",
         "title": "Paw",
         "className": "fa-solid fa-paw",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -646,7 +677,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsShieldCat",
         "title": "Shield Cat",
         "className": "fa-solid fa-shield-cat",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -654,7 +685,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsShieldDog",
         "title": "Shield Dog",
         "className": "fa-solid fa-shield-dog",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -662,7 +693,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsShrimp",
         "title": "Shrimp",
         "className": "fa-solid fa-shrimp",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -670,7 +701,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsSpider",
         "title": "Spider",
         "className": "fa-solid fa-spider",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -678,7 +709,7 @@ export const classIconIndex = {
         "name": "fa-AnimalsWorm",
         "title": "Worm",
         "className": "fa-solid fa-worm",
-        "categories": [
+        "type":"fa","categories": [
             "animals"
         ]
     },
@@ -686,7 +717,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsAngleDown",
         "title": "Angle Down",
         "className": "fa-solid fa-angle-down",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -694,7 +725,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsAngleLeft",
         "title": "Angle Left",
         "className": "fa-solid fa-angle-left",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -702,7 +733,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsAngleRight",
         "title": "Angle Right",
         "className": "fa-solid fa-angle-right",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -710,7 +741,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsAnglesDown",
         "title": "Angles Down",
         "className": "fa-solid fa-angles-down",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -718,7 +749,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsAnglesLeft",
         "title": "Angles Left",
         "className": "fa-solid fa-angles-left",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -726,7 +757,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsAnglesRight",
         "title": "Angles Right",
         "className": "fa-solid fa-angles-right",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -734,7 +765,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsAnglesUp",
         "title": "Angles Up",
         "className": "fa-solid fa-angles-up",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -742,7 +773,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsAngleUp",
         "title": "Angle Up",
         "className": "fa-solid fa-angle-up",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -750,7 +781,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowDown",
         "title": "Arrow Down",
         "className": "fa-solid fa-arrow-down",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -758,7 +789,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowDown19",
         "title": "Arrow Down19",
         "className": "fa-solid fa-arrow-down-1-9",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -766,7 +797,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowDown91",
         "title": "Arrow Down91",
         "className": "fa-solid fa-arrow-down-9-1",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -774,7 +805,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowDownAZ",
         "title": "Arrow Down AZ",
         "className": "fa-solid fa-arrow-down-a-z",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -782,7 +813,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowDownLong",
         "title": "Arrow Down Long",
         "className": "fa-solid fa-arrow-down-long",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -790,7 +821,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowDownShortWide",
         "title": "Arrow Down Short Wide",
         "className": "fa-solid fa-arrow-down-short-wide",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -798,7 +829,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowDownUpAcrossLine",
         "title": "Arrow Down Up Across Line",
         "className": "fa-solid fa-arrow-down-up-across-line",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -806,7 +837,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowDownUpLock",
         "title": "Arrow Down Up Lock",
         "className": "fa-solid fa-arrow-down-up-lock",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -814,7 +845,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowDownWideShort",
         "title": "Arrow Down Wide Short",
         "className": "fa-solid fa-arrow-down-wide-short",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -822,7 +853,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowDownZA",
         "title": "Arrow Down ZA",
         "className": "fa-solid fa-arrow-down-z-a",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -830,7 +861,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowLeft",
         "title": "Arrow Left",
         "className": "fa-solid fa-arrow-left",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -838,7 +869,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowLeftLong",
         "title": "Arrow Left Long",
         "className": "fa-solid fa-arrow-left-long",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -846,7 +877,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowPointer",
         "title": "Arrow Pointer",
         "className": "fa-solid fa-arrow-pointer",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -854,7 +885,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowRight",
         "title": "Arrow Right",
         "className": "fa-solid fa-arrow-right",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -862,7 +893,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowRightArrowLeft",
         "title": "Arrow Right Arrow Left",
         "className": "fa-solid fa-arrow-right-arrow-left",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -870,7 +901,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowRightFromBracket",
         "title": "Arrow Right From Bracket",
         "className": "fa-solid fa-arrow-right-from-bracket",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -878,7 +909,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowRightLong",
         "title": "Arrow Right Long",
         "className": "fa-solid fa-arrow-right-long",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -886,7 +917,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowRightToBracket",
         "title": "Arrow Right To Bracket",
         "className": "fa-solid fa-arrow-right-to-bracket",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -894,7 +925,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowRotateLeft",
         "title": "Arrow Rotate Left",
         "className": "fa-solid fa-arrow-rotate-left",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -902,7 +933,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowRotateRight",
         "title": "Arrow Rotate Right",
         "className": "fa-solid fa-arrow-rotate-right",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -910,7 +941,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowsDownToLine",
         "title": "Down To Line",
         "className": "fa-solid fa-arrows-down-to-line",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -918,7 +949,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowsLeftRight",
         "title": "Left Right",
         "className": "fa-solid fa-arrows-left-right",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -926,7 +957,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowsLeftRightToLine",
         "title": "Left Right To Line",
         "className": "fa-solid fa-arrows-left-right-to-line",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -934,7 +965,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowsRotate",
         "title": "Rotate",
         "className": "fa-solid fa-arrows-rotate",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -942,7 +973,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowsSpin",
         "title": "Spin",
         "className": "fa-solid fa-arrows-spin",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -950,7 +981,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowsSplitUpAndLeft",
         "title": "Split Up And Left",
         "className": "fa-solid fa-arrows-split-up-and-left",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -958,7 +989,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowsToCircle",
         "title": "To Circle",
         "className": "fa-solid fa-arrows-to-circle",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -966,7 +997,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowsToDot",
         "title": "To Dot",
         "className": "fa-solid fa-arrows-to-dot",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -974,7 +1005,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowsToEye",
         "title": "To Eye",
         "className": "fa-solid fa-arrows-to-eye",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -982,7 +1013,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowsTurnRight",
         "title": "Turn Right",
         "className": "fa-solid fa-arrows-turn-right",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -990,7 +1021,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowsTurnToDots",
         "title": "Turn To Dots",
         "className": "fa-solid fa-arrows-turn-to-dots",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -998,7 +1029,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowsUpDown",
         "title": "Up Down",
         "className": "fa-solid fa-arrows-up-down",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1006,7 +1037,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowsUpDownLeftRight",
         "title": "Up Down Left Right",
         "className": "fa-solid fa-arrows-up-down-left-right",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1014,7 +1045,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowsUpToLine",
         "title": "Up To Line",
         "className": "fa-solid fa-arrows-up-to-line",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1022,7 +1053,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowTrendDown",
         "title": "Arrow Trend Down",
         "className": "fa-solid fa-arrow-trend-down",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1030,7 +1061,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowTrendUp",
         "title": "Arrow Trend Up",
         "className": "fa-solid fa-arrow-trend-up",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1038,7 +1069,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowTurnDown",
         "title": "Arrow Turn Down",
         "className": "fa-solid fa-arrow-turn-down",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1046,7 +1077,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowTurnUp",
         "title": "Arrow Turn Up",
         "className": "fa-solid fa-arrow-turn-up",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1054,7 +1085,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowUp",
         "title": "Arrow Up",
         "className": "fa-solid fa-arrow-up",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1062,7 +1093,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowUp19",
         "title": "Arrow Up19",
         "className": "fa-solid fa-arrow-up-1-9",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1070,7 +1101,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowUp91",
         "title": "Arrow Up91",
         "className": "fa-solid fa-arrow-up-9-1",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1078,7 +1109,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowUpAZ",
         "title": "Arrow Up AZ",
         "className": "fa-solid fa-arrow-up-a-z",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1086,7 +1117,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowUpFromBracket",
         "title": "Arrow Up From Bracket",
         "className": "fa-solid fa-arrow-up-from-bracket",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1094,7 +1125,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowUpLong",
         "title": "Arrow Up Long",
         "className": "fa-solid fa-arrow-up-long",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1102,7 +1133,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowUpRightDots",
         "title": "Arrow Up Right Dots",
         "className": "fa-solid fa-arrow-up-right-dots",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1110,7 +1141,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowUpRightFromSquare",
         "title": "Arrow Up Right From Square",
         "className": "fa-solid fa-arrow-up-right-from-square",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1118,7 +1149,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowUpShortWide",
         "title": "Arrow Up Short Wide",
         "className": "fa-solid fa-arrow-up-short-wide",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1126,7 +1157,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowUpWideShort",
         "title": "Arrow Up Wide Short",
         "className": "fa-solid fa-arrow-up-wide-short",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1134,7 +1165,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsArrowUpZA",
         "title": "Arrow Up ZA",
         "className": "fa-solid fa-arrow-up-z-a",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1142,7 +1173,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsCaretDown",
         "title": "Caret Down",
         "className": "fa-solid fa-caret-down",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1150,7 +1181,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsCaretLeft",
         "title": "Caret Left",
         "className": "fa-solid fa-caret-left",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1158,7 +1189,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsCaretRight",
         "title": "Caret Right",
         "className": "fa-solid fa-caret-right",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1166,7 +1197,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsCaretUp",
         "title": "Caret Up",
         "className": "fa-solid fa-caret-up",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1174,7 +1205,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsChevronDown",
         "title": "Chevron Down",
         "className": "fa-solid fa-chevron-down",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1182,7 +1213,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsChevronLeft",
         "title": "Chevron Left",
         "className": "fa-solid fa-chevron-left",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1190,7 +1221,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsChevronRight",
         "title": "Chevron Right",
         "className": "fa-solid fa-chevron-right",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1198,7 +1229,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsChevronUp",
         "title": "Chevron Up",
         "className": "fa-solid fa-chevron-up",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1206,7 +1237,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsCircleArrowDown",
         "title": "Circle Arrow Down",
         "className": "fa-solid fa-circle-arrow-down",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1214,7 +1245,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsCircleArrowLeft",
         "title": "Circle Arrow Left",
         "className": "fa-solid fa-circle-arrow-left",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1222,7 +1253,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsCircleArrowRight",
         "title": "Circle Arrow Right",
         "className": "fa-solid fa-circle-arrow-right",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1230,7 +1261,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsCircleArrowUp",
         "title": "Circle Arrow Up",
         "className": "fa-solid fa-circle-arrow-up",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1238,7 +1269,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsCircleChevronDown",
         "title": "Circle Chevron Down",
         "className": "fa-solid fa-circle-chevron-down",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1246,7 +1277,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsCircleChevronLeft",
         "title": "Circle Chevron Left",
         "className": "fa-solid fa-circle-chevron-left",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1254,7 +1285,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsCircleChevronRight",
         "title": "Circle Chevron Right",
         "className": "fa-solid fa-circle-chevron-right",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1262,7 +1293,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsCircleChevronUp",
         "title": "Circle Chevron Up",
         "className": "fa-solid fa-circle-chevron-up",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1270,7 +1301,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsCircleDown",
         "title": "Circle Down",
         "className": "fa-solid fa-circle-down",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1278,7 +1309,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsCircleLeft",
         "title": "Circle Left",
         "className": "fa-solid fa-circle-left",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1286,7 +1317,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsCircleRight",
         "title": "Circle Right",
         "className": "fa-solid fa-circle-right",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1294,7 +1325,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsCircleUp",
         "title": "Circle Up",
         "className": "fa-solid fa-circle-up",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1302,7 +1333,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsClockRotateLeft",
         "title": "Clock Rotate Left",
         "className": "fa-solid fa-clock-rotate-left",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1310,7 +1341,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsCloudArrowDown",
         "title": "Cloud Arrow Down",
         "className": "fa-solid fa-cloud-arrow-down",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1318,7 +1349,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsCloudArrowUp",
         "title": "Cloud Arrow Up",
         "className": "fa-solid fa-cloud-arrow-up",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1326,7 +1357,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsDownLeftAndUpRightToCenter",
         "title": "Down Left And Up Right To Center",
         "className": "fa-solid fa-down-left-and-up-right-to-center",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1334,7 +1365,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsDownload",
         "title": "Download",
         "className": "fa-solid fa-download",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1342,7 +1373,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsDownLong",
         "title": "Down Long",
         "className": "fa-solid fa-down-long",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1350,7 +1381,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsLeftLong",
         "title": "Left Long",
         "className": "fa-solid fa-left-long",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1358,7 +1389,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsLeftRight",
         "title": "Left Right",
         "className": "fa-solid fa-left-right",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1366,7 +1397,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsLocationArrow",
         "title": "Location Arrow",
         "className": "fa-solid fa-location-arrow",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1374,7 +1405,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsMaximize",
         "title": "Maximize",
         "className": "fa-solid fa-maximize",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1382,7 +1413,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsRecycle",
         "title": "Recycle",
         "className": "fa-solid fa-recycle",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1390,7 +1421,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsRepeat",
         "title": "Repeat",
         "className": "fa-solid fa-repeat",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1398,7 +1429,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsReply",
         "title": "Reply",
         "className": "fa-solid fa-reply",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1406,7 +1437,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsReplyAll",
         "title": "Reply All",
         "className": "fa-solid fa-reply-all",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1414,7 +1445,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsRetweet",
         "title": "Retweet",
         "className": "fa-solid fa-retweet",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1422,7 +1453,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsRightFromBracket",
         "title": "Right From Bracket",
         "className": "fa-solid fa-right-from-bracket",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1430,7 +1461,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsRightLeft",
         "title": "Right Left",
         "className": "fa-solid fa-right-left",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1438,7 +1469,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsRightLong",
         "title": "Right Long",
         "className": "fa-solid fa-right-long",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1446,7 +1477,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsRightToBracket",
         "title": "Right To Bracket",
         "className": "fa-solid fa-right-to-bracket",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1454,7 +1485,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsRotate",
         "title": "Rotate",
         "className": "fa-solid fa-rotate",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1462,7 +1493,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsRotateLeft",
         "title": "Rotate Left",
         "className": "fa-solid fa-rotate-left",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1470,7 +1501,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsRotateRight",
         "title": "Rotate Right",
         "className": "fa-solid fa-rotate-right",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1478,7 +1509,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsShare",
         "title": "Share",
         "className": "fa-solid fa-share",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1486,7 +1517,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsShareFromSquare",
         "title": "Share From Square",
         "className": "fa-solid fa-share-from-square",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1494,7 +1525,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsShuffle",
         "title": "Shuffle",
         "className": "fa-solid fa-shuffle",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1502,7 +1533,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsSort",
         "title": "Sort",
         "className": "fa-solid fa-sort",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1510,7 +1541,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsSortDown",
         "title": "Sort Down",
         "className": "fa-solid fa-sort-down",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1518,7 +1549,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsSortUp",
         "title": "Sort Up",
         "className": "fa-solid fa-sort-up",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1526,7 +1557,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsSquareArrowUpRight",
         "title": "Square Arrow Up Right",
         "className": "fa-solid fa-square-arrow-up-right",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1534,7 +1565,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsSquareCaretDown",
         "title": "Square Caret Down",
         "className": "fa-solid fa-square-caret-down",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1542,7 +1573,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsSquareCaretLeft",
         "title": "Square Caret Left",
         "className": "fa-solid fa-square-caret-left",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1550,7 +1581,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsSquareCaretRight",
         "title": "Square Caret Right",
         "className": "fa-solid fa-square-caret-right",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1558,7 +1589,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsSquareCaretUp",
         "title": "Square Caret Up",
         "className": "fa-solid fa-square-caret-up",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1566,7 +1597,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsSquareUpRight",
         "title": "Square Up Right",
         "className": "fa-solid fa-square-up-right",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1574,7 +1605,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsTurnDown",
         "title": "Turn Down",
         "className": "fa-solid fa-turn-down",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1582,7 +1613,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsTurnUp",
         "title": "Turn Up",
         "className": "fa-solid fa-turn-up",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1590,7 +1621,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsUpDown",
         "title": "Up Down",
         "className": "fa-solid fa-up-down",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1598,7 +1629,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsUpDownLeftRight",
         "title": "Up Down Left Right",
         "className": "fa-solid fa-up-down-left-right",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1606,7 +1637,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsUpload",
         "title": "Upload",
         "className": "fa-solid fa-upload",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1614,7 +1645,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsUpLong",
         "title": "Up Long",
         "className": "fa-solid fa-up-long",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1622,7 +1653,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsUpRightAndDownLeftFromCenter",
         "title": "Up Right And Down Left From Center",
         "className": "fa-solid fa-up-right-and-down-left-from-center",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1630,7 +1661,7 @@ export const classIconIndex = {
         "name": "fa-ArrowsUpRightFromSquare",
         "title": "Up Right From Square",
         "className": "fa-solid fa-up-right-from-square",
-        "categories": [
+        "type":"fa","categories": [
             "arrows"
         ]
     },
@@ -1638,7 +1669,7 @@ export const classIconIndex = {
         "name": "fa-AstronomyBinoculars",
         "title": "Binoculars",
         "className": "fa-solid fa-binoculars",
-        "categories": [
+        "type":"fa","categories": [
             "astronomy"
         ]
     },
@@ -1646,7 +1677,7 @@ export const classIconIndex = {
         "name": "fa-AstronomyGlobe",
         "title": "Globe",
         "className": "fa-solid fa-globe",
-        "categories": [
+        "type":"fa","categories": [
             "astronomy"
         ]
     },
@@ -1654,7 +1685,7 @@ export const classIconIndex = {
         "name": "fa-AstronomyMeteor",
         "title": "Meteor",
         "className": "fa-solid fa-meteor",
-        "categories": [
+        "type":"fa","categories": [
             "astronomy"
         ]
     },
@@ -1662,7 +1693,7 @@ export const classIconIndex = {
         "name": "fa-AstronomyMoon",
         "title": "Moon",
         "className": "fa-solid fa-moon",
-        "categories": [
+        "type":"fa","categories": [
             "astronomy"
         ]
     },
@@ -1670,7 +1701,7 @@ export const classIconIndex = {
         "name": "fa-AstronomySatellite",
         "title": "Satellite",
         "className": "fa-solid fa-satellite",
-        "categories": [
+        "type":"fa","categories": [
             "astronomy"
         ]
     },
@@ -1678,7 +1709,7 @@ export const classIconIndex = {
         "name": "fa-AstronomySatelliteDish",
         "title": "Satellite Dish",
         "className": "fa-solid fa-satellite-dish",
-        "categories": [
+        "type":"fa","categories": [
             "astronomy"
         ]
     },
@@ -1686,7 +1717,7 @@ export const classIconIndex = {
         "name": "fa-AstronomyShuttleSpace",
         "title": "Shuttle Space",
         "className": "fa-solid fa-shuttle-space",
-        "categories": [
+        "type":"fa","categories": [
             "astronomy"
         ]
     },
@@ -1694,7 +1725,7 @@ export const classIconIndex = {
         "name": "fa-AstronomyUserAstronaut",
         "title": "User Astronaut",
         "className": "fa-solid fa-user-astronaut",
-        "categories": [
+        "type":"fa","categories": [
             "astronomy"
         ]
     },
@@ -1702,7 +1733,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveBus",
         "title": "Bus",
         "className": "fa-solid fa-bus",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1710,7 +1741,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveBusSimple",
         "title": "Bus Simple",
         "className": "fa-solid fa-bus-simple",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1718,7 +1749,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveCar",
         "title": "Car",
         "className": "fa-solid fa-car",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1726,7 +1757,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveCaravan",
         "title": "Caravan",
         "className": "fa-solid fa-caravan",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1734,7 +1765,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveCarBattery",
         "title": "Car Battery",
         "className": "fa-solid fa-car-battery",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1742,7 +1773,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveCarBurst",
         "title": "Car Burst",
         "className": "fa-solid fa-car-burst",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1750,7 +1781,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveCarOn",
         "title": "Car On",
         "className": "fa-solid fa-car-on",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1758,7 +1789,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveCarRear",
         "title": "Car Rear",
         "className": "fa-solid fa-car-rear",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1766,7 +1797,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveCarSide",
         "title": "Car Side",
         "className": "fa-solid fa-car-side",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1774,7 +1805,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveCarTunnel",
         "title": "Car Tunnel",
         "className": "fa-solid fa-car-tunnel",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1782,7 +1813,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveChargingStation",
         "title": "Charging Station",
         "className": "fa-solid fa-charging-station",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1790,7 +1821,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveGasPump",
         "title": "Gas Pump",
         "className": "fa-solid fa-gas-pump",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1798,7 +1829,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveGauge",
         "title": "Gauge",
         "className": "fa-solid fa-gauge",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1806,7 +1837,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveGaugeHigh",
         "title": "Gauge High",
         "className": "fa-solid fa-gauge-high",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1814,7 +1845,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveGaugeSimple",
         "title": "Gauge Simple",
         "className": "fa-solid fa-gauge-simple",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1822,7 +1853,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveGaugeSimpleHigh",
         "title": "Gauge Simple High",
         "className": "fa-solid fa-gauge-simple-high",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1830,7 +1861,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveMotorcycle",
         "title": "Motorcycle",
         "className": "fa-solid fa-motorcycle",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1838,7 +1869,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveOilCan",
         "title": "Oil Can",
         "className": "fa-solid fa-oil-can",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1846,7 +1877,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveSprayCanSparkles",
         "title": "Spray Can Sparkles",
         "className": "fa-solid fa-spray-can-sparkles",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1854,7 +1885,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveTaxi",
         "title": "Taxi",
         "className": "fa-solid fa-taxi",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1862,7 +1893,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveTrailer",
         "title": "Trailer",
         "className": "fa-solid fa-trailer",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1870,7 +1901,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveTruck",
         "title": "Truck",
         "className": "fa-solid fa-truck",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1878,7 +1909,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveTruckField",
         "title": "Truck Field",
         "className": "fa-solid fa-truck-field",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1886,7 +1917,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveTruckFieldUn",
         "title": "Truck Field Un",
         "className": "fa-solid fa-truck-field-un",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1894,7 +1925,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveTruckMedical",
         "title": "Truck Medical",
         "className": "fa-solid fa-truck-medical",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1902,7 +1933,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveTruckMonster",
         "title": "Truck Monster",
         "className": "fa-solid fa-truck-monster",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1910,7 +1941,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveTruckPickup",
         "title": "Truck Pickup",
         "className": "fa-solid fa-truck-pickup",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1918,7 +1949,7 @@ export const classIconIndex = {
         "name": "fa-AutomotiveVanShuttle",
         "title": "Van Shuttle",
         "className": "fa-solid fa-van-shuttle",
-        "categories": [
+        "type":"fa","categories": [
             "automotive"
         ]
     },
@@ -1926,7 +1957,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsArchway",
         "title": "Archway",
         "className": "fa-solid fa-archway",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -1934,7 +1965,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsArrowRightToCity",
         "title": "Arrow Right To City",
         "className": "fa-solid fa-arrow-right-to-city",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -1942,7 +1973,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsBuilding",
         "title": "Building",
         "className": "fa-solid fa-building",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -1950,7 +1981,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsBuildingCircleArrowRight",
         "title": "Building Circle Arrow Right",
         "className": "fa-solid fa-building-circle-arrow-right",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -1958,7 +1989,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsBuildingCircleCheck",
         "title": "Building Circle Check",
         "className": "fa-solid fa-building-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -1966,7 +1997,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsBuildingCircleExclamation",
         "title": "Building Circle Exclamation",
         "className": "fa-solid fa-building-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -1974,7 +2005,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsBuildingCircleXmark",
         "title": "Building Circle Xmark",
         "className": "fa-solid fa-building-circle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -1982,7 +2013,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsBuildingColumns",
         "title": "Building Columns",
         "className": "fa-solid fa-building-columns",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -1990,7 +2021,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsBuildingFlag",
         "title": "Building Flag",
         "className": "fa-solid fa-building-flag",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -1998,7 +2029,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsBuildingLock",
         "title": "Building Lock",
         "className": "fa-solid fa-building-lock",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2006,7 +2037,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsBuildingNgo",
         "title": "Building Ngo",
         "className": "fa-solid fa-building-ngo",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2014,7 +2045,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsBuildingShield",
         "title": "Building Shield",
         "className": "fa-solid fa-building-shield",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2022,7 +2053,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsBuildingUn",
         "title": "Building Un",
         "className": "fa-solid fa-building-un",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2030,7 +2061,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsBuildingUser",
         "title": "Building User",
         "className": "fa-solid fa-building-user",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2038,7 +2069,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsBuildingWheat",
         "title": "Building Wheat",
         "className": "fa-solid fa-building-wheat",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2046,7 +2077,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsCampground",
         "title": "Campground",
         "className": "fa-solid fa-campground",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2054,7 +2085,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsChurch",
         "title": "Church",
         "className": "fa-solid fa-church",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2062,7 +2093,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsCity",
         "title": "City",
         "className": "fa-solid fa-city",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2070,7 +2101,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsDungeon",
         "title": "Dungeon",
         "className": "fa-solid fa-dungeon",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2078,7 +2109,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsGopuram",
         "title": "Gopuram",
         "className": "fa-solid fa-gopuram",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2086,7 +2117,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsHospital",
         "title": "Hospital",
         "className": "fa-solid fa-hospital",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2094,7 +2125,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsHospitalUser",
         "title": "Hospital User",
         "className": "fa-solid fa-hospital-user",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2102,7 +2133,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsHotel",
         "title": "Hotel",
         "className": "fa-solid fa-hotel",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2110,7 +2141,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsHouse",
         "title": "House",
         "className": "fa-solid fa-house",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2118,7 +2149,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsHouseChimney",
         "title": "House Chimney",
         "className": "fa-solid fa-house-chimney",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2126,7 +2157,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsHouseChimneyCrack",
         "title": "House Chimney Crack",
         "className": "fa-solid fa-house-chimney-crack",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2134,7 +2165,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsHouseChimneyMedical",
         "title": "House Chimney Medical",
         "className": "fa-solid fa-house-chimney-medical",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2142,7 +2173,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsHouseChimneyWindow",
         "title": "House Chimney Window",
         "className": "fa-solid fa-house-chimney-window",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2150,7 +2181,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsHouseCircleCheck",
         "title": "House Circle Check",
         "className": "fa-solid fa-house-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2158,7 +2189,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsHouseCircleExclamation",
         "title": "House Circle Exclamation",
         "className": "fa-solid fa-house-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2166,7 +2197,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsHouseCircleXmark",
         "title": "House Circle Xmark",
         "className": "fa-solid fa-house-circle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2174,7 +2205,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsHouseCrack",
         "title": "House Crack",
         "className": "fa-solid fa-house-crack",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2182,7 +2213,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsHouseFire",
         "title": "House Fire",
         "className": "fa-solid fa-house-fire",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2190,7 +2221,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsHouseFlag",
         "title": "House Flag",
         "className": "fa-solid fa-house-flag",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2198,7 +2229,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsHouseLock",
         "title": "House Lock",
         "className": "fa-solid fa-house-lock",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2206,7 +2237,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsHouseMedical",
         "title": "House Medical",
         "className": "fa-solid fa-house-medical",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2214,7 +2245,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsHouseMedicalCircleCheck",
         "title": "House Medical Circle Check",
         "className": "fa-solid fa-house-medical-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2222,7 +2253,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsHouseMedicalCircleExclamation",
         "title": "House Medical Circle Exclamation",
         "className": "fa-solid fa-house-medical-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2230,7 +2261,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsHouseMedicalCircleXmark",
         "title": "House Medical Circle Xmark",
         "className": "fa-solid fa-house-medical-circle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2238,7 +2269,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsHouseMedicalFlag",
         "title": "House Medical Flag",
         "className": "fa-solid fa-house-medical-flag",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2246,7 +2277,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsIgloo",
         "title": "Igloo",
         "className": "fa-solid fa-igloo",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2254,7 +2285,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsIndustry",
         "title": "Industry",
         "className": "fa-solid fa-industry",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2262,7 +2293,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsKaaba",
         "title": "Kaaba",
         "className": "fa-solid fa-kaaba",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2270,7 +2301,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsLandmark",
         "title": "Landmark",
         "className": "fa-solid fa-landmark",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2278,7 +2309,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsLandmarkDome",
         "title": "Landmark Dome",
         "className": "fa-solid fa-landmark-dome",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2286,7 +2317,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsLandmarkFlag",
         "title": "Landmark Flag",
         "className": "fa-solid fa-landmark-flag",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2294,7 +2325,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsMonument",
         "title": "Monument",
         "className": "fa-solid fa-monument",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2302,7 +2333,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsMosque",
         "title": "Mosque",
         "className": "fa-solid fa-mosque",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2310,7 +2341,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsMountainCity",
         "title": "Mountain City",
         "className": "fa-solid fa-mountain-city",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2318,7 +2349,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsOilWell",
         "title": "Oil Well",
         "className": "fa-solid fa-oil-well",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2326,7 +2357,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsPlaceOfWorship",
         "title": "Place Of Worship",
         "className": "fa-solid fa-place-of-worship",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2334,7 +2365,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsSchool",
         "title": "School",
         "className": "fa-solid fa-school",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2342,7 +2373,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsSchoolCircleCheck",
         "title": "School Circle Check",
         "className": "fa-solid fa-school-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2350,7 +2381,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsSchoolCircleExclamation",
         "title": "School Circle Exclamation",
         "className": "fa-solid fa-school-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2358,7 +2389,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsSchoolCircleXmark",
         "title": "School Circle Xmark",
         "className": "fa-solid fa-school-circle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2366,7 +2397,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsSchoolFlag",
         "title": "School Flag",
         "className": "fa-solid fa-school-flag",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2374,7 +2405,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsSchoolLock",
         "title": "School Lock",
         "className": "fa-solid fa-school-lock",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2382,7 +2413,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsShop",
         "title": "Shop",
         "className": "fa-solid fa-shop",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2390,7 +2421,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsShopLock",
         "title": "Shop Lock",
         "className": "fa-solid fa-shop-lock",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2398,7 +2429,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsStore",
         "title": "Store",
         "className": "fa-solid fa-store",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2406,7 +2437,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsSynagogue",
         "title": "Synagogue",
         "className": "fa-solid fa-synagogue",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2414,7 +2445,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsTent",
         "title": "Tent",
         "className": "fa-solid fa-tent",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2422,7 +2453,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsTentArrowDownToLine",
         "title": "Tent Arrow Down To Line",
         "className": "fa-solid fa-tent-arrow-down-to-line",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2430,7 +2461,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsTentArrowLeftRight",
         "title": "Tent Arrow Left Right",
         "className": "fa-solid fa-tent-arrow-left-right",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2438,7 +2469,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsTentArrowsDown",
         "title": "Tent Arrows Down",
         "className": "fa-solid fa-tent-arrows-down",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2446,7 +2477,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsTentArrowTurnLeft",
         "title": "Tent Arrow Turn Left",
         "className": "fa-solid fa-tent-arrow-turn-left",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2454,7 +2485,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsTents",
         "title": "Tents",
         "className": "fa-solid fa-tents",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2462,7 +2493,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsToiletPortable",
         "title": "Toilet Portable",
         "className": "fa-solid fa-toilet-portable",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2470,7 +2501,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsToiletsPortable",
         "title": "Toilets Portable",
         "className": "fa-solid fa-toilets-portable",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2478,7 +2509,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsToriiGate",
         "title": "Torii Gate",
         "className": "fa-solid fa-torii-gate",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2486,7 +2517,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsTowerObservation",
         "title": "Tower Observation",
         "className": "fa-solid fa-tower-observation",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2494,7 +2525,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsTreeCity",
         "title": "Tree City",
         "className": "fa-solid fa-tree-city",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2502,7 +2533,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsVihara",
         "title": "Vihara",
         "className": "fa-solid fa-vihara",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2510,7 +2541,7 @@ export const classIconIndex = {
         "name": "fa-BuildingsWarehouse",
         "title": "Warehouse",
         "className": "fa-solid fa-warehouse",
-        "categories": [
+        "type":"fa","categories": [
             "buildings"
         ]
     },
@@ -2518,7 +2549,7 @@ export const classIconIndex = {
         "name": "fa-CampingBinoculars",
         "title": "Binoculars",
         "className": "fa-solid fa-binoculars",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2526,7 +2557,7 @@ export const classIconIndex = {
         "name": "fa-CampingBottleWater",
         "title": "Bottle Water",
         "className": "fa-solid fa-bottle-water",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2534,7 +2565,7 @@ export const classIconIndex = {
         "name": "fa-CampingBucket",
         "title": "Bucket",
         "className": "fa-solid fa-bucket",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2542,7 +2573,7 @@ export const classIconIndex = {
         "name": "fa-CampingCampground",
         "title": "Campground",
         "className": "fa-solid fa-campground",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2550,7 +2581,7 @@ export const classIconIndex = {
         "name": "fa-CampingCaravan",
         "title": "Caravan",
         "className": "fa-solid fa-caravan",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2558,7 +2589,7 @@ export const classIconIndex = {
         "name": "fa-CampingCompass",
         "title": "Compass",
         "className": "fa-solid fa-compass",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2566,7 +2597,7 @@ export const classIconIndex = {
         "name": "fa-CampingFaucet",
         "title": "Faucet",
         "className": "fa-solid fa-faucet",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2574,7 +2605,7 @@ export const classIconIndex = {
         "name": "fa-CampingFaucetDrip",
         "title": "Faucet Drip",
         "className": "fa-solid fa-faucet-drip",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2582,7 +2613,7 @@ export const classIconIndex = {
         "name": "fa-CampingFire",
         "title": "Fire",
         "className": "fa-solid fa-fire",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2590,7 +2621,7 @@ export const classIconIndex = {
         "name": "fa-CampingFireBurner",
         "title": "Fire Burner",
         "className": "fa-solid fa-fire-burner",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2598,7 +2629,7 @@ export const classIconIndex = {
         "name": "fa-CampingFireFlameCurved",
         "title": "Fire Flame Curved",
         "className": "fa-solid fa-fire-flame-curved",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2606,7 +2637,7 @@ export const classIconIndex = {
         "name": "fa-CampingFrog",
         "title": "Frog",
         "className": "fa-solid fa-frog",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2614,7 +2645,7 @@ export const classIconIndex = {
         "name": "fa-CampingKitMedical",
         "title": "Kit Medical",
         "className": "fa-solid fa-kit-medical",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2622,7 +2653,7 @@ export const classIconIndex = {
         "name": "fa-CampingMap",
         "title": "Map",
         "className": "fa-solid fa-map",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2630,7 +2661,7 @@ export const classIconIndex = {
         "name": "fa-CampingMapLocation",
         "title": "Map Location",
         "className": "fa-solid fa-map-location",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2638,7 +2669,7 @@ export const classIconIndex = {
         "name": "fa-CampingMapLocationDot",
         "title": "Map Location Dot",
         "className": "fa-solid fa-map-location-dot",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2646,7 +2677,7 @@ export const classIconIndex = {
         "name": "fa-CampingMattressPillow",
         "title": "Mattress Pillow",
         "className": "fa-solid fa-mattress-pillow",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2654,7 +2685,7 @@ export const classIconIndex = {
         "name": "fa-CampingMosquito",
         "title": "Mosquito",
         "className": "fa-solid fa-mosquito",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2662,7 +2693,7 @@ export const classIconIndex = {
         "name": "fa-CampingMosquitoNet",
         "title": "Mosquito Net",
         "className": "fa-solid fa-mosquito-net",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2670,7 +2701,7 @@ export const classIconIndex = {
         "name": "fa-CampingMountain",
         "title": "Mountain",
         "className": "fa-solid fa-mountain",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2678,7 +2709,7 @@ export const classIconIndex = {
         "name": "fa-CampingMountainSun",
         "title": "Mountain Sun",
         "className": "fa-solid fa-mountain-sun",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2686,7 +2717,7 @@ export const classIconIndex = {
         "name": "fa-CampingPeopleRoof",
         "title": "People Roof",
         "className": "fa-solid fa-people-roof",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2694,7 +2725,7 @@ export const classIconIndex = {
         "name": "fa-CampingPersonHiking",
         "title": "Person Hiking",
         "className": "fa-solid fa-person-hiking",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2702,7 +2733,7 @@ export const classIconIndex = {
         "name": "fa-CampingPersonShelter",
         "title": "Person Shelter",
         "className": "fa-solid fa-person-shelter",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2710,7 +2741,7 @@ export const classIconIndex = {
         "name": "fa-CampingRoute",
         "title": "Route",
         "className": "fa-solid fa-route",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2718,7 +2749,7 @@ export const classIconIndex = {
         "name": "fa-CampingSignsPost",
         "title": "Signs Post",
         "className": "fa-solid fa-signs-post",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2726,7 +2757,7 @@ export const classIconIndex = {
         "name": "fa-CampingTarp",
         "title": "Tarp",
         "className": "fa-solid fa-tarp",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2734,7 +2765,7 @@ export const classIconIndex = {
         "name": "fa-CampingTarpDroplet",
         "title": "Tarp Droplet",
         "className": "fa-solid fa-tarp-droplet",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2742,7 +2773,7 @@ export const classIconIndex = {
         "name": "fa-CampingTent",
         "title": "Tent",
         "className": "fa-solid fa-tent",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2750,7 +2781,7 @@ export const classIconIndex = {
         "name": "fa-CampingTentArrowDownToLine",
         "title": "Tent Arrow Down To Line",
         "className": "fa-solid fa-tent-arrow-down-to-line",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2758,7 +2789,7 @@ export const classIconIndex = {
         "name": "fa-CampingTentArrowLeftRight",
         "title": "Tent Arrow Left Right",
         "className": "fa-solid fa-tent-arrow-left-right",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2766,7 +2797,7 @@ export const classIconIndex = {
         "name": "fa-CampingTentArrowsDown",
         "title": "Tent Arrows Down",
         "className": "fa-solid fa-tent-arrows-down",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2774,7 +2805,7 @@ export const classIconIndex = {
         "name": "fa-CampingTentArrowTurnLeft",
         "title": "Tent Arrow Turn Left",
         "className": "fa-solid fa-tent-arrow-turn-left",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2782,7 +2813,7 @@ export const classIconIndex = {
         "name": "fa-CampingTents",
         "title": "Tents",
         "className": "fa-solid fa-tents",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2790,7 +2821,7 @@ export const classIconIndex = {
         "name": "fa-CampingToiletPaper",
         "title": "Toilet Paper",
         "className": "fa-solid fa-toilet-paper",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2798,7 +2829,7 @@ export const classIconIndex = {
         "name": "fa-CampingTrailer",
         "title": "Trailer",
         "className": "fa-solid fa-trailer",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2806,7 +2837,7 @@ export const classIconIndex = {
         "name": "fa-CampingTree",
         "title": "Tree",
         "className": "fa-solid fa-tree",
-        "categories": [
+        "type":"fa","categories": [
             "camping"
         ]
     },
@@ -2814,7 +2845,7 @@ export const classIconIndex = {
         "name": "fa-CharityCircleDollarToSlot",
         "title": "Circle Dollar To Slot",
         "className": "fa-solid fa-circle-dollar-to-slot",
-        "categories": [
+        "type":"fa","categories": [
             "charity"
         ]
     },
@@ -2822,7 +2853,7 @@ export const classIconIndex = {
         "name": "fa-CharityDollarSign",
         "title": "Dollar Sign",
         "className": "fa-solid fa-dollar-sign",
-        "categories": [
+        "type":"fa","categories": [
             "charity"
         ]
     },
@@ -2830,7 +2861,7 @@ export const classIconIndex = {
         "name": "fa-CharityDove",
         "title": "Dove",
         "className": "fa-solid fa-dove",
-        "categories": [
+        "type":"fa","categories": [
             "charity"
         ]
     },
@@ -2838,7 +2869,7 @@ export const classIconIndex = {
         "name": "fa-CharityGift",
         "title": "Gift",
         "className": "fa-solid fa-gift",
-        "categories": [
+        "type":"fa","categories": [
             "charity"
         ]
     },
@@ -2846,7 +2877,7 @@ export const classIconIndex = {
         "name": "fa-CharityGlobe",
         "title": "Globe",
         "className": "fa-solid fa-globe",
-        "categories": [
+        "type":"fa","categories": [
             "charity"
         ]
     },
@@ -2854,7 +2885,7 @@ export const classIconIndex = {
         "name": "fa-CharityHandHoldingDollar",
         "title": "Hand Holding Dollar",
         "className": "fa-solid fa-hand-holding-dollar",
-        "categories": [
+        "type":"fa","categories": [
             "charity"
         ]
     },
@@ -2862,7 +2893,7 @@ export const classIconIndex = {
         "name": "fa-CharityHandHoldingDroplet",
         "title": "Hand Holding Droplet",
         "className": "fa-solid fa-hand-holding-droplet",
-        "categories": [
+        "type":"fa","categories": [
             "charity"
         ]
     },
@@ -2870,7 +2901,7 @@ export const classIconIndex = {
         "name": "fa-CharityHandHoldingHand",
         "title": "Hand Holding Hand",
         "className": "fa-solid fa-hand-holding-hand",
-        "categories": [
+        "type":"fa","categories": [
             "charity"
         ]
     },
@@ -2878,7 +2909,7 @@ export const classIconIndex = {
         "name": "fa-CharityHandHoldingHeart",
         "title": "Hand Holding Heart",
         "className": "fa-solid fa-hand-holding-heart",
-        "categories": [
+        "type":"fa","categories": [
             "charity"
         ]
     },
@@ -2886,7 +2917,7 @@ export const classIconIndex = {
         "name": "fa-CharityHandshake",
         "title": "Handshake",
         "className": "fa-solid fa-handshake",
-        "categories": [
+        "type":"fa","categories": [
             "charity"
         ]
     },
@@ -2894,7 +2925,7 @@ export const classIconIndex = {
         "name": "fa-CharityHandshakeAngle",
         "title": "Handshake Angle",
         "className": "fa-solid fa-handshake-angle",
-        "categories": [
+        "type":"fa","categories": [
             "charity"
         ]
     },
@@ -2902,7 +2933,7 @@ export const classIconIndex = {
         "name": "fa-CharityHandshakeSimple",
         "title": "Handshake Simple",
         "className": "fa-solid fa-handshake-simple",
-        "categories": [
+        "type":"fa","categories": [
             "charity"
         ]
     },
@@ -2910,7 +2941,7 @@ export const classIconIndex = {
         "name": "fa-CharityHandsHoldingChild",
         "title": "Hands Holding Child",
         "className": "fa-solid fa-hands-holding-child",
-        "categories": [
+        "type":"fa","categories": [
             "charity"
         ]
     },
@@ -2918,7 +2949,7 @@ export const classIconIndex = {
         "name": "fa-CharityHandsHoldingCircle",
         "title": "Hands Holding Circle",
         "className": "fa-solid fa-hands-holding-circle",
-        "categories": [
+        "type":"fa","categories": [
             "charity"
         ]
     },
@@ -2926,7 +2957,7 @@ export const classIconIndex = {
         "name": "fa-CharityHeart",
         "title": "Heart",
         "className": "fa-solid fa-heart",
-        "categories": [
+        "type":"fa","categories": [
             "charity"
         ]
     },
@@ -2934,7 +2965,7 @@ export const classIconIndex = {
         "name": "fa-CharityLeaf",
         "title": "Leaf",
         "className": "fa-solid fa-leaf",
-        "categories": [
+        "type":"fa","categories": [
             "charity"
         ]
     },
@@ -2942,7 +2973,7 @@ export const classIconIndex = {
         "name": "fa-CharityParachuteBox",
         "title": "Parachute Box",
         "className": "fa-solid fa-parachute-box",
-        "categories": [
+        "type":"fa","categories": [
             "charity"
         ]
     },
@@ -2950,7 +2981,7 @@ export const classIconIndex = {
         "name": "fa-CharityPiggyBank",
         "title": "Piggy Bank",
         "className": "fa-solid fa-piggy-bank",
-        "categories": [
+        "type":"fa","categories": [
             "charity"
         ]
     },
@@ -2958,7 +2989,7 @@ export const classIconIndex = {
         "name": "fa-CharityRibbon",
         "title": "Ribbon",
         "className": "fa-solid fa-ribbon",
-        "categories": [
+        "type":"fa","categories": [
             "charity"
         ]
     },
@@ -2966,7 +2997,7 @@ export const classIconIndex = {
         "name": "fa-CharitySeedling",
         "title": "Seedling",
         "className": "fa-solid fa-seedling",
-        "categories": [
+        "type":"fa","categories": [
             "charity"
         ]
     },
@@ -2974,7 +3005,7 @@ export const classIconIndex = {
         "name": "fa-ChartsDiagramsBarsProgress",
         "title": "Bars Progress",
         "className": "fa-solid fa-bars-progress",
-        "categories": [
+        "type":"fa","categories": [
             "charts+diagrams"
         ]
     },
@@ -2982,7 +3013,7 @@ export const classIconIndex = {
         "name": "fa-ChartsDiagramsChartArea",
         "title": "Chart Area",
         "className": "fa-solid fa-chart-area",
-        "categories": [
+        "type":"fa","categories": [
             "charts+diagrams"
         ]
     },
@@ -2990,7 +3021,7 @@ export const classIconIndex = {
         "name": "fa-ChartsDiagramsChartBar",
         "title": "Chart Bar",
         "className": "fa-solid fa-chart-bar",
-        "categories": [
+        "type":"fa","categories": [
             "charts+diagrams"
         ]
     },
@@ -2998,7 +3029,7 @@ export const classIconIndex = {
         "name": "fa-ChartsDiagramsChartColumn",
         "title": "Chart Column",
         "className": "fa-solid fa-chart-column",
-        "categories": [
+        "type":"fa","categories": [
             "charts+diagrams"
         ]
     },
@@ -3006,7 +3037,7 @@ export const classIconIndex = {
         "name": "fa-ChartsDiagramsChartGantt",
         "title": "Chart Gantt",
         "className": "fa-solid fa-chart-gantt",
-        "categories": [
+        "type":"fa","categories": [
             "charts+diagrams"
         ]
     },
@@ -3014,7 +3045,7 @@ export const classIconIndex = {
         "name": "fa-ChartsDiagramsChartLine",
         "title": "Chart Line",
         "className": "fa-solid fa-chart-line",
-        "categories": [
+        "type":"fa","categories": [
             "charts+diagrams"
         ]
     },
@@ -3022,7 +3053,7 @@ export const classIconIndex = {
         "name": "fa-ChartsDiagramsChartPie",
         "title": "Chart Pie",
         "className": "fa-solid fa-chart-pie",
-        "categories": [
+        "type":"fa","categories": [
             "charts+diagrams"
         ]
     },
@@ -3030,7 +3061,7 @@ export const classIconIndex = {
         "name": "fa-ChartsDiagramsChartSimple",
         "title": "Chart Simple",
         "className": "fa-solid fa-chart-simple",
-        "categories": [
+        "type":"fa","categories": [
             "charts+diagrams"
         ]
     },
@@ -3038,7 +3069,7 @@ export const classIconIndex = {
         "name": "fa-ChartsDiagramsCircleHalfStroke",
         "title": "Circle Half Stroke",
         "className": "fa-solid fa-circle-half-stroke",
-        "categories": [
+        "type":"fa","categories": [
             "charts+diagrams"
         ]
     },
@@ -3046,7 +3077,7 @@ export const classIconIndex = {
         "name": "fa-ChartsDiagramsDiagramNext",
         "title": "Diagram Next",
         "className": "fa-solid fa-diagram-next",
-        "categories": [
+        "type":"fa","categories": [
             "charts+diagrams"
         ]
     },
@@ -3054,7 +3085,7 @@ export const classIconIndex = {
         "name": "fa-ChartsDiagramsDiagramPredecessor",
         "title": "Diagram Predecessor",
         "className": "fa-solid fa-diagram-predecessor",
-        "categories": [
+        "type":"fa","categories": [
             "charts+diagrams"
         ]
     },
@@ -3062,7 +3093,7 @@ export const classIconIndex = {
         "name": "fa-ChartsDiagramsDiagramProject",
         "title": "Diagram Project",
         "className": "fa-solid fa-diagram-project",
-        "categories": [
+        "type":"fa","categories": [
             "charts+diagrams"
         ]
     },
@@ -3070,7 +3101,7 @@ export const classIconIndex = {
         "name": "fa-ChartsDiagramsDiagramSuccessor",
         "title": "Diagram Successor",
         "className": "fa-solid fa-diagram-successor",
-        "categories": [
+        "type":"fa","categories": [
             "charts+diagrams"
         ]
     },
@@ -3078,7 +3109,7 @@ export const classIconIndex = {
         "name": "fa-ChartsDiagramsSquarePollHorizontal",
         "title": "Square Poll Horizontal",
         "className": "fa-solid fa-square-poll-horizontal",
-        "categories": [
+        "type":"fa","categories": [
             "charts+diagrams"
         ]
     },
@@ -3086,7 +3117,7 @@ export const classIconIndex = {
         "name": "fa-ChartsDiagramsSquarePollVertical",
         "title": "Square Poll Vertical",
         "className": "fa-solid fa-square-poll-vertical",
-        "categories": [
+        "type":"fa","categories": [
             "charts+diagrams"
         ]
     },
@@ -3094,7 +3125,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodAppleWhole",
         "title": "Apple Whole",
         "className": "fa-solid fa-apple-whole",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3102,7 +3133,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodBaby",
         "title": "Baby",
         "className": "fa-solid fa-baby",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3110,7 +3141,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodBabyCarriage",
         "title": "Baby Carriage",
         "className": "fa-solid fa-baby-carriage",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3118,7 +3149,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodBaseballBatBall",
         "title": "Baseball Bat Ball",
         "className": "fa-solid fa-baseball-bat-ball",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3126,7 +3157,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodBath",
         "title": "Bath",
         "className": "fa-solid fa-bath",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3134,7 +3165,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodBucket",
         "title": "Bucket",
         "className": "fa-solid fa-bucket",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3142,7 +3173,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodCakeCandles",
         "title": "Cake Candles",
         "className": "fa-solid fa-cake-candles",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3150,7 +3181,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodChild",
         "title": "Child",
         "className": "fa-solid fa-child",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3158,7 +3189,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodChildDress",
         "title": "Child Dress",
         "className": "fa-solid fa-child-dress",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3166,7 +3197,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodChildReaching",
         "title": "Child Reaching",
         "className": "fa-solid fa-child-reaching",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3174,7 +3205,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodChildren",
         "title": "Children",
         "className": "fa-solid fa-children",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3182,7 +3213,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodCookie",
         "title": "Cookie",
         "className": "fa-solid fa-cookie",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3190,7 +3221,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodCookieBite",
         "title": "Cookie Bite",
         "className": "fa-solid fa-cookie-bite",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3198,7 +3229,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodCubesStacked",
         "title": "Cubes Stacked",
         "className": "fa-solid fa-cubes-stacked",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3206,7 +3237,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodGamepad",
         "title": "Gamepad",
         "className": "fa-solid fa-gamepad",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3214,7 +3245,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodHandsHoldingChild",
         "title": "Hands Holding Child",
         "className": "fa-solid fa-hands-holding-child",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3222,7 +3253,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodIceCream",
         "title": "Ice Cream",
         "className": "fa-solid fa-ice-cream",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3230,7 +3261,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodMitten",
         "title": "Mitten",
         "className": "fa-solid fa-mitten",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3238,7 +3269,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodPersonBiking",
         "title": "Person Biking",
         "className": "fa-solid fa-person-biking",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3246,7 +3277,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodPersonBreastfeeding",
         "title": "Person Breastfeeding",
         "className": "fa-solid fa-person-breastfeeding",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3254,7 +3285,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodPuzzlePiece",
         "title": "Puzzle Piece",
         "className": "fa-solid fa-puzzle-piece",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3262,7 +3293,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodRobot",
         "title": "Robot",
         "className": "fa-solid fa-robot",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3270,7 +3301,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodSchool",
         "title": "School",
         "className": "fa-solid fa-school",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3278,7 +3309,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodShapes",
         "title": "Shapes",
         "className": "fa-solid fa-shapes",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3286,7 +3317,7 @@ export const classIconIndex = {
         "name": "fa-ChildhoodSnowman",
         "title": "Snowman",
         "className": "fa-solid fa-snowman",
-        "categories": [
+        "type":"fa","categories": [
             "childhood"
         ]
     },
@@ -3294,7 +3325,7 @@ export const classIconIndex = {
         "name": "fa-ClothingFashionGlasses",
         "title": "Glasses",
         "className": "fa-solid fa-glasses",
-        "categories": [
+        "type":"fa","categories": [
             "clothing+fashion"
         ]
     },
@@ -3302,7 +3333,7 @@ export const classIconIndex = {
         "name": "fa-ClothingFashionGraduationCap",
         "title": "Graduation Cap",
         "className": "fa-solid fa-graduation-cap",
-        "categories": [
+        "type":"fa","categories": [
             "clothing+fashion"
         ]
     },
@@ -3310,7 +3341,7 @@ export const classIconIndex = {
         "name": "fa-ClothingFashionHatCowboy",
         "title": "Hat Cowboy",
         "className": "fa-solid fa-hat-cowboy",
-        "categories": [
+        "type":"fa","categories": [
             "clothing+fashion"
         ]
     },
@@ -3318,7 +3349,7 @@ export const classIconIndex = {
         "name": "fa-ClothingFashionHatCowboySide",
         "title": "Hat Cowboy Side",
         "className": "fa-solid fa-hat-cowboy-side",
-        "categories": [
+        "type":"fa","categories": [
             "clothing+fashion"
         ]
     },
@@ -3326,7 +3357,7 @@ export const classIconIndex = {
         "name": "fa-ClothingFashionHatWizard",
         "title": "Hat Wizard",
         "className": "fa-solid fa-hat-wizard",
-        "categories": [
+        "type":"fa","categories": [
             "clothing+fashion"
         ]
     },
@@ -3334,7 +3365,7 @@ export const classIconIndex = {
         "name": "fa-ClothingFashionMitten",
         "title": "Mitten",
         "className": "fa-solid fa-mitten",
-        "categories": [
+        "type":"fa","categories": [
             "clothing+fashion"
         ]
     },
@@ -3342,7 +3373,7 @@ export const classIconIndex = {
         "name": "fa-ClothingFashionShirt",
         "title": "Shirt",
         "className": "fa-solid fa-shirt",
-        "categories": [
+        "type":"fa","categories": [
             "clothing+fashion"
         ]
     },
@@ -3350,7 +3381,7 @@ export const classIconIndex = {
         "name": "fa-ClothingFashionShoePrints",
         "title": "Shoe Prints",
         "className": "fa-solid fa-shoe-prints",
-        "categories": [
+        "type":"fa","categories": [
             "clothing+fashion"
         ]
     },
@@ -3358,7 +3389,7 @@ export const classIconIndex = {
         "name": "fa-ClothingFashionSocks",
         "title": "Socks",
         "className": "fa-solid fa-socks",
-        "categories": [
+        "type":"fa","categories": [
             "clothing+fashion"
         ]
     },
@@ -3366,7 +3397,7 @@ export const classIconIndex = {
         "name": "fa-ClothingFashionUserTie",
         "title": "User Tie",
         "className": "fa-solid fa-user-tie",
-        "categories": [
+        "type":"fa","categories": [
             "clothing+fashion"
         ]
     },
@@ -3374,7 +3405,7 @@ export const classIconIndex = {
         "name": "fa-ClothingFashionVest",
         "title": "Vest",
         "className": "fa-solid fa-vest",
-        "categories": [
+        "type":"fa","categories": [
             "clothing+fashion"
         ]
     },
@@ -3382,7 +3413,7 @@ export const classIconIndex = {
         "name": "fa-ClothingFashionVestPatches",
         "title": "Vest Patches",
         "className": "fa-solid fa-vest-patches",
-        "categories": [
+        "type":"fa","categories": [
             "clothing+fashion"
         ]
     },
@@ -3390,7 +3421,7 @@ export const classIconIndex = {
         "name": "fa-CodingBarcode",
         "title": "Barcode",
         "className": "fa-solid fa-barcode",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3398,7 +3429,7 @@ export const classIconIndex = {
         "name": "fa-CodingBars",
         "title": "Bars",
         "className": "fa-solid fa-bars",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3406,7 +3437,7 @@ export const classIconIndex = {
         "name": "fa-CodingBarsStaggered",
         "title": "Bars Staggered",
         "className": "fa-solid fa-bars-staggered",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3414,7 +3445,7 @@ export const classIconIndex = {
         "name": "fa-CodingBath",
         "title": "Bath",
         "className": "fa-solid fa-bath",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3422,7 +3453,7 @@ export const classIconIndex = {
         "name": "fa-CodingBoxArchive",
         "title": "Box Archive",
         "className": "fa-solid fa-box-archive",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3430,7 +3461,7 @@ export const classIconIndex = {
         "name": "fa-CodingBug",
         "title": "Bug",
         "className": "fa-solid fa-bug",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3438,7 +3469,7 @@ export const classIconIndex = {
         "name": "fa-CodingBugSlash",
         "title": "Bug Slash",
         "className": "fa-solid fa-bug-slash",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3446,7 +3477,7 @@ export const classIconIndex = {
         "name": "fa-CodingCircleNodes",
         "title": "Circle Nodes",
         "className": "fa-solid fa-circle-nodes",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3454,7 +3485,7 @@ export const classIconIndex = {
         "name": "fa-CodingCode",
         "title": "Code",
         "className": "fa-solid fa-code",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3462,7 +3493,7 @@ export const classIconIndex = {
         "name": "fa-CodingCodeBranch",
         "title": "Code Branch",
         "className": "fa-solid fa-code-branch",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3470,7 +3501,7 @@ export const classIconIndex = {
         "name": "fa-CodingCodeCommit",
         "title": "Code Commit",
         "className": "fa-solid fa-code-commit",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3478,7 +3509,7 @@ export const classIconIndex = {
         "name": "fa-CodingCodeCompare",
         "title": "Code Compare",
         "className": "fa-solid fa-code-compare",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3486,7 +3517,7 @@ export const classIconIndex = {
         "name": "fa-CodingCodeFork",
         "title": "Code Fork",
         "className": "fa-solid fa-code-fork",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3494,7 +3525,7 @@ export const classIconIndex = {
         "name": "fa-CodingCodeMerge",
         "title": "Code Merge",
         "className": "fa-solid fa-code-merge",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3502,7 +3533,7 @@ export const classIconIndex = {
         "name": "fa-CodingCodePullRequest",
         "title": "Code Pull Request",
         "className": "fa-solid fa-code-pull-request",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3510,7 +3541,7 @@ export const classIconIndex = {
         "name": "fa-CodingCube",
         "title": "Cube",
         "className": "fa-solid fa-cube",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3518,7 +3549,7 @@ export const classIconIndex = {
         "name": "fa-CodingCubes",
         "title": "Cubes",
         "className": "fa-solid fa-cubes",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3526,7 +3557,7 @@ export const classIconIndex = {
         "name": "fa-CodingDiagramProject",
         "title": "Diagram Project",
         "className": "fa-solid fa-diagram-project",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3534,7 +3565,7 @@ export const classIconIndex = {
         "name": "fa-CodingFile",
         "title": "File",
         "className": "fa-solid fa-file",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3542,7 +3573,7 @@ export const classIconIndex = {
         "name": "fa-CodingFileCode",
         "title": "File Code",
         "className": "fa-solid fa-file-code",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3550,7 +3581,7 @@ export const classIconIndex = {
         "name": "fa-CodingFileLines",
         "title": "File Lines",
         "className": "fa-solid fa-file-lines",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3558,7 +3589,7 @@ export const classIconIndex = {
         "name": "fa-CodingFilter",
         "title": "Filter",
         "className": "fa-solid fa-filter",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3566,7 +3597,7 @@ export const classIconIndex = {
         "name": "fa-CodingFireExtinguisher",
         "title": "Fire Extinguisher",
         "className": "fa-solid fa-fire-extinguisher",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3574,7 +3605,7 @@ export const classIconIndex = {
         "name": "fa-CodingFolder",
         "title": "Folder",
         "className": "fa-solid fa-folder",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3582,7 +3613,7 @@ export const classIconIndex = {
         "name": "fa-CodingFolderOpen",
         "title": "Folder Open",
         "className": "fa-solid fa-folder-open",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3590,7 +3621,7 @@ export const classIconIndex = {
         "name": "fa-CodingFontAwesome",
         "title": "Font Awesome",
         "className": "fa-solid fa-font-awesome",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3598,7 +3629,7 @@ export const classIconIndex = {
         "name": "fa-CodingGear",
         "title": "Gear",
         "className": "fa-solid fa-gear",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3606,7 +3637,7 @@ export const classIconIndex = {
         "name": "fa-CodingGears",
         "title": "Gears",
         "className": "fa-solid fa-gears",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3614,7 +3645,7 @@ export const classIconIndex = {
         "name": "fa-CodingKeyboard",
         "title": "Keyboard",
         "className": "fa-solid fa-keyboard",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3622,7 +3653,7 @@ export const classIconIndex = {
         "name": "fa-CodingLaptopCode",
         "title": "Laptop Code",
         "className": "fa-solid fa-laptop-code",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3630,7 +3661,7 @@ export const classIconIndex = {
         "name": "fa-CodingMicrochip",
         "title": "Microchip",
         "className": "fa-solid fa-microchip",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3638,7 +3669,7 @@ export const classIconIndex = {
         "name": "fa-CodingMugSaucer",
         "title": "Mug Saucer",
         "className": "fa-solid fa-mug-saucer",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3646,7 +3677,7 @@ export const classIconIndex = {
         "name": "fa-CodingNetworkWired",
         "title": "Network Wired",
         "className": "fa-solid fa-network-wired",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3654,7 +3685,7 @@ export const classIconIndex = {
         "name": "fa-CodingNotdef",
         "title": "Notdef",
         "className": "fa-solid fa-notdef",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3662,7 +3693,7 @@ export const classIconIndex = {
         "name": "fa-CodingQrcode",
         "title": "Qrcode",
         "className": "fa-solid fa-qrcode",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3670,7 +3701,7 @@ export const classIconIndex = {
         "name": "fa-CodingRectangleXmark",
         "title": "Rectangle Xmark",
         "className": "fa-solid fa-rectangle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3678,7 +3709,7 @@ export const classIconIndex = {
         "name": "fa-CodingShield",
         "title": "Shield",
         "className": "fa-solid fa-shield",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3686,7 +3717,7 @@ export const classIconIndex = {
         "name": "fa-CodingShieldHalved",
         "title": "Shield Halved",
         "className": "fa-solid fa-shield-halved",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3694,7 +3725,7 @@ export const classIconIndex = {
         "name": "fa-CodingSitemap",
         "title": "Sitemap",
         "className": "fa-solid fa-sitemap",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3702,7 +3733,7 @@ export const classIconIndex = {
         "name": "fa-CodingTerminal",
         "title": "Terminal",
         "className": "fa-solid fa-terminal",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3710,7 +3741,7 @@ export const classIconIndex = {
         "name": "fa-CodingUserSecret",
         "title": "User Secret",
         "className": "fa-solid fa-user-secret",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3718,7 +3749,7 @@ export const classIconIndex = {
         "name": "fa-CodingWebAwesome",
         "title": "Web Awesome",
         "className": "fa-solid fa-web-awesome",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3726,7 +3757,7 @@ export const classIconIndex = {
         "name": "fa-CodingWindowMaximize",
         "title": "Window Maximize",
         "className": "fa-solid fa-window-maximize",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3734,7 +3765,7 @@ export const classIconIndex = {
         "name": "fa-CodingWindowMinimize",
         "title": "Window Minimize",
         "className": "fa-solid fa-window-minimize",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3742,7 +3773,7 @@ export const classIconIndex = {
         "name": "fa-CodingWindowRestore",
         "title": "Window Restore",
         "className": "fa-solid fa-window-restore",
-        "categories": [
+        "type":"fa","categories": [
             "coding"
         ]
     },
@@ -3750,7 +3781,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationAddressBook",
         "title": "Address Book",
         "className": "fa-solid fa-address-book",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3758,7 +3789,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationAddressCard",
         "title": "Address Card",
         "className": "fa-solid fa-address-card",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3766,7 +3797,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationAt",
         "title": "At",
         "className": "fa-solid fa-at",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3774,7 +3805,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationBlenderPhone",
         "title": "Blender Phone",
         "className": "fa-solid fa-blender-phone",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3782,7 +3813,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationBluetoothB",
         "title": "Bluetooth B",
         "className": "fa-solid fa-bluetooth-b",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3790,7 +3821,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationBullhorn",
         "title": "Bullhorn",
         "className": "fa-solid fa-bullhorn",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3798,7 +3829,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationComment",
         "title": "Comment",
         "className": "fa-solid fa-comment",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3806,7 +3837,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationCommentDots",
         "title": "Comment Dots",
         "className": "fa-solid fa-comment-dots",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3814,7 +3845,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationCommentMedical",
         "title": "Comment Medical",
         "className": "fa-solid fa-comment-medical",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3822,7 +3853,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationComments",
         "title": "Comments",
         "className": "fa-solid fa-comments",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3830,7 +3861,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationCommentSlash",
         "title": "Comment Slash",
         "className": "fa-solid fa-comment-slash",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3838,7 +3869,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationCommentSms",
         "title": "Comment Sms",
         "className": "fa-solid fa-comment-sms",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3846,7 +3877,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationEarListen",
         "title": "Ear Listen",
         "className": "fa-solid fa-ear-listen",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3854,7 +3885,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationEnvelope",
         "title": "Envelope",
         "className": "fa-solid fa-envelope",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3862,7 +3893,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationEnvelopeCircleCheck",
         "title": "Envelope Circle Check",
         "className": "fa-solid fa-envelope-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3870,7 +3901,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationEnvelopeOpen",
         "title": "Envelope Open",
         "className": "fa-solid fa-envelope-open",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3878,7 +3909,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationFaceFrown",
         "title": "Face Frown",
         "className": "fa-solid fa-face-frown",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3886,7 +3917,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationFaceMeh",
         "title": "Face Meh",
         "className": "fa-solid fa-face-meh",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3894,7 +3925,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationFaceSmile",
         "title": "Face Smile",
         "className": "fa-solid fa-face-smile",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3902,7 +3933,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationFax",
         "title": "Fax",
         "className": "fa-solid fa-fax",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3910,7 +3941,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationHandsAslInterpreting",
         "title": "Hands Asl Interpreting",
         "className": "fa-solid fa-hands-asl-interpreting",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3918,7 +3949,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationIcons",
         "title": "Icons",
         "className": "fa-solid fa-icons",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3926,7 +3957,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationInbox",
         "title": "Inbox",
         "className": "fa-solid fa-inbox",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3934,7 +3965,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationLanguage",
         "title": "Language",
         "className": "fa-solid fa-language",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3942,7 +3973,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationMessage",
         "title": "Message",
         "className": "fa-solid fa-message",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3950,7 +3981,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationMicrophone",
         "title": "Microphone",
         "className": "fa-solid fa-microphone",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3958,7 +3989,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationMicrophoneLines",
         "title": "Microphone Lines",
         "className": "fa-solid fa-microphone-lines",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3966,7 +3997,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationMicrophoneLinesSlash",
         "title": "Microphone Lines Slash",
         "className": "fa-solid fa-microphone-lines-slash",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3974,7 +4005,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationMicrophoneSlash",
         "title": "Microphone Slash",
         "className": "fa-solid fa-microphone-slash",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3982,7 +4013,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationMobile",
         "title": "Mobile",
         "className": "fa-solid fa-mobile",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3990,7 +4021,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationMobileButton",
         "title": "Mobile Button",
         "className": "fa-solid fa-mobile-button",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -3998,7 +4029,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationMobileRetro",
         "title": "Mobile Retro",
         "className": "fa-solid fa-mobile-retro",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -4006,7 +4037,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationMobileScreen",
         "title": "Mobile Screen",
         "className": "fa-solid fa-mobile-screen",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -4014,7 +4045,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationMobileScreenButton",
         "title": "Mobile Screen Button",
         "className": "fa-solid fa-mobile-screen-button",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -4022,7 +4053,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationPaperPlane",
         "title": "Paper Plane",
         "className": "fa-solid fa-paper-plane",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -4030,7 +4061,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationPhone",
         "title": "Phone",
         "className": "fa-solid fa-phone",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -4038,7 +4069,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationPhoneFlip",
         "title": "Phone Flip",
         "className": "fa-solid fa-phone-flip",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -4046,7 +4077,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationPhoneSlash",
         "title": "Phone Slash",
         "className": "fa-solid fa-phone-slash",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -4054,7 +4085,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationPhoneVolume",
         "title": "Phone Volume",
         "className": "fa-solid fa-phone-volume",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -4062,7 +4093,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationPoo",
         "title": "Poo",
         "className": "fa-solid fa-poo",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -4070,7 +4101,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationQuoteLeft",
         "title": "Quote Left",
         "className": "fa-solid fa-quote-left",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -4078,7 +4109,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationQuoteRight",
         "title": "Quote Right",
         "className": "fa-solid fa-quote-right",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -4086,7 +4117,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationSquareEnvelope",
         "title": "Square Envelope",
         "className": "fa-solid fa-square-envelope",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -4094,7 +4125,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationSquarePhone",
         "title": "Square Phone",
         "className": "fa-solid fa-square-phone",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -4102,7 +4133,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationSquarePhoneFlip",
         "title": "Square Phone Flip",
         "className": "fa-solid fa-square-phone-flip",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -4110,7 +4141,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationSquareRss",
         "title": "Square Rss",
         "className": "fa-solid fa-square-rss",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -4118,7 +4149,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationTowerCell",
         "title": "Tower Cell",
         "className": "fa-solid fa-tower-cell",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -4126,7 +4157,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationTty",
         "title": "Tty",
         "className": "fa-solid fa-tty",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -4134,7 +4165,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationVideo",
         "title": "Video",
         "className": "fa-solid fa-video",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -4142,7 +4173,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationVideoSlash",
         "title": "Video Slash",
         "className": "fa-solid fa-video-slash",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -4150,7 +4181,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationVoicemail",
         "title": "Voicemail",
         "className": "fa-solid fa-voicemail",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -4158,7 +4189,7 @@ export const classIconIndex = {
         "name": "fa-CommunicationWalkieTalkie",
         "title": "Walkie Talkie",
         "className": "fa-solid fa-walkie-talkie",
-        "categories": [
+        "type":"fa","categories": [
             "communication"
         ]
     },
@@ -4166,7 +4197,7 @@ export const classIconIndex = {
         "name": "fa-ConnectivityBluetooth",
         "title": "Bluetooth",
         "className": "fa-solid fa-bluetooth",
-        "categories": [
+        "type":"fa","categories": [
             "connectivity"
         ]
     },
@@ -4174,7 +4205,7 @@ export const classIconIndex = {
         "name": "fa-ConnectivityCircleNodes",
         "title": "Circle Nodes",
         "className": "fa-solid fa-circle-nodes",
-        "categories": [
+        "type":"fa","categories": [
             "connectivity"
         ]
     },
@@ -4182,7 +4213,7 @@ export const classIconIndex = {
         "name": "fa-ConnectivityCloud",
         "title": "Cloud",
         "className": "fa-solid fa-cloud",
-        "categories": [
+        "type":"fa","categories": [
             "connectivity"
         ]
     },
@@ -4190,7 +4221,7 @@ export const classIconIndex = {
         "name": "fa-ConnectivityCloudArrowDown",
         "title": "Cloud Arrow Down",
         "className": "fa-solid fa-cloud-arrow-down",
-        "categories": [
+        "type":"fa","categories": [
             "connectivity"
         ]
     },
@@ -4198,7 +4229,7 @@ export const classIconIndex = {
         "name": "fa-ConnectivityCloudArrowUp",
         "title": "Cloud Arrow Up",
         "className": "fa-solid fa-cloud-arrow-up",
-        "categories": [
+        "type":"fa","categories": [
             "connectivity"
         ]
     },
@@ -4206,7 +4237,7 @@ export const classIconIndex = {
         "name": "fa-ConnectivityEthernet",
         "title": "Ethernet",
         "className": "fa-solid fa-ethernet",
-        "categories": [
+        "type":"fa","categories": [
             "connectivity"
         ]
     },
@@ -4214,7 +4245,7 @@ export const classIconIndex = {
         "name": "fa-ConnectivityGlobe",
         "title": "Globe",
         "className": "fa-solid fa-globe",
-        "categories": [
+        "type":"fa","categories": [
             "connectivity"
         ]
     },
@@ -4222,7 +4253,7 @@ export const classIconIndex = {
         "name": "fa-ConnectivityHouseSignal",
         "title": "House Signal",
         "className": "fa-solid fa-house-signal",
-        "categories": [
+        "type":"fa","categories": [
             "connectivity"
         ]
     },
@@ -4230,7 +4261,7 @@ export const classIconIndex = {
         "name": "fa-ConnectivityRss",
         "title": "Rss",
         "className": "fa-solid fa-rss",
-        "categories": [
+        "type":"fa","categories": [
             "connectivity"
         ]
     },
@@ -4238,7 +4269,7 @@ export const classIconIndex = {
         "name": "fa-ConnectivitySatelliteDish",
         "title": "Satellite Dish",
         "className": "fa-solid fa-satellite-dish",
-        "categories": [
+        "type":"fa","categories": [
             "connectivity"
         ]
     },
@@ -4246,7 +4277,7 @@ export const classIconIndex = {
         "name": "fa-ConnectivitySignal",
         "title": "Signal",
         "className": "fa-solid fa-signal",
-        "categories": [
+        "type":"fa","categories": [
             "connectivity"
         ]
     },
@@ -4254,7 +4285,7 @@ export const classIconIndex = {
         "name": "fa-ConnectivityTowerBroadcast",
         "title": "Tower Broadcast",
         "className": "fa-solid fa-tower-broadcast",
-        "categories": [
+        "type":"fa","categories": [
             "connectivity"
         ]
     },
@@ -4262,7 +4293,7 @@ export const classIconIndex = {
         "name": "fa-ConnectivityTowerCell",
         "title": "Tower Cell",
         "className": "fa-solid fa-tower-cell",
-        "categories": [
+        "type":"fa","categories": [
             "connectivity"
         ]
     },
@@ -4270,7 +4301,7 @@ export const classIconIndex = {
         "name": "fa-ConnectivityWifi",
         "title": "Wifi",
         "className": "fa-solid fa-wifi",
-        "categories": [
+        "type":"fa","categories": [
             "connectivity"
         ]
     },
@@ -4278,7 +4309,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionArrowUpFromGroundWater",
         "title": "Arrow Up From Ground Water",
         "className": "fa-solid fa-arrow-up-from-ground-water",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4286,7 +4317,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionBoreHole",
         "title": "Bore Hole",
         "className": "fa-solid fa-bore-hole",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4294,7 +4325,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionBrush",
         "title": "Brush",
         "className": "fa-solid fa-brush",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4302,7 +4333,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionBucket",
         "title": "Bucket",
         "className": "fa-solid fa-bucket",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4310,7 +4341,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionCompassDrafting",
         "title": "Compass Drafting",
         "className": "fa-solid fa-compass-drafting",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4318,7 +4349,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionDumpster",
         "title": "Dumpster",
         "className": "fa-solid fa-dumpster",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4326,7 +4357,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionDumpsterFire",
         "title": "Dumpster Fire",
         "className": "fa-solid fa-dumpster-fire",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4334,7 +4365,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionHammer",
         "title": "Hammer",
         "className": "fa-solid fa-hammer",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4342,7 +4373,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionHelmetSafety",
         "title": "Helmet Safety",
         "className": "fa-solid fa-helmet-safety",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4350,7 +4381,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionMound",
         "title": "Mound",
         "className": "fa-solid fa-mound",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4358,7 +4389,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionPaintRoller",
         "title": "Paint Roller",
         "className": "fa-solid fa-paint-roller",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4366,7 +4397,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionPencil",
         "title": "Pencil",
         "className": "fa-solid fa-pencil",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4374,7 +4405,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionPenRuler",
         "title": "Pen Ruler",
         "className": "fa-solid fa-pen-ruler",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4382,7 +4413,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionPersonDigging",
         "title": "Person Digging",
         "className": "fa-solid fa-person-digging",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4390,7 +4421,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionRuler",
         "title": "Ruler",
         "className": "fa-solid fa-ruler",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4398,7 +4429,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionRulerCombined",
         "title": "Ruler Combined",
         "className": "fa-solid fa-ruler-combined",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4406,7 +4437,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionRulerHorizontal",
         "title": "Ruler Horizontal",
         "className": "fa-solid fa-ruler-horizontal",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4414,7 +4445,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionRulerVertical",
         "title": "Ruler Vertical",
         "className": "fa-solid fa-ruler-vertical",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4422,7 +4453,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionScrewdriver",
         "title": "Screwdriver",
         "className": "fa-solid fa-screwdriver",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4430,7 +4461,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionScrewdriverWrench",
         "title": "Screwdriver Wrench",
         "className": "fa-solid fa-screwdriver-wrench",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4438,7 +4469,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionSheetPlastic",
         "title": "Sheet Plastic",
         "className": "fa-solid fa-sheet-plastic",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4446,7 +4477,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionTarp",
         "title": "Tarp",
         "className": "fa-solid fa-tarp",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4454,7 +4485,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionTarpDroplet",
         "title": "Tarp Droplet",
         "className": "fa-solid fa-tarp-droplet",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4462,7 +4493,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionToiletPortable",
         "title": "Toilet Portable",
         "className": "fa-solid fa-toilet-portable",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4470,7 +4501,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionToiletsPortable",
         "title": "Toilets Portable",
         "className": "fa-solid fa-toilets-portable",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4478,7 +4509,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionToolbox",
         "title": "Toolbox",
         "className": "fa-solid fa-toolbox",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4486,7 +4517,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionTrowel",
         "title": "Trowel",
         "className": "fa-solid fa-trowel",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4494,7 +4525,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionTrowelBricks",
         "title": "Trowel Bricks",
         "className": "fa-solid fa-trowel-bricks",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4502,7 +4533,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionTruckPickup",
         "title": "Truck Pickup",
         "className": "fa-solid fa-truck-pickup",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4510,7 +4541,7 @@ export const classIconIndex = {
         "name": "fa-ConstructionWrench",
         "title": "Wrench",
         "className": "fa-solid fa-wrench",
-        "categories": [
+        "type":"fa","categories": [
             "construction"
         ]
     },
@@ -4518,7 +4549,7 @@ export const classIconIndex = {
         "name": "fa-DesignBezierCurve",
         "title": "Bezier Curve",
         "className": "fa-solid fa-bezier-curve",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4526,7 +4557,7 @@ export const classIconIndex = {
         "name": "fa-DesignBrush",
         "title": "Brush",
         "className": "fa-solid fa-brush",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4534,7 +4565,7 @@ export const classIconIndex = {
         "name": "fa-DesignCircleHalfStroke",
         "title": "Circle Half Stroke",
         "className": "fa-solid fa-circle-half-stroke",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4542,7 +4573,7 @@ export const classIconIndex = {
         "name": "fa-DesignCircleNodes",
         "title": "Circle Nodes",
         "className": "fa-solid fa-circle-nodes",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4550,7 +4581,7 @@ export const classIconIndex = {
         "name": "fa-DesignClone",
         "title": "Clone",
         "className": "fa-solid fa-clone",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4558,7 +4589,7 @@ export const classIconIndex = {
         "name": "fa-DesignCompassDrafting",
         "title": "Compass Drafting",
         "className": "fa-solid fa-compass-drafting",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4566,7 +4597,7 @@ export const classIconIndex = {
         "name": "fa-DesignCopy",
         "title": "Copy",
         "className": "fa-solid fa-copy",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4574,7 +4605,7 @@ export const classIconIndex = {
         "name": "fa-DesignCrop",
         "title": "Crop",
         "className": "fa-solid fa-crop",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4582,7 +4613,7 @@ export const classIconIndex = {
         "name": "fa-DesignCropSimple",
         "title": "Crop Simple",
         "className": "fa-solid fa-crop-simple",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4590,7 +4621,7 @@ export const classIconIndex = {
         "name": "fa-DesignCrosshairs",
         "title": "Crosshairs",
         "className": "fa-solid fa-crosshairs",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4598,7 +4629,7 @@ export const classIconIndex = {
         "name": "fa-DesignCube",
         "title": "Cube",
         "className": "fa-solid fa-cube",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4606,7 +4637,7 @@ export const classIconIndex = {
         "name": "fa-DesignCubes",
         "title": "Cubes",
         "className": "fa-solid fa-cubes",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4614,7 +4645,7 @@ export const classIconIndex = {
         "name": "fa-DesignDrawPolygon",
         "title": "Draw Polygon",
         "className": "fa-solid fa-draw-polygon",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4622,7 +4653,7 @@ export const classIconIndex = {
         "name": "fa-DesignDroplet",
         "title": "Droplet",
         "className": "fa-solid fa-droplet",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4630,7 +4661,7 @@ export const classIconIndex = {
         "name": "fa-DesignDropletSlash",
         "title": "Droplet Slash",
         "className": "fa-solid fa-droplet-slash",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4638,7 +4669,7 @@ export const classIconIndex = {
         "name": "fa-DesignEraser",
         "title": "Eraser",
         "className": "fa-solid fa-eraser",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4646,7 +4677,7 @@ export const classIconIndex = {
         "name": "fa-DesignEye",
         "title": "Eye",
         "className": "fa-solid fa-eye",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4654,7 +4685,7 @@ export const classIconIndex = {
         "name": "fa-DesignEyeDropper",
         "title": "Eye Dropper",
         "className": "fa-solid fa-eye-dropper",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4662,7 +4693,7 @@ export const classIconIndex = {
         "name": "fa-DesignEyeSlash",
         "title": "Eye Slash",
         "className": "fa-solid fa-eye-slash",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4670,7 +4701,7 @@ export const classIconIndex = {
         "name": "fa-DesignFill",
         "title": "Fill",
         "className": "fa-solid fa-fill",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4678,7 +4709,7 @@ export const classIconIndex = {
         "name": "fa-DesignFillDrip",
         "title": "Fill Drip",
         "className": "fa-solid fa-fill-drip",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4686,7 +4717,7 @@ export const classIconIndex = {
         "name": "fa-DesignFloppyDisk",
         "title": "Floppy Disk",
         "className": "fa-solid fa-floppy-disk",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4694,7 +4725,7 @@ export const classIconIndex = {
         "name": "fa-DesignFontAwesome",
         "title": "Font Awesome",
         "className": "fa-solid fa-font-awesome",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4702,7 +4733,7 @@ export const classIconIndex = {
         "name": "fa-DesignHighlighter",
         "title": "Highlighter",
         "className": "fa-solid fa-highlighter",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4710,7 +4741,7 @@ export const classIconIndex = {
         "name": "fa-DesignIcons",
         "title": "Icons",
         "className": "fa-solid fa-icons",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4718,7 +4749,7 @@ export const classIconIndex = {
         "name": "fa-DesignLayerGroup",
         "title": "Layer Group",
         "className": "fa-solid fa-layer-group",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4726,7 +4757,7 @@ export const classIconIndex = {
         "name": "fa-DesignLinesLeaning",
         "title": "Lines Leaning",
         "className": "fa-solid fa-lines-leaning",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4734,7 +4765,7 @@ export const classIconIndex = {
         "name": "fa-DesignMarker",
         "title": "Marker",
         "className": "fa-solid fa-marker",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4742,7 +4773,7 @@ export const classIconIndex = {
         "name": "fa-DesignObjectGroup",
         "title": "Object Group",
         "className": "fa-solid fa-object-group",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4750,7 +4781,7 @@ export const classIconIndex = {
         "name": "fa-DesignObjectUngroup",
         "title": "Object Ungroup",
         "className": "fa-solid fa-object-ungroup",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4758,7 +4789,7 @@ export const classIconIndex = {
         "name": "fa-DesignPaintbrush",
         "title": "Paintbrush",
         "className": "fa-solid fa-paintbrush",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4766,7 +4797,7 @@ export const classIconIndex = {
         "name": "fa-DesignPaintRoller",
         "title": "Paint Roller",
         "className": "fa-solid fa-paint-roller",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4774,7 +4805,7 @@ export const classIconIndex = {
         "name": "fa-DesignPalette",
         "title": "Palette",
         "className": "fa-solid fa-palette",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4782,7 +4813,7 @@ export const classIconIndex = {
         "name": "fa-DesignPaste",
         "title": "Paste",
         "className": "fa-solid fa-paste",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4790,7 +4821,7 @@ export const classIconIndex = {
         "name": "fa-DesignPen",
         "title": "Pen",
         "className": "fa-solid fa-pen",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4798,7 +4829,7 @@ export const classIconIndex = {
         "name": "fa-DesignPencil",
         "title": "Pencil",
         "className": "fa-solid fa-pencil",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4806,7 +4837,7 @@ export const classIconIndex = {
         "name": "fa-DesignPenClip",
         "title": "Pen Clip",
         "className": "fa-solid fa-pen-clip",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4814,7 +4845,7 @@ export const classIconIndex = {
         "name": "fa-DesignPenFancy",
         "title": "Pen Fancy",
         "className": "fa-solid fa-pen-fancy",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4822,7 +4853,7 @@ export const classIconIndex = {
         "name": "fa-DesignPenNib",
         "title": "Pen Nib",
         "className": "fa-solid fa-pen-nib",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4830,7 +4861,7 @@ export const classIconIndex = {
         "name": "fa-DesignPenRuler",
         "title": "Pen Ruler",
         "className": "fa-solid fa-pen-ruler",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4838,7 +4869,7 @@ export const classIconIndex = {
         "name": "fa-DesignPenToSquare",
         "title": "Pen To Square",
         "className": "fa-solid fa-pen-to-square",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4846,7 +4877,7 @@ export const classIconIndex = {
         "name": "fa-DesignRulerCombined",
         "title": "Ruler Combined",
         "className": "fa-solid fa-ruler-combined",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4854,7 +4885,7 @@ export const classIconIndex = {
         "name": "fa-DesignRulerHorizontal",
         "title": "Ruler Horizontal",
         "className": "fa-solid fa-ruler-horizontal",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4862,7 +4893,7 @@ export const classIconIndex = {
         "name": "fa-DesignRulerVertical",
         "title": "Ruler Vertical",
         "className": "fa-solid fa-ruler-vertical",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4870,7 +4901,7 @@ export const classIconIndex = {
         "name": "fa-DesignScissors",
         "title": "Scissors",
         "className": "fa-solid fa-scissors",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4878,7 +4909,7 @@ export const classIconIndex = {
         "name": "fa-DesignSplotch",
         "title": "Splotch",
         "className": "fa-solid fa-splotch",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4886,7 +4917,7 @@ export const classIconIndex = {
         "name": "fa-DesignSprayCan",
         "title": "Spray Can",
         "className": "fa-solid fa-spray-can",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4894,7 +4925,7 @@ export const classIconIndex = {
         "name": "fa-DesignStamp",
         "title": "Stamp",
         "className": "fa-solid fa-stamp",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4902,7 +4933,7 @@ export const classIconIndex = {
         "name": "fa-DesignStapler",
         "title": "Stapler",
         "className": "fa-solid fa-stapler",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4910,7 +4941,7 @@ export const classIconIndex = {
         "name": "fa-DesignSwatchbook",
         "title": "Swatchbook",
         "className": "fa-solid fa-swatchbook",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4918,7 +4949,7 @@ export const classIconIndex = {
         "name": "fa-DesignVectorSquare",
         "title": "Vector Square",
         "className": "fa-solid fa-vector-square",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4926,7 +4957,7 @@ export const classIconIndex = {
         "name": "fa-DesignWandMagic",
         "title": "Wand Magic",
         "className": "fa-solid fa-wand-magic",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4934,7 +4965,7 @@ export const classIconIndex = {
         "name": "fa-DesignWandMagicSparkles",
         "title": "Wand Magic Sparkles",
         "className": "fa-solid fa-wand-magic-sparkles",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4942,7 +4973,7 @@ export const classIconIndex = {
         "name": "fa-DesignWebAwesome",
         "title": "Web Awesome",
         "className": "fa-solid fa-web-awesome",
-        "categories": [
+        "type":"fa","categories": [
             "design"
         ]
     },
@@ -4950,7 +4981,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareBlenderPhone",
         "title": "Blender Phone",
         "className": "fa-solid fa-blender-phone",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -4958,7 +4989,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareCamera",
         "title": "Camera",
         "className": "fa-solid fa-camera",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -4966,7 +4997,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareCameraRetro",
         "title": "Camera Retro",
         "className": "fa-solid fa-camera-retro",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -4974,7 +5005,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareCarBattery",
         "title": "Car Battery",
         "className": "fa-solid fa-car-battery",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -4982,7 +5013,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareCompactDisc",
         "title": "Compact Disc",
         "className": "fa-solid fa-compact-disc",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -4990,7 +5021,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareComputer",
         "title": "Computer",
         "className": "fa-solid fa-computer",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -4998,7 +5029,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareComputerMouse",
         "title": "Computer Mouse",
         "className": "fa-solid fa-computer-mouse",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5006,7 +5037,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareDatabase",
         "title": "Database",
         "className": "fa-solid fa-database",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5014,7 +5045,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareDesktop",
         "title": "Desktop",
         "className": "fa-solid fa-desktop",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5022,7 +5053,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareDisplay",
         "title": "Display",
         "className": "fa-solid fa-display",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5030,7 +5061,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareDownload",
         "title": "Download",
         "className": "fa-solid fa-download",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5038,7 +5069,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareEthernet",
         "title": "Ethernet",
         "className": "fa-solid fa-ethernet",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5046,7 +5077,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareFax",
         "title": "Fax",
         "className": "fa-solid fa-fax",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5054,7 +5085,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareFloppyDisk",
         "title": "Floppy Disk",
         "className": "fa-solid fa-floppy-disk",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5062,7 +5093,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareGamepad",
         "title": "Gamepad",
         "className": "fa-solid fa-gamepad",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5070,7 +5101,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareHardDrive",
         "title": "Hard Drive",
         "className": "fa-solid fa-hard-drive",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5078,7 +5109,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareHeadphones",
         "title": "Headphones",
         "className": "fa-solid fa-headphones",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5086,7 +5117,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareHouseLaptop",
         "title": "House Laptop",
         "className": "fa-solid fa-house-laptop",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5094,7 +5125,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareKeyboard",
         "title": "Keyboard",
         "className": "fa-solid fa-keyboard",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5102,7 +5133,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareLaptop",
         "title": "Laptop",
         "className": "fa-solid fa-laptop",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5110,7 +5141,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareLaptopFile",
         "title": "Laptop File",
         "className": "fa-solid fa-laptop-file",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5118,7 +5149,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareMemory",
         "title": "Memory",
         "className": "fa-solid fa-memory",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5126,7 +5157,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareMicrochip",
         "title": "Microchip",
         "className": "fa-solid fa-microchip",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5134,7 +5165,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareMobile",
         "title": "Mobile",
         "className": "fa-solid fa-mobile",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5142,7 +5173,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareMobileButton",
         "title": "Mobile Button",
         "className": "fa-solid fa-mobile-button",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5150,7 +5181,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareMobileRetro",
         "title": "Mobile Retro",
         "className": "fa-solid fa-mobile-retro",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5158,7 +5189,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareMobileScreen",
         "title": "Mobile Screen",
         "className": "fa-solid fa-mobile-screen",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5166,7 +5197,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareMobileScreenButton",
         "title": "Mobile Screen Button",
         "className": "fa-solid fa-mobile-screen-button",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5174,7 +5205,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwarePlug",
         "title": "Plug",
         "className": "fa-solid fa-plug",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5182,7 +5213,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwarePowerOff",
         "title": "Power Off",
         "className": "fa-solid fa-power-off",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5190,7 +5221,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwarePrint",
         "title": "Print",
         "className": "fa-solid fa-print",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5198,7 +5229,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareSatellite",
         "title": "Satellite",
         "className": "fa-solid fa-satellite",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5206,7 +5237,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareSatelliteDish",
         "title": "Satellite Dish",
         "className": "fa-solid fa-satellite-dish",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5214,7 +5245,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareSdCard",
         "title": "Sd Card",
         "className": "fa-solid fa-sd-card",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5222,7 +5253,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareServer",
         "title": "Server",
         "className": "fa-solid fa-server",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5230,7 +5261,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareSimCard",
         "title": "Sim Card",
         "className": "fa-solid fa-sim-card",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5238,7 +5269,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareTablet",
         "title": "Tablet",
         "className": "fa-solid fa-tablet",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5246,7 +5277,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareTabletButton",
         "title": "Tablet Button",
         "className": "fa-solid fa-tablet-button",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5254,7 +5285,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareTabletScreenButton",
         "title": "Tablet Screen Button",
         "className": "fa-solid fa-tablet-screen-button",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5262,7 +5293,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareTachographDigital",
         "title": "Tachograph Digital",
         "className": "fa-solid fa-tachograph-digital",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5270,7 +5301,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareTv",
         "title": "Tv",
         "className": "fa-solid fa-tv",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5278,7 +5309,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareUpload",
         "title": "Upload",
         "className": "fa-solid fa-upload",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5286,7 +5317,7 @@ export const classIconIndex = {
         "name": "fa-DevicesHardwareWalkieTalkie",
         "title": "Walkie Talkie",
         "className": "fa-solid fa-walkie-talkie",
-        "categories": [
+        "type":"fa","categories": [
             "devices+hardware"
         ]
     },
@@ -5294,7 +5325,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisBiohazard",
         "title": "Biohazard",
         "className": "fa-solid fa-biohazard",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5302,7 +5333,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisBugs",
         "title": "Bugs",
         "className": "fa-solid fa-bugs",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5310,7 +5341,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisBurst",
         "title": "Burst",
         "className": "fa-solid fa-burst",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5318,7 +5349,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisChildCombatant",
         "title": "Child Combatant",
         "className": "fa-solid fa-child-combatant",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5326,7 +5357,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisCircleRadiation",
         "title": "Circle Radiation",
         "className": "fa-solid fa-circle-radiation",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5334,7 +5365,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisCloudBolt",
         "title": "Cloud Bolt",
         "className": "fa-solid fa-cloud-bolt",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5342,7 +5373,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisCloudShowersHeavy",
         "title": "Cloud Showers Heavy",
         "className": "fa-solid fa-cloud-showers-heavy",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5350,7 +5381,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisCloudShowersWater",
         "title": "Cloud Showers Water",
         "className": "fa-solid fa-cloud-showers-water",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5358,7 +5389,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisHelmetUn",
         "title": "Helmet Un",
         "className": "fa-solid fa-helmet-un",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5366,7 +5397,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisHillAvalanche",
         "title": "Hill Avalanche",
         "className": "fa-solid fa-hill-avalanche",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5374,7 +5405,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisHillRockslide",
         "title": "Hill Rockslide",
         "className": "fa-solid fa-hill-rockslide",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5382,7 +5413,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisHouseChimneyCrack",
         "title": "House Chimney Crack",
         "className": "fa-solid fa-house-chimney-crack",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5390,7 +5421,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisHouseCrack",
         "title": "House Crack",
         "className": "fa-solid fa-house-crack",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5398,7 +5429,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisHouseFire",
         "title": "House Fire",
         "className": "fa-solid fa-house-fire",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5406,7 +5437,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisHouseFloodWater",
         "title": "House Flood Water",
         "className": "fa-solid fa-house-flood-water",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5414,7 +5445,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisHouseFloodWaterCircleArrowRight",
         "title": "House Flood Water Circle Arrow Right",
         "className": "fa-solid fa-house-flood-water-circle-arrow-right",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5422,7 +5453,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisHouseTsunami",
         "title": "House Tsunami",
         "className": "fa-solid fa-house-tsunami",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5430,7 +5461,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisHurricane",
         "title": "Hurricane",
         "className": "fa-solid fa-hurricane",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5438,7 +5469,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisLocust",
         "title": "Locust",
         "className": "fa-solid fa-locust",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5446,7 +5477,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisMosquito",
         "title": "Mosquito",
         "className": "fa-solid fa-mosquito",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5454,7 +5485,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisPersonDrowning",
         "title": "Person Drowning",
         "className": "fa-solid fa-person-drowning",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5462,7 +5493,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisPersonRifle",
         "title": "Person Rifle",
         "className": "fa-solid fa-person-rifle",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5470,7 +5501,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisPersonWalkingArrowLoopLeft",
         "title": "Person Walking Arrow Loop Left",
         "className": "fa-solid fa-person-walking-arrow-loop-left",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5478,7 +5509,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisPersonWalkingArrowRight",
         "title": "Person Walking Arrow Right",
         "className": "fa-solid fa-person-walking-arrow-right",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5486,7 +5517,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisPersonWalkingDashedLineArrowRight",
         "title": "Person Walking Dashed Line Arrow Right",
         "className": "fa-solid fa-person-walking-dashed-line-arrow-right",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5494,7 +5525,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisPlantWilt",
         "title": "Plant Wilt",
         "className": "fa-solid fa-plant-wilt",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5502,7 +5533,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisRadiation",
         "title": "Radiation",
         "className": "fa-solid fa-radiation",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5510,7 +5541,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisSnowflake",
         "title": "Snowflake",
         "className": "fa-solid fa-snowflake",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5518,7 +5549,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisSunPlantWilt",
         "title": "Sun Plant Wilt",
         "className": "fa-solid fa-sun-plant-wilt",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5526,7 +5557,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisTemperatureArrowDown",
         "title": "Temperature Arrow Down",
         "className": "fa-solid fa-temperature-arrow-down",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5534,7 +5565,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisTemperatureArrowUp",
         "title": "Temperature Arrow Up",
         "className": "fa-solid fa-temperature-arrow-up",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5542,7 +5573,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisTornado",
         "title": "Tornado",
         "className": "fa-solid fa-tornado",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5550,7 +5581,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisVolcano",
         "title": "Volcano",
         "className": "fa-solid fa-volcano",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5558,7 +5589,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisWheatAwnCircleExclamation",
         "title": "Wheat Awn Circle Exclamation",
         "className": "fa-solid fa-wheat-awn-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5566,7 +5597,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisWind",
         "title": "Wind",
         "className": "fa-solid fa-wind",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5574,7 +5605,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisWorm",
         "title": "Worm",
         "className": "fa-solid fa-worm",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5582,7 +5613,7 @@ export const classIconIndex = {
         "name": "fa-DisasterCrisisXmarksLines",
         "title": "Xmarks Lines",
         "className": "fa-solid fa-xmarks-lines",
-        "categories": [
+        "type":"fa","categories": [
             "disaster+crisis"
         ]
     },
@@ -5590,7 +5621,7 @@ export const classIconIndex = {
         "name": "fa-EditingArrowsRotate",
         "title": "Arrows Rotate",
         "className": "fa-solid fa-arrows-rotate",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5598,7 +5629,7 @@ export const classIconIndex = {
         "name": "fa-EditingBandage",
         "title": "Bandage",
         "className": "fa-solid fa-bandage",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5606,7 +5637,7 @@ export const classIconIndex = {
         "name": "fa-EditingBars",
         "title": "Bars",
         "className": "fa-solid fa-bars",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5614,7 +5645,7 @@ export const classIconIndex = {
         "name": "fa-EditingBrush",
         "title": "Brush",
         "className": "fa-solid fa-brush",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5622,7 +5653,7 @@ export const classIconIndex = {
         "name": "fa-EditingChartSimple",
         "title": "Chart Simple",
         "className": "fa-solid fa-chart-simple",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5630,7 +5661,7 @@ export const classIconIndex = {
         "name": "fa-EditingCheck",
         "title": "Check",
         "className": "fa-solid fa-check",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5638,7 +5669,7 @@ export const classIconIndex = {
         "name": "fa-EditingCheckDouble",
         "title": "Check Double",
         "className": "fa-solid fa-check-double",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5646,7 +5677,7 @@ export const classIconIndex = {
         "name": "fa-EditingCircleCheck",
         "title": "Circle Check",
         "className": "fa-solid fa-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5654,7 +5685,7 @@ export const classIconIndex = {
         "name": "fa-EditingCircleHalfStroke",
         "title": "Circle Half Stroke",
         "className": "fa-solid fa-circle-half-stroke",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5662,7 +5693,7 @@ export const classIconIndex = {
         "name": "fa-EditingCrop",
         "title": "Crop",
         "className": "fa-solid fa-crop",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5670,7 +5701,7 @@ export const classIconIndex = {
         "name": "fa-EditingCropSimple",
         "title": "Crop Simple",
         "className": "fa-solid fa-crop-simple",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5678,7 +5709,7 @@ export const classIconIndex = {
         "name": "fa-EditingCube",
         "title": "Cube",
         "className": "fa-solid fa-cube",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5686,7 +5717,7 @@ export const classIconIndex = {
         "name": "fa-EditingDeleteLeft",
         "title": "Delete Left",
         "className": "fa-solid fa-delete-left",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5694,7 +5725,7 @@ export const classIconIndex = {
         "name": "fa-EditingEllipsis",
         "title": "Ellipsis",
         "className": "fa-solid fa-ellipsis",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5702,7 +5733,7 @@ export const classIconIndex = {
         "name": "fa-EditingEllipsisVertical",
         "title": "Ellipsis Vertical",
         "className": "fa-solid fa-ellipsis-vertical",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5710,7 +5741,7 @@ export const classIconIndex = {
         "name": "fa-EditingEyeDropper",
         "title": "Eye Dropper",
         "className": "fa-solid fa-eye-dropper",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5718,7 +5749,7 @@ export const classIconIndex = {
         "name": "fa-EditingEyeSlash",
         "title": "Eye Slash",
         "className": "fa-solid fa-eye-slash",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5726,7 +5757,7 @@ export const classIconIndex = {
         "name": "fa-EditingGear",
         "title": "Gear",
         "className": "fa-solid fa-gear",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5734,7 +5765,7 @@ export const classIconIndex = {
         "name": "fa-EditingGrip",
         "title": "Grip",
         "className": "fa-solid fa-grip",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5742,7 +5773,7 @@ export const classIconIndex = {
         "name": "fa-EditingGripLines",
         "title": "Grip Lines",
         "className": "fa-solid fa-grip-lines",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5750,7 +5781,7 @@ export const classIconIndex = {
         "name": "fa-EditingGripLinesVertical",
         "title": "Grip Lines Vertical",
         "className": "fa-solid fa-grip-lines-vertical",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5758,7 +5789,7 @@ export const classIconIndex = {
         "name": "fa-EditingGripVertical",
         "title": "Grip Vertical",
         "className": "fa-solid fa-grip-vertical",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5766,7 +5797,7 @@ export const classIconIndex = {
         "name": "fa-EditingLink",
         "title": "Link",
         "className": "fa-solid fa-link",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5774,7 +5805,7 @@ export const classIconIndex = {
         "name": "fa-EditingLinkSlash",
         "title": "Link Slash",
         "className": "fa-solid fa-link-slash",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5782,7 +5813,7 @@ export const classIconIndex = {
         "name": "fa-EditingMinus",
         "title": "Minus",
         "className": "fa-solid fa-minus",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5790,7 +5821,7 @@ export const classIconIndex = {
         "name": "fa-EditingPaintbrush",
         "title": "Paintbrush",
         "className": "fa-solid fa-paintbrush",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5798,7 +5829,7 @@ export const classIconIndex = {
         "name": "fa-EditingPen",
         "title": "Pen",
         "className": "fa-solid fa-pen",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5806,7 +5837,7 @@ export const classIconIndex = {
         "name": "fa-EditingPencil",
         "title": "Pencil",
         "className": "fa-solid fa-pencil",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5814,7 +5845,7 @@ export const classIconIndex = {
         "name": "fa-EditingPenClip",
         "title": "Pen Clip",
         "className": "fa-solid fa-pen-clip",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5822,7 +5853,7 @@ export const classIconIndex = {
         "name": "fa-EditingPenFancy",
         "title": "Pen Fancy",
         "className": "fa-solid fa-pen-fancy",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5830,7 +5861,7 @@ export const classIconIndex = {
         "name": "fa-EditingPenNib",
         "title": "Pen Nib",
         "className": "fa-solid fa-pen-nib",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5838,7 +5869,7 @@ export const classIconIndex = {
         "name": "fa-EditingPenRuler",
         "title": "Pen Ruler",
         "className": "fa-solid fa-pen-ruler",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5846,7 +5877,7 @@ export const classIconIndex = {
         "name": "fa-EditingPenToSquare",
         "title": "Pen To Square",
         "className": "fa-solid fa-pen-to-square",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5854,7 +5885,7 @@ export const classIconIndex = {
         "name": "fa-EditingPlus",
         "title": "Plus",
         "className": "fa-solid fa-plus",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5862,7 +5893,7 @@ export const classIconIndex = {
         "name": "fa-EditingRotate",
         "title": "Rotate",
         "className": "fa-solid fa-rotate",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5870,7 +5901,7 @@ export const classIconIndex = {
         "name": "fa-EditingScissors",
         "title": "Scissors",
         "className": "fa-solid fa-scissors",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5878,7 +5909,7 @@ export const classIconIndex = {
         "name": "fa-EditingSignature",
         "title": "Signature",
         "className": "fa-solid fa-signature",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5886,7 +5917,7 @@ export const classIconIndex = {
         "name": "fa-EditingSliders",
         "title": "Sliders",
         "className": "fa-solid fa-sliders",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5894,7 +5925,7 @@ export const classIconIndex = {
         "name": "fa-EditingSquareCheck",
         "title": "Square Check",
         "className": "fa-solid fa-square-check",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5902,7 +5933,7 @@ export const classIconIndex = {
         "name": "fa-EditingSquarePen",
         "title": "Square Pen",
         "className": "fa-solid fa-square-pen",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5910,7 +5941,7 @@ export const classIconIndex = {
         "name": "fa-EditingTrash",
         "title": "Trash",
         "className": "fa-solid fa-trash",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5918,7 +5949,7 @@ export const classIconIndex = {
         "name": "fa-EditingTrashArrowUp",
         "title": "Trash Arrow Up",
         "className": "fa-solid fa-trash-arrow-up",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5926,7 +5957,7 @@ export const classIconIndex = {
         "name": "fa-EditingTrashCan",
         "title": "Trash Can",
         "className": "fa-solid fa-trash-can",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5934,7 +5965,7 @@ export const classIconIndex = {
         "name": "fa-EditingTrashCanArrowUp",
         "title": "Trash Can Arrow Up",
         "className": "fa-solid fa-trash-can-arrow-up",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5942,7 +5973,7 @@ export const classIconIndex = {
         "name": "fa-EditingWandMagic",
         "title": "Wand Magic",
         "className": "fa-solid fa-wand-magic",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5950,7 +5981,7 @@ export const classIconIndex = {
         "name": "fa-EditingWandMagicSparkles",
         "title": "Wand Magic Sparkles",
         "className": "fa-solid fa-wand-magic-sparkles",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5958,7 +5989,7 @@ export const classIconIndex = {
         "name": "fa-EditingXmark",
         "title": "Xmark",
         "className": "fa-solid fa-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "editing"
         ]
     },
@@ -5966,7 +5997,7 @@ export const classIconIndex = {
         "name": "fa-EducationAppleWhole",
         "title": "Apple Whole",
         "className": "fa-solid fa-apple-whole",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -5974,7 +6005,7 @@ export const classIconIndex = {
         "name": "fa-EducationAtom",
         "title": "Atom",
         "className": "fa-solid fa-atom",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -5982,7 +6013,7 @@ export const classIconIndex = {
         "name": "fa-EducationAward",
         "title": "Award",
         "className": "fa-solid fa-award",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -5990,7 +6021,7 @@ export const classIconIndex = {
         "name": "fa-EducationBell",
         "title": "Bell",
         "className": "fa-solid fa-bell",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -5998,7 +6029,7 @@ export const classIconIndex = {
         "name": "fa-EducationBellSlash",
         "title": "Bell Slash",
         "className": "fa-solid fa-bell-slash",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -6006,7 +6037,7 @@ export const classIconIndex = {
         "name": "fa-EducationBookOpen",
         "title": "Book Open",
         "className": "fa-solid fa-book-open",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -6014,7 +6045,7 @@ export const classIconIndex = {
         "name": "fa-EducationBookOpenReader",
         "title": "Book Open Reader",
         "className": "fa-solid fa-book-open-reader",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -6022,7 +6053,7 @@ export const classIconIndex = {
         "name": "fa-EducationChalkboard",
         "title": "Chalkboard",
         "className": "fa-solid fa-chalkboard",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -6030,7 +6061,7 @@ export const classIconIndex = {
         "name": "fa-EducationChalkboardUser",
         "title": "Chalkboard User",
         "className": "fa-solid fa-chalkboard-user",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -6038,7 +6069,7 @@ export const classIconIndex = {
         "name": "fa-EducationGraduationCap",
         "title": "Graduation Cap",
         "className": "fa-solid fa-graduation-cap",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -6046,7 +6077,7 @@ export const classIconIndex = {
         "name": "fa-EducationLaptopCode",
         "title": "Laptop Code",
         "className": "fa-solid fa-laptop-code",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -6054,7 +6085,7 @@ export const classIconIndex = {
         "name": "fa-EducationLaptopFile",
         "title": "Laptop File",
         "className": "fa-solid fa-laptop-file",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -6062,7 +6093,7 @@ export const classIconIndex = {
         "name": "fa-EducationMasksTheater",
         "title": "Masks Theater",
         "className": "fa-solid fa-masks-theater",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -6070,7 +6101,7 @@ export const classIconIndex = {
         "name": "fa-EducationMicroscope",
         "title": "Microscope",
         "className": "fa-solid fa-microscope",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -6078,7 +6109,7 @@ export const classIconIndex = {
         "name": "fa-EducationMusic",
         "title": "Music",
         "className": "fa-solid fa-music",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -6086,7 +6117,7 @@ export const classIconIndex = {
         "name": "fa-EducationPersonChalkboard",
         "title": "Person Chalkboard",
         "className": "fa-solid fa-person-chalkboard",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -6094,7 +6125,7 @@ export const classIconIndex = {
         "name": "fa-EducationSchool",
         "title": "School",
         "className": "fa-solid fa-school",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -6102,7 +6133,7 @@ export const classIconIndex = {
         "name": "fa-EducationSchoolCircleCheck",
         "title": "School Circle Check",
         "className": "fa-solid fa-school-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -6110,7 +6141,7 @@ export const classIconIndex = {
         "name": "fa-EducationSchoolCircleExclamation",
         "title": "School Circle Exclamation",
         "className": "fa-solid fa-school-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -6118,7 +6149,7 @@ export const classIconIndex = {
         "name": "fa-EducationSchoolCircleXmark",
         "title": "School Circle Xmark",
         "className": "fa-solid fa-school-circle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -6126,7 +6157,7 @@ export const classIconIndex = {
         "name": "fa-EducationSchoolFlag",
         "title": "School Flag",
         "className": "fa-solid fa-school-flag",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -6134,7 +6165,7 @@ export const classIconIndex = {
         "name": "fa-EducationSchoolLock",
         "title": "School Lock",
         "className": "fa-solid fa-school-lock",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -6142,7 +6173,7 @@ export const classIconIndex = {
         "name": "fa-EducationShapes",
         "title": "Shapes",
         "className": "fa-solid fa-shapes",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -6150,7 +6181,7 @@ export const classIconIndex = {
         "name": "fa-EducationUserGraduate",
         "title": "User Graduate",
         "className": "fa-solid fa-user-graduate",
-        "categories": [
+        "type":"fa","categories": [
             "education"
         ]
     },
@@ -6158,7 +6189,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceAngry",
         "title": "Face Angry",
         "className": "fa-solid fa-face-angry",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6166,7 +6197,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceDizzy",
         "title": "Face Dizzy",
         "className": "fa-solid fa-face-dizzy",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6174,7 +6205,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceFlushed",
         "title": "Face Flushed",
         "className": "fa-solid fa-face-flushed",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6182,7 +6213,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceFrown",
         "title": "Face Frown",
         "className": "fa-solid fa-face-frown",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6190,7 +6221,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceFrownOpen",
         "title": "Face Frown Open",
         "className": "fa-solid fa-face-frown-open",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6198,7 +6229,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceGrimace",
         "title": "Face Grimace",
         "className": "fa-solid fa-face-grimace",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6206,7 +6237,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceGrin",
         "title": "Face Grin",
         "className": "fa-solid fa-face-grin",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6214,7 +6245,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceGrinBeam",
         "title": "Face Grin Beam",
         "className": "fa-solid fa-face-grin-beam",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6222,7 +6253,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceGrinBeamSweat",
         "title": "Face Grin Beam Sweat",
         "className": "fa-solid fa-face-grin-beam-sweat",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6230,7 +6261,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceGrinHearts",
         "title": "Face Grin Hearts",
         "className": "fa-solid fa-face-grin-hearts",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6238,7 +6269,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceGrinSquint",
         "title": "Face Grin Squint",
         "className": "fa-solid fa-face-grin-squint",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6246,7 +6277,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceGrinSquintTears",
         "title": "Face Grin Squint Tears",
         "className": "fa-solid fa-face-grin-squint-tears",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6254,7 +6285,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceGrinStars",
         "title": "Face Grin Stars",
         "className": "fa-solid fa-face-grin-stars",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6262,7 +6293,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceGrinTears",
         "title": "Face Grin Tears",
         "className": "fa-solid fa-face-grin-tears",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6270,7 +6301,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceGrinTongue",
         "title": "Face Grin Tongue",
         "className": "fa-solid fa-face-grin-tongue",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6278,7 +6309,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceGrinTongueSquint",
         "title": "Face Grin Tongue Squint",
         "className": "fa-solid fa-face-grin-tongue-squint",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6286,7 +6317,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceGrinTongueWink",
         "title": "Face Grin Tongue Wink",
         "className": "fa-solid fa-face-grin-tongue-wink",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6294,7 +6325,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceGrinWide",
         "title": "Face Grin Wide",
         "className": "fa-solid fa-face-grin-wide",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6302,7 +6333,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceGrinWink",
         "title": "Face Grin Wink",
         "className": "fa-solid fa-face-grin-wink",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6310,7 +6341,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceKiss",
         "title": "Face Kiss",
         "className": "fa-solid fa-face-kiss",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6318,7 +6349,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceKissBeam",
         "title": "Face Kiss Beam",
         "className": "fa-solid fa-face-kiss-beam",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6326,7 +6357,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceKissWinkHeart",
         "title": "Face Kiss Wink Heart",
         "className": "fa-solid fa-face-kiss-wink-heart",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6334,7 +6365,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceLaugh",
         "title": "Face Laugh",
         "className": "fa-solid fa-face-laugh",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6342,7 +6373,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceLaughBeam",
         "title": "Face Laugh Beam",
         "className": "fa-solid fa-face-laugh-beam",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6350,7 +6381,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceLaughSquint",
         "title": "Face Laugh Squint",
         "className": "fa-solid fa-face-laugh-squint",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6358,7 +6389,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceLaughWink",
         "title": "Face Laugh Wink",
         "className": "fa-solid fa-face-laugh-wink",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6366,7 +6397,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceMeh",
         "title": "Face Meh",
         "className": "fa-solid fa-face-meh",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6374,7 +6405,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceMehBlank",
         "title": "Face Meh Blank",
         "className": "fa-solid fa-face-meh-blank",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6382,7 +6413,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceRollingEyes",
         "title": "Face Rolling Eyes",
         "className": "fa-solid fa-face-rolling-eyes",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6390,7 +6421,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceSadCry",
         "title": "Face Sad Cry",
         "className": "fa-solid fa-face-sad-cry",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6398,7 +6429,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceSadTear",
         "title": "Face Sad Tear",
         "className": "fa-solid fa-face-sad-tear",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6406,7 +6437,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceSmile",
         "title": "Face Smile",
         "className": "fa-solid fa-face-smile",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6414,7 +6445,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceSmileBeam",
         "title": "Face Smile Beam",
         "className": "fa-solid fa-face-smile-beam",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6422,7 +6453,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceSmileWink",
         "title": "Face Smile Wink",
         "className": "fa-solid fa-face-smile-wink",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6430,7 +6461,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceSurprise",
         "title": "Face Surprise",
         "className": "fa-solid fa-face-surprise",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6438,7 +6469,7 @@ export const classIconIndex = {
         "name": "fa-EmojiFaceTired",
         "title": "Face Tired",
         "className": "fa-solid fa-face-tired",
-        "categories": [
+        "type":"fa","categories": [
             "emoji"
         ]
     },
@@ -6446,7 +6477,7 @@ export const classIconIndex = {
         "name": "fa-EnergyArrowUpFromGroundWater",
         "title": "Arrow Up From Ground Water",
         "className": "fa-solid fa-arrow-up-from-ground-water",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6454,7 +6485,7 @@ export const classIconIndex = {
         "name": "fa-EnergyAtom",
         "title": "Atom",
         "className": "fa-solid fa-atom",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6462,7 +6493,7 @@ export const classIconIndex = {
         "name": "fa-EnergyBatteryEmpty",
         "title": "Battery Empty",
         "className": "fa-solid fa-battery-empty",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6470,7 +6501,7 @@ export const classIconIndex = {
         "name": "fa-EnergyBatteryFull",
         "title": "Battery Full",
         "className": "fa-solid fa-battery-full",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6478,7 +6509,7 @@ export const classIconIndex = {
         "name": "fa-EnergyBatteryHalf",
         "title": "Battery Half",
         "className": "fa-solid fa-battery-half",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6486,7 +6517,7 @@ export const classIconIndex = {
         "name": "fa-EnergyBatteryQuarter",
         "title": "Battery Quarter",
         "className": "fa-solid fa-battery-quarter",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6494,7 +6525,7 @@ export const classIconIndex = {
         "name": "fa-EnergyBatteryThreeQuarters",
         "title": "Battery Three Quarters",
         "className": "fa-solid fa-battery-three-quarters",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6502,7 +6533,7 @@ export const classIconIndex = {
         "name": "fa-EnergyBolt",
         "title": "Bolt",
         "className": "fa-solid fa-bolt",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6510,7 +6541,7 @@ export const classIconIndex = {
         "name": "fa-EnergyCarBattery",
         "title": "Car Battery",
         "className": "fa-solid fa-car-battery",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6518,7 +6549,7 @@ export const classIconIndex = {
         "name": "fa-EnergyChargingStation",
         "title": "Charging Station",
         "className": "fa-solid fa-charging-station",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6526,7 +6557,7 @@ export const classIconIndex = {
         "name": "fa-EnergyCircleRadiation",
         "title": "Circle Radiation",
         "className": "fa-solid fa-circle-radiation",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6534,7 +6565,7 @@ export const classIconIndex = {
         "name": "fa-EnergyExplosion",
         "title": "Explosion",
         "className": "fa-solid fa-explosion",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6542,7 +6573,7 @@ export const classIconIndex = {
         "name": "fa-EnergyFan",
         "title": "Fan",
         "className": "fa-solid fa-fan",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6550,7 +6581,7 @@ export const classIconIndex = {
         "name": "fa-EnergyFire",
         "title": "Fire",
         "className": "fa-solid fa-fire",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6558,7 +6589,7 @@ export const classIconIndex = {
         "name": "fa-EnergyFireFlameCurved",
         "title": "Fire Flame Curved",
         "className": "fa-solid fa-fire-flame-curved",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6566,7 +6597,7 @@ export const classIconIndex = {
         "name": "fa-EnergyFireFlameSimple",
         "title": "Fire Flame Simple",
         "className": "fa-solid fa-fire-flame-simple",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6574,7 +6605,7 @@ export const classIconIndex = {
         "name": "fa-EnergyGasPump",
         "title": "Gas Pump",
         "className": "fa-solid fa-gas-pump",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6582,7 +6613,7 @@ export const classIconIndex = {
         "name": "fa-EnergyIndustry",
         "title": "Industry",
         "className": "fa-solid fa-industry",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6590,7 +6621,7 @@ export const classIconIndex = {
         "name": "fa-EnergyLeaf",
         "title": "Leaf",
         "className": "fa-solid fa-leaf",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6598,7 +6629,7 @@ export const classIconIndex = {
         "name": "fa-EnergyLightbulb",
         "title": "Lightbulb",
         "className": "fa-solid fa-lightbulb",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6606,7 +6637,7 @@ export const classIconIndex = {
         "name": "fa-EnergyOilWell",
         "title": "Oil Well",
         "className": "fa-solid fa-oil-well",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6614,7 +6645,7 @@ export const classIconIndex = {
         "name": "fa-EnergyPlug",
         "title": "Plug",
         "className": "fa-solid fa-plug",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6622,7 +6653,7 @@ export const classIconIndex = {
         "name": "fa-EnergyPlugCircleBolt",
         "title": "Plug Circle Bolt",
         "className": "fa-solid fa-plug-circle-bolt",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6630,7 +6661,7 @@ export const classIconIndex = {
         "name": "fa-EnergyPlugCircleCheck",
         "title": "Plug Circle Check",
         "className": "fa-solid fa-plug-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6638,7 +6669,7 @@ export const classIconIndex = {
         "name": "fa-EnergyPlugCircleExclamation",
         "title": "Plug Circle Exclamation",
         "className": "fa-solid fa-plug-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6646,7 +6677,7 @@ export const classIconIndex = {
         "name": "fa-EnergyPlugCircleMinus",
         "title": "Plug Circle Minus",
         "className": "fa-solid fa-plug-circle-minus",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6654,7 +6685,7 @@ export const classIconIndex = {
         "name": "fa-EnergyPlugCirclePlus",
         "title": "Plug Circle Plus",
         "className": "fa-solid fa-plug-circle-plus",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6662,7 +6693,7 @@ export const classIconIndex = {
         "name": "fa-EnergyPlugCircleXmark",
         "title": "Plug Circle Xmark",
         "className": "fa-solid fa-plug-circle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6670,7 +6701,7 @@ export const classIconIndex = {
         "name": "fa-EnergyPoop",
         "title": "Poop",
         "className": "fa-solid fa-poop",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6678,7 +6709,7 @@ export const classIconIndex = {
         "name": "fa-EnergyPowerOff",
         "title": "Power Off",
         "className": "fa-solid fa-power-off",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6686,7 +6717,7 @@ export const classIconIndex = {
         "name": "fa-EnergyRadiation",
         "title": "Radiation",
         "className": "fa-solid fa-radiation",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6694,7 +6725,7 @@ export const classIconIndex = {
         "name": "fa-EnergySeedling",
         "title": "Seedling",
         "className": "fa-solid fa-seedling",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6702,7 +6733,7 @@ export const classIconIndex = {
         "name": "fa-EnergySolarPanel",
         "title": "Solar Panel",
         "className": "fa-solid fa-solar-panel",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6710,7 +6741,7 @@ export const classIconIndex = {
         "name": "fa-EnergySun",
         "title": "Sun",
         "className": "fa-solid fa-sun",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6718,7 +6749,7 @@ export const classIconIndex = {
         "name": "fa-EnergyTowerBroadcast",
         "title": "Tower Broadcast",
         "className": "fa-solid fa-tower-broadcast",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6726,7 +6757,7 @@ export const classIconIndex = {
         "name": "fa-EnergyWater",
         "title": "Water",
         "className": "fa-solid fa-water",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6734,7 +6765,7 @@ export const classIconIndex = {
         "name": "fa-EnergyWind",
         "title": "Wind",
         "className": "fa-solid fa-wind",
-        "categories": [
+        "type":"fa","categories": [
             "energy"
         ]
     },
@@ -6742,7 +6773,7 @@ export const classIconIndex = {
         "name": "fa-FilesBoxArchive",
         "title": "Box Archive",
         "className": "fa-solid fa-box-archive",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6750,7 +6781,7 @@ export const classIconIndex = {
         "name": "fa-FilesClone",
         "title": "Clone",
         "className": "fa-solid fa-clone",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6758,7 +6789,7 @@ export const classIconIndex = {
         "name": "fa-FilesCopy",
         "title": "Copy",
         "className": "fa-solid fa-copy",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6766,7 +6797,7 @@ export const classIconIndex = {
         "name": "fa-FilesFile",
         "title": "File",
         "className": "fa-solid fa-file",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6774,7 +6805,7 @@ export const classIconIndex = {
         "name": "fa-FilesFileArrowDown",
         "title": "File Arrow Down",
         "className": "fa-solid fa-file-arrow-down",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6782,7 +6813,7 @@ export const classIconIndex = {
         "name": "fa-FilesFileArrowUp",
         "title": "File Arrow Up",
         "className": "fa-solid fa-file-arrow-up",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6790,7 +6821,7 @@ export const classIconIndex = {
         "name": "fa-FilesFileAudio",
         "title": "File Audio",
         "className": "fa-solid fa-file-audio",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6798,7 +6829,7 @@ export const classIconIndex = {
         "name": "fa-FilesFileCircleCheck",
         "title": "File Circle Check",
         "className": "fa-solid fa-file-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6806,7 +6837,7 @@ export const classIconIndex = {
         "name": "fa-FilesFileCircleExclamation",
         "title": "File Circle Exclamation",
         "className": "fa-solid fa-file-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6814,7 +6845,7 @@ export const classIconIndex = {
         "name": "fa-FilesFileCircleMinus",
         "title": "File Circle Minus",
         "className": "fa-solid fa-file-circle-minus",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6822,7 +6853,7 @@ export const classIconIndex = {
         "name": "fa-FilesFileCirclePlus",
         "title": "File Circle Plus",
         "className": "fa-solid fa-file-circle-plus",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6830,7 +6861,7 @@ export const classIconIndex = {
         "name": "fa-FilesFileCircleQuestion",
         "title": "File Circle Question",
         "className": "fa-solid fa-file-circle-question",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6838,7 +6869,7 @@ export const classIconIndex = {
         "name": "fa-FilesFileCircleXmark",
         "title": "File Circle Xmark",
         "className": "fa-solid fa-file-circle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6846,7 +6877,7 @@ export const classIconIndex = {
         "name": "fa-FilesFileCode",
         "title": "File Code",
         "className": "fa-solid fa-file-code",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6854,7 +6885,7 @@ export const classIconIndex = {
         "name": "fa-FilesFileCsv",
         "title": "File Csv",
         "className": "fa-solid fa-file-csv",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6862,7 +6893,7 @@ export const classIconIndex = {
         "name": "fa-FilesFileExcel",
         "title": "File Excel",
         "className": "fa-solid fa-file-excel",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6870,7 +6901,7 @@ export const classIconIndex = {
         "name": "fa-FilesFileExport",
         "title": "File Export",
         "className": "fa-solid fa-file-export",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6878,7 +6909,7 @@ export const classIconIndex = {
         "name": "fa-FilesFileImage",
         "title": "File Image",
         "className": "fa-solid fa-file-image",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6886,7 +6917,7 @@ export const classIconIndex = {
         "name": "fa-FilesFileImport",
         "title": "File Import",
         "className": "fa-solid fa-file-import",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6894,7 +6925,7 @@ export const classIconIndex = {
         "name": "fa-FilesFileLines",
         "title": "File Lines",
         "className": "fa-solid fa-file-lines",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6902,7 +6933,7 @@ export const classIconIndex = {
         "name": "fa-FilesFilePdf",
         "title": "File Pdf",
         "className": "fa-solid fa-file-pdf",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6910,7 +6941,7 @@ export const classIconIndex = {
         "name": "fa-FilesFilePen",
         "title": "File Pen",
         "className": "fa-solid fa-file-pen",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6918,7 +6949,7 @@ export const classIconIndex = {
         "name": "fa-FilesFilePowerpoint",
         "title": "File Powerpoint",
         "className": "fa-solid fa-file-powerpoint",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6926,7 +6957,7 @@ export const classIconIndex = {
         "name": "fa-FilesFileShield",
         "title": "File Shield",
         "className": "fa-solid fa-file-shield",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6934,7 +6965,7 @@ export const classIconIndex = {
         "name": "fa-FilesFileVideo",
         "title": "File Video",
         "className": "fa-solid fa-file-video",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6942,7 +6973,7 @@ export const classIconIndex = {
         "name": "fa-FilesFileWord",
         "title": "File Word",
         "className": "fa-solid fa-file-word",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6950,7 +6981,7 @@ export const classIconIndex = {
         "name": "fa-FilesFileZipper",
         "title": "File Zipper",
         "className": "fa-solid fa-file-zipper",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6958,7 +6989,7 @@ export const classIconIndex = {
         "name": "fa-FilesFloppyDisk",
         "title": "Floppy Disk",
         "className": "fa-solid fa-floppy-disk",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6966,7 +6997,7 @@ export const classIconIndex = {
         "name": "fa-FilesFolder",
         "title": "Folder",
         "className": "fa-solid fa-folder",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6974,7 +7005,7 @@ export const classIconIndex = {
         "name": "fa-FilesFolderClosed",
         "title": "Folder Closed",
         "className": "fa-solid fa-folder-closed",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6982,7 +7013,7 @@ export const classIconIndex = {
         "name": "fa-FilesFolderOpen",
         "title": "Folder Open",
         "className": "fa-solid fa-folder-open",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6990,7 +7021,7 @@ export const classIconIndex = {
         "name": "fa-FilesNoteSticky",
         "title": "Note Sticky",
         "className": "fa-solid fa-note-sticky",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -6998,7 +7029,7 @@ export const classIconIndex = {
         "name": "fa-FilesPaste",
         "title": "Paste",
         "className": "fa-solid fa-paste",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -7006,7 +7037,7 @@ export const classIconIndex = {
         "name": "fa-FilesPhotoFilm",
         "title": "Photo Film",
         "className": "fa-solid fa-photo-film",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -7014,7 +7045,7 @@ export const classIconIndex = {
         "name": "fa-FilesScissors",
         "title": "Scissors",
         "className": "fa-solid fa-scissors",
-        "categories": [
+        "type":"fa","categories": [
             "files"
         ]
     },
@@ -7022,7 +7053,7 @@ export const classIconIndex = {
         "name": "fa-FilmVideoAudioDescription",
         "title": "Audio Description",
         "className": "fa-solid fa-audio-description",
-        "categories": [
+        "type":"fa","categories": [
             "film+video"
         ]
     },
@@ -7030,7 +7061,7 @@ export const classIconIndex = {
         "name": "fa-FilmVideoCircle",
         "title": "Circle",
         "className": "fa-solid fa-circle",
-        "categories": [
+        "type":"fa","categories": [
             "film+video"
         ]
     },
@@ -7038,7 +7069,7 @@ export const classIconIndex = {
         "name": "fa-FilmVideoClapperboard",
         "title": "Clapperboard",
         "className": "fa-solid fa-clapperboard",
-        "categories": [
+        "type":"fa","categories": [
             "film+video"
         ]
     },
@@ -7046,7 +7077,7 @@ export const classIconIndex = {
         "name": "fa-FilmVideoClosedCaptioning",
         "title": "Closed Captioning",
         "className": "fa-solid fa-closed-captioning",
-        "categories": [
+        "type":"fa","categories": [
             "film+video"
         ]
     },
@@ -7054,7 +7085,7 @@ export const classIconIndex = {
         "name": "fa-FilmVideoCompactDisc",
         "title": "Compact Disc",
         "className": "fa-solid fa-compact-disc",
-        "categories": [
+        "type":"fa","categories": [
             "film+video"
         ]
     },
@@ -7062,7 +7093,7 @@ export const classIconIndex = {
         "name": "fa-FilmVideoFileAudio",
         "title": "File Audio",
         "className": "fa-solid fa-file-audio",
-        "categories": [
+        "type":"fa","categories": [
             "film+video"
         ]
     },
@@ -7070,7 +7101,7 @@ export const classIconIndex = {
         "name": "fa-FilmVideoFileVideo",
         "title": "File Video",
         "className": "fa-solid fa-file-video",
-        "categories": [
+        "type":"fa","categories": [
             "film+video"
         ]
     },
@@ -7078,7 +7109,7 @@ export const classIconIndex = {
         "name": "fa-FilmVideoFilm",
         "title": "Film",
         "className": "fa-solid fa-film",
-        "categories": [
+        "type":"fa","categories": [
             "film+video"
         ]
     },
@@ -7086,7 +7117,7 @@ export const classIconIndex = {
         "name": "fa-FilmVideoHeadphones",
         "title": "Headphones",
         "className": "fa-solid fa-headphones",
-        "categories": [
+        "type":"fa","categories": [
             "film+video"
         ]
     },
@@ -7094,7 +7125,7 @@ export const classIconIndex = {
         "name": "fa-FilmVideoMicrophone",
         "title": "Microphone",
         "className": "fa-solid fa-microphone",
-        "categories": [
+        "type":"fa","categories": [
             "film+video"
         ]
     },
@@ -7102,7 +7133,7 @@ export const classIconIndex = {
         "name": "fa-FilmVideoMicrophoneLines",
         "title": "Microphone Lines",
         "className": "fa-solid fa-microphone-lines",
-        "categories": [
+        "type":"fa","categories": [
             "film+video"
         ]
     },
@@ -7110,7 +7141,7 @@ export const classIconIndex = {
         "name": "fa-FilmVideoMicrophoneLinesSlash",
         "title": "Microphone Lines Slash",
         "className": "fa-solid fa-microphone-lines-slash",
-        "categories": [
+        "type":"fa","categories": [
             "film+video"
         ]
     },
@@ -7118,7 +7149,7 @@ export const classIconIndex = {
         "name": "fa-FilmVideoMicrophoneSlash",
         "title": "Microphone Slash",
         "className": "fa-solid fa-microphone-slash",
-        "categories": [
+        "type":"fa","categories": [
             "film+video"
         ]
     },
@@ -7126,7 +7157,7 @@ export const classIconIndex = {
         "name": "fa-FilmVideoPhotoFilm",
         "title": "Photo Film",
         "className": "fa-solid fa-photo-film",
-        "categories": [
+        "type":"fa","categories": [
             "film+video"
         ]
     },
@@ -7134,7 +7165,7 @@ export const classIconIndex = {
         "name": "fa-FilmVideoPodcast",
         "title": "Podcast",
         "className": "fa-solid fa-podcast",
-        "categories": [
+        "type":"fa","categories": [
             "film+video"
         ]
     },
@@ -7142,7 +7173,7 @@ export const classIconIndex = {
         "name": "fa-FilmVideoSquareRss",
         "title": "Square Rss",
         "className": "fa-solid fa-square-rss",
-        "categories": [
+        "type":"fa","categories": [
             "film+video"
         ]
     },
@@ -7150,7 +7181,7 @@ export const classIconIndex = {
         "name": "fa-FilmVideoTicket",
         "title": "Ticket",
         "className": "fa-solid fa-ticket",
-        "categories": [
+        "type":"fa","categories": [
             "film+video"
         ]
     },
@@ -7158,7 +7189,7 @@ export const classIconIndex = {
         "name": "fa-FilmVideoTowerBroadcast",
         "title": "Tower Broadcast",
         "className": "fa-solid fa-tower-broadcast",
-        "categories": [
+        "type":"fa","categories": [
             "film+video"
         ]
     },
@@ -7166,7 +7197,7 @@ export const classIconIndex = {
         "name": "fa-FilmVideoTowerCell",
         "title": "Tower Cell",
         "className": "fa-solid fa-tower-cell",
-        "categories": [
+        "type":"fa","categories": [
             "film+video"
         ]
     },
@@ -7174,7 +7205,7 @@ export const classIconIndex = {
         "name": "fa-FilmVideoTv",
         "title": "Tv",
         "className": "fa-solid fa-tv",
-        "categories": [
+        "type":"fa","categories": [
             "film+video"
         ]
     },
@@ -7182,7 +7213,7 @@ export const classIconIndex = {
         "name": "fa-FilmVideoVideo",
         "title": "Video",
         "className": "fa-solid fa-video",
-        "categories": [
+        "type":"fa","categories": [
             "film+video"
         ]
     },
@@ -7190,7 +7221,7 @@ export const classIconIndex = {
         "name": "fa-FilmVideoVideoSlash",
         "title": "Video Slash",
         "className": "fa-solid fa-video-slash",
-        "categories": [
+        "type":"fa","categories": [
             "film+video"
         ]
     },
@@ -7198,7 +7229,7 @@ export const classIconIndex = {
         "name": "fa-FilmVideoYoutube",
         "title": "Youtube",
         "className": "fa-solid fa-youtube",
-        "categories": [
+        "type":"fa","categories": [
             "film+video"
         ]
     },
@@ -7206,7 +7237,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageAppleWhole",
         "title": "Apple Whole",
         "className": "fa-solid fa-apple-whole",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7214,7 +7245,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageBacon",
         "title": "Bacon",
         "className": "fa-solid fa-bacon",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7222,7 +7253,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageBeerMugEmpty",
         "title": "Beer Mug Empty",
         "className": "fa-solid fa-beer-mug-empty",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7230,7 +7261,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageBlender",
         "title": "Blender",
         "className": "fa-solid fa-blender",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7238,7 +7269,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageBone",
         "title": "Bone",
         "className": "fa-solid fa-bone",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7246,7 +7277,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageBottleDroplet",
         "title": "Bottle Droplet",
         "className": "fa-solid fa-bottle-droplet",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7254,7 +7285,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageBottleWater",
         "title": "Bottle Water",
         "className": "fa-solid fa-bottle-water",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7262,7 +7293,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageBowlFood",
         "title": "Bowl Food",
         "className": "fa-solid fa-bowl-food",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7270,7 +7301,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageBowlRice",
         "title": "Bowl Rice",
         "className": "fa-solid fa-bowl-rice",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7278,7 +7309,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageBreadSlice",
         "title": "Bread Slice",
         "className": "fa-solid fa-bread-slice",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7286,7 +7317,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageBurger",
         "title": "Burger",
         "className": "fa-solid fa-burger",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7294,7 +7325,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageCakeCandles",
         "title": "Cake Candles",
         "className": "fa-solid fa-cake-candles",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7302,7 +7333,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageCandyCane",
         "title": "Candy Cane",
         "className": "fa-solid fa-candy-cane",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7310,7 +7341,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageCarrot",
         "title": "Carrot",
         "className": "fa-solid fa-carrot",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7318,7 +7349,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageChampagneGlasses",
         "title": "Champagne Glasses",
         "className": "fa-solid fa-champagne-glasses",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7326,7 +7357,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageCheese",
         "title": "Cheese",
         "className": "fa-solid fa-cheese",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7334,7 +7365,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageCloudMeatball",
         "title": "Cloud Meatball",
         "className": "fa-solid fa-cloud-meatball",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7342,7 +7373,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageCookie",
         "title": "Cookie",
         "className": "fa-solid fa-cookie",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7350,7 +7381,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageCubesStacked",
         "title": "Cubes Stacked",
         "className": "fa-solid fa-cubes-stacked",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7358,7 +7389,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageDrumstickBite",
         "title": "Drumstick Bite",
         "className": "fa-solid fa-drumstick-bite",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7366,7 +7397,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageEgg",
         "title": "Egg",
         "className": "fa-solid fa-egg",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7374,7 +7405,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageFish",
         "title": "Fish",
         "className": "fa-solid fa-fish",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7382,7 +7413,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageFishFins",
         "title": "Fish Fins",
         "className": "fa-solid fa-fish-fins",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7390,7 +7421,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageFlask",
         "title": "Flask",
         "className": "fa-solid fa-flask",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7398,7 +7429,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageGlassWater",
         "title": "Glass Water",
         "className": "fa-solid fa-glass-water",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7406,7 +7437,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageGlassWaterDroplet",
         "title": "Glass Water Droplet",
         "className": "fa-solid fa-glass-water-droplet",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7414,7 +7445,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageHotdog",
         "title": "Hotdog",
         "className": "fa-solid fa-hotdog",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7422,7 +7453,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageIceCream",
         "title": "Ice Cream",
         "className": "fa-solid fa-ice-cream",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7430,7 +7461,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageJar",
         "title": "Jar",
         "className": "fa-solid fa-jar",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7438,7 +7469,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageJarWheat",
         "title": "Jar Wheat",
         "className": "fa-solid fa-jar-wheat",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7446,7 +7477,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageLemon",
         "title": "Lemon",
         "className": "fa-solid fa-lemon",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7454,7 +7485,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageMartiniGlass",
         "title": "Martini Glass",
         "className": "fa-solid fa-martini-glass",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7462,7 +7493,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageMartiniGlassCitrus",
         "title": "Martini Glass Citrus",
         "className": "fa-solid fa-martini-glass-citrus",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7470,7 +7501,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageMartiniGlassEmpty",
         "title": "Martini Glass Empty",
         "className": "fa-solid fa-martini-glass-empty",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7478,7 +7509,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageMugHot",
         "title": "Mug Hot",
         "className": "fa-solid fa-mug-hot",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7486,7 +7517,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageMugSaucer",
         "title": "Mug Saucer",
         "className": "fa-solid fa-mug-saucer",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7494,7 +7525,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeveragePepperHot",
         "title": "Pepper Hot",
         "className": "fa-solid fa-pepper-hot",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7502,7 +7533,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeveragePizzaSlice",
         "title": "Pizza Slice",
         "className": "fa-solid fa-pizza-slice",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7510,7 +7541,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeveragePlateWheat",
         "title": "Plate Wheat",
         "className": "fa-solid fa-plate-wheat",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7518,7 +7549,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageSeedling",
         "title": "Seedling",
         "className": "fa-solid fa-seedling",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7526,7 +7557,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageShrimp",
         "title": "Shrimp",
         "className": "fa-solid fa-shrimp",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7534,7 +7565,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageStroopwafel",
         "title": "Stroopwafel",
         "className": "fa-solid fa-stroopwafel",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7542,7 +7573,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageWheatAwn",
         "title": "Wheat Awn",
         "className": "fa-solid fa-wheat-awn",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7550,7 +7581,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageWheatAwnCircleExclamation",
         "title": "Wheat Awn Circle Exclamation",
         "className": "fa-solid fa-wheat-awn-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7558,7 +7589,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageWhiskeyGlass",
         "title": "Whiskey Glass",
         "className": "fa-solid fa-whiskey-glass",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7566,7 +7597,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageWineBottle",
         "title": "Wine Bottle",
         "className": "fa-solid fa-wine-bottle",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7574,7 +7605,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageWineGlass",
         "title": "Wine Glass",
         "className": "fa-solid fa-wine-glass",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7582,7 +7613,7 @@ export const classIconIndex = {
         "name": "fa-FoodBeverageWineGlassEmpty",
         "title": "Wine Glass Empty",
         "className": "fa-solid fa-wine-glass-empty",
-        "categories": [
+        "type":"fa","categories": [
             "food+beverage"
         ]
     },
@@ -7590,7 +7621,7 @@ export const classIconIndex = {
         "name": "fa-FruitsVegetablesAppleWhole",
         "title": "Apple Whole",
         "className": "fa-solid fa-apple-whole",
-        "categories": [
+        "type":"fa","categories": [
             "fruits+vegetables"
         ]
     },
@@ -7598,7 +7629,7 @@ export const classIconIndex = {
         "name": "fa-FruitsVegetablesCarrot",
         "title": "Carrot",
         "className": "fa-solid fa-carrot",
-        "categories": [
+        "type":"fa","categories": [
             "fruits+vegetables"
         ]
     },
@@ -7606,7 +7637,7 @@ export const classIconIndex = {
         "name": "fa-FruitsVegetablesLeaf",
         "title": "Leaf",
         "className": "fa-solid fa-leaf",
-        "categories": [
+        "type":"fa","categories": [
             "fruits+vegetables"
         ]
     },
@@ -7614,7 +7645,7 @@ export const classIconIndex = {
         "name": "fa-FruitsVegetablesLemon",
         "title": "Lemon",
         "className": "fa-solid fa-lemon",
-        "categories": [
+        "type":"fa","categories": [
             "fruits+vegetables"
         ]
     },
@@ -7622,7 +7653,7 @@ export const classIconIndex = {
         "name": "fa-FruitsVegetablesPepperHot",
         "title": "Pepper Hot",
         "className": "fa-solid fa-pepper-hot",
-        "categories": [
+        "type":"fa","categories": [
             "fruits+vegetables"
         ]
     },
@@ -7630,7 +7661,7 @@ export const classIconIndex = {
         "name": "fa-FruitsVegetablesSeedling",
         "title": "Seedling",
         "className": "fa-solid fa-seedling",
-        "categories": [
+        "type":"fa","categories": [
             "fruits+vegetables"
         ]
     },
@@ -7638,7 +7669,7 @@ export const classIconIndex = {
         "name": "fa-GamingBookSkull",
         "title": "Book Skull",
         "className": "fa-solid fa-book-skull",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7646,7 +7677,7 @@ export const classIconIndex = {
         "name": "fa-GamingChess",
         "title": "Chess",
         "className": "fa-solid fa-chess",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7654,7 +7685,7 @@ export const classIconIndex = {
         "name": "fa-GamingChessBishop",
         "title": "Chess Bishop",
         "className": "fa-solid fa-chess-bishop",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7662,7 +7693,7 @@ export const classIconIndex = {
         "name": "fa-GamingChessBoard",
         "title": "Chess Board",
         "className": "fa-solid fa-chess-board",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7670,7 +7701,7 @@ export const classIconIndex = {
         "name": "fa-GamingChessKing",
         "title": "Chess King",
         "className": "fa-solid fa-chess-king",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7678,7 +7709,7 @@ export const classIconIndex = {
         "name": "fa-GamingChessKnight",
         "title": "Chess Knight",
         "className": "fa-solid fa-chess-knight",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7686,7 +7717,7 @@ export const classIconIndex = {
         "name": "fa-GamingChessPawn",
         "title": "Chess Pawn",
         "className": "fa-solid fa-chess-pawn",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7694,7 +7725,7 @@ export const classIconIndex = {
         "name": "fa-GamingChessQueen",
         "title": "Chess Queen",
         "className": "fa-solid fa-chess-queen",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7702,7 +7733,7 @@ export const classIconIndex = {
         "name": "fa-GamingChessRook",
         "title": "Chess Rook",
         "className": "fa-solid fa-chess-rook",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7710,7 +7741,7 @@ export const classIconIndex = {
         "name": "fa-GamingCriticalRole",
         "title": "Critical Role",
         "className": "fa-solid fa-critical-role",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7718,7 +7749,7 @@ export const classIconIndex = {
         "name": "fa-GamingDAndD",
         "title": "DAnd D",
         "className": "fa-solid fa-d-and-d",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7726,7 +7757,7 @@ export const classIconIndex = {
         "name": "fa-GamingDAndDBeyond",
         "title": "DAnd DBeyond",
         "className": "fa-solid fa-d-and-d-beyond",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7734,7 +7765,7 @@ export const classIconIndex = {
         "name": "fa-GamingDiamond",
         "title": "Diamond",
         "className": "fa-solid fa-diamond",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7742,7 +7773,7 @@ export const classIconIndex = {
         "name": "fa-GamingDice",
         "title": "Dice",
         "className": "fa-solid fa-dice",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7750,7 +7781,7 @@ export const classIconIndex = {
         "name": "fa-GamingDiceD20",
         "title": "Dice D20",
         "className": "fa-solid fa-dice-d20",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7758,7 +7789,7 @@ export const classIconIndex = {
         "name": "fa-GamingDiceD6",
         "title": "Dice D6",
         "className": "fa-solid fa-dice-d6",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7766,7 +7797,7 @@ export const classIconIndex = {
         "name": "fa-GamingDiceFive",
         "title": "Dice Five",
         "className": "fa-solid fa-dice-five",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7774,7 +7805,7 @@ export const classIconIndex = {
         "name": "fa-GamingDiceFour",
         "title": "Dice Four",
         "className": "fa-solid fa-dice-four",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7782,7 +7813,7 @@ export const classIconIndex = {
         "name": "fa-GamingDiceOne",
         "title": "Dice One",
         "className": "fa-solid fa-dice-one",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7790,7 +7821,7 @@ export const classIconIndex = {
         "name": "fa-GamingDiceSix",
         "title": "Dice Six",
         "className": "fa-solid fa-dice-six",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7798,7 +7829,7 @@ export const classIconIndex = {
         "name": "fa-GamingDiceThree",
         "title": "Dice Three",
         "className": "fa-solid fa-dice-three",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7806,7 +7837,7 @@ export const classIconIndex = {
         "name": "fa-GamingDiceTwo",
         "title": "Dice Two",
         "className": "fa-solid fa-dice-two",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7814,7 +7845,7 @@ export const classIconIndex = {
         "name": "fa-GamingDragon",
         "title": "Dragon",
         "className": "fa-solid fa-dragon",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7822,7 +7853,7 @@ export const classIconIndex = {
         "name": "fa-GamingDungeon",
         "title": "Dungeon",
         "className": "fa-solid fa-dungeon",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7830,7 +7861,7 @@ export const classIconIndex = {
         "name": "fa-GamingFantasyFlightGames",
         "title": "Fantasy Flight Games",
         "className": "fa-solid fa-fantasy-flight-games",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7838,7 +7869,7 @@ export const classIconIndex = {
         "name": "fa-GamingGamepad",
         "title": "Gamepad",
         "className": "fa-solid fa-gamepad",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7846,7 +7877,7 @@ export const classIconIndex = {
         "name": "fa-GamingGhost",
         "title": "Ghost",
         "className": "fa-solid fa-ghost",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7854,7 +7885,7 @@ export const classIconIndex = {
         "name": "fa-GamingHandFist",
         "title": "Hand Fist",
         "className": "fa-solid fa-hand-fist",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7862,7 +7893,7 @@ export const classIconIndex = {
         "name": "fa-GamingHatWizard",
         "title": "Hat Wizard",
         "className": "fa-solid fa-hat-wizard",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7870,7 +7901,7 @@ export const classIconIndex = {
         "name": "fa-GamingHeadset",
         "title": "Headset",
         "className": "fa-solid fa-headset",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7878,7 +7909,7 @@ export const classIconIndex = {
         "name": "fa-GamingHeart",
         "title": "Heart",
         "className": "fa-solid fa-heart",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7886,7 +7917,7 @@ export const classIconIndex = {
         "name": "fa-GamingPlaystation",
         "title": "Playstation",
         "className": "fa-solid fa-playstation",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7894,7 +7925,7 @@ export const classIconIndex = {
         "name": "fa-GamingPuzzlePiece",
         "title": "Puzzle Piece",
         "className": "fa-solid fa-puzzle-piece",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7902,7 +7933,7 @@ export const classIconIndex = {
         "name": "fa-GamingRing",
         "title": "Ring",
         "className": "fa-solid fa-ring",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7910,7 +7941,7 @@ export const classIconIndex = {
         "name": "fa-GamingScroll",
         "title": "Scroll",
         "className": "fa-solid fa-scroll",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7918,7 +7949,7 @@ export const classIconIndex = {
         "name": "fa-GamingShieldHalved",
         "title": "Shield Halved",
         "className": "fa-solid fa-shield-halved",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7926,7 +7957,7 @@ export const classIconIndex = {
         "name": "fa-GamingSkullCrossbones",
         "title": "Skull Crossbones",
         "className": "fa-solid fa-skull-crossbones",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7934,7 +7965,7 @@ export const classIconIndex = {
         "name": "fa-GamingSquareFull",
         "title": "Square Full",
         "className": "fa-solid fa-square-full",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7942,7 +7973,7 @@ export const classIconIndex = {
         "name": "fa-GamingSquareSteam",
         "title": "Square Steam",
         "className": "fa-solid fa-square-steam",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7950,7 +7981,7 @@ export const classIconIndex = {
         "name": "fa-GamingSteam",
         "title": "Steam",
         "className": "fa-solid fa-steam",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7958,7 +7989,7 @@ export const classIconIndex = {
         "name": "fa-GamingSteamSymbol",
         "title": "Steam Symbol",
         "className": "fa-solid fa-steam-symbol",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7966,7 +7997,7 @@ export const classIconIndex = {
         "name": "fa-GamingTwitch",
         "title": "Twitch",
         "className": "fa-solid fa-twitch",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7974,7 +8005,7 @@ export const classIconIndex = {
         "name": "fa-GamingVrCardboard",
         "title": "Vr Cardboard",
         "className": "fa-solid fa-vr-cardboard",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7982,7 +8013,7 @@ export const classIconIndex = {
         "name": "fa-GamingWandSparkles",
         "title": "Wand Sparkles",
         "className": "fa-solid fa-wand-sparkles",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7990,7 +8021,7 @@ export const classIconIndex = {
         "name": "fa-GamingWizardsOfTheCoast",
         "title": "Wizards Of The Coast",
         "className": "fa-solid fa-wizards-of-the-coast",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -7998,7 +8029,7 @@ export const classIconIndex = {
         "name": "fa-GamingXbox",
         "title": "Xbox",
         "className": "fa-solid fa-xbox",
-        "categories": [
+        "type":"fa","categories": [
             "gaming"
         ]
     },
@@ -8006,7 +8037,7 @@ export const classIconIndex = {
         "name": "fa-GendersGenderless",
         "title": "Genderless",
         "className": "fa-solid fa-genderless",
-        "categories": [
+        "type":"fa","categories": [
             "genders"
         ]
     },
@@ -8014,7 +8045,7 @@ export const classIconIndex = {
         "name": "fa-GendersMars",
         "title": "Mars",
         "className": "fa-solid fa-mars",
-        "categories": [
+        "type":"fa","categories": [
             "genders"
         ]
     },
@@ -8022,7 +8053,7 @@ export const classIconIndex = {
         "name": "fa-GendersMarsAndVenus",
         "title": "Mars And Venus",
         "className": "fa-solid fa-mars-and-venus",
-        "categories": [
+        "type":"fa","categories": [
             "genders"
         ]
     },
@@ -8030,7 +8061,7 @@ export const classIconIndex = {
         "name": "fa-GendersMarsDouble",
         "title": "Mars Double",
         "className": "fa-solid fa-mars-double",
-        "categories": [
+        "type":"fa","categories": [
             "genders"
         ]
     },
@@ -8038,7 +8069,7 @@ export const classIconIndex = {
         "name": "fa-GendersMarsStroke",
         "title": "Mars Stroke",
         "className": "fa-solid fa-mars-stroke",
-        "categories": [
+        "type":"fa","categories": [
             "genders"
         ]
     },
@@ -8046,7 +8077,7 @@ export const classIconIndex = {
         "name": "fa-GendersMarsStrokeRight",
         "title": "Mars Stroke Right",
         "className": "fa-solid fa-mars-stroke-right",
-        "categories": [
+        "type":"fa","categories": [
             "genders"
         ]
     },
@@ -8054,7 +8085,7 @@ export const classIconIndex = {
         "name": "fa-GendersMarsStrokeUp",
         "title": "Mars Stroke Up",
         "className": "fa-solid fa-mars-stroke-up",
-        "categories": [
+        "type":"fa","categories": [
             "genders"
         ]
     },
@@ -8062,7 +8093,7 @@ export const classIconIndex = {
         "name": "fa-GendersMercury",
         "title": "Mercury",
         "className": "fa-solid fa-mercury",
-        "categories": [
+        "type":"fa","categories": [
             "genders"
         ]
     },
@@ -8070,7 +8101,7 @@ export const classIconIndex = {
         "name": "fa-GendersNeuter",
         "title": "Neuter",
         "className": "fa-solid fa-neuter",
-        "categories": [
+        "type":"fa","categories": [
             "genders"
         ]
     },
@@ -8078,7 +8109,7 @@ export const classIconIndex = {
         "name": "fa-GendersPersonHalfDress",
         "title": "Person Half Dress",
         "className": "fa-solid fa-person-half-dress",
-        "categories": [
+        "type":"fa","categories": [
             "genders"
         ]
     },
@@ -8086,7 +8117,7 @@ export const classIconIndex = {
         "name": "fa-GendersTransgender",
         "title": "Transgender",
         "className": "fa-solid fa-transgender",
-        "categories": [
+        "type":"fa","categories": [
             "genders"
         ]
     },
@@ -8094,7 +8125,7 @@ export const classIconIndex = {
         "name": "fa-GendersVenus",
         "title": "Venus",
         "className": "fa-solid fa-venus",
-        "categories": [
+        "type":"fa","categories": [
             "genders"
         ]
     },
@@ -8102,7 +8133,7 @@ export const classIconIndex = {
         "name": "fa-GendersVenusDouble",
         "title": "Venus Double",
         "className": "fa-solid fa-venus-double",
-        "categories": [
+        "type":"fa","categories": [
             "genders"
         ]
     },
@@ -8110,7 +8141,7 @@ export const classIconIndex = {
         "name": "fa-GendersVenusMars",
         "title": "Venus Mars",
         "className": "fa-solid fa-venus-mars",
-        "categories": [
+        "type":"fa","categories": [
             "genders"
         ]
     },
@@ -8118,7 +8149,7 @@ export const classIconIndex = {
         "name": "fa-HalloweenBookSkull",
         "title": "Book Skull",
         "className": "fa-solid fa-book-skull",
-        "categories": [
+        "type":"fa","categories": [
             "halloween"
         ]
     },
@@ -8126,7 +8157,7 @@ export const classIconIndex = {
         "name": "fa-HalloweenBroom",
         "title": "Broom",
         "className": "fa-solid fa-broom",
-        "categories": [
+        "type":"fa","categories": [
             "halloween"
         ]
     },
@@ -8134,7 +8165,7 @@ export const classIconIndex = {
         "name": "fa-HalloweenCat",
         "title": "Cat",
         "className": "fa-solid fa-cat",
-        "categories": [
+        "type":"fa","categories": [
             "halloween"
         ]
     },
@@ -8142,7 +8173,7 @@ export const classIconIndex = {
         "name": "fa-HalloweenCloudMoon",
         "title": "Cloud Moon",
         "className": "fa-solid fa-cloud-moon",
-        "categories": [
+        "type":"fa","categories": [
             "halloween"
         ]
     },
@@ -8150,7 +8181,7 @@ export const classIconIndex = {
         "name": "fa-HalloweenCrow",
         "title": "Crow",
         "className": "fa-solid fa-crow",
-        "categories": [
+        "type":"fa","categories": [
             "halloween"
         ]
     },
@@ -8158,7 +8189,7 @@ export const classIconIndex = {
         "name": "fa-HalloweenGhost",
         "title": "Ghost",
         "className": "fa-solid fa-ghost",
-        "categories": [
+        "type":"fa","categories": [
             "halloween"
         ]
     },
@@ -8166,7 +8197,7 @@ export const classIconIndex = {
         "name": "fa-HalloweenHatWizard",
         "title": "Hat Wizard",
         "className": "fa-solid fa-hat-wizard",
-        "categories": [
+        "type":"fa","categories": [
             "halloween"
         ]
     },
@@ -8174,7 +8205,7 @@ export const classIconIndex = {
         "name": "fa-HalloweenMask",
         "title": "Mask",
         "className": "fa-solid fa-mask",
-        "categories": [
+        "type":"fa","categories": [
             "halloween"
         ]
     },
@@ -8182,7 +8213,7 @@ export const classIconIndex = {
         "name": "fa-HalloweenSkull",
         "title": "Skull",
         "className": "fa-solid fa-skull",
-        "categories": [
+        "type":"fa","categories": [
             "halloween"
         ]
     },
@@ -8190,7 +8221,7 @@ export const classIconIndex = {
         "name": "fa-HalloweenSkullCrossbones",
         "title": "Skull Crossbones",
         "className": "fa-solid fa-skull-crossbones",
-        "categories": [
+        "type":"fa","categories": [
             "halloween"
         ]
     },
@@ -8198,7 +8229,7 @@ export const classIconIndex = {
         "name": "fa-HalloweenSpider",
         "title": "Spider",
         "className": "fa-solid fa-spider",
-        "categories": [
+        "type":"fa","categories": [
             "halloween"
         ]
     },
@@ -8206,7 +8237,7 @@ export const classIconIndex = {
         "name": "fa-HalloweenToiletPaper",
         "title": "Toilet Paper",
         "className": "fa-solid fa-toilet-paper",
-        "categories": [
+        "type":"fa","categories": [
             "halloween"
         ]
     },
@@ -8214,7 +8245,7 @@ export const classIconIndex = {
         "name": "fa-HalloweenWandSparkles",
         "title": "Wand Sparkles",
         "className": "fa-solid fa-wand-sparkles",
-        "categories": [
+        "type":"fa","categories": [
             "halloween"
         ]
     },
@@ -8222,7 +8253,7 @@ export const classIconIndex = {
         "name": "fa-HandsHand",
         "title": "Hand",
         "className": "fa-solid fa-hand",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8230,7 +8261,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandBackFist",
         "title": "Hand Back Fist",
         "className": "fa-solid fa-hand-back-fist",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8238,7 +8269,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandDots",
         "title": "Hand Dots",
         "className": "fa-solid fa-hand-dots",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8246,7 +8277,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandFist",
         "title": "Hand Fist",
         "className": "fa-solid fa-hand-fist",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8254,7 +8285,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandHolding",
         "title": "Hand Holding",
         "className": "fa-solid fa-hand-holding",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8262,7 +8293,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandHoldingDollar",
         "title": "Hand Holding Dollar",
         "className": "fa-solid fa-hand-holding-dollar",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8270,7 +8301,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandHoldingDroplet",
         "title": "Hand Holding Droplet",
         "className": "fa-solid fa-hand-holding-droplet",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8278,7 +8309,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandHoldingHand",
         "title": "Hand Holding Hand",
         "className": "fa-solid fa-hand-holding-hand",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8286,7 +8317,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandHoldingHeart",
         "title": "Hand Holding Heart",
         "className": "fa-solid fa-hand-holding-heart",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8294,7 +8325,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandHoldingMedical",
         "title": "Hand Holding Medical",
         "className": "fa-solid fa-hand-holding-medical",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8302,7 +8333,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandLizard",
         "title": "Hand Lizard",
         "className": "fa-solid fa-hand-lizard",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8310,7 +8341,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandMiddleFinger",
         "title": "Hand Middle Finger",
         "className": "fa-solid fa-hand-middle-finger",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8318,7 +8349,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandPeace",
         "title": "Hand Peace",
         "className": "fa-solid fa-hand-peace",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8326,7 +8357,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandPointDown",
         "title": "Hand Point Down",
         "className": "fa-solid fa-hand-point-down",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8334,7 +8365,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandPointer",
         "title": "Hand Pointer",
         "className": "fa-solid fa-hand-pointer",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8342,7 +8373,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandPointLeft",
         "title": "Hand Point Left",
         "className": "fa-solid fa-hand-point-left",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8350,7 +8381,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandPointRight",
         "title": "Hand Point Right",
         "className": "fa-solid fa-hand-point-right",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8358,7 +8389,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandPointUp",
         "title": "Hand Point Up",
         "className": "fa-solid fa-hand-point-up",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8366,7 +8397,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandsBound",
         "title": "Bound",
         "className": "fa-solid fa-hands-bound",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8374,7 +8405,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandsBubbles",
         "title": "Bubbles",
         "className": "fa-solid fa-hands-bubbles",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8382,7 +8413,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandScissors",
         "title": "Hand Scissors",
         "className": "fa-solid fa-hand-scissors",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8390,7 +8421,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandsClapping",
         "title": "Clapping",
         "className": "fa-solid fa-hands-clapping",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8398,7 +8429,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandshake",
         "title": "hake",
         "className": "fa-solid fa-handshake",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8406,7 +8437,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandshakeAngle",
         "title": "hake Angle",
         "className": "fa-solid fa-handshake-angle",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8414,7 +8445,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandshakeSimple",
         "title": "hake Simple",
         "className": "fa-solid fa-handshake-simple",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8422,7 +8453,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandshakeSimpleSlash",
         "title": "hake Simple Slash",
         "className": "fa-solid fa-handshake-simple-slash",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8430,7 +8461,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandshakeSlash",
         "title": "hake Slash",
         "className": "fa-solid fa-handshake-slash",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8438,7 +8469,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandsHolding",
         "title": "Holding",
         "className": "fa-solid fa-hands-holding",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8446,7 +8477,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandsHoldingChild",
         "title": "Holding Child",
         "className": "fa-solid fa-hands-holding-child",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8454,7 +8485,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandsHoldingCircle",
         "title": "Holding Circle",
         "className": "fa-solid fa-hands-holding-circle",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8462,7 +8493,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandSparkles",
         "title": "Hand Sparkles",
         "className": "fa-solid fa-hand-sparkles",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8470,7 +8501,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandSpock",
         "title": "Hand Spock",
         "className": "fa-solid fa-hand-spock",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8478,7 +8509,7 @@ export const classIconIndex = {
         "name": "fa-HandsHandsPraying",
         "title": "Praying",
         "className": "fa-solid fa-hands-praying",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8486,7 +8517,7 @@ export const classIconIndex = {
         "name": "fa-HandsThumbsDown",
         "title": "Thumbs Down",
         "className": "fa-solid fa-thumbs-down",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8494,7 +8525,7 @@ export const classIconIndex = {
         "name": "fa-HandsThumbsUp",
         "title": "Thumbs Up",
         "className": "fa-solid fa-thumbs-up",
-        "categories": [
+        "type":"fa","categories": [
             "hands"
         ]
     },
@@ -8502,7 +8533,7 @@ export const classIconIndex = {
         "name": "fa-HolidaysCandyCane",
         "title": "Candy Cane",
         "className": "fa-solid fa-candy-cane",
-        "categories": [
+        "type":"fa","categories": [
             "holidays"
         ]
     },
@@ -8510,7 +8541,7 @@ export const classIconIndex = {
         "name": "fa-HolidaysCarrot",
         "title": "Carrot",
         "className": "fa-solid fa-carrot",
-        "categories": [
+        "type":"fa","categories": [
             "holidays"
         ]
     },
@@ -8518,7 +8549,7 @@ export const classIconIndex = {
         "name": "fa-HolidaysChampagneGlasses",
         "title": "Champagne Glasses",
         "className": "fa-solid fa-champagne-glasses",
-        "categories": [
+        "type":"fa","categories": [
             "holidays"
         ]
     },
@@ -8526,7 +8557,7 @@ export const classIconIndex = {
         "name": "fa-HolidaysCookieBite",
         "title": "Cookie Bite",
         "className": "fa-solid fa-cookie-bite",
-        "categories": [
+        "type":"fa","categories": [
             "holidays"
         ]
     },
@@ -8534,7 +8565,7 @@ export const classIconIndex = {
         "name": "fa-HolidaysFaceGrinHearts",
         "title": "Face Grin Hearts",
         "className": "fa-solid fa-face-grin-hearts",
-        "categories": [
+        "type":"fa","categories": [
             "holidays"
         ]
     },
@@ -8542,7 +8573,7 @@ export const classIconIndex = {
         "name": "fa-HolidaysFaceKissWinkHeart",
         "title": "Face Kiss Wink Heart",
         "className": "fa-solid fa-face-kiss-wink-heart",
-        "categories": [
+        "type":"fa","categories": [
             "holidays"
         ]
     },
@@ -8550,7 +8581,7 @@ export const classIconIndex = {
         "name": "fa-HolidaysGift",
         "title": "Gift",
         "className": "fa-solid fa-gift",
-        "categories": [
+        "type":"fa","categories": [
             "holidays"
         ]
     },
@@ -8558,7 +8589,7 @@ export const classIconIndex = {
         "name": "fa-HolidaysGifts",
         "title": "Gifts",
         "className": "fa-solid fa-gifts",
-        "categories": [
+        "type":"fa","categories": [
             "holidays"
         ]
     },
@@ -8566,7 +8597,7 @@ export const classIconIndex = {
         "name": "fa-HolidaysHeart",
         "title": "Heart",
         "className": "fa-solid fa-heart",
-        "categories": [
+        "type":"fa","categories": [
             "holidays"
         ]
     },
@@ -8574,7 +8605,7 @@ export const classIconIndex = {
         "name": "fa-HolidaysHollyBerry",
         "title": "Holly Berry",
         "className": "fa-solid fa-holly-berry",
-        "categories": [
+        "type":"fa","categories": [
             "holidays"
         ]
     },
@@ -8582,7 +8613,7 @@ export const classIconIndex = {
         "name": "fa-HolidaysMenorah",
         "title": "Menorah",
         "className": "fa-solid fa-menorah",
-        "categories": [
+        "type":"fa","categories": [
             "holidays"
         ]
     },
@@ -8590,7 +8621,7 @@ export const classIconIndex = {
         "name": "fa-HolidaysMugHot",
         "title": "Mug Hot",
         "className": "fa-solid fa-mug-hot",
-        "categories": [
+        "type":"fa","categories": [
             "holidays"
         ]
     },
@@ -8598,7 +8629,7 @@ export const classIconIndex = {
         "name": "fa-HolidaysSleigh",
         "title": "Sleigh",
         "className": "fa-solid fa-sleigh",
-        "categories": [
+        "type":"fa","categories": [
             "holidays"
         ]
     },
@@ -8606,7 +8637,7 @@ export const classIconIndex = {
         "name": "fa-HolidaysSnowman",
         "title": "Snowman",
         "className": "fa-solid fa-snowman",
-        "categories": [
+        "type":"fa","categories": [
             "holidays"
         ]
     },
@@ -8614,7 +8645,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdArrowUpFromWaterPump",
         "title": "Arrow Up From Water Pump",
         "className": "fa-solid fa-arrow-up-from-water-pump",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8622,7 +8653,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdBath",
         "title": "Bath",
         "className": "fa-solid fa-bath",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8630,7 +8661,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdBed",
         "title": "Bed",
         "className": "fa-solid fa-bed",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8638,7 +8669,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdBell",
         "title": "Bell",
         "className": "fa-solid fa-bell",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8646,7 +8677,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdBlender",
         "title": "Blender",
         "className": "fa-solid fa-blender",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8654,7 +8685,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdBoxTissue",
         "title": "Box Tissue",
         "className": "fa-solid fa-box-tissue",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8662,7 +8693,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdChair",
         "title": "Chair",
         "className": "fa-solid fa-chair",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8670,7 +8701,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdComputer",
         "title": "Computer",
         "className": "fa-solid fa-computer",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8678,7 +8709,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdCouch",
         "title": "Couch",
         "className": "fa-solid fa-couch",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8686,7 +8717,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdDoorClosed",
         "title": "Door Closed",
         "className": "fa-solid fa-door-closed",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8694,7 +8725,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdDoorOpen",
         "title": "Door Open",
         "className": "fa-solid fa-door-open",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8702,7 +8733,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdDungeon",
         "title": "Dungeon",
         "className": "fa-solid fa-dungeon",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8710,7 +8741,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdFan",
         "title": "Fan",
         "className": "fa-solid fa-fan",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8718,7 +8749,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdFaucet",
         "title": "Faucet",
         "className": "fa-solid fa-faucet",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8726,7 +8757,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdFaucetDrip",
         "title": "Faucet Drip",
         "className": "fa-solid fa-faucet-drip",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8734,7 +8765,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdFireBurner",
         "title": "Fire Burner",
         "className": "fa-solid fa-fire-burner",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8742,7 +8773,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdHouseChimneyUser",
         "title": "House Chimney User",
         "className": "fa-solid fa-house-chimney-user",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8750,7 +8781,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdHouseChimneyWindow",
         "title": "House Chimney Window",
         "className": "fa-solid fa-house-chimney-window",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8758,7 +8789,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdHouseFire",
         "title": "House Fire",
         "className": "fa-solid fa-house-fire",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8766,7 +8797,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdHouseLaptop",
         "title": "House Laptop",
         "className": "fa-solid fa-house-laptop",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8774,7 +8805,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdHouseLock",
         "title": "House Lock",
         "className": "fa-solid fa-house-lock",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8782,7 +8813,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdHouseSignal",
         "title": "House Signal",
         "className": "fa-solid fa-house-signal",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8790,7 +8821,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdHouseUser",
         "title": "House User",
         "className": "fa-solid fa-house-user",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8798,7 +8829,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdJar",
         "title": "Jar",
         "className": "fa-solid fa-jar",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8806,7 +8837,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdJarWheat",
         "title": "Jar Wheat",
         "className": "fa-solid fa-jar-wheat",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8814,7 +8845,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdJugDetergent",
         "title": "Jug Detergent",
         "className": "fa-solid fa-jug-detergent",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8822,7 +8853,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdKitchenSet",
         "title": "Kitchen Set",
         "className": "fa-solid fa-kitchen-set",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8830,7 +8861,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdLightbulb",
         "title": "Lightbulb",
         "className": "fa-solid fa-lightbulb",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8838,7 +8869,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdMattressPillow",
         "title": "Mattress Pillow",
         "className": "fa-solid fa-mattress-pillow",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8846,7 +8877,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdMugSaucer",
         "title": "Mug Saucer",
         "className": "fa-solid fa-mug-saucer",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8854,7 +8885,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdPeopleRoof",
         "title": "People Roof",
         "className": "fa-solid fa-people-roof",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8862,7 +8893,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdPlug",
         "title": "Plug",
         "className": "fa-solid fa-plug",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8870,7 +8901,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdPumpSoap",
         "title": "Pump Soap",
         "className": "fa-solid fa-pump-soap",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8878,7 +8909,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdRug",
         "title": "Rug",
         "className": "fa-solid fa-rug",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8886,7 +8917,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdSheetPlastic",
         "title": "Sheet Plastic",
         "className": "fa-solid fa-sheet-plastic",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8894,7 +8925,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdShower",
         "title": "Shower",
         "className": "fa-solid fa-shower",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8902,7 +8933,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdSink",
         "title": "Sink",
         "className": "fa-solid fa-sink",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8910,7 +8941,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdSnowflake",
         "title": "Snowflake",
         "className": "fa-solid fa-snowflake",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8918,7 +8949,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdSoap",
         "title": "Soap",
         "className": "fa-solid fa-soap",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8926,7 +8957,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdSpoon",
         "title": "Spoon",
         "className": "fa-solid fa-spoon",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8934,7 +8965,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdStairs",
         "title": "Stairs",
         "className": "fa-solid fa-stairs",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8942,7 +8973,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdTemperatureArrowDown",
         "title": "Temperature Arrow Down",
         "className": "fa-solid fa-temperature-arrow-down",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8950,7 +8981,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdTemperatureArrowUp",
         "title": "Temperature Arrow Up",
         "className": "fa-solid fa-temperature-arrow-up",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8958,7 +8989,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdToilet",
         "title": "Toilet",
         "className": "fa-solid fa-toilet",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8966,7 +8997,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdToiletPaper",
         "title": "Toilet Paper",
         "className": "fa-solid fa-toilet-paper",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8974,7 +9005,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdToiletPaperSlash",
         "title": "Toilet Paper Slash",
         "className": "fa-solid fa-toilet-paper-slash",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8982,7 +9013,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdTv",
         "title": "Tv",
         "className": "fa-solid fa-tv",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8990,7 +9021,7 @@ export const classIconIndex = {
         "name": "fa-HouseholdUtensils",
         "title": "Utensils",
         "className": "fa-solid fa-utensils",
-        "categories": [
+        "type":"fa","categories": [
             "household"
         ]
     },
@@ -8998,7 +9029,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianAnchor",
         "title": "Anchor",
         "className": "fa-solid fa-anchor",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9006,7 +9037,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianArrowUpRightFromSquare",
         "title": "Arrow Up Right From Square",
         "className": "fa-solid fa-arrow-up-right-from-square",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9014,7 +9045,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianBaby",
         "title": "Baby",
         "className": "fa-solid fa-baby",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9022,7 +9053,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianBuilding",
         "title": "Building",
         "className": "fa-solid fa-building",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9030,7 +9061,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianCar",
         "title": "Car",
         "className": "fa-solid fa-car",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9038,7 +9069,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianChurch",
         "title": "Church",
         "className": "fa-solid fa-church",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9046,7 +9077,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianDroplet",
         "title": "Droplet",
         "className": "fa-solid fa-droplet",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9054,7 +9085,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianEnvelope",
         "title": "Envelope",
         "className": "fa-solid fa-envelope",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9062,7 +9093,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianFile",
         "title": "File",
         "className": "fa-solid fa-file",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9070,7 +9101,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianFilePdf",
         "title": "File Pdf",
         "className": "fa-solid fa-file-pdf",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9078,7 +9109,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianFlag",
         "title": "Flag",
         "className": "fa-solid fa-flag",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9086,7 +9117,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianGopuram",
         "title": "Gopuram",
         "className": "fa-solid fa-gopuram",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9094,7 +9125,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianHammer",
         "title": "Hammer",
         "className": "fa-solid fa-hammer",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9102,7 +9133,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianHeadset",
         "title": "Headset",
         "className": "fa-solid fa-headset",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9110,7 +9141,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianHospital",
         "title": "Hospital",
         "className": "fa-solid fa-hospital",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9118,7 +9149,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianHotel",
         "title": "Hotel",
         "className": "fa-solid fa-hotel",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9126,7 +9157,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianLandmark",
         "title": "Landmark",
         "className": "fa-solid fa-landmark",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9134,7 +9165,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianLaptop",
         "title": "Laptop",
         "className": "fa-solid fa-laptop",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9142,7 +9173,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianMountainCity",
         "title": "Mountain City",
         "className": "fa-solid fa-mountain-city",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9150,7 +9181,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianMountainSun",
         "title": "Mountain Sun",
         "className": "fa-solid fa-mountain-sun",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9158,7 +9189,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianOilWell",
         "title": "Oil Well",
         "className": "fa-solid fa-oil-well",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9166,7 +9197,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianParachuteBox",
         "title": "Parachute Box",
         "className": "fa-solid fa-parachute-box",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9174,7 +9205,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPeopleArrows",
         "title": "People Arrows",
         "className": "fa-solid fa-people-arrows",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9182,7 +9213,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPeopleGroup",
         "title": "People Group",
         "className": "fa-solid fa-people-group",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9190,7 +9221,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPeopleLine",
         "title": "People Line",
         "className": "fa-solid fa-people-line",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9198,7 +9229,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPeoplePulling",
         "title": "People Pulling",
         "className": "fa-solid fa-people-pulling",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9206,7 +9237,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPeopleRobbery",
         "title": "People Robbery",
         "className": "fa-solid fa-people-robbery",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9214,7 +9245,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPeopleRoof",
         "title": "People Roof",
         "className": "fa-solid fa-people-roof",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9222,7 +9253,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPerson",
         "title": "Person",
         "className": "fa-solid fa-person",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9230,7 +9261,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonArrowDownToLine",
         "title": "Person Arrow Down To Line",
         "className": "fa-solid fa-person-arrow-down-to-line",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9238,7 +9269,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonArrowUpFromLine",
         "title": "Person Arrow Up From Line",
         "className": "fa-solid fa-person-arrow-up-from-line",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9246,7 +9277,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonBreastfeeding",
         "title": "Person Breastfeeding",
         "className": "fa-solid fa-person-breastfeeding",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9254,7 +9285,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonBurst",
         "title": "Person Burst",
         "className": "fa-solid fa-person-burst",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9262,7 +9293,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonCane",
         "title": "Person Cane",
         "className": "fa-solid fa-person-cane",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9270,7 +9301,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonChalkboard",
         "title": "Person Chalkboard",
         "className": "fa-solid fa-person-chalkboard",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9278,7 +9309,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonCircleCheck",
         "title": "Person Circle Check",
         "className": "fa-solid fa-person-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9286,7 +9317,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonCircleExclamation",
         "title": "Person Circle Exclamation",
         "className": "fa-solid fa-person-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9294,7 +9325,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonCircleMinus",
         "title": "Person Circle Minus",
         "className": "fa-solid fa-person-circle-minus",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9302,7 +9333,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonCirclePlus",
         "title": "Person Circle Plus",
         "className": "fa-solid fa-person-circle-plus",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9310,7 +9341,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonCircleQuestion",
         "title": "Person Circle Question",
         "className": "fa-solid fa-person-circle-question",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9318,7 +9349,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonCircleXmark",
         "title": "Person Circle Xmark",
         "className": "fa-solid fa-person-circle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9326,7 +9357,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonDigging",
         "title": "Person Digging",
         "className": "fa-solid fa-person-digging",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9334,7 +9365,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonDress",
         "title": "Person Dress",
         "className": "fa-solid fa-person-dress",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9342,7 +9373,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonDressBurst",
         "title": "Person Dress Burst",
         "className": "fa-solid fa-person-dress-burst",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9350,7 +9381,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonDrowning",
         "title": "Person Drowning",
         "className": "fa-solid fa-person-drowning",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9358,7 +9389,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonFalling",
         "title": "Person Falling",
         "className": "fa-solid fa-person-falling",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9366,7 +9397,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonFallingBurst",
         "title": "Person Falling Burst",
         "className": "fa-solid fa-person-falling-burst",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9374,7 +9405,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonHalfDress",
         "title": "Person Half Dress",
         "className": "fa-solid fa-person-half-dress",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9382,7 +9413,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonHarassing",
         "title": "Person Harassing",
         "className": "fa-solid fa-person-harassing",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9390,7 +9421,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonMilitaryPointing",
         "title": "Person Military Pointing",
         "className": "fa-solid fa-person-military-pointing",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9398,7 +9429,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonMilitaryRifle",
         "title": "Person Military Rifle",
         "className": "fa-solid fa-person-military-rifle",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9406,7 +9437,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonMilitaryToPerson",
         "title": "Person Military To Person",
         "className": "fa-solid fa-person-military-to-person",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9414,7 +9445,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonPregnant",
         "title": "Person Pregnant",
         "className": "fa-solid fa-person-pregnant",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9422,7 +9453,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonRays",
         "title": "Person Rays",
         "className": "fa-solid fa-person-rays",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9430,7 +9461,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonRifle",
         "title": "Person Rifle",
         "className": "fa-solid fa-person-rifle",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9438,7 +9469,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonShelter",
         "title": "Person Shelter",
         "className": "fa-solid fa-person-shelter",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9446,7 +9477,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonThroughWindow",
         "title": "Person Through Window",
         "className": "fa-solid fa-person-through-window",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9454,7 +9485,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonWalking",
         "title": "Person Walking",
         "className": "fa-solid fa-person-walking",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9462,7 +9493,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonWalkingArrowLoopLeft",
         "title": "Person Walking Arrow Loop Left",
         "className": "fa-solid fa-person-walking-arrow-loop-left",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9470,7 +9501,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonWalkingArrowRight",
         "title": "Person Walking Arrow Right",
         "className": "fa-solid fa-person-walking-arrow-right",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9478,7 +9509,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonWalkingDashedLineArrowRight",
         "title": "Person Walking Dashed Line Arrow Right",
         "className": "fa-solid fa-person-walking-dashed-line-arrow-right",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9486,7 +9517,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPersonWalkingLuggage",
         "title": "Person Walking Luggage",
         "className": "fa-solid fa-person-walking-luggage",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9494,7 +9525,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPills",
         "title": "Pills",
         "className": "fa-solid fa-pills",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9502,7 +9533,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPlaneCircleCheck",
         "title": "Plane Circle Check",
         "className": "fa-solid fa-plane-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9510,7 +9541,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPlaneCircleExclamation",
         "title": "Plane Circle Exclamation",
         "className": "fa-solid fa-plane-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9518,7 +9549,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPlaneCircleXmark",
         "title": "Plane Circle Xmark",
         "className": "fa-solid fa-plane-circle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9526,7 +9557,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPlaneLock",
         "title": "Plane Lock",
         "className": "fa-solid fa-plane-lock",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9534,7 +9565,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPlaneUp",
         "title": "Plane Up",
         "className": "fa-solid fa-plane-up",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9542,7 +9573,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPlantWilt",
         "title": "Plant Wilt",
         "className": "fa-solid fa-plant-wilt",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9550,7 +9581,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPlateWheat",
         "title": "Plate Wheat",
         "className": "fa-solid fa-plate-wheat",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9558,7 +9589,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPlug",
         "title": "Plug",
         "className": "fa-solid fa-plug",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9566,7 +9597,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPlugCircleBolt",
         "title": "Plug Circle Bolt",
         "className": "fa-solid fa-plug-circle-bolt",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9574,7 +9605,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPlugCircleCheck",
         "title": "Plug Circle Check",
         "className": "fa-solid fa-plug-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9582,7 +9613,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPlugCircleExclamation",
         "title": "Plug Circle Exclamation",
         "className": "fa-solid fa-plug-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9590,7 +9621,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPlugCircleMinus",
         "title": "Plug Circle Minus",
         "className": "fa-solid fa-plug-circle-minus",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9598,7 +9629,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPlugCirclePlus",
         "title": "Plug Circle Plus",
         "className": "fa-solid fa-plug-circle-plus",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9606,7 +9637,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPlugCircleXmark",
         "title": "Plug Circle Xmark",
         "className": "fa-solid fa-plug-circle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9614,7 +9645,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianPumpSoap",
         "title": "Pump Soap",
         "className": "fa-solid fa-pump-soap",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9622,7 +9653,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianRadiation",
         "title": "Radiation",
         "className": "fa-solid fa-radiation",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9630,7 +9661,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianRadio",
         "title": "Radio",
         "className": "fa-solid fa-radio",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9638,7 +9669,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianRankingStar",
         "title": "Ranking Star",
         "className": "fa-solid fa-ranking-star",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9646,7 +9677,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianRoad",
         "title": "Road",
         "className": "fa-solid fa-road",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9654,7 +9685,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianRoadBarrier",
         "title": "Road Barrier",
         "className": "fa-solid fa-road-barrier",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9662,7 +9693,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianRoadBridge",
         "title": "Road Bridge",
         "className": "fa-solid fa-road-bridge",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9670,7 +9701,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianRoadCircleCheck",
         "title": "Road Circle Check",
         "className": "fa-solid fa-road-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9678,7 +9709,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianRoadCircleExclamation",
         "title": "Road Circle Exclamation",
         "className": "fa-solid fa-road-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9686,7 +9717,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianRoadCircleXmark",
         "title": "Road Circle Xmark",
         "className": "fa-solid fa-road-circle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9694,7 +9725,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianRoadLock",
         "title": "Road Lock",
         "className": "fa-solid fa-road-lock",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9702,7 +9733,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianRoadSpikes",
         "title": "Road Spikes",
         "className": "fa-solid fa-road-spikes",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9710,7 +9741,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianRug",
         "title": "Rug",
         "className": "fa-solid fa-rug",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9718,7 +9749,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianSackDollar",
         "title": "Sack Dollar",
         "className": "fa-solid fa-sack-dollar",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9726,7 +9757,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianSackXmark",
         "title": "Sack Xmark",
         "className": "fa-solid fa-sack-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9734,7 +9765,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianSailboat",
         "title": "Sailboat",
         "className": "fa-solid fa-sailboat",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9742,7 +9773,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianSatelliteDish",
         "title": "Satellite Dish",
         "className": "fa-solid fa-satellite-dish",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9750,7 +9781,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianScaleBalanced",
         "title": "Scale Balanced",
         "className": "fa-solid fa-scale-balanced",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9758,7 +9789,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianSchool",
         "title": "School",
         "className": "fa-solid fa-school",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9766,7 +9797,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianSchoolCircleCheck",
         "title": "School Circle Check",
         "className": "fa-solid fa-school-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9774,7 +9805,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianSchoolCircleExclamation",
         "title": "School Circle Exclamation",
         "className": "fa-solid fa-school-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9782,7 +9813,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianSchoolCircleXmark",
         "title": "School Circle Xmark",
         "className": "fa-solid fa-school-circle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9790,7 +9821,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianSchoolFlag",
         "title": "School Flag",
         "className": "fa-solid fa-school-flag",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9798,7 +9829,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianSchoolLock",
         "title": "School Lock",
         "className": "fa-solid fa-school-lock",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9806,7 +9837,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianSeedling",
         "title": "Seedling",
         "className": "fa-solid fa-seedling",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9814,7 +9845,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianSheetPlastic",
         "title": "Sheet Plastic",
         "className": "fa-solid fa-sheet-plastic",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9822,7 +9853,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianShieldCat",
         "title": "Shield Cat",
         "className": "fa-solid fa-shield-cat",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9830,7 +9861,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianShieldDog",
         "title": "Shield Dog",
         "className": "fa-solid fa-shield-dog",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9838,7 +9869,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianShieldHeart",
         "title": "Shield Heart",
         "className": "fa-solid fa-shield-heart",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9846,7 +9877,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianShip",
         "title": "Ship",
         "className": "fa-solid fa-ship",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9854,7 +9885,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianShirt",
         "title": "Shirt",
         "className": "fa-solid fa-shirt",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9862,7 +9893,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianShop",
         "title": "Shop",
         "className": "fa-solid fa-shop",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9870,7 +9901,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianShopLock",
         "title": "Shop Lock",
         "className": "fa-solid fa-shop-lock",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9878,7 +9909,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianShower",
         "title": "Shower",
         "className": "fa-solid fa-shower",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9886,7 +9917,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianSkullCrossbones",
         "title": "Skull Crossbones",
         "className": "fa-solid fa-skull-crossbones",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9894,7 +9925,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianSnowflake",
         "title": "Snowflake",
         "className": "fa-solid fa-snowflake",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9902,7 +9933,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianSoap",
         "title": "Soap",
         "className": "fa-solid fa-soap",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9910,7 +9941,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianSquareNfi",
         "title": "Square Nfi",
         "className": "fa-solid fa-square-nfi",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9918,7 +9949,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianSquarePersonConfined",
         "title": "Square Person Confined",
         "className": "fa-solid fa-square-person-confined",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9926,7 +9957,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianSquareVirus",
         "title": "Square Virus",
         "className": "fa-solid fa-square-virus",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9934,7 +9965,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianStaffSnake",
         "title": "Staff Snake",
         "className": "fa-solid fa-staff-snake",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9942,7 +9973,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianStethoscope",
         "title": "Stethoscope",
         "className": "fa-solid fa-stethoscope",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9950,7 +9981,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianSuitcaseMedical",
         "title": "Suitcase Medical",
         "className": "fa-solid fa-suitcase-medical",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9958,7 +9989,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianSunPlantWilt",
         "title": "Sun Plant Wilt",
         "className": "fa-solid fa-sun-plant-wilt",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9966,7 +9997,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianSyringe",
         "title": "Syringe",
         "className": "fa-solid fa-syringe",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9974,7 +10005,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTarp",
         "title": "Tarp",
         "className": "fa-solid fa-tarp",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9982,7 +10013,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTarpDroplet",
         "title": "Tarp Droplet",
         "className": "fa-solid fa-tarp-droplet",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9990,7 +10021,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTemperatureArrowDown",
         "title": "Temperature Arrow Down",
         "className": "fa-solid fa-temperature-arrow-down",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -9998,7 +10029,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTemperatureArrowUp",
         "title": "Temperature Arrow Up",
         "className": "fa-solid fa-temperature-arrow-up",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10006,7 +10037,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTent",
         "title": "Tent",
         "className": "fa-solid fa-tent",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10014,7 +10045,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTentArrowDownToLine",
         "title": "Tent Arrow Down To Line",
         "className": "fa-solid fa-tent-arrow-down-to-line",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10022,7 +10053,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTentArrowLeftRight",
         "title": "Tent Arrow Left Right",
         "className": "fa-solid fa-tent-arrow-left-right",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10030,7 +10061,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTentArrowsDown",
         "title": "Tent Arrows Down",
         "className": "fa-solid fa-tent-arrows-down",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10038,7 +10069,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTentArrowTurnLeft",
         "title": "Tent Arrow Turn Left",
         "className": "fa-solid fa-tent-arrow-turn-left",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10046,7 +10077,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTents",
         "title": "Tents",
         "className": "fa-solid fa-tents",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10054,7 +10085,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianToilet",
         "title": "Toilet",
         "className": "fa-solid fa-toilet",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10062,7 +10093,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianToiletPortable",
         "title": "Toilet Portable",
         "className": "fa-solid fa-toilet-portable",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10070,7 +10101,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianToiletsPortable",
         "title": "Toilets Portable",
         "className": "fa-solid fa-toilets-portable",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10078,7 +10109,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTornado",
         "title": "Tornado",
         "className": "fa-solid fa-tornado",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10086,7 +10117,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTowerBroadcast",
         "title": "Tower Broadcast",
         "className": "fa-solid fa-tower-broadcast",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10094,7 +10125,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTowerCell",
         "title": "Tower Cell",
         "className": "fa-solid fa-tower-cell",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10102,7 +10133,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTowerObservation",
         "title": "Tower Observation",
         "className": "fa-solid fa-tower-observation",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10110,7 +10141,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTrainSubway",
         "title": "Train Subway",
         "className": "fa-solid fa-train-subway",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10118,7 +10149,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTrashCan",
         "title": "Trash Can",
         "className": "fa-solid fa-trash-can",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10126,7 +10157,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTreeCity",
         "title": "Tree City",
         "className": "fa-solid fa-tree-city",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10134,7 +10165,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTrowel",
         "title": "Trowel",
         "className": "fa-solid fa-trowel",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10142,7 +10173,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTrowelBricks",
         "title": "Trowel Bricks",
         "className": "fa-solid fa-trowel-bricks",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10150,7 +10181,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTruck",
         "title": "Truck",
         "className": "fa-solid fa-truck",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10158,7 +10189,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTruckArrowRight",
         "title": "Truck Arrow Right",
         "className": "fa-solid fa-truck-arrow-right",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10166,7 +10197,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTruckDroplet",
         "title": "Truck Droplet",
         "className": "fa-solid fa-truck-droplet",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10174,7 +10205,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTruckField",
         "title": "Truck Field",
         "className": "fa-solid fa-truck-field",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10182,7 +10213,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTruckFieldUn",
         "title": "Truck Field Un",
         "className": "fa-solid fa-truck-field-un",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10190,7 +10221,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTruckFront",
         "title": "Truck Front",
         "className": "fa-solid fa-truck-front",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10198,7 +10229,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTruckMedical",
         "title": "Truck Medical",
         "className": "fa-solid fa-truck-medical",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10206,7 +10237,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianTruckPlane",
         "title": "Truck Plane",
         "className": "fa-solid fa-truck-plane",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10214,7 +10245,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianUserDoctor",
         "title": "User Doctor",
         "className": "fa-solid fa-user-doctor",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10222,7 +10253,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianUserInjured",
         "title": "User Injured",
         "className": "fa-solid fa-user-injured",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10230,7 +10261,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianUsersBetweenLines",
         "title": "Users Between Lines",
         "className": "fa-solid fa-users-between-lines",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10238,7 +10269,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianUsersLine",
         "title": "Users Line",
         "className": "fa-solid fa-users-line",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10246,7 +10277,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianUsersRays",
         "title": "Users Rays",
         "className": "fa-solid fa-users-rays",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10254,7 +10285,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianUsersRectangle",
         "title": "Users Rectangle",
         "className": "fa-solid fa-users-rectangle",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10262,7 +10293,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianUsersViewfinder",
         "title": "Users Viewfinder",
         "className": "fa-solid fa-users-viewfinder",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10270,7 +10301,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianVialCircleCheck",
         "title": "Vial Circle Check",
         "className": "fa-solid fa-vial-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10278,7 +10309,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianVialVirus",
         "title": "Vial Virus",
         "className": "fa-solid fa-vial-virus",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10286,7 +10317,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianVihara",
         "title": "Vihara",
         "className": "fa-solid fa-vihara",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10294,7 +10325,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianVirus",
         "title": "Virus",
         "className": "fa-solid fa-virus",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10302,7 +10333,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianVirusCovid",
         "title": "Virus Covid",
         "className": "fa-solid fa-virus-covid",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10310,7 +10341,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianVolcano",
         "title": "Volcano",
         "className": "fa-solid fa-volcano",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10318,7 +10349,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianWalkieTalkie",
         "title": "Walkie Talkie",
         "className": "fa-solid fa-walkie-talkie",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10326,7 +10357,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianWheatAwn",
         "title": "Wheat Awn",
         "className": "fa-solid fa-wheat-awn",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10334,7 +10365,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianWheatAwnCircleExclamation",
         "title": "Wheat Awn Circle Exclamation",
         "className": "fa-solid fa-wheat-awn-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10342,7 +10373,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianWheelchairMove",
         "title": "Wheelchair Move",
         "className": "fa-solid fa-wheelchair-move",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10350,7 +10381,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianWifi",
         "title": "Wifi",
         "className": "fa-solid fa-wifi",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10358,7 +10389,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianWind",
         "title": "Wind",
         "className": "fa-solid fa-wind",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10366,7 +10397,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianWorm",
         "title": "Worm",
         "className": "fa-solid fa-worm",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10374,7 +10405,7 @@ export const classIconIndex = {
         "name": "fa-HumanitarianXmarksLines",
         "title": "Xmarks Lines",
         "className": "fa-solid fa-xmarks-lines",
-        "categories": [
+        "type":"fa","categories": [
             "humanitarian"
         ]
     },
@@ -10382,7 +10413,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsAnchor",
         "title": "Anchor",
         "className": "fa-solid fa-anchor",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10390,7 +10421,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsAnchorCircleCheck",
         "title": "Anchor Circle Check",
         "className": "fa-solid fa-anchor-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10398,7 +10429,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsAnchorCircleExclamation",
         "title": "Anchor Circle Exclamation",
         "className": "fa-solid fa-anchor-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10406,7 +10437,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsAnchorCircleXmark",
         "title": "Anchor Circle Xmark",
         "className": "fa-solid fa-anchor-circle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10414,7 +10445,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsAnchorLock",
         "title": "Anchor Lock",
         "className": "fa-solid fa-anchor-lock",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10422,7 +10453,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsBox",
         "title": "Box",
         "className": "fa-solid fa-box",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10430,7 +10461,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsBoxesPacking",
         "title": "Boxes Packing",
         "className": "fa-solid fa-boxes-packing",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10438,7 +10469,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsBoxesStacked",
         "title": "Boxes Stacked",
         "className": "fa-solid fa-boxes-stacked",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10446,7 +10477,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsBridge",
         "title": "Bridge",
         "className": "fa-solid fa-bridge",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10454,7 +10485,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsBridgeCircleCheck",
         "title": "Bridge Circle Check",
         "className": "fa-solid fa-bridge-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10462,7 +10493,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsBridgeCircleExclamation",
         "title": "Bridge Circle Exclamation",
         "className": "fa-solid fa-bridge-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10470,7 +10501,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsBridgeCircleXmark",
         "title": "Bridge Circle Xmark",
         "className": "fa-solid fa-bridge-circle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10478,7 +10509,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsBridgeLock",
         "title": "Bridge Lock",
         "className": "fa-solid fa-bridge-lock",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10486,7 +10517,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsBridgeWater",
         "title": "Bridge Water",
         "className": "fa-solid fa-bridge-water",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10494,7 +10525,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsBus",
         "title": "Bus",
         "className": "fa-solid fa-bus",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10502,7 +10533,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsBusSimple",
         "title": "Bus Simple",
         "className": "fa-solid fa-bus-simple",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10510,7 +10541,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsCar",
         "title": "Car",
         "className": "fa-solid fa-car",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10518,7 +10549,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsCartFlatbed",
         "title": "Cart Flatbed",
         "className": "fa-solid fa-cart-flatbed",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10526,7 +10557,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsCarTunnel",
         "title": "Car Tunnel",
         "className": "fa-solid fa-car-tunnel",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10534,7 +10565,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsChartSimple",
         "title": "Chart Simple",
         "className": "fa-solid fa-chart-simple",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10542,7 +10573,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsClipboardCheck",
         "title": "Clipboard Check",
         "className": "fa-solid fa-clipboard-check",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10550,7 +10581,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsClipboardList",
         "title": "Clipboard List",
         "className": "fa-solid fa-clipboard-list",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10558,7 +10589,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsClipboardQuestion",
         "title": "Clipboard Question",
         "className": "fa-solid fa-clipboard-question",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10566,7 +10597,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsDolly",
         "title": "Dolly",
         "className": "fa-solid fa-dolly",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10574,7 +10605,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsFerry",
         "title": "Ferry",
         "className": "fa-solid fa-ferry",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10582,7 +10613,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsGasPump",
         "title": "Gas Pump",
         "className": "fa-solid fa-gas-pump",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10590,7 +10621,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsGears",
         "title": "Gears",
         "className": "fa-solid fa-gears",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10598,7 +10629,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsHelicopter",
         "title": "Helicopter",
         "className": "fa-solid fa-helicopter",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10606,7 +10637,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsHelicopterSymbol",
         "title": "Helicopter Symbol",
         "className": "fa-solid fa-helicopter-symbol",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10614,7 +10645,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsHelmetSafety",
         "title": "Helmet Safety",
         "className": "fa-solid fa-helmet-safety",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10622,7 +10653,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsJetFighterUp",
         "title": "Jet Fighter Up",
         "className": "fa-solid fa-jet-fighter-up",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10630,7 +10661,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsPallet",
         "title": "Pallet",
         "className": "fa-solid fa-pallet",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10638,7 +10669,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsPlaneCircleCheck",
         "title": "Plane Circle Check",
         "className": "fa-solid fa-plane-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10646,7 +10677,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsPlaneCircleExclamation",
         "title": "Plane Circle Exclamation",
         "className": "fa-solid fa-plane-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10654,7 +10685,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsPlaneCircleXmark",
         "title": "Plane Circle Xmark",
         "className": "fa-solid fa-plane-circle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10662,7 +10693,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsPlaneLock",
         "title": "Plane Lock",
         "className": "fa-solid fa-plane-lock",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10670,7 +10701,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsRoad",
         "title": "Road",
         "className": "fa-solid fa-road",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10678,7 +10709,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsRoadBarrier",
         "title": "Road Barrier",
         "className": "fa-solid fa-road-barrier",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10686,7 +10717,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsRoadBridge",
         "title": "Road Bridge",
         "className": "fa-solid fa-road-bridge",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10694,7 +10725,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsRoadCircleCheck",
         "title": "Road Circle Check",
         "className": "fa-solid fa-road-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10702,7 +10733,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsRoadCircleExclamation",
         "title": "Road Circle Exclamation",
         "className": "fa-solid fa-road-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10710,7 +10741,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsRoadCircleXmark",
         "title": "Road Circle Xmark",
         "className": "fa-solid fa-road-circle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10718,7 +10749,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsRoadLock",
         "title": "Road Lock",
         "className": "fa-solid fa-road-lock",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10726,7 +10757,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsSailboat",
         "title": "Sailboat",
         "className": "fa-solid fa-sailboat",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10734,7 +10765,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsSquareNfi",
         "title": "Square Nfi",
         "className": "fa-solid fa-square-nfi",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10742,7 +10773,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsTrain",
         "title": "Train",
         "className": "fa-solid fa-train",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10750,7 +10781,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsTrainSubway",
         "title": "Train Subway",
         "className": "fa-solid fa-train-subway",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10758,7 +10789,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsTruck",
         "title": "Truck",
         "className": "fa-solid fa-truck",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10766,7 +10797,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsTruckArrowRight",
         "title": "Truck Arrow Right",
         "className": "fa-solid fa-truck-arrow-right",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10774,7 +10805,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsTruckFast",
         "title": "Truck Fast",
         "className": "fa-solid fa-truck-fast",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10782,7 +10813,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsTruckField",
         "title": "Truck Field",
         "className": "fa-solid fa-truck-field",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10790,7 +10821,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsTruckFieldUn",
         "title": "Truck Field Un",
         "className": "fa-solid fa-truck-field-un",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10798,7 +10829,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsTruckFront",
         "title": "Truck Front",
         "className": "fa-solid fa-truck-front",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10806,7 +10837,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsTruckPlane",
         "title": "Truck Plane",
         "className": "fa-solid fa-truck-plane",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10814,7 +10845,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsWarehouse",
         "title": "Warehouse",
         "className": "fa-solid fa-warehouse",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10822,7 +10853,7 @@ export const classIconIndex = {
         "name": "fa-LogisticsXmarksLines",
         "title": "Xmarks Lines",
         "className": "fa-solid fa-xmarks-lines",
-        "categories": [
+        "type":"fa","categories": [
             "logistics"
         ]
     },
@@ -10830,7 +10861,7 @@ export const classIconIndex = {
         "name": "fa-MapsAnchor",
         "title": "Anchor",
         "className": "fa-solid fa-anchor",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -10838,7 +10869,7 @@ export const classIconIndex = {
         "name": "fa-MapsBagShopping",
         "title": "Bag Shopping",
         "className": "fa-solid fa-bag-shopping",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -10846,7 +10877,7 @@ export const classIconIndex = {
         "name": "fa-MapsBasketShopping",
         "title": "Basket Shopping",
         "className": "fa-solid fa-basket-shopping",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -10854,7 +10885,7 @@ export const classIconIndex = {
         "name": "fa-MapsBath",
         "title": "Bath",
         "className": "fa-solid fa-bath",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -10862,7 +10893,7 @@ export const classIconIndex = {
         "name": "fa-MapsBed",
         "title": "Bed",
         "className": "fa-solid fa-bed",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -10870,7 +10901,7 @@ export const classIconIndex = {
         "name": "fa-MapsBeerMugEmpty",
         "title": "Beer Mug Empty",
         "className": "fa-solid fa-beer-mug-empty",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -10878,7 +10909,7 @@ export const classIconIndex = {
         "name": "fa-MapsBell",
         "title": "Bell",
         "className": "fa-solid fa-bell",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -10886,7 +10917,7 @@ export const classIconIndex = {
         "name": "fa-MapsBellSlash",
         "title": "Bell Slash",
         "className": "fa-solid fa-bell-slash",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -10894,7 +10925,7 @@ export const classIconIndex = {
         "name": "fa-MapsBicycle",
         "title": "Bicycle",
         "className": "fa-solid fa-bicycle",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -10902,7 +10933,7 @@ export const classIconIndex = {
         "name": "fa-MapsBinoculars",
         "title": "Binoculars",
         "className": "fa-solid fa-binoculars",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -10910,7 +10941,7 @@ export const classIconIndex = {
         "name": "fa-MapsBomb",
         "title": "Bomb",
         "className": "fa-solid fa-bomb",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -10918,7 +10949,7 @@ export const classIconIndex = {
         "name": "fa-MapsBook",
         "title": "Book",
         "className": "fa-solid fa-book",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -10926,7 +10957,7 @@ export const classIconIndex = {
         "name": "fa-MapsBookAtlas",
         "title": "Book Atlas",
         "className": "fa-solid fa-book-atlas",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -10934,7 +10965,7 @@ export const classIconIndex = {
         "name": "fa-MapsBookmark",
         "title": "Bookmark",
         "className": "fa-solid fa-bookmark",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -10942,7 +10973,7 @@ export const classIconIndex = {
         "name": "fa-MapsBridge",
         "title": "Bridge",
         "className": "fa-solid fa-bridge",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -10950,7 +10981,7 @@ export const classIconIndex = {
         "name": "fa-MapsBridgeWater",
         "title": "Bridge Water",
         "className": "fa-solid fa-bridge-water",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -10958,7 +10989,7 @@ export const classIconIndex = {
         "name": "fa-MapsBriefcase",
         "title": "Briefcase",
         "className": "fa-solid fa-briefcase",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -10966,7 +10997,7 @@ export const classIconIndex = {
         "name": "fa-MapsBuilding",
         "title": "Building",
         "className": "fa-solid fa-building",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -10974,7 +11005,7 @@ export const classIconIndex = {
         "name": "fa-MapsBuildingColumns",
         "title": "Building Columns",
         "className": "fa-solid fa-building-columns",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -10982,7 +11013,7 @@ export const classIconIndex = {
         "name": "fa-MapsCakeCandles",
         "title": "Cake Candles",
         "className": "fa-solid fa-cake-candles",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -10990,7 +11021,7 @@ export const classIconIndex = {
         "name": "fa-MapsCar",
         "title": "Car",
         "className": "fa-solid fa-car",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -10998,7 +11029,7 @@ export const classIconIndex = {
         "name": "fa-MapsCartShopping",
         "title": "Cart Shopping",
         "className": "fa-solid fa-cart-shopping",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11006,7 +11037,7 @@ export const classIconIndex = {
         "name": "fa-MapsCircleInfo",
         "title": "Circle Info",
         "className": "fa-solid fa-circle-info",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11014,7 +11045,7 @@ export const classIconIndex = {
         "name": "fa-MapsCrosshairs",
         "title": "Crosshairs",
         "className": "fa-solid fa-crosshairs",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11022,7 +11053,7 @@ export const classIconIndex = {
         "name": "fa-MapsDiamondTurnRight",
         "title": "Diamond Turn Right",
         "className": "fa-solid fa-diamond-turn-right",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11030,7 +11061,7 @@ export const classIconIndex = {
         "name": "fa-MapsDollarSign",
         "title": "Dollar Sign",
         "className": "fa-solid fa-dollar-sign",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11038,7 +11069,7 @@ export const classIconIndex = {
         "name": "fa-MapsDrawPolygon",
         "title": "Draw Polygon",
         "className": "fa-solid fa-draw-polygon",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11046,7 +11077,7 @@ export const classIconIndex = {
         "name": "fa-MapsDroplet",
         "title": "Droplet",
         "className": "fa-solid fa-droplet",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11054,7 +11085,7 @@ export const classIconIndex = {
         "name": "fa-MapsEye",
         "title": "Eye",
         "className": "fa-solid fa-eye",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11062,7 +11093,7 @@ export const classIconIndex = {
         "name": "fa-MapsEyeLowVision",
         "title": "Eye Low Vision",
         "className": "fa-solid fa-eye-low-vision",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11070,7 +11101,7 @@ export const classIconIndex = {
         "name": "fa-MapsEyeSlash",
         "title": "Eye Slash",
         "className": "fa-solid fa-eye-slash",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11078,7 +11109,7 @@ export const classIconIndex = {
         "name": "fa-MapsFire",
         "title": "Fire",
         "className": "fa-solid fa-fire",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11086,7 +11117,7 @@ export const classIconIndex = {
         "name": "fa-MapsFireExtinguisher",
         "title": "Fire Extinguisher",
         "className": "fa-solid fa-fire-extinguisher",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11094,7 +11125,7 @@ export const classIconIndex = {
         "name": "fa-MapsFireFlameCurved",
         "title": "Fire Flame Curved",
         "className": "fa-solid fa-fire-flame-curved",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11102,7 +11133,7 @@ export const classIconIndex = {
         "name": "fa-MapsFlag",
         "title": "Flag",
         "className": "fa-solid fa-flag",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11110,7 +11141,7 @@ export const classIconIndex = {
         "name": "fa-MapsFlagCheckered",
         "title": "Flag Checkered",
         "className": "fa-solid fa-flag-checkered",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11118,7 +11149,7 @@ export const classIconIndex = {
         "name": "fa-MapsFlask",
         "title": "Flask",
         "className": "fa-solid fa-flask",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11126,7 +11157,7 @@ export const classIconIndex = {
         "name": "fa-MapsGamepad",
         "title": "Gamepad",
         "className": "fa-solid fa-gamepad",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11134,7 +11165,7 @@ export const classIconIndex = {
         "name": "fa-MapsGavel",
         "title": "Gavel",
         "className": "fa-solid fa-gavel",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11142,7 +11173,7 @@ export const classIconIndex = {
         "name": "fa-MapsGift",
         "title": "Gift",
         "className": "fa-solid fa-gift",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11150,7 +11181,7 @@ export const classIconIndex = {
         "name": "fa-MapsGlobe",
         "title": "Globe",
         "className": "fa-solid fa-globe",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11158,7 +11189,7 @@ export const classIconIndex = {
         "name": "fa-MapsGraduationCap",
         "title": "Graduation Cap",
         "className": "fa-solid fa-graduation-cap",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11166,7 +11197,7 @@ export const classIconIndex = {
         "name": "fa-MapsHeart",
         "title": "Heart",
         "className": "fa-solid fa-heart",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11174,7 +11205,7 @@ export const classIconIndex = {
         "name": "fa-MapsHeartPulse",
         "title": "Heart Pulse",
         "className": "fa-solid fa-heart-pulse",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11182,7 +11213,7 @@ export const classIconIndex = {
         "name": "fa-MapsHelicopter",
         "title": "Helicopter",
         "className": "fa-solid fa-helicopter",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11190,7 +11221,7 @@ export const classIconIndex = {
         "name": "fa-MapsHelicopterSymbol",
         "title": "Helicopter Symbol",
         "className": "fa-solid fa-helicopter-symbol",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11198,7 +11229,7 @@ export const classIconIndex = {
         "name": "fa-MapsHospital",
         "title": "Hospital",
         "className": "fa-solid fa-hospital",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11206,7 +11237,7 @@ export const classIconIndex = {
         "name": "fa-MapsHouse",
         "title": "House",
         "className": "fa-solid fa-house",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11214,7 +11245,7 @@ export const classIconIndex = {
         "name": "fa-MapsImage",
         "title": "Image",
         "className": "fa-solid fa-image",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11222,7 +11253,7 @@ export const classIconIndex = {
         "name": "fa-MapsImages",
         "title": "Images",
         "className": "fa-solid fa-images",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11230,7 +11261,7 @@ export const classIconIndex = {
         "name": "fa-MapsIndustry",
         "title": "Industry",
         "className": "fa-solid fa-industry",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11238,7 +11269,7 @@ export const classIconIndex = {
         "name": "fa-MapsInfo",
         "title": "Info",
         "className": "fa-solid fa-info",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11246,7 +11277,7 @@ export const classIconIndex = {
         "name": "fa-MapsJetFighter",
         "title": "Jet Fighter",
         "className": "fa-solid fa-jet-fighter",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11254,7 +11285,7 @@ export const classIconIndex = {
         "name": "fa-MapsKey",
         "title": "Key",
         "className": "fa-solid fa-key",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11262,7 +11293,7 @@ export const classIconIndex = {
         "name": "fa-MapsLandmark",
         "title": "Landmark",
         "className": "fa-solid fa-landmark",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11270,7 +11301,7 @@ export const classIconIndex = {
         "name": "fa-MapsLandmarkFlag",
         "title": "Landmark Flag",
         "className": "fa-solid fa-landmark-flag",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11278,7 +11309,7 @@ export const classIconIndex = {
         "name": "fa-MapsLayerGroup",
         "title": "Layer Group",
         "className": "fa-solid fa-layer-group",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11286,7 +11317,7 @@ export const classIconIndex = {
         "name": "fa-MapsLeaf",
         "title": "Leaf",
         "className": "fa-solid fa-leaf",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11294,7 +11325,7 @@ export const classIconIndex = {
         "name": "fa-MapsLemon",
         "title": "Lemon",
         "className": "fa-solid fa-lemon",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11302,7 +11333,7 @@ export const classIconIndex = {
         "name": "fa-MapsLifeRing",
         "title": "Life Ring",
         "className": "fa-solid fa-life-ring",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11310,7 +11341,7 @@ export const classIconIndex = {
         "name": "fa-MapsLightbulb",
         "title": "Lightbulb",
         "className": "fa-solid fa-lightbulb",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11318,7 +11349,7 @@ export const classIconIndex = {
         "name": "fa-MapsLocationArrow",
         "title": "Location Arrow",
         "className": "fa-solid fa-location-arrow",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11326,7 +11357,7 @@ export const classIconIndex = {
         "name": "fa-MapsLocationCrosshairs",
         "title": "Location Crosshairs",
         "className": "fa-solid fa-location-crosshairs",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11334,7 +11365,7 @@ export const classIconIndex = {
         "name": "fa-MapsLocationDot",
         "title": "Location Dot",
         "className": "fa-solid fa-location-dot",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11342,7 +11373,7 @@ export const classIconIndex = {
         "name": "fa-MapsLocationPin",
         "title": "Location Pin",
         "className": "fa-solid fa-location-pin",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11350,7 +11381,7 @@ export const classIconIndex = {
         "name": "fa-MapsLocationPinLock",
         "title": "Location Pin Lock",
         "className": "fa-solid fa-location-pin-lock",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11358,7 +11389,7 @@ export const classIconIndex = {
         "name": "fa-MapsMagnet",
         "title": "Magnet",
         "className": "fa-solid fa-magnet",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11366,7 +11397,7 @@ export const classIconIndex = {
         "name": "fa-MapsMagnifyingGlass",
         "title": "Magnifying Glass",
         "className": "fa-solid fa-magnifying-glass",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11374,7 +11405,7 @@ export const classIconIndex = {
         "name": "fa-MapsMagnifyingGlassLocation",
         "title": "Magnifying Glass Location",
         "className": "fa-solid fa-magnifying-glass-location",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11382,7 +11413,7 @@ export const classIconIndex = {
         "name": "fa-MapsMagnifyingGlassMinus",
         "title": "Magnifying Glass Minus",
         "className": "fa-solid fa-magnifying-glass-minus",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11390,7 +11421,7 @@ export const classIconIndex = {
         "name": "fa-MapsMagnifyingGlassPlus",
         "title": "Magnifying Glass Plus",
         "className": "fa-solid fa-magnifying-glass-plus",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11398,7 +11429,7 @@ export const classIconIndex = {
         "name": "fa-MapsMap",
         "title": "Map",
         "className": "fa-solid fa-map",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11406,7 +11437,7 @@ export const classIconIndex = {
         "name": "fa-MapsMapPin",
         "title": "Map Pin",
         "className": "fa-solid fa-map-pin",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11414,7 +11445,7 @@ export const classIconIndex = {
         "name": "fa-MapsMartiniGlassEmpty",
         "title": "Martini Glass Empty",
         "className": "fa-solid fa-martini-glass-empty",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11422,7 +11453,7 @@ export const classIconIndex = {
         "name": "fa-MapsMoneyBill",
         "title": "Money Bill",
         "className": "fa-solid fa-money-bill",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11430,7 +11461,7 @@ export const classIconIndex = {
         "name": "fa-MapsMoneyBill1",
         "title": "Money Bill1",
         "className": "fa-solid fa-money-bill-1",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11438,7 +11469,7 @@ export const classIconIndex = {
         "name": "fa-MapsMonument",
         "title": "Monument",
         "className": "fa-solid fa-monument",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11446,7 +11477,7 @@ export const classIconIndex = {
         "name": "fa-MapsMotorcycle",
         "title": "Motorcycle",
         "className": "fa-solid fa-motorcycle",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11454,7 +11485,7 @@ export const classIconIndex = {
         "name": "fa-MapsMountainSun",
         "title": "Mountain Sun",
         "className": "fa-solid fa-mountain-sun",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11462,7 +11493,7 @@ export const classIconIndex = {
         "name": "fa-MapsMugSaucer",
         "title": "Mug Saucer",
         "className": "fa-solid fa-mug-saucer",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11470,7 +11501,7 @@ export const classIconIndex = {
         "name": "fa-MapsMusic",
         "title": "Music",
         "className": "fa-solid fa-music",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11478,7 +11509,7 @@ export const classIconIndex = {
         "name": "fa-MapsNewspaper",
         "title": "Newspaper",
         "className": "fa-solid fa-newspaper",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11486,7 +11517,7 @@ export const classIconIndex = {
         "name": "fa-MapsPaw",
         "title": "Paw",
         "className": "fa-solid fa-paw",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11494,7 +11525,7 @@ export const classIconIndex = {
         "name": "fa-MapsPerson",
         "title": "Person",
         "className": "fa-solid fa-person",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11502,7 +11533,7 @@ export const classIconIndex = {
         "name": "fa-MapsPersonWalkingWithCane",
         "title": "Person Walking With Cane",
         "className": "fa-solid fa-person-walking-with-cane",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11510,7 +11541,7 @@ export const classIconIndex = {
         "name": "fa-MapsPhone",
         "title": "Phone",
         "className": "fa-solid fa-phone",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11518,7 +11549,7 @@ export const classIconIndex = {
         "name": "fa-MapsPhoneFlip",
         "title": "Phone Flip",
         "className": "fa-solid fa-phone-flip",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11526,7 +11557,7 @@ export const classIconIndex = {
         "name": "fa-MapsPhoneVolume",
         "title": "Phone Volume",
         "className": "fa-solid fa-phone-volume",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11534,7 +11565,7 @@ export const classIconIndex = {
         "name": "fa-MapsPlane",
         "title": "Plane",
         "className": "fa-solid fa-plane",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11542,7 +11573,7 @@ export const classIconIndex = {
         "name": "fa-MapsPlug",
         "title": "Plug",
         "className": "fa-solid fa-plug",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11550,7 +11581,7 @@ export const classIconIndex = {
         "name": "fa-MapsPlus",
         "title": "Plus",
         "className": "fa-solid fa-plus",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11558,7 +11589,7 @@ export const classIconIndex = {
         "name": "fa-MapsPrint",
         "title": "Print",
         "className": "fa-solid fa-print",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11566,7 +11597,7 @@ export const classIconIndex = {
         "name": "fa-MapsRecycle",
         "title": "Recycle",
         "className": "fa-solid fa-recycle",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11574,7 +11605,7 @@ export const classIconIndex = {
         "name": "fa-MapsRestroom",
         "title": "Restroom",
         "className": "fa-solid fa-restroom",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11582,7 +11613,7 @@ export const classIconIndex = {
         "name": "fa-MapsRoad",
         "title": "Road",
         "className": "fa-solid fa-road",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11590,7 +11621,7 @@ export const classIconIndex = {
         "name": "fa-MapsRocket",
         "title": "Rocket",
         "className": "fa-solid fa-rocket",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11598,7 +11629,7 @@ export const classIconIndex = {
         "name": "fa-MapsRoute",
         "title": "Route",
         "className": "fa-solid fa-route",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11606,7 +11637,7 @@ export const classIconIndex = {
         "name": "fa-MapsScaleBalanced",
         "title": "Scale Balanced",
         "className": "fa-solid fa-scale-balanced",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11614,7 +11645,7 @@ export const classIconIndex = {
         "name": "fa-MapsScaleUnbalanced",
         "title": "Scale Unbalanced",
         "className": "fa-solid fa-scale-unbalanced",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11622,7 +11653,7 @@ export const classIconIndex = {
         "name": "fa-MapsScaleUnbalancedFlip",
         "title": "Scale Unbalanced Flip",
         "className": "fa-solid fa-scale-unbalanced-flip",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11630,7 +11661,7 @@ export const classIconIndex = {
         "name": "fa-MapsShip",
         "title": "Ship",
         "className": "fa-solid fa-ship",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11638,7 +11669,7 @@ export const classIconIndex = {
         "name": "fa-MapsShoePrints",
         "title": "Shoe Prints",
         "className": "fa-solid fa-shoe-prints",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11646,7 +11677,7 @@ export const classIconIndex = {
         "name": "fa-MapsShower",
         "title": "Shower",
         "className": "fa-solid fa-shower",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11654,7 +11685,7 @@ export const classIconIndex = {
         "name": "fa-MapsSignsPost",
         "title": "Signs Post",
         "className": "fa-solid fa-signs-post",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11662,7 +11693,7 @@ export const classIconIndex = {
         "name": "fa-MapsSnowplow",
         "title": "Snowplow",
         "className": "fa-solid fa-snowplow",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11670,7 +11701,7 @@ export const classIconIndex = {
         "name": "fa-MapsSpoon",
         "title": "Spoon",
         "className": "fa-solid fa-spoon",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11678,7 +11709,7 @@ export const classIconIndex = {
         "name": "fa-MapsSquareH",
         "title": "Square H",
         "className": "fa-solid fa-square-h",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11686,7 +11717,7 @@ export const classIconIndex = {
         "name": "fa-MapsSquareParking",
         "title": "Square Parking",
         "className": "fa-solid fa-square-parking",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11694,7 +11725,7 @@ export const classIconIndex = {
         "name": "fa-MapsSquarePhone",
         "title": "Square Phone",
         "className": "fa-solid fa-square-phone",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11702,7 +11733,7 @@ export const classIconIndex = {
         "name": "fa-MapsSquarePhoneFlip",
         "title": "Square Phone Flip",
         "className": "fa-solid fa-square-phone-flip",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11710,7 +11741,7 @@ export const classIconIndex = {
         "name": "fa-MapsSquarePlus",
         "title": "Square Plus",
         "className": "fa-solid fa-square-plus",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11718,7 +11749,7 @@ export const classIconIndex = {
         "name": "fa-MapsStreetView",
         "title": "Street View",
         "className": "fa-solid fa-street-view",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11726,7 +11757,7 @@ export const classIconIndex = {
         "name": "fa-MapsSuitcase",
         "title": "Suitcase",
         "className": "fa-solid fa-suitcase",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11734,7 +11765,7 @@ export const classIconIndex = {
         "name": "fa-MapsSuitcaseMedical",
         "title": "Suitcase Medical",
         "className": "fa-solid fa-suitcase-medical",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11742,7 +11773,7 @@ export const classIconIndex = {
         "name": "fa-MapsTag",
         "title": "Tag",
         "className": "fa-solid fa-tag",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11750,7 +11781,7 @@ export const classIconIndex = {
         "name": "fa-MapsTags",
         "title": "Tags",
         "className": "fa-solid fa-tags",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11758,7 +11789,7 @@ export const classIconIndex = {
         "name": "fa-MapsTaxi",
         "title": "Taxi",
         "className": "fa-solid fa-taxi",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11766,7 +11797,7 @@ export const classIconIndex = {
         "name": "fa-MapsThumbtack",
         "title": "Thumbtack",
         "className": "fa-solid fa-thumbtack",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11774,7 +11805,7 @@ export const classIconIndex = {
         "name": "fa-MapsTicket",
         "title": "Ticket",
         "className": "fa-solid fa-ticket",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11782,7 +11813,7 @@ export const classIconIndex = {
         "name": "fa-MapsTicketSimple",
         "title": "Ticket Simple",
         "className": "fa-solid fa-ticket-simple",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11790,7 +11821,7 @@ export const classIconIndex = {
         "name": "fa-MapsTrafficLight",
         "title": "Traffic Light",
         "className": "fa-solid fa-traffic-light",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11798,7 +11829,7 @@ export const classIconIndex = {
         "name": "fa-MapsTrain",
         "title": "Train",
         "className": "fa-solid fa-train",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11806,7 +11837,7 @@ export const classIconIndex = {
         "name": "fa-MapsTrainSubway",
         "title": "Train Subway",
         "className": "fa-solid fa-train-subway",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11814,7 +11845,7 @@ export const classIconIndex = {
         "name": "fa-MapsTrainTram",
         "title": "Train Tram",
         "className": "fa-solid fa-train-tram",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11822,7 +11853,7 @@ export const classIconIndex = {
         "name": "fa-MapsTree",
         "title": "Tree",
         "className": "fa-solid fa-tree",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11830,7 +11861,7 @@ export const classIconIndex = {
         "name": "fa-MapsTrophy",
         "title": "Trophy",
         "className": "fa-solid fa-trophy",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11838,7 +11869,7 @@ export const classIconIndex = {
         "name": "fa-MapsTruck",
         "title": "Truck",
         "className": "fa-solid fa-truck",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11846,7 +11877,7 @@ export const classIconIndex = {
         "name": "fa-MapsTruckMedical",
         "title": "Truck Medical",
         "className": "fa-solid fa-truck-medical",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11854,7 +11885,7 @@ export const classIconIndex = {
         "name": "fa-MapsTty",
         "title": "Tty",
         "className": "fa-solid fa-tty",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11862,7 +11893,7 @@ export const classIconIndex = {
         "name": "fa-MapsUmbrella",
         "title": "Umbrella",
         "className": "fa-solid fa-umbrella",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11870,7 +11901,7 @@ export const classIconIndex = {
         "name": "fa-MapsUtensils",
         "title": "Utensils",
         "className": "fa-solid fa-utensils",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11878,7 +11909,7 @@ export const classIconIndex = {
         "name": "fa-MapsVest",
         "title": "Vest",
         "className": "fa-solid fa-vest",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11886,7 +11917,7 @@ export const classIconIndex = {
         "name": "fa-MapsVestPatches",
         "title": "Vest Patches",
         "className": "fa-solid fa-vest-patches",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11894,7 +11925,7 @@ export const classIconIndex = {
         "name": "fa-MapsWheelchair",
         "title": "Wheelchair",
         "className": "fa-solid fa-wheelchair",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11902,7 +11933,7 @@ export const classIconIndex = {
         "name": "fa-MapsWheelchairMove",
         "title": "Wheelchair Move",
         "className": "fa-solid fa-wheelchair-move",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11910,7 +11941,7 @@ export const classIconIndex = {
         "name": "fa-MapsWifi",
         "title": "Wifi",
         "className": "fa-solid fa-wifi",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11918,7 +11949,7 @@ export const classIconIndex = {
         "name": "fa-MapsWineGlass",
         "title": "Wine Glass",
         "className": "fa-solid fa-wine-glass",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11926,7 +11957,7 @@ export const classIconIndex = {
         "name": "fa-MapsWrench",
         "title": "Wrench",
         "className": "fa-solid fa-wrench",
-        "categories": [
+        "type":"fa","categories": [
             "maps"
         ]
     },
@@ -11934,7 +11965,7 @@ export const classIconIndex = {
         "name": "fa-MaritimeAnchor",
         "title": "Anchor",
         "className": "fa-solid fa-anchor",
-        "categories": [
+        "type":"fa","categories": [
             "maritime"
         ]
     },
@@ -11942,7 +11973,7 @@ export const classIconIndex = {
         "name": "fa-MaritimeAnchorCircleCheck",
         "title": "Anchor Circle Check",
         "className": "fa-solid fa-anchor-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "maritime"
         ]
     },
@@ -11950,7 +11981,7 @@ export const classIconIndex = {
         "name": "fa-MaritimeAnchorCircleExclamation",
         "title": "Anchor Circle Exclamation",
         "className": "fa-solid fa-anchor-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "maritime"
         ]
     },
@@ -11958,7 +11989,7 @@ export const classIconIndex = {
         "name": "fa-MaritimeAnchorCircleXmark",
         "title": "Anchor Circle Xmark",
         "className": "fa-solid fa-anchor-circle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "maritime"
         ]
     },
@@ -11966,7 +11997,7 @@ export const classIconIndex = {
         "name": "fa-MaritimeAnchorLock",
         "title": "Anchor Lock",
         "className": "fa-solid fa-anchor-lock",
-        "categories": [
+        "type":"fa","categories": [
             "maritime"
         ]
     },
@@ -11974,7 +12005,7 @@ export const classIconIndex = {
         "name": "fa-MaritimeFerry",
         "title": "Ferry",
         "className": "fa-solid fa-ferry",
-        "categories": [
+        "type":"fa","categories": [
             "maritime"
         ]
     },
@@ -11982,7 +12013,7 @@ export const classIconIndex = {
         "name": "fa-MaritimeFish",
         "title": "Fish",
         "className": "fa-solid fa-fish",
-        "categories": [
+        "type":"fa","categories": [
             "maritime"
         ]
     },
@@ -11990,7 +12021,7 @@ export const classIconIndex = {
         "name": "fa-MaritimeFishFins",
         "title": "Fish Fins",
         "className": "fa-solid fa-fish-fins",
-        "categories": [
+        "type":"fa","categories": [
             "maritime"
         ]
     },
@@ -11998,7 +12029,7 @@ export const classIconIndex = {
         "name": "fa-MaritimeOtter",
         "title": "Otter",
         "className": "fa-solid fa-otter",
-        "categories": [
+        "type":"fa","categories": [
             "maritime"
         ]
     },
@@ -12006,7 +12037,7 @@ export const classIconIndex = {
         "name": "fa-MaritimePersonSwimming",
         "title": "Person Swimming",
         "className": "fa-solid fa-person-swimming",
-        "categories": [
+        "type":"fa","categories": [
             "maritime"
         ]
     },
@@ -12014,7 +12045,7 @@ export const classIconIndex = {
         "name": "fa-MaritimeSailboat",
         "title": "Sailboat",
         "className": "fa-solid fa-sailboat",
-        "categories": [
+        "type":"fa","categories": [
             "maritime"
         ]
     },
@@ -12022,7 +12053,7 @@ export const classIconIndex = {
         "name": "fa-MaritimeShip",
         "title": "Ship",
         "className": "fa-solid fa-ship",
-        "categories": [
+        "type":"fa","categories": [
             "maritime"
         ]
     },
@@ -12030,7 +12061,7 @@ export const classIconIndex = {
         "name": "fa-MaritimeShrimp",
         "title": "Shrimp",
         "className": "fa-solid fa-shrimp",
-        "categories": [
+        "type":"fa","categories": [
             "maritime"
         ]
     },
@@ -12038,7 +12069,7 @@ export const classIconIndex = {
         "name": "fa-MaritimeWater",
         "title": "Water",
         "className": "fa-solid fa-water",
-        "categories": [
+        "type":"fa","categories": [
             "maritime"
         ]
     },
@@ -12046,7 +12077,7 @@ export const classIconIndex = {
         "name": "fa-MarketingAnchor",
         "title": "Anchor",
         "className": "fa-solid fa-anchor",
-        "categories": [
+        "type":"fa","categories": [
             "marketing"
         ]
     },
@@ -12054,7 +12085,7 @@ export const classIconIndex = {
         "name": "fa-MarketingAnchorCircleCheck",
         "title": "Anchor Circle Check",
         "className": "fa-solid fa-anchor-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "marketing"
         ]
     },
@@ -12062,7 +12093,7 @@ export const classIconIndex = {
         "name": "fa-MarketingAnchorCircleExclamation",
         "title": "Anchor Circle Exclamation",
         "className": "fa-solid fa-anchor-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "marketing"
         ]
     },
@@ -12070,7 +12101,7 @@ export const classIconIndex = {
         "name": "fa-MarketingAnchorCircleXmark",
         "title": "Anchor Circle Xmark",
         "className": "fa-solid fa-anchor-circle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "marketing"
         ]
     },
@@ -12078,7 +12109,7 @@ export const classIconIndex = {
         "name": "fa-MarketingAnchorLock",
         "title": "Anchor Lock",
         "className": "fa-solid fa-anchor-lock",
-        "categories": [
+        "type":"fa","categories": [
             "marketing"
         ]
     },
@@ -12086,7 +12117,7 @@ export const classIconIndex = {
         "name": "fa-MarketingFerry",
         "title": "Ferry",
         "className": "fa-solid fa-ferry",
-        "categories": [
+        "type":"fa","categories": [
             "marketing"
         ]
     },
@@ -12094,7 +12125,7 @@ export const classIconIndex = {
         "name": "fa-MarketingFish",
         "title": "Fish",
         "className": "fa-solid fa-fish",
-        "categories": [
+        "type":"fa","categories": [
             "marketing"
         ]
     },
@@ -12102,7 +12133,7 @@ export const classIconIndex = {
         "name": "fa-MarketingFishFins",
         "title": "Fish Fins",
         "className": "fa-solid fa-fish-fins",
-        "categories": [
+        "type":"fa","categories": [
             "marketing"
         ]
     },
@@ -12110,7 +12141,7 @@ export const classIconIndex = {
         "name": "fa-MarketingOtter",
         "title": "Otter",
         "className": "fa-solid fa-otter",
-        "categories": [
+        "type":"fa","categories": [
             "marketing"
         ]
     },
@@ -12118,7 +12149,7 @@ export const classIconIndex = {
         "name": "fa-MarketingPersonSwimming",
         "title": "Person Swimming",
         "className": "fa-solid fa-person-swimming",
-        "categories": [
+        "type":"fa","categories": [
             "marketing"
         ]
     },
@@ -12126,7 +12157,7 @@ export const classIconIndex = {
         "name": "fa-MarketingSailboat",
         "title": "Sailboat",
         "className": "fa-solid fa-sailboat",
-        "categories": [
+        "type":"fa","categories": [
             "marketing"
         ]
     },
@@ -12134,7 +12165,7 @@ export const classIconIndex = {
         "name": "fa-MarketingShip",
         "title": "Ship",
         "className": "fa-solid fa-ship",
-        "categories": [
+        "type":"fa","categories": [
             "marketing"
         ]
     },
@@ -12142,7 +12173,7 @@ export const classIconIndex = {
         "name": "fa-MarketingShrimp",
         "title": "Shrimp",
         "className": "fa-solid fa-shrimp",
-        "categories": [
+        "type":"fa","categories": [
             "marketing"
         ]
     },
@@ -12150,7 +12181,7 @@ export const classIconIndex = {
         "name": "fa-MarketingWater",
         "title": "Water",
         "className": "fa-solid fa-water",
-        "categories": [
+        "type":"fa","categories": [
             "marketing"
         ]
     },
@@ -12158,7 +12189,7 @@ export const classIconIndex = {
         "name": "fa-MathematicsCalculator",
         "title": "Calculator",
         "className": "fa-solid fa-calculator",
-        "categories": [
+        "type":"fa","categories": [
             "mathematics"
         ]
     },
@@ -12166,7 +12197,7 @@ export const classIconIndex = {
         "name": "fa-MathematicsCircleMinus",
         "title": "Circle Minus",
         "className": "fa-solid fa-circle-minus",
-        "categories": [
+        "type":"fa","categories": [
             "mathematics"
         ]
     },
@@ -12174,7 +12205,7 @@ export const classIconIndex = {
         "name": "fa-MathematicsCirclePlus",
         "title": "Circle Plus",
         "className": "fa-solid fa-circle-plus",
-        "categories": [
+        "type":"fa","categories": [
             "mathematics"
         ]
     },
@@ -12182,7 +12213,7 @@ export const classIconIndex = {
         "name": "fa-MathematicsCircleXmark",
         "title": "Circle Xmark",
         "className": "fa-solid fa-circle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "mathematics"
         ]
     },
@@ -12190,7 +12221,7 @@ export const classIconIndex = {
         "name": "fa-MathematicsDivide",
         "title": "Divide",
         "className": "fa-solid fa-divide",
-        "categories": [
+        "type":"fa","categories": [
             "mathematics"
         ]
     },
@@ -12198,7 +12229,7 @@ export const classIconIndex = {
         "name": "fa-MathematicsEquals",
         "title": "Equals",
         "className": "fa-solid fa-equals",
-        "categories": [
+        "type":"fa","categories": [
             "mathematics"
         ]
     },
@@ -12206,7 +12237,7 @@ export const classIconIndex = {
         "name": "fa-MathematicsGreaterThan",
         "title": "Greater Than",
         "className": "fa-solid fa-greater-than",
-        "categories": [
+        "type":"fa","categories": [
             "mathematics"
         ]
     },
@@ -12214,7 +12245,7 @@ export const classIconIndex = {
         "name": "fa-MathematicsGreaterThanEqual",
         "title": "Greater Than Equal",
         "className": "fa-solid fa-greater-than-equal",
-        "categories": [
+        "type":"fa","categories": [
             "mathematics"
         ]
     },
@@ -12222,7 +12253,7 @@ export const classIconIndex = {
         "name": "fa-MathematicsInfinity",
         "title": "Infinity",
         "className": "fa-solid fa-infinity",
-        "categories": [
+        "type":"fa","categories": [
             "mathematics"
         ]
     },
@@ -12230,7 +12261,7 @@ export const classIconIndex = {
         "name": "fa-MathematicsLessThan",
         "title": "Less Than",
         "className": "fa-solid fa-less-than",
-        "categories": [
+        "type":"fa","categories": [
             "mathematics"
         ]
     },
@@ -12238,7 +12269,7 @@ export const classIconIndex = {
         "name": "fa-MathematicsLessThanEqual",
         "title": "Less Than Equal",
         "className": "fa-solid fa-less-than-equal",
-        "categories": [
+        "type":"fa","categories": [
             "mathematics"
         ]
     },
@@ -12246,7 +12277,7 @@ export const classIconIndex = {
         "name": "fa-MathematicsMinus",
         "title": "Minus",
         "className": "fa-solid fa-minus",
-        "categories": [
+        "type":"fa","categories": [
             "mathematics"
         ]
     },
@@ -12254,7 +12285,7 @@ export const classIconIndex = {
         "name": "fa-MathematicsNotEqual",
         "title": "Not Equal",
         "className": "fa-solid fa-not-equal",
-        "categories": [
+        "type":"fa","categories": [
             "mathematics"
         ]
     },
@@ -12262,7 +12293,7 @@ export const classIconIndex = {
         "name": "fa-MathematicsPercent",
         "title": "Percent",
         "className": "fa-solid fa-percent",
-        "categories": [
+        "type":"fa","categories": [
             "mathematics"
         ]
     },
@@ -12270,7 +12301,7 @@ export const classIconIndex = {
         "name": "fa-MathematicsPlus",
         "title": "Plus",
         "className": "fa-solid fa-plus",
-        "categories": [
+        "type":"fa","categories": [
             "mathematics"
         ]
     },
@@ -12278,7 +12309,7 @@ export const classIconIndex = {
         "name": "fa-MathematicsPlusMinus",
         "title": "Plus Minus",
         "className": "fa-solid fa-plus-minus",
-        "categories": [
+        "type":"fa","categories": [
             "mathematics"
         ]
     },
@@ -12286,7 +12317,7 @@ export const classIconIndex = {
         "name": "fa-MathematicsSquareMinus",
         "title": "Square Minus",
         "className": "fa-solid fa-square-minus",
-        "categories": [
+        "type":"fa","categories": [
             "mathematics"
         ]
     },
@@ -12294,7 +12325,7 @@ export const classIconIndex = {
         "name": "fa-MathematicsSquareRootVariable",
         "title": "Square Root Variable",
         "className": "fa-solid fa-square-root-variable",
-        "categories": [
+        "type":"fa","categories": [
             "mathematics"
         ]
     },
@@ -12302,7 +12333,7 @@ export const classIconIndex = {
         "name": "fa-MathematicsSquareXmark",
         "title": "Square Xmark",
         "className": "fa-solid fa-square-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "mathematics"
         ]
     },
@@ -12310,7 +12341,7 @@ export const classIconIndex = {
         "name": "fa-MathematicsSubscript",
         "title": "Subscript",
         "className": "fa-solid fa-subscript",
-        "categories": [
+        "type":"fa","categories": [
             "mathematics"
         ]
     },
@@ -12318,7 +12349,7 @@ export const classIconIndex = {
         "name": "fa-MathematicsSuperscript",
         "title": "Superscript",
         "className": "fa-solid fa-superscript",
-        "categories": [
+        "type":"fa","categories": [
             "mathematics"
         ]
     },
@@ -12326,7 +12357,7 @@ export const classIconIndex = {
         "name": "fa-MathematicsWaveSquare",
         "title": "Wave Square",
         "className": "fa-solid fa-wave-square",
-        "categories": [
+        "type":"fa","categories": [
             "mathematics"
         ]
     },
@@ -12334,7 +12365,7 @@ export const classIconIndex = {
         "name": "fa-MathematicsXmark",
         "title": "Xmark",
         "className": "fa-solid fa-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "mathematics"
         ]
     },
@@ -12342,7 +12373,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackArrowRotateLeft",
         "title": "Mediaplayback Arrow Rotate Left",
         "className": "fa-solid fa-arrow-rotate-left",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12350,7 +12381,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackArrowRotateRight",
         "title": "Mediaplayback Arrow Rotate Right",
         "className": "fa-solid fa-arrow-rotate-right",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12358,7 +12389,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackArrowsRotate",
         "title": "Mediaplayback Arrows Rotate",
         "className": "fa-solid fa-arrows-rotate",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12366,7 +12397,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackBackward",
         "title": "Mediaplayback Backward",
         "className": "fa-solid fa-backward",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12374,7 +12405,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackBackwardFast",
         "title": "Mediaplayback Backward Fast",
         "className": "fa-solid fa-backward-fast",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12382,7 +12413,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackBackwardStep",
         "title": "Mediaplayback Backward Step",
         "className": "fa-solid fa-backward-step",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12390,7 +12421,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackCirclePause",
         "title": "Mediaplayback Circle Pause",
         "className": "fa-solid fa-circle-pause",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12398,7 +12429,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackCirclePlay",
         "title": "Mediaplayback Circle Play",
         "className": "fa-solid fa-circle-play",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12406,7 +12437,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackCircleStop",
         "title": "Mediaplayback Circle Stop",
         "className": "fa-solid fa-circle-stop",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12414,7 +12445,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackCompress",
         "title": "Mediaplayback Compress",
         "className": "fa-solid fa-compress",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12422,7 +12453,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackDownLeftAndUpRightToCenter",
         "title": "Mediaplayback Down Left And Up Right To Center",
         "className": "fa-solid fa-down-left-and-up-right-to-center",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12430,7 +12461,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackEject",
         "title": "Mediaplayback Eject",
         "className": "fa-solid fa-eject",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12438,7 +12469,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackExpand",
         "title": "Mediaplayback Expand",
         "className": "fa-solid fa-expand",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12446,7 +12477,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackForward",
         "title": "Mediaplayback Forward",
         "className": "fa-solid fa-forward",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12454,7 +12485,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackForwardFast",
         "title": "Mediaplayback Forward Fast",
         "className": "fa-solid fa-forward-fast",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12462,7 +12493,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackForwardStep",
         "title": "Mediaplayback Forward Step",
         "className": "fa-solid fa-forward-step",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12470,7 +12501,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackHand",
         "title": "Mediaplayback Hand",
         "className": "fa-solid fa-hand",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12478,7 +12509,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackMaximize",
         "title": "Mediaplayback Maximize",
         "className": "fa-solid fa-maximize",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12486,7 +12517,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackMinimize",
         "title": "Mediaplayback Minimize",
         "className": "fa-solid fa-minimize",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12494,7 +12525,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackMusic",
         "title": "Mediaplayback Music",
         "className": "fa-solid fa-music",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12502,7 +12533,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackPause",
         "title": "Mediaplayback Pause",
         "className": "fa-solid fa-pause",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12510,7 +12541,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackPhoneVolume",
         "title": "Mediaplayback Phone Volume",
         "className": "fa-solid fa-phone-volume",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12518,7 +12549,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackPlay",
         "title": "Mediaplayback Play",
         "className": "fa-solid fa-play",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12526,7 +12557,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackPlusMinus",
         "title": "Mediaplayback Plus Minus",
         "className": "fa-solid fa-plus-minus",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12534,7 +12565,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackRepeat",
         "title": "Mediaplayback Repeat",
         "className": "fa-solid fa-repeat",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12542,7 +12573,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackRotate",
         "title": "Mediaplayback Rotate",
         "className": "fa-solid fa-rotate",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12550,7 +12581,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackRotateLeft",
         "title": "Mediaplayback Rotate Left",
         "className": "fa-solid fa-rotate-left",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12558,7 +12589,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackRotateRight",
         "title": "Mediaplayback Rotate Right",
         "className": "fa-solid fa-rotate-right",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12566,7 +12597,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackRss",
         "title": "Mediaplayback Rss",
         "className": "fa-solid fa-rss",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12574,7 +12605,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackShuffle",
         "title": "Mediaplayback Shuffle",
         "className": "fa-solid fa-shuffle",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12582,7 +12613,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackSliders",
         "title": "Mediaplayback Sliders",
         "className": "fa-solid fa-sliders",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12590,7 +12621,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackStop",
         "title": "Mediaplayback Stop",
         "className": "fa-solid fa-stop",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12598,7 +12629,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackUpRightAndDownLeftFromCenter",
         "title": "Mediaplayback Up Right And Down Left From Center",
         "className": "fa-solid fa-up-right-and-down-left-from-center",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12606,7 +12637,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackVolumeHigh",
         "title": "Mediaplayback Volume High",
         "className": "fa-solid fa-volume-high",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12614,7 +12645,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackVolumeLow",
         "title": "Mediaplayback Volume Low",
         "className": "fa-solid fa-volume-low",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12622,7 +12653,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackVolumeOff",
         "title": "Mediaplayback Volume Off",
         "className": "fa-solid fa-volume-off",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12630,7 +12661,7 @@ export const classIconIndex = {
         "name": "fa-MediaplaybackVolumeXmark",
         "title": "Mediaplayback Volume Xmark",
         "className": "fa-solid fa-volume-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "media-playback"
         ]
     },
@@ -12638,7 +12669,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthBacteria",
         "title": "Bacteria",
         "className": "fa-solid fa-bacteria",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12646,7 +12677,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthBacterium",
         "title": "Bacterium",
         "className": "fa-solid fa-bacterium",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12654,7 +12685,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthBandage",
         "title": "Bandage",
         "className": "fa-solid fa-bandage",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12662,7 +12693,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthBanSmoking",
         "title": "Ban Smoking",
         "className": "fa-solid fa-ban-smoking",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12670,7 +12701,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthBedPulse",
         "title": "Bed Pulse",
         "className": "fa-solid fa-bed-pulse",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12678,7 +12709,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthBiohazard",
         "title": "Biohazard",
         "className": "fa-solid fa-biohazard",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12686,7 +12717,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthBone",
         "title": "Bone",
         "className": "fa-solid fa-bone",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12694,7 +12725,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthBong",
         "title": "Bong",
         "className": "fa-solid fa-bong",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12702,7 +12733,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthBookMedical",
         "title": "Book Medical",
         "className": "fa-solid fa-book-medical",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12710,7 +12741,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthBrain",
         "title": "Brain",
         "className": "fa-solid fa-brain",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12718,7 +12749,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthBriefcaseMedical",
         "title": "Briefcase Medical",
         "className": "fa-solid fa-briefcase-medical",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12726,7 +12757,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthCannabis",
         "title": "Cannabis",
         "className": "fa-solid fa-cannabis",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12734,7 +12765,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthCapsules",
         "title": "Capsules",
         "className": "fa-solid fa-capsules",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12742,7 +12773,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthCircleH",
         "title": "Circle H",
         "className": "fa-solid fa-circle-h",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12750,7 +12781,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthCircleRadiation",
         "title": "Circle Radiation",
         "className": "fa-solid fa-circle-radiation",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12758,7 +12789,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthClipboardUser",
         "title": "Clipboard User",
         "className": "fa-solid fa-clipboard-user",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12766,7 +12797,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthClockRotateLeft",
         "title": "Clock Rotate Left",
         "className": "fa-solid fa-clock-rotate-left",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12774,7 +12805,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthCommentMedical",
         "title": "Comment Medical",
         "className": "fa-solid fa-comment-medical",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12782,7 +12813,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthCrutch",
         "title": "Crutch",
         "className": "fa-solid fa-crutch",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12790,7 +12821,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthDisease",
         "title": "Disease",
         "className": "fa-solid fa-disease",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12798,7 +12829,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthDna",
         "title": "Dna",
         "className": "fa-solid fa-dna",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12806,7 +12837,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthDroplet",
         "title": "Droplet",
         "className": "fa-solid fa-droplet",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12814,7 +12845,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthDropletSlash",
         "title": "Droplet Slash",
         "className": "fa-solid fa-droplet-slash",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12822,7 +12853,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthEye",
         "title": "Eye",
         "className": "fa-solid fa-eye",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12830,7 +12861,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthEyeDropper",
         "title": "Eye Dropper",
         "className": "fa-solid fa-eye-dropper",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12838,7 +12869,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthFileMedical",
         "title": "File Medical",
         "className": "fa-solid fa-file-medical",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12846,7 +12877,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthFilePrescription",
         "title": "File Prescription",
         "className": "fa-solid fa-file-prescription",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12854,7 +12885,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthFileWaveform",
         "title": "File Waveform",
         "className": "fa-solid fa-file-waveform",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12862,7 +12893,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthFireFlameSimple",
         "title": "Fire Flame Simple",
         "className": "fa-solid fa-fire-flame-simple",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12870,7 +12901,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthFlask",
         "title": "Flask",
         "className": "fa-solid fa-flask",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12878,7 +12909,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthFlaskVial",
         "title": "Flask Vial",
         "className": "fa-solid fa-flask-vial",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12886,7 +12917,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthHandDots",
         "title": "Hand Dots",
         "className": "fa-solid fa-hand-dots",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12894,7 +12925,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthHandHoldingDroplet",
         "title": "Hand Holding Droplet",
         "className": "fa-solid fa-hand-holding-droplet",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12902,7 +12933,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthHandHoldingMedical",
         "title": "Hand Holding Medical",
         "className": "fa-solid fa-hand-holding-medical",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12910,7 +12941,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthHeadSideCough",
         "title": "Head Side Cough",
         "className": "fa-solid fa-head-side-cough",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12918,7 +12949,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthHeadSideCoughSlash",
         "title": "Head Side Cough Slash",
         "className": "fa-solid fa-head-side-cough-slash",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12926,7 +12957,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthHeadSideMask",
         "title": "Head Side Mask",
         "className": "fa-solid fa-head-side-mask",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12934,7 +12965,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthHeadSideVirus",
         "title": "Head Side Virus",
         "className": "fa-solid fa-head-side-virus",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12942,7 +12973,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthHeart",
         "title": "Heart",
         "className": "fa-solid fa-heart",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12950,7 +12981,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthHeartCircleBolt",
         "title": "Heart Circle Bolt",
         "className": "fa-solid fa-heart-circle-bolt",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12958,7 +12989,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthHeartCircleCheck",
         "title": "Heart Circle Check",
         "className": "fa-solid fa-heart-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12966,7 +12997,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthHeartCircleExclamation",
         "title": "Heart Circle Exclamation",
         "className": "fa-solid fa-heart-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12974,7 +13005,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthHeartCircleMinus",
         "title": "Heart Circle Minus",
         "className": "fa-solid fa-heart-circle-minus",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12982,7 +13013,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthHeartCirclePlus",
         "title": "Heart Circle Plus",
         "className": "fa-solid fa-heart-circle-plus",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12990,7 +13021,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthHeartCircleXmark",
         "title": "Heart Circle Xmark",
         "className": "fa-solid fa-heart-circle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -12998,7 +13029,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthHeartPulse",
         "title": "Heart Pulse",
         "className": "fa-solid fa-heart-pulse",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13006,7 +13037,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthHospital",
         "title": "Hospital",
         "className": "fa-solid fa-hospital",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13014,7 +13045,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthHospitalUser",
         "title": "Hospital User",
         "className": "fa-solid fa-hospital-user",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13022,7 +13053,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthHouseChimneyMedical",
         "title": "House Chimney Medical",
         "className": "fa-solid fa-house-chimney-medical",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13030,7 +13061,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthHouseMedical",
         "title": "House Medical",
         "className": "fa-solid fa-house-medical",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13038,7 +13069,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthHouseMedicalCircleCheck",
         "title": "House Medical Circle Check",
         "className": "fa-solid fa-house-medical-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13046,7 +13077,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthHouseMedicalCircleExclamation",
         "title": "House Medical Circle Exclamation",
         "className": "fa-solid fa-house-medical-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13054,7 +13085,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthHouseMedicalCircleXmark",
         "title": "House Medical Circle Xmark",
         "className": "fa-solid fa-house-medical-circle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13062,7 +13093,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthHouseMedicalFlag",
         "title": "House Medical Flag",
         "className": "fa-solid fa-house-medical-flag",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13070,7 +13101,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthIdCardClip",
         "title": "Id Card Clip",
         "className": "fa-solid fa-id-card-clip",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13078,7 +13109,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthJoint",
         "title": "Joint",
         "className": "fa-solid fa-joint",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13086,7 +13117,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthKitMedical",
         "title": "Kit Medical",
         "className": "fa-solid fa-kit-medical",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13094,7 +13125,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthLaptopMedical",
         "title": "Laptop Medical",
         "className": "fa-solid fa-laptop-medical",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13102,7 +13133,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthLungs",
         "title": "Lungs",
         "className": "fa-solid fa-lungs",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13110,7 +13141,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthLungsVirus",
         "title": "Lungs Virus",
         "className": "fa-solid fa-lungs-virus",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13118,7 +13149,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthMaskFace",
         "title": "Mask Face",
         "className": "fa-solid fa-mask-face",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13126,7 +13157,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthMaskVentilator",
         "title": "Mask Ventilator",
         "className": "fa-solid fa-mask-ventilator",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13134,7 +13165,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthMicroscope",
         "title": "Microscope",
         "className": "fa-solid fa-microscope",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13142,7 +13173,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthMortarPestle",
         "title": "Mortar Pestle",
         "className": "fa-solid fa-mortar-pestle",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13150,7 +13181,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthNotesMedical",
         "title": "Notes Medical",
         "className": "fa-solid fa-notes-medical",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13158,7 +13189,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthPager",
         "title": "Pager",
         "className": "fa-solid fa-pager",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13166,7 +13197,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthPersonBreastfeeding",
         "title": "Person Breastfeeding",
         "className": "fa-solid fa-person-breastfeeding",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13174,7 +13205,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthPersonCane",
         "title": "Person Cane",
         "className": "fa-solid fa-person-cane",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13182,7 +13213,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthPersonDotsFromLine",
         "title": "Person Dots From Line",
         "className": "fa-solid fa-person-dots-from-line",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13190,7 +13221,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthPersonHalfDress",
         "title": "Person Half Dress",
         "className": "fa-solid fa-person-half-dress",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13198,7 +13229,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthPills",
         "title": "Pills",
         "className": "fa-solid fa-pills",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13206,7 +13237,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthPlus",
         "title": "Plus",
         "className": "fa-solid fa-plus",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13214,7 +13245,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthPoop",
         "title": "Poop",
         "className": "fa-solid fa-poop",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13222,7 +13253,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthPrescription",
         "title": "Prescription",
         "className": "fa-solid fa-prescription",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13230,7 +13261,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthPrescriptionBottle",
         "title": "Prescription Bottle",
         "className": "fa-solid fa-prescription-bottle",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13238,7 +13269,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthPrescriptionBottleMedical",
         "title": "Prescription Bottle Medical",
         "className": "fa-solid fa-prescription-bottle-medical",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13246,7 +13277,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthPumpMedical",
         "title": "Pump Medical",
         "className": "fa-solid fa-pump-medical",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13254,7 +13285,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthRadiation",
         "title": "Radiation",
         "className": "fa-solid fa-radiation",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13262,7 +13293,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthReceipt",
         "title": "Receipt",
         "className": "fa-solid fa-receipt",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13270,7 +13301,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthShieldVirus",
         "title": "Shield Virus",
         "className": "fa-solid fa-shield-virus",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13278,7 +13309,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthSkull",
         "title": "Skull",
         "className": "fa-solid fa-skull",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13286,7 +13317,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthSkullCrossbones",
         "title": "Skull Crossbones",
         "className": "fa-solid fa-skull-crossbones",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13294,7 +13325,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthSmoking",
         "title": "Smoking",
         "className": "fa-solid fa-smoking",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13302,7 +13333,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthSquareH",
         "title": "Square H",
         "className": "fa-solid fa-square-h",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13310,7 +13341,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthSquarePlus",
         "title": "Square Plus",
         "className": "fa-solid fa-square-plus",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13318,7 +13349,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthSquareVirus",
         "title": "Square Virus",
         "className": "fa-solid fa-square-virus",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13326,7 +13357,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthStaffSnake",
         "title": "Staff Snake",
         "className": "fa-solid fa-staff-snake",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13334,7 +13365,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthStarOfLife",
         "title": "Star Of Life",
         "className": "fa-solid fa-star-of-life",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13342,7 +13373,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthStethoscope",
         "title": "Stethoscope",
         "className": "fa-solid fa-stethoscope",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13350,7 +13381,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthSuitcaseMedical",
         "title": "Suitcase Medical",
         "className": "fa-solid fa-suitcase-medical",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13358,7 +13389,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthSyringe",
         "title": "Syringe",
         "className": "fa-solid fa-syringe",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13366,7 +13397,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthTablets",
         "title": "Tablets",
         "className": "fa-solid fa-tablets",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13374,7 +13405,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthTeeth",
         "title": "Teeth",
         "className": "fa-solid fa-teeth",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13382,7 +13413,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthTeethOpen",
         "title": "Teeth Open",
         "className": "fa-solid fa-teeth-open",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13390,7 +13421,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthThermometer",
         "title": "Thermometer",
         "className": "fa-solid fa-thermometer",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13398,7 +13429,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthTooth",
         "title": "Tooth",
         "className": "fa-solid fa-tooth",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13406,7 +13437,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthTruckDroplet",
         "title": "Truck Droplet",
         "className": "fa-solid fa-truck-droplet",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13414,7 +13445,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthTruckMedical",
         "title": "Truck Medical",
         "className": "fa-solid fa-truck-medical",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13422,7 +13453,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthUserDoctor",
         "title": "User Doctor",
         "className": "fa-solid fa-user-doctor",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13430,7 +13461,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthUserNurse",
         "title": "User Nurse",
         "className": "fa-solid fa-user-nurse",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13438,7 +13469,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthVial",
         "title": "Vial",
         "className": "fa-solid fa-vial",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13446,7 +13477,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthVialCircleCheck",
         "title": "Vial Circle Check",
         "className": "fa-solid fa-vial-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13454,7 +13485,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthVials",
         "title": "Vials",
         "className": "fa-solid fa-vials",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13462,7 +13493,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthVialVirus",
         "title": "Vial Virus",
         "className": "fa-solid fa-vial-virus",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13470,7 +13501,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthVirus",
         "title": "Virus",
         "className": "fa-solid fa-virus",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13478,7 +13509,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthVirusCovid",
         "title": "Virus Covid",
         "className": "fa-solid fa-virus-covid",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13486,7 +13517,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthVirusCovidSlash",
         "title": "Virus Covid Slash",
         "className": "fa-solid fa-virus-covid-slash",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13494,7 +13525,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthViruses",
         "title": "Viruses",
         "className": "fa-solid fa-viruses",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13502,7 +13533,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthVirusSlash",
         "title": "Virus Slash",
         "className": "fa-solid fa-virus-slash",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13510,7 +13541,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthWeightScale",
         "title": "Weight Scale",
         "className": "fa-solid fa-weight-scale",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13518,7 +13549,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthWheelchair",
         "title": "Wheelchair",
         "className": "fa-solid fa-wheelchair",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13526,7 +13557,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthWheelchairMove",
         "title": "Wheelchair Move",
         "className": "fa-solid fa-wheelchair-move",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13534,7 +13565,7 @@ export const classIconIndex = {
         "name": "fa-MedicalHealthXRay",
         "title": "XRay",
         "className": "fa-solid fa-x-ray",
-        "categories": [
+        "type":"fa","categories": [
             "medical+health"
         ]
     },
@@ -13542,7 +13573,7 @@ export const classIconIndex = {
         "name": "fa-MoneyAustralSign",
         "title": "Austral Sign",
         "className": "fa-solid fa-austral-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13550,7 +13581,7 @@ export const classIconIndex = {
         "name": "fa-MoneyBahtSign",
         "title": "Baht Sign",
         "className": "fa-solid fa-baht-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13558,7 +13589,7 @@ export const classIconIndex = {
         "name": "fa-MoneyBangladeshiTakaSign",
         "title": "Bangladeshi Taka Sign",
         "className": "fa-solid fa-bangladeshi-taka-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13566,7 +13597,7 @@ export const classIconIndex = {
         "name": "fa-MoneyBitcoin",
         "title": "Bitcoin",
         "className": "fa-solid fa-bitcoin",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13574,7 +13605,7 @@ export const classIconIndex = {
         "name": "fa-MoneyBitcoinSign",
         "title": "Bitcoin Sign",
         "className": "fa-solid fa-bitcoin-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13582,7 +13613,7 @@ export const classIconIndex = {
         "name": "fa-MoneyBrazilianRealSign",
         "title": "Brazilian Real Sign",
         "className": "fa-solid fa-brazilian-real-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13590,7 +13621,7 @@ export const classIconIndex = {
         "name": "fa-MoneyBtc",
         "title": "Btc",
         "className": "fa-solid fa-btc",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13598,7 +13629,7 @@ export const classIconIndex = {
         "name": "fa-MoneyCashRegister",
         "title": "Cash Register",
         "className": "fa-solid fa-cash-register",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13606,7 +13637,7 @@ export const classIconIndex = {
         "name": "fa-MoneyCediSign",
         "title": "Cedi Sign",
         "className": "fa-solid fa-cedi-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13614,7 +13645,7 @@ export const classIconIndex = {
         "name": "fa-MoneyCentSign",
         "title": "Cent Sign",
         "className": "fa-solid fa-cent-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13622,7 +13653,7 @@ export const classIconIndex = {
         "name": "fa-MoneyChartLine",
         "title": "Chart Line",
         "className": "fa-solid fa-chart-line",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13630,7 +13661,7 @@ export const classIconIndex = {
         "name": "fa-MoneyChartPie",
         "title": "Chart Pie",
         "className": "fa-solid fa-chart-pie",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13638,7 +13669,7 @@ export const classIconIndex = {
         "name": "fa-MoneyCircleDollarToSlot",
         "title": "Circle Dollar To Slot",
         "className": "fa-solid fa-circle-dollar-to-slot",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13646,7 +13677,7 @@ export const classIconIndex = {
         "name": "fa-MoneyCoins",
         "title": "Coins",
         "className": "fa-solid fa-coins",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13654,7 +13685,7 @@ export const classIconIndex = {
         "name": "fa-MoneyColonSign",
         "title": "Colon Sign",
         "className": "fa-solid fa-colon-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13662,7 +13693,7 @@ export const classIconIndex = {
         "name": "fa-MoneyCommentDollar",
         "title": "Comment Dollar",
         "className": "fa-solid fa-comment-dollar",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13670,7 +13701,7 @@ export const classIconIndex = {
         "name": "fa-MoneyCommentsDollar",
         "title": "Comments Dollar",
         "className": "fa-solid fa-comments-dollar",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13678,7 +13709,7 @@ export const classIconIndex = {
         "name": "fa-MoneyCreditCard",
         "title": "Credit Card",
         "className": "fa-solid fa-credit-card",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13686,7 +13717,7 @@ export const classIconIndex = {
         "name": "fa-MoneyCruzeiroSign",
         "title": "Cruzeiro Sign",
         "className": "fa-solid fa-cruzeiro-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13694,7 +13725,7 @@ export const classIconIndex = {
         "name": "fa-MoneyDollarSign",
         "title": "Dollar Sign",
         "className": "fa-solid fa-dollar-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13702,7 +13733,7 @@ export const classIconIndex = {
         "name": "fa-MoneyDongSign",
         "title": "Dong Sign",
         "className": "fa-solid fa-dong-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13710,7 +13741,7 @@ export const classIconIndex = {
         "name": "fa-MoneyEthereum",
         "title": "Ethereum",
         "className": "fa-solid fa-ethereum",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13718,7 +13749,7 @@ export const classIconIndex = {
         "name": "fa-MoneyEuroSign",
         "title": "Euro Sign",
         "className": "fa-solid fa-euro-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13726,7 +13757,7 @@ export const classIconIndex = {
         "name": "fa-MoneyFileInvoice",
         "title": "File Invoice",
         "className": "fa-solid fa-file-invoice",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13734,7 +13765,7 @@ export const classIconIndex = {
         "name": "fa-MoneyFileInvoiceDollar",
         "title": "File Invoice Dollar",
         "className": "fa-solid fa-file-invoice-dollar",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13742,7 +13773,7 @@ export const classIconIndex = {
         "name": "fa-MoneyFlorinSign",
         "title": "Florin Sign",
         "className": "fa-solid fa-florin-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13750,7 +13781,7 @@ export const classIconIndex = {
         "name": "fa-MoneyFrancSign",
         "title": "Franc Sign",
         "className": "fa-solid fa-franc-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13758,7 +13789,7 @@ export const classIconIndex = {
         "name": "fa-MoneyGg",
         "title": "Gg",
         "className": "fa-solid fa-gg",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13766,7 +13797,7 @@ export const classIconIndex = {
         "name": "fa-MoneyGgCircle",
         "title": "Gg Circle",
         "className": "fa-solid fa-gg-circle",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13774,7 +13805,7 @@ export const classIconIndex = {
         "name": "fa-MoneyGuaraniSign",
         "title": "Guarani Sign",
         "className": "fa-solid fa-guarani-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13782,7 +13813,7 @@ export const classIconIndex = {
         "name": "fa-MoneyHandHoldingDollar",
         "title": "Hand Holding Dollar",
         "className": "fa-solid fa-hand-holding-dollar",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13790,7 +13821,7 @@ export const classIconIndex = {
         "name": "fa-MoneyHryvniaSign",
         "title": "Hryvnia Sign",
         "className": "fa-solid fa-hryvnia-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13798,7 +13829,7 @@ export const classIconIndex = {
         "name": "fa-MoneyIndianRupeeSign",
         "title": "Indian Rupee Sign",
         "className": "fa-solid fa-indian-rupee-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13806,7 +13837,7 @@ export const classIconIndex = {
         "name": "fa-MoneyKipSign",
         "title": "Kip Sign",
         "className": "fa-solid fa-kip-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13814,7 +13845,7 @@ export const classIconIndex = {
         "name": "fa-MoneyLandmark",
         "title": "Landmark",
         "className": "fa-solid fa-landmark",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13822,7 +13853,7 @@ export const classIconIndex = {
         "name": "fa-MoneyLariSign",
         "title": "Lari Sign",
         "className": "fa-solid fa-lari-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13830,7 +13861,7 @@ export const classIconIndex = {
         "name": "fa-MoneyLiraSign",
         "title": "Lira Sign",
         "className": "fa-solid fa-lira-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13838,7 +13869,7 @@ export const classIconIndex = {
         "name": "fa-MoneyLitecoinSign",
         "title": "Litecoin Sign",
         "className": "fa-solid fa-litecoin-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13846,7 +13877,7 @@ export const classIconIndex = {
         "name": "fa-MoneyManatSign",
         "title": "Manat Sign",
         "className": "fa-solid fa-manat-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13854,7 +13885,7 @@ export const classIconIndex = {
         "name": "fa-MoneyMillSign",
         "title": "Mill Sign",
         "className": "fa-solid fa-mill-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13862,7 +13893,7 @@ export const classIconIndex = {
         "name": "fa-MoneyMoneyBill",
         "title": "Bill",
         "className": "fa-solid fa-money-bill",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13870,7 +13901,7 @@ export const classIconIndex = {
         "name": "fa-MoneyMoneyBill1",
         "title": "Bill1",
         "className": "fa-solid fa-money-bill-1",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13878,7 +13909,7 @@ export const classIconIndex = {
         "name": "fa-MoneyMoneyBill1Wave",
         "title": "Bill1Wave",
         "className": "fa-solid fa-money-bill-1-wave",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13886,7 +13917,7 @@ export const classIconIndex = {
         "name": "fa-MoneyMoneyBills",
         "title": "Bills",
         "className": "fa-solid fa-money-bills",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13894,7 +13925,7 @@ export const classIconIndex = {
         "name": "fa-MoneyMoneyBillTransfer",
         "title": "Bill Transfer",
         "className": "fa-solid fa-money-bill-transfer",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13902,7 +13933,7 @@ export const classIconIndex = {
         "name": "fa-MoneyMoneyBillTrendUp",
         "title": "Bill Trend Up",
         "className": "fa-solid fa-money-bill-trend-up",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13910,7 +13941,7 @@ export const classIconIndex = {
         "name": "fa-MoneyMoneyBillWave",
         "title": "Bill Wave",
         "className": "fa-solid fa-money-bill-wave",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13918,7 +13949,7 @@ export const classIconIndex = {
         "name": "fa-MoneyMoneyBillWheat",
         "title": "Bill Wheat",
         "className": "fa-solid fa-money-bill-wheat",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13926,7 +13957,7 @@ export const classIconIndex = {
         "name": "fa-MoneyMoneyCheck",
         "title": "Check",
         "className": "fa-solid fa-money-check",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13934,7 +13965,7 @@ export const classIconIndex = {
         "name": "fa-MoneyMoneyCheckDollar",
         "title": "Check Dollar",
         "className": "fa-solid fa-money-check-dollar",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13942,7 +13973,7 @@ export const classIconIndex = {
         "name": "fa-MoneyNairaSign",
         "title": "Naira Sign",
         "className": "fa-solid fa-naira-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13950,7 +13981,7 @@ export const classIconIndex = {
         "name": "fa-MoneyPercent",
         "title": "Percent",
         "className": "fa-solid fa-percent",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13958,7 +13989,7 @@ export const classIconIndex = {
         "name": "fa-MoneyPesetaSign",
         "title": "Peseta Sign",
         "className": "fa-solid fa-peseta-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13966,7 +13997,7 @@ export const classIconIndex = {
         "name": "fa-MoneyPesoSign",
         "title": "Peso Sign",
         "className": "fa-solid fa-peso-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13974,7 +14005,7 @@ export const classIconIndex = {
         "name": "fa-MoneyPiggyBank",
         "title": "Piggy Bank",
         "className": "fa-solid fa-piggy-bank",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13982,7 +14013,7 @@ export const classIconIndex = {
         "name": "fa-MoneyReceipt",
         "title": "Receipt",
         "className": "fa-solid fa-receipt",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13990,7 +14021,7 @@ export const classIconIndex = {
         "name": "fa-MoneyRubleSign",
         "title": "Ruble Sign",
         "className": "fa-solid fa-ruble-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -13998,7 +14029,7 @@ export const classIconIndex = {
         "name": "fa-MoneyRupeeSign",
         "title": "Rupee Sign",
         "className": "fa-solid fa-rupee-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -14006,7 +14037,7 @@ export const classIconIndex = {
         "name": "fa-MoneyRupiahSign",
         "title": "Rupiah Sign",
         "className": "fa-solid fa-rupiah-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -14014,7 +14045,7 @@ export const classIconIndex = {
         "name": "fa-MoneySackDollar",
         "title": "Sack Dollar",
         "className": "fa-solid fa-sack-dollar",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -14022,7 +14053,7 @@ export const classIconIndex = {
         "name": "fa-MoneySackXmark",
         "title": "Sack Xmark",
         "className": "fa-solid fa-sack-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -14030,7 +14061,7 @@ export const classIconIndex = {
         "name": "fa-MoneyScaleBalanced",
         "title": "Scale Balanced",
         "className": "fa-solid fa-scale-balanced",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -14038,7 +14069,7 @@ export const classIconIndex = {
         "name": "fa-MoneyScaleUnbalanced",
         "title": "Scale Unbalanced",
         "className": "fa-solid fa-scale-unbalanced",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -14046,7 +14077,7 @@ export const classIconIndex = {
         "name": "fa-MoneyScaleUnbalancedFlip",
         "title": "Scale Unbalanced Flip",
         "className": "fa-solid fa-scale-unbalanced-flip",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -14054,7 +14085,7 @@ export const classIconIndex = {
         "name": "fa-MoneyShekelSign",
         "title": "Shekel Sign",
         "className": "fa-solid fa-shekel-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -14062,7 +14093,7 @@ export const classIconIndex = {
         "name": "fa-MoneyStamp",
         "title": "Stamp",
         "className": "fa-solid fa-stamp",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -14070,7 +14101,7 @@ export const classIconIndex = {
         "name": "fa-MoneySterlingSign",
         "title": "Sterling Sign",
         "className": "fa-solid fa-sterling-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -14078,7 +14109,7 @@ export const classIconIndex = {
         "name": "fa-MoneyTengeSign",
         "title": "Tenge Sign",
         "className": "fa-solid fa-tenge-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -14086,7 +14117,7 @@ export const classIconIndex = {
         "name": "fa-MoneyTurkishLiraSign",
         "title": "Turkish Lira Sign",
         "className": "fa-solid fa-turkish-lira-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -14094,7 +14125,7 @@ export const classIconIndex = {
         "name": "fa-MoneyVault",
         "title": "Vault",
         "className": "fa-solid fa-vault",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -14102,7 +14133,7 @@ export const classIconIndex = {
         "name": "fa-MoneyWallet",
         "title": "Wallet",
         "className": "fa-solid fa-wallet",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -14110,7 +14141,7 @@ export const classIconIndex = {
         "name": "fa-MoneyWonSign",
         "title": "Won Sign",
         "className": "fa-solid fa-won-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -14118,7 +14149,7 @@ export const classIconIndex = {
         "name": "fa-MoneyYenSign",
         "title": "Yen Sign",
         "className": "fa-solid fa-yen-sign",
-        "categories": [
+        "type":"fa","categories": [
             "money"
         ]
     },
@@ -14126,7 +14157,7 @@ export const classIconIndex = {
         "name": "fa-MovingBoxArchive",
         "title": "Box Archive",
         "className": "fa-solid fa-box-archive",
-        "categories": [
+        "type":"fa","categories": [
             "moving"
         ]
     },
@@ -14134,7 +14165,7 @@ export const classIconIndex = {
         "name": "fa-MovingBoxesPacking",
         "title": "Boxes Packing",
         "className": "fa-solid fa-boxes-packing",
-        "categories": [
+        "type":"fa","categories": [
             "moving"
         ]
     },
@@ -14142,7 +14173,7 @@ export const classIconIndex = {
         "name": "fa-MovingBoxOpen",
         "title": "Box Open",
         "className": "fa-solid fa-box-open",
-        "categories": [
+        "type":"fa","categories": [
             "moving"
         ]
     },
@@ -14150,7 +14181,7 @@ export const classIconIndex = {
         "name": "fa-MovingCaravan",
         "title": "Caravan",
         "className": "fa-solid fa-caravan",
-        "categories": [
+        "type":"fa","categories": [
             "moving"
         ]
     },
@@ -14158,7 +14189,7 @@ export const classIconIndex = {
         "name": "fa-MovingCouch",
         "title": "Couch",
         "className": "fa-solid fa-couch",
-        "categories": [
+        "type":"fa","categories": [
             "moving"
         ]
     },
@@ -14166,7 +14197,7 @@ export const classIconIndex = {
         "name": "fa-MovingDolly",
         "title": "Dolly",
         "className": "fa-solid fa-dolly",
-        "categories": [
+        "type":"fa","categories": [
             "moving"
         ]
     },
@@ -14174,7 +14205,7 @@ export const classIconIndex = {
         "name": "fa-MovingHouseChimney",
         "title": "House Chimney",
         "className": "fa-solid fa-house-chimney",
-        "categories": [
+        "type":"fa","categories": [
             "moving"
         ]
     },
@@ -14182,7 +14213,7 @@ export const classIconIndex = {
         "name": "fa-MovingPeopleCarryBox",
         "title": "People Carry Box",
         "className": "fa-solid fa-people-carry-box",
-        "categories": [
+        "type":"fa","categories": [
             "moving"
         ]
     },
@@ -14190,7 +14221,7 @@ export const classIconIndex = {
         "name": "fa-MovingRoute",
         "title": "Route",
         "className": "fa-solid fa-route",
-        "categories": [
+        "type":"fa","categories": [
             "moving"
         ]
     },
@@ -14198,7 +14229,7 @@ export const classIconIndex = {
         "name": "fa-MovingSignHanging",
         "title": "Sign Hanging",
         "className": "fa-solid fa-sign-hanging",
-        "categories": [
+        "type":"fa","categories": [
             "moving"
         ]
     },
@@ -14206,7 +14237,7 @@ export const classIconIndex = {
         "name": "fa-MovingSuitcase",
         "title": "Suitcase",
         "className": "fa-solid fa-suitcase",
-        "categories": [
+        "type":"fa","categories": [
             "moving"
         ]
     },
@@ -14214,7 +14245,7 @@ export const classIconIndex = {
         "name": "fa-MovingTape",
         "title": "Tape",
         "className": "fa-solid fa-tape",
-        "categories": [
+        "type":"fa","categories": [
             "moving"
         ]
     },
@@ -14222,7 +14253,7 @@ export const classIconIndex = {
         "name": "fa-MovingTrailer",
         "title": "Trailer",
         "className": "fa-solid fa-trailer",
-        "categories": [
+        "type":"fa","categories": [
             "moving"
         ]
     },
@@ -14230,7 +14261,7 @@ export const classIconIndex = {
         "name": "fa-MovingTruckMoving",
         "title": "Truck",
         "className": "fa-solid fa-truck-moving",
-        "categories": [
+        "type":"fa","categories": [
             "moving"
         ]
     },
@@ -14238,7 +14269,7 @@ export const classIconIndex = {
         "name": "fa-MovingTruckRampBox",
         "title": "Truck Ramp Box",
         "className": "fa-solid fa-truck-ramp-box",
-        "categories": [
+        "type":"fa","categories": [
             "moving"
         ]
     },
@@ -14246,7 +14277,7 @@ export const classIconIndex = {
         "name": "fa-MovingWineGlass",
         "title": "Wine Glass",
         "className": "fa-solid fa-wine-glass",
-        "categories": [
+        "type":"fa","categories": [
             "moving"
         ]
     },
@@ -14254,7 +14285,7 @@ export const classIconIndex = {
         "name": "fa-MusicVideoCompactDisc",
         "title": "Compact Disc",
         "className": "fa-solid fa-compact-disc",
-        "categories": [
+        "type":"fa","categories": [
             "music+video"
         ]
     },
@@ -14262,7 +14293,7 @@ export const classIconIndex = {
         "name": "fa-MusicVideoDrum",
         "title": "Drum",
         "className": "fa-solid fa-drum",
-        "categories": [
+        "type":"fa","categories": [
             "music+video"
         ]
     },
@@ -14270,7 +14301,7 @@ export const classIconIndex = {
         "name": "fa-MusicVideoDrumSteelpan",
         "title": "Drum Steelpan",
         "className": "fa-solid fa-drum-steelpan",
-        "categories": [
+        "type":"fa","categories": [
             "music+video"
         ]
     },
@@ -14278,7 +14309,7 @@ export const classIconIndex = {
         "name": "fa-MusicVideoFileAudio",
         "title": "File Audio",
         "className": "fa-solid fa-file-audio",
-        "categories": [
+        "type":"fa","categories": [
             "music+video"
         ]
     },
@@ -14286,7 +14317,7 @@ export const classIconIndex = {
         "name": "fa-MusicVideoGuitar",
         "title": "Guitar",
         "className": "fa-solid fa-guitar",
-        "categories": [
+        "type":"fa","categories": [
             "music+video"
         ]
     },
@@ -14294,7 +14325,7 @@ export const classIconIndex = {
         "name": "fa-MusicVideoHeadphones",
         "title": "Headphones",
         "className": "fa-solid fa-headphones",
-        "categories": [
+        "type":"fa","categories": [
             "music+video"
         ]
     },
@@ -14302,7 +14333,7 @@ export const classIconIndex = {
         "name": "fa-MusicVideoHeadphonesSimple",
         "title": "Headphones Simple",
         "className": "fa-solid fa-headphones-simple",
-        "categories": [
+        "type":"fa","categories": [
             "music+video"
         ]
     },
@@ -14310,7 +14341,7 @@ export const classIconIndex = {
         "name": "fa-MusicVideoMicrophone",
         "title": "Microphone",
         "className": "fa-solid fa-microphone",
-        "categories": [
+        "type":"fa","categories": [
             "music+video"
         ]
     },
@@ -14318,7 +14349,7 @@ export const classIconIndex = {
         "name": "fa-MusicVideoMicrophoneLines",
         "title": "Microphone Lines",
         "className": "fa-solid fa-microphone-lines",
-        "categories": [
+        "type":"fa","categories": [
             "music+video"
         ]
     },
@@ -14326,7 +14357,7 @@ export const classIconIndex = {
         "name": "fa-MusicVideoMicrophoneLinesSlash",
         "title": "Microphone Lines Slash",
         "className": "fa-solid fa-microphone-lines-slash",
-        "categories": [
+        "type":"fa","categories": [
             "music+video"
         ]
     },
@@ -14334,7 +14365,7 @@ export const classIconIndex = {
         "name": "fa-MusicVideoMicrophoneSlash",
         "title": "Microphone Slash",
         "className": "fa-solid fa-microphone-slash",
-        "categories": [
+        "type":"fa","categories": [
             "music+video"
         ]
     },
@@ -14342,7 +14373,7 @@ export const classIconIndex = {
         "name": "fa-MusicVideoMusic",
         "title": "Music",
         "className": "fa-solid fa-music",
-        "categories": [
+        "type":"fa","categories": [
             "music+video"
         ]
     },
@@ -14350,7 +14381,7 @@ export const classIconIndex = {
         "name": "fa-MusicVideoNapster",
         "title": "Napster",
         "className": "fa-solid fa-napster",
-        "categories": [
+        "type":"fa","categories": [
             "music+video"
         ]
     },
@@ -14358,7 +14389,7 @@ export const classIconIndex = {
         "name": "fa-MusicVideoRadio",
         "title": "Radio",
         "className": "fa-solid fa-radio",
-        "categories": [
+        "type":"fa","categories": [
             "music+video"
         ]
     },
@@ -14366,7 +14397,7 @@ export const classIconIndex = {
         "name": "fa-MusicVideoRecordVinyl",
         "title": "Record Vinyl",
         "className": "fa-solid fa-record-vinyl",
-        "categories": [
+        "type":"fa","categories": [
             "music+video"
         ]
     },
@@ -14374,7 +14405,7 @@ export const classIconIndex = {
         "name": "fa-MusicVideoSliders",
         "title": "Sliders",
         "className": "fa-solid fa-sliders",
-        "categories": [
+        "type":"fa","categories": [
             "music+video"
         ]
     },
@@ -14382,7 +14413,7 @@ export const classIconIndex = {
         "name": "fa-MusicVideoSoundcloud",
         "title": "Soundcloud",
         "className": "fa-solid fa-soundcloud",
-        "categories": [
+        "type":"fa","categories": [
             "music+video"
         ]
     },
@@ -14390,7 +14421,7 @@ export const classIconIndex = {
         "name": "fa-MusicVideoSpotify",
         "title": "Spotify",
         "className": "fa-solid fa-spotify",
-        "categories": [
+        "type":"fa","categories": [
             "music+video"
         ]
     },
@@ -14398,7 +14429,7 @@ export const classIconIndex = {
         "name": "fa-MusicVideoVolumeHigh",
         "title": "Volume High",
         "className": "fa-solid fa-volume-high",
-        "categories": [
+        "type":"fa","categories": [
             "music+video"
         ]
     },
@@ -14406,7 +14437,7 @@ export const classIconIndex = {
         "name": "fa-MusicVideoVolumeLow",
         "title": "Volume Low",
         "className": "fa-solid fa-volume-low",
-        "categories": [
+        "type":"fa","categories": [
             "music+video"
         ]
     },
@@ -14414,7 +14445,7 @@ export const classIconIndex = {
         "name": "fa-MusicVideoVolumeOff",
         "title": "Volume Off",
         "className": "fa-solid fa-volume-off",
-        "categories": [
+        "type":"fa","categories": [
             "music+video"
         ]
     },
@@ -14422,7 +14453,7 @@ export const classIconIndex = {
         "name": "fa-MusicVideoVolumeXmark",
         "title": "Volume Xmark",
         "className": "fa-solid fa-volume-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "music+video"
         ]
     },
@@ -14430,7 +14461,7 @@ export const classIconIndex = {
         "name": "fa-MusicVideoWaveSquare",
         "title": "Wave Square",
         "className": "fa-solid fa-wave-square",
-        "categories": [
+        "type":"fa","categories": [
             "music+video"
         ]
     },
@@ -14438,7 +14469,7 @@ export const classIconIndex = {
         "name": "fa-NatureBinoculars",
         "title": "Binoculars",
         "className": "fa-solid fa-binoculars",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14446,7 +14477,7 @@ export const classIconIndex = {
         "name": "fa-NatureBug",
         "title": "Bug",
         "className": "fa-solid fa-bug",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14454,7 +14485,7 @@ export const classIconIndex = {
         "name": "fa-NatureBugs",
         "title": "Bugs",
         "className": "fa-solid fa-bugs",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14462,7 +14493,7 @@ export const classIconIndex = {
         "name": "fa-NatureCannabis",
         "title": "Cannabis",
         "className": "fa-solid fa-cannabis",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14470,7 +14501,7 @@ export const classIconIndex = {
         "name": "fa-NatureCloudSun",
         "title": "Cloud Sun",
         "className": "fa-solid fa-cloud-sun",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14478,7 +14509,7 @@ export const classIconIndex = {
         "name": "fa-NatureClover",
         "title": "Clover",
         "className": "fa-solid fa-clover",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14486,7 +14517,7 @@ export const classIconIndex = {
         "name": "fa-NatureFeather",
         "title": "Feather",
         "className": "fa-solid fa-feather",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14494,7 +14525,7 @@ export const classIconIndex = {
         "name": "fa-NatureFeatherPointed",
         "title": "Feather Pointed",
         "className": "fa-solid fa-feather-pointed",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14502,7 +14533,7 @@ export const classIconIndex = {
         "name": "fa-NatureFire",
         "title": "Fire",
         "className": "fa-solid fa-fire",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14510,7 +14541,7 @@ export const classIconIndex = {
         "name": "fa-NatureFrog",
         "title": "Frog",
         "className": "fa-solid fa-frog",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14518,7 +14549,7 @@ export const classIconIndex = {
         "name": "fa-NatureIcicles",
         "title": "Icicles",
         "className": "fa-solid fa-icicles",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14526,7 +14557,7 @@ export const classIconIndex = {
         "name": "fa-NatureLeaf",
         "title": "Leaf",
         "className": "fa-solid fa-leaf",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14534,7 +14565,7 @@ export const classIconIndex = {
         "name": "fa-NatureLocust",
         "title": "Locust",
         "className": "fa-solid fa-locust",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14542,7 +14573,7 @@ export const classIconIndex = {
         "name": "fa-NatureMosquito",
         "title": "Mosquito",
         "className": "fa-solid fa-mosquito",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14550,7 +14581,7 @@ export const classIconIndex = {
         "name": "fa-NatureMound",
         "title": "Mound",
         "className": "fa-solid fa-mound",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14558,7 +14589,7 @@ export const classIconIndex = {
         "name": "fa-NatureMountain",
         "title": "Mountain",
         "className": "fa-solid fa-mountain",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14566,7 +14597,7 @@ export const classIconIndex = {
         "name": "fa-NatureMountainCity",
         "title": "Mountain City",
         "className": "fa-solid fa-mountain-city",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14574,7 +14605,7 @@ export const classIconIndex = {
         "name": "fa-NatureMountainSun",
         "title": "Mountain Sun",
         "className": "fa-solid fa-mountain-sun",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14582,7 +14613,7 @@ export const classIconIndex = {
         "name": "fa-NaturePersonHiking",
         "title": "Person Hiking",
         "className": "fa-solid fa-person-hiking",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14590,7 +14621,7 @@ export const classIconIndex = {
         "name": "fa-NaturePlantWilt",
         "title": "Plant Wilt",
         "className": "fa-solid fa-plant-wilt",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14598,7 +14629,7 @@ export const classIconIndex = {
         "name": "fa-NatureSeedling",
         "title": "Seedling",
         "className": "fa-solid fa-seedling",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14606,7 +14637,7 @@ export const classIconIndex = {
         "name": "fa-NatureSignsPost",
         "title": "Signs Post",
         "className": "fa-solid fa-signs-post",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14614,7 +14645,7 @@ export const classIconIndex = {
         "name": "fa-NatureSpider",
         "title": "Spider",
         "className": "fa-solid fa-spider",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14622,7 +14653,7 @@ export const classIconIndex = {
         "name": "fa-NatureTree",
         "title": "Tree",
         "className": "fa-solid fa-tree",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14630,7 +14661,7 @@ export const classIconIndex = {
         "name": "fa-NatureVolcano",
         "title": "Volcano",
         "className": "fa-solid fa-volcano",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14638,7 +14669,7 @@ export const classIconIndex = {
         "name": "fa-NatureWater",
         "title": "Water",
         "className": "fa-solid fa-water",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14646,7 +14677,7 @@ export const classIconIndex = {
         "name": "fa-NatureWind",
         "title": "Wind",
         "className": "fa-solid fa-wind",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14654,7 +14685,7 @@ export const classIconIndex = {
         "name": "fa-NatureWorm",
         "title": "Worm",
         "className": "fa-solid fa-worm",
-        "categories": [
+        "type":"fa","categories": [
             "nature"
         ]
     },
@@ -14662,7 +14693,7 @@ export const classIconIndex = {
         "name": "fa-Numbers0",
         "title": "0",
         "className": "fa-solid fa-0",
-        "categories": [
+        "type":"fa","categories": [
             "numbers"
         ]
     },
@@ -14670,7 +14701,7 @@ export const classIconIndex = {
         "name": "fa-Numbers1",
         "title": "1",
         "className": "fa-solid fa-1",
-        "categories": [
+        "type":"fa","categories": [
             "numbers"
         ]
     },
@@ -14678,7 +14709,7 @@ export const classIconIndex = {
         "name": "fa-Numbers2",
         "title": "2",
         "className": "fa-solid fa-2",
-        "categories": [
+        "type":"fa","categories": [
             "numbers"
         ]
     },
@@ -14686,7 +14717,7 @@ export const classIconIndex = {
         "name": "fa-Numbers3",
         "title": "3",
         "className": "fa-solid fa-3",
-        "categories": [
+        "type":"fa","categories": [
             "numbers"
         ]
     },
@@ -14694,7 +14725,7 @@ export const classIconIndex = {
         "name": "fa-Numbers4",
         "title": "4",
         "className": "fa-solid fa-4",
-        "categories": [
+        "type":"fa","categories": [
             "numbers"
         ]
     },
@@ -14702,7 +14733,7 @@ export const classIconIndex = {
         "name": "fa-Numbers5",
         "title": "5",
         "className": "fa-solid fa-5",
-        "categories": [
+        "type":"fa","categories": [
             "numbers"
         ]
     },
@@ -14710,7 +14741,7 @@ export const classIconIndex = {
         "name": "fa-Numbers6",
         "title": "6",
         "className": "fa-solid fa-6",
-        "categories": [
+        "type":"fa","categories": [
             "numbers"
         ]
     },
@@ -14718,7 +14749,7 @@ export const classIconIndex = {
         "name": "fa-Numbers7",
         "title": "7",
         "className": "fa-solid fa-7",
-        "categories": [
+        "type":"fa","categories": [
             "numbers"
         ]
     },
@@ -14726,7 +14757,7 @@ export const classIconIndex = {
         "name": "fa-Numbers8",
         "title": "8",
         "className": "fa-solid fa-8",
-        "categories": [
+        "type":"fa","categories": [
             "numbers"
         ]
     },
@@ -14734,7 +14765,7 @@ export const classIconIndex = {
         "name": "fa-Numbers9",
         "title": "9",
         "className": "fa-solid fa-9",
-        "categories": [
+        "type":"fa","categories": [
             "numbers"
         ]
     },
@@ -14742,7 +14773,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesBolt",
         "title": "Bolt",
         "className": "fa-solid fa-bolt",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14750,7 +14781,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesBoltLightning",
         "title": "Bolt Lightning",
         "className": "fa-solid fa-bolt-lightning",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14758,7 +14789,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesCamera",
         "title": "Camera",
         "className": "fa-solid fa-camera",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14766,7 +14797,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesCameraRetro",
         "title": "Camera Retro",
         "className": "fa-solid fa-camera-retro",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14774,7 +14805,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesCameraRotate",
         "title": "Camera Rotate",
         "className": "fa-solid fa-camera-rotate",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14782,7 +14813,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesChalkboard",
         "title": "Chalkboard",
         "className": "fa-solid fa-chalkboard",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14790,7 +14821,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesCircleHalfStroke",
         "title": "Circle Half Stroke",
         "className": "fa-solid fa-circle-half-stroke",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14798,7 +14829,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesClone",
         "title": "Clone",
         "className": "fa-solid fa-clone",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14806,7 +14837,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesDroplet",
         "title": "Droplet",
         "className": "fa-solid fa-droplet",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14814,7 +14845,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesEye",
         "title": "Eye",
         "className": "fa-solid fa-eye",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14822,7 +14853,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesEyeDropper",
         "title": "Eye Dropper",
         "className": "fa-solid fa-eye-dropper",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14830,7 +14861,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesEyeSlash",
         "title": "Eye Slash",
         "className": "fa-solid fa-eye-slash",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14838,7 +14869,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesFileImage",
         "title": "File Image",
         "className": "fa-solid fa-file-image",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14846,7 +14877,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesFilm",
         "title": "Film",
         "className": "fa-solid fa-film",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14854,7 +14885,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesIdBadge",
         "title": "Id Badge",
         "className": "fa-solid fa-id-badge",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14862,7 +14893,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesIdCard",
         "title": "Id Card",
         "className": "fa-solid fa-id-card",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14870,7 +14901,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesImage",
         "title": "Image",
         "className": "fa-solid fa-image",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14878,7 +14909,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesImagePortrait",
         "title": "Image Portrait",
         "className": "fa-solid fa-image-portrait",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14886,7 +14917,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesImages",
         "title": "Images",
         "className": "fa-solid fa-images",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14894,7 +14925,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesMinimize",
         "title": "Minimize",
         "className": "fa-solid fa-minimize",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14902,7 +14933,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesPanorama",
         "title": "Panorama",
         "className": "fa-solid fa-panorama",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14910,7 +14941,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesPhotoFilm",
         "title": "Photo Film",
         "className": "fa-solid fa-photo-film",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14918,7 +14949,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesSliders",
         "title": "Sliders",
         "className": "fa-solid fa-sliders",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14926,7 +14957,7 @@ export const classIconIndex = {
         "name": "fa-PhotosImagesUnsplash",
         "title": "Unsplash",
         "className": "fa-solid fa-unsplash",
-        "categories": [
+        "type":"fa","categories": [
             "photos+images"
         ]
     },
@@ -14934,7 +14965,7 @@ export const classIconIndex = {
         "name": "fa-PoliticalAward",
         "title": "Award",
         "className": "fa-solid fa-award",
-        "categories": [
+        "type":"fa","categories": [
             "political"
         ]
     },
@@ -14942,7 +14973,7 @@ export const classIconIndex = {
         "name": "fa-PoliticalBuildingFlag",
         "title": "Building Flag",
         "className": "fa-solid fa-building-flag",
-        "categories": [
+        "type":"fa","categories": [
             "political"
         ]
     },
@@ -14950,7 +14981,7 @@ export const classIconIndex = {
         "name": "fa-PoliticalBullhorn",
         "title": "Bullhorn",
         "className": "fa-solid fa-bullhorn",
-        "categories": [
+        "type":"fa","categories": [
             "political"
         ]
     },
@@ -14958,7 +14989,7 @@ export const classIconIndex = {
         "name": "fa-PoliticalCheckDouble",
         "title": "Check Double",
         "className": "fa-solid fa-check-double",
-        "categories": [
+        "type":"fa","categories": [
             "political"
         ]
     },
@@ -14966,7 +14997,7 @@ export const classIconIndex = {
         "name": "fa-PoliticalCheckToSlot",
         "title": "Check To Slot",
         "className": "fa-solid fa-check-to-slot",
-        "categories": [
+        "type":"fa","categories": [
             "political"
         ]
     },
@@ -14974,7 +15005,7 @@ export const classIconIndex = {
         "name": "fa-PoliticalCircleDollarToSlot",
         "title": "Circle Dollar To Slot",
         "className": "fa-solid fa-circle-dollar-to-slot",
-        "categories": [
+        "type":"fa","categories": [
             "political"
         ]
     },
@@ -14982,7 +15013,7 @@ export const classIconIndex = {
         "name": "fa-PoliticalDemocrat",
         "title": "Democrat",
         "className": "fa-solid fa-democrat",
-        "categories": [
+        "type":"fa","categories": [
             "political"
         ]
     },
@@ -14990,7 +15021,7 @@ export const classIconIndex = {
         "name": "fa-PoliticalDove",
         "title": "Dove",
         "className": "fa-solid fa-dove",
-        "categories": [
+        "type":"fa","categories": [
             "political"
         ]
     },
@@ -14998,7 +15029,7 @@ export const classIconIndex = {
         "name": "fa-PoliticalDumpsterFire",
         "title": "Dumpster Fire",
         "className": "fa-solid fa-dumpster-fire",
-        "categories": [
+        "type":"fa","categories": [
             "political"
         ]
     },
@@ -15006,7 +15037,7 @@ export const classIconIndex = {
         "name": "fa-PoliticalFlagUsa",
         "title": "Flag Usa",
         "className": "fa-solid fa-flag-usa",
-        "categories": [
+        "type":"fa","categories": [
             "political"
         ]
     },
@@ -15014,7 +15045,7 @@ export const classIconIndex = {
         "name": "fa-PoliticalHandFist",
         "title": "Hand Fist",
         "className": "fa-solid fa-hand-fist",
-        "categories": [
+        "type":"fa","categories": [
             "political"
         ]
     },
@@ -15022,7 +15053,7 @@ export const classIconIndex = {
         "name": "fa-PoliticalHandshake",
         "title": "Handshake",
         "className": "fa-solid fa-handshake",
-        "categories": [
+        "type":"fa","categories": [
             "political"
         ]
     },
@@ -15030,7 +15061,7 @@ export const classIconIndex = {
         "name": "fa-PoliticalLandmarkDome",
         "title": "Landmark Dome",
         "className": "fa-solid fa-landmark-dome",
-        "categories": [
+        "type":"fa","categories": [
             "political"
         ]
     },
@@ -15038,7 +15069,7 @@ export const classIconIndex = {
         "name": "fa-PoliticalLandmarkFlag",
         "title": "Landmark Flag",
         "className": "fa-solid fa-landmark-flag",
-        "categories": [
+        "type":"fa","categories": [
             "political"
         ]
     },
@@ -15046,7 +15077,7 @@ export const classIconIndex = {
         "name": "fa-PoliticalPersonBooth",
         "title": "Person Booth",
         "className": "fa-solid fa-person-booth",
-        "categories": [
+        "type":"fa","categories": [
             "political"
         ]
     },
@@ -15054,7 +15085,7 @@ export const classIconIndex = {
         "name": "fa-PoliticalPiggyBank",
         "title": "Piggy Bank",
         "className": "fa-solid fa-piggy-bank",
-        "categories": [
+        "type":"fa","categories": [
             "political"
         ]
     },
@@ -15062,7 +15093,7 @@ export const classIconIndex = {
         "name": "fa-PoliticalRepublican",
         "title": "Republican",
         "className": "fa-solid fa-republican",
-        "categories": [
+        "type":"fa","categories": [
             "political"
         ]
     },
@@ -15070,7 +15101,7 @@ export const classIconIndex = {
         "name": "fa-PoliticalScaleBalanced",
         "title": "Scale Balanced",
         "className": "fa-solid fa-scale-balanced",
-        "categories": [
+        "type":"fa","categories": [
             "political"
         ]
     },
@@ -15078,7 +15109,7 @@ export const classIconIndex = {
         "name": "fa-PoliticalScaleUnbalanced",
         "title": "Scale Unbalanced",
         "className": "fa-solid fa-scale-unbalanced",
-        "categories": [
+        "type":"fa","categories": [
             "political"
         ]
     },
@@ -15086,7 +15117,7 @@ export const classIconIndex = {
         "name": "fa-PoliticalScaleUnbalancedFlip",
         "title": "Scale Unbalanced Flip",
         "className": "fa-solid fa-scale-unbalanced-flip",
-        "categories": [
+        "type":"fa","categories": [
             "political"
         ]
     },
@@ -15094,7 +15125,7 @@ export const classIconIndex = {
         "name": "fa-PunctuationSymbolsAsterisk",
         "title": "Asterisk",
         "className": "fa-solid fa-asterisk",
-        "categories": [
+        "type":"fa","categories": [
             "punctuation+symbols"
         ]
     },
@@ -15102,7 +15133,7 @@ export const classIconIndex = {
         "name": "fa-PunctuationSymbolsAt",
         "title": "At",
         "className": "fa-solid fa-at",
-        "categories": [
+        "type":"fa","categories": [
             "punctuation+symbols"
         ]
     },
@@ -15110,7 +15141,7 @@ export const classIconIndex = {
         "name": "fa-PunctuationSymbolsCheck",
         "title": "Check",
         "className": "fa-solid fa-check",
-        "categories": [
+        "type":"fa","categories": [
             "punctuation+symbols"
         ]
     },
@@ -15118,7 +15149,7 @@ export const classIconIndex = {
         "name": "fa-PunctuationSymbolsCheckDouble",
         "title": "Check Double",
         "className": "fa-solid fa-check-double",
-        "categories": [
+        "type":"fa","categories": [
             "punctuation+symbols"
         ]
     },
@@ -15126,7 +15157,7 @@ export const classIconIndex = {
         "name": "fa-PunctuationSymbolsCircleExclamation",
         "title": "Circle Exclamation",
         "className": "fa-solid fa-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "punctuation+symbols"
         ]
     },
@@ -15134,7 +15165,7 @@ export const classIconIndex = {
         "name": "fa-PunctuationSymbolsCircleQuestion",
         "title": "Circle Question",
         "className": "fa-solid fa-circle-question",
-        "categories": [
+        "type":"fa","categories": [
             "punctuation+symbols"
         ]
     },
@@ -15142,7 +15173,7 @@ export const classIconIndex = {
         "name": "fa-PunctuationSymbolsEquals",
         "title": "Equals",
         "className": "fa-solid fa-equals",
-        "categories": [
+        "type":"fa","categories": [
             "punctuation+symbols"
         ]
     },
@@ -15150,7 +15181,7 @@ export const classIconIndex = {
         "name": "fa-PunctuationSymbolsExclamation",
         "title": "Exclamation",
         "className": "fa-solid fa-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "punctuation+symbols"
         ]
     },
@@ -15158,7 +15189,7 @@ export const classIconIndex = {
         "name": "fa-PunctuationSymbolsGreaterThan",
         "title": "Greater Than",
         "className": "fa-solid fa-greater-than",
-        "categories": [
+        "type":"fa","categories": [
             "punctuation+symbols"
         ]
     },
@@ -15166,7 +15197,7 @@ export const classIconIndex = {
         "name": "fa-PunctuationSymbolsHashtag",
         "title": "Hashtag",
         "className": "fa-solid fa-hashtag",
-        "categories": [
+        "type":"fa","categories": [
             "punctuation+symbols"
         ]
     },
@@ -15174,7 +15205,7 @@ export const classIconIndex = {
         "name": "fa-PunctuationSymbolsLessThan",
         "title": "Less Than",
         "className": "fa-solid fa-less-than",
-        "categories": [
+        "type":"fa","categories": [
             "punctuation+symbols"
         ]
     },
@@ -15182,7 +15213,7 @@ export const classIconIndex = {
         "name": "fa-PunctuationSymbolsMinus",
         "title": "Minus",
         "className": "fa-solid fa-minus",
-        "categories": [
+        "type":"fa","categories": [
             "punctuation+symbols"
         ]
     },
@@ -15190,7 +15221,7 @@ export const classIconIndex = {
         "name": "fa-PunctuationSymbolsPercent",
         "title": "Percent",
         "className": "fa-solid fa-percent",
-        "categories": [
+        "type":"fa","categories": [
             "punctuation+symbols"
         ]
     },
@@ -15198,7 +15229,7 @@ export const classIconIndex = {
         "name": "fa-PunctuationSymbolsPlus",
         "title": "Plus",
         "className": "fa-solid fa-plus",
-        "categories": [
+        "type":"fa","categories": [
             "punctuation+symbols"
         ]
     },
@@ -15206,7 +15237,7 @@ export const classIconIndex = {
         "name": "fa-PunctuationSymbolsQuestion",
         "title": "Question",
         "className": "fa-solid fa-question",
-        "categories": [
+        "type":"fa","categories": [
             "punctuation+symbols"
         ]
     },
@@ -15214,7 +15245,7 @@ export const classIconIndex = {
         "name": "fa-PunctuationSymbolsQuoteLeft",
         "title": "Quote Left",
         "className": "fa-solid fa-quote-left",
-        "categories": [
+        "type":"fa","categories": [
             "punctuation+symbols"
         ]
     },
@@ -15222,7 +15253,7 @@ export const classIconIndex = {
         "name": "fa-PunctuationSymbolsQuoteRight",
         "title": "Quote Right",
         "className": "fa-solid fa-quote-right",
-        "categories": [
+        "type":"fa","categories": [
             "punctuation+symbols"
         ]
     },
@@ -15230,7 +15261,7 @@ export const classIconIndex = {
         "name": "fa-PunctuationSymbolsSection",
         "title": "Section",
         "className": "fa-solid fa-section",
-        "categories": [
+        "type":"fa","categories": [
             "punctuation+symbols"
         ]
     },
@@ -15238,7 +15269,7 @@ export const classIconIndex = {
         "name": "fa-ReligionAnkh",
         "title": "Ankh",
         "className": "fa-solid fa-ankh",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15246,7 +15277,7 @@ export const classIconIndex = {
         "name": "fa-ReligionAtom",
         "title": "Atom",
         "className": "fa-solid fa-atom",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15254,7 +15285,7 @@ export const classIconIndex = {
         "name": "fa-ReligionBahai",
         "title": "Bahai",
         "className": "fa-solid fa-bahai",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15262,7 +15293,7 @@ export const classIconIndex = {
         "name": "fa-ReligionBookBible",
         "title": "Book Bible",
         "className": "fa-solid fa-book-bible",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15270,7 +15301,7 @@ export const classIconIndex = {
         "name": "fa-ReligionBookJournalWhills",
         "title": "Book Journal Whills",
         "className": "fa-solid fa-book-journal-whills",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15278,7 +15309,7 @@ export const classIconIndex = {
         "name": "fa-ReligionBookQuran",
         "title": "Book Quran",
         "className": "fa-solid fa-book-quran",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15286,7 +15317,7 @@ export const classIconIndex = {
         "name": "fa-ReligionBookTanakh",
         "title": "Book Tanakh",
         "className": "fa-solid fa-book-tanakh",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15294,7 +15325,7 @@ export const classIconIndex = {
         "name": "fa-ReligionChurch",
         "title": "Church",
         "className": "fa-solid fa-church",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15302,7 +15333,7 @@ export const classIconIndex = {
         "name": "fa-ReligionCross",
         "title": "Cross",
         "className": "fa-solid fa-cross",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15310,7 +15341,7 @@ export const classIconIndex = {
         "name": "fa-ReligionDharmachakra",
         "title": "Dharmachakra",
         "className": "fa-solid fa-dharmachakra",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15318,7 +15349,7 @@ export const classIconIndex = {
         "name": "fa-ReligionDove",
         "title": "Dove",
         "className": "fa-solid fa-dove",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15326,7 +15357,7 @@ export const classIconIndex = {
         "name": "fa-ReligionGopuram",
         "title": "Gopuram",
         "className": "fa-solid fa-gopuram",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15334,7 +15365,7 @@ export const classIconIndex = {
         "name": "fa-ReligionHamsa",
         "title": "Hamsa",
         "className": "fa-solid fa-hamsa",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15342,7 +15373,7 @@ export const classIconIndex = {
         "name": "fa-ReligionHandsPraying",
         "title": "Hands Praying",
         "className": "fa-solid fa-hands-praying",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15350,7 +15381,7 @@ export const classIconIndex = {
         "name": "fa-ReligionHanukiah",
         "title": "Hanukiah",
         "className": "fa-solid fa-hanukiah",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15358,7 +15389,7 @@ export const classIconIndex = {
         "name": "fa-ReligionJedi",
         "title": "Jedi",
         "className": "fa-solid fa-jedi",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15366,7 +15397,7 @@ export const classIconIndex = {
         "name": "fa-ReligionKaaba",
         "title": "Kaaba",
         "className": "fa-solid fa-kaaba",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15374,7 +15405,7 @@ export const classIconIndex = {
         "name": "fa-ReligionKhanda",
         "title": "Khanda",
         "className": "fa-solid fa-khanda",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15382,7 +15413,7 @@ export const classIconIndex = {
         "name": "fa-ReligionMenorah",
         "title": "Menorah",
         "className": "fa-solid fa-menorah",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15390,7 +15421,7 @@ export const classIconIndex = {
         "name": "fa-ReligionMosque",
         "title": "Mosque",
         "className": "fa-solid fa-mosque",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15398,7 +15429,7 @@ export const classIconIndex = {
         "name": "fa-ReligionOm",
         "title": "Om",
         "className": "fa-solid fa-om",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15406,7 +15437,7 @@ export const classIconIndex = {
         "name": "fa-ReligionPeace",
         "title": "Peace",
         "className": "fa-solid fa-peace",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15414,7 +15445,7 @@ export const classIconIndex = {
         "name": "fa-ReligionPersonPraying",
         "title": "Person Praying",
         "className": "fa-solid fa-person-praying",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15422,7 +15453,7 @@ export const classIconIndex = {
         "name": "fa-ReligionPlaceOfWorship",
         "title": "Place Of Worship",
         "className": "fa-solid fa-place-of-worship",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15430,7 +15461,7 @@ export const classIconIndex = {
         "name": "fa-ReligionScrollTorah",
         "title": "Scroll Torah",
         "className": "fa-solid fa-scroll-torah",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15438,7 +15469,7 @@ export const classIconIndex = {
         "name": "fa-ReligionSpaghettiMonsterFlying",
         "title": "Spaghetti Monster Flying",
         "className": "fa-solid fa-spaghetti-monster-flying",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15446,7 +15477,7 @@ export const classIconIndex = {
         "name": "fa-ReligionStarAndCrescent",
         "title": "Star And Crescent",
         "className": "fa-solid fa-star-and-crescent",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15454,7 +15485,7 @@ export const classIconIndex = {
         "name": "fa-ReligionStarOfDavid",
         "title": "Star Of David",
         "className": "fa-solid fa-star-of-david",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15462,7 +15493,7 @@ export const classIconIndex = {
         "name": "fa-ReligionSynagogue",
         "title": "Synagogue",
         "className": "fa-solid fa-synagogue",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15470,7 +15501,7 @@ export const classIconIndex = {
         "name": "fa-ReligionToriiGate",
         "title": "Torii Gate",
         "className": "fa-solid fa-torii-gate",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15478,7 +15509,7 @@ export const classIconIndex = {
         "name": "fa-ReligionVihara",
         "title": "Vihara",
         "className": "fa-solid fa-vihara",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15486,7 +15517,7 @@ export const classIconIndex = {
         "name": "fa-ReligionYinYang",
         "title": "Yin Yang",
         "className": "fa-solid fa-yin-yang",
-        "categories": [
+        "type":"fa","categories": [
             "religion"
         ]
     },
@@ -15494,7 +15525,7 @@ export const classIconIndex = {
         "name": "fa-ScienceAtom",
         "title": "Atom",
         "className": "fa-solid fa-atom",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15502,7 +15533,7 @@ export const classIconIndex = {
         "name": "fa-ScienceBiohazard",
         "title": "Biohazard",
         "className": "fa-solid fa-biohazard",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15510,7 +15541,7 @@ export const classIconIndex = {
         "name": "fa-ScienceBrain",
         "title": "Brain",
         "className": "fa-solid fa-brain",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15518,7 +15549,7 @@ export const classIconIndex = {
         "name": "fa-ScienceCapsules",
         "title": "Capsules",
         "className": "fa-solid fa-capsules",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15526,7 +15557,7 @@ export const classIconIndex = {
         "name": "fa-ScienceCircleRadiation",
         "title": "Circle Radiation",
         "className": "fa-solid fa-circle-radiation",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15534,7 +15565,7 @@ export const classIconIndex = {
         "name": "fa-ScienceClipboardCheck",
         "title": "Clipboard Check",
         "className": "fa-solid fa-clipboard-check",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15542,7 +15573,7 @@ export const classIconIndex = {
         "name": "fa-ScienceDisease",
         "title": "Disease",
         "className": "fa-solid fa-disease",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15550,7 +15581,7 @@ export const classIconIndex = {
         "name": "fa-ScienceDna",
         "title": "Dna",
         "className": "fa-solid fa-dna",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15558,7 +15589,7 @@ export const classIconIndex = {
         "name": "fa-ScienceEyeDropper",
         "title": "Eye Dropper",
         "className": "fa-solid fa-eye-dropper",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15566,7 +15597,7 @@ export const classIconIndex = {
         "name": "fa-SciencefictionAtom",
         "title": "Sciencefiction Atom",
         "className": "fa-solid fa-atom",
-        "categories": [
+        "type":"fa","categories": [
             "science-fiction"
         ]
     },
@@ -15574,7 +15605,7 @@ export const classIconIndex = {
         "name": "fa-SciencefictionBookJournalWhills",
         "title": "Sciencefiction Book Journal Whills",
         "className": "fa-solid fa-book-journal-whills",
-        "categories": [
+        "type":"fa","categories": [
             "science-fiction"
         ]
     },
@@ -15582,7 +15613,7 @@ export const classIconIndex = {
         "name": "fa-SciencefictionExplosion",
         "title": "Sciencefiction Explosion",
         "className": "fa-solid fa-explosion",
-        "categories": [
+        "type":"fa","categories": [
             "science-fiction"
         ]
     },
@@ -15590,7 +15621,7 @@ export const classIconIndex = {
         "name": "fa-SciencefictionGalacticRepublic",
         "title": "Sciencefiction Galactic Republic",
         "className": "fa-solid fa-galactic-republic",
-        "categories": [
+        "type":"fa","categories": [
             "science-fiction"
         ]
     },
@@ -15598,7 +15629,7 @@ export const classIconIndex = {
         "name": "fa-SciencefictionGalacticSenate",
         "title": "Sciencefiction Galactic Senate",
         "className": "fa-solid fa-galactic-senate",
-        "categories": [
+        "type":"fa","categories": [
             "science-fiction"
         ]
     },
@@ -15606,7 +15637,7 @@ export const classIconIndex = {
         "name": "fa-SciencefictionHandSpock",
         "title": "Sciencefiction Hand Spock",
         "className": "fa-solid fa-hand-spock",
-        "categories": [
+        "type":"fa","categories": [
             "science-fiction"
         ]
     },
@@ -15614,7 +15645,7 @@ export const classIconIndex = {
         "name": "fa-SciencefictionJedi",
         "title": "Sciencefiction Jedi",
         "className": "fa-solid fa-jedi",
-        "categories": [
+        "type":"fa","categories": [
             "science-fiction"
         ]
     },
@@ -15622,7 +15653,7 @@ export const classIconIndex = {
         "name": "fa-SciencefictionJediOrder",
         "title": "Sciencefiction Jedi Order",
         "className": "fa-solid fa-jedi-order",
-        "categories": [
+        "type":"fa","categories": [
             "science-fiction"
         ]
     },
@@ -15630,7 +15661,7 @@ export const classIconIndex = {
         "name": "fa-SciencefictionOldRepublic",
         "title": "Sciencefiction Old Republic",
         "className": "fa-solid fa-old-republic",
-        "categories": [
+        "type":"fa","categories": [
             "science-fiction"
         ]
     },
@@ -15638,7 +15669,7 @@ export const classIconIndex = {
         "name": "fa-SciencefictionRobot",
         "title": "Sciencefiction Robot",
         "className": "fa-solid fa-robot",
-        "categories": [
+        "type":"fa","categories": [
             "science-fiction"
         ]
     },
@@ -15646,7 +15677,7 @@ export const classIconIndex = {
         "name": "fa-SciencefictionRocket",
         "title": "Sciencefiction Rocket",
         "className": "fa-solid fa-rocket",
-        "categories": [
+        "type":"fa","categories": [
             "science-fiction"
         ]
     },
@@ -15654,7 +15685,7 @@ export const classIconIndex = {
         "name": "fa-SciencefictionSpaceAwesome",
         "title": "Sciencefiction Space Awesome",
         "className": "fa-solid fa-space-awesome",
-        "categories": [
+        "type":"fa","categories": [
             "science-fiction"
         ]
     },
@@ -15662,7 +15693,7 @@ export const classIconIndex = {
         "name": "fa-SciencefictionUserAstronaut",
         "title": "Sciencefiction User Astronaut",
         "className": "fa-solid fa-user-astronaut",
-        "categories": [
+        "type":"fa","categories": [
             "science-fiction"
         ]
     },
@@ -15670,7 +15701,7 @@ export const classIconIndex = {
         "name": "fa-ScienceFilter",
         "title": "Filter",
         "className": "fa-solid fa-filter",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15678,7 +15709,7 @@ export const classIconIndex = {
         "name": "fa-ScienceFire",
         "title": "Fire",
         "className": "fa-solid fa-fire",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15686,7 +15717,7 @@ export const classIconIndex = {
         "name": "fa-ScienceFireFlameCurved",
         "title": "Fire Flame Curved",
         "className": "fa-solid fa-fire-flame-curved",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15694,7 +15725,7 @@ export const classIconIndex = {
         "name": "fa-ScienceFireFlameSimple",
         "title": "Fire Flame Simple",
         "className": "fa-solid fa-fire-flame-simple",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15702,7 +15733,7 @@ export const classIconIndex = {
         "name": "fa-ScienceFlask",
         "title": "Flask",
         "className": "fa-solid fa-flask",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15710,7 +15741,7 @@ export const classIconIndex = {
         "name": "fa-ScienceFlaskVial",
         "title": "Flask Vial",
         "className": "fa-solid fa-flask-vial",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15718,7 +15749,7 @@ export const classIconIndex = {
         "name": "fa-ScienceFrog",
         "title": "Frog",
         "className": "fa-solid fa-frog",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15726,7 +15757,7 @@ export const classIconIndex = {
         "name": "fa-ScienceMagnet",
         "title": "Magnet",
         "className": "fa-solid fa-magnet",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15734,7 +15765,7 @@ export const classIconIndex = {
         "name": "fa-ScienceMicroscope",
         "title": "Microscope",
         "className": "fa-solid fa-microscope",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15742,7 +15773,7 @@ export const classIconIndex = {
         "name": "fa-ScienceMortarPestle",
         "title": "Mortar Pestle",
         "className": "fa-solid fa-mortar-pestle",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15750,7 +15781,7 @@ export const classIconIndex = {
         "name": "fa-SciencePills",
         "title": "Pills",
         "className": "fa-solid fa-pills",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15758,7 +15789,7 @@ export const classIconIndex = {
         "name": "fa-SciencePrescriptionBottle",
         "title": "Prescription Bottle",
         "className": "fa-solid fa-prescription-bottle",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15766,7 +15797,7 @@ export const classIconIndex = {
         "name": "fa-ScienceRadiation",
         "title": "Radiation",
         "className": "fa-solid fa-radiation",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15774,7 +15805,7 @@ export const classIconIndex = {
         "name": "fa-ScienceSeedling",
         "title": "Seedling",
         "className": "fa-solid fa-seedling",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15782,7 +15813,7 @@ export const classIconIndex = {
         "name": "fa-ScienceSkullCrossbones",
         "title": "Skull Crossbones",
         "className": "fa-solid fa-skull-crossbones",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15790,7 +15821,7 @@ export const classIconIndex = {
         "name": "fa-ScienceSquareVirus",
         "title": "Square Virus",
         "className": "fa-solid fa-square-virus",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15798,7 +15829,7 @@ export const classIconIndex = {
         "name": "fa-ScienceSyringe",
         "title": "Syringe",
         "className": "fa-solid fa-syringe",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15806,7 +15837,7 @@ export const classIconIndex = {
         "name": "fa-ScienceTablets",
         "title": "Tablets",
         "className": "fa-solid fa-tablets",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15814,7 +15845,7 @@ export const classIconIndex = {
         "name": "fa-ScienceTemperatureHigh",
         "title": "Temperature High",
         "className": "fa-solid fa-temperature-high",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15822,7 +15853,7 @@ export const classIconIndex = {
         "name": "fa-ScienceTemperatureLow",
         "title": "Temperature Low",
         "className": "fa-solid fa-temperature-low",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15830,7 +15861,7 @@ export const classIconIndex = {
         "name": "fa-ScienceVial",
         "title": "Vial",
         "className": "fa-solid fa-vial",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15838,7 +15869,7 @@ export const classIconIndex = {
         "name": "fa-ScienceVialCircleCheck",
         "title": "Vial Circle Check",
         "className": "fa-solid fa-vial-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15846,7 +15877,7 @@ export const classIconIndex = {
         "name": "fa-ScienceVials",
         "title": "Vials",
         "className": "fa-solid fa-vials",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15854,7 +15885,7 @@ export const classIconIndex = {
         "name": "fa-ScienceVialVirus",
         "title": "Vial Virus",
         "className": "fa-solid fa-vial-virus",
-        "categories": [
+        "type":"fa","categories": [
             "science"
         ]
     },
@@ -15862,7 +15893,7 @@ export const classIconIndex = {
         "name": "fa-SecurityBan",
         "title": "Ban",
         "className": "fa-solid fa-ban",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -15870,7 +15901,7 @@ export const classIconIndex = {
         "name": "fa-SecurityBug",
         "title": "Bug",
         "className": "fa-solid fa-bug",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -15878,7 +15909,7 @@ export const classIconIndex = {
         "name": "fa-SecurityBugSlash",
         "title": "Bug Slash",
         "className": "fa-solid fa-bug-slash",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -15886,7 +15917,7 @@ export const classIconIndex = {
         "name": "fa-SecurityBuildingLock",
         "title": "Building Lock",
         "className": "fa-solid fa-building-lock",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -15894,7 +15925,7 @@ export const classIconIndex = {
         "name": "fa-SecurityBuildingShield",
         "title": "Building Shield",
         "className": "fa-solid fa-building-shield",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -15902,7 +15933,7 @@ export const classIconIndex = {
         "name": "fa-SecurityBurst",
         "title": "Burst",
         "className": "fa-solid fa-burst",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -15910,7 +15941,7 @@ export const classIconIndex = {
         "name": "fa-SecurityCarOn",
         "title": "Car On",
         "className": "fa-solid fa-car-on",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -15918,7 +15949,7 @@ export const classIconIndex = {
         "name": "fa-SecurityDoorClosed",
         "title": "Door Closed",
         "className": "fa-solid fa-door-closed",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -15926,7 +15957,7 @@ export const classIconIndex = {
         "name": "fa-SecurityDoorOpen",
         "title": "Door Open",
         "className": "fa-solid fa-door-open",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -15934,7 +15965,7 @@ export const classIconIndex = {
         "name": "fa-SecurityDungeon",
         "title": "Dungeon",
         "className": "fa-solid fa-dungeon",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -15942,7 +15973,7 @@ export const classIconIndex = {
         "name": "fa-SecurityExplosion",
         "title": "Explosion",
         "className": "fa-solid fa-explosion",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -15950,7 +15981,7 @@ export const classIconIndex = {
         "name": "fa-SecurityEye",
         "title": "Eye",
         "className": "fa-solid fa-eye",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -15958,7 +15989,7 @@ export const classIconIndex = {
         "name": "fa-SecurityEyeSlash",
         "title": "Eye Slash",
         "className": "fa-solid fa-eye-slash",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -15966,7 +15997,7 @@ export const classIconIndex = {
         "name": "fa-SecurityFileContract",
         "title": "File Contract",
         "className": "fa-solid fa-file-contract",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -15974,7 +16005,7 @@ export const classIconIndex = {
         "name": "fa-SecurityFileShield",
         "title": "File Shield",
         "className": "fa-solid fa-file-shield",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -15982,7 +16013,7 @@ export const classIconIndex = {
         "name": "fa-SecurityFileSignature",
         "title": "File Signature",
         "className": "fa-solid fa-file-signature",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -15990,7 +16021,7 @@ export const classIconIndex = {
         "name": "fa-SecurityFingerprint",
         "title": "Fingerprint",
         "className": "fa-solid fa-fingerprint",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -15998,7 +16029,7 @@ export const classIconIndex = {
         "name": "fa-SecurityGun",
         "title": "Gun",
         "className": "fa-solid fa-gun",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16006,7 +16037,7 @@ export const classIconIndex = {
         "name": "fa-SecurityHandcuffs",
         "title": "Handcuffs",
         "className": "fa-solid fa-handcuffs",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16014,7 +16045,7 @@ export const classIconIndex = {
         "name": "fa-SecurityHandsBound",
         "title": "Hands Bound",
         "className": "fa-solid fa-hands-bound",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16022,7 +16053,7 @@ export const classIconIndex = {
         "name": "fa-SecurityHandsHoldingChild",
         "title": "Hands Holding Child",
         "className": "fa-solid fa-hands-holding-child",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16030,7 +16061,7 @@ export const classIconIndex = {
         "name": "fa-SecurityHandsHoldingCircle",
         "title": "Hands Holding Circle",
         "className": "fa-solid fa-hands-holding-circle",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16038,7 +16069,7 @@ export const classIconIndex = {
         "name": "fa-SecurityHouseFire",
         "title": "House Fire",
         "className": "fa-solid fa-house-fire",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16046,7 +16077,7 @@ export const classIconIndex = {
         "name": "fa-SecurityHouseLock",
         "title": "House Lock",
         "className": "fa-solid fa-house-lock",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16054,7 +16085,7 @@ export const classIconIndex = {
         "name": "fa-SecurityIdBadge",
         "title": "Id Badge",
         "className": "fa-solid fa-id-badge",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16062,7 +16093,7 @@ export const classIconIndex = {
         "name": "fa-SecurityIdCard",
         "title": "Id Card",
         "className": "fa-solid fa-id-card",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16070,7 +16101,7 @@ export const classIconIndex = {
         "name": "fa-SecurityIdCardClip",
         "title": "Id Card Clip",
         "className": "fa-solid fa-id-card-clip",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16078,7 +16109,7 @@ export const classIconIndex = {
         "name": "fa-SecurityKey",
         "title": "Key",
         "className": "fa-solid fa-key",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16086,7 +16117,7 @@ export const classIconIndex = {
         "name": "fa-SecurityLandMineOn",
         "title": "Land Mine On",
         "className": "fa-solid fa-land-mine-on",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16094,7 +16125,7 @@ export const classIconIndex = {
         "name": "fa-SecurityLock",
         "title": "Lock",
         "className": "fa-solid fa-lock",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16102,7 +16133,7 @@ export const classIconIndex = {
         "name": "fa-SecurityLockOpen",
         "title": "Lock Open",
         "className": "fa-solid fa-lock-open",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16110,7 +16141,7 @@ export const classIconIndex = {
         "name": "fa-SecurityMarsAndVenusBurst",
         "title": "Mars And Venus Burst",
         "className": "fa-solid fa-mars-and-venus-burst",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16118,7 +16149,7 @@ export const classIconIndex = {
         "name": "fa-SecurityMask",
         "title": "Mask",
         "className": "fa-solid fa-mask",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16126,7 +16157,7 @@ export const classIconIndex = {
         "name": "fa-SecurityPassport",
         "title": "Passport",
         "className": "fa-solid fa-passport",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16134,7 +16165,7 @@ export const classIconIndex = {
         "name": "fa-SecurityPeoplePulling",
         "title": "People Pulling",
         "className": "fa-solid fa-people-pulling",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16142,7 +16173,7 @@ export const classIconIndex = {
         "name": "fa-SecurityPeopleRobbery",
         "title": "People Robbery",
         "className": "fa-solid fa-people-robbery",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16150,7 +16181,7 @@ export const classIconIndex = {
         "name": "fa-SecurityPersonBurst",
         "title": "Person Burst",
         "className": "fa-solid fa-person-burst",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16158,7 +16189,7 @@ export const classIconIndex = {
         "name": "fa-SecurityPersonDressBurst",
         "title": "Person Dress Burst",
         "className": "fa-solid fa-person-dress-burst",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16166,7 +16197,7 @@ export const classIconIndex = {
         "name": "fa-SecurityPersonFallingBurst",
         "title": "Person Falling Burst",
         "className": "fa-solid fa-person-falling-burst",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16174,7 +16205,7 @@ export const classIconIndex = {
         "name": "fa-SecurityPersonHarassing",
         "title": "Person Harassing",
         "className": "fa-solid fa-person-harassing",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16182,7 +16213,7 @@ export const classIconIndex = {
         "name": "fa-SecurityPersonMilitaryPointing",
         "title": "Person Military Pointing",
         "className": "fa-solid fa-person-military-pointing",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16190,7 +16221,7 @@ export const classIconIndex = {
         "name": "fa-SecurityPersonMilitaryRifle",
         "title": "Person Military Rifle",
         "className": "fa-solid fa-person-military-rifle",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16198,7 +16229,7 @@ export const classIconIndex = {
         "name": "fa-SecurityPersonMilitaryToPerson",
         "title": "Person Military To Person",
         "className": "fa-solid fa-person-military-to-person",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16206,7 +16237,7 @@ export const classIconIndex = {
         "name": "fa-SecurityPersonRifle",
         "title": "Person Rifle",
         "className": "fa-solid fa-person-rifle",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16214,7 +16245,7 @@ export const classIconIndex = {
         "name": "fa-SecurityPersonShelter",
         "title": "Person Shelter",
         "className": "fa-solid fa-person-shelter",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16222,7 +16253,7 @@ export const classIconIndex = {
         "name": "fa-SecurityPersonThroughWindow",
         "title": "Person Through Window",
         "className": "fa-solid fa-person-through-window",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16230,7 +16261,7 @@ export const classIconIndex = {
         "name": "fa-SecurityRoadSpikes",
         "title": "Road Spikes",
         "className": "fa-solid fa-road-spikes",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16238,7 +16269,7 @@ export const classIconIndex = {
         "name": "fa-SecurityShield",
         "title": "Shield",
         "className": "fa-solid fa-shield",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16246,7 +16277,7 @@ export const classIconIndex = {
         "name": "fa-SecurityShieldCat",
         "title": "Shield Cat",
         "className": "fa-solid fa-shield-cat",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16254,7 +16285,7 @@ export const classIconIndex = {
         "name": "fa-SecurityShieldDog",
         "title": "Shield Dog",
         "className": "fa-solid fa-shield-dog",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16262,7 +16293,7 @@ export const classIconIndex = {
         "name": "fa-SecurityShieldHalved",
         "title": "Shield Halved",
         "className": "fa-solid fa-shield-halved",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16270,7 +16301,7 @@ export const classIconIndex = {
         "name": "fa-SecurityShieldHeart",
         "title": "Shield Heart",
         "className": "fa-solid fa-shield-heart",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16278,7 +16309,7 @@ export const classIconIndex = {
         "name": "fa-SecuritySkullCrossbones",
         "title": "Skull Crossbones",
         "className": "fa-solid fa-skull-crossbones",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16286,7 +16317,7 @@ export const classIconIndex = {
         "name": "fa-SecuritySquarePersonConfined",
         "title": "Square Person Confined",
         "className": "fa-solid fa-square-person-confined",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16294,7 +16325,7 @@ export const classIconIndex = {
         "name": "fa-SecurityTowerObservation",
         "title": "Tower Observation",
         "className": "fa-solid fa-tower-observation",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16302,7 +16333,7 @@ export const classIconIndex = {
         "name": "fa-SecurityUnlock",
         "title": "Unlock",
         "className": "fa-solid fa-unlock",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16310,7 +16341,7 @@ export const classIconIndex = {
         "name": "fa-SecurityUnlockKeyhole",
         "title": "Unlock Keyhole",
         "className": "fa-solid fa-unlock-keyhole",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16318,7 +16349,7 @@ export const classIconIndex = {
         "name": "fa-SecurityUserLock",
         "title": "User Lock",
         "className": "fa-solid fa-user-lock",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16326,7 +16357,7 @@ export const classIconIndex = {
         "name": "fa-SecurityUserSecret",
         "title": "User Secret",
         "className": "fa-solid fa-user-secret",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16334,7 +16365,7 @@ export const classIconIndex = {
         "name": "fa-SecurityUserShield",
         "title": "User Shield",
         "className": "fa-solid fa-user-shield",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16342,7 +16373,7 @@ export const classIconIndex = {
         "name": "fa-SecurityVault",
         "title": "Vault",
         "className": "fa-solid fa-vault",
-        "categories": [
+        "type":"fa","categories": [
             "security"
         ]
     },
@@ -16350,7 +16381,7 @@ export const classIconIndex = {
         "name": "fa-ShapesBookmark",
         "title": "Bookmark",
         "className": "fa-solid fa-bookmark",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16358,7 +16389,7 @@ export const classIconIndex = {
         "name": "fa-ShapesBurst",
         "title": "Burst",
         "className": "fa-solid fa-burst",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16366,7 +16397,7 @@ export const classIconIndex = {
         "name": "fa-ShapesCalendar",
         "title": "Calendar",
         "className": "fa-solid fa-calendar",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16374,7 +16405,7 @@ export const classIconIndex = {
         "name": "fa-ShapesCertificate",
         "title": "Certificate",
         "className": "fa-solid fa-certificate",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16382,7 +16413,7 @@ export const classIconIndex = {
         "name": "fa-ShapesCircle",
         "title": "Circle",
         "className": "fa-solid fa-circle",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16390,7 +16421,7 @@ export const classIconIndex = {
         "name": "fa-ShapesCircleHalfStroke",
         "title": "Circle Half Stroke",
         "className": "fa-solid fa-circle-half-stroke",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16398,7 +16429,7 @@ export const classIconIndex = {
         "name": "fa-ShapesCloud",
         "title": "Cloud",
         "className": "fa-solid fa-cloud",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16406,7 +16437,7 @@ export const classIconIndex = {
         "name": "fa-ShapesClover",
         "title": "Clover",
         "className": "fa-solid fa-clover",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16414,7 +16445,7 @@ export const classIconIndex = {
         "name": "fa-ShapesComment",
         "title": "Comment",
         "className": "fa-solid fa-comment",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16422,7 +16453,7 @@ export const classIconIndex = {
         "name": "fa-ShapesCrown",
         "title": "Crown",
         "className": "fa-solid fa-crown",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16430,7 +16461,7 @@ export const classIconIndex = {
         "name": "fa-ShapesCubesStacked",
         "title": "Cubes Stacked",
         "className": "fa-solid fa-cubes-stacked",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16438,7 +16469,7 @@ export const classIconIndex = {
         "name": "fa-ShapesDiamond",
         "title": "Diamond",
         "className": "fa-solid fa-diamond",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16446,7 +16477,7 @@ export const classIconIndex = {
         "name": "fa-ShapesFile",
         "title": "File",
         "className": "fa-solid fa-file",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16454,7 +16485,7 @@ export const classIconIndex = {
         "name": "fa-ShapesFolder",
         "title": "Folder",
         "className": "fa-solid fa-folder",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16462,7 +16493,7 @@ export const classIconIndex = {
         "name": "fa-ShapesHeart",
         "title": "Heart",
         "className": "fa-solid fa-heart",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16470,7 +16501,7 @@ export const classIconIndex = {
         "name": "fa-ShapesHeartCrack",
         "title": "Heart Crack",
         "className": "fa-solid fa-heart-crack",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16478,7 +16509,7 @@ export const classIconIndex = {
         "name": "fa-ShapesLinesLeaning",
         "title": "Lines Leaning",
         "className": "fa-solid fa-lines-leaning",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16486,7 +16517,7 @@ export const classIconIndex = {
         "name": "fa-ShapesLocationPin",
         "title": "Location Pin",
         "className": "fa-solid fa-location-pin",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16494,7 +16525,7 @@ export const classIconIndex = {
         "name": "fa-ShapesPlay",
         "title": "Play",
         "className": "fa-solid fa-play",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16502,7 +16533,7 @@ export const classIconIndex = {
         "name": "fa-ShapesShapes",
         "title": "",
         "className": "fa-solid fa-shapes",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16510,7 +16541,7 @@ export const classIconIndex = {
         "name": "fa-ShapesShield",
         "title": "Shield",
         "className": "fa-solid fa-shield",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16518,7 +16549,7 @@ export const classIconIndex = {
         "name": "fa-ShapesSquare",
         "title": "Square",
         "className": "fa-solid fa-square",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16526,7 +16557,7 @@ export const classIconIndex = {
         "name": "fa-ShapesStar",
         "title": "Star",
         "className": "fa-solid fa-star",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16534,7 +16565,7 @@ export const classIconIndex = {
         "name": "fa-ShapesTicketSimple",
         "title": "Ticket Simple",
         "className": "fa-solid fa-ticket-simple",
-        "categories": [
+        "type":"fa","categories": [
             "shapes"
         ]
     },
@@ -16542,7 +16573,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingAlipay",
         "title": "Alipay",
         "className": "fa-solid fa-alipay",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16550,7 +16581,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingAmazonPay",
         "title": "Amazon Pay",
         "className": "fa-solid fa-amazon-pay",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16558,7 +16589,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingApplePay",
         "title": "Apple Pay",
         "className": "fa-solid fa-apple-pay",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16566,7 +16597,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingBagShopping",
         "title": "Bag",
         "className": "fa-solid fa-bag-shopping",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16574,7 +16605,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingBarcode",
         "title": "Barcode",
         "className": "fa-solid fa-barcode",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16582,7 +16613,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingBasketShopping",
         "title": "Basket",
         "className": "fa-solid fa-basket-shopping",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16590,7 +16621,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingBell",
         "title": "Bell",
         "className": "fa-solid fa-bell",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16598,7 +16629,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingBitcoin",
         "title": "Bitcoin",
         "className": "fa-solid fa-bitcoin",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16606,7 +16637,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingBookmark",
         "title": "Bookmark",
         "className": "fa-solid fa-bookmark",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16614,7 +16645,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingBtc",
         "title": "Btc",
         "className": "fa-solid fa-btc",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16622,7 +16653,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingBullhorn",
         "title": "Bullhorn",
         "className": "fa-solid fa-bullhorn",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16630,7 +16661,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingCamera",
         "title": "Camera",
         "className": "fa-solid fa-camera",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16638,7 +16669,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingCameraRetro",
         "title": "Camera Retro",
         "className": "fa-solid fa-camera-retro",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16646,7 +16677,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingCartArrowDown",
         "title": "Cart Arrow Down",
         "className": "fa-solid fa-cart-arrow-down",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16654,7 +16685,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingCartPlus",
         "title": "Cart Plus",
         "className": "fa-solid fa-cart-plus",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16662,7 +16693,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingCartShopping",
         "title": "Cart",
         "className": "fa-solid fa-cart-shopping",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16670,7 +16701,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingCashRegister",
         "title": "Cash Register",
         "className": "fa-solid fa-cash-register",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16678,7 +16709,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingCcAmazonPay",
         "title": "Cc Amazon Pay",
         "className": "fa-solid fa-cc-amazon-pay",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16686,7 +16717,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingCcAmex",
         "title": "Cc Amex",
         "className": "fa-solid fa-cc-amex",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16694,7 +16725,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingCcApplePay",
         "title": "Cc Apple Pay",
         "className": "fa-solid fa-cc-apple-pay",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16702,7 +16733,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingCcDinersClub",
         "title": "Cc Diners Club",
         "className": "fa-solid fa-cc-diners-club",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16710,7 +16741,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingCcDiscover",
         "title": "Cc Discover",
         "className": "fa-solid fa-cc-discover",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16718,7 +16749,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingCcJcb",
         "title": "Cc Jcb",
         "className": "fa-solid fa-cc-jcb",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16726,7 +16757,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingCcMastercard",
         "title": "Cc Mastercard",
         "className": "fa-solid fa-cc-mastercard",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16734,7 +16765,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingCcPaypal",
         "title": "Cc Paypal",
         "className": "fa-solid fa-cc-paypal",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16742,7 +16773,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingCcStripe",
         "title": "Cc Stripe",
         "className": "fa-solid fa-cc-stripe",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16750,7 +16781,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingCcVisa",
         "title": "Cc Visa",
         "className": "fa-solid fa-cc-visa",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16758,7 +16789,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingCertificate",
         "title": "Certificate",
         "className": "fa-solid fa-certificate",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16766,7 +16797,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingCreditCard",
         "title": "Credit Card",
         "className": "fa-solid fa-credit-card",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16774,7 +16805,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingEthereum",
         "title": "Ethereum",
         "className": "fa-solid fa-ethereum",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16782,7 +16813,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingGem",
         "title": "Gem",
         "className": "fa-solid fa-gem",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16790,7 +16821,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingGift",
         "title": "Gift",
         "className": "fa-solid fa-gift",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16798,7 +16829,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingGifts",
         "title": "Gifts",
         "className": "fa-solid fa-gifts",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16806,7 +16837,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingGooglePay",
         "title": "Google Pay",
         "className": "fa-solid fa-google-pay",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16814,7 +16845,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingGoogleWallet",
         "title": "Google Wallet",
         "className": "fa-solid fa-google-wallet",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16822,7 +16853,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingHandshake",
         "title": "Handshake",
         "className": "fa-solid fa-handshake",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16830,7 +16861,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingHeart",
         "title": "Heart",
         "className": "fa-solid fa-heart",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16838,7 +16869,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingKey",
         "title": "Key",
         "className": "fa-solid fa-key",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16846,7 +16877,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingMoneyCheck",
         "title": "Money Check",
         "className": "fa-solid fa-money-check",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16854,7 +16885,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingMoneyCheckDollar",
         "title": "Money Check Dollar",
         "className": "fa-solid fa-money-check-dollar",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16862,7 +16893,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingNfcDirectional",
         "title": "Nfc Directional",
         "className": "fa-solid fa-nfc-directional",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16870,7 +16901,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingNfcSymbol",
         "title": "Nfc Symbol",
         "className": "fa-solid fa-nfc-symbol",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16878,7 +16909,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingPaypal",
         "title": "Paypal",
         "className": "fa-solid fa-paypal",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16886,7 +16917,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingPersonBooth",
         "title": "Person Booth",
         "className": "fa-solid fa-person-booth",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16894,7 +16925,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingReceipt",
         "title": "Receipt",
         "className": "fa-solid fa-receipt",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16902,7 +16933,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingShirt",
         "title": "Shirt",
         "className": "fa-solid fa-shirt",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16910,7 +16941,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingShop",
         "title": "Shop",
         "className": "fa-solid fa-shop",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16918,7 +16949,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingShopLock",
         "title": "Shop Lock",
         "className": "fa-solid fa-shop-lock",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16926,7 +16957,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingShopSlash",
         "title": "Shop Slash",
         "className": "fa-solid fa-shop-slash",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16934,7 +16965,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingStar",
         "title": "Star",
         "className": "fa-solid fa-star",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16942,7 +16973,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingStore",
         "title": "Store",
         "className": "fa-solid fa-store",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16950,7 +16981,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingStoreSlash",
         "title": "Store Slash",
         "className": "fa-solid fa-store-slash",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16958,7 +16989,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingStripe",
         "title": "Stripe",
         "className": "fa-solid fa-stripe",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16966,7 +16997,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingStripeS",
         "title": "Stripe S",
         "className": "fa-solid fa-stripe-s",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16974,7 +17005,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingTag",
         "title": "Tag",
         "className": "fa-solid fa-tag",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16982,7 +17013,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingTags",
         "title": "Tags",
         "className": "fa-solid fa-tags",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16990,7 +17021,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingThumbsDown",
         "title": "Thumbs Down",
         "className": "fa-solid fa-thumbs-down",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -16998,7 +17029,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingThumbsUp",
         "title": "Thumbs Up",
         "className": "fa-solid fa-thumbs-up",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -17006,7 +17037,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingTrophy",
         "title": "Trophy",
         "className": "fa-solid fa-trophy",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -17014,7 +17045,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingTruck",
         "title": "Truck",
         "className": "fa-solid fa-truck",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -17022,7 +17053,7 @@ export const classIconIndex = {
         "name": "fa-ShoppingTruckFast",
         "title": "Truck Fast",
         "className": "fa-solid fa-truck-fast",
-        "categories": [
+        "type":"fa","categories": [
             "shopping"
         ]
     },
@@ -17030,7 +17061,7 @@ export const classIconIndex = {
         "name": "fa-SocialBell",
         "title": "Bell",
         "className": "fa-solid fa-bell",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17038,7 +17069,7 @@ export const classIconIndex = {
         "name": "fa-SocialCakeCandles",
         "title": "Cake Candles",
         "className": "fa-solid fa-cake-candles",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17046,7 +17077,7 @@ export const classIconIndex = {
         "name": "fa-SocialCamera",
         "title": "Camera",
         "className": "fa-solid fa-camera",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17054,7 +17085,7 @@ export const classIconIndex = {
         "name": "fa-SocialCircleUser",
         "title": "Circle User",
         "className": "fa-solid fa-circle-user",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17062,7 +17093,7 @@ export const classIconIndex = {
         "name": "fa-SocialComment",
         "title": "Comment",
         "className": "fa-solid fa-comment",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17070,7 +17101,7 @@ export const classIconIndex = {
         "name": "fa-SocialEnvelope",
         "title": "Envelope",
         "className": "fa-solid fa-envelope",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17078,7 +17109,7 @@ export const classIconIndex = {
         "name": "fa-SocialHashtag",
         "title": "Hashtag",
         "className": "fa-solid fa-hashtag",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17086,7 +17117,7 @@ export const classIconIndex = {
         "name": "fa-SocialHeart",
         "title": "Heart",
         "className": "fa-solid fa-heart",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17094,7 +17125,7 @@ export const classIconIndex = {
         "name": "fa-SocialIcons",
         "title": "Icons",
         "className": "fa-solid fa-icons",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17102,7 +17133,7 @@ export const classIconIndex = {
         "name": "fa-SocialImage",
         "title": "Image",
         "className": "fa-solid fa-image",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17110,7 +17141,7 @@ export const classIconIndex = {
         "name": "fa-SocialImages",
         "title": "Images",
         "className": "fa-solid fa-images",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17118,7 +17149,7 @@ export const classIconIndex = {
         "name": "fa-SocialLocationDot",
         "title": "Location Dot",
         "className": "fa-solid fa-location-dot",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17126,7 +17157,7 @@ export const classIconIndex = {
         "name": "fa-SocialLocationPin",
         "title": "Location Pin",
         "className": "fa-solid fa-location-pin",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17134,7 +17165,7 @@ export const classIconIndex = {
         "name": "fa-SocialMessage",
         "title": "Message",
         "className": "fa-solid fa-message",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17142,7 +17173,7 @@ export const classIconIndex = {
         "name": "fa-SocialPhotoFilm",
         "title": "Photo Film",
         "className": "fa-solid fa-photo-film",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17150,7 +17181,7 @@ export const classIconIndex = {
         "name": "fa-SocialRetweet",
         "title": "Retweet",
         "className": "fa-solid fa-retweet",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17158,7 +17189,7 @@ export const classIconIndex = {
         "name": "fa-SocialShare",
         "title": "Share",
         "className": "fa-solid fa-share",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17166,7 +17197,7 @@ export const classIconIndex = {
         "name": "fa-SocialShareFromSquare",
         "title": "Share From Square",
         "className": "fa-solid fa-share-from-square",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17174,7 +17205,7 @@ export const classIconIndex = {
         "name": "fa-SocialShareNodes",
         "title": "Share Nodes",
         "className": "fa-solid fa-share-nodes",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17182,7 +17213,7 @@ export const classIconIndex = {
         "name": "fa-SocialSquarePollHorizontal",
         "title": "Square Poll Horizontal",
         "className": "fa-solid fa-square-poll-horizontal",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17190,7 +17221,7 @@ export const classIconIndex = {
         "name": "fa-SocialSquarePollVertical",
         "title": "Square Poll Vertical",
         "className": "fa-solid fa-square-poll-vertical",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17198,7 +17229,7 @@ export const classIconIndex = {
         "name": "fa-SocialSquareShareNodes",
         "title": "Square Share Nodes",
         "className": "fa-solid fa-square-share-nodes",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17206,7 +17237,7 @@ export const classIconIndex = {
         "name": "fa-SocialStar",
         "title": "Star",
         "className": "fa-solid fa-star",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17214,7 +17245,7 @@ export const classIconIndex = {
         "name": "fa-SocialThumbsDown",
         "title": "Thumbs Down",
         "className": "fa-solid fa-thumbs-down",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17222,7 +17253,7 @@ export const classIconIndex = {
         "name": "fa-SocialThumbsUp",
         "title": "Thumbs Up",
         "className": "fa-solid fa-thumbs-up",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17230,7 +17261,7 @@ export const classIconIndex = {
         "name": "fa-SocialThumbtack",
         "title": "Thumbtack",
         "className": "fa-solid fa-thumbtack",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17238,7 +17269,7 @@ export const classIconIndex = {
         "name": "fa-SocialUser",
         "title": "User",
         "className": "fa-solid fa-user",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17246,7 +17277,7 @@ export const classIconIndex = {
         "name": "fa-SocialUserGroup",
         "title": "User Group",
         "className": "fa-solid fa-user-group",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17254,7 +17285,7 @@ export const classIconIndex = {
         "name": "fa-SocialUserPlus",
         "title": "User Plus",
         "className": "fa-solid fa-user-plus",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17262,7 +17293,7 @@ export const classIconIndex = {
         "name": "fa-SocialUsers",
         "title": "Users",
         "className": "fa-solid fa-users",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17270,7 +17301,7 @@ export const classIconIndex = {
         "name": "fa-SocialVideo",
         "title": "Video",
         "className": "fa-solid fa-video",
-        "categories": [
+        "type":"fa","categories": [
             "social"
         ]
     },
@@ -17278,7 +17309,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersArrowRotateLeft",
         "title": "Arrow Rotate Left",
         "className": "fa-solid fa-arrow-rotate-left",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17286,7 +17317,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersArrowRotateRight",
         "title": "Arrow Rotate Right",
         "className": "fa-solid fa-arrow-rotate-right",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17294,7 +17325,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersArrowsRotate",
         "title": "Arrows Rotate",
         "className": "fa-solid fa-arrows-rotate",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17302,7 +17333,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersArrowsSpin",
         "title": "Arrows Spin",
         "className": "fa-solid fa-arrows-spin",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17310,7 +17341,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersAsterisk",
         "title": "Asterisk",
         "className": "fa-solid fa-asterisk",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17318,7 +17349,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersAtom",
         "title": "Atom",
         "className": "fa-solid fa-atom",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17326,7 +17357,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersBahai",
         "title": "Bahai",
         "className": "fa-solid fa-bahai",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17334,7 +17365,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersCertificate",
         "title": "Certificate",
         "className": "fa-solid fa-certificate",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17342,7 +17373,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersCircleNotch",
         "title": "Circle Notch",
         "className": "fa-solid fa-circle-notch",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17350,7 +17381,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersCompactDisc",
         "title": "Compact Disc",
         "className": "fa-solid fa-compact-disc",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17358,7 +17389,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersCompass",
         "title": "Compass",
         "className": "fa-solid fa-compass",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17366,7 +17397,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersCrosshairs",
         "title": "Crosshairs",
         "className": "fa-solid fa-crosshairs",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17374,7 +17405,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersDharmachakra",
         "title": "Dharmachakra",
         "className": "fa-solid fa-dharmachakra",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17382,7 +17413,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersFan",
         "title": "Fan",
         "className": "fa-solid fa-fan",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17390,7 +17421,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersGear",
         "title": "Gear",
         "className": "fa-solid fa-gear",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17398,7 +17429,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersHurricane",
         "title": "Hurricane",
         "className": "fa-solid fa-hurricane",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17406,7 +17437,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersLifeRing",
         "title": "Life Ring",
         "className": "fa-solid fa-life-ring",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17414,7 +17445,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersPalette",
         "title": "Palette",
         "className": "fa-solid fa-palette",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17422,7 +17453,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersRing",
         "title": "Ring",
         "className": "fa-solid fa-ring",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17430,7 +17461,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersRotate",
         "title": "Rotate",
         "className": "fa-solid fa-rotate",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17438,7 +17469,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersRotateLeft",
         "title": "Rotate Left",
         "className": "fa-solid fa-rotate-left",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17446,7 +17477,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersRotateRight",
         "title": "Rotate Right",
         "className": "fa-solid fa-rotate-right",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17454,7 +17485,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersSlash",
         "title": "Slash",
         "className": "fa-solid fa-slash",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17462,7 +17493,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersSnowflake",
         "title": "Snowflake",
         "className": "fa-solid fa-snowflake",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17470,7 +17501,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersSpinner",
         "title": "Spinner",
         "className": "fa-solid fa-spinner",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17478,7 +17509,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersStroopwafel",
         "title": "Stroopwafel",
         "className": "fa-solid fa-stroopwafel",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17486,7 +17517,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersSun",
         "title": "Sun",
         "className": "fa-solid fa-sun",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17494,7 +17525,7 @@ export const classIconIndex = {
         "name": "fa-SpinnersYinYang",
         "title": "Yin Yang",
         "className": "fa-solid fa-yin-yang",
-        "categories": [
+        "type":"fa","categories": [
             "spinners"
         ]
     },
@@ -17502,7 +17533,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessBaseball",
         "title": "Baseball",
         "className": "fa-solid fa-baseball",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17510,7 +17541,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessBaseballBatBall",
         "title": "Baseball Bat Ball",
         "className": "fa-solid fa-baseball-bat-ball",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17518,7 +17549,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessBasketball",
         "title": "Basketball",
         "className": "fa-solid fa-basketball",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17526,7 +17557,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessBicycle",
         "title": "Bicycle",
         "className": "fa-solid fa-bicycle",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17534,7 +17565,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessBowlingBall",
         "title": "Bowling Ball",
         "className": "fa-solid fa-bowling-ball",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17542,7 +17573,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessBroomBall",
         "title": "Broom Ball",
         "className": "fa-solid fa-broom-ball",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17550,7 +17581,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessDumbbell",
         "title": "Dumbbell",
         "className": "fa-solid fa-dumbbell",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17558,7 +17589,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessFireFlameCurved",
         "title": "Fire Flame Curved",
         "className": "fa-solid fa-fire-flame-curved",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17566,7 +17597,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessFireFlameSimple",
         "title": "Fire Flame Simple",
         "className": "fa-solid fa-fire-flame-simple",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17574,7 +17605,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessFootball",
         "title": "Football",
         "className": "fa-solid fa-football",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17582,7 +17613,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessFutbol",
         "title": "Futbol",
         "className": "fa-solid fa-futbol",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17590,7 +17621,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessGolfBallTee",
         "title": "Golf Ball Tee",
         "className": "fa-solid fa-golf-ball-tee",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17598,7 +17629,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessHeart",
         "title": "Heart",
         "className": "fa-solid fa-heart",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17606,7 +17637,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessHeartPulse",
         "title": "Heart Pulse",
         "className": "fa-solid fa-heart-pulse",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17614,7 +17645,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessHockeyPuck",
         "title": "Hockey Puck",
         "className": "fa-solid fa-hockey-puck",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17622,7 +17653,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessMedal",
         "title": "Medal",
         "className": "fa-solid fa-medal",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17630,7 +17661,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessMound",
         "title": "Mound",
         "className": "fa-solid fa-mound",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17638,7 +17669,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessPersonBiking",
         "title": "Person Biking",
         "className": "fa-solid fa-person-biking",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17646,7 +17677,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessPersonHiking",
         "title": "Person Hiking",
         "className": "fa-solid fa-person-hiking",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17654,7 +17685,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessPersonRunning",
         "title": "Person Running",
         "className": "fa-solid fa-person-running",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17662,7 +17693,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessPersonSkating",
         "title": "Person Skating",
         "className": "fa-solid fa-person-skating",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17670,7 +17701,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessPersonSkiing",
         "title": "Person Skiing",
         "className": "fa-solid fa-person-skiing",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17678,7 +17709,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessPersonSkiingNordic",
         "title": "Person Skiing Nordic",
         "className": "fa-solid fa-person-skiing-nordic",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17686,7 +17717,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessPersonSnowboarding",
         "title": "Person Snowboarding",
         "className": "fa-solid fa-person-snowboarding",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17694,7 +17725,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessPersonSwimming",
         "title": "Person Swimming",
         "className": "fa-solid fa-person-swimming",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17702,7 +17733,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessPersonWalking",
         "title": "Person Walking",
         "className": "fa-solid fa-person-walking",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17710,7 +17741,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessRankingStar",
         "title": "Ranking Star",
         "className": "fa-solid fa-ranking-star",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17718,7 +17749,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessShoePrints",
         "title": "Shoe Prints",
         "className": "fa-solid fa-shoe-prints",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17726,7 +17757,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessSpa",
         "title": "Spa",
         "className": "fa-solid fa-spa",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17734,7 +17765,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessStopwatch20",
         "title": "Stopwatch20",
         "className": "fa-solid fa-stopwatch-20",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17742,7 +17773,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessTableTennisPaddleBall",
         "title": "Table Tennis Paddle Ball",
         "className": "fa-solid fa-table-tennis-paddle-ball",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17750,7 +17781,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessVolleyball",
         "title": "Volleyball",
         "className": "fa-solid fa-volleyball",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17758,7 +17789,7 @@ export const classIconIndex = {
         "name": "fa-SportsFitnessWeightHanging",
         "title": "Weight Hanging",
         "className": "fa-solid fa-weight-hanging",
-        "categories": [
+        "type":"fa","categories": [
             "sports+fitness"
         ]
     },
@@ -17766,7 +17797,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingAlignCenter",
         "title": "Textformatting Align Center",
         "className": "fa-solid fa-align-center",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17774,7 +17805,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingAlignJustify",
         "title": "Textformatting Align Justify",
         "className": "fa-solid fa-align-justify",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17782,7 +17813,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingAlignLeft",
         "title": "Textformatting Align Left",
         "className": "fa-solid fa-align-left",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17790,7 +17821,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingAlignRight",
         "title": "Textformatting Align Right",
         "className": "fa-solid fa-align-right",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17798,7 +17829,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingBold",
         "title": "Textformatting Bold",
         "className": "fa-solid fa-bold",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17806,7 +17837,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingBorderAll",
         "title": "Textformatting Border All",
         "className": "fa-solid fa-border-all",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17814,7 +17845,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingBorderNone",
         "title": "Textformatting Border None",
         "className": "fa-solid fa-border-none",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17822,7 +17853,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingBorderTopLeft",
         "title": "Textformatting Border Top Left",
         "className": "fa-solid fa-border-top-left",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17830,7 +17861,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingCheck",
         "title": "Textformatting Check",
         "className": "fa-solid fa-check",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17838,7 +17869,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingCheckDouble",
         "title": "Textformatting Check Double",
         "className": "fa-solid fa-check-double",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17846,7 +17877,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingCircleCheck",
         "title": "Textformatting Circle Check",
         "className": "fa-solid fa-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17854,7 +17885,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingFilterCircleXmark",
         "title": "Textformatting Filter Circle Xmark",
         "className": "fa-solid fa-filter-circle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17862,7 +17893,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingFont",
         "title": "Textformatting Font",
         "className": "fa-solid fa-font",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17870,7 +17901,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingHeading",
         "title": "Textformatting Heading",
         "className": "fa-solid fa-heading",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17878,7 +17909,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingHighlighter",
         "title": "Textformatting Highlighter",
         "className": "fa-solid fa-highlighter",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17886,7 +17917,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingIcons",
         "title": "Textformatting Icons",
         "className": "fa-solid fa-icons",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17894,7 +17925,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingICursor",
         "title": "Textformatting ICursor",
         "className": "fa-solid fa-i-cursor",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17902,7 +17933,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingIndent",
         "title": "Textformatting Indent",
         "className": "fa-solid fa-indent",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17910,7 +17941,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingItalic",
         "title": "Textformatting Italic",
         "className": "fa-solid fa-italic",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17918,7 +17949,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingList",
         "title": "Textformatting List",
         "className": "fa-solid fa-list",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17926,7 +17957,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingListCheck",
         "title": "Textformatting List Check",
         "className": "fa-solid fa-list-check",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17934,7 +17965,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingListOl",
         "title": "Textformatting List Ol",
         "className": "fa-solid fa-list-ol",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17942,7 +17973,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingListUl",
         "title": "Textformatting List Ul",
         "className": "fa-solid fa-list-ul",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17950,7 +17981,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingOutdent",
         "title": "Textformatting Outdent",
         "className": "fa-solid fa-outdent",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17958,7 +17989,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingParagraph",
         "title": "Textformatting Paragraph",
         "className": "fa-solid fa-paragraph",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17966,7 +17997,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingRectangleList",
         "title": "Textformatting Rectangle List",
         "className": "fa-solid fa-rectangle-list",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17974,7 +18005,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingSpellCheck",
         "title": "Textformatting Spell Check",
         "className": "fa-solid fa-spell-check",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17982,7 +18013,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingSquareCheck",
         "title": "Textformatting Square Check",
         "className": "fa-solid fa-square-check",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17990,7 +18021,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingStrikethrough",
         "title": "Textformatting Strikethrough",
         "className": "fa-solid fa-strikethrough",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -17998,7 +18029,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingSubscript",
         "title": "Textformatting Subscript",
         "className": "fa-solid fa-subscript",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -18006,7 +18037,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingSuperscript",
         "title": "Textformatting Superscript",
         "className": "fa-solid fa-superscript",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -18014,7 +18045,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingTable",
         "title": "Textformatting Table",
         "className": "fa-solid fa-table",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -18022,7 +18053,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingTableCells",
         "title": "Textformatting Table Cells",
         "className": "fa-solid fa-table-cells",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -18030,7 +18061,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingTableCellsColumnLock",
         "title": "Textformatting Table Cells Column Lock",
         "className": "fa-solid fa-table-cells-column-lock",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -18038,7 +18069,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingTableCellsLarge",
         "title": "Textformatting Table Cells Large",
         "className": "fa-solid fa-table-cells-large",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -18046,7 +18077,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingTableCellsRowLock",
         "title": "Textformatting Table Cells Row Lock",
         "className": "fa-solid fa-table-cells-row-lock",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -18054,7 +18085,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingTableColumns",
         "title": "Textformatting Table Columns",
         "className": "fa-solid fa-table-columns",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -18062,7 +18093,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingTableList",
         "title": "Textformatting Table List",
         "className": "fa-solid fa-table-list",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -18070,7 +18101,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingTextHeight",
         "title": "Textformatting Text Height",
         "className": "fa-solid fa-text-height",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -18078,7 +18109,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingTextSlash",
         "title": "Textformatting Text Slash",
         "className": "fa-solid fa-text-slash",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -18086,7 +18117,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingTextWidth",
         "title": "Textformatting Text Width",
         "className": "fa-solid fa-text-width",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -18094,7 +18125,7 @@ export const classIconIndex = {
         "name": "fa-TextformattingUnderline",
         "title": "Textformatting Underline",
         "className": "fa-solid fa-underline",
-        "categories": [
+        "type":"fa","categories": [
             "text-formatting"
         ]
     },
@@ -18102,7 +18133,7 @@ export const classIconIndex = {
         "name": "fa-TimeBell",
         "title": "Bell",
         "className": "fa-solid fa-bell",
-        "categories": [
+        "type":"fa","categories": [
             "time"
         ]
     },
@@ -18110,7 +18141,7 @@ export const classIconIndex = {
         "name": "fa-TimeBellSlash",
         "title": "Bell Slash",
         "className": "fa-solid fa-bell-slash",
-        "categories": [
+        "type":"fa","categories": [
             "time"
         ]
     },
@@ -18118,7 +18149,7 @@ export const classIconIndex = {
         "name": "fa-TimeCalendar",
         "title": "Calendar",
         "className": "fa-solid fa-calendar",
-        "categories": [
+        "type":"fa","categories": [
             "time"
         ]
     },
@@ -18126,7 +18157,7 @@ export const classIconIndex = {
         "name": "fa-TimeCalendarCheck",
         "title": "Calendar Check",
         "className": "fa-solid fa-calendar-check",
-        "categories": [
+        "type":"fa","categories": [
             "time"
         ]
     },
@@ -18134,7 +18165,7 @@ export const classIconIndex = {
         "name": "fa-TimeCalendarDay",
         "title": "Calendar Day",
         "className": "fa-solid fa-calendar-day",
-        "categories": [
+        "type":"fa","categories": [
             "time"
         ]
     },
@@ -18142,7 +18173,7 @@ export const classIconIndex = {
         "name": "fa-TimeCalendarDays",
         "title": "Calendar Days",
         "className": "fa-solid fa-calendar-days",
-        "categories": [
+        "type":"fa","categories": [
             "time"
         ]
     },
@@ -18150,7 +18181,7 @@ export const classIconIndex = {
         "name": "fa-TimeCalendarMinus",
         "title": "Calendar Minus",
         "className": "fa-solid fa-calendar-minus",
-        "categories": [
+        "type":"fa","categories": [
             "time"
         ]
     },
@@ -18158,7 +18189,7 @@ export const classIconIndex = {
         "name": "fa-TimeCalendarPlus",
         "title": "Calendar Plus",
         "className": "fa-solid fa-calendar-plus",
-        "categories": [
+        "type":"fa","categories": [
             "time"
         ]
     },
@@ -18166,7 +18197,7 @@ export const classIconIndex = {
         "name": "fa-TimeCalendarWeek",
         "title": "Calendar Week",
         "className": "fa-solid fa-calendar-week",
-        "categories": [
+        "type":"fa","categories": [
             "time"
         ]
     },
@@ -18174,7 +18205,7 @@ export const classIconIndex = {
         "name": "fa-TimeCalendarXmark",
         "title": "Calendar Xmark",
         "className": "fa-solid fa-calendar-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "time"
         ]
     },
@@ -18182,7 +18213,7 @@ export const classIconIndex = {
         "name": "fa-TimeClock",
         "title": "Clock",
         "className": "fa-solid fa-clock",
-        "categories": [
+        "type":"fa","categories": [
             "time"
         ]
     },
@@ -18190,7 +18221,7 @@ export const classIconIndex = {
         "name": "fa-TimeHourglass",
         "title": "Hourglass",
         "className": "fa-solid fa-hourglass",
-        "categories": [
+        "type":"fa","categories": [
             "time"
         ]
     },
@@ -18198,7 +18229,7 @@ export const classIconIndex = {
         "name": "fa-TimeHourglassEnd",
         "title": "Hourglass End",
         "className": "fa-solid fa-hourglass-end",
-        "categories": [
+        "type":"fa","categories": [
             "time"
         ]
     },
@@ -18206,7 +18237,7 @@ export const classIconIndex = {
         "name": "fa-TimeHourglassHalf",
         "title": "Hourglass Half",
         "className": "fa-solid fa-hourglass-half",
-        "categories": [
+        "type":"fa","categories": [
             "time"
         ]
     },
@@ -18214,7 +18245,7 @@ export const classIconIndex = {
         "name": "fa-TimeHourglassStart",
         "title": "Hourglass Start",
         "className": "fa-solid fa-hourglass-start",
-        "categories": [
+        "type":"fa","categories": [
             "time"
         ]
     },
@@ -18222,7 +18253,7 @@ export const classIconIndex = {
         "name": "fa-TimeStopwatch",
         "title": "Stopwatch",
         "className": "fa-solid fa-stopwatch",
-        "categories": [
+        "type":"fa","categories": [
             "time"
         ]
     },
@@ -18230,7 +18261,7 @@ export const classIconIndex = {
         "name": "fa-TimeStopwatch20",
         "title": "Stopwatch20",
         "className": "fa-solid fa-stopwatch-20",
-        "categories": [
+        "type":"fa","categories": [
             "time"
         ]
     },
@@ -18238,7 +18269,7 @@ export const classIconIndex = {
         "name": "fa-ToggleBullseye",
         "title": "Bullseye",
         "className": "fa-solid fa-bullseye",
-        "categories": [
+        "type":"fa","categories": [
             "toggle"
         ]
     },
@@ -18246,7 +18277,7 @@ export const classIconIndex = {
         "name": "fa-ToggleCircle",
         "title": "Circle",
         "className": "fa-solid fa-circle",
-        "categories": [
+        "type":"fa","categories": [
             "toggle"
         ]
     },
@@ -18254,7 +18285,7 @@ export const classIconIndex = {
         "name": "fa-ToggleCircleCheck",
         "title": "Circle Check",
         "className": "fa-solid fa-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "toggle"
         ]
     },
@@ -18262,7 +18293,7 @@ export const classIconIndex = {
         "name": "fa-ToggleCircleDot",
         "title": "Circle Dot",
         "className": "fa-solid fa-circle-dot",
-        "categories": [
+        "type":"fa","categories": [
             "toggle"
         ]
     },
@@ -18270,7 +18301,7 @@ export const classIconIndex = {
         "name": "fa-ToggleLocationCrosshairs",
         "title": "Location Crosshairs",
         "className": "fa-solid fa-location-crosshairs",
-        "categories": [
+        "type":"fa","categories": [
             "toggle"
         ]
     },
@@ -18278,7 +18309,7 @@ export const classIconIndex = {
         "name": "fa-ToggleMicrophone",
         "title": "Microphone",
         "className": "fa-solid fa-microphone",
-        "categories": [
+        "type":"fa","categories": [
             "toggle"
         ]
     },
@@ -18286,7 +18317,7 @@ export const classIconIndex = {
         "name": "fa-ToggleMicrophoneSlash",
         "title": "Microphone Slash",
         "className": "fa-solid fa-microphone-slash",
-        "categories": [
+        "type":"fa","categories": [
             "toggle"
         ]
     },
@@ -18294,7 +18325,7 @@ export const classIconIndex = {
         "name": "fa-TogglePlaneUp",
         "title": "Plane Up",
         "className": "fa-solid fa-plane-up",
-        "categories": [
+        "type":"fa","categories": [
             "toggle"
         ]
     },
@@ -18302,7 +18333,7 @@ export const classIconIndex = {
         "name": "fa-ToggleSignal",
         "title": "Signal",
         "className": "fa-solid fa-signal",
-        "categories": [
+        "type":"fa","categories": [
             "toggle"
         ]
     },
@@ -18310,7 +18341,7 @@ export const classIconIndex = {
         "name": "fa-ToggleStar",
         "title": "Star",
         "className": "fa-solid fa-star",
-        "categories": [
+        "type":"fa","categories": [
             "toggle"
         ]
     },
@@ -18318,7 +18349,7 @@ export const classIconIndex = {
         "name": "fa-ToggleStarHalf",
         "title": "Star Half",
         "className": "fa-solid fa-star-half",
-        "categories": [
+        "type":"fa","categories": [
             "toggle"
         ]
     },
@@ -18326,7 +18357,7 @@ export const classIconIndex = {
         "name": "fa-ToggleStarHalfStroke",
         "title": "Star Half Stroke",
         "className": "fa-solid fa-star-half-stroke",
-        "categories": [
+        "type":"fa","categories": [
             "toggle"
         ]
     },
@@ -18334,7 +18365,7 @@ export const classIconIndex = {
         "name": "fa-ToggleToggleOff",
         "title": "Off",
         "className": "fa-solid fa-toggle-off",
-        "categories": [
+        "type":"fa","categories": [
             "toggle"
         ]
     },
@@ -18342,7 +18373,7 @@ export const classIconIndex = {
         "name": "fa-ToggleToggleOn",
         "title": "On",
         "className": "fa-solid fa-toggle-on",
-        "categories": [
+        "type":"fa","categories": [
             "toggle"
         ]
     },
@@ -18350,7 +18381,7 @@ export const classIconIndex = {
         "name": "fa-ToggleWifi",
         "title": "Wifi",
         "className": "fa-solid fa-wifi",
-        "categories": [
+        "type":"fa","categories": [
             "toggle"
         ]
     },
@@ -18358,7 +18389,7 @@ export const classIconIndex = {
         "name": "fa-TransportationBabyCarriage",
         "title": "Baby Carriage",
         "className": "fa-solid fa-baby-carriage",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18366,7 +18397,7 @@ export const classIconIndex = {
         "name": "fa-TransportationBicycle",
         "title": "Bicycle",
         "className": "fa-solid fa-bicycle",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18374,7 +18405,7 @@ export const classIconIndex = {
         "name": "fa-TransportationBus",
         "title": "Bus",
         "className": "fa-solid fa-bus",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18382,7 +18413,7 @@ export const classIconIndex = {
         "name": "fa-TransportationBusSimple",
         "title": "Bus Simple",
         "className": "fa-solid fa-bus-simple",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18390,7 +18421,7 @@ export const classIconIndex = {
         "name": "fa-TransportationCableCar",
         "title": "Cable Car",
         "className": "fa-solid fa-cable-car",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18398,7 +18429,7 @@ export const classIconIndex = {
         "name": "fa-TransportationCar",
         "title": "Car",
         "className": "fa-solid fa-car",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18406,7 +18437,7 @@ export const classIconIndex = {
         "name": "fa-TransportationCarBurst",
         "title": "Car Burst",
         "className": "fa-solid fa-car-burst",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18414,7 +18445,7 @@ export const classIconIndex = {
         "name": "fa-TransportationCarRear",
         "title": "Car Rear",
         "className": "fa-solid fa-car-rear",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18422,7 +18453,7 @@ export const classIconIndex = {
         "name": "fa-TransportationCarSide",
         "title": "Car Side",
         "className": "fa-solid fa-car-side",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18430,7 +18461,7 @@ export const classIconIndex = {
         "name": "fa-TransportationCartShopping",
         "title": "Cart Shopping",
         "className": "fa-solid fa-cart-shopping",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18438,7 +18469,7 @@ export const classIconIndex = {
         "name": "fa-TransportationCarTunnel",
         "title": "Car Tunnel",
         "className": "fa-solid fa-car-tunnel",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18446,7 +18477,7 @@ export const classIconIndex = {
         "name": "fa-TransportationFerry",
         "title": "Ferry",
         "className": "fa-solid fa-ferry",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18454,7 +18485,7 @@ export const classIconIndex = {
         "name": "fa-TransportationHelicopter",
         "title": "Helicopter",
         "className": "fa-solid fa-helicopter",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18462,7 +18493,7 @@ export const classIconIndex = {
         "name": "fa-TransportationHorse",
         "title": "Horse",
         "className": "fa-solid fa-horse",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18470,7 +18501,7 @@ export const classIconIndex = {
         "name": "fa-TransportationJetFighter",
         "title": "Jet Fighter",
         "className": "fa-solid fa-jet-fighter",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18478,7 +18509,7 @@ export const classIconIndex = {
         "name": "fa-TransportationJetFighterUp",
         "title": "Jet Fighter Up",
         "className": "fa-solid fa-jet-fighter-up",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18486,7 +18517,7 @@ export const classIconIndex = {
         "name": "fa-TransportationMotorcycle",
         "title": "Motorcycle",
         "className": "fa-solid fa-motorcycle",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18494,7 +18525,7 @@ export const classIconIndex = {
         "name": "fa-TransportationMound",
         "title": "Mound",
         "className": "fa-solid fa-mound",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18502,7 +18533,7 @@ export const classIconIndex = {
         "name": "fa-TransportationPaperPlane",
         "title": "Paper Plane",
         "className": "fa-solid fa-paper-plane",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18510,7 +18541,7 @@ export const classIconIndex = {
         "name": "fa-TransportationPlane",
         "title": "Plane",
         "className": "fa-solid fa-plane",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18518,7 +18549,7 @@ export const classIconIndex = {
         "name": "fa-TransportationPlaneSlash",
         "title": "Plane Slash",
         "className": "fa-solid fa-plane-slash",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18526,7 +18557,7 @@ export const classIconIndex = {
         "name": "fa-TransportationPlaneUp",
         "title": "Plane Up",
         "className": "fa-solid fa-plane-up",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18534,7 +18565,7 @@ export const classIconIndex = {
         "name": "fa-TransportationRoad",
         "title": "Road",
         "className": "fa-solid fa-road",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18542,7 +18573,7 @@ export const classIconIndex = {
         "name": "fa-TransportationRoadBarrier",
         "title": "Road Barrier",
         "className": "fa-solid fa-road-barrier",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18550,7 +18581,7 @@ export const classIconIndex = {
         "name": "fa-TransportationRoadSpikes",
         "title": "Road Spikes",
         "className": "fa-solid fa-road-spikes",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18558,7 +18589,7 @@ export const classIconIndex = {
         "name": "fa-TransportationRocket",
         "title": "Rocket",
         "className": "fa-solid fa-rocket",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18566,7 +18597,7 @@ export const classIconIndex = {
         "name": "fa-TransportationSailboat",
         "title": "Sailboat",
         "className": "fa-solid fa-sailboat",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18574,7 +18605,7 @@ export const classIconIndex = {
         "name": "fa-TransportationShip",
         "title": "Ship",
         "className": "fa-solid fa-ship",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18582,7 +18613,7 @@ export const classIconIndex = {
         "name": "fa-TransportationShuttleSpace",
         "title": "Shuttle Space",
         "className": "fa-solid fa-shuttle-space",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18590,7 +18621,7 @@ export const classIconIndex = {
         "name": "fa-TransportationSleigh",
         "title": "Sleigh",
         "className": "fa-solid fa-sleigh",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18598,7 +18629,7 @@ export const classIconIndex = {
         "name": "fa-TransportationSnowplow",
         "title": "Snowplow",
         "className": "fa-solid fa-snowplow",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18606,7 +18637,7 @@ export const classIconIndex = {
         "name": "fa-TransportationTaxi",
         "title": "Taxi",
         "className": "fa-solid fa-taxi",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18614,7 +18645,7 @@ export const classIconIndex = {
         "name": "fa-TransportationTractor",
         "title": "Tractor",
         "className": "fa-solid fa-tractor",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18622,7 +18653,7 @@ export const classIconIndex = {
         "name": "fa-TransportationTrain",
         "title": "Train",
         "className": "fa-solid fa-train",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18630,7 +18661,7 @@ export const classIconIndex = {
         "name": "fa-TransportationTrainSubway",
         "title": "Train Subway",
         "className": "fa-solid fa-train-subway",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18638,7 +18669,7 @@ export const classIconIndex = {
         "name": "fa-TransportationTrainTram",
         "title": "Train Tram",
         "className": "fa-solid fa-train-tram",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18646,7 +18677,7 @@ export const classIconIndex = {
         "name": "fa-TransportationTruck",
         "title": "Truck",
         "className": "fa-solid fa-truck",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18654,7 +18685,7 @@ export const classIconIndex = {
         "name": "fa-TransportationTruckArrowRight",
         "title": "Truck Arrow Right",
         "className": "fa-solid fa-truck-arrow-right",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18662,7 +18693,7 @@ export const classIconIndex = {
         "name": "fa-TransportationTruckDroplet",
         "title": "Truck Droplet",
         "className": "fa-solid fa-truck-droplet",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18670,7 +18701,7 @@ export const classIconIndex = {
         "name": "fa-TransportationTruckField",
         "title": "Truck Field",
         "className": "fa-solid fa-truck-field",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18678,7 +18709,7 @@ export const classIconIndex = {
         "name": "fa-TransportationTruckFieldUn",
         "title": "Truck Field Un",
         "className": "fa-solid fa-truck-field-un",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18686,7 +18717,7 @@ export const classIconIndex = {
         "name": "fa-TransportationTruckFront",
         "title": "Truck Front",
         "className": "fa-solid fa-truck-front",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18694,7 +18725,7 @@ export const classIconIndex = {
         "name": "fa-TransportationTruckMedical",
         "title": "Truck Medical",
         "className": "fa-solid fa-truck-medical",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18702,7 +18733,7 @@ export const classIconIndex = {
         "name": "fa-TransportationTruckMonster",
         "title": "Truck Monster",
         "className": "fa-solid fa-truck-monster",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18710,7 +18741,7 @@ export const classIconIndex = {
         "name": "fa-TransportationTruckPickup",
         "title": "Truck Pickup",
         "className": "fa-solid fa-truck-pickup",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18718,7 +18749,7 @@ export const classIconIndex = {
         "name": "fa-TransportationTruckPlane",
         "title": "Truck Plane",
         "className": "fa-solid fa-truck-plane",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18726,7 +18757,7 @@ export const classIconIndex = {
         "name": "fa-TransportationVanShuttle",
         "title": "Van Shuttle",
         "className": "fa-solid fa-van-shuttle",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18734,7 +18765,7 @@ export const classIconIndex = {
         "name": "fa-TransportationWheelchair",
         "title": "Wheelchair",
         "className": "fa-solid fa-wheelchair",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18742,7 +18773,7 @@ export const classIconIndex = {
         "name": "fa-TransportationWheelchairMove",
         "title": "Wheelchair Move",
         "className": "fa-solid fa-wheelchair-move",
-        "categories": [
+        "type":"fa","categories": [
             "transportation"
         ]
     },
@@ -18750,7 +18781,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelBabyCarriage",
         "title": "Baby Carriage",
         "className": "fa-solid fa-baby-carriage",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18758,7 +18789,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelBicycle",
         "title": "Bicycle",
         "className": "fa-solid fa-bicycle",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18766,7 +18797,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelBus",
         "title": "Bus",
         "className": "fa-solid fa-bus",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18774,7 +18805,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelBusSimple",
         "title": "Bus Simple",
         "className": "fa-solid fa-bus-simple",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18782,7 +18813,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelCableCar",
         "title": "Cable Car",
         "className": "fa-solid fa-cable-car",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18790,7 +18821,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelCar",
         "title": "Car",
         "className": "fa-solid fa-car",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18798,7 +18829,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelCarBurst",
         "title": "Car Burst",
         "className": "fa-solid fa-car-burst",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18806,7 +18837,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelCarRear",
         "title": "Car Rear",
         "className": "fa-solid fa-car-rear",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18814,7 +18845,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelCarSide",
         "title": "Car Side",
         "className": "fa-solid fa-car-side",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18822,7 +18853,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelCartShopping",
         "title": "Cart Shopping",
         "className": "fa-solid fa-cart-shopping",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18830,7 +18861,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelCarTunnel",
         "title": "Car Tunnel",
         "className": "fa-solid fa-car-tunnel",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18838,7 +18869,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelFerry",
         "title": "Ferry",
         "className": "fa-solid fa-ferry",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18846,7 +18877,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelHelicopter",
         "title": "Helicopter",
         "className": "fa-solid fa-helicopter",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18854,7 +18885,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelHorse",
         "title": "Horse",
         "className": "fa-solid fa-horse",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18862,7 +18893,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelJetFighter",
         "title": "Jet Fighter",
         "className": "fa-solid fa-jet-fighter",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18870,7 +18901,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelJetFighterUp",
         "title": "Jet Fighter Up",
         "className": "fa-solid fa-jet-fighter-up",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18878,7 +18909,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelMotorcycle",
         "title": "Motorcycle",
         "className": "fa-solid fa-motorcycle",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18886,7 +18917,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelMound",
         "title": "Mound",
         "className": "fa-solid fa-mound",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18894,7 +18925,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelPaperPlane",
         "title": "Paper Plane",
         "className": "fa-solid fa-paper-plane",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18902,7 +18933,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelPlane",
         "title": "Plane",
         "className": "fa-solid fa-plane",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18910,7 +18941,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelPlaneSlash",
         "title": "Plane Slash",
         "className": "fa-solid fa-plane-slash",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18918,7 +18949,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelPlaneUp",
         "title": "Plane Up",
         "className": "fa-solid fa-plane-up",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18926,7 +18957,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelRoad",
         "title": "Road",
         "className": "fa-solid fa-road",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18934,7 +18965,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelRoadBarrier",
         "title": "Road Barrier",
         "className": "fa-solid fa-road-barrier",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18942,7 +18973,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelRoadSpikes",
         "title": "Road Spikes",
         "className": "fa-solid fa-road-spikes",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18950,7 +18981,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelRocket",
         "title": "Rocket",
         "className": "fa-solid fa-rocket",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18958,7 +18989,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelSailboat",
         "title": "Sailboat",
         "className": "fa-solid fa-sailboat",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18966,7 +18997,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelShip",
         "title": "Ship",
         "className": "fa-solid fa-ship",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18974,7 +19005,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelShuttleSpace",
         "title": "Shuttle Space",
         "className": "fa-solid fa-shuttle-space",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18982,7 +19013,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelSleigh",
         "title": "Sleigh",
         "className": "fa-solid fa-sleigh",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18990,7 +19021,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelSnowplow",
         "title": "Snowplow",
         "className": "fa-solid fa-snowplow",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -18998,7 +19029,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelTaxi",
         "title": "Taxi",
         "className": "fa-solid fa-taxi",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -19006,7 +19037,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelTractor",
         "title": "Tractor",
         "className": "fa-solid fa-tractor",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -19014,7 +19045,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelTrain",
         "title": "Train",
         "className": "fa-solid fa-train",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -19022,7 +19053,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelTrainSubway",
         "title": "Train Subway",
         "className": "fa-solid fa-train-subway",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -19030,7 +19061,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelTrainTram",
         "title": "Train Tram",
         "className": "fa-solid fa-train-tram",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -19038,7 +19069,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelTruck",
         "title": "Truck",
         "className": "fa-solid fa-truck",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -19046,7 +19077,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelTruckArrowRight",
         "title": "Truck Arrow Right",
         "className": "fa-solid fa-truck-arrow-right",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -19054,7 +19085,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelTruckDroplet",
         "title": "Truck Droplet",
         "className": "fa-solid fa-truck-droplet",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -19062,7 +19093,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelTruckField",
         "title": "Truck Field",
         "className": "fa-solid fa-truck-field",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -19070,7 +19101,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelTruckFieldUn",
         "title": "Truck Field Un",
         "className": "fa-solid fa-truck-field-un",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -19078,7 +19109,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelTruckFront",
         "title": "Truck Front",
         "className": "fa-solid fa-truck-front",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -19086,7 +19117,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelTruckMedical",
         "title": "Truck Medical",
         "className": "fa-solid fa-truck-medical",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -19094,7 +19125,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelTruckMonster",
         "title": "Truck Monster",
         "className": "fa-solid fa-truck-monster",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -19102,7 +19133,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelTruckPickup",
         "title": "Truck Pickup",
         "className": "fa-solid fa-truck-pickup",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -19110,7 +19141,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelTruckPlane",
         "title": "Truck Plane",
         "className": "fa-solid fa-truck-plane",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -19118,7 +19149,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelVanShuttle",
         "title": "Van Shuttle",
         "className": "fa-solid fa-van-shuttle",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -19126,7 +19157,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelWheelchair",
         "title": "Wheelchair",
         "className": "fa-solid fa-wheelchair",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -19134,7 +19165,7 @@ export const classIconIndex = {
         "name": "fa-TravelHotelWheelchairMove",
         "title": "Wheelchair Move",
         "className": "fa-solid fa-wheelchair-move",
-        "categories": [
+        "type":"fa","categories": [
             "travel+hotel"
         ]
     },
@@ -19142,7 +19173,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleAddressBook",
         "title": "Address Book",
         "className": "fa-solid fa-address-book",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19150,7 +19181,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleAddressCard",
         "title": "Address Card",
         "className": "fa-solid fa-address-card",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19158,7 +19189,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleArrowsDownToPeople",
         "title": "Arrows Down To People",
         "className": "fa-solid fa-arrows-down-to-people",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19166,7 +19197,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleBaby",
         "title": "Baby",
         "className": "fa-solid fa-baby",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19174,7 +19205,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleBed",
         "title": "Bed",
         "className": "fa-solid fa-bed",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19182,7 +19213,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleChalkboardUser",
         "title": "Chalkboard User",
         "className": "fa-solid fa-chalkboard-user",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19190,7 +19221,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleChild",
         "title": "Child",
         "className": "fa-solid fa-child",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19198,7 +19229,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleChildDress",
         "title": "Child Dress",
         "className": "fa-solid fa-child-dress",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19206,7 +19237,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleChildReaching",
         "title": "Child Reaching",
         "className": "fa-solid fa-child-reaching",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19214,7 +19245,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleChildren",
         "title": "Children",
         "className": "fa-solid fa-children",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19222,7 +19253,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleCircleUser",
         "title": "Circle User",
         "className": "fa-solid fa-circle-user",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19230,7 +19261,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleClipboardUser",
         "title": "Clipboard User",
         "className": "fa-solid fa-clipboard-user",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19238,7 +19269,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleElevator",
         "title": "Elevator",
         "className": "fa-solid fa-elevator",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19246,7 +19277,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleFaceFrown",
         "title": "Face Frown",
         "className": "fa-solid fa-face-frown",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19254,7 +19285,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleFaceMeh",
         "title": "Face Meh",
         "className": "fa-solid fa-face-meh",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19262,7 +19293,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleFaceSmile",
         "title": "Face Smile",
         "className": "fa-solid fa-face-smile",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19270,7 +19301,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleHeadSideCough",
         "title": "Head Side Cough",
         "className": "fa-solid fa-head-side-cough",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19278,7 +19309,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleHeadSideCoughSlash",
         "title": "Head Side Cough Slash",
         "className": "fa-solid fa-head-side-cough-slash",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19286,7 +19317,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleHeadSideMask",
         "title": "Head Side Mask",
         "className": "fa-solid fa-head-side-mask",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19294,7 +19325,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleHeadSideVirus",
         "title": "Head Side Virus",
         "className": "fa-solid fa-head-side-virus",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19302,7 +19333,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleHospitalUser",
         "title": "Hospital User",
         "className": "fa-solid fa-hospital-user",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19310,7 +19341,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleHotTubPerson",
         "title": "Hot Tub Person",
         "className": "fa-solid fa-hot-tub-person",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19318,7 +19349,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleHouseChimneyUser",
         "title": "House Chimney User",
         "className": "fa-solid fa-house-chimney-user",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19326,7 +19357,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleHouseUser",
         "title": "House User",
         "className": "fa-solid fa-house-user",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19334,7 +19365,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleIdBadge",
         "title": "Id Badge",
         "className": "fa-solid fa-id-badge",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19342,7 +19373,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleIdCard",
         "title": "Id Card",
         "className": "fa-solid fa-id-card",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19350,7 +19381,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleIdCardClip",
         "title": "Id Card Clip",
         "className": "fa-solid fa-id-card-clip",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19358,7 +19389,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleImagePortrait",
         "title": "Image Portrait",
         "className": "fa-solid fa-image-portrait",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19366,7 +19397,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleMarsAndVenusBurst",
         "title": "Mars And Venus Burst",
         "className": "fa-solid fa-mars-and-venus-burst",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19374,7 +19405,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePeopleArrows",
         "title": "People Arrows",
         "className": "fa-solid fa-people-arrows",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19382,7 +19413,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePeopleCarryBox",
         "title": "People Carry Box",
         "className": "fa-solid fa-people-carry-box",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19390,7 +19421,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePeopleGroup",
         "title": "People Group",
         "className": "fa-solid fa-people-group",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19398,7 +19429,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePeopleLine",
         "title": "People Line",
         "className": "fa-solid fa-people-line",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19406,7 +19437,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePeoplePulling",
         "title": "People Pulling",
         "className": "fa-solid fa-people-pulling",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19414,7 +19445,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePeopleRobbery",
         "title": "People Robbery",
         "className": "fa-solid fa-people-robbery",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19422,7 +19453,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePeopleRoof",
         "title": "People Roof",
         "className": "fa-solid fa-people-roof",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19430,7 +19461,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePerson",
         "title": "Person",
         "className": "fa-solid fa-person",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19438,7 +19469,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonArrowDownToLine",
         "title": "Person Arrow Down To Line",
         "className": "fa-solid fa-person-arrow-down-to-line",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19446,7 +19477,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonArrowUpFromLine",
         "title": "Person Arrow Up From Line",
         "className": "fa-solid fa-person-arrow-up-from-line",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19454,7 +19485,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonBiking",
         "title": "Person Biking",
         "className": "fa-solid fa-person-biking",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19462,7 +19493,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonBooth",
         "title": "Person Booth",
         "className": "fa-solid fa-person-booth",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19470,7 +19501,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonBreastfeeding",
         "title": "Person Breastfeeding",
         "className": "fa-solid fa-person-breastfeeding",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19478,7 +19509,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonBurst",
         "title": "Person Burst",
         "className": "fa-solid fa-person-burst",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19486,7 +19517,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonCane",
         "title": "Person Cane",
         "className": "fa-solid fa-person-cane",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19494,7 +19525,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonChalkboard",
         "title": "Person Chalkboard",
         "className": "fa-solid fa-person-chalkboard",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19502,7 +19533,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonCircleCheck",
         "title": "Person Circle Check",
         "className": "fa-solid fa-person-circle-check",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19510,7 +19541,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonCircleExclamation",
         "title": "Person Circle Exclamation",
         "className": "fa-solid fa-person-circle-exclamation",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19518,7 +19549,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonCircleMinus",
         "title": "Person Circle Minus",
         "className": "fa-solid fa-person-circle-minus",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19526,7 +19557,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonCirclePlus",
         "title": "Person Circle Plus",
         "className": "fa-solid fa-person-circle-plus",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19534,7 +19565,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonCircleQuestion",
         "title": "Person Circle Question",
         "className": "fa-solid fa-person-circle-question",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19542,7 +19573,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonCircleXmark",
         "title": "Person Circle Xmark",
         "className": "fa-solid fa-person-circle-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19550,7 +19581,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonDigging",
         "title": "Person Digging",
         "className": "fa-solid fa-person-digging",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19558,7 +19589,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonDotsFromLine",
         "title": "Person Dots From Line",
         "className": "fa-solid fa-person-dots-from-line",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19566,7 +19597,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonDress",
         "title": "Person Dress",
         "className": "fa-solid fa-person-dress",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19574,7 +19605,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonDressBurst",
         "title": "Person Dress Burst",
         "className": "fa-solid fa-person-dress-burst",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19582,7 +19613,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonDrowning",
         "title": "Person Drowning",
         "className": "fa-solid fa-person-drowning",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19590,7 +19621,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonFalling",
         "title": "Person Falling",
         "className": "fa-solid fa-person-falling",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19598,7 +19629,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonFallingBurst",
         "title": "Person Falling Burst",
         "className": "fa-solid fa-person-falling-burst",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19606,7 +19637,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonHalfDress",
         "title": "Person Half Dress",
         "className": "fa-solid fa-person-half-dress",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19614,7 +19645,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonHarassing",
         "title": "Person Harassing",
         "className": "fa-solid fa-person-harassing",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19622,7 +19653,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonHiking",
         "title": "Person Hiking",
         "className": "fa-solid fa-person-hiking",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19630,7 +19661,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonMilitaryPointing",
         "title": "Person Military Pointing",
         "className": "fa-solid fa-person-military-pointing",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19638,7 +19669,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonMilitaryRifle",
         "title": "Person Military Rifle",
         "className": "fa-solid fa-person-military-rifle",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19646,7 +19677,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonMilitaryToPerson",
         "title": "Person Military To Person",
         "className": "fa-solid fa-person-military-to-person",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19654,7 +19685,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonPraying",
         "title": "Person Praying",
         "className": "fa-solid fa-person-praying",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19662,7 +19693,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonPregnant",
         "title": "Person Pregnant",
         "className": "fa-solid fa-person-pregnant",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19670,7 +19701,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonRays",
         "title": "Person Rays",
         "className": "fa-solid fa-person-rays",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19678,7 +19709,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonRifle",
         "title": "Person Rifle",
         "className": "fa-solid fa-person-rifle",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19686,7 +19717,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonRunning",
         "title": "Person Running",
         "className": "fa-solid fa-person-running",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19694,7 +19725,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonShelter",
         "title": "Person Shelter",
         "className": "fa-solid fa-person-shelter",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19702,7 +19733,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonSkating",
         "title": "Person Skating",
         "className": "fa-solid fa-person-skating",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19710,7 +19741,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonSkiing",
         "title": "Person Skiing",
         "className": "fa-solid fa-person-skiing",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19718,7 +19749,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonSkiingNordic",
         "title": "Person Skiing Nordic",
         "className": "fa-solid fa-person-skiing-nordic",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19726,7 +19757,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonSnowboarding",
         "title": "Person Snowboarding",
         "className": "fa-solid fa-person-snowboarding",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19734,7 +19765,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonSwimming",
         "title": "Person Swimming",
         "className": "fa-solid fa-person-swimming",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19742,7 +19773,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonThroughWindow",
         "title": "Person Through Window",
         "className": "fa-solid fa-person-through-window",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19750,7 +19781,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonWalking",
         "title": "Person Walking",
         "className": "fa-solid fa-person-walking",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19758,7 +19789,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonWalkingArrowLoopLeft",
         "title": "Person Walking Arrow Loop Left",
         "className": "fa-solid fa-person-walking-arrow-loop-left",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19766,7 +19797,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonWalkingArrowRight",
         "title": "Person Walking Arrow Right",
         "className": "fa-solid fa-person-walking-arrow-right",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19774,7 +19805,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonWalkingDashedLineArrowRight",
         "title": "Person Walking Dashed Line Arrow Right",
         "className": "fa-solid fa-person-walking-dashed-line-arrow-right",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19782,7 +19813,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonWalkingLuggage",
         "title": "Person Walking Luggage",
         "className": "fa-solid fa-person-walking-luggage",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19790,7 +19821,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePersonWalkingWithCane",
         "title": "Person Walking With Cane",
         "className": "fa-solid fa-person-walking-with-cane",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19798,7 +19829,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeoplePoo",
         "title": "Poo",
         "className": "fa-solid fa-poo",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19806,7 +19837,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleRestroom",
         "title": "Restroom",
         "className": "fa-solid fa-restroom",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19814,7 +19845,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleSkull",
         "title": "Skull",
         "className": "fa-solid fa-skull",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19822,7 +19853,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleSquarePersonConfined",
         "title": "Square Person Confined",
         "className": "fa-solid fa-square-person-confined",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19830,7 +19861,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleStreetView",
         "title": "Street View",
         "className": "fa-solid fa-street-view",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19838,7 +19869,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUser",
         "title": "User",
         "className": "fa-solid fa-user",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19846,7 +19877,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUserAstronaut",
         "title": "User Astronaut",
         "className": "fa-solid fa-user-astronaut",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19854,7 +19885,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUserCheck",
         "title": "User Check",
         "className": "fa-solid fa-user-check",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19862,7 +19893,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUserClock",
         "title": "User Clock",
         "className": "fa-solid fa-user-clock",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19870,7 +19901,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUserDoctor",
         "title": "User Doctor",
         "className": "fa-solid fa-user-doctor",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19878,7 +19909,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUserGear",
         "title": "User Gear",
         "className": "fa-solid fa-user-gear",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19886,7 +19917,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUserGraduate",
         "title": "User Graduate",
         "className": "fa-solid fa-user-graduate",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19894,7 +19925,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUserGroup",
         "title": "User Group",
         "className": "fa-solid fa-user-group",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19902,7 +19933,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUserInjured",
         "title": "User Injured",
         "className": "fa-solid fa-user-injured",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19910,7 +19941,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUserLarge",
         "title": "User Large",
         "className": "fa-solid fa-user-large",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19918,7 +19949,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUserLargeSlash",
         "title": "User Large Slash",
         "className": "fa-solid fa-user-large-slash",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19926,7 +19957,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUserLock",
         "title": "User Lock",
         "className": "fa-solid fa-user-lock",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19934,7 +19965,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUserMinus",
         "title": "User Minus",
         "className": "fa-solid fa-user-minus",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19942,7 +19973,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUserNinja",
         "title": "User Ninja",
         "className": "fa-solid fa-user-ninja",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19950,7 +19981,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUserNurse",
         "title": "User Nurse",
         "className": "fa-solid fa-user-nurse",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19958,7 +19989,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUserPen",
         "title": "User Pen",
         "className": "fa-solid fa-user-pen",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19966,7 +19997,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUserPlus",
         "title": "User Plus",
         "className": "fa-solid fa-user-plus",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19974,7 +20005,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUsers",
         "title": "Users",
         "className": "fa-solid fa-users",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19982,7 +20013,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUsersBetweenLines",
         "title": "Users Between Lines",
         "className": "fa-solid fa-users-between-lines",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19990,7 +20021,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUserSecret",
         "title": "User Secret",
         "className": "fa-solid fa-user-secret",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -19998,7 +20029,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUsersGear",
         "title": "Users Gear",
         "className": "fa-solid fa-users-gear",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -20006,7 +20037,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUserShield",
         "title": "User Shield",
         "className": "fa-solid fa-user-shield",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -20014,7 +20045,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUserSlash",
         "title": "User Slash",
         "className": "fa-solid fa-user-slash",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -20022,7 +20053,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUsersLine",
         "title": "Users Line",
         "className": "fa-solid fa-users-line",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -20030,7 +20061,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUsersRays",
         "title": "Users Rays",
         "className": "fa-solid fa-users-rays",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -20038,7 +20069,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUsersRectangle",
         "title": "Users Rectangle",
         "className": "fa-solid fa-users-rectangle",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -20046,7 +20077,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUsersSlash",
         "title": "Users Slash",
         "className": "fa-solid fa-users-slash",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -20054,7 +20085,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUsersViewfinder",
         "title": "Users Viewfinder",
         "className": "fa-solid fa-users-viewfinder",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -20062,7 +20093,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUserTag",
         "title": "User Tag",
         "className": "fa-solid fa-user-tag",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -20070,7 +20101,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUserTie",
         "title": "User Tie",
         "className": "fa-solid fa-user-tie",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -20078,7 +20109,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleUserXmark",
         "title": "User Xmark",
         "className": "fa-solid fa-user-xmark",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -20086,7 +20117,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleWheelchair",
         "title": "Wheelchair",
         "className": "fa-solid fa-wheelchair",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -20094,7 +20125,7 @@ export const classIconIndex = {
         "name": "fa-UsersPeopleWheelchairMove",
         "title": "Wheelchair Move",
         "className": "fa-solid fa-wheelchair-move",
-        "categories": [
+        "type":"fa","categories": [
             "users+people"
         ]
     },
@@ -20102,7 +20133,7 @@ export const classIconIndex = {
         "name": "fa-WeatherBolt",
         "title": "Bolt",
         "className": "fa-solid fa-bolt",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20110,7 +20141,7 @@ export const classIconIndex = {
         "name": "fa-WeatherBoltLightning",
         "title": "Bolt Lightning",
         "className": "fa-solid fa-bolt-lightning",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20118,7 +20149,7 @@ export const classIconIndex = {
         "name": "fa-WeatherCloud",
         "title": "Cloud",
         "className": "fa-solid fa-cloud",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20126,7 +20157,7 @@ export const classIconIndex = {
         "name": "fa-WeatherCloudBolt",
         "title": "Cloud Bolt",
         "className": "fa-solid fa-cloud-bolt",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20134,7 +20165,7 @@ export const classIconIndex = {
         "name": "fa-WeatherCloudMeatball",
         "title": "Cloud Meatball",
         "className": "fa-solid fa-cloud-meatball",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20142,7 +20173,7 @@ export const classIconIndex = {
         "name": "fa-WeatherCloudMoon",
         "title": "Cloud Moon",
         "className": "fa-solid fa-cloud-moon",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20150,7 +20181,7 @@ export const classIconIndex = {
         "name": "fa-WeatherCloudMoonRain",
         "title": "Cloud Moon Rain",
         "className": "fa-solid fa-cloud-moon-rain",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20158,7 +20189,7 @@ export const classIconIndex = {
         "name": "fa-WeatherCloudRain",
         "title": "Cloud Rain",
         "className": "fa-solid fa-cloud-rain",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20166,7 +20197,7 @@ export const classIconIndex = {
         "name": "fa-WeatherCloudShowersHeavy",
         "title": "Cloud Showers Heavy",
         "className": "fa-solid fa-cloud-showers-heavy",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20174,7 +20205,7 @@ export const classIconIndex = {
         "name": "fa-WeatherCloudShowersWater",
         "title": "Cloud Showers Water",
         "className": "fa-solid fa-cloud-showers-water",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20182,7 +20213,7 @@ export const classIconIndex = {
         "name": "fa-WeatherCloudSun",
         "title": "Cloud Sun",
         "className": "fa-solid fa-cloud-sun",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20190,7 +20221,7 @@ export const classIconIndex = {
         "name": "fa-WeatherCloudSunRain",
         "title": "Cloud Sun Rain",
         "className": "fa-solid fa-cloud-sun-rain",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20198,7 +20229,7 @@ export const classIconIndex = {
         "name": "fa-WeatherHouseTsunami",
         "title": "House Tsunami",
         "className": "fa-solid fa-house-tsunami",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20206,7 +20237,7 @@ export const classIconIndex = {
         "name": "fa-WeatherHurricane",
         "title": "Hurricane",
         "className": "fa-solid fa-hurricane",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20214,7 +20245,7 @@ export const classIconIndex = {
         "name": "fa-WeatherIcicles",
         "title": "Icicles",
         "className": "fa-solid fa-icicles",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20222,7 +20253,7 @@ export const classIconIndex = {
         "name": "fa-WeatherMeteor",
         "title": "Meteor",
         "className": "fa-solid fa-meteor",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20230,7 +20261,7 @@ export const classIconIndex = {
         "name": "fa-WeatherMoon",
         "title": "Moon",
         "className": "fa-solid fa-moon",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20238,7 +20269,7 @@ export const classIconIndex = {
         "name": "fa-WeatherPooStorm",
         "title": "Poo Storm",
         "className": "fa-solid fa-poo-storm",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20246,7 +20277,7 @@ export const classIconIndex = {
         "name": "fa-WeatherRainbow",
         "title": "Rainbow",
         "className": "fa-solid fa-rainbow",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20254,7 +20285,7 @@ export const classIconIndex = {
         "name": "fa-WeatherSmog",
         "title": "Smog",
         "className": "fa-solid fa-smog",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20262,7 +20293,7 @@ export const classIconIndex = {
         "name": "fa-WeatherSnowflake",
         "title": "Snowflake",
         "className": "fa-solid fa-snowflake",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20270,7 +20301,7 @@ export const classIconIndex = {
         "name": "fa-WeatherSun",
         "title": "Sun",
         "className": "fa-solid fa-sun",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20278,7 +20309,7 @@ export const classIconIndex = {
         "name": "fa-WeatherSunPlantWilt",
         "title": "Sun Plant Wilt",
         "className": "fa-solid fa-sun-plant-wilt",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20286,7 +20317,7 @@ export const classIconIndex = {
         "name": "fa-WeatherTemperatureArrowDown",
         "title": "Temperature Arrow Down",
         "className": "fa-solid fa-temperature-arrow-down",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20294,7 +20325,7 @@ export const classIconIndex = {
         "name": "fa-WeatherTemperatureArrowUp",
         "title": "Temperature Arrow Up",
         "className": "fa-solid fa-temperature-arrow-up",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20302,7 +20333,7 @@ export const classIconIndex = {
         "name": "fa-WeatherTemperatureEmpty",
         "title": "Temperature Empty",
         "className": "fa-solid fa-temperature-empty",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20310,7 +20341,7 @@ export const classIconIndex = {
         "name": "fa-WeatherTemperatureFull",
         "title": "Temperature Full",
         "className": "fa-solid fa-temperature-full",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20318,7 +20349,7 @@ export const classIconIndex = {
         "name": "fa-WeatherTemperatureHalf",
         "title": "Temperature Half",
         "className": "fa-solid fa-temperature-half",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20326,7 +20357,7 @@ export const classIconIndex = {
         "name": "fa-WeatherTemperatureHigh",
         "title": "Temperature High",
         "className": "fa-solid fa-temperature-high",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20334,7 +20365,7 @@ export const classIconIndex = {
         "name": "fa-WeatherTemperatureLow",
         "title": "Temperature Low",
         "className": "fa-solid fa-temperature-low",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20342,7 +20373,7 @@ export const classIconIndex = {
         "name": "fa-WeatherTemperatureQuarter",
         "title": "Temperature Quarter",
         "className": "fa-solid fa-temperature-quarter",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20350,7 +20381,7 @@ export const classIconIndex = {
         "name": "fa-WeatherTemperatureThreeQuarters",
         "title": "Temperature Three Quarters",
         "className": "fa-solid fa-temperature-three-quarters",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20358,7 +20389,7 @@ export const classIconIndex = {
         "name": "fa-WeatherTornado",
         "title": "Tornado",
         "className": "fa-solid fa-tornado",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20366,7 +20397,7 @@ export const classIconIndex = {
         "name": "fa-WeatherUmbrella",
         "title": "Umbrella",
         "className": "fa-solid fa-umbrella",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20374,7 +20405,7 @@ export const classIconIndex = {
         "name": "fa-WeatherVolcano",
         "title": "Volcano",
         "className": "fa-solid fa-volcano",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20382,7 +20413,7 @@ export const classIconIndex = {
         "name": "fa-WeatherWater",
         "title": "Water",
         "className": "fa-solid fa-water",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20390,7 +20421,7 @@ export const classIconIndex = {
         "name": "fa-WeatherWind",
         "title": "Wind",
         "className": "fa-solid fa-wind",
-        "categories": [
+        "type":"fa","categories": [
             "weather"
         ]
     },
@@ -20398,7 +20429,7 @@ export const classIconIndex = {
         "name": "fa-WritingBlog",
         "title": "Blog",
         "className": "fa-solid fa-blog",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20406,7 +20437,7 @@ export const classIconIndex = {
         "name": "fa-WritingBook",
         "title": "Book",
         "className": "fa-solid fa-book",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20414,7 +20445,7 @@ export const classIconIndex = {
         "name": "fa-WritingBookBookmark",
         "title": "Book Bookmark",
         "className": "fa-solid fa-book-bookmark",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20422,7 +20453,7 @@ export const classIconIndex = {
         "name": "fa-WritingBookmark",
         "title": "Bookmark",
         "className": "fa-solid fa-bookmark",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20430,7 +20461,7 @@ export const classIconIndex = {
         "name": "fa-WritingBoxArchive",
         "title": "Box Archive",
         "className": "fa-solid fa-box-archive",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20438,7 +20469,7 @@ export const classIconIndex = {
         "name": "fa-WritingEnvelope",
         "title": "Envelope",
         "className": "fa-solid fa-envelope",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20446,7 +20477,7 @@ export const classIconIndex = {
         "name": "fa-WritingEnvelopeOpen",
         "title": "Envelope Open",
         "className": "fa-solid fa-envelope-open",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20454,7 +20485,7 @@ export const classIconIndex = {
         "name": "fa-WritingEraser",
         "title": "Eraser",
         "className": "fa-solid fa-eraser",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20462,7 +20493,7 @@ export const classIconIndex = {
         "name": "fa-WritingFile",
         "title": "File",
         "className": "fa-solid fa-file",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20470,7 +20501,7 @@ export const classIconIndex = {
         "name": "fa-WritingFileLines",
         "title": "File Lines",
         "className": "fa-solid fa-file-lines",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20478,7 +20509,7 @@ export const classIconIndex = {
         "name": "fa-WritingFolder",
         "title": "Folder",
         "className": "fa-solid fa-folder",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20486,7 +20517,7 @@ export const classIconIndex = {
         "name": "fa-WritingFolderOpen",
         "title": "Folder Open",
         "className": "fa-solid fa-folder-open",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20494,7 +20525,7 @@ export const classIconIndex = {
         "name": "fa-WritingKeyboard",
         "title": "Keyboard",
         "className": "fa-solid fa-keyboard",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20502,7 +20533,7 @@ export const classIconIndex = {
         "name": "fa-WritingNewspaper",
         "title": "Newspaper",
         "className": "fa-solid fa-newspaper",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20510,7 +20541,7 @@ export const classIconIndex = {
         "name": "fa-WritingNotdef",
         "title": "Notdef",
         "className": "fa-solid fa-notdef",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20518,7 +20549,7 @@ export const classIconIndex = {
         "name": "fa-WritingNoteSticky",
         "title": "Note Sticky",
         "className": "fa-solid fa-note-sticky",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20526,7 +20557,7 @@ export const classIconIndex = {
         "name": "fa-WritingPaperclip",
         "title": "Paperclip",
         "className": "fa-solid fa-paperclip",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20534,7 +20565,7 @@ export const classIconIndex = {
         "name": "fa-WritingPaperPlane",
         "title": "Paper Plane",
         "className": "fa-solid fa-paper-plane",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20542,7 +20573,7 @@ export const classIconIndex = {
         "name": "fa-WritingParagraph",
         "title": "Paragraph",
         "className": "fa-solid fa-paragraph",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20550,7 +20581,7 @@ export const classIconIndex = {
         "name": "fa-WritingPen",
         "title": "Pen",
         "className": "fa-solid fa-pen",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20558,7 +20589,7 @@ export const classIconIndex = {
         "name": "fa-WritingPencil",
         "title": "Pencil",
         "className": "fa-solid fa-pencil",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20566,7 +20597,7 @@ export const classIconIndex = {
         "name": "fa-WritingPenClip",
         "title": "Pen Clip",
         "className": "fa-solid fa-pen-clip",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20574,7 +20605,7 @@ export const classIconIndex = {
         "name": "fa-WritingPenToSquare",
         "title": "Pen To Square",
         "className": "fa-solid fa-pen-to-square",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20582,7 +20613,7 @@ export const classIconIndex = {
         "name": "fa-WritingQuoteLeft",
         "title": "Quote Left",
         "className": "fa-solid fa-quote-left",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20590,7 +20621,7 @@ export const classIconIndex = {
         "name": "fa-WritingQuoteRight",
         "title": "Quote Right",
         "className": "fa-solid fa-quote-right",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20598,7 +20629,7 @@ export const classIconIndex = {
         "name": "fa-WritingSignature",
         "title": "Signature",
         "className": "fa-solid fa-signature",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20606,7 +20637,7 @@ export const classIconIndex = {
         "name": "fa-WritingSquarePen",
         "title": "Square Pen",
         "className": "fa-solid fa-square-pen",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     },
@@ -20614,12 +20645,12 @@ export const classIconIndex = {
         "name": "fa-WritingThumbtack",
         "title": "Thumbtack",
         "className": "fa-solid fa-thumbtack",
-        "categories": [
+        "type":"fa","categories": [
             "writing"
         ]
     }
 ],
-"categories": [
+"type":"fa","categories": [
         {
             "name": "accessibility",
             "title": "Accessibility"

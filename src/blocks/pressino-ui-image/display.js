@@ -1,7 +1,7 @@
 /**
  * Return universal display element used by edit and save functions
  */
-import { PressinoUI, el, attNamesDef } from '../../pressino-ui';
+import { PressinoUI, el, attNamesMedia } from '../../pressino-ui';
 
 var classSpecs = {
 	boolean: ['rounded', 'circular', 'bordered', 'centered', 'spaced'],
@@ -42,8 +42,8 @@ export default function display({ props, attributes, editMode }) {
 
             var onSelectImage = function (media) {
                 let tmpToSet = {};
-                tmpToSet[attNamesDef['mediaURL']] = media.url;
-                tmpToSet[attNamesDef['mediaID']] = media.id;
+                tmpToSet[attNamesMedia['mediaURL']] = media.url;
+                tmpToSet[attNamesMedia['mediaID']] = media.id;
                 return theProps.setAttributes(tmpToSet);
 
             };
