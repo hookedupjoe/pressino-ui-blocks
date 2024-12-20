@@ -9,7 +9,7 @@ export function getIconEl({iconname, icontype, iconclass}){
             return <i class={'icon faicon ' + tmpClasses}></i>;
         }
     } else if( icontype == 'dash' ){
-        return <span class={'icon dashicons ' + tmpClasses }></span>;
+        return <i class={'icon dashicons ' + tmpClasses }></i>;
     } else {
         return <i class={'icon  ' + tmpClasses}></i>;
     }

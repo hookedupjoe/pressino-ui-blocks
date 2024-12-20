@@ -20,196 +20,35 @@
 }
 
 body i.icon.fafont{
+    font-weight: unset !important;
     font-family: 'Font Awesome 6 Free' !important;
 }
 
+body i.icon.dashicons{
+    font-family: 'dashicons' !important;
+}
+
+
+/* Update to allow i tags to work with font awesome */
+
 i.icon.faicon{
     font-weight: unset !important;
-    font-family: "Font Awesome 6 Free" !important;
 }
 
-
-.ui.button .dashicons{
-    font-size: 16px;
+body .icon.inlist {
+    min-width:25px;
+}
+body .icon.inlist.small, body .icon.inlist.tiny {
+    min-width:20px;
+}
+body .icon.inlist.large, body .icon.inlist.big {
+    min-width:35px;
+}
+body .icon.inlist.huge {
+    min-width:80px;
 }
 
-.ui.button.circular .dashicons{
-    width: 1em;
-    vertical-align: baseline
-}
-.ui.button.mini .dashicons{
-    font-size: 12px;
-}
-.ui.button.tiny .dashicons{
-    font-size: 14px;
-}
-.ui.button.small .dashicons{
-    font-size: 16px;
+body .icon.inlist.massive {
+    min-width:145px;
 }
 
-.ui.button.large .dashicons{
-    font-size: 20px;
-}
-
-.ui.button.big .dashicons{
-    font-size: 22px;
-}
-.ui.button.huge .dashicons{
-    font-size: 24px;
-}
-.ui.button.massive .dashicons{
-    font-size: 26px;
-}
-
-
-/*   FIX FOR ICON ISSUE
-body i.icon>i{
-    height: 100%;
-    font-size: 18px;
-    line-height:35px;
-}
-
-.ui.button.mini i.icon>i{
-    font-size: 14px;
-    line-height:25px;
-}
-.ui.button.tiny i.icon>i{
-    font-size: 15px;
-    line-height:30px;
-}
-.ui.button.small i.icon>i{
-    font-size: 17px;
-    line-height:33px;
-}
-.ui.button.large i.icon>i{
-    font-size: 23px;
-    line-height:40px;
-}
-.ui.button.big i.icon>i{
-    font-size: 25px;
-    line-height:45px;
-}
-.ui.button.huge i.icon>i{
-    font-size: 27px;
-    line-height:52px;
-}
-
-.ui.button.massive i.icon>i{
-    font-size: 32px;
-    line-height:62px;
-}
-
-
-.compact.ui.button.mini i.icon>i{
-    font-size: 13px;
-    line-height:24px;
-}
-.compact.ui.button.tiny i.icon>i{
-    font-size: 13px;
-    line-height:26px;
-}
-.compact.ui.button.small i.icon>i{
-    font-size: 15px;
-    line-height:30px;
-}
-
-.compact.ui.button i.icon>i{
-    font-size: 18px;
-    line-height:30px;
-}
-
-.compact.ui.button.large i.icon>i{
-    font-size: 21px;
-    line-height:35px;
-}
-.compact.ui.button.big i.icon>i{
-    font-size: 22px;
-    line-height:37px;
-}
-.compact.ui.button.huge i.icon>i{
-    font-size: 25px;
-    line-height:45px;
-}
-
-.compact.ui.button.massive i.icon>i{
-    font-size: 28px;
-    line-height:52px;
-}
-
- */
-
-
-
-/* 
-i.asicon {
-    display: inline-block;
-    opacity: 1;
-    margin: 0 .25rem 0 0;
-    width: 1.18em;
-    height: 1em;
-    font-family: 'Font Awesome 6 Free';
-    font-style: normal;
-    font-weight: 400;
-    text-decoration: inherit;
-    text-align: center;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-i.asicon {
-    font-size: 1em;
-}
-
-.ui.labeled.east.icon.button>.asicon {
-    left: auto;
-    right: 0;
-    border-radius: 0;
-    border-top-right-radius: inherit;
-    border-bottom-right-radius: inherit;
-    -webkit-box-shadow: 1px 0 0 0 transparent inset;
-    box-shadow: 1px 0 0 0 transparent inset;
-}
-
-.ui.labeled.icon.button>.asicon, .ui.labeled.icon.buttons>.button>.asicon {
-    top: 0;
-    left: 0;
-}
-
-.ui.labeled.icon.button>.asicon, .ui.labeled.icon.buttons>.button>.asicon {
-    position: absolute;
-    height: 100%;
-    line-height: 1;
-    border-radius: 0;
-    border-top-left-radius: inherit;
-    border-bottom-left-radius: inherit;
-    text-align: center;
-    margin: 0;
-    width: 2.57142857em;
-    background-color: rgba(0, 0, 0, .05);
-    color: '';
-    -webkit-box-shadow: -1px 0 0 0 transparent inset;
-    box-shadow: -1px 0 0 0 transparent inset;
-}
-
-
-
-.ui.circular.button>.asicon {
-    width: 1em;
-    vertical-align: baseline;
-}
-.ui.icon.button>.asicon, .ui.icon.buttons .button>.asicon {
-    opacity: .9;
-    margin: 0 !important;
-    vertical-align: top;
-}
-.ui.button>.asicon:not(.button) {
-    height: .85714286em;
-    opacity: .8;
-    margin: 0 .42857143em 0 -.21428571em;
-    -webkit-transition: opacity .1s ease;
-    transition: opacity .1s ease;
-    vertical-align: '';
-    color: '';
-}  */

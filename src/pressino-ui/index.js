@@ -6,6 +6,7 @@ import { displayMessages } from './../utils';
 import { QuickInserterPopover, InserterModal } from './../components/';
 // isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen
 import { useEffect, useRef, useState } from '@wordpress/element';
+import { getIconEl } from './../icons';
 
 export const attNamesIcon = { iconname: 'iconname', icontype: 'icontype' };
 export const attNamesMedia = { mediaID: 'mediaID', mediaURL: 'mediaURL' };
@@ -73,6 +74,7 @@ function getSettingsForIcon(props) {
 		setQuickInserterOpen,
 		attributes,
 		setAttributes,
+		refreshChildren,
 	} = props;
 
 	// var tmpOnChangeFunc = (theURL, thePost) => {
@@ -91,7 +93,10 @@ function getSettingsForIcon(props) {
 		tmpAtts[tmpAttNames.icontype] = theItem.type || 'default'
 	
 		setAttributes(tmpAtts)
-		
+		if( refreshChildren ){
+			console.log('refrfeshed')
+			refreshBlockEditor();
+		}
 	}
 
 	
@@ -791,7 +796,7 @@ export const listSources = {
 	"inverted": "Default|,Light|light,Inverted|inverted",
 	"topmargin": "Default|,0px|mart0,1px|mart1,2px|mart2,3px|mart3,4px|mart4,5px|mart5,6px|mart6,7px|mart7,8px|mart8,9px|mart9,10px|mart10",
 	"bottommargin": "Default|,0px|marb0,1px|marb1,2px|marb2,3px|marb3,4px|marb4,5px|marb5,6px|marb6,7px|marb7,8px|marb8,9px|marb9,10px|marb10",
-
+	"bullettypes": "Default|,Use Icon|icon,Outlined|outline",
 
 	"yesno": "Yes,No",
 	"states": "Alabama|AL,Alaska|AK,Arizona|AZ,Arkansas|AR,California|CA,Colorado|CO,Connecticut|CT,Delaware|DE,District Of Columbia|DC,Florida|FL,Georgia|GA,Hawaii|HI,Idaho|ID,Illinois|IL,Indiana|IN,Iowa|IA,Kansas|KS,Kentucky|KY,Louisiana|LA,Maine|ME,Maryland|MD,Massachusetts|MA,Michigan|MI,Minnesota|MN,Mississippi|MS,Missouri|MO,Montana|MT,Nebraska|NE,Nevada|NV,New Hampshire|NH,New Jersey|NJ,New Mexico|NM,New York|NY,North Carolina|NC,North Dakota|ND,Ohio|OH,Oklahoma|OK,Oregon|OR,Pennsylvania|PA,Rhode Island|RI,South Carolina|SC,South Dakota|SD,Tennessee|TN,Texas|TX,Utah|UT,Vermont|VT,Virginia|VA,Washington|WA,West Virginia|WV,Wisconsin|WI,Wyoming|WY",
@@ -837,6 +842,7 @@ export const PressinoUI = {
 	getControlImage: getControlImage,
 	getSettingsForIcon: getSettingsForIcon,
 	addBlock: addBlock,
+	getIconEl: getIconEl,
 	util: {
 		addClasses: addClasses,
 		addToList: addToList,
