@@ -28,6 +28,40 @@ i.icon.faicon{
     font-family: "Font Awesome 6 Free" !important;
 }
 
+
+.ui.button .dashicons{
+    font-size: 16px;
+}
+
+.ui.button.circular .dashicons{
+    width: 1em;
+    vertical-align: baseline
+}
+.ui.button.mini .dashicons{
+    font-size: 12px;
+}
+.ui.button.tiny .dashicons{
+    font-size: 14px;
+}
+.ui.button.small .dashicons{
+    font-size: 16px;
+}
+
+.ui.button.large .dashicons{
+    font-size: 20px;
+}
+
+.ui.button.big .dashicons{
+    font-size: 22px;
+}
+.ui.button.huge .dashicons{
+    font-size: 24px;
+}
+.ui.button.massive .dashicons{
+    font-size: 26px;
+}
+
+
 /*   FIX FOR ICON ISSUE
 body i.icon>i{
     height: 100%;
