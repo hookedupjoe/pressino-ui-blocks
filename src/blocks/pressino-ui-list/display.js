@@ -2,8 +2,7 @@
  * Return universal display element used by edit and save functions
  */
 import { PressinoUI, el } from '../../pressino-ui';
-const { store: blockEditorStore } = wp.blockEditor;
-const { useSelect } = wp.data;
+import { getIconEl } from '../../icons';
  
 var classSpecs = {
     boolean: ['relaxed','animated','selection','inverted','horizontal','link','divided','celled','ordered'],

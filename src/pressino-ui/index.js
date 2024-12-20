@@ -4,7 +4,8 @@ import { URLInput } from '@wordpress/block-editor';
 
 import { displayMessages } from './../utils';
 import { QuickInserterPopover, InserterModal } from './../components/';
-
+// isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen
+import { useEffect, useRef, useState } from '@wordpress/element';
 
 export const attNamesIcon = { iconname: 'iconname', icontype: 'icontype' };
 export const attNamesMedia = { mediaID: 'mediaID', mediaURL: 'mediaURL' };
@@ -82,11 +83,12 @@ function getSettingsForIcon(props) {
 	// }
 
 	function onSelectedItem(theItem){
+		let tmpAttNames = attname || attNamesIcon;
 		setInserterOpen(false);
 		var tmpAtts = {}
 		
-		tmpAtts[attNamesIcon.iconname] = theItem.className || 'icon users'
-		tmpAtts[attNamesIcon.icontype] = theItem.type || 'default'
+		tmpAtts[tmpAttNames.iconname] = theItem.className || 'icon users'
+		tmpAtts[tmpAttNames.icontype] = theItem.type || 'default'
 	
 		setAttributes(tmpAtts)
 		
@@ -197,9 +199,6 @@ function getCustomURLControl(theProps, theAttName, theLabel, theVal, theOnChange
 	</div>
 }
 
-function setInserterOpen() {
-	alert('setInserterOpen')
-}
 
 // function getCustomIconSelection(theProps, theAttName, theLabel, theControlType, theOnChange, theSelectionList, theOptions) {
 // 	return <div>
@@ -821,6 +820,7 @@ const addBlock = ({ blockName }) => {
 	}
 	wp.data.dispatch('core/block-editor').insertBlocks(tmpToAddElement, tmpPos, tmpThis.clientId)
 }
+
 
 //--- Code to assist in creating and using blocks in the editor
 export const PressinoUI = {

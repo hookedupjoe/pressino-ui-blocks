@@ -7,7 +7,7 @@ import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
 import { istr, PressinoUI, attNamesIcon } from '../../pressino-ui';
 import display from './display';
 
-import { useEffect, useRef, useState } from '@wordpress/element';
+import { useState } from '@wordpress/element';
 
 
 /**
@@ -21,7 +21,6 @@ export default function Edit(theProps) {
     const { url, useicon } = attributes;
     const [isQuickInserterOpen, setQuickInserterOpen] = useState(false);
     const [isInserterOpen, setInserterOpen] = useState(false);
-
 
     return <>
         <div {...blockProps}>

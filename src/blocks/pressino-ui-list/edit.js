@@ -11,6 +11,7 @@ import { BlockControls } from '@wordpress/block-editor';
 import { ToolbarGroup, ToolbarButton } from '@wordpress/components';
 import { plusCircle as blockIcon } from '@wordpress/icons';
 
+import { useState } from '@wordpress/element';
 
 
 function onChangeAlignment() {
@@ -23,8 +24,12 @@ export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
     var tmpDisplay = display({ props: theProps, attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { raised, basic, attached } = attributes;
+    const { useicon } = attributes;
     var props = theProps;
+
+    const [isQuickInserterOpen, setQuickInserterOpen] = useState(false);
+    const [isInserterOpen, setInserterOpen] = useState(false);
+
 
     const onAddBlock = () => {
         PressinoUI.addBlock({ blockName: 'pressino/listitem' })
@@ -55,6 +60,9 @@ export default function Edit(theProps) {
                 <PanelBody title={istr('General Settings')}>
                 {/* 'relaxed','animated','selection','inverted','horizontal','link','ordered' */}
                 {/* {PressinoUI.getStandardProperty(theProps, 'ordered', 'ordered', 'checkbox')} */}
+
+                {PressinoUI.getStandardProperty(theProps, 'useicon', 'Use Icon', 'checkbox')}
+                {(useicon && PressinoUI.getSettingsForIcon({ label: 'Select Icon', isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes }))}
 
                 {PressinoUI.getStandardProperty(theProps, 'celled', 'celled', 'checkbox')}
                 {PressinoUI.getStandardProperty(theProps, 'separated', 'separated', 'checkbox')}
