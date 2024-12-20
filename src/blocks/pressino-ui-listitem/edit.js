@@ -21,10 +21,32 @@ export default function Edit(theProps) {
     const { raised, basic, attached } = attributes;
     var props = theProps;
     var tmpParentAttributes = PressinoUI.getParentAttributes(props.clientId);
-    props.attributes.parentColor = tmpParentAttributes.color || '';
-    props.attributes.parentMaxImgHeight = tmpParentAttributes.imageheight || 0;
-    props.attributes.parentHeaderType = tmpParentAttributes.headertype || 'default';
-   
+    var tmpParentRefresh = false;
+
+    if( props.attributes.parentbulletcolor != tmpParentAttributes.bulletcolor){
+        tmpParentRefresh = true;
+    }
+    var tmpList = ['iconname','icontype','bullettype','bulletcolor','bulletsize'];
+
+    tmpList.forEach( theName => {
+        if( props.attributes['parent'+theName] != tmpParentAttributes[theName]){
+            tmpParentRefresh = true;
+            props.attributes['parent'+theName] = tmpParentAttributes[theName] || '';
+        }
+    })
+
+    
+    // props.attributes.parenticonname = tmpParentAttributes.iconname || '';
+    // props.attributes.parenticontype = tmpParentAttributes.icontype || '';
+    // props.attributes.parentbullettype = tmpParentAttributes.bullettype || '';
+    // props.attributes.parentbulletcolor = tmpParentAttributes.bulletcolor || '';
+    // props.attributes.parentbulletsize = tmpParentAttributes.bulletsize || '';
+
+    if(tmpParentRefresh){
+        PressinoUI.refreshBlockEditor();
+    }
+
+//    console.log('props.attributes',props.attributes)
 
     const onAddBlock = () => {
         PressinoUI.addBlock({ blockName: 'pressino/listitemsection' }, {

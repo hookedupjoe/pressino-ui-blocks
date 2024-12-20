@@ -24,7 +24,7 @@ export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
     var tmpDisplay = display({ props: theProps, attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { useicon } = attributes;
+    const { bullettype } = attributes;
     var props = theProps;
 
     const [isQuickInserterOpen, setQuickInserterOpen] = useState(false);
@@ -61,8 +61,12 @@ export default function Edit(theProps) {
                 {/* 'relaxed','animated','selection','inverted','horizontal','link','ordered' */}
                 {/* {PressinoUI.getStandardProperty(theProps, 'ordered', 'ordered', 'checkbox')} */}
 
-                {PressinoUI.getStandardProperty(theProps, 'useicon', 'Use Icon', 'checkbox')}
-                {(useicon && PressinoUI.getSettingsForIcon({ label: 'Select Icon', isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes }))}
+
+                {PressinoUI.getStandardProperty(theProps, 'bulletcolor', 'Bullet Color', 'colors', true)}
+                {PressinoUI.getStandardProperty(theProps, 'bulletsize', 'Bullet size', 'sizes', true)}
+
+                {PressinoUI.getStandardProperty(theProps, 'bullettype', 'Bullet Type', 'bullettypes', true)}
+                {(bullettype =='icon' && PressinoUI.getSettingsForIcon({ label: 'Select Icon', isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes, refreshChildren:true }))}
 
                 {PressinoUI.getStandardProperty(theProps, 'celled', 'celled', 'checkbox')}
                 {PressinoUI.getStandardProperty(theProps, 'separated', 'separated', 'checkbox')}

@@ -5,7 +5,7 @@ import { InnerBlocks } from '@wordpress/block-editor';
 import { PressinoUI, el } from '../../pressino-ui';
 
 var classSpecs = {
-    boolean: ['relaxed','animated','selection','inverted','horizontal','link'],
+    boolean: [],
 	string: [],
 }
 
@@ -17,8 +17,11 @@ function getClass(theAtts, theIsEditMode) {
 
 export default function display({ props, editMode }) {
     var tmpAtts = props.attributes;
-    var tmpAtt = props.attributes;
+    var attributes = props.attributes;
     var theProps = props;
+
+    const {parenticonname, parenticontype, parentbullettype, parentbulletcolor, parentbulletsize} = attributes
+   
 
     // var tmpParentAttributes = PressinoUI.getParentAttributes(props.clientId);
     var newEl = function(theType, theClass, theEl){
@@ -29,15 +32,33 @@ export default function display({ props, editMode }) {
 
     var tmpClass = getClass(theProps, editMode);
     
+    var tmpBulletEl = '';
 
+    if( parentbullettype == 'icon' && parenticonname && parenticontype ){
+        tmpBulletEl = PressinoUI.getIconEl({iconname: parenticonname, icontype: parenticontype});
+    } else if( parentbullettype == 'outline' ){
+        tmpBulletEl = PressinoUI.getIconEl({iconname: 'circle outline'});
+    } else {
+        tmpBulletEl = PressinoUI.getIconEl({iconname: 'circle'});
+    }
+
+//    console.log('parentbulletcolor',parentbulletcolor);
+    if( parentbulletcolor != '' ){
+        tmpBulletEl.props.class = tmpBulletEl.props?.class + ' ' + parentbulletcolor;
+    }
+    if( parentbulletsize != '' ){
+        tmpBulletEl.props.class = tmpBulletEl.props?.class + ' ' + parentbulletsize;
+    }
+    // tmpBulletEl.props.class = tmpBulletEl.props?.class + ' ' + 'blue';
+  
     if( editMode ){
 //        tmpClass += ' fluid';
 
-        var tmpPrefix = el('div',{className: 'ui label grey right pointing'}, 'Item');
+        var tmpPrefix = el('div',{className: 'ui label grey right pointing'}, 'List Item');
         var tmpNameLabel = '';//el('div',{className: 'ui label grey basic  padr10'}, tmpTitle || '(no title)');
 
         //var tmpHM = tmpTabLabel;
-        var tmpEditHeader = el('div', {className:"ui message pad8 grey small"}, tmpPrefix,tmpNameLabel);
+        var tmpEditHeader = el('div', {className:"ui message pad8 grey small"}, tmpPrefix,tmpBulletEl,tmpNameLabel);
         tmpContent.push(tmpEditHeader)
 
        // tmpEditHeader
@@ -45,13 +66,17 @@ export default function display({ props, editMode }) {
 
     }
 
-
-   
-    var tmpMainContent = [];
-
-    if (tmpMainContent.length > 0) {
-        tmpContent.push(newEl('div', '', tmpMainContent));
+    //--- Bullets First
+    if( !editMode ){
+        tmpContent.push(tmpBulletEl);
     }
+    
+
+    // var tmpMainContent = [];
+
+    // if (tmpMainContent.length > 0) {
+    //     tmpContent.push(newEl('div', '', tmpMainContent));
+    // }
     // let hasBottomCardByDefault = tmpParentAttributes.bottombydefault;
     var tmpTemplate = [  [
         'pressino/listitemsection',
