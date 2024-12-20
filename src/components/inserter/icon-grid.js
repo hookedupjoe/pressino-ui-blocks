@@ -11,6 +11,8 @@ import { __ } from '@wordpress/i18n';
 import { Icon, blockDefault } from '@wordpress/icons';
 import { Button } from '@wordpress/components';
 
+
+import { getIconEl } from './../../icons';
 /**
  * Internal dependencies
  */
@@ -53,7 +55,8 @@ export default function IconGrid( props ) {
 						}
 					>
 						<span className="icons-list__item-icon">
-						<i className={'' + (icon.className || '')}></i>
+							{getIconEl({iconclass: icon.className, icontype: icon.type})}
+						{/* <i className={'' + (icon.className || '')}></i> */}
 						</span>
 						<span className="icons-list__item-title">
 							{ icon?.title ?? icon.name }
