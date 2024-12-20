@@ -63,6 +63,7 @@ export default function Edit(theProps) {
                     {PressinoUI.getStandardProperty(theProps, 'headertype', 'Header Type', 'inverted', true)}
 
                     {PressinoUI.getStandardProperty(theProps, 'centered', 'Centered', 'checkbox')}
+                    {PressinoUI.getStandardProperty(theProps, 'bottombydefault', 'Has Bottom Section by Default', 'checkbox')}
                 </PanelBody>
 
 

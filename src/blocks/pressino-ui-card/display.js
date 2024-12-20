@@ -20,6 +20,8 @@ export default function display({ props, editMode }) {
     var tmpAtt = props.attributes;
     var theProps = props;
 
+    var tmpParentAttributes = PressinoUI.getParentAttributes(props.clientId);
+    console.log('tmpParentAttributes',tmpParentAttributes);
     var newEl = function(theType, theClass, theEl){
         return el(theType, {className: theClass}, theEl);
     };
@@ -123,29 +125,34 @@ export default function display({ props, editMode }) {
     if (tmpMainContent.length > 0) {
         tmpContent.push(newEl('div', '', tmpMainContent));
     }
+    let hasBottomCardByDefault = tmpParentAttributes.bottombydefault;
+    var tmpTemplate = [ [
+        'pressino/cardsection',
+        {extra: false},
+        [
+
+        ]
+    ]];
+
+    if( hasBottomCardByDefault ){
+        tmpTemplate.push([
+            'pressino/cardsection',
+            {
+                extra: true, 
+                padding: 'pad0'
+            },
+            [
+    
+            ]
+        ])
+    }
+
+    
 
     if (editMode) {
         tmpContent.push(newEl('div', '', el(wp.blockEditor.InnerBlocks, {
             allowedBlocks: ['pressino/cardsection', 'pressino/cardsectionbottom'], renderAppender: false, norendetemplateLock: "insert",
-            template: [
-                [
-                    'pressino/cardsection',
-                    {extra: false},
-                    [
-
-                    ]
-                ],
-                [
-                    'pressino/cardsection',
-                    {
-                        extra: true, 
-                        padding: 'pad0'
-                    },
-                    [
-
-                    ]
-                ],
-            ]
+            template: tmpTemplate
         })));
     } else {
         tmpContent.push(el(wp.blockEditor.InnerBlocks.Content));
