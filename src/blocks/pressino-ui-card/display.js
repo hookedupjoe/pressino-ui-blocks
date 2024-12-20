@@ -21,7 +21,6 @@ export default function display({ props, editMode }) {
     var theProps = props;
 
     var tmpParentAttributes = PressinoUI.getParentAttributes(props.clientId);
-    console.log('tmpParentAttributes',tmpParentAttributes);
     var newEl = function(theType, theClass, theEl){
         return el(theType, {className: theClass}, theEl);
     };
