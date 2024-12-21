@@ -79,7 +79,7 @@ export default function display({ props, editMode }) {
             </div>
         }
 
-        tmpNameLabel = <div class="ui message"><div class={'ui list ' + parentlistsize}>
+        tmpNameLabel = <div class="ui segment basic pad0 mar2"><div class={'ui list ' + parentlistsize}>
             <div class="item ">
                 {tmpBulletEl}
                 {tmpNameContent}
@@ -89,7 +89,7 @@ export default function display({ props, editMode }) {
         let tmpClear = <div class="clearboth"></div>;
 
         //var tmpHM = tmpTabLabel;
-        var tmpEditHeader = el('div', { className: "ui message pad8 grey small" }, tmpPrefix, tmpNameLabel, tmpClear);
+        var tmpEditHeader = el('div', { className: "ui segment basic mar0 pad8 grey small" }, tmpPrefix, tmpNameLabel, tmpClear);
         tmpContent.push(tmpEditHeader)
         // tmpEditHeader
 

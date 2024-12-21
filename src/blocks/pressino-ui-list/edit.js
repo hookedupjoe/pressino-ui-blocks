@@ -59,9 +59,9 @@ export default function Edit(theProps) {
 
                 <PanelBody title={istr('General Settings')}>
                     {PressinoUI.getStandardProperty(theProps, 'listsize', 'Overall size', 'sizes', true)}
-                    {PressinoUI.getStandardProperty(theProps, 'celled', 'celled', 'checkbox')}
-                    {PressinoUI.getStandardProperty(theProps, 'relaxed', 'relaxed', 'checkbox')}
-                    {PressinoUI.getStandardProperty(theProps, 'animated', 'animated', 'checkbox')}
+                    {PressinoUI.getStandardProperty(theProps, 'celled', 'Add Lines', 'checkbox')}
+                    {PressinoUI.getStandardProperty(theProps, 'relaxed', 'Extra padding', 'checkbox')}
+                    {PressinoUI.getStandardProperty(theProps, 'animated', 'Animate on hover', 'checkbox')}
                 </PanelBody>
 
                 <PanelBody title={istr('Bullet Settings')}>
