@@ -17,7 +17,7 @@ import {PressinoUI} from '../../pressino-ui';
 let tmpAttributes = {};
 PressinoUI.addAttributes('number', tmpAttributes, []);
 PressinoUI.addAttributes('boolean', tmpAttributes, []);
-PressinoUI.addAttributes('text', tmpAttributes, ['parenticonname','parenticontype','parentbullettype','parentbulletcolor','parentbulletsize','parentbulletalign']);
+PressinoUI.addAttributes('text', tmpAttributes, ['parenticonname','parenticontype','parentbullettype','parentbulletcolor','parentbulletsize','parentbulletalign','header','description']);
 
 /**
  * Register Block

@@ -36,17 +36,11 @@ export default function Edit(theProps) {
     })
 
     
-    // props.attributes.parenticonname = tmpParentAttributes.iconname || '';
-    // props.attributes.parenticontype = tmpParentAttributes.icontype || '';
-    // props.attributes.parentbullettype = tmpParentAttributes.bullettype || '';
-    // props.attributes.parentbulletcolor = tmpParentAttributes.bulletcolor || '';
-    // props.attributes.parentbulletsize = tmpParentAttributes.bulletsize || '';
 
     if(tmpParentRefresh){
         PressinoUI.refreshBlockEditor();
     }
 
-//    console.log('props.attributes',props.attributes)
 
     const onAddBlock = () => {
         PressinoUI.addBlock({ blockName: 'pressino/listitemsection' }, {
@@ -83,14 +77,10 @@ export default function Edit(theProps) {
 
     let tmpSidebarControls = <InspectorControls>
         {tmpToolbarMods}
-
-
-        {/* <PanelBody title={istr('General Settings')}>
-            {PressinoUI.getStandardProperty(theProps, 'raised', 'Raised', 'checkbox')}
-            {PressinoUI.getStandardProperty(theProps, 'headerColor', 'Header Color', 'colors')}
-
-        </PanelBody> */}
-
+        <PanelBody title={istr('General Settings')}>
+            {PressinoUI.getStandardProperty(theProps, 'header', 'header', 'text')}
+            {PressinoUI.getStandardProperty(theProps, 'description', 'Description', 'text')}
+        </PanelBody>
 
     </InspectorControls>
 

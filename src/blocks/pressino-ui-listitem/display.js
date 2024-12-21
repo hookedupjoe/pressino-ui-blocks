@@ -6,13 +6,13 @@ import { PressinoUI, el } from '../../pressino-ui';
 
 var classSpecs = {
     boolean: [],
-	string: [],
+    string: [],
 }
 
 
 function getClass(theAtts, theIsEditMode) {
     var tmpClasses = PressinoUI.getStandardClass('item ', classSpecs, theAtts, theIsEditMode);
-	return tmpClasses
+    return tmpClasses
 }
 
 export default function display({ props, editMode }) {
@@ -20,62 +20,87 @@ export default function display({ props, editMode }) {
     var attributes = props.attributes;
     var theProps = props;
 
-    const {parentbulletalign, parenticonname, parenticontype, parentbullettype, parentbulletcolor, parentbulletsize} = attributes
-   
+    const { header, description, parentbulletalign, parenticonname, parenticontype, parentbullettype, parentbulletcolor, parentbulletsize } = attributes
 
     // var tmpParentAttributes = PressinoUI.getParentAttributes(props.clientId);
-    var newEl = function(theType, theClass, theEl){
-        return el(theType, {className: theClass}, theEl);
+    var newEl = function (theType, theClass, theEl) {
+        return el(theType, { className: theClass }, theEl);
     };
 
     var tmpContent = [];
 
     var tmpClass = getClass(theProps, editMode);
-    
+
+
     var tmpBulletEl = '';
 
-    if( parentbullettype == 'icon' && parenticonname && parenticontype ){
-        tmpBulletEl = PressinoUI.getIconEl({iconname: parenticonname, icontype: parenticontype});
-    } else if( parentbullettype == 'outline' ){
-        tmpBulletEl = PressinoUI.getIconEl({iconname: 'circle outline'});
+    if (parentbullettype == 'icon' && parenticonname && parenticontype) {
+        tmpBulletEl = PressinoUI.getIconEl({ iconname: parenticonname, icontype: parenticontype });
+    } else if (parentbullettype == 'outline') {
+        tmpBulletEl = PressinoUI.getIconEl({ iconname: 'circle outline' });
     } else {
-        tmpBulletEl = PressinoUI.getIconEl({iconname: 'circle'});
+        tmpBulletEl = PressinoUI.getIconEl({ iconname: 'circle' });
     }
 
-//    console.log('parentbulletcolor',parentbulletcolor);
-    if( parentbulletcolor != '' ){
+    //    console.log('parentbulletcolor',parentbulletcolor);
+    if (parentbulletcolor != '') {
         tmpBulletEl.props.class = tmpBulletEl.props?.class + ' ' + parentbulletcolor;
     }
-    if( parentbulletsize != '' ){
+    if (parentbulletsize != '') {
         tmpBulletEl.props.class = tmpBulletEl.props?.class + ' ' + parentbulletsize;
     }
-    if( parentbulletalign != '' ){
+    if (parentbulletalign != '') {
         tmpBulletEl.props.class = tmpBulletEl.props?.class + ' ' + parentbulletalign;
     }
-    
+    var tmpHeaderEl = '';
+    var tmpDescEl = '';
+    if (header != '') {
+        tmpHeaderEl = <div class="header">{header}</div>
+
+    }
+    if (description != '') {
+        tmpDescEl = <div class="description">{description}</div>
+    }
+
 
     // tmpBulletEl.props.class = tmpBulletEl.props?.class + ' ' + 'blue';
-  
-    if( editMode ){
-//        tmpClass += ' fluid';
 
-        var tmpPrefix = el('div',{className: 'ui label grey right pointing'}, 'List Item');
-        var tmpNameLabel = '';//el('div',{className: 'ui label grey basic  padr10'}, tmpTitle || '(no title)');
+    if (editMode) {
+        //        tmpClass += ' fluid';
+
+        let tmpPrefix = '';// el('div',{className: 'ui label grey'}, 'List Item');
+        let tmpNameLabel = ''
+        let tmpNameContent = ''
+
+        if (header || description) {
+            tmpNameContent = <div class="content">
+                <div class="header">{header}</div>
+                <div class="description">{description}</div>
+            </div>
+        }
+
+        tmpNameLabel = <div class="ui message"><div class="ui list">
+            <div class="item ">
+                {tmpBulletEl}
+                {tmpNameContent}
+            </div>
+        </div></div>
+
+        let tmpClear = <div class="clearboth"></div>;
 
         //var tmpHM = tmpTabLabel;
-        var tmpEditHeader = el('div', {className:"ui message pad8 grey small"}, tmpPrefix,tmpBulletEl,tmpNameLabel);
+        var tmpEditHeader = el('div', { className: "ui message pad8 grey small" }, tmpPrefix, tmpNameLabel, tmpClear);
         tmpContent.push(tmpEditHeader)
+        // tmpEditHeader
 
-       // tmpEditHeader
-       
 
     }
 
-    //--- Bullets First
-    if( !editMode ){
-        tmpContent.push(tmpBulletEl);
-    }
-    
+    // //--- Bullets First
+    // if( !editMode ){
+    //     tmpContent.push(tmpBulletEl);
+    // }
+
 
     // var tmpMainContent = [];
 
@@ -83,14 +108,14 @@ export default function display({ props, editMode }) {
     //     tmpContent.push(newEl('div', '', tmpMainContent));
     // }
     // let hasBottomCardByDefault = tmpParentAttributes.bottombydefault;
-    var tmpTemplate = [  [
+    var tmpTemplate = [[
         'pressino/listitemsection',
         {},
         [
 
         ]
     ]];
-   
+
 
     // if( hasBottomCardByDefault ){
     //     tmpTemplate.push([
@@ -100,12 +125,12 @@ export default function display({ props, editMode }) {
     //             padding: 'pad0'
     //         },
     //         [
-    
+
     //         ]
     //     ])
     // }
 
-    
+
 
     if (editMode) {
         tmpContent.push(newEl('div', '', el(wp.blockEditor.InnerBlocks, {
@@ -116,6 +141,8 @@ export default function display({ props, editMode }) {
         tmpContent.push(el(wp.blockEditor.InnerBlocks.Content));
     }
 
+    // tmpContent.push(tmpHeaderEl)
+    // tmpContent.push(tmpDescEl)
     // var tmpExtraContent = [];
     // // var tmpBtnBar = '';
     // // if (editMode && props.isSelected) {
@@ -128,7 +155,9 @@ export default function display({ props, editMode }) {
     if (editMode) {
         return el('div', { className: tmpClass }, tmpContent);
     }
+    var tmpSaveContent = el('div', { className: "content" }, [tmpHeaderEl, tmpDescEl, tmpContent]);
 
-    return newEl('div', tmpClass, tmpContent);
-    
+
+    return el('div', { className: tmpClass }, tmpBulletEl, tmpSaveContent);
+
 }

@@ -10,7 +10,7 @@ var classSpecs = {
 }
 
 function getClass(theAtts, theIsEditMode) {
-    var tmpClasses = PressinoUI.getStandardClass('content', classSpecs, theAtts, theIsEditMode);
+    var tmpClasses = PressinoUI.getStandardClass('', classSpecs, theAtts, theIsEditMode);
     return tmpClasses
 }
 

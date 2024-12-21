@@ -79,11 +79,13 @@ export default function Edit(theProps) {
         tmpEditorClass = PressinoUI.util.addClasses(tmpEditorClass, 'selected');
     }
 
-    tmpContent = el('div', { className: tmpEditorClass }, tmpContent);
-
+    let tmpContentLabel = el('div', { className: 'ui header tiny black blue dividing mar8'}, 'Formatted Text')
+    
+    tmpContent = el('div', { className: tmpEditorClass }, el('div', {className: 'mar8'}, tmpContent));
+   
+   
     return <>
-        <div {...blockProps}>
-            {tmpEditToolbar}
+        <div >
             <InspectorControls>
                 <PanelBody title={istr('Formatting Options')}>
                     {PressinoUI.getStandardProperty(theProps, 'padding', "Padding", 'padding')}
