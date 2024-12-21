@@ -26,7 +26,7 @@ export default function Edit(theProps) {
     if( props.attributes.parentbulletcolor != tmpParentAttributes.bulletcolor){
         tmpParentRefresh = true;
     }
-    var tmpParentList = ['bulletalign','iconname','icontype','bullettype','bulletcolor','bulletsize'];
+    var tmpParentList = ['listsize', 'bulletalign','iconname','icontype','bullettype','bulletcolor','bulletsize'];
 
     tmpParentList.forEach( theName => {
         if( props.attributes['parent'+theName] != tmpParentAttributes[theName]){

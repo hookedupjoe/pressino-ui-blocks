@@ -6,7 +6,7 @@ import { getIconEl } from '../../icons';
  
 var classSpecs = {
     boolean: ['relaxed','animated','divided','celled'],
-	string: []
+	string: ['listsize']
 }
 
 function getClass(theAtts, theIsEditMode) {
@@ -28,21 +28,13 @@ export default function display({ props, editMode }) {
         var tmpIcon = PressinoUI.getControlImage();
         var tmpHeaderMsg = el('div',{className: 'ui larger bolder'}, tmpHeaderText)
 
-        var tmpAddBtn = '';
-        var tmpBtnBar = ''
-        if (props.isSelected) {
-            tmpAddBtn = el('div', { className: 'ui compact button basic grey ', elementname: 'card', action: 'pressinoAddElement' }, 'Add Card');
-            // tmpBtnBar = el('div', { className: 'ui segment raised slim' }, [
-            //     tmpAddBtn
-            // ], el('div', { className: 'endfloat' }));
-            
-        }
+       
         tmpUIColor = 'grey';
         var tmpHdr = el('div', { className: 'ui mar2 pad5 segment inverted center aligned fluid ' + tmpUIColor }, tmpIcon, tmpHeaderMsg);
 
-        return el('div', { className: 'ui segment ' + tmpAtts.color || '' }, null,
+        return el('div', { className: 'ui segment pad3 mar0 ' + tmpAtts.color || '' }, null,
             tmpHdr,
-            el('div', { className: 'edit-cards' + tmpAtts.color + ' ' + tmpAtts.columns },
+            el('div', { className: 'edit-list' + tmpAtts.color + ' ' + tmpAtts.columns },
                 [
                     el(wp.blockEditor.InnerBlocks, { allowedBlocks: ['pressino/listitem'], renderAppender: wp.blockEditor.InnerBlocks.DefaultBlockAppender }),
                 ]

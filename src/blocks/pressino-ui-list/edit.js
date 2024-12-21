@@ -58,6 +58,7 @@ export default function Edit(theProps) {
             <InspectorControls>
 
                 <PanelBody title={istr('General Settings')}>
+                    {PressinoUI.getStandardProperty(theProps, 'listsize', 'Overall size', 'sizes', true)}
                     {PressinoUI.getStandardProperty(theProps, 'celled', 'celled', 'checkbox')}
                     {PressinoUI.getStandardProperty(theProps, 'relaxed', 'relaxed', 'checkbox')}
                     {PressinoUI.getStandardProperty(theProps, 'animated', 'animated', 'checkbox')}

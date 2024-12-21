@@ -20,7 +20,7 @@ export default function display({ props, editMode }) {
     var attributes = props.attributes;
     var theProps = props;
 
-    const { header, description, parentbulletalign, parenticonname, parenticontype, parentbullettype, parentbulletcolor, parentbulletsize } = attributes
+    const { header, description, parentlistsize, parentbulletalign, parenticonname, parenticontype, parentbullettype, parentbulletcolor, parentbulletsize } = attributes
 
     // var tmpParentAttributes = PressinoUI.getParentAttributes(props.clientId);
     var newEl = function (theType, theClass, theEl) {
@@ -41,7 +41,7 @@ export default function display({ props, editMode }) {
     } else {
         tmpBulletEl = PressinoUI.getIconEl({ iconname: 'circle' });
     }
-
+    
     //    console.log('parentbulletcolor',parentbulletcolor);
     if (parentbulletcolor != '') {
         tmpBulletEl.props.class = tmpBulletEl.props?.class + ' ' + parentbulletcolor;
@@ -79,7 +79,7 @@ export default function display({ props, editMode }) {
             </div>
         }
 
-        tmpNameLabel = <div class="ui message"><div class="ui list">
+        tmpNameLabel = <div class="ui message"><div class={'ui list ' + parentlistsize}>
             <div class="item ">
                 {tmpBulletEl}
                 {tmpNameContent}
