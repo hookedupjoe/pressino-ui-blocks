@@ -17,11 +17,12 @@ function getClass(theAtts, theIsEditMode) {
 export default function display({ attributes, editMode }) {
 
     let classNames = getClass(attributes,editMode);
-   
+
+
     if(editMode === true){
         return (
             <div className={classNames} >
-                <InnerBlocks />
+                <InnerBlocks renderAppender = {wp.blockEditor.InnerBlocks.DefaultBlockAppender} />
             </div>
         );
     }

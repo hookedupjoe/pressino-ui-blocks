@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "pressino/list",
 	"version": "0.1.0",
-	"title": "Pressino UI List",
+	"title": "UI List",
 	"category": "pressino-ui-blocks",
 	"description": "A list of items.",
 	"example": {},

@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "pressino/listitem",
 	"version": "0.1.0",
-	"title": "Pressino UI List Item",
+	"title": "UI List Item",
 	"category": "pressino-ui-blocks",
 	"description": "A item that lives with other items in a list.",
 	"example": {},

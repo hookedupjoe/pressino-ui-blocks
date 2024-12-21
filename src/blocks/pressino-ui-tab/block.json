@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "pressino/tab",
 	"version": "0.1.0",
-	"title": "Pressino UI Tab",
+	"title": "UI Tab",
 	"category": "pressino-ui-blocks",
 	"description": "A panel that lives with other tabs.",
 	"example": {},

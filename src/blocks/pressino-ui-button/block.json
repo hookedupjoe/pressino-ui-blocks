@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "pressino/button",
 	"version": "0.1.0",
-	"title": "Pressino UI Button",
+	"title": "UI Button",
 	"category": "pressino-ui-blocks",
 	"description": "A button",
 	"example": {},

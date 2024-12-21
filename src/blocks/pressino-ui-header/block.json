@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "pressino/header",
 	"version": "0.1.0",
-	"title": "Pressino UI Header",
+	"title": "UI Header",
 	"category": "pressino-ui-blocks",
 	"description": "Text headers",
 	"example": {},

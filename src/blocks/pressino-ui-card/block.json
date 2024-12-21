@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "pressino/card",
 	"version": "0.1.0",
-	"title": "Pressino UI Card",
+	"title": "UI Card",
 	"category": "pressino-ui-blocks",
 	"description": "A panel that lives with other cards, usually.",
 	"example": {},

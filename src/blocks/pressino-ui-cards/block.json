@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "pressino/cards",
 	"version": "0.1.0",
-	"title": "Pressino UI Cards",
+	"title": "UI Cards",
 	"category": "pressino-ui-blocks",
 	"description": "Boxes of stuff that line up together.",
 	"example": {},

@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "pressino/segment",
 	"version": "0.1.0",
-	"title": "Pressino UI Segment",
+	"title": "UI Segment",
 	"category": "pressino-ui-blocks",
 	"description": "A square to put stuff in.",
 	"example": {},

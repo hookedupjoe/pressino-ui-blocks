@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "pressino/container",
 	"version": "0.1.0",
-	"title": "Pressino UI Container",
+	"title": "UI Container",
 	"category": "pressino-ui-blocks",
 	"description": "A way to group things.",
 	"example": {},

@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "pressino/cardsection",
 	"version": "0.1.0",
-	"title": "Pressino UI Card Section",
+	"title": "UI Card Section",
 	"category": "pressino-ui-blocks",
 	"description": "A way to group things.",
 	"example": {},

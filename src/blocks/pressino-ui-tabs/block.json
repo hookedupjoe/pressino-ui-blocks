@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "pressino/tabs",
 	"version": "0.1.0",
-	"title": "Pressino UI Tabs",
+	"title": "UI Tabs",
 	"category": "pressino-ui-blocks",
 	"description": "A square to put stuff in.",
 	"example": {},

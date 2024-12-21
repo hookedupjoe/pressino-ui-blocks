@@ -49,7 +49,7 @@ export default function display({ props, editMode }) {
                 tmpHdr,
                 el('div', { className: 'edit-grid' + props.attributes.color + ' ' + props.attributes.columns },
                     [
-                        el(wp.blockEditor.InnerBlocks, { allowedBlocks: ['pressino/gridcolumn'], renderAppender: false }),
+                        el(wp.blockEditor.InnerBlocks, { allowedBlocks: ['pressino/gridcolumn'], renderAppender: wp.blockEditor.InnerBlocks.DefaultBlockAppender }),
                     ]
                 )
 

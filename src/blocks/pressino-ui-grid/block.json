@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "pressino/grid",
 	"version": "0.1.0",
-	"title": "Pressino UI Grid",
+	"title": "UI Grid",
 	"category": "pressino-ui-blocks",
 	"description": "Panels that line up together.",
 	"example": {},

@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "pressino/image",
 	"version": "0.1.0",
-	"title": "Pressino UI Image",
+	"title": "UI Image",
 	"category": "pressino-ui-blocks",
 	"description": "A picture is worth a thousand words.",
 	"example": {},

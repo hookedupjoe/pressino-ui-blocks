@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "pressino/listitemsection",
 	"version": "0.1.0",
-	"title": "Pressino UI List Item Section",
+	"title": "UI List Item Section",
 	"category": "pressino-ui-blocks",
 	"description": "A section inside a list item.",
 	"example": {},

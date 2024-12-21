@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "pressino/message",
 	"version": "0.1.0",
-	"title": "Pressino UI Message",
+	"title": "UI Message",
 	"category": "pressino-ui-blocks",
 	"description": "A boxed message.",
 	"example": {},

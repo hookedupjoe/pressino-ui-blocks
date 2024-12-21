@@ -134,7 +134,7 @@ export default function display({ props, editMode }) {
 
     if (editMode) {
         tmpContent.push(newEl('div', '', el(wp.blockEditor.InnerBlocks, {
-            allowedBlocks: ['pressino/listitemsection'], renderAppender: false, norendetemplateLock: "insert",
+            allowedBlocks: ['pressino/listitemsection'], renderAppender: wp.blockEditor.InnerBlocks.DefaultBlockAppender, norendetemplateLock: "insert",
             template: tmpTemplate
         })));
     } else {
