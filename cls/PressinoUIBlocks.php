@@ -152,7 +152,8 @@ class PressinoUIBlocks {
 		add_filter('block_categories',  array('PressinoUIBlocks','actapp_block_category'), 10, 2);
 		add_action('enqueue_block_editor_assets',  array('PressinoUIBlocks','actapp_init_blocks_content'),10,2);
 		// add_action('enqueue_block_editor_assets',  array('PressinoUIBlocks','actapp_init_blocks'),10,2);
-		add_action('wp_enqueue_block_style',  array('PressinoUIBlocks','actapp_init_blocks_css'),20,2);
+		add_action('enqueue_block_assets',  array('PressinoUIBlocks','actapp_init_blocks_css'),20,2);
+		
 		// add_action('wp_enqueue_block_style',  array('ActAppCommon','setup_scripts'),20,2);
 		// add_action('enqueue_block_editor_assets',  array('ActAppCommon','setup_scripts'),20,2);
 		
@@ -166,6 +167,10 @@ class PressinoUIBlocks {
 		add_action('admin_enqueue_scripts',  array('PressinoUIBlocks','actapp_init_blocks_content'),20,2);
 		// add_action('admin_enqueue_scripts',  array('PressinoUIBlocks','actapp_init_admin_scripts'),20);
 		add_action('admin_enqueue_scripts',  array('PressinoUIBlocks','actapp_init_blocks_css'),20);
+
+
+		add_action('enqueue_block_assets',  array('PressinoUIBlocks','actapp_init_blocks_content'),20,2);
+		add_action('enqueue_block_assets',  array('PressinoUIBlocks','actapp_init_blocks_css'),20,2);
 
 		// $tmplibloc = ACTIONAPP_WP_CORE_LIB_URL . '/';
 		// add_editor_style($tmplibloc . 'built-lib/support-libs.css');
