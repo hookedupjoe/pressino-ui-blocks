@@ -18,6 +18,10 @@ let tmpAttributes = {};
 PressinoUI.addAttributes('text', tmpAttributes,['name', 'ctl', 'text', 'color', 'size', 'subtext', 'attached', 'alignment', 'margin', 'bottommargin', 'padding', 'classes']);
 PressinoUI.addAttributes('boolean', tmpAttributes,['dividing', 'block', 'inverted']);
 
+tmpAttributes.content = {
+	source: 'html',
+	selector: 'h2'
+}
 
 /**
  * Register Block

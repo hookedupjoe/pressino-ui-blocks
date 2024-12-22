@@ -9,7 +9,7 @@ var classSpecs = {
 }
 
 
-function getClass(theAtts, theIsEditMode) {
+export function getClass(theAtts, theIsEditMode) {
     var tmpClasses = PressinoUI.getStandardClass('ui header ', classSpecs, theAtts, theIsEditMode);
     
     if( !theAtts.fluid && theAtts.size ){
@@ -19,7 +19,16 @@ function getClass(theAtts, theIsEditMode) {
 	return tmpClasses
 }
 
+export function getExtraContent(attributes) {
+    var tmpContent = [];
+    if( attributes.subtext != '' ){
+        tmpContent.push( el('div',{className:'ui sub header'},attributes.subtext) );
+    }
+    return tmpContent;
+}
+
 export default function display({ attributes, editMode }) {
+        const { alignment, attached, block } = attributes;
         var tmpCN = getClass(attributes, true);
         var tmpAtts = attributes;
         var tmpText = tmpAtts.text;
@@ -28,11 +37,8 @@ export default function display({ attributes, editMode }) {
                 tmpText = '(blank) - Update in settings sidebar';
             }
         }
-        var tmpContent = [];
-        if( tmpAtts.subtext != '' ){
-            tmpContent.push( el('div',{className:'ui sub header'},tmpAtts.subtext) );
-        }
+        var tmpContent = !attached && !block && getExtraContent(attributes);
         
-        var tmpDisplayObject = el('div',{className:tmpCN},[tmpText,tmpContent]);
+        var tmpDisplayObject = el('h2',{className:tmpCN},[tmpText,tmpContent]);
         return tmpDisplayObject;
 }
