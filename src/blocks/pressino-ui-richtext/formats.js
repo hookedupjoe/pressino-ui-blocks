@@ -93,10 +93,11 @@ const underline = {
 };
 
 export default function registerFormats () {
+//--- Note:  header - excluded from production until fully featured / if used at all
 
 //------- Register New Formats
 	[
-		underline, header,
+		underline, 
 	].forEach( ( { name, ...settings } ) => {
         
         registerFormatType( name, settings )
