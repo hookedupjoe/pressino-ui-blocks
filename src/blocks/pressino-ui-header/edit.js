@@ -36,6 +36,7 @@ export default function Edit(theProps) {
         tagName="h2"
         placeholder='Enter you header here'
         className={tmpClassName + ' mar0'}
+        allowedFormats={ [ ] }
         identifier="content"
         value={attributes.text}
         onChange={(content) => setAttributes({ text: content })}
