@@ -1,4 +1,5 @@
 ## Pressino Alignment Control
+### Based on the standard alignment control
 
 The `AlignmentControl` component renders a dropdown menu that displays alignment options for the selected block.
 
