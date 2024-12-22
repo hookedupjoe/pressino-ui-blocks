@@ -19,7 +19,7 @@
     }
 }
 
-body i.icon.fafont{
+body i.icon.fafont, body i.icon.faicon{
     font-weight: unset !important;
     font-family: 'Font Awesome 6 Free' !important;
 }
@@ -58,3 +58,36 @@ body .icon.inlist.massive {
 .ui.list .list>.item>i.icon.bottom, .ui.list>.item>i.icon.bottom {
     vertical-align: bottom;
 }
+
+
+body ul:not(.wp-block).useicon {
+    --icon-space: 1.3em;
+    list-style: none;
+    padding: 0;
+  }
+  
+  body ul:not(.wp-block).useicon>li {
+    padding-left: var(--icon-space);
+  }
+  
+  body ul:not(.wp-block).useicon>li:before {
+    font-family: "Icons" !important;
+    display: inline-block;
+    margin-left: calc( var(--icon-space) * -.5 );
+    margin-right: calc( var(--icon-space) * .5 );
+    width: var(--icon-space);
+  }
+
+
+  body ul:not(.wp-block).circle>li:before {
+    content: "\f111" !important; 
+  }
+  body ul:not(.wp-block).circle.check>li:before {
+    content: "\f058" !important; 
+  }
+  body ul:not(.wp-block).circle.right.arrow>li:before {
+    content: "\f35a" !important; 
+  }  body ul:not(.wp-block).circle.question>li:before {
+    content: "\f059" !important; 
+  }
+  
