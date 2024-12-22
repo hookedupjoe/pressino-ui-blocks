@@ -1,66 +1,65 @@
-import { PressinoUI } from "../../pressino-ui";
+import { PressinoUI, istr } from "../../pressino-ui";
 
 const { __ } = wp.i18n;
-const { Fragment } = wp.element;
-const { toggleFormat } = wp.richText;
-const { RichTextToolbarButton, RichTextShortcut } = wp.editor;
-const { unregisterFormatType, registerFormatType } = wp.richText;
+import { RichTextToolbarButton,RichTextShortcut } from '@wordpress/block-editor';
+import { unregisterFormatType, registerFormatType, toggleFormat } from '@wordpress/rich-text';
 
 /**
- * Block constants
+ * Block Classes
  */
 
 
-const header = {
-	name: 'pressino/rt-header',
-	title: __( 'Header' ),
-	tagName: 'h1',
-	className: 'pressino-rt-header',
-	attributes: {
-		class: 'class',
-	},
-	edit( { isActive, value, onChange } ) {
+//--- Template for updating classes
+const borderLayoutFormat = {
+	name: 'actappformat/inline-label',
+	title: 'Bordered label',
+	tagName: 'span',
+	text: 'HL',
+	className: 'actapp-border-label',
+	edit: (props) => {
+		const {isActive,onChange,value} = props;
+		
 		const onToggle = () => {
 			onChange(
 				toggleFormat( value, {
-					type: 'pressino/rt-header',
+					type: 'actappformat/inline-label',
 					attributes: {
-						class: 'ui header',
-					},
+						class: 'ui label blue large'
+					}
 				} ) 
 			);
 		};
-		return (
-			<Fragment>
-				<RichTextShortcut
-					type="primary"
-					character="h"
-					onUse={ onToggle }
-				/>
-				<RichTextToolbarButton
-					icon={PressinoUI.getBlockIcon('pressino/header')}
-					title={ __( 'Header' ) }
-					onClick={ onToggle }
-					isActive={ isActive }
-					shortcutType="primary"
-					shortcutCharacter="h"
-				/>
-			</Fragment>
-		);
-
+	
+		return <div>
+			<RichTextShortcut
+				type="primary"
+				character="l"
+				onUse={ onToggle }
+			/>
+			
+			<RichTextToolbarButton
+				icon={PressinoUI.getControlImage()}
+				title={istr("UI Bordered Label")}
+				isActive={isActive}
+				onClick={onToggle}
+				shortcutType="primary"
+				shortcutCharacter="l"
+			></RichTextToolbarButton>
+		</div>
+		
 	},
-};
+}
 
-
-const underline = {
+//--- Template for updating styles
+const underlineFormat = {
 	name: 'pressino/rt-underline',
-	title: __( 'Underline' ),
+	title: 'Underline',
 	tagName: 'span',
-	className: 'pressino-rt-underlined',
-	attributes: {
-		style: 'style',
-	},
-	edit( { isActive, value, onChange } ) {
+	text: 'HL',
+	className: 'actapp-underline',
+	edit: (props) => {
+		const {isActive,onChange,value} = props;
+		
 		const onToggle = () => {
 			onChange(
 				toggleFormat( value, {
@@ -71,33 +70,33 @@ const underline = {
 				} ) 
 			);
 		};
-		return (
-			<Fragment>
-				<RichTextShortcut
-					type="primary"
-					character="u"
-					onUse={ onToggle }
-				/>
-				<RichTextToolbarButton
-					icon="editor-underline"
-					title={ __( 'Underline' ) }
-					onClick={ onToggle }
-					isActive={ isActive }
-					shortcutType="primary"
-					shortcutCharacter="u"
-				/>
-			</Fragment>
-		);
 
+		return <div>
+			<RichTextShortcut
+				type="primary"
+				character="u"
+				onUse={ onToggle }
+			/>
+			<RichTextToolbarButton
+				icon="editor-underline"
+				title="Underline"
+				isActive={isActive}
+				onClick={onToggle}
+				shortcutType="primary"
+				shortcutCharacter="u"
+			></RichTextToolbarButton>
+		</div>
 	},
-};
+}
+
+
 
 export default function registerFormats () {
 //--- Note:  header - excluded from production until fully featured / if used at all
 
 //------- Register New Formats
 	[
-		underline, 
+		underlineFormat, 
 	].forEach( ( { name, ...settings } ) => {
         
         registerFormatType( name, settings )
@@ -117,6 +116,9 @@ export default function registerFormats () {
        
     } );
 
+
+
+
 };
 
 
@@ -125,6 +127,8 @@ export default function registerFormats () {
 // Old JavaScript Method
 //------------------
 
+//--- This method works as well
+	
     // var withSelect  = wp.data.withSelect;
     //     var ifCondition = wp.compose.ifCondition;
     //     var compose     = wp.compose.compose;
@@ -165,7 +169,7 @@ export default function registerFormats () {
     //         ifCondition( function( props ) {
     //             return (
     //                 props.selectedBlock &&
-    //                 (props.selectedBlock.name === 'core/paragraph' || props.selectedBlock.name === 'actappui/richtext')
+    //                 (props.selectedBlock.name === 'core/paragraph')
     //             );
     //         } )
     //     )( TextHighlightButton );
