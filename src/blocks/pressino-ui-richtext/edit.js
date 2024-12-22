@@ -16,7 +16,7 @@ export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
     var tmpDisplay = display({ attributes, editMode: true });
     const blockProps = useBlockProps();
-
+ 
     return (
         <div {...blockProps}>
             <InspectorControls>
@@ -28,9 +28,9 @@ export default function Edit(theProps) {
             <RichText
                 tagName="h2"
                 className={'ui header large ' + attributes.color || ''}
-                identifier="content"
-                value={attributes.content}
-                onChange={(content) => setAttributes({ content })}
+                identifier="text"
+                value={attributes.text}
+                onChange={(text) => setAttributes({ text })}
             />
         </div>
 
