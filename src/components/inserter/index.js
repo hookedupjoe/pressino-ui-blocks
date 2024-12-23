@@ -8,7 +8,7 @@ import classnames from 'classnames';
  */
 import { __ } from '@wordpress/i18n';
 import { Modal } from '@wordpress/components';
-import { useState, useEffect, useMemo, useCallback } from '@wordpress/element';
+import { useRef, useState, useEffect, useMemo, useCallback } from '@wordpress/element';
 
 /**
  * Internal dependencies
@@ -19,27 +19,75 @@ import { flattenIconsArray, getIconTypes } from './../../utils';
 import ContentHeader from './content-header';
 import IconGrid from './icon-grid';
 import Sidebar from './sidebar';
-export default function InserterModal( props ) {
+
+
+function resizeScrollers() {
+
+	const getEl = (theSelector) => {
+		return window.document.querySelector(theSelector); 
+	}
+	
+	var tmpModal = getEl('.components-modal__content')
+	var tmpHeader = getEl('.components-modal__header');
+	var tmpSB = getEl('.icon-inserter__sidebar__search')
+
+	var tmpBuffer = 4;
+
+	var tmpMH = tmpModal.clientHeight;
+	var tmpHH = tmpHeader.clientHeight;
+	var tmpSH = tmpSB.clientHeight;
+	
+	var tmpCBH = tmpMH - tmpSH - tmpBuffer;
+
+	var tmpCatBox = getEl('.icon-inserter__sidebar__category-type.components-menu-group');
+	var tmpIconsBox = getEl('.wp-pressino-ui-icon-inserter-inserter__modal .icon-inserter__content');
+	tmpCatBox.style.height = tmpCBH + 'px';
+	tmpIconsBox.style.height = (tmpCBH + tmpSH ) + 'px';
+
+}
+export default function InserterModal(props) {
 	const { onSelectedItem, isInserterOpen, setInserterOpen, attributes, setAttributes } =
 		props;
 	const iconsByType = classIconIndex; //getIcons();
 	const iconTypes = iconsByType; //getIconTypes( iconsByType );
-	//console.log('iconsByType',iconsByType)
-	//console.log('iconTypes',iconTypes)
-	
-	// Get the default type, and if there is none, get the first type.
-	const defaultType =iconTypes
 
-	const [ searchInput, setSearchInput ] = useState( '' );
-	const [ currentCategory, setCurrentCategory ] = useState(
-		'all__' + defaultType[ 0 ]?.type
+	// Get the default type, and if there is none, get the first type.
+	const defaultType = iconTypes
+
+
+	//--- Resize scrollable elements when dialog is openned
+	useEffect(() => {
+		if( isInserterOpen ){
+			//--- Trigger looking for it
+			resizeScrollers();
+		}
+	}, [isInserterOpen]);
+
+
+	//--- Resize scrollable on window change
+	useEffect(() => {
+		//--- Handle window resize
+		const handleResize = () => {
+			resizeScrollers();
+		};
+		window.addEventListener("resize", handleResize);
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		}
+	}, []);
+
+
+
+	const [searchInput, setSearchInput] = useState('');
+	const [currentCategory, setCurrentCategory] = useState(
+		'all__' + defaultType[0]?.type
 	);
-	const [ iconSize, setIconSize ] = useState( () => {
-		const storedSettings = window.localStorage.getItem( 'icon_block' );
+	const [iconSize, setIconSize] = useState(() => {
+		const storedSettings = window.localStorage.getItem('icon_block');
 		return storedSettings
-			? JSON.parse( storedSettings )?.preview_size || 24
+			? JSON.parse(storedSettings)?.preview_size || 24
 			: 24;
-	} );
+	});
 
 	// useEffect( () => {
 	// 	const settings = JSON.parse(
@@ -54,92 +102,94 @@ export default function InserterModal( props ) {
 	// 	[ iconsByType ]
 	// );
 	const iconsAll = classIconIndex.icons;
-	
+
 
 	// Move the filtering logic to a separate function
-	const getFilteredIcons = useCallback( () => {
-		
-	
-		if ( searchInput ) {
-			if( searchInput.length < 2 ){
+	const getFilteredIcons = useCallback(() => {
+
+
+		if (searchInput) {
+			if (searchInput.length < 2) {
 				return [];
 			}
-			return iconsAll.filter( ( icon ) => {
+			return iconsAll.filter((icon) => {
 				const input = searchInput.toLowerCase();
 				const iconName = icon.title.toLowerCase();
 
-				if ( iconName.includes( input ) ) {
+				if (iconName.includes(input)) {
 					return true;
 				}
 
 				return (
-					icon?.keywords?.some( ( keyword ) =>
-						keyword.includes( input )
+					icon?.keywords?.some((keyword) =>
+						keyword.includes(input)
 					) || false
 				);
-			} );
+			});
 		}
 
-		
+
 		const iconsRet = iconsAll.filter(
-			( icon ) => icon?.categories?.includes( currentCategory ) || false
+			(icon) => icon?.categories?.includes(currentCategory) || false
 		);
-		if( iconsRet.length == 0){
-			return iconsAll.slice(0,1800);
+		if (iconsRet.length == 0) {
+			return iconsAll.slice(0, 500);
 		}
 		//--- Limit to 500
 		return iconsRet;
 
-	}, [ searchInput, currentCategory, iconsAll, iconsByType ] );
+	}, [searchInput, currentCategory, iconsAll, iconsByType]);
 
-	if ( ! isInserterOpen ) {
+	if (!isInserterOpen) {
 		return null;
 	}
 
-	function updateIconAtts( name, hasNoIconFill ) {
-		setAttributes( {
+	function updateIconAtts(name, hasNoIconFill) {
+		setAttributes({
 			icon: '',
 			iconName: name,
 			hasNoIconFill,
-		} );
-		setInserterOpen( false );
+		});
+		setInserterOpen(false);
 	}
 
-	function onClickCategory( category ) {
-		setCurrentCategory( category );
+	function onClickCategory(category) {
+		setCurrentCategory(category);
 	}
 
 	return (
 		<Modal
 			className="wp-pressino-ui-icon-inserter-inserter__modal"
-			title={ __( 'Icon Library', 'icon-block' ) }
-			onRequestClose={ () => setInserterOpen( false ) }
+			title={__('Icon Library', 'icon-block')}
+			onRequestClose={() => {
+				setInserterOpen(false);
+			}}
 			isFullScreen
 		>
 			<div
-				className={ classnames( 'icon-inserter', {
+				className={classnames('icon-inserter', {
 					'is-searching': searchInput,
-				} ) }
+				})}
 			>
 				<Sidebar
-					iconsByType={ iconsByType }
-					currentCategory={ currentCategory }
-					onClickCategory={ onClickCategory }
-					searchInput={ searchInput }
-					setSearchInput={ setSearchInput }
+					iconsByType={iconsByType}
+					currentCategory={currentCategory}
+					onClickCategory={onClickCategory}
+					searchInput={searchInput}
+					setSearchInput={setSearchInput}
 				/>
 				<div className="icon-inserter__content">
 					<ContentHeader
-						searchInput={ searchInput }
-						shownIconsCount={ getFilteredIcons().length }
-						iconSize={ iconSize }
-						setIconSize={ setIconSize }
+						searchInput={searchInput}
+						shownIconsCount={getFilteredIcons().length}
+						iconSize={iconSize}
+						setIconSize={setIconSize}
 					/>
 					<IconGrid
-						shownIcons={ getFilteredIcons() }
-						iconSize={ iconSize }
-						onSelectedItem={ onSelectedItem }
-						attributes={ attributes }
+						shownIcons={getFilteredIcons()}
+						iconSize={iconSize}
+						onSelectedItem={onSelectedItem}
+						attributes={attributes}
 					/>
 				</div>
 			</div>

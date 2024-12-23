@@ -42,8 +42,8 @@ export default function Sidebar( props ) {
 			} );
 		}
 		let tmpRet = {
-			type: 'FontAwesome',
-			title: 'Font Awesome',
+			type: 'AllFonts',
+			title: 'Fonts Categories',
 			categoriesFull,
 			categories,
 			count: iconsOfType.length,
