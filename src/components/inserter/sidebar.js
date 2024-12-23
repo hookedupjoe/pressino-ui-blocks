@@ -43,7 +43,7 @@ export default function Sidebar( props ) {
 		}
 		let tmpRet = {
 			type: 'AllFonts',
-			title: 'Fonts Categories',
+			title: 'Icon Categories',
 			categoriesFull,
 			categories,
 			count: iconsOfType.length,
@@ -51,30 +51,6 @@ export default function Sidebar( props ) {
 
 		return [tmpRet];
 
-		return iconsByType.map( ( type ) => {
-			const title = type?.title ?? type.type;
-			const categoriesFull = type?.categories ?? [];
-			const categories = simplifyCategories( categoriesFull );
-			const allCategory = `${ ALL_CATEGORY_PREFIX }${ type.type }`;
-			const iconsOfType = type?.icons ?? [];
-
-			// Sort alphabetically and then add the "all" category.
-			if ( ! categories.includes( allCategory ) ) {
-				categories.sort().unshift( allCategory );
-				categoriesFull.unshift( {
-					name: allCategory,
-					title: __( 'All', 'icon-block' ),
-				} );
-			}
-
-			return {
-				type: type.type,
-				title,
-				categoriesFull,
-				categories,
-				count: iconsOfType.length,
-			};
-		} );
 	}, [ iconsByType ] );
 
 	function renderIconTypeCategories( type ) {

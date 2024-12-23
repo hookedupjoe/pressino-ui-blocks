@@ -367,7 +367,7 @@ export const classIconIndex = {
 			"className": "bi bi-activity",
 			"type": "bi",
 			"categories": [
-				"data"
+				"graphs"
 			]
 		},
 		{
@@ -1834,7 +1834,7 @@ export const classIconIndex = {
 			"className": "bi bi-bar-chart",
 			"type": "bi",
 			"categories": [
-				"data"
+				"graphs"
 			]
 		},
 		{
@@ -1843,7 +1843,7 @@ export const classIconIndex = {
 			"className": "bi bi-bar-chart-fill",
 			"type": "bi",
 			"categories": [
-				"data"
+				"graphs"
 			]
 		},
 		{
@@ -1852,7 +1852,7 @@ export const classIconIndex = {
 			"className": "bi bi-bar-chart-line",
 			"type": "bi",
 			"categories": [
-				"data"
+				"graphs"
 			]
 		},
 		{
@@ -1861,7 +1861,7 @@ export const classIconIndex = {
 			"className": "bi bi-bar-chart-line-fill",
 			"type": "bi",
 			"categories": [
-				"data"
+				"graphs"
 			]
 		},
 		{
@@ -1870,7 +1870,7 @@ export const classIconIndex = {
 			"className": "bi bi-bar-chart-steps",
 			"type": "bi",
 			"categories": [
-				"data"
+				"graphs"
 			]
 		},
 		{
@@ -10141,7 +10141,7 @@ export const classIconIndex = {
 			"className": "bi bi-graph-down",
 			"type": "bi",
 			"categories": [
-				"data"
+				"graphs"
 			]
 		},
 		{
@@ -10150,7 +10150,7 @@ export const classIconIndex = {
 			"className": "bi bi-graph-down-arrow",
 			"type": "bi",
 			"categories": [
-				"data"
+				"graphs"
 			]
 		},
 		{
@@ -10159,7 +10159,7 @@ export const classIconIndex = {
 			"className": "bi bi-graph-up",
 			"type": "bi",
 			"categories": [
-				"data"
+				"graphs"
 			]
 		},
 		{
@@ -10168,7 +10168,7 @@ export const classIconIndex = {
 			"className": "bi bi-graph-up-arrow",
 			"type": "bi",
 			"categories": [
-				"data"
+				"graphs"
 			]
 		},
 		{
@@ -12661,7 +12661,7 @@ export const classIconIndex = {
 			"className": "bi bi-paperclip",
 			"type": "bi",
 			"categories": [
-				"real+world"
+				"office"
 			]
 		},
 		{
@@ -13543,7 +13543,7 @@ export const classIconIndex = {
 			"className": "bi bi-pie-chart",
 			"type": "bi",
 			"categories": [
-				"data"
+				"graphs"
 			]
 		},
 		{
@@ -13552,7 +13552,7 @@ export const classIconIndex = {
 			"className": "bi bi-pie-chart-fill",
 			"type": "bi",
 			"categories": [
-				"data"
+				"graphs"
 			]
 		},
 		{
@@ -13741,7 +13741,7 @@ export const classIconIndex = {
 			"className": "bi bi-plugin",
 			"type": "bi",
 			"categories": [
-				"ui"
+				"techy"
 			]
 		},
 		{
@@ -18687,7 +18687,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"welcome"
+				"techy"
 			],
 			"name": "dash28",
 			"type": "dash",
@@ -18696,7 +18696,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"welcome"
+				"techy"
 			],
 			"name": "dash29",
 			"type": "dash",
@@ -18705,7 +18705,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"welcome"
+				"techy"
 			],
 			"name": "dash30",
 			"type": "dash",
@@ -18714,7 +18714,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"welcome"
+				"techy"
 			],
 			"name": "dash31",
 			"type": "dash",
@@ -18723,7 +18723,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"welcome"
+				"techy"
 			],
 			"name": "dash32",
 			"type": "dash",
@@ -18732,7 +18732,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"welcome"
+				"techy"
 			],
 			"name": "dash33",
 			"type": "dash",
@@ -19830,7 +19830,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"dates"
+				"time"
 			],
 			"name": "dash155",
 			"type": "dash",
@@ -19839,7 +19839,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"dates"
+				"time"
 			],
 			"name": "dash156",
 			"type": "dash",
@@ -19911,7 +19911,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"arrow"
+				"arrows"
 			],
 			"name": "dash164",
 			"type": "dash",
@@ -19920,7 +19920,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"arrow"
+				"arrows"
 			],
 			"name": "dash165",
 			"type": "dash",
@@ -19929,7 +19929,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"arrow"
+				"arrows"
 			],
 			"name": "dash166",
 			"type": "dash",
@@ -19938,7 +19938,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"arrow"
+				"arrows"
 			],
 			"name": "dash167",
 			"type": "dash",
@@ -19947,7 +19947,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"arrow"
+				"arrows"
 			],
 			"name": "dash168",
 			"type": "dash",
@@ -19956,7 +19956,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"arrow"
+				"arrows"
 			],
 			"name": "dash169",
 			"type": "dash",
@@ -19965,7 +19965,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"arrow"
+				"arrows"
 			],
 			"name": "dash170",
 			"type": "dash",
@@ -19974,7 +19974,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"arrow"
+				"arrows"
 			],
 			"name": "dash171",
 			"type": "dash",
@@ -19983,7 +19983,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"arrow"
+				"arrows"
 			],
 			"name": "dash172",
 			"type": "dash",
@@ -19992,7 +19992,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"arrow"
+				"arrows"
 			],
 			"name": "dash173",
 			"type": "dash",
@@ -20001,7 +20001,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"arrow"
+				"arrows"
 			],
 			"name": "dash174",
 			"type": "dash",
@@ -20010,7 +20010,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"arrow"
+				"arrows"
 			],
 			"name": "dash175",
 			"type": "dash",
@@ -20019,12 +20019,12 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"sort"
+				"sort+filter"
 			],
 			"name": "dash176",
 			"type": "dash",
 			"className": "dashicons-sort",
-			"title": "sort"
+			"title": "Sort"
 		},
 		{
 			"categories": [
@@ -20892,7 +20892,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"text page"
+				"text-formatting"
 			],
 			"name": "dash273",
 			"type": "dash",
@@ -20901,7 +20901,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"graph"
+				"graphs"
 			],
 			"name": "dash274",
 			"type": "dash",
@@ -20910,7 +20910,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"graph"
+				"graphs"
 			],
 			"name": "dash275",
 			"type": "dash",
@@ -20919,7 +20919,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"graph"
+				"graphs"
 			],
 			"name": "dash276",
 			"type": "dash",
@@ -20928,7 +20928,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"graph"
+				"graphs"
 			],
 			"name": "dash277",
 			"type": "dash",
@@ -20937,7 +20937,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"graph"
+				"graphs"
 			],
 			"name": "dash278",
 			"type": "dash",
@@ -21090,7 +21090,7 @@ export const classIconIndex = {
 		},
 		{
 			"categories": [
-				"dates"
+				"time"
 			],
 			"name": "dash295",
 			"type": "dash",
@@ -21688,7 +21688,7 @@ export const classIconIndex = {
 			"className": "fa-bell",
 			"type": "fa",
 			"categories": [
-				"alert"
+				"alerts"
 			]
 		},
 		{
@@ -21697,7 +21697,7 @@ export const classIconIndex = {
 			"className": "fa-bell-slash",
 			"type": "fa",
 			"categories": [
-				"alert"
+				"alerts"
 			]
 		},
 		{
@@ -21706,7 +21706,7 @@ export const classIconIndex = {
 			"className": "fa-circle-exclamation",
 			"type": "fa",
 			"categories": [
-				"alert"
+				"alerts"
 			]
 		},
 		{
@@ -21715,7 +21715,7 @@ export const classIconIndex = {
 			"className": "fa-circle-radiation",
 			"type": "fa",
 			"categories": [
-				"alert"
+				"alerts"
 			]
 		},
 		{
@@ -21724,7 +21724,7 @@ export const classIconIndex = {
 			"className": "fa-exclamation",
 			"type": "fa",
 			"categories": [
-				"alert"
+				"alerts"
 			]
 		},
 		{
@@ -21733,7 +21733,7 @@ export const classIconIndex = {
 			"className": "fa-radiation",
 			"type": "fa",
 			"categories": [
-				"alert"
+				"alerts"
 			]
 		},
 		{
@@ -21742,7 +21742,7 @@ export const classIconIndex = {
 			"className": "fa-skull-crossbones",
 			"type": "fa",
 			"categories": [
-				"alert"
+				"alerts"
 			]
 		},
 		{
@@ -21751,7 +21751,7 @@ export const classIconIndex = {
 			"className": "fa-triangle-exclamation",
 			"type": "fa",
 			"categories": [
-				"alert"
+				"alerts"
 			]
 		},
 		{
@@ -24676,7 +24676,7 @@ export const classIconIndex = {
 			"className": "fa-bars-progress",
 			"type": "fa",
 			"categories": [
-				"charts+diagrams"
+				"graphs"
 			]
 		},
 		{
@@ -24685,7 +24685,7 @@ export const classIconIndex = {
 			"className": "fa-chart-area",
 			"type": "fa",
 			"categories": [
-				"charts+diagrams"
+				"graphs"
 			]
 		},
 		{
@@ -24694,7 +24694,7 @@ export const classIconIndex = {
 			"className": "fa-chart-bar",
 			"type": "fa",
 			"categories": [
-				"charts+diagrams"
+				"graphs"
 			]
 		},
 		{
@@ -24703,7 +24703,7 @@ export const classIconIndex = {
 			"className": "fa-chart-column",
 			"type": "fa",
 			"categories": [
-				"charts+diagrams"
+				"graphs"
 			]
 		},
 		{
@@ -24712,7 +24712,7 @@ export const classIconIndex = {
 			"className": "fa-chart-gantt",
 			"type": "fa",
 			"categories": [
-				"charts+diagrams"
+				"graphs"
 			]
 		},
 		{
@@ -24721,7 +24721,7 @@ export const classIconIndex = {
 			"className": "fa-chart-line",
 			"type": "fa",
 			"categories": [
-				"charts+diagrams"
+				"graphs"
 			]
 		},
 		{
@@ -24730,7 +24730,7 @@ export const classIconIndex = {
 			"className": "fa-chart-pie",
 			"type": "fa",
 			"categories": [
-				"charts+diagrams"
+				"graphs"
 			]
 		},
 		{
@@ -24739,7 +24739,7 @@ export const classIconIndex = {
 			"className": "fa-chart-simple",
 			"type": "fa",
 			"categories": [
-				"charts+diagrams"
+				"graphs"
 			]
 		},
 		{
@@ -24748,7 +24748,7 @@ export const classIconIndex = {
 			"className": "fa-circle-half-stroke",
 			"type": "fa",
 			"categories": [
-				"charts+diagrams"
+				"graphs"
 			]
 		},
 		{
@@ -24757,7 +24757,7 @@ export const classIconIndex = {
 			"className": "fa-diagram-next",
 			"type": "fa",
 			"categories": [
-				"charts+diagrams"
+				"graphs"
 			]
 		},
 		{
@@ -24766,7 +24766,7 @@ export const classIconIndex = {
 			"className": "fa-diagram-predecessor",
 			"type": "fa",
 			"categories": [
-				"charts+diagrams"
+				"graphs"
 			]
 		},
 		{
@@ -24775,7 +24775,7 @@ export const classIconIndex = {
 			"className": "fa-diagram-project",
 			"type": "fa",
 			"categories": [
-				"charts+diagrams"
+				"graphs"
 			]
 		},
 		{
@@ -24784,7 +24784,7 @@ export const classIconIndex = {
 			"className": "fa-diagram-successor",
 			"type": "fa",
 			"categories": [
-				"charts+diagrams"
+				"graphs"
 			]
 		},
 		{
@@ -24793,7 +24793,7 @@ export const classIconIndex = {
 			"className": "fa-square-poll-horizontal",
 			"type": "fa",
 			"categories": [
-				"charts+diagrams"
+				"graphs"
 			]
 		},
 		{
@@ -24802,7 +24802,7 @@ export const classIconIndex = {
 			"className": "fa-square-poll-vertical",
 			"type": "fa",
 			"categories": [
-				"charts+diagrams"
+				"graphs"
 			]
 		},
 		{
@@ -26548,7 +26548,7 @@ export const classIconIndex = {
 			"className": "fa-camera",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26557,7 +26557,7 @@ export const classIconIndex = {
 			"className": "fa-camera-retro",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26566,7 +26566,7 @@ export const classIconIndex = {
 			"className": "fa-compact-disc",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26575,7 +26575,7 @@ export const classIconIndex = {
 			"className": "fa-computer",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26584,7 +26584,7 @@ export const classIconIndex = {
 			"className": "fa-computer-mouse",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26593,7 +26593,7 @@ export const classIconIndex = {
 			"className": "fa-database",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26602,7 +26602,7 @@ export const classIconIndex = {
 			"className": "fa-desktop",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26611,7 +26611,7 @@ export const classIconIndex = {
 			"className": "fa-display",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26620,7 +26620,7 @@ export const classIconIndex = {
 			"className": "fa-hard-drive",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26629,7 +26629,7 @@ export const classIconIndex = {
 			"className": "fa-headphones",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26638,7 +26638,7 @@ export const classIconIndex = {
 			"className": "fa-house-laptop",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26647,7 +26647,7 @@ export const classIconIndex = {
 			"className": "fa-laptop",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26656,7 +26656,7 @@ export const classIconIndex = {
 			"className": "fa-laptop-file",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26665,7 +26665,7 @@ export const classIconIndex = {
 			"className": "fa-memory",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26674,7 +26674,7 @@ export const classIconIndex = {
 			"className": "fa-plug",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26683,7 +26683,7 @@ export const classIconIndex = {
 			"className": "fa-power-off",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26692,7 +26692,7 @@ export const classIconIndex = {
 			"className": "fa-print",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26701,7 +26701,7 @@ export const classIconIndex = {
 			"className": "fa-sd-card",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26710,7 +26710,7 @@ export const classIconIndex = {
 			"className": "fa-server",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26719,7 +26719,7 @@ export const classIconIndex = {
 			"className": "fa-sim-card",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26728,7 +26728,7 @@ export const classIconIndex = {
 			"className": "fa-tablet",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26737,7 +26737,7 @@ export const classIconIndex = {
 			"className": "fa-tablet-button",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26746,7 +26746,7 @@ export const classIconIndex = {
 			"className": "fa-tablet-screen-button",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26755,7 +26755,7 @@ export const classIconIndex = {
 			"className": "fa-tachograph-digital",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -26764,7 +26764,7 @@ export const classIconIndex = {
 			"className": "fa-tv",
 			"type": "fa",
 			"categories": [
-				"devices+hardware"
+				"devices"
 			]
 		},
 		{
@@ -28033,7 +28033,7 @@ export const classIconIndex = {
 			"className": "fa-circle",
 			"type": "fa",
 			"categories": [
-				"film+video"
+				"editing"
 			]
 		},
 		{
@@ -28042,7 +28042,7 @@ export const classIconIndex = {
 			"className": "fa-clapperboard",
 			"type": "fa",
 			"categories": [
-				"film+video"
+				"media"
 			]
 		},
 		{
@@ -28051,7 +28051,7 @@ export const classIconIndex = {
 			"className": "fa-film",
 			"type": "fa",
 			"categories": [
-				"film+video"
+				"media"
 			]
 		},
 		{
@@ -28060,7 +28060,7 @@ export const classIconIndex = {
 			"className": "fa-podcast",
 			"type": "fa",
 			"categories": [
-				"film+video"
+				"media"
 			]
 		},
 		{
@@ -28069,7 +28069,7 @@ export const classIconIndex = {
 			"className": "fa-ticket",
 			"type": "fa",
 			"categories": [
-				"film+video"
+				"media"
 			]
 		},
 		{
@@ -28078,7 +28078,7 @@ export const classIconIndex = {
 			"className": "youtube",
         "type": "sui",
 			"categories": [
-				"film+video"
+				"media"
 			]
 		},
 		{
@@ -30670,7 +30670,7 @@ export const classIconIndex = {
 			"className": "fa-person-swimming",
 			"type": "fa",
 			"categories": [
-				"maritime"
+				"general"
 			]
 		},
 		{
@@ -32636,33 +32636,6 @@ export const classIconIndex = {
 			]
 		},
 		{
-			"name": "fa1245",
-			"title": "Sciencefiction Galactic Republic",
-			"className": "fa-galactic-republic",
-			"type": "fa",
-			"categories": [
-				"science-fiction"
-			]
-		},
-		{
-			"name": "fa1246",
-			"title": "Sciencefiction Galactic Senate",
-			"className": "fa-galactic-senate",
-			"type": "fa",
-			"categories": [
-				"science-fiction"
-			]
-		},
-		{
-			"name": "fa1247",
-			"title": "Sciencefiction Jedi Order",
-			"className": "fa-jedi-order",
-			"type": "fa",
-			"categories": [
-				"science-fiction"
-			]
-		},
-		{
 			"name": "fa1248",
 			"title": "Sciencefiction Old Republic",
 			"className": "fa-old-republic",
@@ -32677,7 +32650,7 @@ export const classIconIndex = {
 			"className": "fa-temperature-high",
 			"type": "fa",
 			"categories": [
-				"science"
+				"general"
 			]
 		},
 		{
@@ -32686,7 +32659,7 @@ export const classIconIndex = {
 			"className": "fa-temperature-low",
 			"type": "fa",
 			"categories": [
-				"science"
+				"general"
 			]
 		},
 		{
@@ -33154,7 +33127,7 @@ export const classIconIndex = {
 			"className": "fa-circle-notch",
 			"type": "fa",
 			"categories": [
-				"spinners"
+				"techy"
 			]
 		},
 		{
@@ -33163,7 +33136,7 @@ export const classIconIndex = {
 			"className": "fa-slash",
 			"type": "fa",
 			"categories": [
-				"spinners"
+				"techy"
 			]
 		},
 		{
@@ -33172,7 +33145,7 @@ export const classIconIndex = {
 			"className": "fa-spinner",
 			"type": "fa",
 			"categories": [
-				"spinners"
+				"techy"
 			]
 		},
 		{
@@ -34108,7 +34081,7 @@ export const classIconIndex = {
 			"className": "fa-blog",
 			"type": "fa",
 			"categories": [
-				"writing"
+				"techy"
 			]
 		},
 		{
@@ -34117,7 +34090,7 @@ export const classIconIndex = {
 			"className": "fa-book-bookmark",
 			"type": "fa",
 			"categories": [
-				"writing"
+				"techy"
 			]
 		},
 		{
@@ -34126,7 +34099,7 @@ export const classIconIndex = {
 			"className": "fa-paperclip",
 			"type": "fa",
 			"categories": [
-				"writing"
+				"office"
 			]
 		}
 	],
@@ -34138,10 +34111,6 @@ export const classIconIndex = {
     {
         "name": "typography",
         "title": "Typography"
-    },
-    {
-        "name": "data",
-        "title": "Data"
     },
     {
         "name": "transportation",
@@ -34276,16 +34245,8 @@ export const classIconIndex = {
         "title": "Controls"
     },
     {
-        "name": "ui",
-        "title": "UI"
-    },
-    {
         "name": "admin",
         "title": "Admin"
-    },
-    {
-        "name": "welcome",
-        "title": "Welcome"
     },
     {
         "name": "format",
@@ -34316,20 +34277,8 @@ export const classIconIndex = {
         "title": "General"
     },
     {
-        "name": "dates",
-        "title": "Dates"
-    },
-    {
         "name": "remove",
         "title": "Remove"
-    },
-    {
-        "name": "arrow",
-        "title": "Arrow"
-    },
-    {
-        "name": "sort",
-        "title": "Sort"
     },
     {
         "name": "social",
@@ -34352,20 +34301,12 @@ export const classIconIndex = {
         "title": "Notifications"
     },
     {
-        "name": "text page",
-        "title": "Text Page"
-    },
-    {
-        "name": "graph",
-        "title": "Graph"
+        "name": "graphs",
+        "title": "Graphs"
     },
     {
         "name": "accessibility",
         "title": "Accessibility"
-    },
-    {
-        "name": "alert",
-        "title": "Alert"
     },
     {
         "name": "alphabet",
@@ -34390,10 +34331,6 @@ export const classIconIndex = {
     {
         "name": "charity",
         "title": "Charity"
-    },
-    {
-        "name": "charts+diagrams",
-        "title": "Charts Diagrams"
     },
     {
         "name": "childhood",
@@ -34424,10 +34361,6 @@ export const classIconIndex = {
         "title": "Design"
     },
     {
-        "name": "devices+hardware",
-        "title": "Devices Hardware"
-    },
-    {
         "name": "disaster+crisis",
         "title": "Disaster Crisis"
     },
@@ -34446,10 +34379,6 @@ export const classIconIndex = {
     {
         "name": "files",
         "title": "Files"
-    },
-    {
-        "name": "film+video",
-        "title": "Film Video"
     },
     {
         "name": "food+beverage",
@@ -34486,10 +34415,6 @@ export const classIconIndex = {
     {
         "name": "maps",
         "title": "Maps"
-    },
-    {
-        "name": "maritime",
-        "title": "Maritime"
     },
     {
         "name": "mathematics",
@@ -34540,20 +34465,8 @@ export const classIconIndex = {
         "title": "Religion"
     },
     {
-        "name": "science-fiction",
-        "title": "Science-fiction"
-    },
-    {
-        "name": "science",
-        "title": "Science"
-    },
-    {
         "name": "shopping",
         "title": "Shopping"
-    },
-    {
-        "name": "spinners",
-        "title": "Spinners"
     },
     {
         "name": "sports+fitness",
@@ -34574,10 +34487,6 @@ export const classIconIndex = {
     {
         "name": "users+people",
         "title": "Users People"
-    },
-    {
-        "name": "writing",
-        "title": "Writing"
     }
 ]
 	
