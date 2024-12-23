@@ -85,6 +85,9 @@ class PressinoUIBlocks {
 		wp_register_style( 'pressino-ui-font-aweseome-css',   PRESSINO_UI_BLOCKS_URL . '/lib/fontawesome/css/all.min.css', false,  PRESSINO_UI_BLOCKS_CORE_VERSION );
 		wp_enqueue_style ( 'pressino-ui-font-aweseome-css' );
 
+		wp_register_style( 'pressino-ui-bootstrap-icons-css',   PRESSINO_UI_BLOCKS_URL . '/lib/bootstrapicons/bootstrap-icons.min.css', false,  PRESSINO_UI_BLOCKS_CORE_VERSION );
+		wp_enqueue_style ( 'pressino-ui-bootstrap-icons-css' );
+
 		//--- Load the action app core components and ActionAppCore.common.blocks add on
 		wp_enqueue_script(
 			'pressino-ui-core', 

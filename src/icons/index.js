@@ -17,6 +17,18439 @@ export function getIconEl({iconname, icontype, iconclass}){
 
 export const classIconIndex = {
 	"icons":[
+        
+		{
+			"name": "0-square-fill",
+			"title": "0-square-fill",
+			"className": "bi bi-0-square-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "1-circle",
+			"title": "1-circle",
+			"className": "bi bi-1-circle",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "1-circle-fill",
+			"title": "1-circle-fill",
+			"className": "bi bi-1-circle-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "1-square",
+			"title": "1-square",
+			"className": "bi bi-1-square",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "1-square-fill",
+			"title": "1-square-fill",
+			"className": "bi bi-1-square-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "123",
+			"title": "123",
+			"className": "bi bi-123",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "2-circle",
+			"title": "2-circle",
+			"className": "bi bi-2-circle",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "2-circle-fill",
+			"title": "2-circle-fill",
+			"className": "bi bi-2-circle-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "2-square",
+			"title": "2-square",
+			"className": "bi bi-2-square",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "2-square-fill",
+			"title": "2-square-fill",
+			"className": "bi bi-2-square-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "3-circle",
+			"title": "3-circle",
+			"className": "bi bi-3-circle",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "3-circle-fill",
+			"title": "3-circle-fill",
+			"className": "bi bi-3-circle-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "3-square",
+			"title": "3-square",
+			"className": "bi bi-3-square",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "3-square-fill",
+			"title": "3-square-fill",
+			"className": "bi bi-3-square-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "4-circle",
+			"title": "4-circle",
+			"className": "bi bi-4-circle",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "4-circle-fill",
+			"title": "4-circle-fill",
+			"className": "bi bi-4-circle-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "4-square",
+			"title": "4-square",
+			"className": "bi bi-4-square",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "4-square-fill",
+			"title": "4-square-fill",
+			"className": "bi bi-4-square-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "5-circle",
+			"title": "5-circle",
+			"className": "bi bi-5-circle",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "5-circle-fill",
+			"title": "5-circle-fill",
+			"className": "bi bi-5-circle-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "5-square",
+			"title": "5-square",
+			"className": "bi bi-5-square",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "5-square-fill",
+			"title": "5-square-fill",
+			"className": "bi bi-5-square-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "6-circle",
+			"title": "6-circle",
+			"className": "bi bi-6-circle",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "6-circle-fill",
+			"title": "6-circle-fill",
+			"className": "bi bi-6-circle-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "6-square",
+			"title": "6-square",
+			"className": "bi bi-6-square",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "6-square-fill",
+			"title": "6-square-fill",
+			"className": "bi bi-6-square-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "7-circle",
+			"title": "7-circle",
+			"className": "bi bi-7-circle",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "7-circle-fill",
+			"title": "7-circle-fill",
+			"className": "bi bi-7-circle-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "7-square",
+			"title": "7-square",
+			"className": "bi bi-7-square",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "7-square-fill",
+			"title": "7-square-fill",
+			"className": "bi bi-7-square-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "8-circle",
+			"title": "8-circle",
+			"className": "bi bi-8-circle",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "8-circle-fill",
+			"title": "8-circle-fill",
+			"className": "bi bi-8-circle-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "8-square",
+			"title": "8-square",
+			"className": "bi bi-8-square",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "8-square-fill",
+			"title": "8-square-fill",
+			"className": "bi bi-8-square-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "9-circle",
+			"title": "9-circle",
+			"className": "bi bi-9-circle",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "9-circle-fill",
+			"title": "9-circle-fill",
+			"className": "bi bi-9-circle-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "9-square",
+			"title": "9-square",
+			"className": "bi bi-9-square",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "9-square-fill",
+			"title": "9-square-fill",
+			"className": "bi bi-9-square-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "activity",
+			"title": "activity",
+			"className": "bi bi-activity",
+			"type": "bi",
+			"categories": [
+				"data"
+			]
+		},
+		{
+			"name": "airplane",
+			"title": "airplane",
+			"className": "bi bi-airplane",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "airplane-engines",
+			"title": "airplane-engines",
+			"className": "bi bi-airplane-engines",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "airplane-engines-fill",
+			"title": "airplane-engines-fill",
+			"className": "bi bi-airplane-engines-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "airplane-fill",
+			"title": "airplane-fill",
+			"className": "bi bi-airplane-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "alarm",
+			"title": "alarm",
+			"className": "bi bi-alarm",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "alarm-fill",
+			"title": "alarm-fill",
+			"className": "bi bi-alarm-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "alexa",
+			"title": "alexa",
+			"className": "bi bi-alexa",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "align-bottom",
+			"title": "align-bottom",
+			"className": "bi bi-align-bottom",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "align-center",
+			"title": "align-center",
+			"className": "bi bi-align-center",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "align-end",
+			"title": "align-end",
+			"className": "bi bi-align-end",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "align-middle",
+			"title": "align-middle",
+			"className": "bi bi-align-middle",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "align-start",
+			"title": "align-start",
+			"className": "bi bi-align-start",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "align-top",
+			"title": "align-top",
+			"className": "bi bi-align-top",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "alipay",
+			"title": "alipay",
+			"className": "bi bi-alipay",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "alphabet",
+			"title": "alphabet",
+			"className": "bi bi-alphabet",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "alphabet-uppercase",
+			"title": "alphabet-uppercase",
+			"className": "bi bi-alphabet-uppercase",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "alt",
+			"title": "alt",
+			"className": "bi bi-alt",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "amazon",
+			"title": "amazon",
+			"className": "bi bi-amazon",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "amd",
+			"title": "amd",
+			"className": "bi bi-amd",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "android",
+			"title": "android",
+			"className": "bi bi-android",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "android2",
+			"title": "android2",
+			"className": "bi bi-android2",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "app",
+			"title": "app",
+			"className": "bi bi-app",
+			"type": "bi",
+			"categories": [
+				"apps"
+			]
+		},
+		{
+			"name": "app-indicator",
+			"title": "app-indicator",
+			"className": "bi bi-app-indicator",
+			"type": "bi",
+			"categories": [
+				"apps"
+			]
+		},
+		{
+			"name": "apple",
+			"title": "apple",
+			"className": "bi bi-apple",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "archive",
+			"title": "archive",
+			"className": "bi bi-archive",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "archive-fill",
+			"title": "archive-fill",
+			"className": "bi bi-archive-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "arrow-90deg-down",
+			"title": "arrow-90deg-down",
+			"className": "bi bi-arrow-90deg-down",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-90deg-left",
+			"title": "arrow-90deg-left",
+			"className": "bi bi-arrow-90deg-left",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-90deg-right",
+			"title": "arrow-90deg-right",
+			"className": "bi bi-arrow-90deg-right",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-90deg-up",
+			"title": "arrow-90deg-up",
+			"className": "bi bi-arrow-90deg-up",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-bar-down",
+			"title": "arrow-bar-down",
+			"className": "bi bi-arrow-bar-down",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-bar-left",
+			"title": "arrow-bar-left",
+			"className": "bi bi-arrow-bar-left",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-bar-right",
+			"title": "arrow-bar-right",
+			"className": "bi bi-arrow-bar-right",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-bar-up",
+			"title": "arrow-bar-up",
+			"className": "bi bi-arrow-bar-up",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-clockwise",
+			"title": "arrow-clockwise",
+			"className": "bi bi-arrow-clockwise",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-counterclockwise",
+			"title": "arrow-counterclockwise",
+			"className": "bi bi-arrow-counterclockwise",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-down",
+			"title": "arrow-down",
+			"className": "bi bi-arrow-down",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-down-circle",
+			"title": "arrow-down-circle",
+			"className": "bi bi-arrow-down-circle",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-down-circle-fill",
+			"title": "arrow-down-circle-fill",
+			"className": "bi bi-arrow-down-circle-fill",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-down-left-circle",
+			"title": "arrow-down-left-circle",
+			"className": "bi bi-arrow-down-left-circle",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-down-left-circle-fill",
+			"title": "arrow-down-left-circle-fill",
+			"className": "bi bi-arrow-down-left-circle-fill",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-down-left-square",
+			"title": "arrow-down-left-square",
+			"className": "bi bi-arrow-down-left-square",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-down-left-square-fill",
+			"title": "arrow-down-left-square-fill",
+			"className": "bi bi-arrow-down-left-square-fill",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-down-right-circle",
+			"title": "arrow-down-right-circle",
+			"className": "bi bi-arrow-down-right-circle",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-down-right-circle-fill",
+			"title": "arrow-down-right-circle-fill",
+			"className": "bi bi-arrow-down-right-circle-fill",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-down-right-square",
+			"title": "arrow-down-right-square",
+			"className": "bi bi-arrow-down-right-square",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-down-right-square-fill",
+			"title": "arrow-down-right-square-fill",
+			"className": "bi bi-arrow-down-right-square-fill",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-down-square",
+			"title": "arrow-down-square",
+			"className": "bi bi-arrow-down-square",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-down-square-fill",
+			"title": "arrow-down-square-fill",
+			"className": "bi bi-arrow-down-square-fill",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-down-left",
+			"title": "arrow-down-left",
+			"className": "bi bi-arrow-down-left",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-down-right",
+			"title": "arrow-down-right",
+			"className": "bi bi-arrow-down-right",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-down-short",
+			"title": "arrow-down-short",
+			"className": "bi bi-arrow-down-short",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-down-up",
+			"title": "arrow-down-up",
+			"className": "bi bi-arrow-down-up",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-left",
+			"title": "arrow-left",
+			"className": "bi bi-arrow-left",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-left-circle",
+			"title": "arrow-left-circle",
+			"className": "bi bi-arrow-left-circle",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-left-circle-fill",
+			"title": "arrow-left-circle-fill",
+			"className": "bi bi-arrow-left-circle-fill",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-left-square",
+			"title": "arrow-left-square",
+			"className": "bi bi-arrow-left-square",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-left-square-fill",
+			"title": "arrow-left-square-fill",
+			"className": "bi bi-arrow-left-square-fill",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-left-right",
+			"title": "arrow-left-right",
+			"className": "bi bi-arrow-left-right",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-left-short",
+			"title": "arrow-left-short",
+			"className": "bi bi-arrow-left-short",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-repeat",
+			"title": "arrow-repeat",
+			"className": "bi bi-arrow-repeat",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-return-left",
+			"title": "arrow-return-left",
+			"className": "bi bi-arrow-return-left",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-return-right",
+			"title": "arrow-return-right",
+			"className": "bi bi-arrow-return-right",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-right",
+			"title": "arrow-right",
+			"className": "bi bi-arrow-right",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-right-circle",
+			"title": "arrow-right-circle",
+			"className": "bi bi-arrow-right-circle",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-right-circle-fill",
+			"title": "arrow-right-circle-fill",
+			"className": "bi bi-arrow-right-circle-fill",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-right-square",
+			"title": "arrow-right-square",
+			"className": "bi bi-arrow-right-square",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-right-square-fill",
+			"title": "arrow-right-square-fill",
+			"className": "bi bi-arrow-right-square-fill",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-right-short",
+			"title": "arrow-right-short",
+			"className": "bi bi-arrow-right-short",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-through-heart",
+			"title": "arrow-through-heart",
+			"className": "bi bi-arrow-through-heart",
+			"type": "bi",
+			"categories": [
+				"arrows love"
+			]
+		},
+		{
+			"name": "arrow-through-heart-fill",
+			"title": "arrow-through-heart-fill",
+			"className": "bi bi-arrow-through-heart-fill",
+			"type": "bi",
+			"categories": [
+				"arrows love"
+			]
+		},
+		{
+			"name": "arrow-up",
+			"title": "arrow-up",
+			"className": "bi bi-arrow-up",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-up-circle",
+			"title": "arrow-up-circle",
+			"className": "bi bi-arrow-up-circle",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-up-circle-fill",
+			"title": "arrow-up-circle-fill",
+			"className": "bi bi-arrow-up-circle-fill",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-up-left-circle",
+			"title": "arrow-up-left-circle",
+			"className": "bi bi-arrow-up-left-circle",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-up-left-circle-fill",
+			"title": "arrow-up-left-circle-fill",
+			"className": "bi bi-arrow-up-left-circle-fill",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-up-left-square",
+			"title": "arrow-up-left-square",
+			"className": "bi bi-arrow-up-left-square",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-up-left-square-fill",
+			"title": "arrow-up-left-square-fill",
+			"className": "bi bi-arrow-up-left-square-fill",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-up-right-circle",
+			"title": "arrow-up-right-circle",
+			"className": "bi bi-arrow-up-right-circle",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-up-right-circle-fill",
+			"title": "arrow-up-right-circle-fill",
+			"className": "bi bi-arrow-up-right-circle-fill",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-up-right-square",
+			"title": "arrow-up-right-square",
+			"className": "bi bi-arrow-up-right-square",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-up-right-square-fill",
+			"title": "arrow-up-right-square-fill",
+			"className": "bi bi-arrow-up-right-square-fill",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-up-square",
+			"title": "arrow-up-square",
+			"className": "bi bi-arrow-up-square",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-up-square-fill",
+			"title": "arrow-up-square-fill",
+			"className": "bi bi-arrow-up-square-fill",
+			"type": "bi",
+			"categories": [
+				"shape arrows"
+			]
+		},
+		{
+			"name": "arrow-up-left",
+			"title": "arrow-up-left",
+			"className": "bi bi-arrow-up-left",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-up-right",
+			"title": "arrow-up-right",
+			"className": "bi bi-arrow-up-right",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrow-up-short",
+			"title": "arrow-up-short",
+			"className": "bi bi-arrow-up-short",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrows",
+			"title": "arrows",
+			"className": "bi bi-arrows",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrows-angle-contract",
+			"title": "arrows-angle-contract",
+			"className": "bi bi-arrows-angle-contract",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrows-angle-expand",
+			"title": "arrows-angle-expand",
+			"className": "bi bi-arrows-angle-expand",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrows-collapse",
+			"title": "arrows-collapse",
+			"className": "bi bi-arrows-collapse",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrows-collapse-vertical",
+			"title": "arrows-collapse-vertical",
+			"className": "bi bi-arrows-collapse-vertical",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrows-expand",
+			"title": "arrows-expand",
+			"className": "bi bi-arrows-expand",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrows-expand-vertical",
+			"title": "arrows-expand-vertical",
+			"className": "bi bi-arrows-expand-vertical",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrows-fullscreen",
+			"title": "arrows-fullscreen",
+			"className": "bi bi-arrows-fullscreen",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrows-move",
+			"title": "arrows-move",
+			"className": "bi bi-arrows-move",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "arrows-vertical",
+			"title": "arrows-vertical",
+			"className": "bi bi-arrows-vertical",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "aspect-ratio",
+			"title": "aspect-ratio",
+			"className": "bi bi-aspect-ratio",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "aspect-ratio-fill",
+			"title": "aspect-ratio-fill",
+			"className": "bi bi-aspect-ratio-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "asterisk",
+			"title": "asterisk",
+			"className": "bi bi-asterisk",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "at",
+			"title": "at",
+			"className": "bi bi-at",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "award",
+			"title": "award",
+			"className": "bi bi-award",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "award-fill",
+			"title": "award-fill",
+			"className": "bi bi-award-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "back",
+			"title": "back",
+			"className": "bi bi-back",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "backpack",
+			"title": "backpack",
+			"className": "bi bi-backpack",
+			"type": "bi",
+			"categories": [
+				"travel"
+			]
+		},
+		{
+			"name": "backpack-fill",
+			"title": "backpack-fill",
+			"className": "bi bi-backpack-fill",
+			"type": "bi",
+			"categories": [
+				"travel"
+			]
+		},
+		{
+			"name": "backpack2",
+			"title": "backpack2",
+			"className": "bi bi-backpack2",
+			"type": "bi",
+			"categories": [
+				"travel"
+			]
+		},
+		{
+			"name": "backpack2-fill",
+			"title": "backpack2-fill",
+			"className": "bi bi-backpack2-fill",
+			"type": "bi",
+			"categories": [
+				"travel"
+			]
+		},
+		{
+			"name": "backpack3",
+			"title": "backpack3",
+			"className": "bi bi-backpack3",
+			"type": "bi",
+			"categories": [
+				"travel"
+			]
+		},
+		{
+			"name": "backpack3-fill",
+			"title": "backpack3-fill",
+			"className": "bi bi-backpack3-fill",
+			"type": "bi",
+			"categories": [
+				"travel"
+			]
+		},
+		{
+			"name": "backpack4",
+			"title": "backpack4",
+			"className": "bi bi-backpack4",
+			"type": "bi",
+			"categories": [
+				"travel"
+			]
+		},
+		{
+			"name": "backpack4-fill",
+			"title": "backpack4-fill",
+			"className": "bi bi-backpack4-fill",
+			"type": "bi",
+			"categories": [
+				"travel"
+			]
+		},
+		{
+			"name": "backspace",
+			"title": "backspace",
+			"className": "bi bi-backspace",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "backspace-fill",
+			"title": "backspace-fill",
+			"className": "bi bi-backspace-fill",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "backspace-reverse",
+			"title": "backspace-reverse",
+			"className": "bi bi-backspace-reverse",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "backspace-reverse-fill",
+			"title": "backspace-reverse-fill",
+			"className": "bi bi-backspace-reverse-fill",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "badge-3d",
+			"title": "badge-3d",
+			"className": "bi bi-badge-3d",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "badge-3d-fill",
+			"title": "badge-3d-fill",
+			"className": "bi bi-badge-3d-fill",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "badge-4k",
+			"title": "badge-4k",
+			"className": "bi bi-badge-4k",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "badge-4k-fill",
+			"title": "badge-4k-fill",
+			"className": "bi bi-badge-4k-fill",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "badge-8k",
+			"title": "badge-8k",
+			"className": "bi bi-badge-8k",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "badge-8k-fill",
+			"title": "badge-8k-fill",
+			"className": "bi bi-badge-8k-fill",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "badge-ad",
+			"title": "badge-ad",
+			"className": "bi bi-badge-ad",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "badge-ad-fill",
+			"title": "badge-ad-fill",
+			"className": "bi bi-badge-ad-fill",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "badge-ar",
+			"title": "badge-ar",
+			"className": "bi bi-badge-ar",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "badge-ar-fill",
+			"title": "badge-ar-fill",
+			"className": "bi bi-badge-ar-fill",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "badge-cc",
+			"title": "badge-cc",
+			"className": "bi bi-badge-cc",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "badge-cc-fill",
+			"title": "badge-cc-fill",
+			"className": "bi bi-badge-cc-fill",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "badge-hd",
+			"title": "badge-hd",
+			"className": "bi bi-badge-hd",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "badge-hd-fill",
+			"title": "badge-hd-fill",
+			"className": "bi bi-badge-hd-fill",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "badge-sd",
+			"title": "badge-sd",
+			"className": "bi bi-badge-sd",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "badge-sd-fill",
+			"title": "badge-sd-fill",
+			"className": "bi bi-badge-sd-fill",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "badge-tm",
+			"title": "badge-tm",
+			"className": "bi bi-badge-tm",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "badge-tm-fill",
+			"title": "badge-tm-fill",
+			"className": "bi bi-badge-tm-fill",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "badge-vo",
+			"title": "badge-vo",
+			"className": "bi bi-badge-vo",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "badge-vo-fill",
+			"title": "badge-vo-fill",
+			"className": "bi bi-badge-vo-fill",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "badge-vr",
+			"title": "badge-vr",
+			"className": "bi bi-badge-vr",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "badge-vr-fill",
+			"title": "badge-vr-fill",
+			"className": "bi bi-badge-vr-fill",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "badge-wc",
+			"title": "badge-wc",
+			"className": "bi bi-badge-wc",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "badge-wc-fill",
+			"title": "badge-wc-fill",
+			"className": "bi bi-badge-wc-fill",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "bag",
+			"title": "bag",
+			"className": "bi bi-bag",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "bag-check",
+			"title": "bag-check",
+			"className": "bi bi-bag-check",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "bag-check-fill",
+			"title": "bag-check-fill",
+			"className": "bi bi-bag-check-fill",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "bag-dash",
+			"title": "bag-dash",
+			"className": "bi bi-bag-dash",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "bag-dash-fill",
+			"title": "bag-dash-fill",
+			"className": "bi bi-bag-dash-fill",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "bag-fill",
+			"title": "bag-fill",
+			"className": "bi bi-bag-fill",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "bag-heart",
+			"title": "bag-heart",
+			"className": "bi bi-bag-heart",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "bag-heart-fill",
+			"title": "bag-heart-fill",
+			"className": "bi bi-bag-heart-fill",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "bag-plus",
+			"title": "bag-plus",
+			"className": "bi bi-bag-plus",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "bag-plus-fill",
+			"title": "bag-plus-fill",
+			"className": "bi bi-bag-plus-fill",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "bag-x",
+			"title": "bag-x",
+			"className": "bi bi-bag-x",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "bag-x-fill",
+			"title": "bag-x-fill",
+			"className": "bi bi-bag-x-fill",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "balloon",
+			"title": "balloon",
+			"className": "bi bi-balloon",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "balloon-fill",
+			"title": "balloon-fill",
+			"className": "bi bi-balloon-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "balloon-heart",
+			"title": "balloon-heart",
+			"className": "bi bi-balloon-heart",
+			"type": "bi",
+			"categories": [
+				"real world love"
+			]
+		},
+		{
+			"name": "balloon-heart-fill",
+			"title": "balloon-heart-fill",
+			"className": "bi bi-balloon-heart-fill",
+			"type": "bi",
+			"categories": [
+				"real world love"
+			]
+		},
+		{
+			"name": "ban",
+			"title": "ban",
+			"className": "bi bi-ban",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "ban-fill",
+			"title": "ban-fill",
+			"className": "bi bi-ban-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "bandaid",
+			"title": "bandaid",
+			"className": "bi bi-bandaid",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "bandaid-fill",
+			"title": "bandaid-fill",
+			"className": "bi bi-bandaid-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "bank",
+			"title": "bank",
+			"className": "bi bi-bank",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "bank2",
+			"title": "bank2",
+			"className": "bi bi-bank2",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "bar-chart",
+			"title": "bar-chart",
+			"className": "bi bi-bar-chart",
+			"type": "bi",
+			"categories": [
+				"data"
+			]
+		},
+		{
+			"name": "bar-chart-fill",
+			"title": "bar-chart-fill",
+			"className": "bi bi-bar-chart-fill",
+			"type": "bi",
+			"categories": [
+				"data"
+			]
+		},
+		{
+			"name": "bar-chart-line",
+			"title": "bar-chart-line",
+			"className": "bi bi-bar-chart-line",
+			"type": "bi",
+			"categories": [
+				"data"
+			]
+		},
+		{
+			"name": "bar-chart-line-fill",
+			"title": "bar-chart-line-fill",
+			"className": "bi bi-bar-chart-line-fill",
+			"type": "bi",
+			"categories": [
+				"data"
+			]
+		},
+		{
+			"name": "bar-chart-steps",
+			"title": "bar-chart-steps",
+			"className": "bi bi-bar-chart-steps",
+			"type": "bi",
+			"categories": [
+				"data"
+			]
+		},
+		{
+			"name": "basket",
+			"title": "basket",
+			"className": "bi bi-basket",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "basket-fill",
+			"title": "basket-fill",
+			"className": "bi bi-basket-fill",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "basket2",
+			"title": "basket2",
+			"className": "bi bi-basket2",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "basket2-fill",
+			"title": "basket2-fill",
+			"className": "bi bi-basket2-fill",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "basket3",
+			"title": "basket3",
+			"className": "bi bi-basket3",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "basket3-fill",
+			"title": "basket3-fill",
+			"className": "bi bi-basket3-fill",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "battery",
+			"title": "battery",
+			"className": "bi bi-battery",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "battery-charging",
+			"title": "battery-charging",
+			"className": "bi bi-battery-charging",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "battery-full",
+			"title": "battery-full",
+			"className": "bi bi-battery-full",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "battery-half",
+			"title": "battery-half",
+			"className": "bi bi-battery-half",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "behance",
+			"title": "behance",
+			"className": "bi bi-behance",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "bell",
+			"title": "bell",
+			"className": "bi bi-bell",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "bell-fill",
+			"title": "bell-fill",
+			"className": "bi bi-bell-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "bell-slash",
+			"title": "bell-slash",
+			"className": "bi bi-bell-slash",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "bell-slash-fill",
+			"title": "bell-slash-fill",
+			"className": "bi bi-bell-slash-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "bezier",
+			"title": "bezier",
+			"className": "bi bi-bezier",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "bezier2",
+			"title": "bezier2",
+			"className": "bi bi-bezier2",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "bicycle",
+			"title": "bicycle",
+			"className": "bi bi-bicycle",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "bing",
+			"title": "bing",
+			"className": "bi bi-bing",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "binoculars",
+			"title": "binoculars",
+			"className": "bi bi-binoculars",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "binoculars-fill",
+			"title": "binoculars-fill",
+			"className": "bi bi-binoculars-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "blockquote-left",
+			"title": "blockquote-left",
+			"className": "bi bi-blockquote-left",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "blockquote-right",
+			"title": "blockquote-right",
+			"className": "bi bi-blockquote-right",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "bluetooth",
+			"title": "bluetooth",
+			"className": "bi bi-bluetooth",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "body-text",
+			"title": "body-text",
+			"className": "bi bi-body-text",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "book",
+			"title": "book",
+			"className": "bi bi-book",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "book-fill",
+			"title": "book-fill",
+			"className": "bi bi-book-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "book-half",
+			"title": "book-half",
+			"className": "bi bi-book-half",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "bookmark",
+			"title": "bookmark",
+			"className": "bi bi-bookmark",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "bookmark-check",
+			"title": "bookmark-check",
+			"className": "bi bi-bookmark-check",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "bookmark-check-fill",
+			"title": "bookmark-check-fill",
+			"className": "bi bi-bookmark-check-fill",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "bookmark-dash",
+			"title": "bookmark-dash",
+			"className": "bi bi-bookmark-dash",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "bookmark-dash-fill",
+			"title": "bookmark-dash-fill",
+			"className": "bi bi-bookmark-dash-fill",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "bookmark-fill",
+			"title": "bookmark-fill",
+			"className": "bi bi-bookmark-fill",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "bookmark-heart",
+			"title": "bookmark-heart",
+			"className": "bi bi-bookmark-heart",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "bookmark-heart-fill",
+			"title": "bookmark-heart-fill",
+			"className": "bi bi-bookmark-heart-fill",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "bookmark-plus",
+			"title": "bookmark-plus",
+			"className": "bi bi-bookmark-plus",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "bookmark-plus-fill",
+			"title": "bookmark-plus-fill",
+			"className": "bi bi-bookmark-plus-fill",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "bookmark-star",
+			"title": "bookmark-star",
+			"className": "bi bi-bookmark-star",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "bookmark-star-fill",
+			"title": "bookmark-star-fill",
+			"className": "bi bi-bookmark-star-fill",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "bookmark-x",
+			"title": "bookmark-x",
+			"className": "bi bi-bookmark-x",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "bookmark-x-fill",
+			"title": "bookmark-x-fill",
+			"className": "bi bi-bookmark-x-fill",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "bookmarks",
+			"title": "bookmarks",
+			"className": "bi bi-bookmarks",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "bookmarks-fill",
+			"title": "bookmarks-fill",
+			"className": "bi bi-bookmarks-fill",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "bookshelf",
+			"title": "bookshelf",
+			"className": "bi bi-bookshelf",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "boombox",
+			"title": "boombox",
+			"className": "bi bi-boombox",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "boombox-fill",
+			"title": "boombox-fill",
+			"className": "bi bi-boombox-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "bootstrap",
+			"title": "bootstrap",
+			"className": "bi bi-bootstrap",
+			"type": "bi",
+			"categories": [
+				"bootstrap"
+			]
+		},
+		{
+			"name": "bootstrap-fill",
+			"title": "bootstrap-fill",
+			"className": "bi bi-bootstrap-fill",
+			"type": "bi",
+			"categories": [
+				"bootstrap"
+			]
+		},
+		{
+			"name": "bootstrap-reboot",
+			"title": "bootstrap-reboot",
+			"className": "bi bi-bootstrap-reboot",
+			"type": "bi",
+			"categories": [
+				"bootstrap"
+			]
+		},
+		{
+			"name": "border",
+			"title": "border",
+			"className": "bi bi-border",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "border-all",
+			"title": "border-all",
+			"className": "bi bi-border-all",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "border-bottom",
+			"title": "border-bottom",
+			"className": "bi bi-border-bottom",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "border-center",
+			"title": "border-center",
+			"className": "bi bi-border-center",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "border-inner",
+			"title": "border-inner",
+			"className": "bi bi-border-inner",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "border-left",
+			"title": "border-left",
+			"className": "bi bi-border-left",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "border-middle",
+			"title": "border-middle",
+			"className": "bi bi-border-middle",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "border-outer",
+			"title": "border-outer",
+			"className": "bi bi-border-outer",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "border-right",
+			"title": "border-right",
+			"className": "bi bi-border-right",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "border-style",
+			"title": "border-style",
+			"className": "bi bi-border-style",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "border-top",
+			"title": "border-top",
+			"className": "bi bi-border-top",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "border-width",
+			"title": "border-width",
+			"className": "bi bi-border-width",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "bounding-box",
+			"title": "bounding-box",
+			"className": "bi bi-bounding-box",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "bounding-box-circles",
+			"title": "bounding-box-circles",
+			"className": "bi bi-bounding-box-circles",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "box",
+			"title": "box",
+			"className": "bi bi-box",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "box-arrow-down-left",
+			"title": "box-arrow-down-left",
+			"className": "bi bi-box-arrow-down-left",
+			"type": "bi",
+			"categories": [
+				"box arrows"
+			]
+		},
+		{
+			"name": "box-arrow-down-right",
+			"title": "box-arrow-down-right",
+			"className": "bi bi-box-arrow-down-right",
+			"type": "bi",
+			"categories": [
+				"box arrows"
+			]
+		},
+		{
+			"name": "box-arrow-down",
+			"title": "box-arrow-down",
+			"className": "bi bi-box-arrow-down",
+			"type": "bi",
+			"categories": [
+				"box arrows"
+			]
+		},
+		{
+			"name": "box-arrow-in-down",
+			"title": "box-arrow-in-down",
+			"className": "bi bi-box-arrow-in-down",
+			"type": "bi",
+			"categories": [
+				"box arrows"
+			]
+		},
+		{
+			"name": "box-arrow-in-down-left",
+			"title": "box-arrow-in-down-left",
+			"className": "bi bi-box-arrow-in-down-left",
+			"type": "bi",
+			"categories": [
+				"box arrows"
+			]
+		},
+		{
+			"name": "box-arrow-in-down-right",
+			"title": "box-arrow-in-down-right",
+			"className": "bi bi-box-arrow-in-down-right",
+			"type": "bi",
+			"categories": [
+				"box arrows"
+			]
+		},
+		{
+			"name": "box-arrow-in-left",
+			"title": "box-arrow-in-left",
+			"className": "bi bi-box-arrow-in-left",
+			"type": "bi",
+			"categories": [
+				"box arrows"
+			]
+		},
+		{
+			"name": "box-arrow-in-right",
+			"title": "box-arrow-in-right",
+			"className": "bi bi-box-arrow-in-right",
+			"type": "bi",
+			"categories": [
+				"box arrows"
+			]
+		},
+		{
+			"name": "box-arrow-in-up",
+			"title": "box-arrow-in-up",
+			"className": "bi bi-box-arrow-in-up",
+			"type": "bi",
+			"categories": [
+				"box arrows"
+			]
+		},
+		{
+			"name": "box-arrow-in-up-left",
+			"title": "box-arrow-in-up-left",
+			"className": "bi bi-box-arrow-in-up-left",
+			"type": "bi",
+			"categories": [
+				"box arrows"
+			]
+		},
+		{
+			"name": "box-arrow-in-up-right",
+			"title": "box-arrow-in-up-right",
+			"className": "bi bi-box-arrow-in-up-right",
+			"type": "bi",
+			"categories": [
+				"box arrows"
+			]
+		},
+		{
+			"name": "box-arrow-left",
+			"title": "box-arrow-left",
+			"className": "bi bi-box-arrow-left",
+			"type": "bi",
+			"categories": [
+				"box arrows"
+			]
+		},
+		{
+			"name": "box-arrow-right",
+			"title": "box-arrow-right",
+			"className": "bi bi-box-arrow-right",
+			"type": "bi",
+			"categories": [
+				"box arrows"
+			]
+		},
+		{
+			"name": "box-arrow-up",
+			"title": "box-arrow-up",
+			"className": "bi bi-box-arrow-up",
+			"type": "bi",
+			"categories": [
+				"box arrows"
+			]
+		},
+		{
+			"name": "box-arrow-up-left",
+			"title": "box-arrow-up-left",
+			"className": "bi bi-box-arrow-up-left",
+			"type": "bi",
+			"categories": [
+				"box arrows"
+			]
+		},
+		{
+			"name": "box-arrow-up-right",
+			"title": "box-arrow-up-right",
+			"className": "bi bi-box-arrow-up-right",
+			"type": "bi",
+			"categories": [
+				"box arrows"
+			]
+		},
+		{
+			"name": "box-fill",
+			"title": "box-fill",
+			"className": "bi bi-box-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "box-seam",
+			"title": "box-seam",
+			"className": "bi bi-box-seam",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "box-seam-fill",
+			"title": "box-seam-fill",
+			"className": "bi bi-box-seam-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "box2",
+			"title": "box2",
+			"className": "bi bi-box2",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "box2-fill",
+			"title": "box2-fill",
+			"className": "bi bi-box2-fill",
+			"type": "bi",
+			"categories": [
+				"real world love"
+			]
+		},
+		{
+			"name": "box2-heart",
+			"title": "box2-heart",
+			"className": "bi bi-box2-heart",
+			"type": "bi",
+			"categories": [
+				"real world love"
+			]
+		},
+		{
+			"name": "box2-heart-fill",
+			"title": "box2-heart-fill",
+			"className": "bi bi-box2-heart-fill",
+			"type": "bi",
+			"categories": [
+				"real world love"
+			]
+		},
+		{
+			"name": "boxes",
+			"title": "boxes",
+			"className": "bi bi-boxes",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "braces",
+			"title": "braces",
+			"className": "bi bi-braces",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "braces-asterisk",
+			"title": "braces-asterisk",
+			"className": "bi bi-braces-asterisk",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "bricks",
+			"title": "bricks",
+			"className": "bi bi-bricks",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "briefcase",
+			"title": "briefcase",
+			"className": "bi bi-briefcase",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "briefcase-fill",
+			"title": "briefcase-fill",
+			"className": "bi bi-briefcase-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "brightness-alt-high",
+			"title": "brightness-alt-high",
+			"className": "bi bi-brightness-alt-high",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "brightness-alt-high-fill",
+			"title": "brightness-alt-high-fill",
+			"className": "bi bi-brightness-alt-high-fill",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "brightness-alt-low",
+			"title": "brightness-alt-low",
+			"className": "bi bi-brightness-alt-low",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "brightness-alt-low-fill",
+			"title": "brightness-alt-low-fill",
+			"className": "bi bi-brightness-alt-low-fill",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "brightness-high",
+			"title": "brightness-high",
+			"className": "bi bi-brightness-high",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "brightness-high-fill",
+			"title": "brightness-high-fill",
+			"className": "bi bi-brightness-high-fill",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "brightness-low",
+			"title": "brightness-low",
+			"className": "bi bi-brightness-low",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "brightness-low-fill",
+			"title": "brightness-low-fill",
+			"className": "bi bi-brightness-low-fill",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "brilliance",
+			"title": "brilliance",
+			"className": "bi bi-brilliance",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "broadcast",
+			"title": "broadcast",
+			"className": "bi bi-broadcast",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "broadcast-pin",
+			"title": "broadcast-pin",
+			"className": "bi bi-broadcast-pin",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "browser-chrome",
+			"title": "browser-chrome",
+			"className": "bi bi-browser-chrome",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "browser-edge",
+			"title": "browser-edge",
+			"className": "bi bi-browser-edge",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "browser-firefox",
+			"title": "browser-firefox",
+			"className": "bi bi-browser-firefox",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "browser-safari",
+			"title": "browser-safari",
+			"className": "bi bi-browser-safari",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "brush",
+			"title": "brush",
+			"className": "bi bi-brush",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "brush-fill",
+			"title": "brush-fill",
+			"className": "bi bi-brush-fill",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "bucket",
+			"title": "bucket",
+			"className": "bi bi-bucket",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "bucket-fill",
+			"title": "bucket-fill",
+			"className": "bi bi-bucket-fill",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "bug",
+			"title": "bug",
+			"className": "bi bi-bug",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "bug-fill",
+			"title": "bug-fill",
+			"className": "bi bi-bug-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "building",
+			"title": "building",
+			"className": "bi bi-building",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "building-add",
+			"title": "building-add",
+			"className": "bi bi-building-add",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "building-check",
+			"title": "building-check",
+			"className": "bi bi-building-check",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "building-dash",
+			"title": "building-dash",
+			"className": "bi bi-building-dash",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "building-down",
+			"title": "building-down",
+			"className": "bi bi-building-down",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "building-exclamation",
+			"title": "building-exclamation",
+			"className": "bi bi-building-exclamation",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "building-fill",
+			"title": "building-fill",
+			"className": "bi bi-building-fill",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "building-fill-add",
+			"title": "building-fill-add",
+			"className": "bi bi-building-fill-add",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "building-fill-check",
+			"title": "building-fill-check",
+			"className": "bi bi-building-fill-check",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "building-fill-dash",
+			"title": "building-fill-dash",
+			"className": "bi bi-building-fill-dash",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "building-fill-down",
+			"title": "building-fill-down",
+			"className": "bi bi-building-fill-down",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "building-fill-exclamation",
+			"title": "building-fill-exclamation",
+			"className": "bi bi-building-fill-exclamation",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "building-fill-gear",
+			"title": "building-fill-gear",
+			"className": "bi bi-building-fill-gear",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "building-fill-lock",
+			"title": "building-fill-lock",
+			"className": "bi bi-building-fill-lock",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "building-fill-slash",
+			"title": "building-fill-slash",
+			"className": "bi bi-building-fill-slash",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "building-fill-up",
+			"title": "building-fill-up",
+			"className": "bi bi-building-fill-up",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "building-fill-x",
+			"title": "building-fill-x",
+			"className": "bi bi-building-fill-x",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "building-gear",
+			"title": "building-gear",
+			"className": "bi bi-building-gear",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "building-lock",
+			"title": "building-lock",
+			"className": "bi bi-building-lock",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "building-slash",
+			"title": "building-slash",
+			"className": "bi bi-building-slash",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "building-up",
+			"title": "building-up",
+			"className": "bi bi-building-up",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "building-x",
+			"title": "building-x",
+			"className": "bi bi-building-x",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "buildings",
+			"title": "buildings",
+			"className": "bi bi-buildings",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "buildings-fill",
+			"title": "buildings-fill",
+			"className": "bi bi-buildings-fill",
+			"type": "bi",
+			"categories": [
+				"buildings"
+			]
+		},
+		{
+			"name": "bullseye",
+			"title": "bullseye",
+			"className": "bi bi-bullseye",
+			"type": "bi",
+			"categories": [
+				"geo"
+			]
+		},
+		{
+			"name": "bus-front",
+			"title": "bus-front",
+			"className": "bi bi-bus-front",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "bus-front-fill",
+			"title": "bus-front-fill",
+			"className": "bi bi-bus-front-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "c-circle",
+			"title": "c-circle",
+			"className": "bi bi-c-circle",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "c-circle-fill",
+			"title": "c-circle-fill",
+			"className": "bi bi-c-circle-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "c-square",
+			"title": "c-square",
+			"className": "bi bi-c-square",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "c-square-fill",
+			"title": "c-square-fill",
+			"className": "bi bi-c-square-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "cake",
+			"title": "cake",
+			"className": "bi bi-cake",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "cake-fill",
+			"title": "cake-fill",
+			"className": "bi bi-cake-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "cake2",
+			"title": "cake2",
+			"className": "bi bi-cake2",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "cake2-fill",
+			"title": "cake2-fill",
+			"className": "bi bi-cake2-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "calculator",
+			"title": "calculator",
+			"className": "bi bi-calculator",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "calculator-fill",
+			"title": "calculator-fill",
+			"className": "bi bi-calculator-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "calendar",
+			"title": "calendar",
+			"className": "bi bi-calendar",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar-check",
+			"title": "calendar-check",
+			"className": "bi bi-calendar-check",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar-check-fill",
+			"title": "calendar-check-fill",
+			"className": "bi bi-calendar-check-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar-date",
+			"title": "calendar-date",
+			"className": "bi bi-calendar-date",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar-date-fill",
+			"title": "calendar-date-fill",
+			"className": "bi bi-calendar-date-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar-day",
+			"title": "calendar-day",
+			"className": "bi bi-calendar-day",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar-day-fill",
+			"title": "calendar-day-fill",
+			"className": "bi bi-calendar-day-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar-event",
+			"title": "calendar-event",
+			"className": "bi bi-calendar-event",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar-event-fill",
+			"title": "calendar-event-fill",
+			"className": "bi bi-calendar-event-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar-fill",
+			"title": "calendar-fill",
+			"className": "bi bi-calendar-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar-heart",
+			"title": "calendar-heart",
+			"className": "bi bi-calendar-heart",
+			"type": "bi",
+			"categories": [
+				"date and time love"
+			]
+		},
+		{
+			"name": "calendar-heart-fill",
+			"title": "calendar-heart-fill",
+			"className": "bi bi-calendar-heart-fill",
+			"type": "bi",
+			"categories": [
+				"date and time love"
+			]
+		},
+		{
+			"name": "calendar-minus",
+			"title": "calendar-minus",
+			"className": "bi bi-calendar-minus",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar-minus-fill",
+			"title": "calendar-minus-fill",
+			"className": "bi bi-calendar-minus-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar-month",
+			"title": "calendar-month",
+			"className": "bi bi-calendar-month",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar-month-fill",
+			"title": "calendar-month-fill",
+			"className": "bi bi-calendar-month-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar-plus",
+			"title": "calendar-plus",
+			"className": "bi bi-calendar-plus",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar-plus-fill",
+			"title": "calendar-plus-fill",
+			"className": "bi bi-calendar-plus-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar-range",
+			"title": "calendar-range",
+			"className": "bi bi-calendar-range",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar-range-fill",
+			"title": "calendar-range-fill",
+			"className": "bi bi-calendar-range-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar-week",
+			"title": "calendar-week",
+			"className": "bi bi-calendar-week",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar-week-fill",
+			"title": "calendar-week-fill",
+			"className": "bi bi-calendar-week-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar-x",
+			"title": "calendar-x",
+			"className": "bi bi-calendar-x",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar-x-fill",
+			"title": "calendar-x-fill",
+			"className": "bi bi-calendar-x-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar2",
+			"title": "calendar2",
+			"className": "bi bi-calendar2",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar2-check",
+			"title": "calendar2-check",
+			"className": "bi bi-calendar2-check",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar2-check-fill",
+			"title": "calendar2-check-fill",
+			"className": "bi bi-calendar2-check-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar2-date",
+			"title": "calendar2-date",
+			"className": "bi bi-calendar2-date",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar2-date-fill",
+			"title": "calendar2-date-fill",
+			"className": "bi bi-calendar2-date-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar2-day",
+			"title": "calendar2-day",
+			"className": "bi bi-calendar2-day",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar2-day-fill",
+			"title": "calendar2-day-fill",
+			"className": "bi bi-calendar2-day-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar2-event",
+			"title": "calendar2-event",
+			"className": "bi bi-calendar2-event",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar2-event-fill",
+			"title": "calendar2-event-fill",
+			"className": "bi bi-calendar2-event-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar2-fill",
+			"title": "calendar2-fill",
+			"className": "bi bi-calendar2-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar2-heart",
+			"title": "calendar2-heart",
+			"className": "bi bi-calendar2-heart",
+			"type": "bi",
+			"categories": [
+				"date and time love"
+			]
+		},
+		{
+			"name": "calendar2-heart-fill",
+			"title": "calendar2-heart-fill",
+			"className": "bi bi-calendar2-heart-fill",
+			"type": "bi",
+			"categories": [
+				"date and time love"
+			]
+		},
+		{
+			"name": "calendar2-minus",
+			"title": "calendar2-minus",
+			"className": "bi bi-calendar2-minus",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar2-minus-fill",
+			"title": "calendar2-minus-fill",
+			"className": "bi bi-calendar2-minus-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar2-month",
+			"title": "calendar2-month",
+			"className": "bi bi-calendar2-month",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar2-month-fill",
+			"title": "calendar2-month-fill",
+			"className": "bi bi-calendar2-month-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar2-plus",
+			"title": "calendar2-plus",
+			"className": "bi bi-calendar2-plus",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar2-plus-fill",
+			"title": "calendar2-plus-fill",
+			"className": "bi bi-calendar2-plus-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar2-range",
+			"title": "calendar2-range",
+			"className": "bi bi-calendar2-range",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar2-range-fill",
+			"title": "calendar2-range-fill",
+			"className": "bi bi-calendar2-range-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar2-week",
+			"title": "calendar2-week",
+			"className": "bi bi-calendar2-week",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar2-week-fill",
+			"title": "calendar2-week-fill",
+			"className": "bi bi-calendar2-week-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar2-x",
+			"title": "calendar2-x",
+			"className": "bi bi-calendar2-x",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar2-x-fill",
+			"title": "calendar2-x-fill",
+			"className": "bi bi-calendar2-x-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar3",
+			"title": "calendar3",
+			"className": "bi bi-calendar3",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar3-event",
+			"title": "calendar3-event",
+			"className": "bi bi-calendar3-event",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar3-event-fill",
+			"title": "calendar3-event-fill",
+			"className": "bi bi-calendar3-event-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar3-fill",
+			"title": "calendar3-fill",
+			"className": "bi bi-calendar3-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar3-range",
+			"title": "calendar3-range",
+			"className": "bi bi-calendar3-range",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar3-range-fill",
+			"title": "calendar3-range-fill",
+			"className": "bi bi-calendar3-range-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar3-week",
+			"title": "calendar3-week",
+			"className": "bi bi-calendar3-week",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar3-week-fill",
+			"title": "calendar3-week-fill",
+			"className": "bi bi-calendar3-week-fill",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar4",
+			"title": "calendar4",
+			"className": "bi bi-calendar4",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar4-event",
+			"title": "calendar4-event",
+			"className": "bi bi-calendar4-event",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar4-range",
+			"title": "calendar4-range",
+			"className": "bi bi-calendar4-range",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "calendar4-week",
+			"title": "calendar4-week",
+			"className": "bi bi-calendar4-week",
+			"type": "bi",
+			"categories": [
+				"date and time"
+			]
+		},
+		{
+			"name": "camera",
+			"title": "camera",
+			"className": "bi bi-camera",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "camera2",
+			"title": "camera2",
+			"className": "bi bi-camera2",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "camera-fill",
+			"title": "camera-fill",
+			"className": "bi bi-camera-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "camera-reels",
+			"title": "camera-reels",
+			"className": "bi bi-camera-reels",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "camera-reels-fill",
+			"title": "camera-reels-fill",
+			"className": "bi bi-camera-reels-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "camera-video",
+			"title": "camera-video",
+			"className": "bi bi-camera-video",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "camera-video-fill",
+			"title": "camera-video-fill",
+			"className": "bi bi-camera-video-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "camera-video-off",
+			"title": "camera-video-off",
+			"className": "bi bi-camera-video-off",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "camera-video-off-fill",
+			"title": "camera-video-off-fill",
+			"className": "bi bi-camera-video-off-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "capslock",
+			"title": "capslock",
+			"className": "bi bi-capslock",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "capslock-fill",
+			"title": "capslock-fill",
+			"className": "bi bi-capslock-fill",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "capsule",
+			"title": "capsule",
+			"className": "bi bi-capsule",
+			"type": "bi",
+			"categories": [
+				"medical"
+			]
+		},
+		{
+			"name": "capsule-pill",
+			"title": "capsule-pill",
+			"className": "bi bi-capsule-pill",
+			"type": "bi",
+			"categories": [
+				"medical"
+			]
+		},
+		{
+			"name": "car-front",
+			"title": "car-front",
+			"className": "bi bi-car-front",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "car-front-fill",
+			"title": "car-front-fill",
+			"className": "bi bi-car-front-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "card-checklist",
+			"title": "card-checklist",
+			"className": "bi bi-card-checklist",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "card-heading",
+			"title": "card-heading",
+			"className": "bi bi-card-heading",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "card-image",
+			"title": "card-image",
+			"className": "bi bi-card-image",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "card-list",
+			"title": "card-list",
+			"className": "bi bi-card-list",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "card-text",
+			"title": "card-text",
+			"className": "bi bi-card-text",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "caret-down",
+			"title": "caret-down",
+			"className": "bi bi-caret-down",
+			"type": "bi",
+			"categories": [
+				"carets"
+			]
+		},
+		{
+			"name": "caret-down-fill",
+			"title": "caret-down-fill",
+			"className": "bi bi-caret-down-fill",
+			"type": "bi",
+			"categories": [
+				"carets"
+			]
+		},
+		{
+			"name": "caret-down-square",
+			"title": "caret-down-square",
+			"className": "bi bi-caret-down-square",
+			"type": "bi",
+			"categories": [
+				"carets"
+			]
+		},
+		{
+			"name": "caret-down-square-fill",
+			"title": "caret-down-square-fill",
+			"className": "bi bi-caret-down-square-fill",
+			"type": "bi",
+			"categories": [
+				"carets"
+			]
+		},
+		{
+			"name": "caret-left",
+			"title": "caret-left",
+			"className": "bi bi-caret-left",
+			"type": "bi",
+			"categories": [
+				"carets"
+			]
+		},
+		{
+			"name": "caret-left-fill",
+			"title": "caret-left-fill",
+			"className": "bi bi-caret-left-fill",
+			"type": "bi",
+			"categories": [
+				"carets"
+			]
+		},
+		{
+			"name": "caret-left-square",
+			"title": "caret-left-square",
+			"className": "bi bi-caret-left-square",
+			"type": "bi",
+			"categories": [
+				"carets"
+			]
+		},
+		{
+			"name": "caret-left-square-fill",
+			"title": "caret-left-square-fill",
+			"className": "bi bi-caret-left-square-fill",
+			"type": "bi",
+			"categories": [
+				"carets"
+			]
+		},
+		{
+			"name": "caret-right",
+			"title": "caret-right",
+			"className": "bi bi-caret-right",
+			"type": "bi",
+			"categories": [
+				"carets"
+			]
+		},
+		{
+			"name": "caret-right-fill",
+			"title": "caret-right-fill",
+			"className": "bi bi-caret-right-fill",
+			"type": "bi",
+			"categories": [
+				"carets"
+			]
+		},
+		{
+			"name": "caret-right-square",
+			"title": "caret-right-square",
+			"className": "bi bi-caret-right-square",
+			"type": "bi",
+			"categories": [
+				"carets"
+			]
+		},
+		{
+			"name": "caret-right-square-fill",
+			"title": "caret-right-square-fill",
+			"className": "bi bi-caret-right-square-fill",
+			"type": "bi",
+			"categories": [
+				"carets"
+			]
+		},
+		{
+			"name": "caret-up",
+			"title": "caret-up",
+			"className": "bi bi-caret-up",
+			"type": "bi",
+			"categories": [
+				"carets"
+			]
+		},
+		{
+			"name": "caret-up-fill",
+			"title": "caret-up-fill",
+			"className": "bi bi-caret-up-fill",
+			"type": "bi",
+			"categories": [
+				"carets"
+			]
+		},
+		{
+			"name": "caret-up-square",
+			"title": "caret-up-square",
+			"className": "bi bi-caret-up-square",
+			"type": "bi",
+			"categories": [
+				"carets"
+			]
+		},
+		{
+			"name": "caret-up-square-fill",
+			"title": "caret-up-square-fill",
+			"className": "bi bi-caret-up-square-fill",
+			"type": "bi",
+			"categories": [
+				"carets"
+			]
+		},
+		{
+			"name": "cart",
+			"title": "cart",
+			"className": "bi bi-cart",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "cart-check",
+			"title": "cart-check",
+			"className": "bi bi-cart-check",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "cart-check-fill",
+			"title": "cart-check-fill",
+			"className": "bi bi-cart-check-fill",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "cart-dash",
+			"title": "cart-dash",
+			"className": "bi bi-cart-dash",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "cart-dash-fill",
+			"title": "cart-dash-fill",
+			"className": "bi bi-cart-dash-fill",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "cart-fill",
+			"title": "cart-fill",
+			"className": "bi bi-cart-fill",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "cart-plus",
+			"title": "cart-plus",
+			"className": "bi bi-cart-plus",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "cart-plus-fill",
+			"title": "cart-plus-fill",
+			"className": "bi bi-cart-plus-fill",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "cart-x",
+			"title": "cart-x",
+			"className": "bi bi-cart-x",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "cart-x-fill",
+			"title": "cart-x-fill",
+			"className": "bi bi-cart-x-fill",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "cart2",
+			"title": "cart2",
+			"className": "bi bi-cart2",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "cart3",
+			"title": "cart3",
+			"className": "bi bi-cart3",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "cart4",
+			"title": "cart4",
+			"className": "bi bi-cart4",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "cash",
+			"title": "cash",
+			"className": "bi bi-cash",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "cash-coin",
+			"title": "cash-coin",
+			"className": "bi bi-cash-coin",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "cash-stack",
+			"title": "cash-stack",
+			"className": "bi bi-cash-stack",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "cassette",
+			"title": "cassette",
+			"className": "bi bi-cassette",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "cassette-fill",
+			"title": "cassette-fill",
+			"className": "bi bi-cassette-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "cast",
+			"title": "cast",
+			"className": "bi bi-cast",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "cc-circle",
+			"title": "cc-circle",
+			"className": "bi bi-cc-circle",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "cc-circle-fill",
+			"title": "cc-circle-fill",
+			"className": "bi bi-cc-circle-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "cc-square",
+			"title": "cc-square",
+			"className": "bi bi-cc-square",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "cc-square-fill",
+			"title": "cc-square-fill",
+			"className": "bi bi-cc-square-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "chat",
+			"title": "chat",
+			"className": "bi bi-chat",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-dots",
+			"title": "chat-dots",
+			"className": "bi bi-chat-dots",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-dots-fill",
+			"title": "chat-dots-fill",
+			"className": "bi bi-chat-dots-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-fill",
+			"title": "chat-fill",
+			"className": "bi bi-chat-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-heart",
+			"title": "chat-heart",
+			"className": "bi bi-chat-heart",
+			"type": "bi",
+			"categories": [
+				"communications love"
+			]
+		},
+		{
+			"name": "chat-heart-fill",
+			"title": "chat-heart-fill",
+			"className": "bi bi-chat-heart-fill",
+			"type": "bi",
+			"categories": [
+				"communications love"
+			]
+		},
+		{
+			"name": "chat-left",
+			"title": "chat-left",
+			"className": "bi bi-chat-left",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-left-dots",
+			"title": "chat-left-dots",
+			"className": "bi bi-chat-left-dots",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-left-dots-fill",
+			"title": "chat-left-dots-fill",
+			"className": "bi bi-chat-left-dots-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-left-fill",
+			"title": "chat-left-fill",
+			"className": "bi bi-chat-left-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-left-heart",
+			"title": "chat-left-heart",
+			"className": "bi bi-chat-left-heart",
+			"type": "bi",
+			"categories": [
+				"communications love"
+			]
+		},
+		{
+			"name": "chat-left-heart-fill",
+			"title": "chat-left-heart-fill",
+			"className": "bi bi-chat-left-heart-fill",
+			"type": "bi",
+			"categories": [
+				"communications love"
+			]
+		},
+		{
+			"name": "chat-left-quote",
+			"title": "chat-left-quote",
+			"className": "bi bi-chat-left-quote",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-left-quote-fill",
+			"title": "chat-left-quote-fill",
+			"className": "bi bi-chat-left-quote-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-left-text",
+			"title": "chat-left-text",
+			"className": "bi bi-chat-left-text",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-left-text-fill",
+			"title": "chat-left-text-fill",
+			"className": "bi bi-chat-left-text-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-quote",
+			"title": "chat-quote",
+			"className": "bi bi-chat-quote",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-quote-fill",
+			"title": "chat-quote-fill",
+			"className": "bi bi-chat-quote-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-right",
+			"title": "chat-right",
+			"className": "bi bi-chat-right",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-right-dots",
+			"title": "chat-right-dots",
+			"className": "bi bi-chat-right-dots",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-right-dots-fill",
+			"title": "chat-right-dots-fill",
+			"className": "bi bi-chat-right-dots-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-right-fill",
+			"title": "chat-right-fill",
+			"className": "bi bi-chat-right-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-right-heart",
+			"title": "chat-right-heart",
+			"className": "bi bi-chat-right-heart",
+			"type": "bi",
+			"categories": [
+				"communications love"
+			]
+		},
+		{
+			"name": "chat-right-heart-fill",
+			"title": "chat-right-heart-fill",
+			"className": "bi bi-chat-right-heart-fill",
+			"type": "bi",
+			"categories": [
+				"communications love"
+			]
+		},
+		{
+			"name": "chat-right-quote",
+			"title": "chat-right-quote",
+			"className": "bi bi-chat-right-quote",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-right-quote-fill",
+			"title": "chat-right-quote-fill",
+			"className": "bi bi-chat-right-quote-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-right-text",
+			"title": "chat-right-text",
+			"className": "bi bi-chat-right-text",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-right-text-fill",
+			"title": "chat-right-text-fill",
+			"className": "bi bi-chat-right-text-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-square",
+			"title": "chat-square",
+			"className": "bi bi-chat-square",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-square-dots",
+			"title": "chat-square-dots",
+			"className": "bi bi-chat-square-dots",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-square-dots-fill",
+			"title": "chat-square-dots-fill",
+			"className": "bi bi-chat-square-dots-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-square-fill",
+			"title": "chat-square-fill",
+			"className": "bi bi-chat-square-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-square-heart",
+			"title": "chat-square-heart",
+			"className": "bi bi-chat-square-heart",
+			"type": "bi",
+			"categories": [
+				"communications love"
+			]
+		},
+		{
+			"name": "chat-square-heart-fill",
+			"title": "chat-square-heart-fill",
+			"className": "bi bi-chat-square-heart-fill",
+			"type": "bi",
+			"categories": [
+				"communications love"
+			]
+		},
+		{
+			"name": "chat-square-quote",
+			"title": "chat-square-quote",
+			"className": "bi bi-chat-square-quote",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-square-quote-fill",
+			"title": "chat-square-quote-fill",
+			"className": "bi bi-chat-square-quote-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-square-text",
+			"title": "chat-square-text",
+			"className": "bi bi-chat-square-text",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-square-text-fill",
+			"title": "chat-square-text-fill",
+			"className": "bi bi-chat-square-text-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-text",
+			"title": "chat-text",
+			"className": "bi bi-chat-text",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "chat-text-fill",
+			"title": "chat-text-fill",
+			"className": "bi bi-chat-text-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "check",
+			"title": "check",
+			"className": "bi bi-check",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "check-all",
+			"title": "check-all",
+			"className": "bi bi-check-all",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "check-circle",
+			"title": "check-circle",
+			"className": "bi bi-check-circle",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "check-circle-fill",
+			"title": "check-circle-fill",
+			"className": "bi bi-check-circle-fill",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "check-lg",
+			"title": "check-lg",
+			"className": "bi bi-check-lg",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "check-square",
+			"title": "check-square",
+			"className": "bi bi-check-square",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "check-square-fill",
+			"title": "check-square-fill",
+			"className": "bi bi-check-square-fill",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "check2",
+			"title": "check2",
+			"className": "bi bi-check2",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "check2-all",
+			"title": "check2-all",
+			"className": "bi bi-check2-all",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "check2-circle",
+			"title": "check2-circle",
+			"className": "bi bi-check2-circle",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "check2-square",
+			"title": "check2-square",
+			"className": "bi bi-check2-square",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "chevron-bar-contract",
+			"title": "chevron-bar-contract",
+			"className": "bi bi-chevron-bar-contract",
+			"type": "bi",
+			"categories": [
+				"chevrons"
+			]
+		},
+		{
+			"name": "chevron-bar-down",
+			"title": "chevron-bar-down",
+			"className": "bi bi-chevron-bar-down",
+			"type": "bi",
+			"categories": [
+				"chevrons"
+			]
+		},
+		{
+			"name": "chevron-bar-expand",
+			"title": "chevron-bar-expand",
+			"className": "bi bi-chevron-bar-expand",
+			"type": "bi",
+			"categories": [
+				"chevrons"
+			]
+		},
+		{
+			"name": "chevron-bar-left",
+			"title": "chevron-bar-left",
+			"className": "bi bi-chevron-bar-left",
+			"type": "bi",
+			"categories": [
+				"chevrons"
+			]
+		},
+		{
+			"name": "chevron-bar-right",
+			"title": "chevron-bar-right",
+			"className": "bi bi-chevron-bar-right",
+			"type": "bi",
+			"categories": [
+				"chevrons"
+			]
+		},
+		{
+			"name": "chevron-bar-up",
+			"title": "chevron-bar-up",
+			"className": "bi bi-chevron-bar-up",
+			"type": "bi",
+			"categories": [
+				"chevrons"
+			]
+		},
+		{
+			"name": "chevron-compact-down",
+			"title": "chevron-compact-down",
+			"className": "bi bi-chevron-compact-down",
+			"type": "bi",
+			"categories": [
+				"chevrons"
+			]
+		},
+		{
+			"name": "chevron-compact-left",
+			"title": "chevron-compact-left",
+			"className": "bi bi-chevron-compact-left",
+			"type": "bi",
+			"categories": [
+				"chevrons"
+			]
+		},
+		{
+			"name": "chevron-compact-right",
+			"title": "chevron-compact-right",
+			"className": "bi bi-chevron-compact-right",
+			"type": "bi",
+			"categories": [
+				"chevrons"
+			]
+		},
+		{
+			"name": "chevron-compact-up",
+			"title": "chevron-compact-up",
+			"className": "bi bi-chevron-compact-up",
+			"type": "bi",
+			"categories": [
+				"chevrons"
+			]
+		},
+		{
+			"name": "chevron-contract",
+			"title": "chevron-contract",
+			"className": "bi bi-chevron-contract",
+			"type": "bi",
+			"categories": [
+				"chevrons"
+			]
+		},
+		{
+			"name": "chevron-double-down",
+			"title": "chevron-double-down",
+			"className": "bi bi-chevron-double-down",
+			"type": "bi",
+			"categories": [
+				"chevrons"
+			]
+		},
+		{
+			"name": "chevron-double-left",
+			"title": "chevron-double-left",
+			"className": "bi bi-chevron-double-left",
+			"type": "bi",
+			"categories": [
+				"chevrons"
+			]
+		},
+		{
+			"name": "chevron-double-right",
+			"title": "chevron-double-right",
+			"className": "bi bi-chevron-double-right",
+			"type": "bi",
+			"categories": [
+				"chevrons"
+			]
+		},
+		{
+			"name": "chevron-double-up",
+			"title": "chevron-double-up",
+			"className": "bi bi-chevron-double-up",
+			"type": "bi",
+			"categories": [
+				"chevrons"
+			]
+		},
+		{
+			"name": "chevron-down",
+			"title": "chevron-down",
+			"className": "bi bi-chevron-down",
+			"type": "bi",
+			"categories": [
+				"chevrons"
+			]
+		},
+		{
+			"name": "chevron-expand",
+			"title": "chevron-expand",
+			"className": "bi bi-chevron-expand",
+			"type": "bi",
+			"categories": [
+				"chevrons"
+			]
+		},
+		{
+			"name": "chevron-left",
+			"title": "chevron-left",
+			"className": "bi bi-chevron-left",
+			"type": "bi",
+			"categories": [
+				"chevrons"
+			]
+		},
+		{
+			"name": "chevron-right",
+			"title": "chevron-right",
+			"className": "bi bi-chevron-right",
+			"type": "bi",
+			"categories": [
+				"chevrons"
+			]
+		},
+		{
+			"name": "chevron-up",
+			"title": "chevron-up",
+			"className": "bi bi-chevron-up",
+			"type": "bi",
+			"categories": [
+				"chevrons"
+			]
+		},
+		{
+			"name": "circle",
+			"title": "circle",
+			"className": "bi bi-circle",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "circle-fill",
+			"title": "circle-fill",
+			"className": "bi bi-circle-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "circle-half",
+			"title": "circle-half",
+			"className": "bi bi-circle-half",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "slash-circle",
+			"title": "slash-circle",
+			"className": "bi bi-slash-circle",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "circle-square",
+			"title": "circle-square",
+			"className": "bi bi-circle-square",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "clipboard",
+			"title": "clipboard",
+			"className": "bi bi-clipboard",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard-check",
+			"title": "clipboard-check",
+			"className": "bi bi-clipboard-check",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard-check-fill",
+			"title": "clipboard-check-fill",
+			"className": "bi bi-clipboard-check-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard-data",
+			"title": "clipboard-data",
+			"className": "bi bi-clipboard-data",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard-data-fill",
+			"title": "clipboard-data-fill",
+			"className": "bi bi-clipboard-data-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard-fill",
+			"title": "clipboard-fill",
+			"className": "bi bi-clipboard-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard-heart",
+			"title": "clipboard-heart",
+			"className": "bi bi-clipboard-heart",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard-heart-fill",
+			"title": "clipboard-heart-fill",
+			"className": "bi bi-clipboard-heart-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard-minus",
+			"title": "clipboard-minus",
+			"className": "bi bi-clipboard-minus",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard-minus-fill",
+			"title": "clipboard-minus-fill",
+			"className": "bi bi-clipboard-minus-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard-plus",
+			"title": "clipboard-plus",
+			"className": "bi bi-clipboard-plus",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard-plus-fill",
+			"title": "clipboard-plus-fill",
+			"className": "bi bi-clipboard-plus-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard-pulse",
+			"title": "clipboard-pulse",
+			"className": "bi bi-clipboard-pulse",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard-x",
+			"title": "clipboard-x",
+			"className": "bi bi-clipboard-x",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard-x-fill",
+			"title": "clipboard-x-fill",
+			"className": "bi bi-clipboard-x-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard2",
+			"title": "clipboard2",
+			"className": "bi bi-clipboard2",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard2-check",
+			"title": "clipboard2-check",
+			"className": "bi bi-clipboard2-check",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard2-check-fill",
+			"title": "clipboard2-check-fill",
+			"className": "bi bi-clipboard2-check-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard2-data",
+			"title": "clipboard2-data",
+			"className": "bi bi-clipboard2-data",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard2-data-fill",
+			"title": "clipboard2-data-fill",
+			"className": "bi bi-clipboard2-data-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard2-fill",
+			"title": "clipboard2-fill",
+			"className": "bi bi-clipboard2-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard2-heart",
+			"title": "clipboard2-heart",
+			"className": "bi bi-clipboard2-heart",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard2-heart-fill",
+			"title": "clipboard2-heart-fill",
+			"className": "bi bi-clipboard2-heart-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard2-minus",
+			"title": "clipboard2-minus",
+			"className": "bi bi-clipboard2-minus",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard2-minus-fill",
+			"title": "clipboard2-minus-fill",
+			"className": "bi bi-clipboard2-minus-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard2-plus",
+			"title": "clipboard2-plus",
+			"className": "bi bi-clipboard2-plus",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard2-plus-fill",
+			"title": "clipboard2-plus-fill",
+			"className": "bi bi-clipboard2-plus-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard2-pulse",
+			"title": "clipboard2-pulse",
+			"className": "bi bi-clipboard2-pulse",
+			"type": "bi",
+			"categories": [
+				"real world medical"
+			]
+		},
+		{
+			"name": "clipboard2-pulse-fill",
+			"title": "clipboard2-pulse-fill",
+			"className": "bi bi-clipboard2-pulse-fill",
+			"type": "bi",
+			"categories": [
+				"real world medical"
+			]
+		},
+		{
+			"name": "clipboard2-x",
+			"title": "clipboard2-x",
+			"className": "bi bi-clipboard2-x",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clipboard2-x-fill",
+			"title": "clipboard2-x-fill",
+			"className": "bi bi-clipboard2-x-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "clock",
+			"title": "clock",
+			"className": "bi bi-clock",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "clock-fill",
+			"title": "clock-fill",
+			"className": "bi bi-clock-fill",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "clock-history",
+			"title": "clock-history",
+			"className": "bi bi-clock-history",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "cloud",
+			"title": "cloud",
+			"className": "bi bi-cloud",
+			"type": "bi",
+			"categories": [
+				"clouds"
+			]
+		},
+		{
+			"name": "cloud-arrow-down",
+			"title": "cloud-arrow-down",
+			"className": "bi bi-cloud-arrow-down",
+			"type": "bi",
+			"categories": [
+				"clouds"
+			]
+		},
+		{
+			"name": "cloud-arrow-down-fill",
+			"title": "cloud-arrow-down-fill",
+			"className": "bi bi-cloud-arrow-down-fill",
+			"type": "bi",
+			"categories": [
+				"clouds"
+			]
+		},
+		{
+			"name": "cloud-arrow-up",
+			"title": "cloud-arrow-up",
+			"className": "bi bi-cloud-arrow-up",
+			"type": "bi",
+			"categories": [
+				"clouds"
+			]
+		},
+		{
+			"name": "cloud-arrow-up-fill",
+			"title": "cloud-arrow-up-fill",
+			"className": "bi bi-cloud-arrow-up-fill",
+			"type": "bi",
+			"categories": [
+				"clouds"
+			]
+		},
+		{
+			"name": "cloud-check",
+			"title": "cloud-check",
+			"className": "bi bi-cloud-check",
+			"type": "bi",
+			"categories": [
+				"clouds"
+			]
+		},
+		{
+			"name": "cloud-check-fill",
+			"title": "cloud-check-fill",
+			"className": "bi bi-cloud-check-fill",
+			"type": "bi",
+			"categories": [
+				"clouds"
+			]
+		},
+		{
+			"name": "cloud-download",
+			"title": "cloud-download",
+			"className": "bi bi-cloud-download",
+			"type": "bi",
+			"categories": [
+				"clouds"
+			]
+		},
+		{
+			"name": "cloud-download-fill",
+			"title": "cloud-download-fill",
+			"className": "bi bi-cloud-download-fill",
+			"type": "bi",
+			"categories": [
+				"clouds"
+			]
+		},
+		{
+			"name": "cloud-drizzle",
+			"title": "cloud-drizzle",
+			"className": "bi bi-cloud-drizzle",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-drizzle-fill",
+			"title": "cloud-drizzle-fill",
+			"className": "bi bi-cloud-drizzle-fill",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-fill",
+			"title": "cloud-fill",
+			"className": "bi bi-cloud-fill",
+			"type": "bi",
+			"categories": [
+				"clouds"
+			]
+		},
+		{
+			"name": "cloud-fog",
+			"title": "cloud-fog",
+			"className": "bi bi-cloud-fog",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-fog-fill",
+			"title": "cloud-fog-fill",
+			"className": "bi bi-cloud-fog-fill",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-fog2",
+			"title": "cloud-fog2",
+			"className": "bi bi-cloud-fog2",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-fog2-fill",
+			"title": "cloud-fog2-fill",
+			"className": "bi bi-cloud-fog2-fill",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-hail",
+			"title": "cloud-hail",
+			"className": "bi bi-cloud-hail",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-hail-fill",
+			"title": "cloud-hail-fill",
+			"className": "bi bi-cloud-hail-fill",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-haze",
+			"title": "cloud-haze",
+			"className": "bi bi-cloud-haze",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-haze-fill",
+			"title": "cloud-haze-fill",
+			"className": "bi bi-cloud-haze-fill",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-haze2",
+			"title": "cloud-haze2",
+			"className": "bi bi-cloud-haze2",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-haze2-fill",
+			"title": "cloud-haze2-fill",
+			"className": "bi bi-cloud-haze2-fill",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-lightning",
+			"title": "cloud-lightning",
+			"className": "bi bi-cloud-lightning",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-lightning-fill",
+			"title": "cloud-lightning-fill",
+			"className": "bi bi-cloud-lightning-fill",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-lightning-rain",
+			"title": "cloud-lightning-rain",
+			"className": "bi bi-cloud-lightning-rain",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-lightning-rain-fill",
+			"title": "cloud-lightning-rain-fill",
+			"className": "bi bi-cloud-lightning-rain-fill",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-minus",
+			"title": "cloud-minus",
+			"className": "bi bi-cloud-minus",
+			"type": "bi",
+			"categories": [
+				"clouds"
+			]
+		},
+		{
+			"name": "cloud-minus-fill",
+			"title": "cloud-minus-fill",
+			"className": "bi bi-cloud-minus-fill",
+			"type": "bi",
+			"categories": [
+				"clouds"
+			]
+		},
+		{
+			"name": "cloud-moon",
+			"title": "cloud-moon",
+			"className": "bi bi-cloud-moon",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-moon-fill",
+			"title": "cloud-moon-fill",
+			"className": "bi bi-cloud-moon-fill",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-plus",
+			"title": "cloud-plus",
+			"className": "bi bi-cloud-plus",
+			"type": "bi",
+			"categories": [
+				"clouds"
+			]
+		},
+		{
+			"name": "cloud-plus-fill",
+			"title": "cloud-plus-fill",
+			"className": "bi bi-cloud-plus-fill",
+			"type": "bi",
+			"categories": [
+				"clouds"
+			]
+		},
+		{
+			"name": "cloud-rain",
+			"title": "cloud-rain",
+			"className": "bi bi-cloud-rain",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-rain-fill",
+			"title": "cloud-rain-fill",
+			"className": "bi bi-cloud-rain-fill",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-rain-heavy",
+			"title": "cloud-rain-heavy",
+			"className": "bi bi-cloud-rain-heavy",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-rain-heavy-fill",
+			"title": "cloud-rain-heavy-fill",
+			"className": "bi bi-cloud-rain-heavy-fill",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-slash",
+			"title": "cloud-slash",
+			"className": "bi bi-cloud-slash",
+			"type": "bi",
+			"categories": [
+				"clouds"
+			]
+		},
+		{
+			"name": "cloud-slash-fill",
+			"title": "cloud-slash-fill",
+			"className": "bi bi-cloud-slash-fill",
+			"type": "bi",
+			"categories": [
+				"clouds"
+			]
+		},
+		{
+			"name": "cloud-sleet",
+			"title": "cloud-sleet",
+			"className": "bi bi-cloud-sleet",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-sleet-fill",
+			"title": "cloud-sleet-fill",
+			"className": "bi bi-cloud-sleet-fill",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-snow",
+			"title": "cloud-snow",
+			"className": "bi bi-cloud-snow",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-snow-fill",
+			"title": "cloud-snow-fill",
+			"className": "bi bi-cloud-snow-fill",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-sun",
+			"title": "cloud-sun",
+			"className": "bi bi-cloud-sun",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-sun-fill",
+			"title": "cloud-sun-fill",
+			"className": "bi bi-cloud-sun-fill",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloud-upload",
+			"title": "cloud-upload",
+			"className": "bi bi-cloud-upload",
+			"type": "bi",
+			"categories": [
+				"clouds"
+			]
+		},
+		{
+			"name": "cloud-upload-fill",
+			"title": "cloud-upload-fill",
+			"className": "bi bi-cloud-upload-fill",
+			"type": "bi",
+			"categories": [
+				"clouds"
+			]
+		},
+		{
+			"name": "clouds",
+			"title": "clouds",
+			"className": "bi bi-clouds",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "clouds-fill",
+			"title": "clouds-fill",
+			"className": "bi bi-clouds-fill",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloudy",
+			"title": "cloudy",
+			"className": "bi bi-cloudy",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "cloudy-fill",
+			"title": "cloudy-fill",
+			"className": "bi bi-cloudy-fill",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "code",
+			"title": "code",
+			"className": "bi bi-code",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "code-slash",
+			"title": "code-slash",
+			"className": "bi bi-code-slash",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "code-square",
+			"title": "code-square",
+			"className": "bi bi-code-square",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "coin",
+			"title": "coin",
+			"className": "bi bi-coin",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "collection",
+			"title": "collection",
+			"className": "bi bi-collection",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "collection-fill",
+			"title": "collection-fill",
+			"className": "bi bi-collection-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "collection-play",
+			"title": "collection-play",
+			"className": "bi bi-collection-play",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "collection-play-fill",
+			"title": "collection-play-fill",
+			"className": "bi bi-collection-play-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "columns",
+			"title": "columns",
+			"className": "bi bi-columns",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "columns-gap",
+			"title": "columns-gap",
+			"className": "bi bi-columns-gap",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "command",
+			"title": "command",
+			"className": "bi bi-command",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "compass",
+			"title": "compass",
+			"className": "bi bi-compass",
+			"type": "bi",
+			"categories": [
+				"geo"
+			]
+		},
+		{
+			"name": "compass-fill",
+			"title": "compass-fill",
+			"className": "bi bi-compass-fill",
+			"type": "bi",
+			"categories": [
+				"geo"
+			]
+		},
+		{
+			"name": "cone",
+			"title": "cone",
+			"className": "bi bi-cone",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "cone-striped",
+			"title": "cone-striped",
+			"className": "bi bi-cone-striped",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "controller",
+			"title": "controller",
+			"className": "bi bi-controller",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "cookie",
+			"title": "cookie",
+			"className": "bi bi-cookie",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "copy",
+			"title": "copy",
+			"className": "bi bi-copy",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "cpu",
+			"title": "cpu",
+			"className": "bi bi-cpu",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "cpu-fill",
+			"title": "cpu-fill",
+			"className": "bi bi-cpu-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "credit-card",
+			"title": "credit-card",
+			"className": "bi bi-credit-card",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "credit-card-2-back",
+			"title": "credit-card-2-back",
+			"className": "bi bi-credit-card-2-back",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "credit-card-2-back-fill",
+			"title": "credit-card-2-back-fill",
+			"className": "bi bi-credit-card-2-back-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "credit-card-2-front",
+			"title": "credit-card-2-front",
+			"className": "bi bi-credit-card-2-front",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "credit-card-2-front-fill",
+			"title": "credit-card-2-front-fill",
+			"className": "bi bi-credit-card-2-front-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "credit-card-fill",
+			"title": "credit-card-fill",
+			"className": "bi bi-credit-card-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "crop",
+			"title": "crop",
+			"className": "bi bi-crop",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "crosshair",
+			"title": "crosshair",
+			"className": "bi bi-crosshair",
+			"type": "bi",
+			"categories": [
+				"geo"
+			]
+		},
+		{
+			"name": "crosshair2",
+			"title": "crosshair2",
+			"className": "bi bi-crosshair2",
+			"type": "bi",
+			"categories": [
+				"geo"
+			]
+		},
+		{
+			"name": "cup",
+			"title": "cup",
+			"className": "bi bi-cup",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "cup-fill",
+			"title": "cup-fill",
+			"className": "bi bi-cup-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "cup-hot",
+			"title": "cup-hot",
+			"className": "bi bi-cup-hot",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "cup-hot-fill",
+			"title": "cup-hot-fill",
+			"className": "bi bi-cup-hot-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "cup-straw",
+			"title": "cup-straw",
+			"className": "bi bi-cup-straw",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "currency-bitcoin",
+			"title": "currency-bitcoin",
+			"className": "bi bi-currency-bitcoin",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "currency-dollar",
+			"title": "currency-dollar",
+			"className": "bi bi-currency-dollar",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "currency-euro",
+			"title": "currency-euro",
+			"className": "bi bi-currency-euro",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "currency-exchange",
+			"title": "currency-exchange",
+			"className": "bi bi-currency-exchange",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "currency-pound",
+			"title": "currency-pound",
+			"className": "bi bi-currency-pound",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "currency-rupee",
+			"title": "currency-rupee",
+			"className": "bi bi-currency-rupee",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "currency-yen",
+			"title": "currency-yen",
+			"className": "bi bi-currency-yen",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "cursor",
+			"title": "cursor",
+			"className": "bi bi-cursor",
+			"type": "bi",
+			"categories": [
+				"geo"
+			]
+		},
+		{
+			"name": "cursor-fill",
+			"title": "cursor-fill",
+			"className": "bi bi-cursor-fill",
+			"type": "bi",
+			"categories": [
+				"geo"
+			]
+		},
+		{
+			"name": "cursor-text",
+			"title": "cursor-text",
+			"className": "bi bi-cursor-text",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "dash",
+			"title": "dash",
+			"className": "bi bi-dash",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "dash-circle",
+			"title": "dash-circle",
+			"className": "bi bi-dash-circle",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "dash-circle-dotted",
+			"title": "dash-circle-dotted",
+			"className": "bi bi-dash-circle-dotted",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "dash-circle-fill",
+			"title": "dash-circle-fill",
+			"className": "bi bi-dash-circle-fill",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "dash-lg",
+			"title": "dash-lg",
+			"className": "bi bi-dash-lg",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "dash-square",
+			"title": "dash-square",
+			"className": "bi bi-dash-square",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "dash-square-dotted",
+			"title": "dash-square-dotted",
+			"className": "bi bi-dash-square-dotted",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "dash-square-fill",
+			"title": "dash-square-fill",
+			"className": "bi bi-dash-square-fill",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "database",
+			"title": "database",
+			"className": "bi bi-database",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "database-add",
+			"title": "database-add",
+			"className": "bi bi-database-add",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "database-check",
+			"title": "database-check",
+			"className": "bi bi-database-check",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "database-dash",
+			"title": "database-dash",
+			"className": "bi bi-database-dash",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "database-down",
+			"title": "database-down",
+			"className": "bi bi-database-down",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "database-exclamation",
+			"title": "database-exclamation",
+			"className": "bi bi-database-exclamation",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "database-fill",
+			"title": "database-fill",
+			"className": "bi bi-database-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "database-fill-add",
+			"title": "database-fill-add",
+			"className": "bi bi-database-fill-add",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "database-fill-check",
+			"title": "database-fill-check",
+			"className": "bi bi-database-fill-check",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "database-fill-dash",
+			"title": "database-fill-dash",
+			"className": "bi bi-database-fill-dash",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "database-fill-down",
+			"title": "database-fill-down",
+			"className": "bi bi-database-fill-down",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "database-fill-exclamation",
+			"title": "database-fill-exclamation",
+			"className": "bi bi-database-fill-exclamation",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "database-fill-gear",
+			"title": "database-fill-gear",
+			"className": "bi bi-database-fill-gear",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "database-fill-lock",
+			"title": "database-fill-lock",
+			"className": "bi bi-database-fill-lock",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "database-fill-slash",
+			"title": "database-fill-slash",
+			"className": "bi bi-database-fill-slash",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "database-fill-up",
+			"title": "database-fill-up",
+			"className": "bi bi-database-fill-up",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "database-fill-x",
+			"title": "database-fill-x",
+			"className": "bi bi-database-fill-x",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "database-gear",
+			"title": "database-gear",
+			"className": "bi bi-database-gear",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "database-lock",
+			"title": "database-lock",
+			"className": "bi bi-database-lock",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "database-slash",
+			"title": "database-slash",
+			"className": "bi bi-database-slash",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "database-up",
+			"title": "database-up",
+			"className": "bi bi-database-up",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "database-x",
+			"title": "database-x",
+			"className": "bi bi-database-x",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "device-hdd",
+			"title": "device-hdd",
+			"className": "bi bi-device-hdd",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "device-hdd-fill",
+			"title": "device-hdd-fill",
+			"className": "bi bi-device-hdd-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "device-ssd",
+			"title": "device-ssd",
+			"className": "bi bi-device-ssd",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "device-ssd-fill",
+			"title": "device-ssd-fill",
+			"className": "bi bi-device-ssd-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "diagram-2",
+			"title": "diagram-2",
+			"className": "bi bi-diagram-2",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "diagram-2-fill",
+			"title": "diagram-2-fill",
+			"className": "bi bi-diagram-2-fill",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "diagram-3",
+			"title": "diagram-3",
+			"className": "bi bi-diagram-3",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "diagram-3-fill",
+			"title": "diagram-3-fill",
+			"className": "bi bi-diagram-3-fill",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "diamond",
+			"title": "diamond",
+			"className": "bi bi-diamond",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "diamond-fill",
+			"title": "diamond-fill",
+			"className": "bi bi-diamond-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "diamond-half",
+			"title": "diamond-half",
+			"className": "bi bi-diamond-half",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "dice-1",
+			"title": "dice-1",
+			"className": "bi bi-dice-1",
+			"type": "bi",
+			"categories": [
+				"entertainment"
+			]
+		},
+		{
+			"name": "dice-1-fill",
+			"title": "dice-1-fill",
+			"className": "bi bi-dice-1-fill",
+			"type": "bi",
+			"categories": [
+				"entertainment"
+			]
+		},
+		{
+			"name": "dice-2",
+			"title": "dice-2",
+			"className": "bi bi-dice-2",
+			"type": "bi",
+			"categories": [
+				"entertainment"
+			]
+		},
+		{
+			"name": "dice-2-fill",
+			"title": "dice-2-fill",
+			"className": "bi bi-dice-2-fill",
+			"type": "bi",
+			"categories": [
+				"entertainment"
+			]
+		},
+		{
+			"name": "dice-3",
+			"title": "dice-3",
+			"className": "bi bi-dice-3",
+			"type": "bi",
+			"categories": [
+				"entertainment"
+			]
+		},
+		{
+			"name": "dice-3-fill",
+			"title": "dice-3-fill",
+			"className": "bi bi-dice-3-fill",
+			"type": "bi",
+			"categories": [
+				"entertainment"
+			]
+		},
+		{
+			"name": "dice-4",
+			"title": "dice-4",
+			"className": "bi bi-dice-4",
+			"type": "bi",
+			"categories": [
+				"entertainment"
+			]
+		},
+		{
+			"name": "dice-4-fill",
+			"title": "dice-4-fill",
+			"className": "bi bi-dice-4-fill",
+			"type": "bi",
+			"categories": [
+				"entertainment"
+			]
+		},
+		{
+			"name": "dice-5",
+			"title": "dice-5",
+			"className": "bi bi-dice-5",
+			"type": "bi",
+			"categories": [
+				"entertainment"
+			]
+		},
+		{
+			"name": "dice-5-fill",
+			"title": "dice-5-fill",
+			"className": "bi bi-dice-5-fill",
+			"type": "bi",
+			"categories": [
+				"entertainment"
+			]
+		},
+		{
+			"name": "dice-6",
+			"title": "dice-6",
+			"className": "bi bi-dice-6",
+			"type": "bi",
+			"categories": [
+				"entertainment"
+			]
+		},
+		{
+			"name": "dice-6-fill",
+			"title": "dice-6-fill",
+			"className": "bi bi-dice-6-fill",
+			"type": "bi",
+			"categories": [
+				"entertainment"
+			]
+		},
+		{
+			"name": "disc",
+			"title": "disc",
+			"className": "bi bi-disc",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "disc-fill",
+			"title": "disc-fill",
+			"className": "bi bi-disc-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "discord",
+			"title": "discord",
+			"className": "bi bi-discord",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "display",
+			"title": "display",
+			"className": "bi bi-display",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "display-fill",
+			"title": "display-fill",
+			"className": "bi bi-display-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "displayport",
+			"title": "displayport",
+			"className": "bi bi-displayport",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "displayport-fill",
+			"title": "displayport-fill",
+			"className": "bi bi-displayport-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "distribute-horizontal",
+			"title": "distribute-horizontal",
+			"className": "bi bi-distribute-horizontal",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "distribute-vertical",
+			"title": "distribute-vertical",
+			"className": "bi bi-distribute-vertical",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "door-closed",
+			"title": "door-closed",
+			"className": "bi bi-door-closed",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "door-closed-fill",
+			"title": "door-closed-fill",
+			"className": "bi bi-door-closed-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "door-open",
+			"title": "door-open",
+			"className": "bi bi-door-open",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "door-open-fill",
+			"title": "door-open-fill",
+			"className": "bi bi-door-open-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "dot",
+			"title": "dot",
+			"className": "bi bi-dot",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "download",
+			"title": "download",
+			"className": "bi bi-download",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "dpad",
+			"title": "dpad",
+			"className": "bi bi-dpad",
+			"type": "bi",
+			"categories": [
+				"entertainment"
+			]
+		},
+		{
+			"name": "dpad-fill",
+			"title": "dpad-fill",
+			"className": "bi bi-dpad-fill",
+			"type": "bi",
+			"categories": [
+				"entertainment"
+			]
+		},
+		{
+			"name": "dribbble",
+			"title": "dribbble",
+			"className": "bi bi-dribbble",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "dropbox",
+			"title": "dropbox",
+			"className": "bi bi-dropbox",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "droplet",
+			"title": "droplet",
+			"className": "bi bi-droplet",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "droplet-fill",
+			"title": "droplet-fill",
+			"className": "bi bi-droplet-fill",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "droplet-half",
+			"title": "droplet-half",
+			"className": "bi bi-droplet-half",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "duffle",
+			"title": "duffle",
+			"className": "bi bi-duffle",
+			"type": "bi",
+			"categories": [
+				"travel"
+			]
+		},
+		{
+			"name": "duffle-fill",
+			"title": "duffle-fill",
+			"className": "bi bi-duffle-fill",
+			"type": "bi",
+			"categories": [
+				"travel"
+			]
+		},
+		{
+			"name": "ear",
+			"title": "ear",
+			"className": "bi bi-ear",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "ear-fill",
+			"title": "ear-fill",
+			"className": "bi bi-ear-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "earbuds",
+			"title": "earbuds",
+			"className": "bi bi-earbuds",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "easel",
+			"title": "easel",
+			"className": "bi bi-easel",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "easel-fill",
+			"title": "easel-fill",
+			"className": "bi bi-easel-fill",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "easel2",
+			"title": "easel2",
+			"className": "bi bi-easel2",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "easel2-fill",
+			"title": "easel2-fill",
+			"className": "bi bi-easel2-fill",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "easel3",
+			"title": "easel3",
+			"className": "bi bi-easel3",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "easel3-fill",
+			"title": "easel3-fill",
+			"className": "bi bi-easel3-fill",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "egg",
+			"title": "egg",
+			"className": "bi bi-egg",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "egg-fill",
+			"title": "egg-fill",
+			"className": "bi bi-egg-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "egg-fried",
+			"title": "egg-fried",
+			"className": "bi bi-egg-fried",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "eject",
+			"title": "eject",
+			"className": "bi bi-eject",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "eject-fill",
+			"title": "eject-fill",
+			"className": "bi bi-eject-fill",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "emoji-angry",
+			"title": "emoji-angry",
+			"className": "bi bi-emoji-angry",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-angry-fill",
+			"title": "emoji-angry-fill",
+			"className": "bi bi-emoji-angry-fill",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-astonished",
+			"title": "emoji-astonished",
+			"className": "bi bi-emoji-astonished",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-astonished-fill",
+			"title": "emoji-astonished-fill",
+			"className": "bi bi-emoji-astonished-fill",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-dizzy",
+			"title": "emoji-dizzy",
+			"className": "bi bi-emoji-dizzy",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-dizzy-fill",
+			"title": "emoji-dizzy-fill",
+			"className": "bi bi-emoji-dizzy-fill",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-expressionless",
+			"title": "emoji-expressionless",
+			"className": "bi bi-emoji-expressionless",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-expressionless-fill",
+			"title": "emoji-expressionless-fill",
+			"className": "bi bi-emoji-expressionless-fill",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-frown",
+			"title": "emoji-frown",
+			"className": "bi bi-emoji-frown",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-frown-fill",
+			"title": "emoji-frown-fill",
+			"className": "bi bi-emoji-frown-fill",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-grimace",
+			"title": "emoji-grimace",
+			"className": "bi bi-emoji-grimace",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-grimace-fill",
+			"title": "emoji-grimace-fill",
+			"className": "bi bi-emoji-grimace-fill",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-grin",
+			"title": "emoji-grin",
+			"className": "bi bi-emoji-grin",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-grin-fill",
+			"title": "emoji-grin-fill",
+			"className": "bi bi-emoji-grin-fill",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-heart-eyes",
+			"title": "emoji-heart-eyes",
+			"className": "bi bi-emoji-heart-eyes",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-heart-eyes-fill",
+			"title": "emoji-heart-eyes-fill",
+			"className": "bi bi-emoji-heart-eyes-fill",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-kiss",
+			"title": "emoji-kiss",
+			"className": "bi bi-emoji-kiss",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-kiss-fill",
+			"title": "emoji-kiss-fill",
+			"className": "bi bi-emoji-kiss-fill",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-laughing",
+			"title": "emoji-laughing",
+			"className": "bi bi-emoji-laughing",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-laughing-fill",
+			"title": "emoji-laughing-fill",
+			"className": "bi bi-emoji-laughing-fill",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-neutral",
+			"title": "emoji-neutral",
+			"className": "bi bi-emoji-neutral",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-neutral-fill",
+			"title": "emoji-neutral-fill",
+			"className": "bi bi-emoji-neutral-fill",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-smile",
+			"title": "emoji-smile",
+			"className": "bi bi-emoji-smile",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-smile-fill",
+			"title": "emoji-smile-fill",
+			"className": "bi bi-emoji-smile-fill",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-smile-upside-down",
+			"title": "emoji-smile-upside-down",
+			"className": "bi bi-emoji-smile-upside-down",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-smile-upside-down-fill",
+			"title": "emoji-smile-upside-down-fill",
+			"className": "bi bi-emoji-smile-upside-down-fill",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-sunglasses",
+			"title": "emoji-sunglasses",
+			"className": "bi bi-emoji-sunglasses",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-sunglasses-fill",
+			"title": "emoji-sunglasses-fill",
+			"className": "bi bi-emoji-sunglasses-fill",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-surprise",
+			"title": "emoji-surprise",
+			"className": "bi bi-emoji-surprise",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-surprise-fill",
+			"title": "emoji-surprise-fill",
+			"className": "bi bi-emoji-surprise-fill",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-tear",
+			"title": "emoji-tear",
+			"className": "bi bi-emoji-tear",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-tear-fill",
+			"title": "emoji-tear-fill",
+			"className": "bi bi-emoji-tear-fill",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-wink",
+			"title": "emoji-wink",
+			"className": "bi bi-emoji-wink",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "emoji-wink-fill",
+			"title": "emoji-wink-fill",
+			"className": "bi bi-emoji-wink-fill",
+			"type": "bi",
+			"categories": [
+				"emoji"
+			]
+		},
+		{
+			"name": "envelope",
+			"title": "envelope",
+			"className": "bi bi-envelope",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-arrow-down",
+			"title": "envelope-arrow-down",
+			"className": "bi bi-envelope-arrow-down",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-arrow-down-fill",
+			"title": "envelope-arrow-down-fill",
+			"className": "bi bi-envelope-arrow-down-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-arrow-up",
+			"title": "envelope-arrow-up",
+			"className": "bi bi-envelope-arrow-up",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-arrow-up-fill",
+			"title": "envelope-arrow-up-fill",
+			"className": "bi bi-envelope-arrow-up-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-at",
+			"title": "envelope-at",
+			"className": "bi bi-envelope-at",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-at-fill",
+			"title": "envelope-at-fill",
+			"className": "bi bi-envelope-at-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-check",
+			"title": "envelope-check",
+			"className": "bi bi-envelope-check",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-check-fill",
+			"title": "envelope-check-fill",
+			"className": "bi bi-envelope-check-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-dash",
+			"title": "envelope-dash",
+			"className": "bi bi-envelope-dash",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-dash-fill",
+			"title": "envelope-dash-fill",
+			"className": "bi bi-envelope-dash-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-exclamation",
+			"title": "envelope-exclamation",
+			"className": "bi bi-envelope-exclamation",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-exclamation-fill",
+			"title": "envelope-exclamation-fill",
+			"className": "bi bi-envelope-exclamation-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-fill",
+			"title": "envelope-fill",
+			"className": "bi bi-envelope-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-heart",
+			"title": "envelope-heart",
+			"className": "bi bi-envelope-heart",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-heart-fill",
+			"title": "envelope-heart-fill",
+			"className": "bi bi-envelope-heart-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-open",
+			"title": "envelope-open",
+			"className": "bi bi-envelope-open",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-open-fill",
+			"title": "envelope-open-fill",
+			"className": "bi bi-envelope-open-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-open-heart",
+			"title": "envelope-open-heart",
+			"className": "bi bi-envelope-open-heart",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-open-heart-fill",
+			"title": "envelope-open-heart-fill",
+			"className": "bi bi-envelope-open-heart-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-paper",
+			"title": "envelope-paper",
+			"className": "bi bi-envelope-paper",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-paper-fill",
+			"title": "envelope-paper-fill",
+			"className": "bi bi-envelope-paper-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-paper-heart",
+			"title": "envelope-paper-heart",
+			"className": "bi bi-envelope-paper-heart",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-paper-heart-fill",
+			"title": "envelope-paper-heart-fill",
+			"className": "bi bi-envelope-paper-heart-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-plus",
+			"title": "envelope-plus",
+			"className": "bi bi-envelope-plus",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-plus-fill",
+			"title": "envelope-plus-fill",
+			"className": "bi bi-envelope-plus-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-slash",
+			"title": "envelope-slash",
+			"className": "bi bi-envelope-slash",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-slash-fill",
+			"title": "envelope-slash-fill",
+			"className": "bi bi-envelope-slash-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-x",
+			"title": "envelope-x",
+			"className": "bi bi-envelope-x",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "envelope-x-fill",
+			"title": "envelope-x-fill",
+			"className": "bi bi-envelope-x-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "eraser",
+			"title": "eraser",
+			"className": "bi bi-eraser",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "eraser-fill",
+			"title": "eraser-fill",
+			"className": "bi bi-eraser-fill",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "escape",
+			"title": "escape",
+			"className": "bi bi-escape",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "ethernet",
+			"title": "ethernet",
+			"className": "bi bi-ethernet",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "ev-front",
+			"title": "ev-front",
+			"className": "bi bi-ev-front",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "ev-front-fill",
+			"title": "ev-front-fill",
+			"className": "bi bi-ev-front-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "ev-station",
+			"title": "ev-station",
+			"className": "bi bi-ev-station",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "ev-station-fill",
+			"title": "ev-station-fill",
+			"className": "bi bi-ev-station-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "exclamation",
+			"title": "exclamation",
+			"className": "bi bi-exclamation",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "exclamation-circle",
+			"title": "exclamation-circle",
+			"className": "bi bi-exclamation-circle",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "exclamation-circle-fill",
+			"title": "exclamation-circle-fill",
+			"className": "bi bi-exclamation-circle-fill",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "exclamation-diamond",
+			"title": "exclamation-diamond",
+			"className": "bi bi-exclamation-diamond",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "exclamation-diamond-fill",
+			"title": "exclamation-diamond-fill",
+			"className": "bi bi-exclamation-diamond-fill",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "exclamation-lg",
+			"title": "exclamation-lg",
+			"className": "bi bi-exclamation-lg",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "exclamation-octagon",
+			"title": "exclamation-octagon",
+			"className": "bi bi-exclamation-octagon",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "exclamation-octagon-fill",
+			"title": "exclamation-octagon-fill",
+			"className": "bi bi-exclamation-octagon-fill",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "exclamation-square",
+			"title": "exclamation-square",
+			"className": "bi bi-exclamation-square",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "exclamation-square-fill",
+			"title": "exclamation-square-fill",
+			"className": "bi bi-exclamation-square-fill",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "exclamation-triangle",
+			"title": "exclamation-triangle",
+			"className": "bi bi-exclamation-triangle",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "exclamation-triangle-fill",
+			"title": "exclamation-triangle-fill",
+			"className": "bi bi-exclamation-triangle-fill",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "exclude",
+			"title": "exclude",
+			"className": "bi bi-exclude",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "explicit",
+			"title": "explicit",
+			"className": "bi bi-explicit",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "explicit-fill",
+			"title": "explicit-fill",
+			"className": "bi bi-explicit-fill",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "exposure",
+			"title": "exposure",
+			"className": "bi bi-exposure",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "eye",
+			"title": "eye",
+			"className": "bi bi-eye",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "eye-fill",
+			"title": "eye-fill",
+			"className": "bi bi-eye-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "eye-slash",
+			"title": "eye-slash",
+			"className": "bi bi-eye-slash",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "eye-slash-fill",
+			"title": "eye-slash-fill",
+			"className": "bi bi-eye-slash-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "eyedropper",
+			"title": "eyedropper",
+			"className": "bi bi-eyedropper",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "eyeglasses",
+			"title": "eyeglasses",
+			"className": "bi bi-eyeglasses",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "facebook",
+			"title": "facebook",
+			"className": "bi bi-facebook",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "fan",
+			"title": "fan",
+			"className": "bi bi-fan",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "fast-forward",
+			"title": "fast-forward",
+			"className": "bi bi-fast-forward",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "fast-forward-btn",
+			"title": "fast-forward-btn",
+			"className": "bi bi-fast-forward-btn",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "fast-forward-btn-fill",
+			"title": "fast-forward-btn-fill",
+			"className": "bi bi-fast-forward-btn-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "fast-forward-circle",
+			"title": "fast-forward-circle",
+			"className": "bi bi-fast-forward-circle",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "fast-forward-circle-fill",
+			"title": "fast-forward-circle-fill",
+			"className": "bi bi-fast-forward-circle-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "fast-forward-fill",
+			"title": "fast-forward-fill",
+			"className": "bi bi-fast-forward-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "feather",
+			"title": "feather",
+			"className": "bi bi-feather",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "feather2",
+			"title": "feather2",
+			"className": "bi bi-feather2",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "file",
+			"title": "file",
+			"className": "bi bi-file",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-arrow-down",
+			"title": "file-arrow-down",
+			"className": "bi bi-file-arrow-down",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-arrow-down-fill",
+			"title": "file-arrow-down-fill",
+			"className": "bi bi-file-arrow-down-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-arrow-up",
+			"title": "file-arrow-up",
+			"className": "bi bi-file-arrow-up",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-arrow-up-fill",
+			"title": "file-arrow-up-fill",
+			"className": "bi bi-file-arrow-up-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-bar-graph",
+			"title": "file-bar-graph",
+			"className": "bi bi-file-bar-graph",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-bar-graph-fill",
+			"title": "file-bar-graph-fill",
+			"className": "bi bi-file-bar-graph-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-binary",
+			"title": "file-binary",
+			"className": "bi bi-file-binary",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-binary-fill",
+			"title": "file-binary-fill",
+			"className": "bi bi-file-binary-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-break",
+			"title": "file-break",
+			"className": "bi bi-file-break",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-break-fill",
+			"title": "file-break-fill",
+			"className": "bi bi-file-break-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-check",
+			"title": "file-check",
+			"className": "bi bi-file-check",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-check-fill",
+			"title": "file-check-fill",
+			"className": "bi bi-file-check-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-code",
+			"title": "file-code",
+			"className": "bi bi-file-code",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-code-fill",
+			"title": "file-code-fill",
+			"className": "bi bi-file-code-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-diff",
+			"title": "file-diff",
+			"className": "bi bi-file-diff",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-diff-fill",
+			"title": "file-diff-fill",
+			"className": "bi bi-file-diff-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark",
+			"title": "file-earmark",
+			"className": "bi bi-file-earmark",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-arrow-down",
+			"title": "file-earmark-arrow-down",
+			"className": "bi bi-file-earmark-arrow-down",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-arrow-down-fill",
+			"title": "file-earmark-arrow-down-fill",
+			"className": "bi bi-file-earmark-arrow-down-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-arrow-up",
+			"title": "file-earmark-arrow-up",
+			"className": "bi bi-file-earmark-arrow-up",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-arrow-up-fill",
+			"title": "file-earmark-arrow-up-fill",
+			"className": "bi bi-file-earmark-arrow-up-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-bar-graph",
+			"title": "file-earmark-bar-graph",
+			"className": "bi bi-file-earmark-bar-graph",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-bar-graph-fill",
+			"title": "file-earmark-bar-graph-fill",
+			"className": "bi bi-file-earmark-bar-graph-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-binary",
+			"title": "file-earmark-binary",
+			"className": "bi bi-file-earmark-binary",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-binary-fill",
+			"title": "file-earmark-binary-fill",
+			"className": "bi bi-file-earmark-binary-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-break",
+			"title": "file-earmark-break",
+			"className": "bi bi-file-earmark-break",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-break-fill",
+			"title": "file-earmark-break-fill",
+			"className": "bi bi-file-earmark-break-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-check",
+			"title": "file-earmark-check",
+			"className": "bi bi-file-earmark-check",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-check-fill",
+			"title": "file-earmark-check-fill",
+			"className": "bi bi-file-earmark-check-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-code",
+			"title": "file-earmark-code",
+			"className": "bi bi-file-earmark-code",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-code-fill",
+			"title": "file-earmark-code-fill",
+			"className": "bi bi-file-earmark-code-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-diff",
+			"title": "file-earmark-diff",
+			"className": "bi bi-file-earmark-diff",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-diff-fill",
+			"title": "file-earmark-diff-fill",
+			"className": "bi bi-file-earmark-diff-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-easel",
+			"title": "file-earmark-easel",
+			"className": "bi bi-file-earmark-easel",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-easel-fill",
+			"title": "file-earmark-easel-fill",
+			"className": "bi bi-file-earmark-easel-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-excel",
+			"title": "file-earmark-excel",
+			"className": "bi bi-file-earmark-excel",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-excel-fill",
+			"title": "file-earmark-excel-fill",
+			"className": "bi bi-file-earmark-excel-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-fill",
+			"title": "file-earmark-fill",
+			"className": "bi bi-file-earmark-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-font",
+			"title": "file-earmark-font",
+			"className": "bi bi-file-earmark-font",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-font-fill",
+			"title": "file-earmark-font-fill",
+			"className": "bi bi-file-earmark-font-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-image",
+			"title": "file-earmark-image",
+			"className": "bi bi-file-earmark-image",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-image-fill",
+			"title": "file-earmark-image-fill",
+			"className": "bi bi-file-earmark-image-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-lock",
+			"title": "file-earmark-lock",
+			"className": "bi bi-file-earmark-lock",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-lock-fill",
+			"title": "file-earmark-lock-fill",
+			"className": "bi bi-file-earmark-lock-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-lock2",
+			"title": "file-earmark-lock2",
+			"className": "bi bi-file-earmark-lock2",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-lock2-fill",
+			"title": "file-earmark-lock2-fill",
+			"className": "bi bi-file-earmark-lock2-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-medical",
+			"title": "file-earmark-medical",
+			"className": "bi bi-file-earmark-medical",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-medical-fill",
+			"title": "file-earmark-medical-fill",
+			"className": "bi bi-file-earmark-medical-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-minus",
+			"title": "file-earmark-minus",
+			"className": "bi bi-file-earmark-minus",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-minus-fill",
+			"title": "file-earmark-minus-fill",
+			"className": "bi bi-file-earmark-minus-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-music",
+			"title": "file-earmark-music",
+			"className": "bi bi-file-earmark-music",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-music-fill",
+			"title": "file-earmark-music-fill",
+			"className": "bi bi-file-earmark-music-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-pdf",
+			"title": "file-earmark-pdf",
+			"className": "bi bi-file-earmark-pdf",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-pdf-fill",
+			"title": "file-earmark-pdf-fill",
+			"className": "bi bi-file-earmark-pdf-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-person",
+			"title": "file-earmark-person",
+			"className": "bi bi-file-earmark-person",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-person-fill",
+			"title": "file-earmark-person-fill",
+			"className": "bi bi-file-earmark-person-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-play",
+			"title": "file-earmark-play",
+			"className": "bi bi-file-earmark-play",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-play-fill",
+			"title": "file-earmark-play-fill",
+			"className": "bi bi-file-earmark-play-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-plus",
+			"title": "file-earmark-plus",
+			"className": "bi bi-file-earmark-plus",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-plus-fill",
+			"title": "file-earmark-plus-fill",
+			"className": "bi bi-file-earmark-plus-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-post",
+			"title": "file-earmark-post",
+			"className": "bi bi-file-earmark-post",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-post-fill",
+			"title": "file-earmark-post-fill",
+			"className": "bi bi-file-earmark-post-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-ppt",
+			"title": "file-earmark-ppt",
+			"className": "bi bi-file-earmark-ppt",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-ppt-fill",
+			"title": "file-earmark-ppt-fill",
+			"className": "bi bi-file-earmark-ppt-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-richtext",
+			"title": "file-earmark-richtext",
+			"className": "bi bi-file-earmark-richtext",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-richtext-fill",
+			"title": "file-earmark-richtext-fill",
+			"className": "bi bi-file-earmark-richtext-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-ruled",
+			"title": "file-earmark-ruled",
+			"className": "bi bi-file-earmark-ruled",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-ruled-fill",
+			"title": "file-earmark-ruled-fill",
+			"className": "bi bi-file-earmark-ruled-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-slides",
+			"title": "file-earmark-slides",
+			"className": "bi bi-file-earmark-slides",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-slides-fill",
+			"title": "file-earmark-slides-fill",
+			"className": "bi bi-file-earmark-slides-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-spreadsheet",
+			"title": "file-earmark-spreadsheet",
+			"className": "bi bi-file-earmark-spreadsheet",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-spreadsheet-fill",
+			"title": "file-earmark-spreadsheet-fill",
+			"className": "bi bi-file-earmark-spreadsheet-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-text",
+			"title": "file-earmark-text",
+			"className": "bi bi-file-earmark-text",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-text-fill",
+			"title": "file-earmark-text-fill",
+			"className": "bi bi-file-earmark-text-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-word",
+			"title": "file-earmark-word",
+			"className": "bi bi-file-earmark-word",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-word-fill",
+			"title": "file-earmark-word-fill",
+			"className": "bi bi-file-earmark-word-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-x",
+			"title": "file-earmark-x",
+			"className": "bi bi-file-earmark-x",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-x-fill",
+			"title": "file-earmark-x-fill",
+			"className": "bi bi-file-earmark-x-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-zip",
+			"title": "file-earmark-zip",
+			"className": "bi bi-file-earmark-zip",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-earmark-zip-fill",
+			"title": "file-earmark-zip-fill",
+			"className": "bi bi-file-earmark-zip-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-easel",
+			"title": "file-easel",
+			"className": "bi bi-file-easel",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-easel-fill",
+			"title": "file-easel-fill",
+			"className": "bi bi-file-easel-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-excel",
+			"title": "file-excel",
+			"className": "bi bi-file-excel",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-excel-fill",
+			"title": "file-excel-fill",
+			"className": "bi bi-file-excel-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-fill",
+			"title": "file-fill",
+			"className": "bi bi-file-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-font",
+			"title": "file-font",
+			"className": "bi bi-file-font",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-font-fill",
+			"title": "file-font-fill",
+			"className": "bi bi-file-font-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-image",
+			"title": "file-image",
+			"className": "bi bi-file-image",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-image-fill",
+			"title": "file-image-fill",
+			"className": "bi bi-file-image-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-lock",
+			"title": "file-lock",
+			"className": "bi bi-file-lock",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-lock-fill",
+			"title": "file-lock-fill",
+			"className": "bi bi-file-lock-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-lock2",
+			"title": "file-lock2",
+			"className": "bi bi-file-lock2",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-lock2-fill",
+			"title": "file-lock2-fill",
+			"className": "bi bi-file-lock2-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-medical",
+			"title": "file-medical",
+			"className": "bi bi-file-medical",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-medical-fill",
+			"title": "file-medical-fill",
+			"className": "bi bi-file-medical-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-minus",
+			"title": "file-minus",
+			"className": "bi bi-file-minus",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-minus-fill",
+			"title": "file-minus-fill",
+			"className": "bi bi-file-minus-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-music",
+			"title": "file-music",
+			"className": "bi bi-file-music",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-music-fill",
+			"title": "file-music-fill",
+			"className": "bi bi-file-music-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-pdf",
+			"title": "file-pdf",
+			"className": "bi bi-file-pdf",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-pdf-fill",
+			"title": "file-pdf-fill",
+			"className": "bi bi-file-pdf-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-person",
+			"title": "file-person",
+			"className": "bi bi-file-person",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-person-fill",
+			"title": "file-person-fill",
+			"className": "bi bi-file-person-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-play",
+			"title": "file-play",
+			"className": "bi bi-file-play",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-play-fill",
+			"title": "file-play-fill",
+			"className": "bi bi-file-play-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-plus",
+			"title": "file-plus",
+			"className": "bi bi-file-plus",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-plus-fill",
+			"title": "file-plus-fill",
+			"className": "bi bi-file-plus-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-post",
+			"title": "file-post",
+			"className": "bi bi-file-post",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-post-fill",
+			"title": "file-post-fill",
+			"className": "bi bi-file-post-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-ppt",
+			"title": "file-ppt",
+			"className": "bi bi-file-ppt",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-ppt-fill",
+			"title": "file-ppt-fill",
+			"className": "bi bi-file-ppt-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-richtext",
+			"title": "file-richtext",
+			"className": "bi bi-file-richtext",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-richtext-fill",
+			"title": "file-richtext-fill",
+			"className": "bi bi-file-richtext-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-ruled",
+			"title": "file-ruled",
+			"className": "bi bi-file-ruled",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-ruled-fill",
+			"title": "file-ruled-fill",
+			"className": "bi bi-file-ruled-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-slides",
+			"title": "file-slides",
+			"className": "bi bi-file-slides",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-slides-fill",
+			"title": "file-slides-fill",
+			"className": "bi bi-file-slides-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-spreadsheet",
+			"title": "file-spreadsheet",
+			"className": "bi bi-file-spreadsheet",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-spreadsheet-fill",
+			"title": "file-spreadsheet-fill",
+			"className": "bi bi-file-spreadsheet-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-text",
+			"title": "file-text",
+			"className": "bi bi-file-text",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-text-fill",
+			"title": "file-text-fill",
+			"className": "bi bi-file-text-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-word",
+			"title": "file-word",
+			"className": "bi bi-file-word",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-word-fill",
+			"title": "file-word-fill",
+			"className": "bi bi-file-word-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-x",
+			"title": "file-x",
+			"className": "bi bi-file-x",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-x-fill",
+			"title": "file-x-fill",
+			"className": "bi bi-file-x-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-zip",
+			"title": "file-zip",
+			"className": "bi bi-file-zip",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "file-zip-fill",
+			"title": "file-zip-fill",
+			"className": "bi bi-file-zip-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "files",
+			"title": "files",
+			"className": "bi bi-files",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "files-alt",
+			"title": "files-alt",
+			"className": "bi bi-files-alt",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-aac",
+			"title": "filetype-aac",
+			"className": "bi bi-filetype-aac",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-ai",
+			"title": "filetype-ai",
+			"className": "bi bi-filetype-ai",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-bmp",
+			"title": "filetype-bmp",
+			"className": "bi bi-filetype-bmp",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-cs",
+			"title": "filetype-cs",
+			"className": "bi bi-filetype-cs",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-css",
+			"title": "filetype-css",
+			"className": "bi bi-filetype-css",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-csv",
+			"title": "filetype-csv",
+			"className": "bi bi-filetype-csv",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-doc",
+			"title": "filetype-doc",
+			"className": "bi bi-filetype-doc",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-docx",
+			"title": "filetype-docx",
+			"className": "bi bi-filetype-docx",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-exe",
+			"title": "filetype-exe",
+			"className": "bi bi-filetype-exe",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-gif",
+			"title": "filetype-gif",
+			"className": "bi bi-filetype-gif",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-heic",
+			"title": "filetype-heic",
+			"className": "bi bi-filetype-heic",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-html",
+			"title": "filetype-html",
+			"className": "bi bi-filetype-html",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-java",
+			"title": "filetype-java",
+			"className": "bi bi-filetype-java",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-jpg",
+			"title": "filetype-jpg",
+			"className": "bi bi-filetype-jpg",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-js",
+			"title": "filetype-js",
+			"className": "bi bi-filetype-js",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-json",
+			"title": "filetype-json",
+			"className": "bi bi-filetype-json",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-jsx",
+			"title": "filetype-jsx",
+			"className": "bi bi-filetype-jsx",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-key",
+			"title": "filetype-key",
+			"className": "bi bi-filetype-key",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-m4p",
+			"title": "filetype-m4p",
+			"className": "bi bi-filetype-m4p",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-md",
+			"title": "filetype-md",
+			"className": "bi bi-filetype-md",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-mdx",
+			"title": "filetype-mdx",
+			"className": "bi bi-filetype-mdx",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-mov",
+			"title": "filetype-mov",
+			"className": "bi bi-filetype-mov",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-mp3",
+			"title": "filetype-mp3",
+			"className": "bi bi-filetype-mp3",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-mp4",
+			"title": "filetype-mp4",
+			"className": "bi bi-filetype-mp4",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-otf",
+			"title": "filetype-otf",
+			"className": "bi bi-filetype-otf",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-pdf",
+			"title": "filetype-pdf",
+			"className": "bi bi-filetype-pdf",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-php",
+			"title": "filetype-php",
+			"className": "bi bi-filetype-php",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-png",
+			"title": "filetype-png",
+			"className": "bi bi-filetype-png",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-ppt",
+			"title": "filetype-ppt",
+			"className": "bi bi-filetype-ppt",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-pptx",
+			"title": "filetype-pptx",
+			"className": "bi bi-filetype-pptx",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-psd",
+			"title": "filetype-psd",
+			"className": "bi bi-filetype-psd",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-py",
+			"title": "filetype-py",
+			"className": "bi bi-filetype-py",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-raw",
+			"title": "filetype-raw",
+			"className": "bi bi-filetype-raw",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-rb",
+			"title": "filetype-rb",
+			"className": "bi bi-filetype-rb",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-sass",
+			"title": "filetype-sass",
+			"className": "bi bi-filetype-sass",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-scss",
+			"title": "filetype-scss",
+			"className": "bi bi-filetype-scss",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-sh",
+			"title": "filetype-sh",
+			"className": "bi bi-filetype-sh",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-sql",
+			"title": "filetype-sql",
+			"className": "bi bi-filetype-sql",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-svg",
+			"title": "filetype-svg",
+			"className": "bi bi-filetype-svg",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-tiff",
+			"title": "filetype-tiff",
+			"className": "bi bi-filetype-tiff",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-tsx",
+			"title": "filetype-tsx",
+			"className": "bi bi-filetype-tsx",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-ttf",
+			"title": "filetype-ttf",
+			"className": "bi bi-filetype-ttf",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-txt",
+			"title": "filetype-txt",
+			"className": "bi bi-filetype-txt",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-wav",
+			"title": "filetype-wav",
+			"className": "bi bi-filetype-wav",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-woff",
+			"title": "filetype-woff",
+			"className": "bi bi-filetype-woff",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-xls",
+			"title": "filetype-xls",
+			"className": "bi bi-filetype-xls",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-xlsx",
+			"title": "filetype-xlsx",
+			"className": "bi bi-filetype-xlsx",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-xml",
+			"title": "filetype-xml",
+			"className": "bi bi-filetype-xml",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "filetype-yml",
+			"title": "filetype-yml",
+			"className": "bi bi-filetype-yml",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "film",
+			"title": "film",
+			"className": "bi bi-film",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "filter",
+			"title": "filter",
+			"className": "bi bi-filter",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "filter-circle",
+			"title": "filter-circle",
+			"className": "bi bi-filter-circle",
+			"type": "bi",
+			"categories": [
+				"sort and filter"
+			]
+		},
+		{
+			"name": "filter-circle-fill",
+			"title": "filter-circle-fill",
+			"className": "bi bi-filter-circle-fill",
+			"type": "bi",
+			"categories": [
+				"sort and filter"
+			]
+		},
+		{
+			"name": "filter-left",
+			"title": "filter-left",
+			"className": "bi bi-filter-left",
+			"type": "bi",
+			"categories": [
+				"sort and filter"
+			]
+		},
+		{
+			"name": "filter-right",
+			"title": "filter-right",
+			"className": "bi bi-filter-right",
+			"type": "bi",
+			"categories": [
+				"sort and filter"
+			]
+		},
+		{
+			"name": "filter-square",
+			"title": "filter-square",
+			"className": "bi bi-filter-square",
+			"type": "bi",
+			"categories": [
+				"sort and filter"
+			]
+		},
+		{
+			"name": "filter-square-fill",
+			"title": "filter-square-fill",
+			"className": "bi bi-filter-square-fill",
+			"type": "bi",
+			"categories": [
+				"sort and filter"
+			]
+		},
+		{
+			"name": "fingerprint",
+			"title": "fingerprint",
+			"className": "bi bi-fingerprint",
+			"type": "bi",
+			"categories": [
+				"security"
+			]
+		},
+		{
+			"name": "fire",
+			"title": "fire",
+			"className": "bi bi-fire",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "flag",
+			"title": "flag",
+			"className": "bi bi-flag",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "flag-fill",
+			"title": "flag-fill",
+			"className": "bi bi-flag-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "floppy",
+			"title": "floppy",
+			"className": "bi bi-floppy",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "floppy-fill",
+			"title": "floppy-fill",
+			"className": "bi bi-floppy-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "floppy2",
+			"title": "floppy2",
+			"className": "bi bi-floppy2",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "floppy2-fill",
+			"title": "floppy2-fill",
+			"className": "bi bi-floppy2-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "flower1",
+			"title": "flower1",
+			"className": "bi bi-flower1",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "flower2",
+			"title": "flower2",
+			"className": "bi bi-flower2",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "flower3",
+			"title": "flower3",
+			"className": "bi bi-flower3",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "folder",
+			"title": "folder",
+			"className": "bi bi-folder",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "folder-check",
+			"title": "folder-check",
+			"className": "bi bi-folder-check",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "folder-fill",
+			"title": "folder-fill",
+			"className": "bi bi-folder-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "folder-minus",
+			"title": "folder-minus",
+			"className": "bi bi-folder-minus",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "folder-plus",
+			"title": "folder-plus",
+			"className": "bi bi-folder-plus",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "folder-symlink",
+			"title": "folder-symlink",
+			"className": "bi bi-folder-symlink",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "folder-symlink-fill",
+			"title": "folder-symlink-fill",
+			"className": "bi bi-folder-symlink-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "folder-x",
+			"title": "folder-x",
+			"className": "bi bi-folder-x",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "folder2",
+			"title": "folder2",
+			"className": "bi bi-folder2",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "folder2-open",
+			"title": "folder2-open",
+			"className": "bi bi-folder2-open",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "fonts",
+			"title": "fonts",
+			"className": "bi bi-fonts",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "forward",
+			"title": "forward",
+			"className": "bi bi-forward",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "forward-fill",
+			"title": "forward-fill",
+			"className": "bi bi-forward-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "front",
+			"title": "front",
+			"className": "bi bi-front",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "fuel-pump",
+			"title": "fuel-pump",
+			"className": "bi bi-fuel-pump",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "fuel-pump-diesel",
+			"title": "fuel-pump-diesel",
+			"className": "bi bi-fuel-pump-diesel",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "fuel-pump-diesel-fill",
+			"title": "fuel-pump-diesel-fill",
+			"className": "bi bi-fuel-pump-diesel-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "fuel-pump-fill",
+			"title": "fuel-pump-fill",
+			"className": "bi bi-fuel-pump-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "fullscreen",
+			"title": "fullscreen",
+			"className": "bi bi-fullscreen",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "fullscreen-exit",
+			"title": "fullscreen-exit",
+			"className": "bi bi-fullscreen-exit",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "funnel",
+			"title": "funnel",
+			"className": "bi bi-funnel",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "funnel-fill",
+			"title": "funnel-fill",
+			"className": "bi bi-funnel-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "gear",
+			"title": "gear",
+			"className": "bi bi-gear",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "gear-fill",
+			"title": "gear-fill",
+			"className": "bi bi-gear-fill",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "gear-wide",
+			"title": "gear-wide",
+			"className": "bi bi-gear-wide",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "gear-wide-connected",
+			"title": "gear-wide-connected",
+			"className": "bi bi-gear-wide-connected",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "gem",
+			"title": "gem",
+			"className": "bi bi-gem",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "gender-ambiguous",
+			"title": "gender-ambiguous",
+			"className": "bi bi-gender-ambiguous",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "gender-female",
+			"title": "gender-female",
+			"className": "bi bi-gender-female",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "gender-male",
+			"title": "gender-male",
+			"className": "bi bi-gender-male",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "gender-neuter",
+			"title": "gender-neuter",
+			"className": "bi bi-gender-neuter",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "gender-trans",
+			"title": "gender-trans",
+			"className": "bi bi-gender-trans",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "geo",
+			"title": "geo",
+			"className": "bi bi-geo",
+			"type": "bi",
+			"categories": [
+				"geo"
+			]
+		},
+		{
+			"name": "geo-alt",
+			"title": "geo-alt",
+			"className": "bi bi-geo-alt",
+			"type": "bi",
+			"categories": [
+				"geo"
+			]
+		},
+		{
+			"name": "geo-alt-fill",
+			"title": "geo-alt-fill",
+			"className": "bi bi-geo-alt-fill",
+			"type": "bi",
+			"categories": [
+				"geo"
+			]
+		},
+		{
+			"name": "geo-fill",
+			"title": "geo-fill",
+			"className": "bi bi-geo-fill",
+			"type": "bi",
+			"categories": [
+				"geo"
+			]
+		},
+		{
+			"name": "gift",
+			"title": "gift",
+			"className": "bi bi-gift",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "gift-fill",
+			"title": "gift-fill",
+			"className": "bi bi-gift-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "git",
+			"title": "git",
+			"className": "bi bi-git",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "github",
+			"title": "github",
+			"className": "bi bi-github",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "gitlab",
+			"title": "gitlab",
+			"className": "bi bi-gitlab",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "globe",
+			"title": "globe",
+			"className": "bi bi-globe",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "globe-americas",
+			"title": "globe-americas",
+			"className": "bi bi-globe-americas",
+			"type": "bi",
+			"categories": [
+				"geo"
+			]
+		},
+		{
+			"name": "globe-asia-australia",
+			"title": "globe-asia-australia",
+			"className": "bi bi-globe-asia-australia",
+			"type": "bi",
+			"categories": [
+				"geo"
+			]
+		},
+		{
+			"name": "globe-central-south-asia",
+			"title": "globe-central-south-asia",
+			"className": "bi bi-globe-central-south-asia",
+			"type": "bi",
+			"categories": [
+				"geo"
+			]
+		},
+		{
+			"name": "globe-europe-africa",
+			"title": "globe-europe-africa",
+			"className": "bi bi-globe-europe-africa",
+			"type": "bi",
+			"categories": [
+				"geo"
+			]
+		},
+		{
+			"name": "globe2",
+			"title": "globe2",
+			"className": "bi bi-globe2",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "google",
+			"title": "google",
+			"className": "bi bi-google",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "google-play",
+			"title": "google-play",
+			"className": "bi bi-google-play",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "gpu-card",
+			"title": "gpu-card",
+			"className": "bi bi-gpu-card",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "graph-down",
+			"title": "graph-down",
+			"className": "bi bi-graph-down",
+			"type": "bi",
+			"categories": [
+				"data"
+			]
+		},
+		{
+			"name": "graph-down-arrow",
+			"title": "graph-down-arrow",
+			"className": "bi bi-graph-down-arrow",
+			"type": "bi",
+			"categories": [
+				"data"
+			]
+		},
+		{
+			"name": "graph-up",
+			"title": "graph-up",
+			"className": "bi bi-graph-up",
+			"type": "bi",
+			"categories": [
+				"data"
+			]
+		},
+		{
+			"name": "graph-up-arrow",
+			"title": "graph-up-arrow",
+			"className": "bi bi-graph-up-arrow",
+			"type": "bi",
+			"categories": [
+				"data"
+			]
+		},
+		{
+			"name": "grid",
+			"title": "grid",
+			"className": "bi bi-grid",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "grid-1x2",
+			"title": "grid-1x2",
+			"className": "bi bi-grid-1x2",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "grid-1x2-fill",
+			"title": "grid-1x2-fill",
+			"className": "bi bi-grid-1x2-fill",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "grid-3x2",
+			"title": "grid-3x2",
+			"className": "bi bi-grid-3x2",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "grid-3x2-gap",
+			"title": "grid-3x2-gap",
+			"className": "bi bi-grid-3x2-gap",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "grid-3x2-gap-fill",
+			"title": "grid-3x2-gap-fill",
+			"className": "bi bi-grid-3x2-gap-fill",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "grid-3x3",
+			"title": "grid-3x3",
+			"className": "bi bi-grid-3x3",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "grid-3x3-gap",
+			"title": "grid-3x3-gap",
+			"className": "bi bi-grid-3x3-gap",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "grid-3x3-gap-fill",
+			"title": "grid-3x3-gap-fill",
+			"className": "bi bi-grid-3x3-gap-fill",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "grid-fill",
+			"title": "grid-fill",
+			"className": "bi bi-grid-fill",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "grip-horizontal",
+			"title": "grip-horizontal",
+			"className": "bi bi-grip-horizontal",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "grip-vertical",
+			"title": "grip-vertical",
+			"className": "bi bi-grip-vertical",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "h-circle",
+			"title": "h-circle",
+			"className": "bi bi-h-circle",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "h-circle-fill",
+			"title": "h-circle-fill",
+			"className": "bi bi-h-circle-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "h-square",
+			"title": "h-square",
+			"className": "bi bi-h-square",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "h-square-fill",
+			"title": "h-square-fill",
+			"className": "bi bi-h-square-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "hammer",
+			"title": "hammer",
+			"className": "bi bi-hammer",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "hand-index",
+			"title": "hand-index",
+			"className": "bi bi-hand-index",
+			"type": "bi",
+			"categories": [
+				"hands"
+			]
+		},
+		{
+			"name": "hand-index-fill",
+			"title": "hand-index-fill",
+			"className": "bi bi-hand-index-fill",
+			"type": "bi",
+			"categories": [
+				"hands"
+			]
+		},
+		{
+			"name": "hand-index-thumb",
+			"title": "hand-index-thumb",
+			"className": "bi bi-hand-index-thumb",
+			"type": "bi",
+			"categories": [
+				"hands"
+			]
+		},
+		{
+			"name": "hand-index-thumb-fill",
+			"title": "hand-index-thumb-fill",
+			"className": "bi bi-hand-index-thumb-fill",
+			"type": "bi",
+			"categories": [
+				"hands"
+			]
+		},
+		{
+			"name": "hand-thumbs-down",
+			"title": "hand-thumbs-down",
+			"className": "bi bi-hand-thumbs-down",
+			"type": "bi",
+			"categories": [
+				"hands"
+			]
+		},
+		{
+			"name": "hand-thumbs-down-fill",
+			"title": "hand-thumbs-down-fill",
+			"className": "bi bi-hand-thumbs-down-fill",
+			"type": "bi",
+			"categories": [
+				"hands"
+			]
+		},
+		{
+			"name": "hand-thumbs-up",
+			"title": "hand-thumbs-up",
+			"className": "bi bi-hand-thumbs-up",
+			"type": "bi",
+			"categories": [
+				"hands"
+			]
+		},
+		{
+			"name": "hand-thumbs-up-fill",
+			"title": "hand-thumbs-up-fill",
+			"className": "bi bi-hand-thumbs-up-fill",
+			"type": "bi",
+			"categories": [
+				"hands"
+			]
+		},
+		{
+			"name": "handbag",
+			"title": "handbag",
+			"className": "bi bi-handbag",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "handbag-fill",
+			"title": "handbag-fill",
+			"className": "bi bi-handbag-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "hash",
+			"title": "hash",
+			"className": "bi bi-hash",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "hdd",
+			"title": "hdd",
+			"className": "bi bi-hdd",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "hdd-fill",
+			"title": "hdd-fill",
+			"className": "bi bi-hdd-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "hdd-network",
+			"title": "hdd-network",
+			"className": "bi bi-hdd-network",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "hdd-network-fill",
+			"title": "hdd-network-fill",
+			"className": "bi bi-hdd-network-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "hdd-rack",
+			"title": "hdd-rack",
+			"className": "bi bi-hdd-rack",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "hdd-rack-fill",
+			"title": "hdd-rack-fill",
+			"className": "bi bi-hdd-rack-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "hdd-stack",
+			"title": "hdd-stack",
+			"className": "bi bi-hdd-stack",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "hdd-stack-fill",
+			"title": "hdd-stack-fill",
+			"className": "bi bi-hdd-stack-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "hdmi",
+			"title": "hdmi",
+			"className": "bi bi-hdmi",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "hdmi-fill",
+			"title": "hdmi-fill",
+			"className": "bi bi-hdmi-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "headphones",
+			"title": "headphones",
+			"className": "bi bi-headphones",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "headset",
+			"title": "headset",
+			"className": "bi bi-headset",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "headset-vr",
+			"title": "headset-vr",
+			"className": "bi bi-headset-vr",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "heart",
+			"title": "heart",
+			"className": "bi bi-heart",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "heart-arrow",
+			"title": "heart-arrow",
+			"className": "bi bi-heart-arrow",
+			"type": "bi",
+			"categories": [
+				"love"
+			]
+		},
+		{
+			"name": "heart-fill",
+			"title": "heart-fill",
+			"className": "bi bi-heart-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "heart-half",
+			"title": "heart-half",
+			"className": "bi bi-heart-half",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "heart-pulse",
+			"title": "heart-pulse",
+			"className": "bi bi-heart-pulse",
+			"type": "bi",
+			"categories": [
+				"medical"
+			]
+		},
+		{
+			"name": "heart-pulse-fill",
+			"title": "heart-pulse-fill",
+			"className": "bi bi-heart-pulse-fill",
+			"type": "bi",
+			"categories": [
+				"medical"
+			]
+		},
+		{
+			"name": "heartbreak",
+			"title": "heartbreak",
+			"className": "bi bi-heartbreak",
+			"type": "bi",
+			"categories": [
+				"emoji love"
+			]
+		},
+		{
+			"name": "heartbreak-fill",
+			"title": "heartbreak-fill",
+			"className": "bi bi-heartbreak-fill",
+			"type": "bi",
+			"categories": [
+				"emoji love"
+			]
+		},
+		{
+			"name": "hearts",
+			"title": "hearts",
+			"className": "bi bi-hearts",
+			"type": "bi",
+			"categories": [
+				"love"
+			]
+		},
+		{
+			"name": "heptagon",
+			"title": "heptagon",
+			"className": "bi bi-heptagon",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "heptagon-fill",
+			"title": "heptagon-fill",
+			"className": "bi bi-heptagon-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "heptagon-half",
+			"title": "heptagon-half",
+			"className": "bi bi-heptagon-half",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "hexagon",
+			"title": "hexagon",
+			"className": "bi bi-hexagon",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "hexagon-fill",
+			"title": "hexagon-fill",
+			"className": "bi bi-hexagon-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "hexagon-half",
+			"title": "hexagon-half",
+			"className": "bi bi-hexagon-half",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "highlighter",
+			"title": "highlighter",
+			"className": "bi bi-highlighter",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "highlights",
+			"title": "highlights",
+			"className": "bi bi-highlights",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "hospital",
+			"title": "hospital",
+			"className": "bi bi-hospital",
+			"type": "bi",
+			"categories": [
+				"medical"
+			]
+		},
+		{
+			"name": "hospital-fill",
+			"title": "hospital-fill",
+			"className": "bi bi-hospital-fill",
+			"type": "bi",
+			"categories": [
+				"medical"
+			]
+		},
+		{
+			"name": "hourglass",
+			"title": "hourglass",
+			"className": "bi bi-hourglass",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "hourglass-bottom",
+			"title": "hourglass-bottom",
+			"className": "bi bi-hourglass-bottom",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "hourglass-split",
+			"title": "hourglass-split",
+			"className": "bi bi-hourglass-split",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "hourglass-top",
+			"title": "hourglass-top",
+			"className": "bi bi-hourglass-top",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house",
+			"title": "house",
+			"className": "bi bi-house",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-add",
+			"title": "house-add",
+			"className": "bi bi-house-add",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-add-fill",
+			"title": "house-add-fill",
+			"className": "bi bi-house-add-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-check",
+			"title": "house-check",
+			"className": "bi bi-house-check",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-check-fill",
+			"title": "house-check-fill",
+			"className": "bi bi-house-check-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-dash",
+			"title": "house-dash",
+			"className": "bi bi-house-dash",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-dash-fill",
+			"title": "house-dash-fill",
+			"className": "bi bi-house-dash-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-door",
+			"title": "house-door",
+			"className": "bi bi-house-door",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-door-fill",
+			"title": "house-door-fill",
+			"className": "bi bi-house-door-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-down",
+			"title": "house-down",
+			"className": "bi bi-house-down",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-down-fill",
+			"title": "house-down-fill",
+			"className": "bi bi-house-down-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-exclamation",
+			"title": "house-exclamation",
+			"className": "bi bi-house-exclamation",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-exclamation-fill",
+			"title": "house-exclamation-fill",
+			"className": "bi bi-house-exclamation-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-fill",
+			"title": "house-fill",
+			"className": "bi bi-house-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-gear",
+			"title": "house-gear",
+			"className": "bi bi-house-gear",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-gear-fill",
+			"title": "house-gear-fill",
+			"className": "bi bi-house-gear-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-heart",
+			"title": "house-heart",
+			"className": "bi bi-house-heart",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-heart-fill",
+			"title": "house-heart-fill",
+			"className": "bi bi-house-heart-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-lock",
+			"title": "house-lock",
+			"className": "bi bi-house-lock",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-lock-fill",
+			"title": "house-lock-fill",
+			"className": "bi bi-house-lock-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-slash",
+			"title": "house-slash",
+			"className": "bi bi-house-slash",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-slash-fill",
+			"title": "house-slash-fill",
+			"className": "bi bi-house-slash-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-up",
+			"title": "house-up",
+			"className": "bi bi-house-up",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-up-fill",
+			"title": "house-up-fill",
+			"className": "bi bi-house-up-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-x",
+			"title": "house-x",
+			"className": "bi bi-house-x",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "house-x-fill",
+			"title": "house-x-fill",
+			"className": "bi bi-house-x-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "houses",
+			"title": "houses",
+			"className": "bi bi-houses",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "houses-fill",
+			"title": "houses-fill",
+			"className": "bi bi-houses-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "hr",
+			"title": "hr",
+			"className": "bi bi-hr",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "hurricane",
+			"title": "hurricane",
+			"className": "bi bi-hurricane",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "hypnotize",
+			"title": "hypnotize",
+			"className": "bi bi-hypnotize",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "image",
+			"title": "image",
+			"className": "bi bi-image",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "image-alt",
+			"title": "image-alt",
+			"className": "bi bi-image-alt",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "image-fill",
+			"title": "image-fill",
+			"className": "bi bi-image-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "images",
+			"title": "images",
+			"className": "bi bi-images",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "inbox",
+			"title": "inbox",
+			"className": "bi bi-inbox",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "inbox-fill",
+			"title": "inbox-fill",
+			"className": "bi bi-inbox-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "inboxes-fill",
+			"title": "inboxes-fill",
+			"className": "bi bi-inboxes-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "inboxes",
+			"title": "inboxes",
+			"className": "bi bi-inboxes",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "incognito",
+			"title": "incognito",
+			"className": "bi bi-incognito",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "indent",
+			"title": "indent",
+			"className": "bi bi-indent",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "infinity",
+			"title": "infinity",
+			"className": "bi bi-infinity",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "info",
+			"title": "info",
+			"className": "bi bi-info",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "info-circle",
+			"title": "info-circle",
+			"className": "bi bi-info-circle",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "info-circle-fill",
+			"title": "info-circle-fill",
+			"className": "bi bi-info-circle-fill",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "info-lg",
+			"title": "info-lg",
+			"className": "bi bi-info-lg",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "info-square",
+			"title": "info-square",
+			"className": "bi bi-info-square",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "info-square-fill",
+			"title": "info-square-fill",
+			"className": "bi bi-info-square-fill",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "input-cursor",
+			"title": "input-cursor",
+			"className": "bi bi-input-cursor",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "input-cursor-text",
+			"title": "input-cursor-text",
+			"className": "bi bi-input-cursor-text",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "instagram",
+			"title": "instagram",
+			"className": "bi bi-instagram",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "intersect",
+			"title": "intersect",
+			"className": "bi bi-intersect",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "journal",
+			"title": "journal",
+			"className": "bi bi-journal",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "journal-album",
+			"title": "journal-album",
+			"className": "bi bi-journal-album",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "journal-arrow-down",
+			"title": "journal-arrow-down",
+			"className": "bi bi-journal-arrow-down",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "journal-arrow-up",
+			"title": "journal-arrow-up",
+			"className": "bi bi-journal-arrow-up",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "journal-bookmark",
+			"title": "journal-bookmark",
+			"className": "bi bi-journal-bookmark",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "journal-bookmark-fill",
+			"title": "journal-bookmark-fill",
+			"className": "bi bi-journal-bookmark-fill",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "journal-check",
+			"title": "journal-check",
+			"className": "bi bi-journal-check",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "journal-code",
+			"title": "journal-code",
+			"className": "bi bi-journal-code",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "journal-medical",
+			"title": "journal-medical",
+			"className": "bi bi-journal-medical",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "journal-minus",
+			"title": "journal-minus",
+			"className": "bi bi-journal-minus",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "journal-plus",
+			"title": "journal-plus",
+			"className": "bi bi-journal-plus",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "journal-richtext",
+			"title": "journal-richtext",
+			"className": "bi bi-journal-richtext",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "journal-text",
+			"title": "journal-text",
+			"className": "bi bi-journal-text",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "journal-x",
+			"title": "journal-x",
+			"className": "bi bi-journal-x",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "journals",
+			"title": "journals",
+			"className": "bi bi-journals",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "joystick",
+			"title": "joystick",
+			"className": "bi bi-joystick",
+			"type": "bi",
+			"categories": [
+				"entertainment"
+			]
+		},
+		{
+			"name": "justify",
+			"title": "justify",
+			"className": "bi bi-justify",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "justify-left",
+			"title": "justify-left",
+			"className": "bi bi-justify-left",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "justify-right",
+			"title": "justify-right",
+			"className": "bi bi-justify-right",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "kanban",
+			"title": "kanban",
+			"className": "bi bi-kanban",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "kanban-fill",
+			"title": "kanban-fill",
+			"className": "bi bi-kanban-fill",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "key",
+			"title": "key",
+			"className": "bi bi-key",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "key-fill",
+			"title": "key-fill",
+			"className": "bi bi-key-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "keyboard",
+			"title": "keyboard",
+			"className": "bi bi-keyboard",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "keyboard-fill",
+			"title": "keyboard-fill",
+			"className": "bi bi-keyboard-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "ladder",
+			"title": "ladder",
+			"className": "bi bi-ladder",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "lamp",
+			"title": "lamp",
+			"className": "bi bi-lamp",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "lamp-fill",
+			"title": "lamp-fill",
+			"className": "bi bi-lamp-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "laptop",
+			"title": "laptop",
+			"className": "bi bi-laptop",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "laptop-fill",
+			"title": "laptop-fill",
+			"className": "bi bi-laptop-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "layer-backward",
+			"title": "layer-backward",
+			"className": "bi bi-layer-backward",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "layer-forward",
+			"title": "layer-forward",
+			"className": "bi bi-layer-forward",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "layers",
+			"title": "layers",
+			"className": "bi bi-layers",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "layers-fill",
+			"title": "layers-fill",
+			"className": "bi bi-layers-fill",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "layers-half",
+			"title": "layers-half",
+			"className": "bi bi-layers-half",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "layout-sidebar",
+			"title": "layout-sidebar",
+			"className": "bi bi-layout-sidebar",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "layout-sidebar-inset-reverse",
+			"title": "layout-sidebar-inset-reverse",
+			"className": "bi bi-layout-sidebar-inset-reverse",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "layout-sidebar-inset",
+			"title": "layout-sidebar-inset",
+			"className": "bi bi-layout-sidebar-inset",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "layout-sidebar-reverse",
+			"title": "layout-sidebar-reverse",
+			"className": "bi bi-layout-sidebar-reverse",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "layout-split",
+			"title": "layout-split",
+			"className": "bi bi-layout-split",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "layout-text-sidebar",
+			"title": "layout-text-sidebar",
+			"className": "bi bi-layout-text-sidebar",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "layout-text-sidebar-reverse",
+			"title": "layout-text-sidebar-reverse",
+			"className": "bi bi-layout-text-sidebar-reverse",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "layout-text-window",
+			"title": "layout-text-window",
+			"className": "bi bi-layout-text-window",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "layout-text-window-reverse",
+			"title": "layout-text-window-reverse",
+			"className": "bi bi-layout-text-window-reverse",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "layout-three-columns",
+			"title": "layout-three-columns",
+			"className": "bi bi-layout-three-columns",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "layout-wtf",
+			"title": "layout-wtf",
+			"className": "bi bi-layout-wtf",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "life-preserver",
+			"title": "life-preserver",
+			"className": "bi bi-life-preserver",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "lightbulb",
+			"title": "lightbulb",
+			"className": "bi bi-lightbulb",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "lightbulb-fill",
+			"title": "lightbulb-fill",
+			"className": "bi bi-lightbulb-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "lightbulb-off",
+			"title": "lightbulb-off",
+			"className": "bi bi-lightbulb-off",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "lightbulb-off-fill",
+			"title": "lightbulb-off-fill",
+			"className": "bi bi-lightbulb-off-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "lightning",
+			"title": "lightning",
+			"className": "bi bi-lightning",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "lightning-charge",
+			"title": "lightning-charge",
+			"className": "bi bi-lightning-charge",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "lightning-charge-fill",
+			"title": "lightning-charge-fill",
+			"className": "bi bi-lightning-charge-fill",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "lightning-fill",
+			"title": "lightning-fill",
+			"className": "bi bi-lightning-fill",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "line",
+			"title": "line",
+			"className": "bi bi-line",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "link",
+			"title": "link",
+			"className": "bi bi-link",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "link-45deg",
+			"title": "link-45deg",
+			"className": "bi bi-link-45deg",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "linkedin",
+			"title": "linkedin",
+			"className": "bi bi-linkedin",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "list",
+			"title": "list",
+			"className": "bi bi-list",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "list-check",
+			"title": "list-check",
+			"className": "bi bi-list-check",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "list-columns",
+			"title": "list-columns",
+			"className": "bi bi-list-columns",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "list-columns-reverse",
+			"title": "list-columns-reverse",
+			"className": "bi bi-list-columns-reverse",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "list-nested",
+			"title": "list-nested",
+			"className": "bi bi-list-nested",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "list-ol",
+			"title": "list-ol",
+			"className": "bi bi-list-ol",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "list-stars",
+			"title": "list-stars",
+			"className": "bi bi-list-stars",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "list-task",
+			"title": "list-task",
+			"className": "bi bi-list-task",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "list-ul",
+			"title": "list-ul",
+			"className": "bi bi-list-ul",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "lock",
+			"title": "lock",
+			"className": "bi bi-lock",
+			"type": "bi",
+			"categories": [
+				"security"
+			]
+		},
+		{
+			"name": "lock-fill",
+			"title": "lock-fill",
+			"className": "bi bi-lock-fill",
+			"type": "bi",
+			"categories": [
+				"security"
+			]
+		},
+		{
+			"name": "luggage",
+			"title": "luggage",
+			"className": "bi bi-luggage",
+			"type": "bi",
+			"categories": [
+				"travel"
+			]
+		},
+		{
+			"name": "luggage-fill",
+			"title": "luggage-fill",
+			"className": "bi bi-luggage-fill",
+			"type": "bi",
+			"categories": [
+				"travel"
+			]
+		},
+		{
+			"name": "lungs",
+			"title": "lungs",
+			"className": "bi bi-lungs",
+			"type": "bi",
+			"categories": [
+				"medical"
+			]
+		},
+		{
+			"name": "lungs-fill",
+			"title": "lungs-fill",
+			"className": "bi bi-lungs-fill",
+			"type": "bi",
+			"categories": [
+				"medical"
+			]
+		},
+		{
+			"name": "magic",
+			"title": "magic",
+			"className": "bi bi-magic",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "magnet",
+			"title": "magnet",
+			"className": "bi bi-magnet",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "magnet-fill",
+			"title": "magnet-fill",
+			"className": "bi bi-magnet-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "mailbox",
+			"title": "mailbox",
+			"className": "bi bi-mailbox",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "mailbox-flag",
+			"title": "mailbox-flag",
+			"className": "bi bi-mailbox-flag",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "mailbox2",
+			"title": "mailbox2",
+			"className": "bi bi-mailbox2",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "mailbox2-flag",
+			"title": "mailbox2-flag",
+			"className": "bi bi-mailbox2-flag",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "map",
+			"title": "map",
+			"className": "bi bi-map",
+			"type": "bi",
+			"categories": [
+				"geo"
+			]
+		},
+		{
+			"name": "map-fill",
+			"title": "map-fill",
+			"className": "bi bi-map-fill",
+			"type": "bi",
+			"categories": [
+				"geo"
+			]
+		},
+		{
+			"name": "markdown",
+			"title": "markdown",
+			"className": "bi bi-markdown",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "markdown-fill",
+			"title": "markdown-fill",
+			"className": "bi bi-markdown-fill",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "marker-tip",
+			"title": "marker-tip",
+			"className": "bi bi-marker-tip",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "mask",
+			"title": "mask",
+			"className": "bi bi-mask",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "mastodon",
+			"title": "mastodon",
+			"className": "bi bi-mastodon",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "medium",
+			"title": "medium",
+			"className": "bi bi-medium",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "megaphone",
+			"title": "megaphone",
+			"className": "bi bi-megaphone",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "megaphone-fill",
+			"title": "megaphone-fill",
+			"className": "bi bi-megaphone-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "memory",
+			"title": "memory",
+			"className": "bi bi-memory",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "menu-app",
+			"title": "menu-app",
+			"className": "bi bi-menu-app",
+			"type": "bi",
+			"categories": [
+				"controls"
+			]
+		},
+		{
+			"name": "menu-app-fill",
+			"title": "menu-app-fill",
+			"className": "bi bi-menu-app-fill",
+			"type": "bi",
+			"categories": [
+				"controls"
+			]
+		},
+		{
+			"name": "menu-button",
+			"title": "menu-button",
+			"className": "bi bi-menu-button",
+			"type": "bi",
+			"categories": [
+				"controls"
+			]
+		},
+		{
+			"name": "menu-button-fill",
+			"title": "menu-button-fill",
+			"className": "bi bi-menu-button-fill",
+			"type": "bi",
+			"categories": [
+				"controls"
+			]
+		},
+		{
+			"name": "menu-button-wide",
+			"title": "menu-button-wide",
+			"className": "bi bi-menu-button-wide",
+			"type": "bi",
+			"categories": [
+				"controls"
+			]
+		},
+		{
+			"name": "menu-button-wide-fill",
+			"title": "menu-button-wide-fill",
+			"className": "bi bi-menu-button-wide-fill",
+			"type": "bi",
+			"categories": [
+				"controls"
+			]
+		},
+		{
+			"name": "menu-down",
+			"title": "menu-down",
+			"className": "bi bi-menu-down",
+			"type": "bi",
+			"categories": [
+				"controls"
+			]
+		},
+		{
+			"name": "menu-up",
+			"title": "menu-up",
+			"className": "bi bi-menu-up",
+			"type": "bi",
+			"categories": [
+				"controls"
+			]
+		},
+		{
+			"name": "messenger",
+			"title": "messenger",
+			"className": "bi bi-messenger",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "meta",
+			"title": "meta",
+			"className": "bi bi-meta",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "mic",
+			"title": "mic",
+			"className": "bi bi-mic",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "mic-fill",
+			"title": "mic-fill",
+			"className": "bi bi-mic-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "mic-mute",
+			"title": "mic-mute",
+			"className": "bi bi-mic-mute",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "mic-mute-fill",
+			"title": "mic-mute-fill",
+			"className": "bi bi-mic-mute-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "microsoft",
+			"title": "microsoft",
+			"className": "bi bi-microsoft",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "microsoft-teams",
+			"title": "microsoft-teams",
+			"className": "bi bi-microsoft-teams",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "minecart",
+			"title": "minecart",
+			"className": "bi bi-minecart",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "minecart-loaded",
+			"title": "minecart-loaded",
+			"className": "bi bi-minecart-loaded",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "modem",
+			"title": "modem",
+			"className": "bi bi-modem",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "modem-fill",
+			"title": "modem-fill",
+			"className": "bi bi-modem-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "moisture",
+			"title": "moisture",
+			"className": "bi bi-moisture",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "moon",
+			"title": "moon",
+			"className": "bi bi-moon",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "moon-fill",
+			"title": "moon-fill",
+			"className": "bi bi-moon-fill",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "moon-stars",
+			"title": "moon-stars",
+			"className": "bi bi-moon-stars",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "moon-stars-fill",
+			"title": "moon-stars-fill",
+			"className": "bi bi-moon-stars-fill",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "mortarboard",
+			"title": "mortarboard",
+			"className": "bi bi-mortarboard",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "mortarboard-fill",
+			"title": "mortarboard-fill",
+			"className": "bi bi-mortarboard-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "motherboard",
+			"title": "motherboard",
+			"className": "bi bi-motherboard",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "motherboard-fill",
+			"title": "motherboard-fill",
+			"className": "bi bi-motherboard-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "mouse",
+			"title": "mouse",
+			"className": "bi bi-mouse",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "mouse-fill",
+			"title": "mouse-fill",
+			"className": "bi bi-mouse-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "mouse2",
+			"title": "mouse2",
+			"className": "bi bi-mouse2",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "mouse2-fill",
+			"title": "mouse2-fill",
+			"className": "bi bi-mouse2-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "mouse3",
+			"title": "mouse3",
+			"className": "bi bi-mouse3",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "mouse3-fill",
+			"title": "mouse3-fill",
+			"className": "bi bi-mouse3-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "music-note",
+			"title": "music-note",
+			"className": "bi bi-music-note",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "music-note-beamed",
+			"title": "music-note-beamed",
+			"className": "bi bi-music-note-beamed",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "music-note-list",
+			"title": "music-note-list",
+			"className": "bi bi-music-note-list",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "music-player",
+			"title": "music-player",
+			"className": "bi bi-music-player",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "music-player-fill",
+			"title": "music-player-fill",
+			"className": "bi bi-music-player-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "newspaper",
+			"title": "newspaper",
+			"className": "bi bi-newspaper",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "nintendo-switch",
+			"title": "nintendo-switch",
+			"className": "bi bi-nintendo-switch",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "node-minus",
+			"title": "node-minus",
+			"className": "bi bi-node-minus",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "node-minus-fill",
+			"title": "node-minus-fill",
+			"className": "bi bi-node-minus-fill",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "node-plus",
+			"title": "node-plus",
+			"className": "bi bi-node-plus",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "node-plus-fill",
+			"title": "node-plus-fill",
+			"className": "bi bi-node-plus-fill",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "noise-reduction",
+			"title": "noise-reduction",
+			"className": "bi bi-noise-reduction",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "nut",
+			"title": "nut",
+			"className": "bi bi-nut",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "nut-fill",
+			"title": "nut-fill",
+			"className": "bi bi-nut-fill",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "nvidia",
+			"title": "nvidia",
+			"className": "bi bi-nvidia",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "nvme",
+			"title": "nvme",
+			"className": "bi bi-nvme",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "nvme-fill",
+			"title": "nvme-fill",
+			"className": "bi bi-nvme-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "octagon",
+			"title": "octagon",
+			"className": "bi bi-octagon",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "octagon-fill",
+			"title": "octagon-fill",
+			"className": "bi bi-octagon-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "octagon-half",
+			"title": "octagon-half",
+			"className": "bi bi-octagon-half",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "opencollective",
+			"title": "opencollective",
+			"className": "bi bi-opencollective",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "optical-audio",
+			"title": "optical-audio",
+			"className": "bi bi-optical-audio",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "optical-audio-fill",
+			"title": "optical-audio-fill",
+			"className": "bi bi-optical-audio-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "option",
+			"title": "option",
+			"className": "bi bi-option",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "outlet",
+			"title": "outlet",
+			"className": "bi bi-outlet",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "p-circle",
+			"title": "p-circle",
+			"className": "bi bi-p-circle",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "p-circle-fill",
+			"title": "p-circle-fill",
+			"className": "bi bi-p-circle-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "p-square",
+			"title": "p-square",
+			"className": "bi bi-p-square",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "p-square-fill",
+			"title": "p-square-fill",
+			"className": "bi bi-p-square-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "paint-bucket",
+			"title": "paint-bucket",
+			"className": "bi bi-paint-bucket",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "palette",
+			"title": "palette",
+			"className": "bi bi-palette",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "palette-fill",
+			"title": "palette-fill",
+			"className": "bi bi-palette-fill",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "palette2",
+			"title": "palette2",
+			"className": "bi bi-palette2",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "paperclip",
+			"title": "paperclip",
+			"className": "bi bi-paperclip",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "paragraph",
+			"title": "paragraph",
+			"className": "bi bi-paragraph",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "pass",
+			"title": "pass",
+			"className": "bi bi-pass",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "pass-fill",
+			"title": "pass-fill",
+			"className": "bi bi-pass-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "passport",
+			"title": "passport",
+			"className": "bi bi-passport",
+			"type": "bi",
+			"categories": [
+				"travel"
+			]
+		},
+		{
+			"name": "passport-fill",
+			"title": "passport-fill",
+			"className": "bi bi-passport-fill",
+			"type": "bi",
+			"categories": [
+				"travel"
+			]
+		},
+		{
+			"name": "patch-check",
+			"title": "patch-check",
+			"className": "bi bi-patch-check",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "patch-check-fill",
+			"title": "patch-check-fill",
+			"className": "bi bi-patch-check-fill",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "patch-exclamation",
+			"title": "patch-exclamation",
+			"className": "bi bi-patch-exclamation",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "patch-exclamation-fill",
+			"title": "patch-exclamation-fill",
+			"className": "bi bi-patch-exclamation-fill",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "patch-minus",
+			"title": "patch-minus",
+			"className": "bi bi-patch-minus",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "patch-minus-fill",
+			"title": "patch-minus-fill",
+			"className": "bi bi-patch-minus-fill",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "patch-plus",
+			"title": "patch-plus",
+			"className": "bi bi-patch-plus",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "patch-plus-fill",
+			"title": "patch-plus-fill",
+			"className": "bi bi-patch-plus-fill",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "patch-question",
+			"title": "patch-question",
+			"className": "bi bi-patch-question",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "patch-question-fill",
+			"title": "patch-question-fill",
+			"className": "bi bi-patch-question-fill",
+			"type": "bi",
+			"categories": [
+				"badges"
+			]
+		},
+		{
+			"name": "pause",
+			"title": "pause",
+			"className": "bi bi-pause",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "pause-btn",
+			"title": "pause-btn",
+			"className": "bi bi-pause-btn",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "pause-btn-fill",
+			"title": "pause-btn-fill",
+			"className": "bi bi-pause-btn-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "pause-circle",
+			"title": "pause-circle",
+			"className": "bi bi-pause-circle",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "pause-circle-fill",
+			"title": "pause-circle-fill",
+			"className": "bi bi-pause-circle-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "pause-fill",
+			"title": "pause-fill",
+			"className": "bi bi-pause-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "paypal",
+			"title": "paypal",
+			"className": "bi bi-paypal",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "pc",
+			"title": "pc",
+			"className": "bi bi-pc",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "pc-display",
+			"title": "pc-display",
+			"className": "bi bi-pc-display",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "pc-display-horizontal",
+			"title": "pc-display-horizontal",
+			"className": "bi bi-pc-display-horizontal",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "pc-horizontal",
+			"title": "pc-horizontal",
+			"className": "bi bi-pc-horizontal",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "pci-card",
+			"title": "pci-card",
+			"className": "bi bi-pci-card",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "pci-card-network",
+			"title": "pci-card-network",
+			"className": "bi bi-pci-card-network",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "pci-card-sound",
+			"title": "pci-card-sound",
+			"className": "bi bi-pci-card-sound",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "peace",
+			"title": "peace",
+			"className": "bi bi-peace",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "peace-fill",
+			"title": "peace-fill",
+			"className": "bi bi-peace-fill",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "pen",
+			"title": "pen",
+			"className": "bi bi-pen",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "pen-fill",
+			"title": "pen-fill",
+			"className": "bi bi-pen-fill",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "pencil",
+			"title": "pencil",
+			"className": "bi bi-pencil",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "pencil-fill",
+			"title": "pencil-fill",
+			"className": "bi bi-pencil-fill",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "pencil-square",
+			"title": "pencil-square",
+			"className": "bi bi-pencil-square",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "pentagon",
+			"title": "pentagon",
+			"className": "bi bi-pentagon",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "pentagon-fill",
+			"title": "pentagon-fill",
+			"className": "bi bi-pentagon-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "pentagon-half",
+			"title": "pentagon-half",
+			"className": "bi bi-pentagon-half",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "people",
+			"title": "people",
+			"className": "bi bi-people",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-circle",
+			"title": "person-circle",
+			"className": "bi bi-person-circle",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "people-fill",
+			"title": "people-fill",
+			"className": "bi bi-people-fill",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "percent",
+			"title": "percent",
+			"className": "bi bi-percent",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "person",
+			"title": "person",
+			"className": "bi bi-person",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-add",
+			"title": "person-add",
+			"className": "bi bi-person-add",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-arms-up",
+			"title": "person-arms-up",
+			"className": "bi bi-person-arms-up",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-badge",
+			"title": "person-badge",
+			"className": "bi bi-person-badge",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-badge-fill",
+			"title": "person-badge-fill",
+			"className": "bi bi-person-badge-fill",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-bounding-box",
+			"title": "person-bounding-box",
+			"className": "bi bi-person-bounding-box",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-check",
+			"title": "person-check",
+			"className": "bi bi-person-check",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-check-fill",
+			"title": "person-check-fill",
+			"className": "bi bi-person-check-fill",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-dash",
+			"title": "person-dash",
+			"className": "bi bi-person-dash",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-dash-fill",
+			"title": "person-dash-fill",
+			"className": "bi bi-person-dash-fill",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-down",
+			"title": "person-down",
+			"className": "bi bi-person-down",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-exclamation",
+			"title": "person-exclamation",
+			"className": "bi bi-person-exclamation",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-fill",
+			"title": "person-fill",
+			"className": "bi bi-person-fill",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-fill-add",
+			"title": "person-fill-add",
+			"className": "bi bi-person-fill-add",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-fill-check",
+			"title": "person-fill-check",
+			"className": "bi bi-person-fill-check",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-fill-dash",
+			"title": "person-fill-dash",
+			"className": "bi bi-person-fill-dash",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-fill-down",
+			"title": "person-fill-down",
+			"className": "bi bi-person-fill-down",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-fill-exclamation",
+			"title": "person-fill-exclamation",
+			"className": "bi bi-person-fill-exclamation",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-fill-gear",
+			"title": "person-fill-gear",
+			"className": "bi bi-person-fill-gear",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-fill-lock",
+			"title": "person-fill-lock",
+			"className": "bi bi-person-fill-lock",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-fill-slash",
+			"title": "person-fill-slash",
+			"className": "bi bi-person-fill-slash",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-fill-up",
+			"title": "person-fill-up",
+			"className": "bi bi-person-fill-up",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-fill-x",
+			"title": "person-fill-x",
+			"className": "bi bi-person-fill-x",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-gear",
+			"title": "person-gear",
+			"className": "bi bi-person-gear",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-heart",
+			"title": "person-heart",
+			"className": "bi bi-person-heart",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-hearts",
+			"title": "person-hearts",
+			"className": "bi bi-person-hearts",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-lines-fill",
+			"title": "person-lines-fill",
+			"className": "bi bi-person-lines-fill",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-lock",
+			"title": "person-lock",
+			"className": "bi bi-person-lock",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-plus",
+			"title": "person-plus",
+			"className": "bi bi-person-plus",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-plus-fill",
+			"title": "person-plus-fill",
+			"className": "bi bi-person-plus-fill",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-raised-hand",
+			"title": "person-raised-hand",
+			"className": "bi bi-person-raised-hand",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-rolodex",
+			"title": "person-rolodex",
+			"className": "bi bi-person-rolodex",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-slash",
+			"title": "person-slash",
+			"className": "bi bi-person-slash",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-square",
+			"title": "person-square",
+			"className": "bi bi-person-square",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-standing",
+			"title": "person-standing",
+			"className": "bi bi-person-standing",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-standing-dress",
+			"title": "person-standing-dress",
+			"className": "bi bi-person-standing-dress",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-up",
+			"title": "person-up",
+			"className": "bi bi-person-up",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-vcard",
+			"title": "person-vcard",
+			"className": "bi bi-person-vcard",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-vcard-fill",
+			"title": "person-vcard-fill",
+			"className": "bi bi-person-vcard-fill",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-video",
+			"title": "person-video",
+			"className": "bi bi-person-video",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-video2",
+			"title": "person-video2",
+			"className": "bi bi-person-video2",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-video3",
+			"title": "person-video3",
+			"className": "bi bi-person-video3",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-walking",
+			"title": "person-walking",
+			"className": "bi bi-person-walking",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-wheelchair",
+			"title": "person-wheelchair",
+			"className": "bi bi-person-wheelchair",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-workspace",
+			"title": "person-workspace",
+			"className": "bi bi-person-workspace",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-x",
+			"title": "person-x",
+			"className": "bi bi-person-x",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "person-x-fill",
+			"title": "person-x-fill",
+			"className": "bi bi-person-x-fill",
+			"type": "bi",
+			"categories": [
+				"people"
+			]
+		},
+		{
+			"name": "phone",
+			"title": "phone",
+			"className": "bi bi-phone",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "phone-fill",
+			"title": "phone-fill",
+			"className": "bi bi-phone-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "phone-flip",
+			"title": "phone-flip",
+			"className": "bi bi-phone-flip",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "phone-landscape",
+			"title": "phone-landscape",
+			"className": "bi bi-phone-landscape",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "phone-landscape-fill",
+			"title": "phone-landscape-fill",
+			"className": "bi bi-phone-landscape-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "phone-vibrate",
+			"title": "phone-vibrate",
+			"className": "bi bi-phone-vibrate",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "phone-vibrate-fill",
+			"title": "phone-vibrate-fill",
+			"className": "bi bi-phone-vibrate-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "pie-chart",
+			"title": "pie-chart",
+			"className": "bi bi-pie-chart",
+			"type": "bi",
+			"categories": [
+				"data"
+			]
+		},
+		{
+			"name": "pie-chart-fill",
+			"title": "pie-chart-fill",
+			"className": "bi bi-pie-chart-fill",
+			"type": "bi",
+			"categories": [
+				"data"
+			]
+		},
+		{
+			"name": "piggy-bank",
+			"title": "piggy-bank",
+			"className": "bi bi-piggy-bank",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "piggy-bank-fill",
+			"title": "piggy-bank-fill",
+			"className": "bi bi-piggy-bank-fill",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "pin",
+			"title": "pin",
+			"className": "bi bi-pin",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "pin-angle",
+			"title": "pin-angle",
+			"className": "bi bi-pin-angle",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "pin-angle-fill",
+			"title": "pin-angle-fill",
+			"className": "bi bi-pin-angle-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "pin-fill",
+			"title": "pin-fill",
+			"className": "bi bi-pin-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "pin-map",
+			"title": "pin-map",
+			"className": "bi bi-pin-map",
+			"type": "bi",
+			"categories": [
+				"geo"
+			]
+		},
+		{
+			"name": "pin-map-fill",
+			"title": "pin-map-fill",
+			"className": "bi bi-pin-map-fill",
+			"type": "bi",
+			"categories": [
+				"geo"
+			]
+		},
+		{
+			"name": "pinterest",
+			"title": "pinterest",
+			"className": "bi bi-pinterest",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "pip",
+			"title": "pip",
+			"className": "bi bi-pip",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "pip-fill",
+			"title": "pip-fill",
+			"className": "bi bi-pip-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "play",
+			"title": "play",
+			"className": "bi bi-play",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "play-btn",
+			"title": "play-btn",
+			"className": "bi bi-play-btn",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "play-btn-fill",
+			"title": "play-btn-fill",
+			"className": "bi bi-play-btn-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "play-circle",
+			"title": "play-circle",
+			"className": "bi bi-play-circle",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "play-circle-fill",
+			"title": "play-circle-fill",
+			"className": "bi bi-play-circle-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "play-fill",
+			"title": "play-fill",
+			"className": "bi bi-play-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "playstation",
+			"title": "playstation",
+			"className": "bi bi-playstation",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "plug",
+			"title": "plug",
+			"className": "bi bi-plug",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "plug-fill",
+			"title": "plug-fill",
+			"className": "bi bi-plug-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "plugin",
+			"title": "plugin",
+			"className": "bi bi-plugin",
+			"type": "bi",
+			"categories": [
+				"ui"
+			]
+		},
+		{
+			"name": "plus",
+			"title": "plus",
+			"className": "bi bi-plus",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "plus-circle",
+			"title": "plus-circle",
+			"className": "bi bi-plus-circle",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "plus-circle-dotted",
+			"title": "plus-circle-dotted",
+			"className": "bi bi-plus-circle-dotted",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "plus-circle-fill",
+			"title": "plus-circle-fill",
+			"className": "bi bi-plus-circle-fill",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "plus-lg",
+			"title": "plus-lg",
+			"className": "bi bi-plus-lg",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "plus-slash-minus",
+			"title": "plus-slash-minus",
+			"className": "bi bi-plus-slash-minus",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "plus-square",
+			"title": "plus-square",
+			"className": "bi bi-plus-square",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "plus-square-dotted",
+			"title": "plus-square-dotted",
+			"className": "bi bi-plus-square-dotted",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "plus-square-fill",
+			"title": "plus-square-fill",
+			"className": "bi bi-plus-square-fill",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "postage",
+			"title": "postage",
+			"className": "bi bi-postage",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "postage-fill",
+			"title": "postage-fill",
+			"className": "bi bi-postage-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "postage-heart",
+			"title": "postage-heart",
+			"className": "bi bi-postage-heart",
+			"type": "bi",
+			"categories": [
+				"real world love"
+			]
+		},
+		{
+			"name": "postage-heart-fill",
+			"title": "postage-heart-fill",
+			"className": "bi bi-postage-heart-fill",
+			"type": "bi",
+			"categories": [
+				"real world love"
+			]
+		},
+		{
+			"name": "postcard",
+			"title": "postcard",
+			"className": "bi bi-postcard",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "postcard-fill",
+			"title": "postcard-fill",
+			"className": "bi bi-postcard-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "postcard-heart",
+			"title": "postcard-heart",
+			"className": "bi bi-postcard-heart",
+			"type": "bi",
+			"categories": [
+				"real world love"
+			]
+		},
+		{
+			"name": "postcard-heart-fill",
+			"title": "postcard-heart-fill",
+			"className": "bi bi-postcard-heart-fill",
+			"type": "bi",
+			"categories": [
+				"real world love"
+			]
+		},
+		{
+			"name": "power",
+			"title": "power",
+			"className": "bi bi-power",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "prescription",
+			"title": "prescription",
+			"className": "bi bi-prescription",
+			"type": "bi",
+			"categories": [
+				"medical"
+			]
+		},
+		{
+			"name": "prescription2",
+			"title": "prescription2",
+			"className": "bi bi-prescription2",
+			"type": "bi",
+			"categories": [
+				"medical"
+			]
+		},
+		{
+			"name": "printer",
+			"title": "printer",
+			"className": "bi bi-printer",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "printer-fill",
+			"title": "printer-fill",
+			"className": "bi bi-printer-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "projector",
+			"title": "projector",
+			"className": "bi bi-projector",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "projector-fill",
+			"title": "projector-fill",
+			"className": "bi bi-projector-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "puzzle",
+			"title": "puzzle",
+			"className": "bi bi-puzzle",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "puzzle-fill",
+			"title": "puzzle-fill",
+			"className": "bi bi-puzzle-fill",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "qr-code",
+			"title": "qr-code",
+			"className": "bi bi-qr-code",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "qr-code-scan",
+			"title": "qr-code-scan",
+			"className": "bi bi-qr-code-scan",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "question",
+			"title": "question",
+			"className": "bi bi-question",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "question-circle",
+			"title": "question-circle",
+			"className": "bi bi-question-circle",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "question-diamond",
+			"title": "question-diamond",
+			"className": "bi bi-question-diamond",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "question-diamond-fill",
+			"title": "question-diamond-fill",
+			"className": "bi bi-question-diamond-fill",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "question-circle-fill",
+			"title": "question-circle-fill",
+			"className": "bi bi-question-circle-fill",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "question-lg",
+			"title": "question-lg",
+			"className": "bi bi-question-lg",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "question-octagon",
+			"title": "question-octagon",
+			"className": "bi bi-question-octagon",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "question-octagon-fill",
+			"title": "question-octagon-fill",
+			"className": "bi bi-question-octagon-fill",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "question-square",
+			"title": "question-square",
+			"className": "bi bi-question-square",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "question-square-fill",
+			"title": "question-square-fill",
+			"className": "bi bi-question-square-fill",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "quora",
+			"title": "quora",
+			"className": "bi bi-quora",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "quote",
+			"title": "quote",
+			"className": "bi bi-quote",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "r-circle",
+			"title": "r-circle",
+			"className": "bi bi-r-circle",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "r-circle-fill",
+			"title": "r-circle-fill",
+			"className": "bi bi-r-circle-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "r-square",
+			"title": "r-square",
+			"className": "bi bi-r-square",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "r-square-fill",
+			"title": "r-square-fill",
+			"className": "bi bi-r-square-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "radar",
+			"title": "radar",
+			"className": "bi bi-radar",
+			"type": "bi",
+			"categories": [
+				"geo"
+			]
+		},
+		{
+			"name": "radioactive",
+			"title": "radioactive",
+			"className": "bi bi-radioactive",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "rainbow",
+			"title": "rainbow",
+			"className": "bi bi-rainbow",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "receipt",
+			"title": "receipt",
+			"className": "bi bi-receipt",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "receipt-cutoff",
+			"title": "receipt-cutoff",
+			"className": "bi bi-receipt-cutoff",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "reception-0",
+			"title": "reception-0",
+			"className": "bi bi-reception-0",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "reception-1",
+			"title": "reception-1",
+			"className": "bi bi-reception-1",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "reception-2",
+			"title": "reception-2",
+			"className": "bi bi-reception-2",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "reception-3",
+			"title": "reception-3",
+			"className": "bi bi-reception-3",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "reception-4",
+			"title": "reception-4",
+			"className": "bi bi-reception-4",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "record",
+			"title": "record",
+			"className": "bi bi-record",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "record-btn",
+			"title": "record-btn",
+			"className": "bi bi-record-btn",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "record-btn-fill",
+			"title": "record-btn-fill",
+			"className": "bi bi-record-btn-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "record-circle",
+			"title": "record-circle",
+			"className": "bi bi-record-circle",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "record-circle-fill",
+			"title": "record-circle-fill",
+			"className": "bi bi-record-circle-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "record-fill",
+			"title": "record-fill",
+			"className": "bi bi-record-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "record2",
+			"title": "record2",
+			"className": "bi bi-record2",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "record2-fill",
+			"title": "record2-fill",
+			"className": "bi bi-record2-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "recycle",
+			"title": "recycle",
+			"className": "bi bi-recycle",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "reddit",
+			"title": "reddit",
+			"className": "bi bi-reddit",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "regex",
+			"title": "regex",
+			"className": "bi bi-regex",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "repeat",
+			"title": "repeat",
+			"className": "bi bi-repeat",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "repeat-1",
+			"title": "repeat-1",
+			"className": "bi bi-repeat-1",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "reply",
+			"title": "reply",
+			"className": "bi bi-reply",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "reply-all",
+			"title": "reply-all",
+			"className": "bi bi-reply-all",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "reply-all-fill",
+			"title": "reply-all-fill",
+			"className": "bi bi-reply-all-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "reply-fill",
+			"title": "reply-fill",
+			"className": "bi bi-reply-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "rewind",
+			"title": "rewind",
+			"className": "bi bi-rewind",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "rewind-btn",
+			"title": "rewind-btn",
+			"className": "bi bi-rewind-btn",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "rewind-btn-fill",
+			"title": "rewind-btn-fill",
+			"className": "bi bi-rewind-btn-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "rewind-circle",
+			"title": "rewind-circle",
+			"className": "bi bi-rewind-circle",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "rewind-circle-fill",
+			"title": "rewind-circle-fill",
+			"className": "bi bi-rewind-circle-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "rewind-fill",
+			"title": "rewind-fill",
+			"className": "bi bi-rewind-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "robot",
+			"title": "robot",
+			"className": "bi bi-robot",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "rocket",
+			"title": "rocket",
+			"className": "bi bi-rocket",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "rocket-fill",
+			"title": "rocket-fill",
+			"className": "bi bi-rocket-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "rocket-takeoff",
+			"title": "rocket-takeoff",
+			"className": "bi bi-rocket-takeoff",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "rocket-takeoff-fill",
+			"title": "rocket-takeoff-fill",
+			"className": "bi bi-rocket-takeoff-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "router",
+			"title": "router",
+			"className": "bi bi-router",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "router-fill",
+			"title": "router-fill",
+			"className": "bi bi-router-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "rss",
+			"title": "rss",
+			"className": "bi bi-rss",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "rss-fill",
+			"title": "rss-fill",
+			"className": "bi bi-rss-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "rulers",
+			"title": "rulers",
+			"className": "bi bi-rulers",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "safe",
+			"title": "safe",
+			"className": "bi bi-safe",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "safe-fill",
+			"title": "safe-fill",
+			"className": "bi bi-safe-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "safe2",
+			"title": "safe2",
+			"className": "bi bi-safe2",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "safe2-fill",
+			"title": "safe2-fill",
+			"className": "bi bi-safe2-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "save",
+			"title": "save",
+			"className": "bi bi-save",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "save-fill",
+			"title": "save-fill",
+			"className": "bi bi-save-fill",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "save2",
+			"title": "save2",
+			"className": "bi bi-save2",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "save2-fill",
+			"title": "save2-fill",
+			"className": "bi bi-save2-fill",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "scissors",
+			"title": "scissors",
+			"className": "bi bi-scissors",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "scooter",
+			"title": "scooter",
+			"className": "bi bi-scooter",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "screwdriver",
+			"title": "screwdriver",
+			"className": "bi bi-screwdriver",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "sd-card",
+			"title": "sd-card",
+			"className": "bi bi-sd-card",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "sd-card-fill",
+			"title": "sd-card-fill",
+			"className": "bi bi-sd-card-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "search",
+			"title": "search",
+			"className": "bi bi-search",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "search-heart",
+			"title": "search-heart",
+			"className": "bi bi-search-heart",
+			"type": "bi",
+			"categories": [
+				"communications love"
+			]
+		},
+		{
+			"name": "search-heart-fill",
+			"title": "search-heart-fill",
+			"className": "bi bi-search-heart-fill",
+			"type": "bi",
+			"categories": [
+				"communications love"
+			]
+		},
+		{
+			"name": "segmented-nav",
+			"title": "segmented-nav",
+			"className": "bi bi-segmented-nav",
+			"type": "bi",
+			"categories": [
+				"controls"
+			]
+		},
+		{
+			"name": "send",
+			"title": "send",
+			"className": "bi bi-send",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "send-arrow-down",
+			"title": "send-arrow-down",
+			"className": "bi bi-send-arrow-down",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "send-arrow-down-fill",
+			"title": "send-arrow-down-fill",
+			"className": "bi bi-send-arrow-down-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "send-arrow-up",
+			"title": "send-arrow-up",
+			"className": "bi bi-send-arrow-up",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "send-arrow-up-fill",
+			"title": "send-arrow-up-fill",
+			"className": "bi bi-send-arrow-up-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "send-check",
+			"title": "send-check",
+			"className": "bi bi-send-check",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "send-check-fill",
+			"title": "send-check-fill",
+			"className": "bi bi-send-check-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "send-dash",
+			"title": "send-dash",
+			"className": "bi bi-send-dash",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "send-dash-fill",
+			"title": "send-dash-fill",
+			"className": "bi bi-send-dash-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "send-exclamation",
+			"title": "send-exclamation",
+			"className": "bi bi-send-exclamation",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "send-exclamation-fill",
+			"title": "send-exclamation-fill",
+			"className": "bi bi-send-exclamation-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "send-fill",
+			"title": "send-fill",
+			"className": "bi bi-send-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "send-plus",
+			"title": "send-plus",
+			"className": "bi bi-send-plus",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "send-plus-fill",
+			"title": "send-plus-fill",
+			"className": "bi bi-send-plus-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "send-slash",
+			"title": "send-slash",
+			"className": "bi bi-send-slash",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "send-slash-fill",
+			"title": "send-slash-fill",
+			"className": "bi bi-send-slash-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "send-x",
+			"title": "send-x",
+			"className": "bi bi-send-x",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "send-x-fill",
+			"title": "send-x-fill",
+			"className": "bi bi-send-x-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "server",
+			"title": "server",
+			"className": "bi bi-server",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "shadows",
+			"title": "shadows",
+			"className": "bi bi-shadows",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "share",
+			"title": "share",
+			"className": "bi bi-share",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "share-fill",
+			"title": "share-fill",
+			"className": "bi bi-share-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "shield",
+			"title": "shield",
+			"className": "bi bi-shield",
+			"type": "bi",
+			"categories": [
+				"security"
+			]
+		},
+		{
+			"name": "shield-check",
+			"title": "shield-check",
+			"className": "bi bi-shield-check",
+			"type": "bi",
+			"categories": [
+				"security"
+			]
+		},
+		{
+			"name": "shield-exclamation",
+			"title": "shield-exclamation",
+			"className": "bi bi-shield-exclamation",
+			"type": "bi",
+			"categories": [
+				"security"
+			]
+		},
+		{
+			"name": "shield-fill",
+			"title": "shield-fill",
+			"className": "bi bi-shield-fill",
+			"type": "bi",
+			"categories": [
+				"security"
+			]
+		},
+		{
+			"name": "shield-fill-check",
+			"title": "shield-fill-check",
+			"className": "bi bi-shield-fill-check",
+			"type": "bi",
+			"categories": [
+				"security"
+			]
+		},
+		{
+			"name": "shield-fill-exclamation",
+			"title": "shield-fill-exclamation",
+			"className": "bi bi-shield-fill-exclamation",
+			"type": "bi",
+			"categories": [
+				"security"
+			]
+		},
+		{
+			"name": "shield-fill-minus",
+			"title": "shield-fill-minus",
+			"className": "bi bi-shield-fill-minus",
+			"type": "bi",
+			"categories": [
+				"security"
+			]
+		},
+		{
+			"name": "shield-fill-plus",
+			"title": "shield-fill-plus",
+			"className": "bi bi-shield-fill-plus",
+			"type": "bi",
+			"categories": [
+				"security"
+			]
+		},
+		{
+			"name": "shield-fill-x",
+			"title": "shield-fill-x",
+			"className": "bi bi-shield-fill-x",
+			"type": "bi",
+			"categories": [
+				"security"
+			]
+		},
+		{
+			"name": "shield-lock",
+			"title": "shield-lock",
+			"className": "bi bi-shield-lock",
+			"type": "bi",
+			"categories": [
+				"security"
+			]
+		},
+		{
+			"name": "shield-lock-fill",
+			"title": "shield-lock-fill",
+			"className": "bi bi-shield-lock-fill",
+			"type": "bi",
+			"categories": [
+				"security"
+			]
+		},
+		{
+			"name": "shield-minus",
+			"title": "shield-minus",
+			"className": "bi bi-shield-minus",
+			"type": "bi",
+			"categories": [
+				"security"
+			]
+		},
+		{
+			"name": "shield-plus",
+			"title": "shield-plus",
+			"className": "bi bi-shield-plus",
+			"type": "bi",
+			"categories": [
+				"security"
+			]
+		},
+		{
+			"name": "shield-shaded",
+			"title": "shield-shaded",
+			"className": "bi bi-shield-shaded",
+			"type": "bi",
+			"categories": [
+				"security"
+			]
+		},
+		{
+			"name": "shield-slash",
+			"title": "shield-slash",
+			"className": "bi bi-shield-slash",
+			"type": "bi",
+			"categories": [
+				"security"
+			]
+		},
+		{
+			"name": "shield-slash-fill",
+			"title": "shield-slash-fill",
+			"className": "bi bi-shield-slash-fill",
+			"type": "bi",
+			"categories": [
+				"security"
+			]
+		},
+		{
+			"name": "shield-x",
+			"title": "shield-x",
+			"className": "bi bi-shield-x",
+			"type": "bi",
+			"categories": [
+				"security"
+			]
+		},
+		{
+			"name": "shift",
+			"title": "shift",
+			"className": "bi bi-shift",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "shift-fill",
+			"title": "shift-fill",
+			"className": "bi bi-shift-fill",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "shop",
+			"title": "shop",
+			"className": "bi bi-shop",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "shop-window",
+			"title": "shop-window",
+			"className": "bi bi-shop-window",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "shuffle",
+			"title": "shuffle",
+			"className": "bi bi-shuffle",
+			"type": "bi",
+			"categories": [
+				"arrows"
+			]
+		},
+		{
+			"name": "sign-dead-end",
+			"title": "sign-dead-end",
+			"className": "bi bi-sign-dead-end",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-dead-end-fill",
+			"title": "sign-dead-end-fill",
+			"className": "bi bi-sign-dead-end-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-do-not-enter",
+			"title": "sign-do-not-enter",
+			"className": "bi bi-sign-do-not-enter",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-do-not-enter-fill",
+			"title": "sign-do-not-enter-fill",
+			"className": "bi bi-sign-do-not-enter-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-intersection",
+			"title": "sign-intersection",
+			"className": "bi bi-sign-intersection",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-intersection-fill",
+			"title": "sign-intersection-fill",
+			"className": "bi bi-sign-intersection-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-intersection-side",
+			"title": "sign-intersection-side",
+			"className": "bi bi-sign-intersection-side",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-intersection-side-fill",
+			"title": "sign-intersection-side-fill",
+			"className": "bi bi-sign-intersection-side-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-intersection-t",
+			"title": "sign-intersection-t",
+			"className": "bi bi-sign-intersection-t",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-intersection-t-fill",
+			"title": "sign-intersection-t-fill",
+			"className": "bi bi-sign-intersection-t-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-intersection-y",
+			"title": "sign-intersection-y",
+			"className": "bi bi-sign-intersection-y",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-intersection-y-fill",
+			"title": "sign-intersection-y-fill",
+			"className": "bi bi-sign-intersection-y-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-merge-left",
+			"title": "sign-merge-left",
+			"className": "bi bi-sign-merge-left",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-merge-left-fill",
+			"title": "sign-merge-left-fill",
+			"className": "bi bi-sign-merge-left-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-merge-right",
+			"title": "sign-merge-right",
+			"className": "bi bi-sign-merge-right",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-merge-right-fill",
+			"title": "sign-merge-right-fill",
+			"className": "bi bi-sign-merge-right-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-no-left-turn",
+			"title": "sign-no-left-turn",
+			"className": "bi bi-sign-no-left-turn",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-no-left-turn-fill",
+			"title": "sign-no-left-turn-fill",
+			"className": "bi bi-sign-no-left-turn-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-no-parking",
+			"title": "sign-no-parking",
+			"className": "bi bi-sign-no-parking",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-no-parking-fill",
+			"title": "sign-no-parking-fill",
+			"className": "bi bi-sign-no-parking-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-no-right-turn",
+			"title": "sign-no-right-turn",
+			"className": "bi bi-sign-no-right-turn",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-no-right-turn-fill",
+			"title": "sign-no-right-turn-fill",
+			"className": "bi bi-sign-no-right-turn-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-railroad",
+			"title": "sign-railroad",
+			"className": "bi bi-sign-railroad",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-railroad-fill",
+			"title": "sign-railroad-fill",
+			"className": "bi bi-sign-railroad-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-stop",
+			"title": "sign-stop",
+			"className": "bi bi-sign-stop",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-stop-fill",
+			"title": "sign-stop-fill",
+			"className": "bi bi-sign-stop-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-stop-lights",
+			"title": "sign-stop-lights",
+			"className": "bi bi-sign-stop-lights",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-stop-lights-fill",
+			"title": "sign-stop-lights-fill",
+			"className": "bi bi-sign-stop-lights-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-turn-left",
+			"title": "sign-turn-left",
+			"className": "bi bi-sign-turn-left",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-turn-left-fill",
+			"title": "sign-turn-left-fill",
+			"className": "bi bi-sign-turn-left-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-turn-right",
+			"title": "sign-turn-right",
+			"className": "bi bi-sign-turn-right",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-turn-right-fill",
+			"title": "sign-turn-right-fill",
+			"className": "bi bi-sign-turn-right-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-turn-slight-left",
+			"title": "sign-turn-slight-left",
+			"className": "bi bi-sign-turn-slight-left",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-turn-slight-left-fill",
+			"title": "sign-turn-slight-left-fill",
+			"className": "bi bi-sign-turn-slight-left-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-turn-slight-right",
+			"title": "sign-turn-slight-right",
+			"className": "bi bi-sign-turn-slight-right",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-turn-slight-right-fill",
+			"title": "sign-turn-slight-right-fill",
+			"className": "bi bi-sign-turn-slight-right-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-yield",
+			"title": "sign-yield",
+			"className": "bi bi-sign-yield",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "sign-yield-fill",
+			"title": "sign-yield-fill",
+			"className": "bi bi-sign-yield-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "signal",
+			"title": "signal",
+			"className": "bi bi-signal",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "signpost",
+			"title": "signpost",
+			"className": "bi bi-signpost",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "signpost-2",
+			"title": "signpost-2",
+			"className": "bi bi-signpost-2",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "signpost-2-fill",
+			"title": "signpost-2-fill",
+			"className": "bi bi-signpost-2-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "signpost-fill",
+			"title": "signpost-fill",
+			"className": "bi bi-signpost-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "signpost-split",
+			"title": "signpost-split",
+			"className": "bi bi-signpost-split",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "signpost-split-fill",
+			"title": "signpost-split-fill",
+			"className": "bi bi-signpost-split-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "sim",
+			"title": "sim",
+			"className": "bi bi-sim",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "sim-fill",
+			"title": "sim-fill",
+			"className": "bi bi-sim-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "sim-slash",
+			"title": "sim-slash",
+			"className": "bi bi-sim-slash",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "sim-slash-fill",
+			"title": "sim-slash-fill",
+			"className": "bi bi-sim-slash-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "sina-weibo",
+			"title": "sina-weibo",
+			"className": "bi bi-sina-weibo",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "skip-backward",
+			"title": "skip-backward",
+			"className": "bi bi-skip-backward",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skip-backward-btn",
+			"title": "skip-backward-btn",
+			"className": "bi bi-skip-backward-btn",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skip-backward-btn-fill",
+			"title": "skip-backward-btn-fill",
+			"className": "bi bi-skip-backward-btn-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skip-backward-circle",
+			"title": "skip-backward-circle",
+			"className": "bi bi-skip-backward-circle",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skip-backward-circle-fill",
+			"title": "skip-backward-circle-fill",
+			"className": "bi bi-skip-backward-circle-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skip-backward-fill",
+			"title": "skip-backward-fill",
+			"className": "bi bi-skip-backward-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skip-end",
+			"title": "skip-end",
+			"className": "bi bi-skip-end",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skip-end-btn",
+			"title": "skip-end-btn",
+			"className": "bi bi-skip-end-btn",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skip-end-btn-fill",
+			"title": "skip-end-btn-fill",
+			"className": "bi bi-skip-end-btn-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skip-end-circle",
+			"title": "skip-end-circle",
+			"className": "bi bi-skip-end-circle",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skip-end-circle-fill",
+			"title": "skip-end-circle-fill",
+			"className": "bi bi-skip-end-circle-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skip-end-fill",
+			"title": "skip-end-fill",
+			"className": "bi bi-skip-end-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skip-forward",
+			"title": "skip-forward",
+			"className": "bi bi-skip-forward",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skip-forward-btn",
+			"title": "skip-forward-btn",
+			"className": "bi bi-skip-forward-btn",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skip-forward-btn-fill",
+			"title": "skip-forward-btn-fill",
+			"className": "bi bi-skip-forward-btn-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skip-forward-circle",
+			"title": "skip-forward-circle",
+			"className": "bi bi-skip-forward-circle",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skip-forward-circle-fill",
+			"title": "skip-forward-circle-fill",
+			"className": "bi bi-skip-forward-circle-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skip-forward-fill",
+			"title": "skip-forward-fill",
+			"className": "bi bi-skip-forward-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skip-start",
+			"title": "skip-start",
+			"className": "bi bi-skip-start",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skip-start-btn",
+			"title": "skip-start-btn",
+			"className": "bi bi-skip-start-btn",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skip-start-btn-fill",
+			"title": "skip-start-btn-fill",
+			"className": "bi bi-skip-start-btn-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skip-start-circle",
+			"title": "skip-start-circle",
+			"className": "bi bi-skip-start-circle",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skip-start-circle-fill",
+			"title": "skip-start-circle-fill",
+			"className": "bi bi-skip-start-circle-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skip-start-fill",
+			"title": "skip-start-fill",
+			"className": "bi bi-skip-start-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "skype",
+			"title": "skype",
+			"className": "bi bi-skype",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "slack",
+			"title": "slack",
+			"className": "bi bi-slack",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "slash",
+			"title": "slash",
+			"className": "bi bi-slash",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "slash-circle-fill",
+			"title": "slash-circle-fill",
+			"className": "bi bi-slash-circle-fill",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "slash-lg",
+			"title": "slash-lg",
+			"className": "bi bi-slash-lg",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "slash-square",
+			"title": "slash-square",
+			"className": "bi bi-slash-square",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "slash-square-fill",
+			"title": "slash-square-fill",
+			"className": "bi bi-slash-square-fill",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "sliders",
+			"title": "sliders",
+			"className": "bi bi-sliders",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "sliders2",
+			"title": "sliders2",
+			"className": "bi bi-sliders2",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "sliders2-vertical",
+			"title": "sliders2-vertical",
+			"className": "bi bi-sliders2-vertical",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "smartwatch",
+			"title": "smartwatch",
+			"className": "bi bi-smartwatch",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "snapchat",
+			"title": "snapchat",
+			"className": "bi bi-snapchat",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "snow",
+			"title": "snow",
+			"className": "bi bi-snow",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "snow2",
+			"title": "snow2",
+			"className": "bi bi-snow2",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "snow3",
+			"title": "snow3",
+			"className": "bi bi-snow3",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "sort-alpha-down",
+			"title": "sort-alpha-down",
+			"className": "bi bi-sort-alpha-down",
+			"type": "bi",
+			"categories": [
+				"sort and filter"
+			]
+		},
+		{
+			"name": "sort-alpha-down-alt",
+			"title": "sort-alpha-down-alt",
+			"className": "bi bi-sort-alpha-down-alt",
+			"type": "bi",
+			"categories": [
+				"sort and filter"
+			]
+		},
+		{
+			"name": "sort-alpha-up",
+			"title": "sort-alpha-up",
+			"className": "bi bi-sort-alpha-up",
+			"type": "bi",
+			"categories": [
+				"sort and filter"
+			]
+		},
+		{
+			"name": "sort-alpha-up-alt",
+			"title": "sort-alpha-up-alt",
+			"className": "bi bi-sort-alpha-up-alt",
+			"type": "bi",
+			"categories": [
+				"sort and filter"
+			]
+		},
+		{
+			"name": "sort-down",
+			"title": "sort-down",
+			"className": "bi bi-sort-down",
+			"type": "bi",
+			"categories": [
+				"sort and filter"
+			]
+		},
+		{
+			"name": "sort-down-alt",
+			"title": "sort-down-alt",
+			"className": "bi bi-sort-down-alt",
+			"type": "bi",
+			"categories": [
+				"sort and filter"
+			]
+		},
+		{
+			"name": "sort-numeric-down",
+			"title": "sort-numeric-down",
+			"className": "bi bi-sort-numeric-down",
+			"type": "bi",
+			"categories": [
+				"sort and filter"
+			]
+		},
+		{
+			"name": "sort-numeric-down-alt",
+			"title": "sort-numeric-down-alt",
+			"className": "bi bi-sort-numeric-down-alt",
+			"type": "bi",
+			"categories": [
+				"sort and filter"
+			]
+		},
+		{
+			"name": "sort-numeric-up",
+			"title": "sort-numeric-up",
+			"className": "bi bi-sort-numeric-up",
+			"type": "bi",
+			"categories": [
+				"sort and filter"
+			]
+		},
+		{
+			"name": "sort-numeric-up-alt",
+			"title": "sort-numeric-up-alt",
+			"className": "bi bi-sort-numeric-up-alt",
+			"type": "bi",
+			"categories": [
+				"sort and filter"
+			]
+		},
+		{
+			"name": "sort-up",
+			"title": "sort-up",
+			"className": "bi bi-sort-up",
+			"type": "bi",
+			"categories": [
+				"sort and filter"
+			]
+		},
+		{
+			"name": "sort-up-alt",
+			"title": "sort-up-alt",
+			"className": "bi bi-sort-up-alt",
+			"type": "bi",
+			"categories": [
+				"sort and filter"
+			]
+		},
+		{
+			"name": "soundwave",
+			"title": "soundwave",
+			"className": "bi bi-soundwave",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "sourceforge",
+			"title": "sourceforge",
+			"className": "bi bi-sourceforge",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "speaker",
+			"title": "speaker",
+			"className": "bi bi-speaker",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "speaker-fill",
+			"title": "speaker-fill",
+			"className": "bi bi-speaker-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "speedometer",
+			"title": "speedometer",
+			"className": "bi bi-speedometer",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "speedometer2",
+			"title": "speedometer2",
+			"className": "bi bi-speedometer2",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "spellcheck",
+			"title": "spellcheck",
+			"className": "bi bi-spellcheck",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "spotify",
+			"title": "spotify",
+			"className": "bi bi-spotify",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "square",
+			"title": "square",
+			"className": "bi bi-square",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "square-fill",
+			"title": "square-fill",
+			"className": "bi bi-square-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "square-half",
+			"title": "square-half",
+			"className": "bi bi-square-half",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "stack",
+			"title": "stack",
+			"className": "bi bi-stack",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "stack-overflow",
+			"title": "stack-overflow",
+			"className": "bi bi-stack-overflow",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "star",
+			"title": "star",
+			"className": "bi bi-star",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "star-fill",
+			"title": "star-fill",
+			"className": "bi bi-star-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "star-half",
+			"title": "star-half",
+			"className": "bi bi-star-half",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "stars",
+			"title": "stars",
+			"className": "bi bi-stars",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "steam",
+			"title": "steam",
+			"className": "bi bi-steam",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "stickies",
+			"title": "stickies",
+			"className": "bi bi-stickies",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "stickies-fill",
+			"title": "stickies-fill",
+			"className": "bi bi-stickies-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "sticky",
+			"title": "sticky",
+			"className": "bi bi-sticky",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "sticky-fill",
+			"title": "sticky-fill",
+			"className": "bi bi-sticky-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "stop",
+			"title": "stop",
+			"className": "bi bi-stop",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "stop-btn",
+			"title": "stop-btn",
+			"className": "bi bi-stop-btn",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "stop-btn-fill",
+			"title": "stop-btn-fill",
+			"className": "bi bi-stop-btn-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "stop-circle",
+			"title": "stop-circle",
+			"className": "bi bi-stop-circle",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "stop-circle-fill",
+			"title": "stop-circle-fill",
+			"className": "bi bi-stop-circle-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "stop-fill",
+			"title": "stop-fill",
+			"className": "bi bi-stop-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "stoplights",
+			"title": "stoplights",
+			"className": "bi bi-stoplights",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "stoplights-fill",
+			"title": "stoplights-fill",
+			"className": "bi bi-stoplights-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "stopwatch",
+			"title": "stopwatch",
+			"className": "bi bi-stopwatch",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "stopwatch-fill",
+			"title": "stopwatch-fill",
+			"className": "bi bi-stopwatch-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "strava",
+			"title": "strava",
+			"className": "bi bi-strava",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "stripe",
+			"title": "stripe",
+			"className": "bi bi-stripe",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "subscript",
+			"title": "subscript",
+			"className": "bi bi-subscript",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "substack",
+			"title": "substack",
+			"className": "bi bi-substack",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "subtract",
+			"title": "subtract",
+			"className": "bi bi-subtract",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "suit-club",
+			"title": "suit-club",
+			"className": "bi bi-suit-club",
+			"type": "bi",
+			"categories": [
+				"entertainment"
+			]
+		},
+		{
+			"name": "suit-club-fill",
+			"title": "suit-club-fill",
+			"className": "bi bi-suit-club-fill",
+			"type": "bi",
+			"categories": [
+				"entertainment"
+			]
+		},
+		{
+			"name": "suit-diamond",
+			"title": "suit-diamond",
+			"className": "bi bi-suit-diamond",
+			"type": "bi",
+			"categories": [
+				"entertainment"
+			]
+		},
+		{
+			"name": "suit-diamond-fill",
+			"title": "suit-diamond-fill",
+			"className": "bi bi-suit-diamond-fill",
+			"type": "bi",
+			"categories": [
+				"entertainment"
+			]
+		},
+		{
+			"name": "suit-heart",
+			"title": "suit-heart",
+			"className": "bi bi-suit-heart",
+			"type": "bi",
+			"categories": [
+				"entertainment"
+			]
+		},
+		{
+			"name": "suit-heart-fill",
+			"title": "suit-heart-fill",
+			"className": "bi bi-suit-heart-fill",
+			"type": "bi",
+			"categories": [
+				"entertainment"
+			]
+		},
+		{
+			"name": "suit-spade",
+			"title": "suit-spade",
+			"className": "bi bi-suit-spade",
+			"type": "bi",
+			"categories": [
+				"entertainment"
+			]
+		},
+		{
+			"name": "suit-spade-fill",
+			"title": "suit-spade-fill",
+			"className": "bi bi-suit-spade-fill",
+			"type": "bi",
+			"categories": [
+				"entertainment"
+			]
+		},
+		{
+			"name": "suitcase",
+			"title": "suitcase",
+			"className": "bi bi-suitcase",
+			"type": "bi",
+			"categories": [
+				"travel"
+			]
+		},
+		{
+			"name": "suitcase-fill",
+			"title": "suitcase-fill",
+			"className": "bi bi-suitcase-fill",
+			"type": "bi",
+			"categories": [
+				"travel"
+			]
+		},
+		{
+			"name": "suitcase-lg",
+			"title": "suitcase-lg",
+			"className": "bi bi-suitcase-lg",
+			"type": "bi",
+			"categories": [
+				"travel"
+			]
+		},
+		{
+			"name": "suitcase-lg-fill",
+			"title": "suitcase-lg-fill",
+			"className": "bi bi-suitcase-lg-fill",
+			"type": "bi",
+			"categories": [
+				"travel"
+			]
+		},
+		{
+			"name": "suitcase2",
+			"title": "suitcase2",
+			"className": "bi bi-suitcase2",
+			"type": "bi",
+			"categories": [
+				"travel"
+			]
+		},
+		{
+			"name": "suitcase2-fill",
+			"title": "suitcase2-fill",
+			"className": "bi bi-suitcase2-fill",
+			"type": "bi",
+			"categories": [
+				"travel"
+			]
+		},
+		{
+			"name": "sun",
+			"title": "sun",
+			"className": "bi bi-sun",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "sun-fill",
+			"title": "sun-fill",
+			"className": "bi bi-sun-fill",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "sunglasses",
+			"title": "sunglasses",
+			"className": "bi bi-sunglasses",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "sunrise",
+			"title": "sunrise",
+			"className": "bi bi-sunrise",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "sunrise-fill",
+			"title": "sunrise-fill",
+			"className": "bi bi-sunrise-fill",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "sunset",
+			"title": "sunset",
+			"className": "bi bi-sunset",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "sunset-fill",
+			"title": "sunset-fill",
+			"className": "bi bi-sunset-fill",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "superscript",
+			"title": "superscript",
+			"className": "bi bi-superscript",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "symmetry-horizontal",
+			"title": "symmetry-horizontal",
+			"className": "bi bi-symmetry-horizontal",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "symmetry-vertical",
+			"title": "symmetry-vertical",
+			"className": "bi bi-symmetry-vertical",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "table",
+			"title": "table",
+			"className": "bi bi-table",
+			"type": "bi",
+			"categories": [
+				"files and folders"
+			]
+		},
+		{
+			"name": "tablet",
+			"title": "tablet",
+			"className": "bi bi-tablet",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "tablet-fill",
+			"title": "tablet-fill",
+			"className": "bi bi-tablet-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "tablet-landscape",
+			"title": "tablet-landscape",
+			"className": "bi bi-tablet-landscape",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "tablet-landscape-fill",
+			"title": "tablet-landscape-fill",
+			"className": "bi bi-tablet-landscape-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "tag",
+			"title": "tag",
+			"className": "bi bi-tag",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "tag-fill",
+			"title": "tag-fill",
+			"className": "bi bi-tag-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "tags",
+			"title": "tags",
+			"className": "bi bi-tags",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "tags-fill",
+			"title": "tags-fill",
+			"className": "bi bi-tags-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "taxi-front",
+			"title": "taxi-front",
+			"className": "bi bi-taxi-front",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "taxi-front-fill",
+			"title": "taxi-front-fill",
+			"className": "bi bi-taxi-front-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "telegram",
+			"title": "telegram",
+			"className": "bi bi-telegram",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "telephone",
+			"title": "telephone",
+			"className": "bi bi-telephone",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "telephone-fill",
+			"title": "telephone-fill",
+			"className": "bi bi-telephone-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "telephone-forward",
+			"title": "telephone-forward",
+			"className": "bi bi-telephone-forward",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "telephone-forward-fill",
+			"title": "telephone-forward-fill",
+			"className": "bi bi-telephone-forward-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "telephone-inbound",
+			"title": "telephone-inbound",
+			"className": "bi bi-telephone-inbound",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "telephone-inbound-fill",
+			"title": "telephone-inbound-fill",
+			"className": "bi bi-telephone-inbound-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "telephone-minus",
+			"title": "telephone-minus",
+			"className": "bi bi-telephone-minus",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "telephone-minus-fill",
+			"title": "telephone-minus-fill",
+			"className": "bi bi-telephone-minus-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "telephone-outbound",
+			"title": "telephone-outbound",
+			"className": "bi bi-telephone-outbound",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "telephone-outbound-fill",
+			"title": "telephone-outbound-fill",
+			"className": "bi bi-telephone-outbound-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "telephone-plus",
+			"title": "telephone-plus",
+			"className": "bi bi-telephone-plus",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "telephone-plus-fill",
+			"title": "telephone-plus-fill",
+			"className": "bi bi-telephone-plus-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "telephone-x",
+			"title": "telephone-x",
+			"className": "bi bi-telephone-x",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "telephone-x-fill",
+			"title": "telephone-x-fill",
+			"className": "bi bi-telephone-x-fill",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "tencent-qq",
+			"title": "tencent-qq",
+			"className": "bi bi-tencent-qq",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "terminal",
+			"title": "terminal",
+			"className": "bi bi-terminal",
+			"type": "bi",
+			"categories": [
+				"apps"
+			]
+		},
+		{
+			"name": "terminal-dash",
+			"title": "terminal-dash",
+			"className": "bi bi-terminal-dash",
+			"type": "bi",
+			"categories": [
+				"apps"
+			]
+		},
+		{
+			"name": "terminal-fill",
+			"title": "terminal-fill",
+			"className": "bi bi-terminal-fill",
+			"type": "bi",
+			"categories": [
+				"apps"
+			]
+		},
+		{
+			"name": "terminal-plus",
+			"title": "terminal-plus",
+			"className": "bi bi-terminal-plus",
+			"type": "bi",
+			"categories": [
+				"apps"
+			]
+		},
+		{
+			"name": "terminal-split",
+			"title": "terminal-split",
+			"className": "bi bi-terminal-split",
+			"type": "bi",
+			"categories": [
+				"apps"
+			]
+		},
+		{
+			"name": "terminal-x",
+			"title": "terminal-x",
+			"className": "bi bi-terminal-x",
+			"type": "bi",
+			"categories": [
+				"apps"
+			]
+		},
+		{
+			"name": "text-center",
+			"title": "text-center",
+			"className": "bi bi-text-center",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "text-indent-left",
+			"title": "text-indent-left",
+			"className": "bi bi-text-indent-left",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "text-indent-right",
+			"title": "text-indent-right",
+			"className": "bi bi-text-indent-right",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "text-left",
+			"title": "text-left",
+			"className": "bi bi-text-left",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "text-paragraph",
+			"title": "text-paragraph",
+			"className": "bi bi-text-paragraph",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "text-right",
+			"title": "text-right",
+			"className": "bi bi-text-right",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "text-wrap",
+			"title": "text-wrap",
+			"className": "bi bi-text-wrap",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "textarea",
+			"title": "textarea",
+			"className": "bi bi-textarea",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "textarea-resize",
+			"title": "textarea-resize",
+			"className": "bi bi-textarea-resize",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "textarea-t",
+			"title": "textarea-t",
+			"className": "bi bi-textarea-t",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "thermometer",
+			"title": "thermometer",
+			"className": "bi bi-thermometer",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "thermometer-half",
+			"title": "thermometer-half",
+			"className": "bi bi-thermometer-half",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "thermometer-high",
+			"title": "thermometer-high",
+			"className": "bi bi-thermometer-high",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "thermometer-low",
+			"title": "thermometer-low",
+			"className": "bi bi-thermometer-low",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "thermometer-snow",
+			"title": "thermometer-snow",
+			"className": "bi bi-thermometer-snow",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "thermometer-sun",
+			"title": "thermometer-sun",
+			"className": "bi bi-thermometer-sun",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "threads",
+			"title": "threads",
+			"className": "bi bi-threads",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "threads-fill",
+			"title": "threads-fill",
+			"className": "bi bi-threads-fill",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "three-dots",
+			"title": "three-dots",
+			"className": "bi bi-three-dots",
+			"type": "bi",
+			"categories": [
+				"controls"
+			]
+		},
+		{
+			"name": "three-dots-vertical",
+			"title": "three-dots-vertical",
+			"className": "bi bi-three-dots-vertical",
+			"type": "bi",
+			"categories": [
+				"controls"
+			]
+		},
+		{
+			"name": "thunderbolt",
+			"title": "thunderbolt",
+			"className": "bi bi-thunderbolt",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "thunderbolt-fill",
+			"title": "thunderbolt-fill",
+			"className": "bi bi-thunderbolt-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "ticket",
+			"title": "ticket",
+			"className": "bi bi-ticket",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "ticket-detailed",
+			"title": "ticket-detailed",
+			"className": "bi bi-ticket-detailed",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "ticket-detailed-fill",
+			"title": "ticket-detailed-fill",
+			"className": "bi bi-ticket-detailed-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "ticket-fill",
+			"title": "ticket-fill",
+			"className": "bi bi-ticket-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "ticket-perforated",
+			"title": "ticket-perforated",
+			"className": "bi bi-ticket-perforated",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "ticket-perforated-fill",
+			"title": "ticket-perforated-fill",
+			"className": "bi bi-ticket-perforated-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "tiktok",
+			"title": "tiktok",
+			"className": "bi bi-tiktok",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "toggle-off",
+			"title": "toggle-off",
+			"className": "bi bi-toggle-off",
+			"type": "bi",
+			"categories": [
+				"controls"
+			]
+		},
+		{
+			"name": "toggle-on",
+			"title": "toggle-on",
+			"className": "bi bi-toggle-on",
+			"type": "bi",
+			"categories": [
+				"controls"
+			]
+		},
+		{
+			"name": "toggle2-off",
+			"title": "toggle2-off",
+			"className": "bi bi-toggle2-off",
+			"type": "bi",
+			"categories": [
+				"controls"
+			]
+		},
+		{
+			"name": "toggle2-on",
+			"title": "toggle2-on",
+			"className": "bi bi-toggle2-on",
+			"type": "bi",
+			"categories": [
+				"controls"
+			]
+		},
+		{
+			"name": "toggles",
+			"title": "toggles",
+			"className": "bi bi-toggles",
+			"type": "bi",
+			"categories": [
+				"controls"
+			]
+		},
+		{
+			"name": "toggles2",
+			"title": "toggles2",
+			"className": "bi bi-toggles2",
+			"type": "bi",
+			"categories": [
+				"controls"
+			]
+		},
+		{
+			"name": "tools",
+			"title": "tools",
+			"className": "bi bi-tools",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "tornado",
+			"title": "tornado",
+			"className": "bi bi-tornado",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "train-freight-front",
+			"title": "train-freight-front",
+			"className": "bi bi-train-freight-front",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "train-freight-front-fill",
+			"title": "train-freight-front-fill",
+			"className": "bi bi-train-freight-front-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "train-front",
+			"title": "train-front",
+			"className": "bi bi-train-front",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "train-front-fill",
+			"title": "train-front-fill",
+			"className": "bi bi-train-front-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "train-lightrail-front",
+			"title": "train-lightrail-front",
+			"className": "bi bi-train-lightrail-front",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "train-lightrail-front-fill",
+			"title": "train-lightrail-front-fill",
+			"className": "bi bi-train-lightrail-front-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "translate",
+			"title": "translate",
+			"className": "bi bi-translate",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "transparency",
+			"title": "transparency",
+			"className": "bi bi-transparency",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "trash",
+			"title": "trash",
+			"className": "bi bi-trash",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "trash-fill",
+			"title": "trash-fill",
+			"className": "bi bi-trash-fill",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "trash2",
+			"title": "trash2",
+			"className": "bi bi-trash2",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "trash2-fill",
+			"title": "trash2-fill",
+			"className": "bi bi-trash2-fill",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "trash3",
+			"title": "trash3",
+			"className": "bi bi-trash3",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "trash3-fill",
+			"title": "trash3-fill",
+			"className": "bi bi-trash3-fill",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "tree",
+			"title": "tree",
+			"className": "bi bi-tree",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "tree-fill",
+			"title": "tree-fill",
+			"className": "bi bi-tree-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "trello",
+			"title": "trello",
+			"className": "bi bi-trello",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "triangle",
+			"title": "triangle",
+			"className": "bi bi-triangle",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "triangle-fill",
+			"title": "triangle-fill",
+			"className": "bi bi-triangle-fill",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "triangle-half",
+			"title": "triangle-half",
+			"className": "bi bi-triangle-half",
+			"type": "bi",
+			"categories": [
+				"shapes"
+			]
+		},
+		{
+			"name": "trophy",
+			"title": "trophy",
+			"className": "bi bi-trophy",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "trophy-fill",
+			"title": "trophy-fill",
+			"className": "bi bi-trophy-fill",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "tropical-storm",
+			"title": "tropical-storm",
+			"className": "bi bi-tropical-storm",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "truck",
+			"title": "truck",
+			"className": "bi bi-truck",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "truck-flatbed",
+			"title": "truck-flatbed",
+			"className": "bi bi-truck-flatbed",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "truck-front",
+			"title": "truck-front",
+			"className": "bi bi-truck-front",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "truck-front-fill",
+			"title": "truck-front-fill",
+			"className": "bi bi-truck-front-fill",
+			"type": "bi",
+			"categories": [
+				"transportation"
+			]
+		},
+		{
+			"name": "tsunami",
+			"title": "tsunami",
+			"className": "bi bi-tsunami",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "tv",
+			"title": "tv",
+			"className": "bi bi-tv",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "tv-fill",
+			"title": "tv-fill",
+			"className": "bi bi-tv-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "twitch",
+			"title": "twitch",
+			"className": "bi bi-twitch",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "twitter",
+			"title": "twitter",
+			"className": "bi bi-twitter",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "twitter-x",
+			"title": "twitter-x",
+			"className": "bi bi-twitter-x",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "type",
+			"title": "type",
+			"className": "bi bi-type",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "type-bold",
+			"title": "type-bold",
+			"className": "bi bi-type-bold",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "type-h1",
+			"title": "type-h1",
+			"className": "bi bi-type-h1",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "type-h2",
+			"title": "type-h2",
+			"className": "bi bi-type-h2",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "type-h3",
+			"title": "type-h3",
+			"className": "bi bi-type-h3",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "type-h4",
+			"title": "type-h4",
+			"className": "bi bi-type-h4",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "type-h5",
+			"title": "type-h5",
+			"className": "bi bi-type-h5",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "type-h6",
+			"title": "type-h6",
+			"className": "bi bi-type-h6",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "type-italic",
+			"title": "type-italic",
+			"className": "bi bi-type-italic",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "type-strikethrough",
+			"title": "type-strikethrough",
+			"className": "bi bi-type-strikethrough",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "type-underline",
+			"title": "type-underline",
+			"className": "bi bi-type-underline",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "ubuntu",
+			"title": "ubuntu",
+			"className": "bi bi-ubuntu",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "ui-checks",
+			"title": "ui-checks",
+			"className": "bi bi-ui-checks",
+			"type": "bi",
+			"categories": [
+				"controls"
+			]
+		},
+		{
+			"name": "ui-checks-grid",
+			"title": "ui-checks-grid",
+			"className": "bi bi-ui-checks-grid",
+			"type": "bi",
+			"categories": [
+				"controls"
+			]
+		},
+		{
+			"name": "ui-radios",
+			"title": "ui-radios",
+			"className": "bi bi-ui-radios",
+			"type": "bi",
+			"categories": [
+				"controls"
+			]
+		},
+		{
+			"name": "ui-radios-grid",
+			"title": "ui-radios-grid",
+			"className": "bi bi-ui-radios-grid",
+			"type": "bi",
+			"categories": [
+				"controls"
+			]
+		},
+		{
+			"name": "umbrella",
+			"title": "umbrella",
+			"className": "bi bi-umbrella",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "umbrella-fill",
+			"title": "umbrella-fill",
+			"className": "bi bi-umbrella-fill",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "unindent",
+			"title": "unindent",
+			"className": "bi bi-unindent",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "union",
+			"title": "union",
+			"className": "bi bi-union",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "unity",
+			"title": "unity",
+			"className": "bi bi-unity",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "universal-access",
+			"title": "universal-access",
+			"className": "bi bi-universal-access",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "universal-access-circle",
+			"title": "universal-access-circle",
+			"className": "bi bi-universal-access-circle",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "unlock",
+			"title": "unlock",
+			"className": "bi bi-unlock",
+			"type": "bi",
+			"categories": [
+				"security"
+			]
+		},
+		{
+			"name": "unlock-fill",
+			"title": "unlock-fill",
+			"className": "bi bi-unlock-fill",
+			"type": "bi",
+			"categories": [
+				"security"
+			]
+		},
+		{
+			"name": "upc",
+			"title": "upc",
+			"className": "bi bi-upc",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "upc-scan",
+			"title": "upc-scan",
+			"className": "bi bi-upc-scan",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "upload",
+			"title": "upload",
+			"className": "bi bi-upload",
+			"type": "bi",
+			"categories": [
+				"miscellaneous"
+			]
+		},
+		{
+			"name": "usb",
+			"title": "usb",
+			"className": "bi bi-usb",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "usb-c",
+			"title": "usb-c",
+			"className": "bi bi-usb-c",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "usb-c-fill",
+			"title": "usb-c-fill",
+			"className": "bi bi-usb-c-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "usb-drive",
+			"title": "usb-drive",
+			"className": "bi bi-usb-drive",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "usb-drive-fill",
+			"title": "usb-drive-fill",
+			"className": "bi bi-usb-drive-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "usb-fill",
+			"title": "usb-fill",
+			"className": "bi bi-usb-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "usb-micro",
+			"title": "usb-micro",
+			"className": "bi bi-usb-micro",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "usb-micro-fill",
+			"title": "usb-micro-fill",
+			"className": "bi bi-usb-micro-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "usb-mini",
+			"title": "usb-mini",
+			"className": "bi bi-usb-mini",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "usb-mini-fill",
+			"title": "usb-mini-fill",
+			"className": "bi bi-usb-mini-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "usb-plug",
+			"title": "usb-plug",
+			"className": "bi bi-usb-plug",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "usb-plug-fill",
+			"title": "usb-plug-fill",
+			"className": "bi bi-usb-plug-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "usb-symbol",
+			"title": "usb-symbol",
+			"className": "bi bi-usb-symbol",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "valentine",
+			"title": "valentine",
+			"className": "bi bi-valentine",
+			"type": "bi",
+			"categories": [
+				"love"
+			]
+		},
+		{
+			"name": "valentine2",
+			"title": "valentine2",
+			"className": "bi bi-valentine2",
+			"type": "bi",
+			"categories": [
+				"love"
+			]
+		},
+		{
+			"name": "vector-pen",
+			"title": "vector-pen",
+			"className": "bi bi-vector-pen",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "view-list",
+			"title": "view-list",
+			"className": "bi bi-view-list",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "view-stacked",
+			"title": "view-stacked",
+			"className": "bi bi-view-stacked",
+			"type": "bi",
+			"categories": [
+				"ui and keyboard"
+			]
+		},
+		{
+			"name": "vignette",
+			"title": "vignette",
+			"className": "bi bi-vignette",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "vimeo",
+			"title": "vimeo",
+			"className": "bi bi-vimeo",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "vinyl",
+			"title": "vinyl",
+			"className": "bi bi-vinyl",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "vinyl-fill",
+			"title": "vinyl-fill",
+			"className": "bi bi-vinyl-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "virus",
+			"title": "virus",
+			"className": "bi bi-virus",
+			"type": "bi",
+			"categories": [
+				"medical"
+			]
+		},
+		{
+			"name": "virus2",
+			"title": "virus2",
+			"className": "bi bi-virus2",
+			"type": "bi",
+			"categories": [
+				"medical"
+			]
+		},
+		{
+			"name": "voicemail",
+			"title": "voicemail",
+			"className": "bi bi-voicemail",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "volume-down",
+			"title": "volume-down",
+			"className": "bi bi-volume-down",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "volume-down-fill",
+			"title": "volume-down-fill",
+			"className": "bi bi-volume-down-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "volume-mute",
+			"title": "volume-mute",
+			"className": "bi bi-volume-mute",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "volume-mute-fill",
+			"title": "volume-mute-fill",
+			"className": "bi bi-volume-mute-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "volume-off",
+			"title": "volume-off",
+			"className": "bi bi-volume-off",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "volume-off-fill",
+			"title": "volume-off-fill",
+			"className": "bi bi-volume-off-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "volume-up",
+			"title": "volume-up",
+			"className": "bi bi-volume-up",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "volume-up-fill",
+			"title": "volume-up-fill",
+			"className": "bi bi-volume-up-fill",
+			"type": "bi",
+			"categories": [
+				"media"
+			]
+		},
+		{
+			"name": "vr",
+			"title": "vr",
+			"className": "bi bi-vr",
+			"type": "bi",
+			"categories": [
+				"typography"
+			]
+		},
+		{
+			"name": "wallet",
+			"title": "wallet",
+			"className": "bi bi-wallet",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "wallet-fill",
+			"title": "wallet-fill",
+			"className": "bi bi-wallet-fill",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "wallet2",
+			"title": "wallet2",
+			"className": "bi bi-wallet2",
+			"type": "bi",
+			"categories": [
+				"commerce"
+			]
+		},
+		{
+			"name": "watch",
+			"title": "watch",
+			"className": "bi bi-watch",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "water",
+			"title": "water",
+			"className": "bi bi-water",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "webcam",
+			"title": "webcam",
+			"className": "bi bi-webcam",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "webcam-fill",
+			"title": "webcam-fill",
+			"className": "bi bi-webcam-fill",
+			"type": "bi",
+			"categories": [
+				"devices"
+			]
+		},
+		{
+			"name": "wechat",
+			"title": "wechat",
+			"className": "bi bi-wechat",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "whatsapp",
+			"title": "whatsapp",
+			"className": "bi bi-whatsapp",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "wifi",
+			"title": "wifi",
+			"className": "bi bi-wifi",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "wifi-1",
+			"title": "wifi-1",
+			"className": "bi bi-wifi-1",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "wifi-2",
+			"title": "wifi-2",
+			"className": "bi bi-wifi-2",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "wifi-off",
+			"title": "wifi-off",
+			"className": "bi bi-wifi-off",
+			"type": "bi",
+			"categories": [
+				"communications"
+			]
+		},
+		{
+			"name": "wikipedia",
+			"title": "wikipedia",
+			"className": "bi bi-wikipedia",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "wind",
+			"title": "wind",
+			"className": "bi bi-wind",
+			"type": "bi",
+			"categories": [
+				"weather"
+			]
+		},
+		{
+			"name": "window",
+			"title": "window",
+			"className": "bi bi-window",
+			"type": "bi",
+			"categories": [
+				"layout"
+			]
+		},
+		{
+			"name": "window-dash",
+			"title": "window-dash",
+			"className": "bi bi-window-dash",
+			"type": "bi",
+			"categories": [
+				"apps"
+			]
+		},
+		{
+			"name": "window-desktop",
+			"title": "window-desktop",
+			"className": "bi bi-window-desktop",
+			"type": "bi",
+			"categories": [
+				"apps"
+			]
+		},
+		{
+			"name": "window-dock",
+			"title": "window-dock",
+			"className": "bi bi-window-dock",
+			"type": "bi",
+			"categories": [
+				"apps"
+			]
+		},
+		{
+			"name": "window-fullscreen",
+			"title": "window-fullscreen",
+			"className": "bi bi-window-fullscreen",
+			"type": "bi",
+			"categories": [
+				"apps"
+			]
+		},
+		{
+			"name": "window-plus",
+			"title": "window-plus",
+			"className": "bi bi-window-plus",
+			"type": "bi",
+			"categories": [
+				"apps"
+			]
+		},
+		{
+			"name": "window-sidebar",
+			"title": "window-sidebar",
+			"className": "bi bi-window-sidebar",
+			"type": "bi",
+			"categories": [
+				"apps"
+			]
+		},
+		{
+			"name": "window-split",
+			"title": "window-split",
+			"className": "bi bi-window-split",
+			"type": "bi",
+			"categories": [
+				"apps"
+			]
+		},
+		{
+			"name": "window-stack",
+			"title": "window-stack",
+			"className": "bi bi-window-stack",
+			"type": "bi",
+			"categories": [
+				"apps"
+			]
+		},
+		{
+			"name": "window-x",
+			"title": "window-x",
+			"className": "bi bi-window-x",
+			"type": "bi",
+			"categories": [
+				"apps"
+			]
+		},
+		{
+			"name": "windows",
+			"title": "windows",
+			"className": "bi bi-windows",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "wordpress",
+			"title": "wordpress",
+			"className": "bi bi-wordpress",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "wrench",
+			"title": "wrench",
+			"className": "bi bi-wrench",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "wrench-adjustable",
+			"title": "wrench-adjustable",
+			"className": "bi bi-wrench-adjustable",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "wrench-adjustable-circle",
+			"title": "wrench-adjustable-circle",
+			"className": "bi bi-wrench-adjustable-circle",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "wrench-adjustable-circle-fill",
+			"title": "wrench-adjustable-circle-fill",
+			"className": "bi bi-wrench-adjustable-circle-fill",
+			"type": "bi",
+			"categories": [
+				"tools"
+			]
+		},
+		{
+			"name": "x",
+			"title": "x",
+			"className": "bi bi-x",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "x-circle",
+			"title": "x-circle",
+			"className": "bi bi-x-circle",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "x-circle-fill",
+			"title": "x-circle-fill",
+			"className": "bi bi-x-circle-fill",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "x-diamond",
+			"title": "x-diamond",
+			"className": "bi bi-x-diamond",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "x-diamond-fill",
+			"title": "x-diamond-fill",
+			"className": "bi bi-x-diamond-fill",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "x-lg",
+			"title": "x-lg",
+			"className": "bi bi-x-lg",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "x-octagon",
+			"title": "x-octagon",
+			"className": "bi bi-x-octagon",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "x-octagon-fill",
+			"title": "x-octagon-fill",
+			"className": "bi bi-x-octagon-fill",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "x-square",
+			"title": "x-square",
+			"className": "bi bi-x-square",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "x-square-fill",
+			"title": "x-square-fill",
+			"className": "bi bi-x-square-fill",
+			"type": "bi",
+			"categories": [
+				"alerts, warnings, and signs"
+			]
+		},
+		{
+			"name": "xbox",
+			"title": "xbox",
+			"className": "bi bi-xbox",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "yelp",
+			"title": "yelp",
+			"className": "bi bi-yelp",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "yin-yang",
+			"title": "yin-yang",
+			"className": "bi bi-yin-yang",
+			"type": "bi",
+			"categories": [
+				"real world"
+			]
+		},
+		{
+			"name": "youtube",
+			"title": "youtube",
+			"className": "bi bi-youtube",
+			"type": "bi",
+			"categories": [
+				"brand"
+			]
+		},
+		{
+			"name": "zoom-in",
+			"title": "zoom-in",
+			"className": "bi bi-zoom-in",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		},
+		{
+			"name": "zoom-out",
+			"title": "zoom-out",
+			"className": "bi bi-zoom-out",
+			"type": "bi",
+			"categories": [
+				"graphics"
+			]
+		}
+	,{
+            "name": "bi-0-square-fill",
+            "title": "0 Square Fill",
+            "className": "bi bi-0-square-fill",
+            "type": "bi",
+            "categories": [
+                "numbers"
+            ]
+        },
     {
         "name": "sui-users",
         "title": "UI Users",
