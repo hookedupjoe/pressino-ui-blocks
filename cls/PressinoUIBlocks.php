@@ -89,7 +89,7 @@ class PressinoUIBlocks {
 		wp_enqueue_script(
 			'pressino-ui-core', 
 			PRESSINO_UI_BLOCKS_URL . '/js/PressinoUICore.js',
-			array(),
+			array('wp-blocks','wp-editor','wp-element'),
 			true
 		);
 	}

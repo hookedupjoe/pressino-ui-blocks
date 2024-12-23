@@ -85,7 +85,7 @@ export default function InserterModal( props ) {
 			( icon ) => icon?.categories?.includes( currentCategory ) || false
 		);
 		if( iconsRet.length == 0){
-			return iconsAll.slice(0,500);
+			return iconsAll.slice(0,1800);
 		}
 		//--- Limit to 500
 		return iconsRet;
