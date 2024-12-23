@@ -1,20 +1,17 @@
 
-export function getIconEl({iconname, icontype, iconclass}){
-    let tmpClasses = iconname || iconclass || '';
-
+export function getIconEl({iconname, icontype, iconclass, weight}){
+	let tmpClasses = iconname || iconclass || '';
+	tmpClasses += ' icon';
+	var tmpOtherClasses = '';
     if( icontype == 'fa' ){
-        if( iconclass ){
-            return <span class={'fa-solid ' + tmpClasses}></span>;
-        } else {
-            return <span class={'icon faicon fa-solid ' + tmpClasses}></span>;
-        }
+		tmpOtherClasses  = 'fa-' + (weight ? weight : 'solid') ;
     } else if( icontype == 'dash' ){
-        return <span class={'icon dashicons ' + tmpClasses }></span>;
-    } else if( icontype == 'bi' ){
-        return <span class={'icon ' + tmpClasses }></span>;
-    } else {
-        return <i class={'icon  ' + tmpClasses}></i>;
-    }
+		tmpOtherClasses  = 'dashicons';
+	}
+	if( tmpOtherClasses ){
+		tmpClasses += ' ' + tmpOtherClasses;
+	}
+	return <span class={tmpClasses}></span>;
 }
 
 export const classIconIndex = {
@@ -28075,8 +28072,8 @@ export const classIconIndex = {
 		{
 			"name": "fa733",
 			"title": "Youtube",
-			"className": "youtube",
-        "type": "sui",
+			"className": "fa-brands fa-youtube",
+        "type": "fa",
 			"categories": [
 				"media"
 			]
@@ -28606,8 +28603,8 @@ export const classIconIndex = {
 		{
 			"name": "fa796",
 			"title": "Playstation",
-			"className": "playstation",
-			"type": "sui",
+			"className": "fa-brands fa-playstation",
+			"type": "fa",
 			"categories": [
 				"gaming"
 			]
@@ -28642,8 +28639,8 @@ export const classIconIndex = {
 		{
 			"name": "fa800",
 			"title": "Square Steam",
-			"className": "square steam",
-			"type": "sui",
+			"className": "fa-brands fa-square-steam",
+			"type": "fa",
 			"categories": [
 				"gaming"
 			]
@@ -28651,8 +28648,8 @@ export const classIconIndex = {
 		{
 			"name": "fa801",
 			"title": "Steam",
-			"className": "steam",
-			"type": "sui",
+			"className": "fa-brands fa-steam",
+			"type": "fa",
 			"categories": [
 				"gaming"
 			]
@@ -28660,8 +28657,8 @@ export const classIconIndex = {
 		{
 			"name": "fa802",
 			"title": "Steam Symbol",
-			"className": "steam symbol",
-			"type": "sui",
+			"className": "fa-brands fa-steam-symbol",
+			"type": "fa",
 			"categories": [
 				"gaming"
 			]
@@ -28669,8 +28666,8 @@ export const classIconIndex = {
 		{
 			"name": "fa803",
 			"title": "Twitch",
-			"className": "twitch",
-        "type": "sui",
+			"className": "fa-brands fa-twitch",
+        "type": "fa",
 			"categories": [
 				"gaming"
 			]
@@ -28696,8 +28693,8 @@ export const classIconIndex = {
 		{
 			"name": "fa807",
 			"title": "Xbox",
-			"className": "xbox",
-        "type": "sui",
+			"className": "fa-brands fa-xbox",
+        "type": "fa",
 			"categories": [
 				"gaming"
 			]
@@ -31630,8 +31627,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1133",
 			"title": "Btc",
-			"className": "btc",
-        "type": "sui",
+			"className": "fa-brands fa-btc",
+        "type": "fa",
 			"categories": [
 				"money"
 			]
@@ -31729,8 +31726,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1144",
 			"title": "Ethereum",
-            "className": "ethereum",
-            "type": "sui",
+            "className": "fa-brands fa-ethereum",
+            "type": "fa",
 			"categories": [
 				"money"
 			]
@@ -31783,8 +31780,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1150",
 			"title": "Gg",
-			"className": "gg",
-        "type": "sui",
+			"className": "fa-brands fa-gg",
+        "type": "fa",
 			"categories": [
 				"money"
 			]
@@ -31792,8 +31789,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1151",
 			"title": "Gg Circle",
-			"className": "gg circle",
-        "type": "sui",
+			"className": "fa-brands fa-gg-circle",
+        "type": "fa",
 			"categories": [
 				"money"
 			]
@@ -32188,8 +32185,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1195",
 			"title": "Soundcloud",
-			"className": "soundcloud",
-        "type": "sui",
+			"className": "fa-brands fa-soundcloud",
+        "type": "fa",
 			"categories": [
 				"music+video"
 			]
@@ -32197,8 +32194,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1196",
 			"title": "Spotify",
-			"className": "spotify",
-        "type": "sui",
+			"className": "fa-brands fa-spotify",
+        "type": "fa",
 			"categories": [
 				"music+video"
 			]
@@ -32845,8 +32842,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1273",
 			"title": "Amazon Pay",
-			"className": "amazon pay",
-        "type": "sui",
+			"className": "fa-brands fa-amazon-pay",
+        "type": "fa",
 			"categories": [
 				"shopping"
 			]
@@ -32854,8 +32851,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1274",
 			"title": "Apple Pay",
-			"className": "apple pay",
-        "type": "sui",
+			"className": "fa-brands fa-apple-pay",
+        "type": "fa",
 			"categories": [
 				"shopping"
 			]
@@ -32872,8 +32869,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1276",
 			"title": "Cart Plus",
-			"className": "cart plus",
-        "type": "sui",
+			"className": "fa-cart-plus",
+        "type": "fa",
 			"categories": [
 				"shopping"
 			]
@@ -32881,8 +32878,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1277",
 			"title": "Cc Amazon Pay",
-			"className": "amazon pay",
-        "type": "sui",
+			"className": "fa-brands fa-cc-amazon-pay",
+        "type": "fa",
 			"categories": [
 				"shopping"
 			]
@@ -32890,8 +32887,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1278",
 			"title": "Cc Amex",
-			"className": "cc amex",
-        "type": "sui",
+			"className": "fa-brands fa-cc-amex",
+        "type": "fa",
 			"categories": [
 				"shopping"
 			]
@@ -32899,8 +32896,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1279",
 			"title": "Cc Apple Pay",
-			"className": "cc apple pay",
-        "type": "sui",
+			"className": "fab fa-cc-amazon-pay",
+        "type": "fa",
 			"categories": [
 				"shopping"
 			]
@@ -32908,8 +32905,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1280",
 			"title": "Cc Diners Club",
-			"className": "cc diners club",
-        "type": "sui",
+			"className": "fa-brands fa-cc-diners-club",
+        "type": "fa",
 			"categories": [
 				"shopping"
 			]
@@ -32917,8 +32914,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1281",
 			"title": "Cc Discover",
-			"className": "cc discover",
-        "type": "sui",
+			"className": "fa-brands fa-cc-discover",
+        "type": "fa",
 			"categories": [
 				"shopping"
 			]
@@ -32926,8 +32923,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1282",
 			"title": "Cc Jcb",
-			"className": "cc jcb",
-        "type": "sui",
+			"className": "fa-brands fa-cc-jcb",
+        "type": "fa",
 			"categories": [
 				"shopping"
 			]
@@ -32935,8 +32932,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1283",
 			"title": "Cc Mastercard",
-			"className": "cc mastercard",
-        "type": "sui",
+			"className": "fa-brands fa-cc-mastercard",
+        "type": "fa",
 			"categories": [
 				"shopping"
 			]
@@ -32944,8 +32941,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1284",
 			"title": "Cc Paypal",
-			"className": "cc paypal",
-        "type": "sui",
+			"className": "fa-brands fa-cc-paypal",
+        "type": "fa",
 			"categories": [
 				"shopping"
 			]
@@ -32953,8 +32950,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1285",
 			"title": "Cc Stripe",
-			"className": "cc stripe",
-        "type": "sui",
+			"className": "fa-brands fa-cc-stripe",
+        "type": "fa",
 			"categories": [
 				"shopping"
 			]
@@ -32962,8 +32959,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1286",
 			"title": "Cc Visa",
-			"className": "cc visa",
-        "type": "sui",
+			"className": "fa-brands fa-cc-visa",
+        "type": "fa",
 			"categories": [
 				"shopping"
 			]
@@ -32971,8 +32968,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1287",
 			"title": "Gem",
-			"className": "gem",
-        "type": "sui",
+			"className": "fa-gem",
+        "type": "fa",
 			"categories": [
 				"shopping"
 			]
@@ -32980,8 +32977,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1288",
 			"title": "Google Pay",
-			"className": "google pay",
-        "type": "sui",
+			"className": "fa-brands fa-google-pay",
+        "type": "fa",
 			"categories": [
 				"shopping"
 			]
@@ -32989,8 +32986,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1289",
 			"title": "Google Wallet",
-			"className": "google wallet",
-        "type": "sui",
+			"className": "fa-brands fa-google-wallet",
+        "type": "fa",
 			"categories": [
 				"shopping"
 			]
@@ -33016,8 +33013,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1292",
 			"title": "Paypal",
-			"className": "paypal",
-        "type": "sui",
+			"className": "fa-brands fa-paypal",
+        "type": "fa",
 			"categories": [
 				"shopping"
 			]
@@ -33025,17 +33022,8 @@ export const classIconIndex = {
 		{
 			"name": "fa1293",
 			"title": "Shop Slash",
-			"className": "shop slash",
-        "type": "sui",
-			"categories": [
-				"shopping"
-			]
-		},
-		{
-			"name": "fa1294",
-			"title": "Store Slash",
-			"className": "stripe",
-        "type": "sui",
+			"className": "fa-brands fa-shop-slash",
+        "type": "fa",
 			"categories": [
 				"shopping"
 			]

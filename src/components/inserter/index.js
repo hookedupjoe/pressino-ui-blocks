@@ -154,6 +154,7 @@ export default function InserterModal(props) {
 	}
 
 	function onClickCategory(category) {
+		setSearchInput('');
 		setCurrentCategory(category);
 	}
 
