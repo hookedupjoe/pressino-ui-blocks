@@ -13,9 +13,9 @@ import { useRef, useState, useEffect, useMemo, useCallback } from '@wordpress/el
 /**
  * Internal dependencies
  */
-import getIcons from './../../icons';
-import { classIconIndex } from './../../icons';
-import { flattenIconsArray, getIconTypes } from './../../utils';
+import getIcons from '../../icons';
+import { classIconIndex } from '../../icons';
+import { flattenIconsArray, getIconTypes } from '../../utils';
 import ContentHeader from './content-header';
 import IconGrid from './icon-grid';
 import Sidebar from './sidebar';

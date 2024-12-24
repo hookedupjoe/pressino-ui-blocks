@@ -15,8 +15,8 @@ import { Icon, blockDefault } from '@wordpress/icons';
 /**
  * Internal dependencies
  */
-import { getIconEl, classIconIndex } from './../../icons';
-import { flattenIconsArray, parseIcon } from './../../utils';
+import { getIconEl, classIconIndex } from '../../icons';
+import { flattenIconsArray, parseIcon } from '../../utils';
 
 export default function QuickInserterPopover( props ) {
 	const [ searchInput, setSearchInput ] = useState( '' );

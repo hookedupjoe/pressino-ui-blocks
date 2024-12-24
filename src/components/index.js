@@ -1,2 +1,2 @@
-export { default as InserterModal } from './inserter';
-export { default as QuickInserterPopover } from './quick-inserter';
+export { default as InserterModal } from './icon-inserter';
+export { default as QuickInserterPopover } from './icon-quick-inserter';

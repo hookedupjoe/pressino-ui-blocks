@@ -12,11 +12,11 @@ import { Icon, blockDefault } from '@wordpress/icons';
 import { Button } from '@wordpress/components';
 
 
-import { getIconEl } from './../../icons';
+import { getIconEl } from '../../icons';
 /**
  * Internal dependencies
  */
-import { parseIcon } from './../../utils';
+import { parseIcon } from '../../utils';
 
 export default function IconGrid( props ) {
 	const { onSelectedItem, shownIcons, iconSize, attributes } = props;
