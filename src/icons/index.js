@@ -27,7 +27,3 @@ export const classIconIndex = {
 	],
 	"categories": categories
 }
-
-export function geClasstIcons(){
-	return classIconIndex
-}
