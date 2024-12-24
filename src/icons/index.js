@@ -21,9 +21,9 @@ export function getIconEl({iconname, icontype, iconclass, weight}){
 
 export const classIconIndex = {
 	"icons":[
+		...biIcons,
 		...dashIcons,
-		...faIcons,
-		...biIcons
+		...faIcons
 	],
 	"categories": categories
 }
