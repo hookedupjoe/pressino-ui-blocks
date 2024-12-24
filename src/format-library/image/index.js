@@ -11,7 +11,6 @@ import {
 	__experimentalVStack as VStack,
 	__experimentalNumberControl as NumberControl,
 	TextareaControl,
-	TextControl,
 } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 import { useState } from '@wordpress/element';
@@ -21,9 +20,6 @@ import {
 	RichTextToolbarButton,
 	MediaUploadCheck,
 } from '@wordpress/block-editor';
-
-import { PressinoUI, istr } from "../../pressino-ui";
-import classNames from 'classnames';
 
 
 const ALLOWED_MEDIA_TYPES = [ 'image' ];
@@ -37,7 +33,7 @@ export const image = {
 	keywords: [ __( 'photo' ), __( 'media' ) ],
 	object: true,
 	tagName: 'img',
-	className: null,
+	className: 'pressino-image-fmt',
 	attributes: {
 		className: 'class',
 		style: 'style',
@@ -48,13 +44,11 @@ export const image = {
 };
 
 function InlineUI( { value, onChange, activeObjectAttributes, contentRef } ) {
-	const { style, alt, className } = activeObjectAttributes;
+	const { style, alt } = activeObjectAttributes;
 	const width = style?.replace( /\D/g, '' );
 	const [ editedWidth, setEditedWidth ] = useState( width );
 	const [ editedAlt, setEditedAlt ] = useState( alt );
-	const [ editedClasses, setEditedClasses ] = useState( className );
-	
-	const hasChanged = editedWidth !== width || editedAlt !== alt || editedClasses !== className;
+	const hasChanged = editedWidth !== width || editedAlt !== alt;
 	const popoverAnchor = useAnchor( {
 		editableContentElement: contentRef.current,
 		settings: image,
@@ -78,7 +72,6 @@ function InlineUI( { value, onChange, activeObjectAttributes, contentRef } ) {
 							...activeObjectAttributes,
 							style: width ? `width: ${ editedWidth }px;` : '',
 							alt: editedAlt,
-							className: editedClasses 
 						},
 					};
 
@@ -100,21 +93,12 @@ function InlineUI( { value, onChange, activeObjectAttributes, contentRef } ) {
 							setEditedWidth( newWidth );
 						} }
 					/>
-					<TextControl
+					<TextareaControl
 						label={ __( 'Alternative text' ) }
 						__nextHasNoMarginBottom
 						value={ editedAlt }
 						onChange={ ( newAlt ) => {
 							setEditedAlt( newAlt );
-						} }
-						
-					/>
-					<TextControl
-						label={ __( 'Additional Class(es)' ) }
-						__nextHasNoMarginBottom
-						value={ editedClasses }
-						onChange={ ( newClasses ) => {
-							setEditedClasses( newClasses );
 						} }
 						
 					/>
@@ -152,7 +136,7 @@ function Edit( {
 						insertObject( value, {
 							type: name,
 							attributes: {
-								className: {editedClasses	},
+								className: `wp-image-${ id }`,
 								style: `width: ${ Math.min(
 									imgWidth,
 									150
