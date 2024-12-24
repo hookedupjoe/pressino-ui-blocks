@@ -3,6 +3,7 @@ import { PressinoUI, istr } from "../../pressino-ui";
 const { __ } = wp.i18n;
 import { RichTextToolbarButton,RichTextShortcut } from '@wordpress/block-editor';
 import { unregisterFormatType, registerFormatType, toggleFormat } from '@wordpress/rich-text';
+import formats from '../../format-library/default-formats';
 
 /**
  * Block Classes
@@ -94,6 +95,30 @@ const underlineFormat = {
 export default function registerFormats () {
 //--- Note:  header - excluded from production until fully featured / if used at all
 
+
+
+//------- Unregister New Formats
+['core/subscript',
+    'core/superscript',
+    'core/language',
+    'core/strikethrough',
+    'core/keyboard',
+    'core/image',
+    'core/code'
+	].forEach( ( name ) => {
+        
+        unregisterFormatType( name )
+       
+    } );
+
+	
+	formats.forEach( ( { name, ...settings } ) => {
+		console.log('reg');
+		registerFormatType( name, settings )
+	});
+
+
+
 //------- Register New Formats
 	[
 		underlineFormat, 
@@ -102,20 +127,6 @@ export default function registerFormats () {
         registerFormatType( name, settings )
        
     } );
-
-//------- Unregister New Formats
-    ['core/subscript',
-    'core/superscript',
-    'core/language',
-    'core/strikethrough',
-    'core/keyboard',
-    'core/code'
-	].forEach( ( name ) => {
-        
-        unregisterFormatType( name )
-       
-    } );
-
 
 
 
