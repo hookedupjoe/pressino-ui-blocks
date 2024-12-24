@@ -111,7 +111,7 @@ export default function registerFormats () {
        
     } );
 
-	
+
 	formats.forEach( ( { name, ...settings } ) => {
 		console.log('reg');
 		registerFormatType( name, settings )

@@ -1,0 +1,10 @@
+.format-library__inline-color-popover {
+
+	[role="tabpanel"] {
+		padding: 16px;
+	}
+}
+
+.format-library__inline-color-popover>.components-popover__content {
+	width: 320px;
+}

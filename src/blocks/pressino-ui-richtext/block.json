@@ -14,5 +14,6 @@
 		"customClassName": false
 	},
 	"textdomain": "pressino-ui-richtext",
-	"editorScript": "file:./index.js"
+	"editorScript": "file:./index.js",
+	"style": "file:./style.css"
 }
