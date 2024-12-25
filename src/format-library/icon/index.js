@@ -221,8 +221,8 @@ function Edit( {
 export const icon = {
 	name,
 	title,
-	tagName: 'code',
-	className: null,
+	tagName: 'span',
+	className: 'icon',
 	attributes: {
 		url: 'href',
 		type: 'data-type',

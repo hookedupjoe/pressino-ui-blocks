@@ -111,15 +111,11 @@ function getSettingsForIcon(props) {
 				onSelectedItem={onSelectedItem}
 				isInserterOpen={ isInserterOpen }
 				setInserterOpen={ setInserterOpen }
-				attributes={ attributes }
-				setAttributes={ setAttributes }
 			/>
 		<QuickInserterPopover
 			onSelectedItem={onSelectedItem}
 			setInserterOpen={setInserterOpen}
 			isQuickInserterOpen={isQuickInserterOpen}
-			setQuickInserterOpen={setQuickInserterOpen}
-			setAttributes={setAttributes}
 		/>
 	</div>
 

@@ -19,7 +19,7 @@ import { getIconEl } from '../../icons';
 import { parseIcon } from '../../utils';
 
 export default function IconGrid( props ) {
-	const { onSelectedItem, shownIcons, iconSize, attributes } = props;
+	const { onSelectedItem, shownIcons  } = props;
 
 	const noResults = (
 		<div className="block-editor-inserter__no-results">
@@ -43,7 +43,7 @@ export default function IconGrid( props ) {
 							'icons-list__item',
 							'block-editor-block-types-list__item',
 							{
-								'is-active': icon.name === attributes?.iconName,
+								'is-active': false,
 								'has-no-icon-fill': icon?.hasNoIconFill,
 							}
 						) }

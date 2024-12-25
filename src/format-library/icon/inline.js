@@ -1,11 +1,7 @@
 /**
  * WordPress dependencies
  */
-import { useMemo, createInterpolateElement } from '@wordpress/element';
-
-import { Toolbar, ToolbarButton } from '@wordpress/components';
-import { formatBold, formatItalic, link } from '@wordpress/icons';
-
+import { useState, useMemo, createInterpolateElement } from '@wordpress/element';
 
 import { __, sprintf } from '@wordpress/i18n';
 import { speak } from '@wordpress/a11y';
@@ -45,6 +41,8 @@ import { useDispatch, useSelect } from '@wordpress/data';
 import { createLinkFormat, isValidHref, getFormatBoundary } from './utils';
 import { icon as settings } from './index';
 
+import { QuickInserterPopover, InserterModal } from '../../components/';
+
 const LINK_SETTINGS = [
 	// ...LinkControl.DEFAULT_LINK_SETTINGS,
 	{
@@ -64,6 +62,25 @@ function InlineLinkUI( {
 	contentRef,
 	focusOnMount,
 } ) {
+
+
+	const [isQuickInserterOpen, setQuickInserterOpen] = useState(false);
+	const [isInserterOpen, setInserterOpen] = useState(false);
+
+	function onSelectedItem(theItem){
+		setInserterOpen(false);
+		var tmpAtts = {}
+		
+		tmpAtts.iconname = theItem.className || 'icon users'
+		tmpAtts.icontype = theItem.type || 'default'
+		tmpAtts.color = 'blue';
+		tmpAtts.size = 'large';
+
+		console.log('tmpAtts',tmpAtts);
+		addIcon(tmpAtts);
+	}
+
+		
 	const richLinkTextValue = getRichTextValueFromSelection( value, isActive );
 
 	// Get the text content minus any HTML tags.
@@ -269,13 +286,23 @@ function InlineLinkUI( {
 alert('show selection');
 	}
 
-	function addIcon(){
+	function addIcon({iconname, icontype,  size = '', color = ''}){
+		let tmpClass = iconname;
+		if( size != '' ){
+			tmpClass += ' ' + size;
+		}
+		if( color != '' ){
+			tmpClass += ' ' + color;
+		}
+		if( icontype == 'fa' ){
+			tmpClass += ' fa-solid';
+		}
 		const plainText = ' ';
 		const format = {
-			type: name,
+			type: 'pressinoformat/icon',
 			attributes: {
-				style: 'padding-left:5px;padding-right:5px;',
-				class: 'icon fa-solid fa-paperclip large blue'
+				style: 'margin-left:5px;margin-right:5px;',
+				class: tmpClass
 			},
 		};
 		
@@ -324,20 +351,32 @@ alert('show selection');
 			tabIndex={ -1 }
 			
 		>
-
 <Button
-    variant="primary"
-    onClick={ selectIcon }
-  >
-    Select Icon
-  </Button>
-
+			variant="primary"
+			onClick={() => {
+				setQuickInserterOpen(true);
+			}}
+		>
+			{__('Select Icon', name)}
+		</Button>
+		<InserterModal
+				onSelectedItem={onSelectedItem}
+				isInserterOpen={ isInserterOpen }
+				setInserterOpen={ setInserterOpen }
+			/>
+		<QuickInserterPopover
+			onSelectedItem={onSelectedItem}
+			setInserterOpen={setInserterOpen}
+			isQuickInserterOpen={isQuickInserterOpen}
+			setQuickInserterOpen={setQuickInserterOpen}
+		/>
+{/* 
 <Button
     variant="primary"
     onClick={ addIcon }
   >
     Insert Icon
-  </Button>
+  </Button> */}
 
 
 {/* <form

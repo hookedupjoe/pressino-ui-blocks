@@ -46,7 +46,7 @@ function resizeScrollers() {
 
 }
 export default function InserterModal(props) {
-	const { onSelectedItem, isInserterOpen, setInserterOpen, attributes, setAttributes } =
+	const { onSelectedItem, isInserterOpen, setInserterOpen, attributes } =
 		props;
 	const iconsByType = classIconIndex; //getIcons();
 	const iconTypes = iconsByType; //getIconTypes( iconsByType );
@@ -144,14 +144,7 @@ export default function InserterModal(props) {
 		return null;
 	}
 
-	function updateIconAtts(name, hasNoIconFill) {
-		setAttributes({
-			icon: '',
-			iconName: name,
-			hasNoIconFill,
-		});
-		setInserterOpen(false);
-	}
+	
 
 	function onClickCategory(category) {
 		setSearchInput('');
@@ -190,7 +183,6 @@ export default function InserterModal(props) {
 						shownIcons={getFilteredIcons()}
 						iconSize={iconSize}
 						onSelectedItem={onSelectedItem}
-						attributes={attributes}
 					/>
 				</div>
 			</div>

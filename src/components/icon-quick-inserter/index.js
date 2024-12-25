@@ -25,36 +25,13 @@ export default function QuickInserterPopover( props ) {
 		setInserterOpen,
 		isQuickInserterOpen,
 		setQuickInserterOpen,
-		setAttributes,
 	} = props;
 
 	if ( ! isQuickInserterOpen ) {
 		return null;
 	}
 
-	function updateIconAtts( name, hasNoIconFill ) {
-		setAttributes( {
-			icon: '',
-			iconName: name,
-			hasNoIconFill,
-		} );
-		setInserterOpen( false );
-	}
-
-// 	const classIconsByType = classIcons;
-// 	let classIconList = classIconsByType.icons.map((theIcon) => {
-// 		let {name,title,icon,categories} = theIcon;
-// 		name = name.replace('Icons-iconFontAwesome','fa-');
-// 		const className = icon.props?.className;
-// 		return {name,title,className,categories};
-// 	})
-// 	console.log('classIconList',classIconList);
-
-// // 	const iconsByType = getIcons();
-// // 	const iconsAll = flattenIconsArray( iconsByType );
-// // console.log('iconsAll',iconsAll);
-
-	const iconsByType = classIconIndex;
+	
 	const iconsAll = classIconIndex.icons;
 
 
