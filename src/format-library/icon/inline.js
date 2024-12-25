@@ -2,6 +2,11 @@
  * WordPress dependencies
  */
 import { useMemo, createInterpolateElement } from '@wordpress/element';
+
+import { Toolbar, ToolbarButton } from '@wordpress/components';
+import { formatBold, formatItalic, link } from '@wordpress/icons';
+
+
 import { __, sprintf } from '@wordpress/i18n';
 import { speak } from '@wordpress/a11y';
 import {
@@ -49,6 +54,7 @@ const LINK_SETTINGS = [
 ];
 
 function InlineLinkUI( {
+	name,
 	isActive,
 	activeAttributes,
 	value,
@@ -259,6 +265,48 @@ function InlineLinkUI( {
 		);
 	}
 
+	function selectIcon(){
+alert('show selection');
+	}
+
+	function addIcon(){
+		const plainText = ' ';
+		const format = {
+			type: name,
+			attributes: {
+				style: 'padding-left:5px;padding-right:5px;',
+				class: 'icon fa-solid fa-paperclip large blue'
+			},
+		};
+		
+
+		if ( isCollapsed( value ) ) {
+			onChange(
+				insert(
+					value,
+					applyFormat(
+						create( { 
+							text: plainText, 
+					}),
+						format,
+						0,
+						plainText.length
+					)
+				)
+			)
+
+		} else {
+			alert('Do not select anything when inserting an icon', "Can Not Insert Icons", 'e');
+			// onChange(
+			// 	toggleFormat( value, {
+			// 		type: 'pressino/inline-icon',
+			// 		attributes: {
+			// 			class: 'fa-hill-rockslide icon fa-solid'
+			// 		}
+			// 	} ) 
+			// );
+		}
+	}
 	return (
 		<Popover
 			className="format-library__pressino-std-popover"
@@ -277,7 +325,22 @@ function InlineLinkUI( {
 			
 		>
 
-<form
+<Button
+    variant="primary"
+    onClick={ selectIcon }
+  >
+    Select Icon
+  </Button>
+
+<Button
+    variant="primary"
+    onClick={ addIcon }
+  >
+    Insert Icon
+  </Button>
+
+
+{/* <form
 							
 							onSubmit={ ( event ) => {
 								// const newReplacements = value.replacements.slice();
@@ -331,7 +394,7 @@ function InlineLinkUI( {
 									</Button>
 								</HStack>
 							</VStack>
-						</form>
+						</form> */}
 
 
 		</div>

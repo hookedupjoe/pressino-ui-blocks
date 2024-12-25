@@ -73,10 +73,12 @@ const insertIconFormat = {
 	title: 'Insert Icon',
 	tagName: 'span',
 	className: 'pressino-inline-icon',
+	
 	edit: (props) => {
 		const {isObjectActive, isActive,onChange,value} = props;
 		const [ addingLink, setAddingLink ] = useState( false );
 		const [ openedBy, setOpenedBy ] = useState( null );
+
 
 		useEffect( () => {
 			// When the link becomes inactive (i.e. isActive is false), reset the editingLink state
@@ -92,34 +94,30 @@ const insertIconFormat = {
 		const onToggle = () => {
 			// const text = getTextContent( slice( value ) );
 			// console.log('text',text);
+			const plainText = ' ';
+			const format = {
+				type: 'pressino/inline-icon-format',
+				attributes: {
+					class: 'icon fa-solid fa-paperclip large blue'
+				},
+			};
 			
 
 			if ( isCollapsed( value ) ) {
-				console.log('Creating Icon');
-				const htmlText = '&nbsp;<span></span>&nbsp;';
-				const plainText = ' ';
-				const format = {
-					type: 'pressino/inline-icon-format',
-					attributes: {
-						class: 'bi bi-1-circle'
-					},
-				};
-			
-				
 				onChange(
 					insert(
 						value,
 						applyFormat(
 							create( { 
 								text: plainText, 
-						 }),
+						}),
 							format,
-							0,
-							plainText.length
+							value.start,
+							value.start + plainText.length
 						)
 					)
 				)
-				
+
 			} else {
 				alert('Do not select anything when inserting an icon', "Can Not Insert Icons", 'e');
 				// onChange(
@@ -205,7 +203,8 @@ export default function registerFormats () {
     'core/superscript',
     'core/language',
     'core/strikethrough',
-    'core/keyboard',
+	'core/underline', //--- How to add this to the UI?
+    // 'core/keyboard',
     'core/image',
     'core/code'
 	].forEach( ( name ) => {
@@ -216,20 +215,19 @@ export default function registerFormats () {
 
 
 	formats.forEach( ( { name, ...settings } ) => {
-		console.log('reg');
 		registerFormatType( name, settings )
 	});
 
 
 
 //------- Register New Formats
-	[
-		underlineFormat, insertIconFormat,
-	].forEach( ( { name, ...settings } ) => {
+	// [
+	// 	underlineFormat, insertIconFormat,
+	// ].forEach( ( { name, ...settings } ) => {
         
-        registerFormatType( name, settings )
+    //     registerFormatType( name, settings )
        
-    } );
+    // } );
 
 
 

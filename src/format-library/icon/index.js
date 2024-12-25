@@ -87,7 +87,7 @@ function Edit( {
 		};
 	}, [ contentRef, isActive ] );
 
-	function addLink( target ) {
+	function addIcon( target ) {
 		const text = getTextContent( slice( value ) );
 
 		if ( ! isActive && text && isURL( text ) && isValidHref( text ) ) {
@@ -179,7 +179,7 @@ function Edit( {
 				<RichTextShortcut
 					type="primary"
 					character="k"
-					onUse={ addLink }
+					onUse={ addIcon }
 				/>
 			) }
 			<RichTextShortcut
@@ -192,7 +192,7 @@ function Edit( {
 				icon={ linkIcon }
 				title={ isActive ? __( 'Link' ) : title }
 				onClick={ ( event ) => {
-					addLink( event.currentTarget );
+					addIcon( event.currentTarget );
 					console.log('test')
 				} }
 				isActive={ isActive || addingLink }
@@ -203,6 +203,7 @@ function Edit( {
 			/>
 			{ addingLink && (
 				<InlineLinkUI
+					name
 					stopAddingLink={ stopAddingLink }
 					onFocusOutside={ onFocusOutside }
 					isActive={ isActive }
