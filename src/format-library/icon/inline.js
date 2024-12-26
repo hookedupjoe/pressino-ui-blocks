@@ -410,6 +410,20 @@ function InlineLinkUI( {
 		</>
 	}
 
+	function selectIconButton(){
+		if( isInserterOpen || isQuickInserterOpen ){
+			return <div class="ui message compact toleft marb0 padb0">Select an icon from the list</div>
+		}
+		return <Button
+					variant={(currentIcon && currentIcon?.className) ? 'tertiary' : 'primary'}
+					onClick={() => {
+						setQuickInserterOpen(true);
+					}}
+					>
+						
+					{istr('Select Icon', controlname)}
+				</Button>
+	}
 	function insertButtion(){
 		if( !(currentIcon && currentIcon?.className) ){
 			return <></>
@@ -471,6 +485,32 @@ function InlineLinkUI( {
 		/>
 		</>
 		
+	}
+
+	function getPopoverMenu(){
+		return <div tabIndex={ -1 }>
+
+				{selectIconButton()}
+
+				{insertButtion()}
+				{iconPreview()}
+				{sizeControls()}
+				{colorPallet()}
+				
+				<InserterModal
+						onSelectedItem={onSelectedItem}
+						isInserterOpen={ isInserterOpen }
+						setInserterOpen={ setInserterOpen }
+					/>
+				<QuickInserterPopover
+					onSelectedItem={onSelectedItem}
+					setInserterOpen={setInserterOpen}
+					isQuickInserterOpen={isQuickInserterOpen}
+					setQuickInserterOpen={setQuickInserterOpen}
+				/>
+
+			</div>
+
 	}
 
 
@@ -545,103 +585,7 @@ function InlineLinkUI( {
 			focusOnMount={ focusOnMount }
 			constrainTabbing
 		>
-			<div
-			tabIndex={ -1 }
-			
-		>
-
-		<Button
-			variant={(currentIcon && currentIcon?.className) ? 'tertiary' : 'primary'}
-			onClick={() => {
-				setQuickInserterOpen(true);
-			}}
-		>
-			{istr('Select Icon', controlname)}
-		</Button>
-
-		{insertButtion()}
-		{iconPreview()}
-		{sizeControls()}
-		{colorPallet()}
-		
-		<InserterModal
-				onSelectedItem={onSelectedItem}
-				isInserterOpen={ isInserterOpen }
-				setInserterOpen={ setInserterOpen }
-			/>
-		<QuickInserterPopover
-			onSelectedItem={onSelectedItem}
-			setInserterOpen={setInserterOpen}
-			isQuickInserterOpen={isQuickInserterOpen}
-			setQuickInserterOpen={setQuickInserterOpen}
-		/>
-{/* 
-<Button
-    variant="primary"
-    onClick={ addIcon }
-  >
-    Insert Icon
-  </Button> */}
-
-
-{/* <form
-							
-							onSubmit={ ( event ) => {
-								// const newReplacements = value.replacements.slice();
-			
-								// newReplacements[ value.start ] = {
-								// 	type: name,
-								// 	attributes: {
-								// 		...activeObjectAttributes,
-								// 		style: width ? `width: ${ editedWidth }px;` : '',
-								// 		alt: editedAlt,
-								// 	},
-								// };
-			
-								// onChange( {
-								// 	...value,
-								// 	replacements: newReplacements,
-								// } );
-			
-								alert('NO!')
-								event.preventDefault();
-							} }
-						>
-							<VStack spacing={ 4 }>
-								<NumberControl
-									__next40pxDefaultSize
-									label={ __( 'Image Width' ) }
-									// value={ editedWidth }
-									min={ 1 }
-									onChange={ ( newWidth ) => {
-										//setEditedWidth( newWidth );
-									} }
-								/>
-								<TextareaControl
-									label={ __( 'Alternative text' ) }
-									__nextHasNoMarginBottom
-									// value={ editedAlt }
-									onChange={ ( newAlt ) => {
-										//setEditedAlt( newAlt );
-									} }
-									
-								/>
-								<HStack justify="right">
-									<Button
-										// disabled={ ! hasChanged }
-										accessibleWhenDisabled
-										variant="primary"
-										type="submit"
-										size="compact"
-									>
-										{ __( 'Apply' ) }
-									</Button>
-								</HStack>
-							</VStack>
-						</form> */}
-
-
-		</div>
+			{getPopoverMenu()}
 			
 		</Popover>
 	);
