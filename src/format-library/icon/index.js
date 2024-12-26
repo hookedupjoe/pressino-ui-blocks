@@ -176,29 +176,18 @@ function Edit( {
 
 	return (
 		<>
-			{ hasSelection && (
-				<RichTextShortcut
-					type="primary"
-					character="k"
-					onUse={ addIcon }
-				/>
-			) }
-			<RichTextShortcut
-				type="primaryShift"
-				character="k"
-				onUse={ onRemoveFormat }
-			/>
+
+		
 			<RichTextToolbarButton
 				name="link"
 				icon={ linkIcon }
-				title={ isActive ? __( 'Link' ) : title }
+				title={ isActive ? __( 'Icon' ) : title }
 				onClick={ ( event ) => {
 					addIcon( event.currentTarget );
-					console.log('test')
 				} }
 				isActive={ isActive || addingLink }
 				shortcutType="primary"
-				shortcutCharacter="k"
+				shortcutCharacter="i"
 				aria-haspopup="true"
 				aria-expanded={ addingLink }
 			/>

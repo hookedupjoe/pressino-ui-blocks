@@ -4,7 +4,10 @@
 import { useEffect, useState, useMemo, createInterpolateElement } from '@wordpress/element';
 import { istr, PressinoUI, attNamesIcon } from '../../pressino-ui';
 import { ColorPalette } from '@wordpress/components';
-;
+
+import { Toolbar, ToolbarButton } from '@wordpress/components';
+import { formatBold, formatItalic, link } from '@wordpress/icons';
+
 import { __, sprintf } from '@wordpress/i18n';
 import { speak } from '@wordpress/a11y';
 import {
@@ -72,6 +75,7 @@ function InlineLinkUI( {
 	const [color, setColor] = useState();
 	const [colorName, setColorName] = useState();
 	const [currentIcon, setCurrentIcon] = useState();
+	const [iconsize, setIconSize] = useState();
 
 	const colors = [
 		{
@@ -95,14 +99,14 @@ function InlineLinkUI( {
 			"slug": "orange"
 		},
 		{
-			"color": "#B5CC18",
-			"name": "Olive",
-			"slug": "olive"
-		},
-		{
 			"color": "#FBBD08",
 			"name": "Yellow",
 			"slug": "yellow"
+		},
+		{
+			"color": "#B5CC18",
+			"name": "Olive",
+			"slug": "olive"
 		},
 		{
 			"color": "#21BA45",
@@ -138,6 +142,11 @@ function InlineLinkUI( {
 			"color": "#A5673F",
 			"name": "Brown",
 			"slug": "brown"
+		},
+		{
+			"color": "#767676",
+			"name": "Grey",
+			"slug": "grey"
 		}
     ];
 
@@ -151,10 +160,7 @@ function InlineLinkUI( {
 		tmpAtts.iconname = tmpIcon.className || 'icon users'
 		tmpAtts.icontype = tmpIcon.type || 'default'
 		tmpAtts.color = colorName;
-		console.log('colorName',colorName);
-		//tmpAtts.size = '';
-
-		console.log('tmpAtts',tmpAtts);
+		tmpAtts.size = iconsize;
 		addIcon(tmpAtts);
 		stopAddingLink();
 	}
@@ -162,6 +168,8 @@ function InlineLinkUI( {
 	function onSelectedItem(theItem){
 		//console.log('linkValue',linkValue);
 		//addIconAndClose(theItem);
+		setInserterOpen(false);
+		setQuickInserterOpen(false);
 		setCurrentIcon(theItem);
 	}
 
@@ -189,10 +197,6 @@ function InlineLinkUI( {
 	);
 
 	useEffect( () => {
-		console.log('addingLink',addingLink)
-		// When the link becomes inactive (i.e. isActive is false), reset the editingLink state
-		// and the creatingLink state. This means that if the Link UI is displayed and the link
-		// becomes inactive (e.g. used arrow keys to move cursor outside of link bounds), the UI will close.
 		if ( addingLink ) {
 			setQuickInserterOpen(true);
 		}
@@ -378,8 +382,39 @@ function InlineLinkUI( {
 	}
 
 
+	function sizeControls(){
+		if( !(currentIcon && currentIcon?.className) ){
+			return <></>
+		}
+		if( isInserterOpen || isQuickInserterOpen ){
+			return <></>
+		}
+		return <>
+		<hr style={{clear: "both"}}/>
+		<Toolbar label="Options">
+			<ToolbarButton onClick={() => setIconSize('tiny')} text="Tiny" label="Tiny" />
+			<ToolbarButton onClick={() => setIconSize('small')} text="Small" label="Small" />
+            <ToolbarButton onClick={() => setIconSize('medium')} text="Medium" label="Medium"  />
+            <ToolbarButton onClick={() => setIconSize('large')} text="Large" label="Large"  />
+            <ToolbarButton onClick={() => setIconSize('huge')} text="Huge" label="Huge"  />
+        </Toolbar>
+		{/* <div></div>
+		<Button
+			variant="tertiary"
+			iconPosition="right"
+			style={{marginLeft: "10px"}}
+			onClick={() => setIconSize(undefined)}
+		>
+			{istr('Clear', controlname)}
+		</Button> */}
+		</>
+	}
+
 	function insertButtion(){
 		if( !(currentIcon && currentIcon?.className) ){
+			return <></>
+		}
+		if( isInserterOpen || isQuickInserterOpen ){
 			return <></>
 		}
 		return <>
@@ -397,13 +432,9 @@ function InlineLinkUI( {
 	}
 
 	function iconPreview(){
-		// if( !(currentIcon)  ){
-		// 	return <></>
-		// }
 		if( !(currentIcon && currentIcon?.className) ){
 			return <></>
 		}
-		console.log(currentIcon);
 		let tmpIconClass = 'bi bi-rocket-takeoff';
 		if(currentIcon && currentIcon?.className){
 			tmpIconClass = currentIcon?.className;
@@ -411,7 +442,7 @@ function InlineLinkUI( {
 				tmpIconClass = 'fa-solid ' + tmpIconClass;	
 			}
 		}
-		return <div style={{border: "solid 1px #333333", margin: "0px", padding: "7px", float: "right", rightMargin: "20px"}}><span class={`icon ${tmpIconClass} ${colorName}`} > </span></div>
+		return <div style={{border: "solid 1px #333333", margin: "0px", minWidth:"50px", padding: "7px", float: "right", rightMargin: "20px"}}><span class={`icon ${tmpIconClass} ${iconsize || ''} ${colorName}`} > </span></div>
 	}
 		
 	function colorPallet(){
@@ -421,21 +452,25 @@ function InlineLinkUI( {
 		if( !(currentIcon && currentIcon?.className) ){
 			return <></>
 		}
-		return <ColorPalette
-		colors={ colors }
-		value={ color }
-		disableCustomColors={ true }
-		onChange={ ( color, index ) => {
-			
-			if(index != undefined){
-				const tmpColorName = colors[index].slug;
-				setColorName(tmpColorName)
-			} else {
-				setColorName('');
-			}
-			setColor( color );
-		} }
-	/>
+		return <>
+		<hr style={{clear: "both"}}/>
+		<ColorPalette
+			colors={ colors }
+			value={ color }
+			disableCustomColors={ true }
+			onChange={ ( color, index ) => {
+				
+				if(index != undefined){
+					const tmpColorName = colors[index].slug;
+					setColorName(tmpColorName)
+				} else {
+					setColorName('');
+				}
+				setColor( color );
+			} }
+		/>
+		</>
+		
 	}
 
 
@@ -475,6 +510,13 @@ function InlineLinkUI( {
 					)
 				)
 			)
+			//Move past the end so we don't add into / replace when adding next item
+			selectionChange( {
+				clientId: selectionStart.clientId,
+				identifier: selectionStart.attributeKey,
+				start: value.start + plainText.length + 1,
+			} );
+
 
 		} else {
 			alert('Do not select anything when inserting an icon', "Can Not Insert Icons", 'e');
@@ -507,7 +549,8 @@ function InlineLinkUI( {
 			tabIndex={ -1 }
 			
 		>
-<Button
+
+		<Button
 			variant={(currentIcon && currentIcon?.className) ? 'tertiary' : 'primary'}
 			onClick={() => {
 				setQuickInserterOpen(true);
@@ -518,7 +561,7 @@ function InlineLinkUI( {
 
 		{insertButtion()}
 		{iconPreview()}
-		<hr style={{clear: "both"}}/>
+		{sizeControls()}
 		{colorPallet()}
 		
 		<InserterModal
