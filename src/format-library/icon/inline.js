@@ -1,10 +1,10 @@
 /**
  * WordPress dependencies
  */
-import { useState, useMemo, createInterpolateElement } from '@wordpress/element';
+import { useEffect, useState, useMemo, createInterpolateElement } from '@wordpress/element';
 import { istr, PressinoUI, attNamesIcon } from '../../pressino-ui';
 import { ColorPalette } from '@wordpress/components';
-
+;
 import { __, sprintf } from '@wordpress/i18n';
 import { speak } from '@wordpress/a11y';
 import {
@@ -54,6 +54,7 @@ const LINK_SETTINGS = [
 ];
 
 function InlineLinkUI( {
+	addingLink,
 	controlname,
 	isActive,
 	activeAttributes,
@@ -187,6 +188,16 @@ function InlineLinkUI( {
 		[]
 	);
 
+	useEffect( () => {
+		console.log('addingLink',addingLink)
+		// When the link becomes inactive (i.e. isActive is false), reset the editingLink state
+		// and the creatingLink state. This means that if the Link UI is displayed and the link
+		// becomes inactive (e.g. used arrow keys to move cursor outside of link bounds), the UI will close.
+		if ( addingLink ) {
+			setQuickInserterOpen(true);
+		}
+	}, [ addingLink ] );
+	
 	const linkValue = useMemo(
 		() => ( {
 			url: activeAttributes.url,
@@ -477,6 +488,8 @@ function InlineLinkUI( {
 			// );
 		}
 	}
+
+
 	return (
 		<Popover
 			className="format-library__pressino-std-popover"

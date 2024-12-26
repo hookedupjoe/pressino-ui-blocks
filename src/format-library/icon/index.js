@@ -120,7 +120,8 @@ function Edit( {
 		// 		} );
 		// 	}
 			setAddingLink( true );
-		// }
+			
+			// }
 	}
 
 	/**
@@ -204,6 +205,7 @@ function Edit( {
 			{ addingLink && (
 				<InlineLinkUI
 					controlname={ name }
+					addingLink={ addingLink }
 					setAddingLink={ setAddingLink }
 					stopAddingLink={ stopAddingLink }
 					onFocusOutside={ onFocusOutside }
