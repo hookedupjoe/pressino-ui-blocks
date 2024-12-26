@@ -88,39 +88,39 @@ function Edit( {
 	}, [ contentRef, isActive ] );
 
 	function addIcon( target ) {
-		const text = getTextContent( slice( value ) );
+		// const text = getTextContent( slice( value ) );
 
-		if ( ! isActive && text && isURL( text ) && isValidHref( text ) ) {
-			onChange(
-				applyFormat( value, {
-					type: name,
-					attributes: { url: text },
-				} )
-			);
-		} else if ( ! isActive && text && isEmail( text ) ) {
-			onChange(
-				applyFormat( value, {
-					type: name,
-					attributes: { url: `mailto:${ text }` },
-				} )
-			);
-		} else if ( ! isActive && text && isPhoneNumber( text ) ) {
-			onChange(
-				applyFormat( value, {
-					type: name,
-					attributes: { url: `tel:${ text.replace( /\D/g, '' ) }` },
-				} )
-			);
-		} else {
-			console.log('final else',text,target);
-			if ( target ) {
-				setOpenedBy( {
-					el: target,
-					action: null, // We don't need to distinguish between click or keyboard here
-				} );
-			}
+		// if ( ! isActive && text && isURL( text ) && isValidHref( text ) ) {
+		// 	onChange(
+		// 		applyFormat( value, {
+		// 			type: name,
+		// 			attributes: { url: text },
+		// 		} )
+		// 	);
+		// } else if ( ! isActive && text && isEmail( text ) ) {
+		// 	onChange(
+		// 		applyFormat( value, {
+		// 			type: name,
+		// 			attributes: { url: `mailto:${ text }` },
+		// 		} )
+		// 	);
+		// } else if ( ! isActive && text && isPhoneNumber( text ) ) {
+		// 	onChange(
+		// 		applyFormat( value, {
+		// 			type: name,
+		// 			attributes: { url: `tel:${ text.replace( /\D/g, '' ) }` },
+		// 		} )
+		// 	);
+		// } else {
+		// 	console.log('final else',text,target);
+		// 	if ( target ) {
+		// 		setOpenedBy( {
+		// 			el: target,
+		// 			action: null, // We don't need to distinguish between click or keyboard here
+		// 		} );
+		// 	}
 			setAddingLink( true );
-		}
+		// }
 	}
 
 	/**
@@ -203,7 +203,8 @@ function Edit( {
 			/>
 			{ addingLink && (
 				<InlineLinkUI
-					name
+					controlname={ name }
+					setAddingLink={ setAddingLink }
 					stopAddingLink={ stopAddingLink }
 					onFocusOutside={ onFocusOutside }
 					isActive={ isActive }

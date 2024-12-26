@@ -2,6 +2,8 @@
  * WordPress dependencies
  */
 import { useState, useMemo, createInterpolateElement } from '@wordpress/element';
+import { istr, PressinoUI, attNamesIcon } from '../../pressino-ui';
+import { ColorPalette } from '@wordpress/components';
 
 import { __, sprintf } from '@wordpress/i18n';
 import { speak } from '@wordpress/a11y';
@@ -52,7 +54,7 @@ const LINK_SETTINGS = [
 ];
 
 function InlineLinkUI( {
-	name,
+	controlname,
 	isActive,
 	activeAttributes,
 	value,
@@ -66,18 +68,100 @@ function InlineLinkUI( {
 
 	const [isQuickInserterOpen, setQuickInserterOpen] = useState(false);
 	const [isInserterOpen, setInserterOpen] = useState(false);
+	const [color, setColor] = useState();
+	const [colorName, setColorName] = useState();
+	const [currentIcon, setCurrentIcon] = useState();
 
-	function onSelectedItem(theItem){
+	const colors = [
+		{
+			"color": "#FFFFFF",
+			"name": "Black",
+			"slug": "black"
+		},
+		{
+			"color": "#111111",
+			"name": "White",
+			"slug": "white"
+		},
+		{
+			"color": "#DB2828",
+			"name": "Red",
+			"slug": "red"
+		},
+		{
+			"color": "#F2711C",
+			"name": "Orange",
+			"slug": "orange"
+		},
+		{
+			"color": "#B5CC18",
+			"name": "Olive",
+			"slug": "olive"
+		},
+		{
+			"color": "#FBBD08",
+			"name": "Yellow",
+			"slug": "yellow"
+		},
+		{
+			"color": "#21BA45",
+			"name": "Green",
+			"slug": "green"
+		},
+		{
+			"color": "#00B5AD",
+			"name": "Teal",
+			"slug": "teal"
+		},
+		{
+			"color": "#2185D0",
+			"name": "Blue",
+			"slug": "blue"
+		},
+		{
+			"color": "#6435C9",
+			"name": "Violet",
+			"slug": "violet"
+		},
+		{
+			"color": "#A333C8",
+			"name": "Purple",
+			"slug": "purple"
+		},
+		{
+			"color": "#E03997",
+			"name": "Pink",
+			"slug": "pink"
+		},
+		{
+			"color": "#A5673F",
+			"name": "Brown",
+			"slug": "brown"
+		}
+    ];
+
+
+	function addIconAndClose(theItem){
+		var tmpIcon = theItem || currentIcon
 		setInserterOpen(false);
+		setQuickInserterOpen(false);
 		var tmpAtts = {}
 		
-		tmpAtts.iconname = theItem.className || 'icon users'
-		tmpAtts.icontype = theItem.type || 'default'
-		tmpAtts.color = 'blue';
-		tmpAtts.size = 'large';
+		tmpAtts.iconname = tmpIcon.className || 'icon users'
+		tmpAtts.icontype = tmpIcon.type || 'default'
+		tmpAtts.color = colorName;
+		console.log('colorName',colorName);
+		//tmpAtts.size = '';
 
 		console.log('tmpAtts',tmpAtts);
 		addIcon(tmpAtts);
+		stopAddingLink();
+	}
+
+	function onSelectedItem(theItem){
+		//console.log('linkValue',linkValue);
+		//addIconAndClose(theItem);
+		setCurrentIcon(theItem);
 	}
 
 		
@@ -282,9 +366,67 @@ function InlineLinkUI( {
 		);
 	}
 
-	function selectIcon(){
-alert('show selection');
+
+	function insertButtion(){
+		if( !(currentIcon && currentIcon?.className) ){
+			return <></>
+		}
+		return <>
+		&nbsp;
+		<Button
+		variant="primary"
+		disabled={ ! currentIcon && currentIcon?.className}
+		onClick={() => {
+			addIconAndClose();
+		}}
+	>
+		{istr('Insert Icon', controlname)}
+	</Button></>
+	
 	}
+
+	function iconPreview(){
+		// if( !(currentIcon)  ){
+		// 	return <></>
+		// }
+		if( !(currentIcon && currentIcon?.className) ){
+			return <></>
+		}
+		console.log(currentIcon);
+		let tmpIconClass = 'bi bi-rocket-takeoff';
+		if(currentIcon && currentIcon?.className){
+			tmpIconClass = currentIcon?.className;
+			if( currentIcon.type == 'fa' ){
+				tmpIconClass = 'fa-solid ' + tmpIconClass;	
+			}
+		}
+		return <div style={{border: "solid 1px #333333", margin: "0px", padding: "7px", float: "right", rightMargin: "20px"}}><span class={`icon ${tmpIconClass} ${colorName}`} > </span></div>
+	}
+		
+	function colorPallet(){
+		if( isInserterOpen || isQuickInserterOpen ){
+			return <></>
+		}
+		if( !(currentIcon && currentIcon?.className) ){
+			return <></>
+		}
+		return <ColorPalette
+		colors={ colors }
+		value={ color }
+		disableCustomColors={ true }
+		onChange={ ( color, index ) => {
+			
+			if(index != undefined){
+				const tmpColorName = colors[index].slug;
+				setColorName(tmpColorName)
+			} else {
+				setColorName('');
+			}
+			setColor( color );
+		} }
+	/>
+	}
+
 
 	function addIcon({iconname, icontype,  size = '', color = ''}){
 		let tmpClass = iconname;
@@ -301,10 +443,11 @@ alert('show selection');
 		const format = {
 			type: 'pressinoformat/icon',
 			attributes: {
-				style: 'margin-left:5px;margin-right:5px;',
+				style: 'margin-left:2px;margin-right:2px;',
 				class: tmpClass
 			},
 		};
+		
 		
 
 		if ( isCollapsed( value ) ) {
@@ -352,13 +495,19 @@ alert('show selection');
 			
 		>
 <Button
-			variant="primary"
+			variant={(currentIcon && currentIcon?.className) ? 'tertiary' : 'primary'}
 			onClick={() => {
 				setQuickInserterOpen(true);
 			}}
 		>
-			{__('Select Icon', name)}
+			{istr('Select Icon', controlname)}
 		</Button>
+
+		{insertButtion()}
+		{iconPreview()}
+		<hr style={{clear: "both"}}/>
+		{colorPallet()}
+		
 		<InserterModal
 				onSelectedItem={onSelectedItem}
 				isInserterOpen={ isInserterOpen }
