@@ -678,10 +678,3 @@ span.icons .inverted.corner.icon {
     float: none;
     margin: 0 .5em 0 0
 }
-
-
-
-.format-library__pressino-std-popover>.components-popover__content {
-	width: 320px;
-    padding: 15px;
-}

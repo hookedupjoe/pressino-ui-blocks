@@ -60,6 +60,7 @@ function InlineLinkUI( {
 	addingLink,
 	controlname,
 	isActive,
+	setAddingLink,
 	activeAttributes,
 	value,
 	onChange,
@@ -173,9 +174,53 @@ function InlineLinkUI( {
 		setCurrentIcon(theItem);
 	}
 
+	function getColorForSlug(theSlug){
+		var tmpRet = '';
+		colors.map((theColor) => {
+			if(theColor.slug == theSlug) tmpRet = theColor.color
+		} )
+		return tmpRet;
+	}
 		
-	const richLinkTextValue = getRichTextValueFromSelection( value, isActive );
+	const richLinkTextValue = getRichTextValueFromSelection( value, isActive, controlname );
 
+	function checkCurrentIcon(){
+		var tmpFormats = richLinkTextValue?.formats;
+		var tmpIcons = [];
+		tmpFormats.map((value) => {
+			var tmpVal = value;
+			
+			if( tmpVal.length == 1 ){
+				tmpVal = tmpVal[0]
+			}
+			
+			if(tmpVal.type == controlname) tmpIcons.push(tmpVal)
+		});
+
+		//console.log('f tmpIcons',tmpFormats,tmpIcons)
+		if( tmpIcons.length > 1 ){
+			alert('Select only one icon to update', 'Too Many Icons Selected', 'e');
+			setAddingLink(false);
+			return false;
+		}
+		if( ! isCollapsed( value ) && tmpIcons.length == 0 ){
+			alert('Select an icon to update', 'No Icons Selected', 'e');
+			setAddingLink(false);
+			return false;
+		}
+
+		var tmpIcon = tmpIcons[0];
+		console.log('tmpIcon',tmpIcon);
+		
+		//var tmpCurrIcon = {color: tmpIcon.attributes.datacolor, size: tmpIcon.attributes.datasize, className: tmpIcon.attributes.dataicon, type: tmpIcon.attributes.dataicontype};
+		setCurrentIcon({className: tmpIcon.attributes.dataicon, type: tmpIcon.attributes.dataicontype});
+		console.log('tmpIcon.attributes.datacolor',tmpIcon.attributes.datacolor);
+		setColorName(tmpIcon.attributes.datacolor);
+		setColor(getColorForSlug(tmpIcon.attributes.datacolor))
+		setIconSize(tmpIcon.attributes.datasize);
+		
+		return true;
+	}
 	// Get the text content minus any HTML tags.
 	const richTextText = richLinkTextValue.text;
 
@@ -197,8 +242,12 @@ function InlineLinkUI( {
 	);
 
 	useEffect( () => {
-		if ( addingLink ) {
+		if ( addingLink && !isActive ) {
 			setQuickInserterOpen(true);
+		} else {
+			checkCurrentIcon();
+			//--- Do se load here?
+			console.log('did not load values yet',activeAttributes,value,richLinkTextValue)
 		}
 	}, [ addingLink ] );
 	
@@ -440,7 +489,7 @@ function InlineLinkUI( {
 			addIconAndClose();
 		}}
 	>
-		{istr('Insert Icon', controlname)}
+		{istr((isActive ? 'Replace Icon' : 'Insert Icon'), controlname)}
 	</Button></>
 	
 	}
@@ -488,6 +537,8 @@ function InlineLinkUI( {
 	}
 
 	function getPopoverMenu(){
+		//console.log('gpm',activeAttributes,value,richLinkTextValue)
+		
 		return <div tabIndex={ -1 }>
 
 				{selectIconButton()}
@@ -515,6 +566,8 @@ function InlineLinkUI( {
 
 
 	function addIcon({iconname, icontype,  size = '', color = ''}){
+		console.log('addIcon',iconname, icontype,  size,color );
+
 		let tmpClass = iconname;
 		if( size != '' ){
 			tmpClass += ' ' + size;
@@ -529,14 +582,20 @@ function InlineLinkUI( {
 		const format = {
 			type: 'pressinoformat/icon',
 			attributes: {
+				datacolor: color || '',
+				datasize: size || '',
+				dataicon: iconname || '',
+				dataicontype: icontype || '',
+				
 				style: 'margin-left:2px;margin-right:2px;',
 				class: tmpClass
 			},
 		};
 		
 		
+		
 
-		if ( isCollapsed( value ) ) {
+		if ( !isActive && isCollapsed( value ) ) {
 			onChange(
 				insert(
 					value,
@@ -550,6 +609,57 @@ function InlineLinkUI( {
 					)
 				)
 			)
+			
+
+
+		} else {
+			if( isActive ){
+				console.log('is active, replace');
+				let newValue;
+				// Create new RichText value for the new text in order that we
+				// can apply formats to it.
+				newValue = create( { text: plainText } );
+				// Apply the new Link format to this new text value.
+				newValue = applyFormat( newValue, format, 0, plainText.length );
+
+				// Get the boundaries of the active link format.
+				const boundary = getFormatBoundary( value, {
+					type: controlname,
+				} );
+
+				// Split the value at the start of the active link format.
+				// Passing "start" as the 3rd parameter is required to ensure
+				// the second half of the split value is split at the format's
+				// start boundary and avoids relying on the value's "end" property
+				// which may not correspond correctly.
+				const [ valBefore, valAfter ] = split(
+					value,
+					boundary.start,
+					boundary.start
+				);
+
+				// Update the original (full) RichTextValue replacing the
+				// target text with the *new* RichTextValue containing:
+				// 1. The new text content.
+				// 2. The new link format.
+				// As "replace" will operate on the first match only, it is
+				// run only against the second half of the value which was
+				// split at the active format's boundary. This avoids a bug
+				// with incorrectly targetted replacements.
+				// See: https://github.com/WordPress/gutenberg/issues/41771.
+				// Note original formats will be lost when applying this change.
+				// That is expected behaviour.
+				// See: https://github.com/WordPress/gutenberg/pull/33849#issuecomment-936134179.
+				const newValAfter = replace( valAfter, richTextText, newValue );
+
+				newValue = concat( valBefore, newValAfter );
+				onChange(newValue);
+
+			} else {
+				//Shouldn't happen with other checks, but in case - tell the developer
+				alert('Do not select anything when inserting an icon', "Try Again", 'e');
+			}
+
 			//Move past the end so we don't add into / replace when adding next item
 			selectionChange( {
 				clientId: selectionStart.clientId,
@@ -557,9 +667,6 @@ function InlineLinkUI( {
 				start: value.start + plainText.length + 1,
 			} );
 
-
-		} else {
-			alert('Do not select anything when inserting an icon', "Can Not Insert Icons", 'e');
 			// onChange(
 			// 	toggleFormat( value, {
 			// 		type: 'pressino/inline-icon',
@@ -591,7 +698,7 @@ function InlineLinkUI( {
 	);
 }
 
-function getRichTextValueFromSelection( value, isActive ) {
+function getRichTextValueFromSelection( value, isActive, controlname ) {
 	// Default to the selection ranges on the RichTextValue object.
 	let textStart = value.start;
 	let textEnd = value.end;
@@ -601,7 +708,7 @@ function getRichTextValueFromSelection( value, isActive ) {
 	// and not the selected text.
 	if ( isActive ) {
 		const boundary = getFormatBoundary( value, {
-			type: 'core/link',
+			type: controlname,
 		} );
 
 		textStart = boundary.start;

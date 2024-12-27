@@ -394,3 +394,12 @@
     border-bottom: solid 1px black;
   }
 
+  .format-library__pressino-std-popover>.components-popover__content {
+    width: 320px;
+      padding: 15px;
+  }
+  
+  
+  .format-library__pressino-std-popover.components-popover {
+    z-index: 99998
+  }

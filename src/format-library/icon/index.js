@@ -88,6 +88,28 @@ function Edit( {
 	}, [ contentRef, isActive ] );
 
 	function addIcon( target ) {
+		setAddingLink( true );
+		return;
+		
+		if ( isCollapsed( value ) ) {
+			setAddingLink( true );
+
+		} else {
+			if( ! isActive ){
+				alert('Do not select anything when inserting an icon', "Can Not Insert Icons", 'e');
+				return;
+			}
+			setAddingLink( true );
+			// onChange(
+			// 	toggleFormat( value, {
+			// 		type: 'pressino/inline-icon',
+			// 		attributes: {
+			// 			class: 'fa-hill-rockslide icon fa-solid'
+			// 		}
+			// 	} ) 
+			// );
+		}
+
 		// const text = getTextContent( slice( value ) );
 
 		// if ( ! isActive && text && isURL( text ) && isValidHref( text ) ) {
@@ -119,8 +141,8 @@ function Edit( {
 		// 			action: null, // We don't need to distinguish between click or keyboard here
 		// 		} );
 		// 	}
-			setAddingLink( true );
 			
+		// setAddingLink( true );
 			// }
 	}
 
@@ -216,6 +238,13 @@ export const icon = {
 	tagName: 'span',
 	className: 'icon',
 	attributes: {
+		datacolor: 'datacolor',
+		datasize: 'datasize',
+		dataicon: 'dataicon',
+		dataicontype: 'dataicontype',
+		style: 'style',
+	},
+	link____attributes: {
 		url: 'href',
 		type: 'data-type',
 		id: 'data-id',
