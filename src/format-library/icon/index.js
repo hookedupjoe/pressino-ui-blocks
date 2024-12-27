@@ -90,7 +90,7 @@ function Edit( {
 	function addIcon( target ) {
 		setAddingLink( true );
 		return;
-		
+
 		if ( isCollapsed( value ) ) {
 			setAddingLink( true );
 
@@ -238,6 +238,7 @@ export const icon = {
 	tagName: 'span',
 	className: 'icon',
 	attributes: {
+		iconid: 'iconid',
 		datacolor: 'datacolor',
 		datasize: 'datasize',
 		dataicon: 'dataicon',
