@@ -4,28 +4,14 @@
 import { __ } from '@wordpress/i18n';
 import { useState, useLayoutEffect, useEffect } from '@wordpress/element';
 import {
-	getTextContent,
-	applyFormat,
-	removeFormat,
-	slice,
-	isCollapsed,
-	insert,
-	create,
-} from '@wordpress/rich-text';
-import { isURL, isEmail, isPhoneNumber } from '@wordpress/url';
-import {
-	RichTextToolbarButton,
-	RichTextShortcut,
+	RichTextToolbarButton
 } from '@wordpress/block-editor';
-import { decodeEntities } from '@wordpress/html-entities';
 import { starFilled as linkIcon } from '@wordpress/icons';
-import { speak } from '@wordpress/a11y';
 
 /**
  * Internal dependencies
  */
 import InlineLinkUI from './inline';
-import { isValidHref } from './utils';
 
 const name = 'pressinoformat/icon';
 const title = __( 'Link' );
@@ -89,61 +75,6 @@ function Edit( {
 
 	function addIcon( target ) {
 		setAddingLink( true );
-		return;
-
-		if ( isCollapsed( value ) ) {
-			setAddingLink( true );
-
-		} else {
-			if( ! isActive ){
-				alert('Do not select anything when inserting an icon', "Can Not Insert Icons", 'e');
-				return;
-			}
-			setAddingLink( true );
-			// onChange(
-			// 	toggleFormat( value, {
-			// 		type: 'pressino/inline-icon',
-			// 		attributes: {
-			// 			class: 'fa-hill-rockslide icon fa-solid'
-			// 		}
-			// 	} ) 
-			// );
-		}
-
-		// const text = getTextContent( slice( value ) );
-
-		// if ( ! isActive && text && isURL( text ) && isValidHref( text ) ) {
-		// 	onChange(
-		// 		applyFormat( value, {
-		// 			type: name,
-		// 			attributes: { url: text },
-		// 		} )
-		// 	);
-		// } else if ( ! isActive && text && isEmail( text ) ) {
-		// 	onChange(
-		// 		applyFormat( value, {
-		// 			type: name,
-		// 			attributes: { url: `mailto:${ text }` },
-		// 		} )
-		// 	);
-		// } else if ( ! isActive && text && isPhoneNumber( text ) ) {
-		// 	onChange(
-		// 		applyFormat( value, {
-		// 			type: name,
-		// 			attributes: { url: `tel:${ text.replace( /\D/g, '' ) }` },
-		// 		} )
-		// 	);
-		// } else {
-		// 	console.log('final else',text,target);
-		// 	if ( target ) {
-		// 		setOpenedBy( {
-		// 			el: target,
-		// 			action: null, // We don't need to distinguish between click or keyboard here
-		// 		} );
-		// 	}
-			
-		// setAddingLink( true );
-			// }
 	}
 
 	/**
@@ -184,17 +115,10 @@ function Edit( {
 		setOpenedBy( null );
 	}
 
-	function onRemoveFormat() {
-		onChange( removeFormat( value, name ) );
-		speak( __( 'Link removed.' ), 'assertive' );
-	}
-
 	// Only autofocus if we have clicked a link within the editor
 	const shouldAutoFocus = ! (
 		openedBy?.el?.tagName === 'A' && openedBy?.action === 'click'
 	);
-
-	const hasSelection = ! isCollapsed( value );
 
 	return (
 		<>
@@ -244,49 +168,6 @@ export const icon = {
 		dataicon: 'dataicon',
 		dataicontype: 'dataicontype',
 		style: 'style',
-	},
-	link____attributes: {
-		url: 'href',
-		type: 'data-type',
-		id: 'data-id',
-		_id: 'id',
-		target: 'target',
-		rel: 'rel',
-	},
-	__unstablePasteRule( value, { html, plainText } ) {
-		const pastedText = ( html || plainText )
-			.replace( /<[^>]+>/g, '' )
-			.trim();
-
-		// A URL was pasted, turn the selection into a link.
-		// For the link pasting feature, allow only http(s) protocols.
-		if ( ! isURL( pastedText ) || ! /^https?:/.test( pastedText ) ) {
-			return value;
-		}
-
-		// Allows us to ask for this information when we get a report.
-		window.console.log( 'Created link:\n\n', pastedText );
-
-		const format = {
-			type: name,
-			attributes: {
-				url: decodeEntities( pastedText ),
-			},
-		};
-
-		if ( isCollapsed( value ) ) {
-			return insert(
-				value,
-				applyFormat(
-					create( { text: plainText } ),
-					format,
-					0,
-					plainText.length
-				)
-			);
-		}
-
-		return applyFormat( value, format );
 	},
 	edit: Edit,
 };

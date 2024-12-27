@@ -2,24 +2,19 @@
  * WordPress dependencies
  */
 import { useRef, useEffect, useState, useMemo, createInterpolateElement } from '@wordpress/element';
-import { istr, PressinoUI, attNamesIcon } from '../../pressino-ui';
+import { istr } from '../../pressino-ui';
 import { ColorPalette } from '@wordpress/components';
 
 import { Toolbar, ToolbarButton } from '@wordpress/components';
-import { formatBold, formatItalic, link } from '@wordpress/icons';
 
 import { __, sprintf } from '@wordpress/i18n';
 import { speak } from '@wordpress/a11y';
 import {
-	Path,
-	SVG,
 	Popover,
 	Button,
-	ExternalLink,
 	__experimentalHStack as HStack,
 	__experimentalVStack as VStack,
 	__experimentalNumberControl as NumberControl,
-	TextareaControl,
 } from '@wordpress/components';
 import { prependHTTP } from '@wordpress/url';
 import {
@@ -27,16 +22,13 @@ import {
 	insert,
 	isCollapsed,
 	applyFormat,
-	removeFormat,
 	slice,
 	replace,
-	getTextContent,
 	split,
 	concat,
 	useAnchor,
 } from '@wordpress/rich-text';
 import {
-	LinkControl,
 	store as blockEditorStore,
 } from '@wordpress/block-editor';
 import { useDispatch, useSelect } from '@wordpress/data';
@@ -44,25 +36,16 @@ import { useDispatch, useSelect } from '@wordpress/data';
 /**
  * Internal dependencies
  */
-import { createLinkFormat, isValidHref, getFormatBoundary } from './utils';
+import { getFormatBoundary } from './utils';
 import { icon as settings } from './index';
 
 import { QuickInserterPopover, InserterModal } from '../../components/';
-
-const LINK_SETTINGS = [
-	// ...LinkControl.DEFAULT_LINK_SETTINGS,
-	{
-		id: 'nofollow',
-		title: __( 'Mark as nofollow' ),
-	},
-];
 
 function InlineLinkUI( {
 	addingLink,
 	controlname,
 	isActive,
 	setAddingLink,
-	activeAttributes,
 	value,
 	onChange,
 	onFocusOutside,
@@ -71,14 +54,12 @@ function InlineLinkUI( {
 	focusOnMount,
 } ) {
 
-
 	const [isQuickInserterOpen, setQuickInserterOpen] = useState(false);
 	const [isInserterOpen, setInserterOpen] = useState(false);
 	const [color, setColor] = useState();
 	const [colorName, setColorName] = useState();
 	const [currentIcon, setCurrentIcon] = useState();
 	const [iconsize, setIconSize] = useState();
-	const [isSelectActive, setSelectActive] = useState(false);
 
 	let noEditState = useRef({});
 
@@ -234,15 +215,14 @@ function InlineLinkUI( {
 
 	const { selectionChange } = useDispatch( blockEditorStore );
 
-	const { createPageEntity, userCanCreatePages, selectionStart } = useSelect(
+	const { selectionStart } = useSelect(
 		( select ) => {
 			const { getSettings, getSelectionStart } =
 				select( blockEditorStore );
 			const _settings = getSettings();
-
+			//--- These settings have color and other theme options in case needed
+			
 			return {
-				createPageEntity: _settings.__experimentalCreatePageEntity,
-				userCanCreatePages: _settings.__experimentalUserCanCreatePages,
 				selectionStart: getSelectionStart(),
 			};
 		},
@@ -251,48 +231,15 @@ function InlineLinkUI( {
 
 	useEffect( () => {
 		checkCurrentIcon();
-		console.log('noEditState.selectActive', noEditState.selectActive)
-		
 		if ( addingLink && !isActive && !(noEditState.selectActive)) {
 			setQuickInserterOpen(true);
-		} else {
-			
-			//--- Do se load here?
-			
-			//console.log('did not load values yet',activeAttributes,value,richLinkTextValue)
 		}
 		if(!addingLink){
 			noEditState.selectActive = false;
 		}
 	}, [ addingLink ] );
 	
-	const linkValue = useMemo(
-		() => ( {
-			url: activeAttributes.url,
-			type: activeAttributes.type,
-			id: activeAttributes.id,
-			opensInNewTab: activeAttributes.target === '_blank',
-			nofollow: activeAttributes.rel?.includes( 'nofollow' ),
-			title: richTextText,
-		} ),
-		[
-			activeAttributes.id,
-			activeAttributes.rel,
-			activeAttributes.target,
-			activeAttributes.type,
-			activeAttributes.url,
-			richTextText,
-		]
-	);
-
-	function removeLink() {
-		const newValue = removeFormat( value, controlname );
-		onChange( newValue );
-		stopAddingLink();
-		speak( __( 'Link removed.' ), 'assertive' );
-	}
-
-
+	
 	const popoverAnchor = useAnchor( {
 		editableContentElement: contentRef.current,
 		settings: {
@@ -401,30 +348,29 @@ function InlineLinkUI( {
 	}
 
 	function getPopoverMenu(){
-		//console.log('gpm',activeAttributes,value,richLinkTextValue)
-		
+
 		return <div tabIndex={ -1 }>
 
-				{selectIconButton()}
+			{selectIconButton()}
 
-				{insertButtion()}
-				{iconPreview()}
-				{sizeControls()}
-				{colorPallet()}
-				
-				<InserterModal
-						onSelectedItem={onSelectedItem}
-						isInserterOpen={ isInserterOpen }
-						setInserterOpen={ setInserterOpen }
-					/>
-				<QuickInserterPopover
+			{insertButtion()}
+			{iconPreview()}
+			{sizeControls()}
+			{colorPallet()}
+			
+			<InserterModal
 					onSelectedItem={onSelectedItem}
-					setInserterOpen={setInserterOpen}
-					isQuickInserterOpen={isQuickInserterOpen}
-					setQuickInserterOpen={setQuickInserterOpen}
+					isInserterOpen={ isInserterOpen }
+					setInserterOpen={ setInserterOpen }
 				/>
+			<QuickInserterPopover
+				onSelectedItem={onSelectedItem}
+				setInserterOpen={setInserterOpen}
+				isQuickInserterOpen={isQuickInserterOpen}
+				setQuickInserterOpen={setQuickInserterOpen}
+			/>
 
-			</div>
+		</div>
 
 	}
 
@@ -432,11 +378,11 @@ function InlineLinkUI( {
 	//--- ToDo: Change this to find open id to use from all
 	let tmpIconIDs = 0;
 	function getNextIconID(){
+		//--- Get all formats of this type and find the latest one and add one?
+		//--- Use counter inside paragraph?
 		return 'i' + tmpIconIDs++
 	}
 	function addIcon({iconname, icontype,  size = '', color = ''}){
-		//console.log('addIcon',iconname, icontype,  size,color );
-
 		let tmpClass = iconname;
 		if( size != '' ){
 			tmpClass += ' ' + size;
@@ -525,8 +471,6 @@ function InlineLinkUI( {
 				//--- Adjusting to allow for selecting more than just the object and then replacing it
 				//--- without this, it also replaces the other selected text.
 				let tmpAdjustedRT = richTextText;
-				//tmpAdjustedRT = richTextText.substring(0,2);
-				console.log('richTextText',richTextText);
 
 				var tmpBeforeText = '';
 				var tmpEndText = '';
@@ -554,14 +498,7 @@ function InlineLinkUI( {
 				start: value.start + plainText.length + 1,
 			} );
 
-			// onChange(
-			// 	toggleFormat( value, {
-			// 		type: 'pressino/inline-icon',
-			// 		attributes: {
-			// 			class: 'fa-hill-rockslide icon fa-solid'
-			// 		}
-			// 	} ) 
-			// );
+		
 		}
 	}
 
