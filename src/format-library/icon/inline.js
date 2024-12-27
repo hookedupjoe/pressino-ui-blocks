@@ -171,8 +171,6 @@ function InlineLinkUI( {
 	}
 
 	function onSelectedItem(theItem){
-		//console.log('linkValue',linkValue);
-		//addIconAndClose(theItem);
 		setInserterOpen(false);
 		setQuickInserterOpen(false);
 		setCurrentIcon(theItem);
@@ -190,6 +188,7 @@ function InlineLinkUI( {
 	function checkCurrentIcon(){
 		var tmpFormats = richLinkTextValue?.formats;
 		var tmpIcons = [];
+		noEditState.atIndex = 0;
 		tmpFormats.map((value,index) => {
 			var tmpVal = value;
 			
@@ -198,12 +197,11 @@ function InlineLinkUI( {
 			}
 			
 			if(tmpVal.type == controlname){
-				console.log('tmpIcons at ',index);
+				noEditState.atIndex = index;
 				tmpIcons.push(tmpVal);
 			}
 		});
 		noEditState.selectActive = false;
-		//console.log('f  tmpIcons',tmpFormats,tmpIcons)
 		if( tmpIcons.length > 1 ){
 			alert('Select only one icon to update', 'Too Many Icons Selected', 'e');
 			setAddingLink(false);
@@ -216,20 +214,13 @@ function InlineLinkUI( {
 		}
 
 		var tmpIcon = tmpIcons[0];
-		//console.log('tmpIcon',tmpIcon,typeof(tmpIcon));
-
-		//var tmpIconRT = getTextContent({value: tmpIcon});
-		//noEditState.iconRT = tmpIconRT;
-		//richLinkTextValue = tmpIconRT;
-
-		noEditState.selectActive = true;
+		
 		if( ! tmpIcon ){
 			return false;
 		}
+		noEditState.selectActive = true;
 
-		//var tmpCurrIcon = {color: tmpIcon.attributes.datacolor, size: tmpIcon.attributes.datasize, className: tmpIcon.attributes.dataicon, type: tmpIcon.attributes.dataicontype};
 		setCurrentIcon({className: tmpIcon.attributes.dataicon, type: tmpIcon.attributes.dataicontype});
-	//	console.log('tmpIcon.attributes.datacolor',tmpIcon.attributes.datacolor);
 		setColorName(tmpIcon.attributes.datacolor);
 		setColor(getColorForSlug(tmpIcon.attributes.datacolor))
 		setIconSize(tmpIcon.attributes.datasize);
@@ -260,14 +251,18 @@ function InlineLinkUI( {
 
 	useEffect( () => {
 		checkCurrentIcon();
-		//console.log('noEditState', noEditState)
-		if ( addingLink && !isActive && !noEditState.selectActive) {
+		console.log('noEditState.selectActive', noEditState.selectActive)
+		
+		if ( addingLink && !isActive && !(noEditState.selectActive)) {
 			setQuickInserterOpen(true);
 		} else {
 			
 			//--- Do se load here?
 			
 			//console.log('did not load values yet',activeAttributes,value,richLinkTextValue)
+		}
+		if(!addingLink){
+			noEditState.selectActive = false;
 		}
 	}, [ addingLink ] );
 	
@@ -291,7 +286,7 @@ function InlineLinkUI( {
 	);
 
 	function removeLink() {
-		const newValue = removeFormat( value, 'core/link' );
+		const newValue = removeFormat( value, controlname );
 		onChange( newValue );
 		stopAddingLink();
 		speak( __( 'Link removed.' ), 'assertive' );
@@ -324,15 +319,7 @@ function InlineLinkUI( {
             <ToolbarButton onClick={() => setIconSize('large')} text="Large" label="Large"  />
             <ToolbarButton onClick={() => setIconSize('huge')} text="Huge" label="Huge"  />
         </Toolbar>
-		{/* <div></div>
-		<Button
-			variant="tertiary"
-			iconPosition="right"
-			style={{marginLeft: "10px"}}
-			onClick={() => setIconSize(undefined)}
-		>
-			{istr('Clear', controlname)}
-		</Button> */}
+		
 		</>
 	}
 
@@ -508,7 +495,8 @@ function InlineLinkUI( {
 				// Get the boundaries of the active link format.
 				const boundary = getFormatBoundary( value, {
 					type: controlname,
-				} );
+					
+				});
 
 				// Split the value at the start of the active link format.
 				// Passing "start" as the 3rd parameter is required to ensure
@@ -533,7 +521,23 @@ function InlineLinkUI( {
 				// Note original formats will be lost when applying this change.
 				// That is expected behaviour.
 				// See: https://github.com/WordPress/gutenberg/pull/33849#issuecomment-936134179.
-				const newValAfter = replace( valAfter, richTextText, newValue );
+
+				//--- Adjusting to allow for selecting more than just the object and then replacing it
+				//--- without this, it also replaces the other selected text.
+				let tmpAdjustedRT = richTextText;
+				//tmpAdjustedRT = richTextText.substring(0,2);
+				console.log('richTextText',richTextText);
+
+				var tmpBeforeText = '';
+				var tmpEndText = '';
+				if( noEditState.atIndex){
+					tmpBeforeText = richTextText.substring(0,noEditState.atIndex);
+					tmpEndText = richTextText.substring(noEditState.atIndex + 1);
+				}
+				var tmpBeforeEl = create({text: tmpBeforeText})
+				var tmpEndEl = create({text: tmpEndText})
+				newValue = concat(tmpBeforeEl,newValue,tmpEndEl)
+				const newValAfter = replace( valAfter,  tmpAdjustedRT, newValue );
 
 				newValue = concat( valBefore, newValAfter );
 				onChange(newValue);
@@ -585,7 +589,7 @@ function getRichTextValueFromSelection( value, isActive, controlname, isSelectAc
 	// Default to the selection ranges on the RichTextValue object.
 	let textStart = value.start;
 	let textEnd = value.end;
-//console.log('getRichTextValueFromSelection',value, isActive, controlname, isSelectActive)
+
 	// If the format is currently active then the rich text value
 	// should always be taken from the bounds of the active format
 	// and not the selected text.
