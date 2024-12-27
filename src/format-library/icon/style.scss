@@ -1,9 +1,9 @@
-.block-editor-format-toolbar__link-container-content {
+.block-editor-format-toolbar__icon-container-content {
 	display: flex;
 	align-items: center;
 }
 
-.block-editor-format-toolbar__link-container-value {
+.block-editor-format-toolbar__icon-container-value {
 	margin: $grid-unit-10 - $border-width;
 	flex-grow: 1;
 	flex-shrink: 1;
@@ -13,7 +13,7 @@
 	min-width: 150px;
 	max-width: 500px;
 
-	&.has-invalid-link {
+	&.has-invalid-icon {
 		color: $alert-red;
 	}
 }

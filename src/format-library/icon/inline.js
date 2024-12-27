@@ -1,22 +1,15 @@
 /**
  * WordPress dependencies
  */
-import { useRef, useEffect, useState, useMemo, createInterpolateElement } from '@wordpress/element';
+import { useRef, useEffect, useState } from '@wordpress/element';
 import { istr } from '../../pressino-ui';
 import { ColorPalette } from '@wordpress/components';
 
 import { Toolbar, ToolbarButton } from '@wordpress/components';
-
-import { __, sprintf } from '@wordpress/i18n';
-import { speak } from '@wordpress/a11y';
 import {
 	Popover,
 	Button,
-	__experimentalHStack as HStack,
-	__experimentalVStack as VStack,
-	__experimentalNumberControl as NumberControl,
 } from '@wordpress/components';
-import { prependHTTP } from '@wordpress/url';
 import {
 	create,
 	insert,
@@ -41,15 +34,15 @@ import { icon as settings } from './index';
 
 import { QuickInserterPopover, InserterModal } from '../../components/';
 
-function InlineLinkUI( {
-	addingLink,
+function InlineIconUI( {
+	addingIcon,
 	controlname,
 	isActive,
-	setAddingLink,
+	setAddingIcon,
 	value,
 	onChange,
 	onFocusOutside,
-	stopAddingLink,
+	stopAddingIcon,
 	contentRef,
 	focusOnMount,
 } ) {
@@ -148,7 +141,7 @@ function InlineLinkUI( {
 		tmpAtts.color = colorName;
 		tmpAtts.size = iconsize;
 		addIcon(tmpAtts);
-		stopAddingLink();
+		stopAddingIcon();
 	}
 
 	function onSelectedItem(theItem){
@@ -165,9 +158,9 @@ function InlineLinkUI( {
 		return tmpRet;
 	}
 		
-	let richLinkTextValue = getRichTextValueFromSelection( value, isActive, controlname, noEditState.selectActive );
+	let richIconTextValue = getRichTextValueFromSelection( value, isActive, controlname, noEditState.selectActive );
 	function checkCurrentIcon(){
-		var tmpFormats = richLinkTextValue?.formats;
+		var tmpFormats = richIconTextValue?.formats;
 		var tmpIcons = [];
 		noEditState.atIndex = 0;
 		tmpFormats.map((value,index) => {
@@ -185,12 +178,12 @@ function InlineLinkUI( {
 		noEditState.selectActive = false;
 		if( tmpIcons.length > 1 ){
 			alert('Select only one icon to update', 'Too Many Icons Selected', 'e');
-			setAddingLink(false);
+			setAddingIcon(false);
 			return false;
 		}
 		if( ! isCollapsed( value ) && tmpIcons.length == 0 ){
 			alert('Select an icon to update', 'No Icons Selected', 'e');
-			setAddingLink(false);
+			setAddingIcon(false);
 			return false;
 		}
 
@@ -210,7 +203,7 @@ function InlineLinkUI( {
 		return true;
 	}
 	// Get the text content minus any HTML tags.
-	const richTextText = richLinkTextValue.text;
+	const richTextText = richIconTextValue.text;
 	
 
 	const { selectionChange } = useDispatch( blockEditorStore );
@@ -221,7 +214,7 @@ function InlineLinkUI( {
 				select( blockEditorStore );
 			const _settings = getSettings();
 			//--- These settings have color and other theme options in case needed
-			
+
 			return {
 				selectionStart: getSelectionStart(),
 			};
@@ -231,13 +224,13 @@ function InlineLinkUI( {
 
 	useEffect( () => {
 		checkCurrentIcon();
-		if ( addingLink && !isActive && !(noEditState.selectActive)) {
+		if ( addingIcon && !isActive && !(noEditState.selectActive)) {
 			setQuickInserterOpen(true);
 		}
-		if(!addingLink){
+		if(!addingIcon){
 			noEditState.selectActive = false;
 		}
-	}, [ addingLink ] );
+	}, [ addingIcon ] );
 	
 	
 	const popoverAnchor = useAnchor( {
@@ -429,22 +422,20 @@ function InlineLinkUI( {
 
 		} else {
 			if( isActive || noEditState.selectActive ){
-				console.log('val,new',value)
-				console.log('is active, replace');
 				let newValue;
 				// Create new RichText value for the new text in order that we
 				// can apply formats to it.
 				newValue = create( { text: plainText } );
-				// Apply the new Link format to this new text value.
+				// Apply the new icon format to this new text value.
 				newValue = applyFormat( newValue, format, 0, plainText.length );
 
-				// Get the boundaries of the active link format.
+				// Get the boundaries of the active icon format.
 				const boundary = getFormatBoundary( value, {
 					type: controlname,
 					
 				});
 
-				// Split the value at the start of the active link format.
+				// Split the value at the start of the active icon format.
 				// Passing "start" as the 3rd parameter is required to ensure
 				// the second half of the split value is split at the format's
 				// start boundary and avoids relying on the value's "end" property
@@ -458,7 +449,7 @@ function InlineLinkUI( {
 				// Update the original (full) RichTextValue replacing the
 				// target text with the *new* RichTextValue containing:
 				// 1. The new text content.
-				// 2. The new link format.
+				// 2. The new icon format.
 				// As "replace" will operate on the first match only, it is
 				// run only against the second half of the value which was
 				// split at the active format's boundary. This avoids a bug
@@ -508,7 +499,7 @@ function InlineLinkUI( {
 			className="format-library__pressino-std-popover"
 			anchor={ popoverAnchor }
 			animate={ false }
-			onClose={ stopAddingLink }
+			onClose={ stopAddingIcon }
 			onFocusOutside={ onFocusOutside }
 			placement="bottom"
 			offset={ 8 }
@@ -546,4 +537,4 @@ function getRichTextValueFromSelection( value, isActive, controlname, isSelectAc
 	return slice( value, textStart, textEnd );
 }
 
-export default InlineLinkUI;
+export default InlineIconUI;
