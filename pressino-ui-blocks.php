@@ -4,7 +4,7 @@
  * Description:       Semantic UI styled block controls
  * Requires at least: 6.6
  * Requires PHP:      7.2
- * Version:           2.0.5a
+ * Version:           2.0.6
  * Author:            W Joseph Francis
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -16,7 +16,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; 
 }
-define( 'PRESSINO_UI_BLOCKS_CORE_VERSION', '2.0.5a' );
+define( 'PRESSINO_UI_BLOCKS_CORE_VERSION', '2.0.6' );
 
 
 define( 'PRESSINO_UI_BLOCKS_FILE', __FILE__ );
@@ -70,9 +70,10 @@ function create_block_pressino_ui_blocks_block_init() {
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-card' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-grid' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-grid-column' );
-	register_block_type( __DIR__ . '/build/blocks/pressino-ui-list' );
-	register_block_type( __DIR__ . '/build/blocks/pressino-ui-listitem' );
-	register_block_type( __DIR__ . '/build/blocks/pressino-ui-listitem-section' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-richtext' );
+	// register_block_type( __DIR__ . '/build/blocks/pressino-ui-list' );
+	// register_block_type( __DIR__ . '/build/blocks/pressino-ui-listitem' );
+	// register_block_type( __DIR__ . '/build/blocks/pressino-ui-listitem-section' );
 }
+
 add_action( 'init', 'create_block_pressino_ui_blocks_block_init' );

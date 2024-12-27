@@ -298,17 +298,25 @@ function InlineIconUI( {
 	
 	}
 
+	function getIconClass(theIcon){
+		var tmpIconClass = theIcon?.className  || theIcon?.iconname || '';
+		var tmpType = theIcon?.type || theIcon?.icontype || '';
+
+		if( tmpType == 'fa' ){
+			tmpIconClass = 'fa-solid ' + tmpIconClass;	
+		} else if( tmpType == 'dash' ){
+			tmpIconClass = 'dashicons ' + tmpIconClass;	
+		}
+		return tmpIconClass;
+	}
+
 	function iconPreview(){
 		if( !(currentIcon && currentIcon?.className) ){
 			return <></>
 		}
-		let tmpIconClass = 'bi bi-rocket-takeoff';
-		if(currentIcon && currentIcon?.className){
-			tmpIconClass = currentIcon?.className;
-			if( currentIcon.type == 'fa' ){
-				tmpIconClass = 'fa-solid ' + tmpIconClass;	
-			}
-		}
+		console.log('currentIcon',currentIcon);
+		let tmpIconClass = getIconClass(currentIcon)
+		
 		return <div style={{border: "solid 1px #333333", margin: "0px", minWidth:"50px", padding: "7px", float: "right", rightMargin: "20px"}}><span class={`icon ${tmpIconClass} ${iconsize || ''} ${colorName}`} > </span></div>
 	}
 		
@@ -375,8 +383,9 @@ function InlineIconUI( {
 		//--- Use counter inside paragraph?
 		return 'i' + tmpIconIDs++
 	}
-	function addIcon({iconname, icontype,  size = '', color = ''}){
-		let tmpClass = iconname;
+	function addIcon(theIcon){
+		const {iconname, icontype,  size = '', color = ''} = theIcon;
+		let tmpClass = getIconClass(theIcon);
 		if( size != '' ){
 			tmpClass += ' ' + size;
 		}
