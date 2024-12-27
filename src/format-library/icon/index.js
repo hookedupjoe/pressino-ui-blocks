@@ -2,6 +2,7 @@
  * WordPress dependencies
  */
 import { __ } from '@wordpress/i18n';
+import { PressinoUI } from '../../pressino-ui';
 import { useState, useLayoutEffect, useEffect } from '@wordpress/element';
 import {
 	RichTextToolbarButton
@@ -126,7 +127,7 @@ function Edit( {
 		
 			<RichTextToolbarButton
 				name="link"
-				icon={ mainIcon }
+				icon= { PressinoUI.getBlockIcon('addicon') }
 				title={ isActive ? __( 'Icon' ) : title }
 				onClick={ ( event ) => {
 					addIcon( event.currentTarget );
