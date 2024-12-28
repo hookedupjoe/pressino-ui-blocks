@@ -87,6 +87,7 @@ function getSettingsForIcon(props) {
 	function onSelectedItem(theItem){
 		let tmpAttNames = attname || attNamesIcon;
 		setInserterOpen(false);
+		setQuickInserterOpen(false);
 		var tmpAtts = {}
 		
 		tmpAtts[tmpAttNames.iconname] = theItem.className || 'icon users'
@@ -94,9 +95,9 @@ function getSettingsForIcon(props) {
 	
 		setAttributes(tmpAtts)
 		if( refreshChildren ){
-			console.log('refrfeshed')
 			refreshBlockEditor();
 		}
+		
 	}
 
 	
@@ -108,14 +109,15 @@ function getSettingsForIcon(props) {
 			{istr('Select Icon')}
 		</Button>
 		<InserterModal
-				onSelectedItem={onSelectedItem}
+				onSelectedItem={ onSelectedItem }
 				isInserterOpen={ isInserterOpen }
 				setInserterOpen={ setInserterOpen }
 			/>
 		<QuickInserterPopover
-			onSelectedItem={onSelectedItem}
-			setInserterOpen={setInserterOpen}
-			isQuickInserterOpen={isQuickInserterOpen}
+			onSelectedItem={ onSelectedItem }
+			setInserterOpen={ setInserterOpen }
+			isQuickInserterOpen={ isQuickInserterOpen }
+			setQuickInserterOpen={ setQuickInserterOpen }
 		/>
 	</div>
 
@@ -185,7 +187,6 @@ function getCustomURLControl(theProps, theAttName, theLabel, theVal, theOnChange
 	var tmpOnChangeFunc = (theURL, thePost) => {
 		var tmpToSet = {};
 		tmpToSet[theAttName] = theURL;
-		console.log(thePost);
 
 		theProps.setAttributes(tmpToSet);
 		if (tmpDoRefresh) {
