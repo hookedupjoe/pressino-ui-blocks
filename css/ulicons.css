@@ -18,6 +18,12 @@ ul.icon li:before {
     float: inline-start;
 }
 
+ul.icon ul {
+    list-style-type: none;
+}
+ul.icon ul ul {
+    list-style-type: none;
+}
 
 
 
