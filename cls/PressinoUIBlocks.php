@@ -87,8 +87,8 @@ class PressinoUIBlocks {
 		
 
 		//--- ToDo: Make this an option?
-		// wp_register_style( 'pressino-ui-font-aweseome-css',   PRESSINO_UI_BLOCKS_URL . '/lib/fontawesome/css/all.min.css', false,  PRESSINO_UI_BLOCKS_CORE_VERSION );
-		wp_register_style( 'pressino-ui-font-aweseome-css',   PRESSINO_UI_BLOCKS_URL . '/lib/fontawesome/css/all.css', false,  PRESSINO_UI_BLOCKS_CORE_VERSION );
+		wp_register_style( 'pressino-ui-font-aweseome-css',   PRESSINO_UI_BLOCKS_URL . '/lib/fontawesome/css/all.min.css', false,  PRESSINO_UI_BLOCKS_CORE_VERSION );
+		// wp_register_style( 'pressino-ui-font-aweseome-css',   PRESSINO_UI_BLOCKS_URL . '/lib/fontawesome/css/all.css', false,  PRESSINO_UI_BLOCKS_CORE_VERSION );
 		wp_enqueue_style ( 'pressino-ui-font-aweseome-css' );
 
 		wp_register_style( 'pressino-ui-bootstrap-icons-css',   PRESSINO_UI_BLOCKS_URL . '/lib/bootstrapicons/bootstrap-icons.min.css', false,  PRESSINO_UI_BLOCKS_CORE_VERSION );
