@@ -46,18 +46,18 @@ export default function Edit(theProps) {
 
     var tmpToolbarMods = '';
 
-    if (!tmpHasMaxBlocks) {
-        tmpToolbarMods = <BlockControls>
-            <ToolbarGroup>
-                <ToolbarButton
-                    icon={PressinoUI.getBlockIcon('pressino/cardsection')}
-                    label="Add Bottom Section"
-                    text="Add Bottom Section"
-                    onClick={onAddBlock}
-                />
-            </ToolbarGroup>
-        </BlockControls>
-    }
+    // if (!tmpHasMaxBlocks) {
+    //     tmpToolbarMods = <BlockControls>
+    //         <ToolbarGroup>
+    //             <ToolbarButton
+    //                 icon={PressinoUI.getBlockIcon('pressino/cardsection')}
+    //                 label="Add Bottom Section"
+    //                 text="Add Bottom Section"
+    //                 onClick={onAddBlock}
+    //             />
+    //         </ToolbarGroup>
+    //     </BlockControls>
+    // }
 
     let tmpSidebarControls = <InspectorControls>
         {tmpToolbarMods}
