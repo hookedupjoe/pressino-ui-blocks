@@ -38,10 +38,6 @@ ul.sfa.sfa-brands.icon li:before {
     font-family: 'Font Awesome 6 Brands' !important;
 }
 
-ul.sfa-circle-minus li:before {
-    content: "\f056"; 
-}
-
 ul.sbi-123 li:before { content: "\f67f"; }
 ul.sbi-alarm-fill li:before { content: "\f101"; }
 ul.sbi-alarm li:before { content: "\f102"; }

@@ -82,6 +82,9 @@ class PressinoUIBlocks {
 		wp_enqueue_style ( 'pressino-ui-core-css' );
 		wp_register_style( 'pressino-ui-ulicons-css',   PRESSINO_UI_BLOCKS_URL . '/css/ulicons.css', false,  PRESSINO_UI_BLOCKS_CORE_VERSION );
 		wp_enqueue_style ( 'pressino-ui-ulicons-css' );
+		wp_register_style( 'pressino-ui-divulicons-css',   PRESSINO_UI_BLOCKS_URL . '/css/divulicons.css', false,  PRESSINO_UI_BLOCKS_CORE_VERSION );
+		wp_enqueue_style ( 'pressino-ui-divulicons-css' );
+		
 
 		//--- ToDo: Make this an option?
 		// wp_register_style( 'pressino-ui-font-aweseome-css',   PRESSINO_UI_BLOCKS_URL . '/lib/fontawesome/css/all.min.css', false,  PRESSINO_UI_BLOCKS_CORE_VERSION );
