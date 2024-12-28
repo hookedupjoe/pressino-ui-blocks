@@ -27,9 +27,12 @@ function resizeScrollers() {
 		return window.document.querySelector(theSelector); 
 	}
 	
-	var tmpModal = getEl('.components-modal__content')
+	var tmpModal = getEl('.components-modal__content');
 	var tmpHeader = getEl('.components-modal__header');
-	var tmpSB = getEl('.icon-inserter__sidebar__search')
+	var tmpSB = getEl('.icon-inserter__sidebar__search');
+	if( !tmpModal ){
+		return;
+	}
 
 	var tmpBuffer = 4;
 

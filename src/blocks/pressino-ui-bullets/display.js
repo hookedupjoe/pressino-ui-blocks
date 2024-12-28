@@ -6,7 +6,7 @@ import { PressinoUI, el } from '../../pressino-ui';
 import { getIconClass } from '../../icons';
 
 var classSpecs = {
-    boolean: [],
+    boolean: ['flat'],
 	string: ['classes'],
 }
 
@@ -32,7 +32,7 @@ export default function display({ props, editMode }) {
         if( textsize ){
             tmpClass += ' ' + 'text'+textsize;
         }
-        if( iconname && icontype ){
+        if( iconname && icontype && bullettype == 'icon' ){
             tmpClass += ' ' + getIconClass({iconname, icontype, isForSubItem: true});
         }
 

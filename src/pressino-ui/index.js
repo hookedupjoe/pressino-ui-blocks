@@ -106,7 +106,7 @@ function getSettingsForIcon(props) {
 			variant="primary"
 			onClick={() => setQuickInserterOpen(true)}
 		>
-			{istr('Select Icon')}
+			{istr(label || 'Select Icon')}
 		</Button>
 		<InserterModal
 				onSelectedItem={ onSelectedItem }

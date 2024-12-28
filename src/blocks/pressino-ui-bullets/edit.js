@@ -20,7 +20,7 @@ export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
     var tmpDisplayObject = display({ props: theProps, attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { bullettype } = attributes;
+    const { bullettype, iconname} = attributes;
     var props = theProps;
     var tmpParentAttributes = PressinoUI.getParentAttributes(props.clientId);
     props.attributes.parentColor = tmpParentAttributes.color || '';
@@ -50,28 +50,15 @@ export default function Edit(theProps) {
 
     var tmpToolbarMods = '';
 
-    // if (!tmpHasMaxBlocks) {
-    //     tmpToolbarMods = <BlockControls>
-    //         <ToolbarGroup>
-    //             <ToolbarButton
-    //                 icon={PressinoUI.getBlockIcon('pressino/cardsection')}
-    //                 label="Add Bottom Section"
-    //                 text="Add Bottom Section"
-    //                 onClick={onAddBlock}
-    //             />
-    //         </ToolbarGroup>
-    //     </BlockControls>
-    // }
-
     let tmpSidebarControls = <InspectorControls>
         {tmpToolbarMods}
-
     
         <PanelBody title={istr('General Settings')}>
         {PressinoUI.getStandardProperty(theProps, 'textsize', "Text Size", 'basicsizes')}
         {PressinoUI.getStandardProperty(theProps, 'bulletsize', "Bullet Size", 'basicsizes')}
         {PressinoUI.getStandardProperty(theProps, 'bullettype', "Bullet Type", 'bulletnames')}
-        {(bullettype == 'icon' && PressinoUI.getSettingsForIcon({ label: 'Select Icon', attname: attNamesIcon, isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes }))}
+        {(bullettype == 'icon' && PressinoUI.getSettingsForIcon({ label: (iconname) ? 'Change Icon' : 'Select Icon', attname: attNamesIcon, isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes }))}
+        {(bullettype == 'none' && PressinoUI.getStandardProperty(theProps, 'flat', "Flatten", 'checkbox'))}
 
         </PanelBody>
 
