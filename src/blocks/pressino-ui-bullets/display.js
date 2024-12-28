@@ -3,6 +3,7 @@
  */
 import { InnerBlocks } from '@wordpress/block-editor';
 import { PressinoUI, el } from '../../pressino-ui';
+import { getIconClass } from '../../icons';
 
 var classSpecs = {
     boolean: [],
@@ -19,7 +20,7 @@ function getClass(theAtts, theIsEditMode) {
 
 export default function display({ props, editMode }) {
         var tmpAtts = props.attributes;
-        const {bullettype, bulletsize, textsize} = tmpAtts;
+        const {iconname, icontype, bullettype, bulletsize, textsize} = tmpAtts;
         
         var tmpClass = getClass(props.attributes, true);
         if( bullettype && bullettype != 'basic' && bullettype != 'icon'){
@@ -30,6 +31,9 @@ export default function display({ props, editMode }) {
         }
         if( textsize ){
             tmpClass += ' ' + 'text'+textsize;
+        }
+        if( iconname && icontype ){
+            tmpClass += ' ' + getIconClass({iconname, icontype, isForSubItem: true});
         }
 
         var tmpProps = {className: tmpClass};

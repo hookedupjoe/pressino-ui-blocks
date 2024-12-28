@@ -4,7 +4,28 @@ import {biIcons} from './bi.js';
 import {categories} from './categories.js';
 
 
-export function getIconEl({iconname, icontype, iconclass, weight}){
+export function getIconClass({iconname, icontype, iconclass, weight, isForSubItem = false}){
+	let tmpClasses = iconname || iconclass || '';
+	tmpClasses += ' icon';
+	let tmpPrefix = isForSubItem ? 's' : '';
+
+	var tmpOtherClasses = '';
+    if( icontype == 'fa' ){
+		tmpOtherClasses  = tmpPrefix +'fa-' + (weight ? weight : 'solid') ;
+    } else if( isForSubItem && icontype == 'dash' ){
+		tmpOtherClasses  = 'dashicons';
+	}
+	if( tmpOtherClasses ){
+		tmpClasses += ' ' + tmpOtherClasses;
+	}
+	if( isForSubItem ){
+		tmpClasses = tmpPrefix + tmpClasses + ' ' + tmpPrefix + icontype;
+	}
+	return tmpClasses;
+}
+
+export function getIconEl(props){
+	const {iconname, icontype, iconclass, weight} = props;
 	let tmpClasses = iconname || iconclass || '';
 	tmpClasses += ' icon';
 	var tmpOtherClasses = '';
@@ -16,7 +37,7 @@ export function getIconEl({iconname, icontype, iconclass, weight}){
 	if( tmpOtherClasses ){
 		tmpClasses += ' ' + tmpOtherClasses;
 	}
-	return <span class={tmpClasses}></span>;
+	return <span class={getIconClass(props)}></span>;
 }
 
 export const classIconIndex = {

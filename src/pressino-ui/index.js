@@ -854,7 +854,7 @@ export const listSources = {
 	"topmargin": "Default|,0px|mart0,1px|mart1,2px|mart2,3px|mart3,4px|mart4,5px|mart5,6px|mart6,7px|mart7,8px|mart8,9px|mart9,10px|mart10",
 	"bottommargin": "Default|,0px|marb0,1px|marb1,2px|marb2,3px|marb3,4px|marb4,5px|marb5,6px|marb6,7px|marb7,8px|marb8,9px|marb9,10px|marb10",
 	"bullettypes": "Default|,Use Icon|icon,None|none,Outlined|outline",
-	"bulletnames": "Default|,Use Icon|icon,None|none,Arrows|arrow,Chevron|chevron,Caret|caret,Star|star,Pentagon|pentagon,Triangle|triangle,Diamond|diamond,Square|square,Heart|heart,Layers|layers,Egg|egg,Book|book,Bookmark|bookmark,Light|light,Sun|sun,Pin|pin,Balloon|balloon,Exclamation|exclamation,Floppy|floppy,Basket|basket,Basic|basic",
+	"bulletnames": "Default|,Use Icon|icon,None|none,Arrows|arrow,Balloon|balloon,Basket|basket,Book|book,Bookmark|bookmark,Chevron|chevron,Caret|caret,Diamond|diamond,Egg|egg,Exclamation|exclamation,Floppy|floppy,Heart|heart,Layers|layers,Light|light,Pentagon|pentagon,Pin|pin,Square|square,Star|star,Triangle|triangle,Sun|sun,Basic|basic",
 	"basicsizes": "Default|,Small|small,Medium|medium,Large|large,Big|big,Huge|huge",
 
 

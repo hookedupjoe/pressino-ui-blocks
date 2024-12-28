@@ -359,6 +359,11 @@
   padding-left:15px;
 }
 
+[appuse="iconlist"].none.flat ul {
+  padding-left:0px;
+  margin-left:0px;
+}
+
 
 [appuse="iconlist"].none li:before {  
   content: ""; 
