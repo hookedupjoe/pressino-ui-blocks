@@ -855,6 +855,7 @@ export const listSources = {
 	"bottommargin": "Default|,0px|marb0,1px|marb1,2px|marb2,3px|marb3,4px|marb4,5px|marb5,6px|marb6,7px|marb7,8px|marb8,9px|marb9,10px|marb10",
 	"bullettypes": "Default|,Use Icon|icon,None|none,Outlined|outline",
 	"bulletnames": "Default|,Use Icon|icon,None|none,Arrows|arrow,Chevron|chevron,Caret|caret,Star|star,Pentagon|pentagon,Triangle|triangle,Diamond|diamond,Square|square,Heart|heart,Layers|layers,Egg|egg,Book|book,Bookmark|bookmark,Light|light,Sun|sun,Pin|pin,Balloon|balloon,Exclamation|exclamation,Floppy|floppy,Basket|basket,Basic|basic",
+	"basicsizes": "Default|,Small|small,Medium|medium,Large|large,Big|big,Huge|huge",
 
 
 	"yesno": "Yes,No",

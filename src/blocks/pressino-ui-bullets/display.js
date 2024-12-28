@@ -19,11 +19,17 @@ function getClass(theAtts, theIsEditMode) {
 
 export default function display({ props, editMode }) {
         var tmpAtts = props.attributes;
-        const {bullettype} = tmpAtts;
-
+        const {bullettype, bulletsize, textsize} = tmpAtts;
+        
         var tmpClass = getClass(props.attributes, true);
         if( bullettype && bullettype != 'basic' && bullettype != 'icon'){
             tmpClass += ' ' + bullettype;
+        }
+        if( bulletsize && bullettype != 'none' && bullettype != 'basic'){
+            tmpClass += ' ' + 'icon'+bulletsize;
+        }
+        if( textsize ){
+            tmpClass += ' ' + 'text'+textsize;
         }
 
         var tmpProps = {className: tmpClass};

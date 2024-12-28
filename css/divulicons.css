@@ -380,43 +380,60 @@
 }
 
 
+/* TEXT SIZES */
 
+[appuse="iconlist"]  {   
+  font-size: 16px;  
+}
+
+[appuse="iconlist"].textsmall  {   
+  font-size: 12px;  
+}
+[appuse="iconlist"].textmedium  {   
+  font-size: 14px;  
+}
+[appuse="iconlist"].textlarge  {   
+  font-size: 18px;  
+}
+[appuse="iconlist"].textbig  {   
+  font-size: 20px;  
+}
+[appuse="iconlist"].texthuge  {   
+  font-size: 22px;  
+}
 
 /* ICON SIZES */
 
+[appuse="iconlist"]  li:before {   
+  padding-top:.3em;
+  font-size: .6em;  
+  line-height: 1em;
+}
 
-[appuse="iconlist"].mini  li:before {   
-  line-height: 16px;
-  font-size: 5px;  
+[appuse="iconlist"].iconsmall  li:before {   
+  padding-top:.5em;  
+  font-size: .5em;  
 }
-[appuse="iconlist"].tiny  li:before {   
-  line-height: 16px;
-  font-size: 6px;  
+[appuse="iconlist"].iconmedium  li:before {   
+  padding-top:.3em;
+  font-size: .6em;  
 }
-[appuse="iconlist"].small  li:before {   
-  line-height: 16px;
-  font-size: 7px;  
+[appuse="iconlist"].iconlarge  li:before {   
+  padding-top:.2em;
+  font-size: .7em;  
 }
-[appuse="iconlist"].medium  li:before {   
-  line-height: 16px;
-  font-size: 9px;  
+[appuse="iconlist"].iconbig  li:before {   
+  padding-top:.1em;
+  font-size: .8em;  
 }
-[appuse="iconlist"].large  li:before {   
-  line-height: 16px;
-  font-size: 10px;  
+[appuse="iconlist"].iconhuge  li:before {   
+  padding-top:.1em;
+  font-size: .9em;  
 }
-[appuse="iconlist"].big  li:before {   
-  line-height: 16px;
-  font-size: 12px;  
-}
-[appuse="iconlist"].huge  li:before {   
-  line-height: 16px;
-  font-size: 14px;  
-}
-[appuse="iconlist"].massive  li:before {   
-  line-height: 16px;
-  font-size: 16px;  
-}
+
+
+
+/* FONTS */
 
 [appuse="iconlist"].sbi ul li:before {    
     font-family: 'bootstrap-icons';
@@ -429,6 +446,8 @@
     font-family: 'Font Awesome 6 Brands';
 }
 
+
+/* ICONS */
 
 [appuse="iconlist"].sbi-123 ul li:before { content: "\f67f"; }
 [appuse="iconlist"].sbi-alarm-fill ul li:before { content: "\f101"; }

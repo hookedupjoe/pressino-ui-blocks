@@ -64,7 +64,13 @@ export default function Edit(theProps) {
 
     
         <PanelBody title={istr('General Settings')}>
+        {PressinoUI.getStandardProperty(theProps, 'textsize', "Text Size", 'basicsizes')}
+        {PressinoUI.getStandardProperty(theProps, 'bulletsize', "Bullet Size", 'basicsizes')}
         {PressinoUI.getStandardProperty(theProps, 'bullettype', "Bullet Type", 'bulletnames')}
+
+        </PanelBody>
+
+        <PanelBody title={istr('Advanced Settings')}>
         {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
 
         </PanelBody>
