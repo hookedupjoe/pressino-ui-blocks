@@ -54,11 +54,12 @@ export default function Edit(theProps) {
         {tmpToolbarMods}
     
         <PanelBody title={istr('General Settings')}>
-        {PressinoUI.getStandardProperty(theProps, 'textsize', "Text Size", 'basicsizes')}
         {PressinoUI.getStandardProperty(theProps, 'bulletsize', "Bullet Size", 'basicsizes')}
         {PressinoUI.getStandardProperty(theProps, 'bullettype', "Bullet Type", 'bulletnames')}
         {(bullettype == 'icon' && PressinoUI.getSettingsForIcon({ label: (iconname) ? 'Change Icon' : 'Select Icon', attname: attNamesIcon, isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes }))}
         {(bullettype == 'none' && PressinoUI.getStandardProperty(theProps, 'flat', "Flatten", 'checkbox'))}
+        {PressinoUI.getStandardProperty(theProps, 'bulletcolor', 'Bullet Color', 'colors')}
+        {PressinoUI.getStandardProperty(theProps, 'textsize', "Text Size", 'basicsizes')}
 
         </PanelBody>
 

@@ -15,7 +15,6 @@
   padding-top: 0px;
 }
 
-
 /* SPACING */
 [appuse="iconlist"] li {
   padding: 4px 0px 4px 0px;
@@ -384,6 +383,45 @@
   border-bottom: none;
 }
 
+
+/* COLORS */
+
+[appuse="iconlist"].red ul li::before {
+  color: #db2828;
+}
+[appuse="iconlist"].orange ul li::before {
+  color: #f2711c;
+}
+[appuse="iconlist"].yellow ul li::before {
+  color: #fbbd08;
+}
+[appuse="iconlist"].olive ul li::before {
+  color: #b5cc18;
+}
+[appuse="iconlist"].green ul li::before {
+  color: #21ba45;
+}
+[appuse="iconlist"].teal ul li::before {
+  color: #00b5ad;
+}
+[appuse="iconlist"].blue ul li::before {
+  color: #2185d0;
+}
+[appuse="iconlist"].violet ul li::before {
+  color: #6435c9;
+}
+[appuse="iconlist"].purple ul li::before {
+  color: #a333c8;
+}
+[appuse="iconlist"].pink ul li::before {
+  color: #e03997;
+}
+[appuse="iconlist"].brown ul li::before {
+  color: #a5673f;
+}
+[appuse="iconlist"].grey ul li::before {
+  color: #767676;
+}
 
 /* TEXT SIZES */
 

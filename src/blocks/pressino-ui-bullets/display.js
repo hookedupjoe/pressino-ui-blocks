@@ -7,7 +7,7 @@ import { getIconClass } from '../../icons';
 
 var classSpecs = {
     boolean: ['flat'],
-	string: ['classes'],
+	string: ['classes','bulletcolor'],
 }
 
 
