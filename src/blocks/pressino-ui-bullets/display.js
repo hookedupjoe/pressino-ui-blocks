@@ -38,7 +38,7 @@ export default function display({ props, editMode }) {
         
            
             tmpUIColor = 'grey';
-            var tmpHdr = el('div', { className: 'ui mar2 pad5 segment inverted center aligned fluid ' + tmpUIColor }, tmpIcon, tmpHeaderMsg);
+            var tmpHdr = el('div', { className: 'ui mar2 pad5 segment inverted center aligned fluid ' + tmpUIColor }, tmpHeaderMsg);
         
             return el('div', { className: 'ui segment pad3 mar0 ' + tmpAtts.color || '' }, null,
                 tmpHdr,
@@ -54,28 +54,6 @@ export default function display({ props, editMode }) {
             return el('div', tmpProps, el(wp.blockEditor.InnerBlocks.Content));
         }
 
-        // if (editMode) {
-           
-        //     return el('div', tmpProps, el(wp.blockEditor.InnerBlocks, { allowedBlocks: ['core/list'], renderAppender: false }));
-        // } else {
-            
-        //     return el('div', tmpProps, el(wp.blockEditor.InnerBlocks.Content));
-        // }
        
     
     }
-// export default function display({ props, editMode }) {
-//     var tmpAtts = props.attributes;
-//     var tmpClass = getClass(props.attributes, true);
-//     var tmpProps = {className: tmpClass, appuse:'iconlist'};
-
-//     if (editMode) {
-       
-//         return el('div', tmpProps, el(wp.blockEditor.InnerBlocks, { allowedBlocks: ['core/list'], renderAppender: false }));
-//     } else {
-        
-//         return el('div', tmpProps, el(wp.blockEditor.InnerBlocks.Content));
-//     }
-   
-
-// }

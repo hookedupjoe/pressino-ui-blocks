@@ -43,9 +43,9 @@ export default function display({ props, editMode }) {
                 
             // }
             tmpUIColor = 'grey';
-            var tmpHdr = el('div', { className: 'ui mar2 pad5 segment inverted center aligned fluid ' + tmpUIColor }, tmpIcon, tmpHeaderMsg);
+            var tmpHdr = el('div', { className: 'ui mar2 pad5 segment inverted center aligned fluid ' + tmpUIColor }, tmpHeaderMsg);
 
-            return el('div', { className: 'ui segment ' + theProps.attributes.color || '' }, null,
+            return el('div', { className: 'ui segment pad3 mar0 ' + theProps.attributes.color || '' }, null,
                 tmpHdr,
                 el('div', { className: 'edit-grid' + props.attributes.color + ' ' + props.attributes.columns },
                     [

@@ -106,10 +106,10 @@ export default function display({ props, editMode }) {
         }
         tmpUIColor = 'grey';
        
-        var tmpHdr = el('div', { className: 'ui mar2 pad5 segment inverted center aligned fluid ' + tmpUIColor },  tmpIcon, tmpHeaderMsg);
+        var tmpHdr = el('div', { className: 'ui mar2 pad5 segment inverted center aligned fluid ' + tmpUIColor },  tmpHeaderMsg);
         var tmpSegClasses = props.attributes.color || '' ;
         
-        var tmpRetEl = el('div', { className: 'ui segment ' + tmpSegClasses}, null,
+        var tmpRetEl = el('div', { className: 'ui segment pad3 mar0 ' + tmpSegClasses}, null,
             tmpHdr,
             el('div', { className: 'edit-tabs' + props.attributes.color + ' ' + props.attributes.columns },
                 [
