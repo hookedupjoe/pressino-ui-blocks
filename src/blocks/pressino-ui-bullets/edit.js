@@ -62,8 +62,9 @@ export default function Edit(theProps) {
     let tmpSidebarControls = <InspectorControls>
         {tmpToolbarMods}
 
-
+    
         <PanelBody title={istr('General Settings')}>
+        {PressinoUI.getStandardProperty(theProps, 'bullettype', "Bullet Type", 'bulletnames')}
         {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
 
         </PanelBody>

@@ -3,15 +3,41 @@
     margin-left: 0px;
     padding-left: 25px;
 }
+[appuse="iconlist"] ul {
+  margin: 5px 0px 5px 0px;
+}
 [appuse="iconlist"] ul li {
     margin: 5px 0px 5px 0px;
 }
-[appuse="iconlist"] ul.relaxed li {
-    margin: 10px 0px 10px 0px;
+
+[appuse="iconlist"] li {
+  margin-top: 0px;
+  padding-top: 0px;
 }
-[appuse="iconlist"] ul.tight li {
-    margin: 2px 0px 2px 0px;
+
+
+/* SPACING */
+[appuse="iconlist"] li {
+  padding: 4px 0px 4px 0px;
 }
+[appuse="iconlist"].tight li {
+  padding: 2px 0px 2px 0px;
+}
+[appuse="iconlist"].relaxed li {
+  padding: 6px 0px 6px 0px;
+}
+
+
+[appuse="iconlist"] li:last-child {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+[appuse="iconlist"] ul:last-child {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+
 [appuse="iconlist"] ul li:before {    
     margin: 0 5px 0 -20px;
     float: inline-start;
@@ -324,7 +350,34 @@
 
 
 
+[appuse="iconlist"].none ul {
+  padding-left:0px;
+  margin-left:0px;
+  list-style-type: none;
+}
+[appuse="iconlist"].none ul ul {
+  padding-left:15px;
+}
 
+
+[appuse="iconlist"].none li:before {  
+  content: ""; 
+}
+
+[appuse="iconlist"].separated li {
+  border-bottom: solid 1px;
+}
+[appuse="iconlist"].separated ul {
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+}
+
+[appuse="iconlist"].separated li:last-child {
+  border-bottom: none;
+}
+[appuse="iconlist"].separated ul:last-child {
+  border-bottom: none;
+}
 
 
 

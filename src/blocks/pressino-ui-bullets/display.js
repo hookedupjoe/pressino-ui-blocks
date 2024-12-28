@@ -19,10 +19,18 @@ function getClass(theAtts, theIsEditMode) {
 
 export default function display({ props, editMode }) {
         var tmpAtts = props.attributes;
+        const {bullettype} = tmpAtts;
+
         var tmpClass = getClass(props.attributes, true);
+        if( bullettype && bullettype != 'basic' && bullettype != 'icon'){
+            tmpClass += ' ' + bullettype;
+        }
+
         var tmpProps = {className: tmpClass};
-        //--- Add if here
-        tmpProps.appuse = 'iconlist';
+        //--- If no bullets ..
+        if( bullettype !== 'basic' ){
+            tmpProps.appuse = 'iconlist';
+        }
     
         var template = [ [
             'core/list',

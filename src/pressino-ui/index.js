@@ -854,6 +854,8 @@ export const listSources = {
 	"topmargin": "Default|,0px|mart0,1px|mart1,2px|mart2,3px|mart3,4px|mart4,5px|mart5,6px|mart6,7px|mart7,8px|mart8,9px|mart9,10px|mart10",
 	"bottommargin": "Default|,0px|marb0,1px|marb1,2px|marb2,3px|marb3,4px|marb4,5px|marb5,6px|marb6,7px|marb7,8px|marb8,9px|marb9,10px|marb10",
 	"bullettypes": "Default|,Use Icon|icon,None|none,Outlined|outline",
+	"bulletnames": "Default|,Use Icon|icon,None|none,Arrows|arrow,Chevron|chevron,Caret|caret,Star|star,Pentagon|pentagon,Triangle|triangle,Diamond|diamond,Square|square,Heart|heart,Layers|layers,Egg|egg,Book|book,Bookmark|bookmark,Light|light,Sun|sun,Pin|pin,Balloon|balloon,Exclamation|exclamation,Floppy|floppy,Basket|basket,Basic|basic",
+
 
 	"yesno": "Yes,No",
 	"states": "Alabama|AL,Alaska|AK,Arizona|AZ,Arkansas|AR,California|CA,Colorado|CO,Connecticut|CT,Delaware|DE,District Of Columbia|DC,Florida|FL,Georgia|GA,Hawaii|HI,Idaho|ID,Illinois|IL,Indiana|IN,Iowa|IA,Kansas|KS,Kentucky|KY,Louisiana|LA,Maine|ME,Maryland|MD,Massachusetts|MA,Michigan|MI,Minnesota|MN,Mississippi|MS,Missouri|MO,Montana|MT,Nebraska|NE,Nevada|NV,New Hampshire|NH,New Jersey|NJ,New Mexico|NM,New York|NY,North Carolina|NC,North Dakota|ND,Ohio|OH,Oklahoma|OK,Oregon|OR,Pennsylvania|PA,Rhode Island|RI,South Carolina|SC,South Dakota|SD,Tennessee|TN,Texas|TX,Utah|UT,Vermont|VT,Virginia|VA,Washington|WA,West Virginia|WV,Wisconsin|WI,Wyoming|WY",
