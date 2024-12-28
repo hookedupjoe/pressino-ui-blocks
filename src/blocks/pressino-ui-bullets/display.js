@@ -20,7 +20,9 @@ function getClass(theAtts, theIsEditMode) {
 export default function display({ props, editMode }) {
         var tmpAtts = props.attributes;
         var tmpClass = getClass(props.attributes, true);
-        var tmpProps = {className: tmpClass, appuse:'iconlist'};
+        var tmpProps = {className: tmpClass};
+        //--- Add if here
+        tmpProps.appuse = 'iconlist';
     
         var template = [ [
             'core/list',

@@ -1,7 +1,7 @@
 [appuse="iconlist"] ul {
     list-style-type: none !important;
-    margin-left: 5px;
-    padding-left: 20px;
+    margin-left: 0px;
+    padding-left: 25px;
 }
 [appuse="iconlist"] ul li {
     margin: 5px 0px 5px 0px;
@@ -13,8 +13,17 @@
     margin: 2px 0px 2px 0px;
 }
 [appuse="iconlist"] ul li:before {    
-    margin: 0 5px 0 -25px;
+    margin: 0 5px 0 -20px;
     float: inline-start;
+}
+[appuse="iconlist"].mini ul li:before, [appuse="iconlist"].tiny ul li:before, [appuse="iconlist"].small ul li:before {    
+  margin: 0 5px 0 -15px;
+  float: inline-start;
+}
+[appuse="iconlist"].mini ul, [appuse="iconlist"].tiny ul, [appuse="iconlist"].small ul {
+  list-style-type: none !important;
+  margin-left: 0px;
+  padding-left: 20px;
 }
 
 [appuse="iconlist"] ul ul {
@@ -32,18 +41,339 @@
   margin-left: 5px;
   padding-left: 20px;
 }
+[appuse="iconlist"] ul ul ul ul ul {
+  list-style-type: none;
+  margin-left: 5px;
+  padding-left: 20px;
+}
 
 
+/* Default to BI */
+[appuse="iconlist"]  li:before {    
+  font-family: 'bootstrap-icons';
+  line-height: 16px;
+  font-size: 8px;  
+}
+
+/* Default Bullets */
+[appuse="iconlist"] ul li:before {  
+  content: "\F287"; 
+}
+[appuse="iconlist"] ul ul li:before {    
+  content: "\F28A"; 
+}
+[appuse="iconlist"] ul ul ul li:before {    
+  content: "\F582"; 
+}
+[appuse="iconlist"] ul ul ul ul li:before {    
+  content: "\F584"; 
+}
+[appuse="iconlist"] ul ul ul ul ul li:before {    
+  content: "\F5E3"; 
+}
+[appuse="iconlist"] ul ul ul ul ul ul li:before {    
+  content: "\F5E5"; 
+}
+
+
+/* Named Bullets */
+[appuse="iconlist"].arrow ul li:before {  
+  content: "\F3DB"; 
+}
+[appuse="iconlist"].arrow ul ul li:before {    
+  content: "\F3DC"; 
+}
+[appuse="iconlist"].arrow ul ul ul li:before {    
+  content: "\F132"; 
+}
+[appuse="iconlist"].arrow ul ul ul ul li:before {    
+  content: "\F138"; 
+}
+[appuse="iconlist"].arrow ul ul ul ul ul li:before {    
+  content: "\F135"; 
+}
+
+
+[appuse="iconlist"].chevron ul li:before {  
+  content: "\F280"; 
+}
+[appuse="iconlist"].chevron ul ul li:before {    
+  content: "\F285"; 
+}
+[appuse="iconlist"].chevron ul ul ul li:before {    
+  content: "\F27B"; 
+}
+
+[appuse="iconlist"].star ul li:before {  
+  content: "\F586"; 
+}
+[appuse="iconlist"].star ul ul li:before {    
+  content: "\F587"; 
+}
+[appuse="iconlist"].star ul ul ul li:before {    
+  content: "\F588"; 
+}
+
+[appuse="iconlist"].pentagon ul li:before {  
+  content: "\F4CC"; 
+}
+[appuse="iconlist"].pentagon ul ul li:before {    
+  content: "\F4CD"; 
+}
+[appuse="iconlist"].pentagon ul ul ul li:before {    
+  content: "\F4CE"; 
+}
+
+[appuse="iconlist"].triangle ul li:before {  
+  content: "\F5E3"; 
+}
+[appuse="iconlist"].triangle ul ul li:before {    
+  content: "\F5E4"; 
+}
+[appuse="iconlist"].triangle ul ul ul li:before {    
+  content: "\F5E5"; 
+}
+
+[appuse="iconlist"].diamond ul li:before {  
+  content: "\F2EF"; 
+}
+[appuse="iconlist"].diamond ul ul li:before {    
+  content: "\F2F0"; 
+}
+[appuse="iconlist"].diamond ul ul ul li:before {    
+  content: "\F2F1"; 
+}
+
+[appuse="iconlist"].square ul li:before {  
+  content: "\F582"; 
+}
+[appuse="iconlist"].square ul ul li:before {    
+  content: "\F583"; 
+}
+[appuse="iconlist"].square ul ul ul li:before {    
+  content: "\F584"; 
+}
+
+[appuse="iconlist"].heart ul li:before {  
+  content: "\F415"; 
+}
+[appuse="iconlist"].heart ul ul li:before {    
+  content: "\F416"; 
+}
+[appuse="iconlist"].heart ul ul ul li:before {    
+  content: "\F417"; 
+}
+
+[appuse="iconlist"].layers ul li:before {  
+  content: "\F459"; 
+}
+[appuse="iconlist"].layers ul ul li:before {    
+  content: "\F45A"; 
+}
+[appuse="iconlist"].layers ul ul ul li:before {    
+  content: "\F45B"; 
+}
+
+[appuse="iconlist"].egg ul li:before {  
+  content: "\F311"; 
+}
+[appuse="iconlist"].egg ul ul li:before {    
+  content: "\F313"; 
+}
+[appuse="iconlist"].egg ul ul ul li:before {    
+  content: "\F312"; 
+}
+
+[appuse="iconlist"].book ul li:before {  
+  content: "\F192"; 
+}
+[appuse="iconlist"].book ul ul li:before {    
+  content: "\F193"; 
+}
+[appuse="iconlist"].book ul ul ul li:before {    
+  content: "\F194"; 
+}
+
+[appuse="iconlist"].bookmark ul li:before {  
+  content: "\F1A3"; 
+}
+[appuse="iconlist"].bookmark ul ul li:before {    
+  content: "\F1A4"; 
+}
+[appuse="iconlist"].bookmark ul ul ul li:before {    
+  content: "\F199"; 
+}
+[appuse="iconlist"].bookmark ul ul ul ul li:before {    
+  content: "\F1A2"; 
+}
+
+
+[appuse="iconlist"].light ul li:before {  
+  content: "\F1CD"; 
+}
+[appuse="iconlist"].light ul ul li:before {    
+  content: "\F1CE"; 
+}
+[appuse="iconlist"].light ul ul ul li:before {    
+  content: "\F1CF"; 
+}
+[appuse="iconlist"].light ul ul ul ul li:before {    
+  content: "\F1D0"; 
+}
+
+
+[appuse="iconlist"].sun ul li:before {  
+  content: "\F1D1"; 
+}
+[appuse="iconlist"].sun ul ul li:before {    
+  content: "\F1D2"; 
+}
+[appuse="iconlist"].sun ul ul ul li:before {    
+  content: "\F1D3"; 
+}
+[appuse="iconlist"].sun ul ul ul ul li:before {    
+  content: "\F1D4"; 
+}
+
+
+[appuse="iconlist"].caret ul li:before {  
+  content: "\F232"; 
+}
+[appuse="iconlist"].caret ul ul li:before {    
+  content: "\F233"; 
+}
+[appuse="iconlist"].caret ul ul ul li:before {    
+  content: "\F231"; 
+}
+[appuse="iconlist"].caret ul ul ul ul li:before {    
+  content: "\F234"; 
+}
+
+
+[appuse="iconlist"].pin ul li:before {  
+  content: "\F4EC"; 
+}
+[appuse="iconlist"].pin ul ul li:before {    
+  content: "\F4ED"; 
+}
+[appuse="iconlist"].pin ul ul ul li:before {    
+  content: "\F4EA"; 
+}
+[appuse="iconlist"].pin ul ul ul ul li:before {    
+  content: "\F4EB"; 
+}
+
+[appuse="iconlist"].balloon ul li:before {  
+  content: "\F706"; 
+}
+[appuse="iconlist"].balloon ul ul li:before {    
+  content: "\F709"; 
+}
+[appuse="iconlist"].balloon ul ul ul li:before {    
+  content: "\F707"; 
+}
+[appuse="iconlist"].balloon ul ul ul ul li:before {    
+  content: "\F708"; 
+}
+
+[appuse="iconlist"].exclamation ul li:before {  
+  content: "\F332"; 
+}
+[appuse="iconlist"].exclamation ul ul li:before {    
+  content: "\F333"; 
+}
+[appuse="iconlist"].exclamation ul ul ul li:before {    
+  content: "\F334"; 
+}
+[appuse="iconlist"].exclamation ul ul ul ul li:before {    
+  content: "\F335"; 
+}
+
+[appuse="iconlist"].floppy ul li:before {  
+  content: "\F7C5"; 
+}
+[appuse="iconlist"].floppy ul ul li:before {    
+  content: "\F7D8"; 
+}
+[appuse="iconlist"].floppy ul ul ul li:before {    
+  content: "\F7D9"; 
+}
+[appuse="iconlist"].floppy ul ul ul ul li:before {    
+  content: "\F7E4"; 
+}
+
+
+[appuse="iconlist"].basket ul li:before {  
+  content: "\F17F"; 
+}
+[appuse="iconlist"].basket ul ul li:before {    
+  content: "\F180"; 
+}
+[appuse="iconlist"].basket ul ul ul li:before {    
+  content: "\F181"; 
+}
+[appuse="iconlist"].basket ul ul ul ul li:before {    
+  content: "\F182"; 
+}
+[appuse="iconlist"].basket ul ul ul ul ul li:before {    
+  content: "\F183"; 
+}
+[appuse="iconlist"].basket ul ul ul ul ul ul li:before {    
+  content: "\F184"; 
+}
+
+
+
+
+
+
+
+
+/* ICON SIZES */
+
+
+[appuse="iconlist"].mini  li:before {   
+  line-height: 16px;
+  font-size: 5px;  
+}
+[appuse="iconlist"].tiny  li:before {   
+  line-height: 16px;
+  font-size: 6px;  
+}
+[appuse="iconlist"].small  li:before {   
+  line-height: 16px;
+  font-size: 7px;  
+}
+[appuse="iconlist"].medium  li:before {   
+  line-height: 16px;
+  font-size: 9px;  
+}
+[appuse="iconlist"].large  li:before {   
+  line-height: 16px;
+  font-size: 10px;  
+}
+[appuse="iconlist"].big  li:before {   
+  line-height: 16px;
+  font-size: 12px;  
+}
+[appuse="iconlist"].huge  li:before {   
+  line-height: 16px;
+  font-size: 14px;  
+}
+[appuse="iconlist"].massive  li:before {   
+  line-height: 16px;
+  font-size: 16px;  
+}
 
 [appuse="iconlist"].sbi ul li:before {    
     font-family: 'bootstrap-icons';
 }
 [appuse="iconlist"].sfa ul li:before {    
-    font-family: 'Font Awesome 6 Free' !important;
+    font-family: 'Font Awesome 6 Free';
     font-weight: var(--fa-style, 900); 
 }
 [appuse="iconlist"].sfa.sfa-brands ul li:before {    
-    font-family: 'Font Awesome 6 Brands' !important;
+    font-family: 'Font Awesome 6 Brands';
 }
 
 
