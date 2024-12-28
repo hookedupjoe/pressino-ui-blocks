@@ -1,4 +1,4 @@
-import {dashIcons} from './dash.js';
+//import {dashIcons} from './dash.js';
 import {faIcons} from './fa.js';
 import {biIcons} from './bi.js';
 import {categories} from './categories.js';
@@ -22,7 +22,7 @@ export function getIconEl({iconname, icontype, iconclass, weight}){
 export const classIconIndex = {
 	"icons":[
 		...biIcons,
-		...dashIcons,
+		// ...dashIcons,
 		...faIcons
 	],
 	"categories": categories
