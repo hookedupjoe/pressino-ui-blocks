@@ -29,6 +29,9 @@ export default function display({ attributes, editMode }) {
         return (el('div',tmpProps, <InnerBlocks />));
     }
 
-    return (el('div',tmpProps, <InnerBlocks.Content />));
+    var tmpContent = [el('div',tmpProps, <InnerBlocks.Content />)];
+    tmpContent.push(el('div',{style:'clear:both'}, ''));
+
+    return (tmpContent);
 
 }
