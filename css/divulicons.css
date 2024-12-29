@@ -14,26 +14,142 @@
   margin-top: 0px;
   padding-top: 0px;
 }
+/* LINK FORMATTING */
+
+
+[appuse="iconlist"].link-circular a {
+  border: solid 1px;
+  border-bottom: solid 3px;
+  border-radius: 1em;
+  /* padding: 5px 12px 5px 12px; */
+  padding: .2em .5em .2em .5em;
+  text-decoration-line: none;
+}
+
+[appuse="iconlist"].link-squared a {
+  border: solid 1px;
+  border-bottom: solid 3px;
+  border-radius: .2em;
+  /* padding: 5px 12px 5px 12px; */
+  padding: .2em .5em .2em .5em;
+  text-decoration-line: none;
+}
+
+[appuse="iconlist"].link-basic a {
+  border: solid 0px;
+  border-bottom: solid 3px;
+  border-radius: .2em;
+  /* padding: 5px 12px 5px 12px; */
+  padding: .2em .5em .2em .5em;
+  text-decoration-line: none;
+}
+
+[appuse="iconlist"].link-icon a {
+  padding-left: .8em;
+  padding-right: .8em;
+}
+
+[appuse="iconlist"].link-icon a::after, [appuse="iconlist"].link-icon a::before {
+  font-family: 'bootstrap-icons';
+  vertical-align: middle;
+  text-decoration: none;
+  display:inline-block;  /* removes underline from icon */
+}
+
+[appuse="iconlist"].link-icon a::after {
+  padding-left: .7em;
+}
+[appuse="iconlist"].link-icon a::before {
+  padding-right: .7em;
+}
+
+[appuse="iconlist"].link-caret a::after { content: "\F234";}
+[appuse="iconlist"].link-caret-fill a::after { content: "\F231";}
+[appuse="iconlist"].link-caret-up a::after { content: "\F238";}
+[appuse="iconlist"].link-caret-up-fill a::after { content: "\F235";}
+[appuse="iconlist"].link-caret-down a::after { content: "\F22C";}
+[appuse="iconlist"].link-caret-down-fill a::after { content: "\F229";}
+[appuse="iconlist"].link-caret-back a::before { content: "\F230";}
+[appuse="iconlist"].link-caret-back-fill a::before { content: "\F22D";}
+
+[appuse="iconlist"].link-chevron a::after { content: "\F285";}
+[appuse="iconlist"].link-chevron-double a::after { content: "\F280";}
+[appuse="iconlist"].link-chevron-up a::after { content: "\F286";}
+[appuse="iconlist"].link-chevron-up-double a::after { content: "\F281";}
+[appuse="iconlist"].link-chevron-down a::after { content: "\F282";}
+[appuse="iconlist"].link-chevron-down-double a::after { content: "\F27E";}
+[appuse="iconlist"].link-chevron-back a::before { content: "\F284";}
+[appuse="iconlist"].link-chevron-back-double a::before { content: "\F27F";}
+
+
+[appuse="iconlist"].link-arrow-forward a::after { content: "\F3DC";}
+[appuse="iconlist"].link-arrow-forward-fill a::after { content: "\F3DB";}
+
+[appuse="iconlist"].link-arrow-thin a::after { content: "\F138";}
+[appuse="iconlist"].link-arrow-short a::after { content: "\F135";}
+[appuse="iconlist"].link-arrow-back-thin a::before { content: "\F12F";}
+[appuse="iconlist"].link-arrow-back-short a::before { content: "\F12C";}
+
+
+[appuse="iconlist"].link-caret a::after { content: "\F234";}
+[appuse="iconlist"].link-caret-fill a::after { content: "\F231";}
+
+[appuse="iconlist"].link-caret a::after { content: "\F234";}
+[appuse="iconlist"].link-caret-fill a::after { content: "\F231";}
+
+[appuse="iconlist"].link-caret a::after { content: "\F234";}
+[appuse="iconlist"].link-caret-fill a::after { content: "\F231";}
+
+
+
+
+
+/* LINK COLORS */
+[appuse="iconlist"].red.link-colored a {border-color: #db2828;}
+[appuse="iconlist"].orange.link-colored a {border-color: #f2711c;}
+[appuse="iconlist"].yellow.link-colored a {border-color: #fbbd08;}
+[appuse="iconlist"].olive.link-colored a {border-color: #b5cc18;}
+[appuse="iconlist"].green.link-colored a {border-color: #21ba45;}
+[appuse="iconlist"].teal.link-colored a {border-color: #00b5ad;}
+[appuse="iconlist"].blue.link-colored a {border-color: #2185d0;}
+[appuse="iconlist"].violet.link-colored a {border-color: #6435c9;}
+[appuse="iconlist"].purple.link-colored a {border-color: #a333c8;}
+[appuse="iconlist"].pink.link-colored a {border-color: #e03997;}
+[appuse="iconlist"].brown.link-colored a {border-color: #a5673f;}
+[appuse="iconlist"].grey.link-colored a {border-color: #767676;}
+
+[appuse="iconlist"].red.link-colored a::after {color: #db2828;}
+[appuse="iconlist"].orange.link-colored a::after {color: #f2711c;}
+[appuse="iconlist"].yellow.link-colored a::after {color: #fbbd08;}
+[appuse="iconlist"].olive.link-colored a::after {color: #b5cc18;}
+[appuse="iconlist"].green.link-colored a::after {color: #21ba45;}
+[appuse="iconlist"].teal.link-colored a::after {color: #00b5ad;}
+[appuse="iconlist"].blue.link-colored a::after {color: #2185d0;}
+[appuse="iconlist"].violet.link-colored a::after {color: #6435c9;}
+[appuse="iconlist"].purple.link-colored a::after {color: #a333c8;}
+[appuse="iconlist"].pink.link-colored a::after {color: #e03997;}
+[appuse="iconlist"].brown.link-colored a::after {color: #a5673f;}
+[appuse="iconlist"].grey.link-colored a::after {color: #767676;}
 
 /* SPACING */
 [appuse="iconlist"] li {
-  padding: 4px 0px 4px 0px;
+  padding: .3em 0em .3em 0em;
 }
 [appuse="iconlist"].tight li {
-  padding: 2px 0px 2px 0px;
+  padding: .1em 0em .1em 0em;
 }
 [appuse="iconlist"].relaxed li {
-  padding: 6px 0px 6px 0px;
+  padding: .5em 0em .5em 0em;
 }
 
 
 [appuse="iconlist"] li:last-child {
-  margin-bottom: 0px;
-  padding-bottom: 0px;
+  margin-bottom: 0em;
+  padding-bottom: 0em;
 }
 [appuse="iconlist"] ul:last-child {
-  margin-bottom: 0px;
-  padding-bottom: 0px;
+  margin-bottom: 0em;
+  padding-bottom: 0em;
 }
 
 
@@ -448,30 +564,30 @@
 /* ICON SIZES */
 
 [appuse="iconlist"]  li:before {   
-  padding-top:.3em;
+  padding-top:.4em;
   font-size: .6em;  
   line-height: 1em;
 }
 
 [appuse="iconlist"].iconsmall  li:before {   
-  padding-top:.5em;  
-  font-size: .5em;  
+  padding-top:.5em;
+  font-size: .5em; 
 }
 [appuse="iconlist"].iconmedium  li:before {   
-  padding-top:.3em;
-  font-size: .6em;  
-}
-[appuse="iconlist"].iconlarge  li:before {   
   padding-top:.2em;
-  font-size: .7em;  
-}
-[appuse="iconlist"].iconbig  li:before {   
-  padding-top:.1em;
   font-size: .8em;  
 }
-[appuse="iconlist"].iconhuge  li:before {   
+[appuse="iconlist"].iconlarge  li:before {   
   padding-top:.1em;
-  font-size: .9em;  
+  font-size: 1.1em;  
+}
+[appuse="iconlist"].iconbig  li:before {   
+  padding-top:.05em;
+  font-size: 1.2em;  
+}
+[appuse="iconlist"].iconhuge  li:before {   
+  padding-top:.05em;
+  font-size: 1.4em;  
 }
 
 
