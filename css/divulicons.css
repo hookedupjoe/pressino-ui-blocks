@@ -1,3 +1,81 @@
+[linkformat="icon"].link-circular a {
+  border: solid 1px;
+  border-bottom: solid 3px;
+  border-radius: 1em;
+  /* padding: 5px 12px 5px 12px; */
+  padding: .2em .5em .2em .5em;
+  text-decoration-line: none;
+}
+
+[linkformat="icon"].link-squared a {
+  border: solid 1px;
+  border-bottom: solid 3px;
+  border-radius: .2em;
+  /* padding: 5px 12px 5px 12px; */
+  padding: .2em .5em .2em .5em;
+  text-decoration-line: none;
+}
+
+[linkformat="icon"].link-basic a {
+  border: solid 0px;
+  border-bottom: solid 3px;
+  border-radius: .2em;
+  /* padding: 5px 12px 5px 12px; */
+  padding: .2em .5em .2em .5em;
+  text-decoration-line: none;
+}
+
+[linkformat="icon"].link-icon a {
+  padding-left: .8em;
+  padding-right: .8em;
+}
+
+[linkformat="icon"].link-icon a::after, [linkformat="icon"].link-icon a::before {
+  font-family: 'bootstrap-icons';
+  vertical-align: middle;
+  text-decoration: none;
+  display:inline-block;  /* removes underline from icon */
+}
+
+[linkformat="icon"].link-icon a::after {
+  padding-left: .7em;
+}
+[linkformat="icon"].link-icon a::before {
+  padding-right: .7em;
+}
+
+[linkformat="icon"].link-caret a::after { content: "\F234";}
+[linkformat="icon"].link-caret-fill a::after { content: "\F231";}
+[linkformat="icon"].link-caret-up a::after { content: "\F238";}
+[linkformat="icon"].link-caret-up-fill a::after { content: "\F235";}
+[linkformat="icon"].link-caret-down a::after { content: "\F22C";}
+[linkformat="icon"].link-caret-down-fill a::after { content: "\F229";}
+[linkformat="icon"].link-caret-back a::before { content: "\F230";}
+[linkformat="icon"].link-caret-back-fill a::before { content: "\F22D";}
+
+[linkformat="icon"].link-chevron a::after { content: "\F285";}
+[linkformat="icon"].link-chevron-double a::after { content: "\F280";}
+[linkformat="icon"].link-chevron-up a::after { content: "\F286";}
+[linkformat="icon"].link-chevron-up-double a::after { content: "\F281";}
+[linkformat="icon"].link-chevron-down a::after { content: "\F282";}
+[linkformat="icon"].link-chevron-down-double a::after { content: "\F27E";}
+[linkformat="icon"].link-chevron-back a::before { content: "\F284";}
+[linkformat="icon"].link-chevron-back-double a::before { content: "\F27F";}
+
+
+[linkformat="icon"].link-arrow-forward a::after { content: "\F3DC";}
+[linkformat="icon"].link-arrow-forward-fill a::after { content: "\F3DB";}
+
+[linkformat="icon"].link-arrow-thin a::after { content: "\F138";}
+[linkformat="icon"].link-arrow-short a::after { content: "\F135";}
+[linkformat="icon"].link-arrow-back-thin a::before { content: "\F12F";}
+[linkformat="icon"].link-arrow-back-short a::before { content: "\F12C";}
+
+
+
+
+
+/* LIST STYLING FOR ICONS */
 [appuse="iconlist"] ul {
     list-style-type: none !important;
     margin-left: 0px;
@@ -14,92 +92,6 @@
   margin-top: 0px;
   padding-top: 0px;
 }
-/* LINK FORMATTING */
-
-
-[appuse="iconlist"].link-circular a {
-  border: solid 1px;
-  border-bottom: solid 3px;
-  border-radius: 1em;
-  /* padding: 5px 12px 5px 12px; */
-  padding: .2em .5em .2em .5em;
-  text-decoration-line: none;
-}
-
-[appuse="iconlist"].link-squared a {
-  border: solid 1px;
-  border-bottom: solid 3px;
-  border-radius: .2em;
-  /* padding: 5px 12px 5px 12px; */
-  padding: .2em .5em .2em .5em;
-  text-decoration-line: none;
-}
-
-[appuse="iconlist"].link-basic a {
-  border: solid 0px;
-  border-bottom: solid 3px;
-  border-radius: .2em;
-  /* padding: 5px 12px 5px 12px; */
-  padding: .2em .5em .2em .5em;
-  text-decoration-line: none;
-}
-
-[appuse="iconlist"].link-icon a {
-  padding-left: .8em;
-  padding-right: .8em;
-}
-
-[appuse="iconlist"].link-icon a::after, [appuse="iconlist"].link-icon a::before {
-  font-family: 'bootstrap-icons';
-  vertical-align: middle;
-  text-decoration: none;
-  display:inline-block;  /* removes underline from icon */
-}
-
-[appuse="iconlist"].link-icon a::after {
-  padding-left: .7em;
-}
-[appuse="iconlist"].link-icon a::before {
-  padding-right: .7em;
-}
-
-[appuse="iconlist"].link-caret a::after { content: "\F234";}
-[appuse="iconlist"].link-caret-fill a::after { content: "\F231";}
-[appuse="iconlist"].link-caret-up a::after { content: "\F238";}
-[appuse="iconlist"].link-caret-up-fill a::after { content: "\F235";}
-[appuse="iconlist"].link-caret-down a::after { content: "\F22C";}
-[appuse="iconlist"].link-caret-down-fill a::after { content: "\F229";}
-[appuse="iconlist"].link-caret-back a::before { content: "\F230";}
-[appuse="iconlist"].link-caret-back-fill a::before { content: "\F22D";}
-
-[appuse="iconlist"].link-chevron a::after { content: "\F285";}
-[appuse="iconlist"].link-chevron-double a::after { content: "\F280";}
-[appuse="iconlist"].link-chevron-up a::after { content: "\F286";}
-[appuse="iconlist"].link-chevron-up-double a::after { content: "\F281";}
-[appuse="iconlist"].link-chevron-down a::after { content: "\F282";}
-[appuse="iconlist"].link-chevron-down-double a::after { content: "\F27E";}
-[appuse="iconlist"].link-chevron-back a::before { content: "\F284";}
-[appuse="iconlist"].link-chevron-back-double a::before { content: "\F27F";}
-
-
-[appuse="iconlist"].link-arrow-forward a::after { content: "\F3DC";}
-[appuse="iconlist"].link-arrow-forward-fill a::after { content: "\F3DB";}
-
-[appuse="iconlist"].link-arrow-thin a::after { content: "\F138";}
-[appuse="iconlist"].link-arrow-short a::after { content: "\F135";}
-[appuse="iconlist"].link-arrow-back-thin a::before { content: "\F12F";}
-[appuse="iconlist"].link-arrow-back-short a::before { content: "\F12C";}
-
-
-[appuse="iconlist"].link-caret a::after { content: "\F234";}
-[appuse="iconlist"].link-caret-fill a::after { content: "\F231";}
-
-[appuse="iconlist"].link-caret a::after { content: "\F234";}
-[appuse="iconlist"].link-caret-fill a::after { content: "\F231";}
-
-[appuse="iconlist"].link-caret a::after { content: "\F234";}
-[appuse="iconlist"].link-caret-fill a::after { content: "\F231";}
-
 
 
 

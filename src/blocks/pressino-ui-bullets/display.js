@@ -7,7 +7,7 @@ import { getIconClass } from '../../icons';
 
 var classSpecs = {
     boolean: ['flat'],
-	string: ['classes','bulletcolor'],
+	string: ['classes','bulletcolor','bulletspacing'],
 }
 
 
@@ -41,6 +41,10 @@ export default function display({ props, editMode }) {
         if( bullettype !== 'basic' ){
             tmpProps.appuse = 'iconlist';
         }
+
+        //--- Support link formatting with icons
+        tmpProps.linkformat="icon"
+
     
         var template = [ [
             'core/list',

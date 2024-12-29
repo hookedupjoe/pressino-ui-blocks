@@ -59,8 +59,9 @@ export default function Edit(theProps) {
         {(bullettype == 'icon' && PressinoUI.getSettingsForIcon({ label: (iconname) ? 'Change Icon' : 'Select Icon', attname: attNamesIcon, isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes }))}
         {(bullettype == 'none' && PressinoUI.getStandardProperty(theProps, 'flat', "Flatten", 'checkbox'))}
         {PressinoUI.getStandardProperty(theProps, 'bulletcolor', 'Bullet Color', 'colors')}
+        {PressinoUI.getStandardProperty(theProps, 'bulletspacing', 'Spacing Between Bullets', 'bulletspacing')}
         {PressinoUI.getStandardProperty(theProps, 'textsize', "Text Size", 'basicsizes')}
-
+        
         </PanelBody>
 
         <PanelBody title={istr('Advanced Settings')}>

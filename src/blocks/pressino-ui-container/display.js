@@ -20,14 +20,14 @@ export default function display({ attributes, editMode }) {
    
     if(editMode === true){
         return (
-            <div className={classNames} >
+            <div linkformat="icon" className={classNames} >
                 <InnerBlocks />
             </div>
         );
     }
 
     return (
-        <div className={classNames} >
+        <div linkformat="icon" className={classNames} >
             <InnerBlocks.Content />
         </div>
     );

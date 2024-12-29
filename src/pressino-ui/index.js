@@ -866,7 +866,9 @@ export const listSources = {
 	"bullettypes": "Default|,Use Icon|icon,None|none,Outlined|outline",
 	"bulletnames": "Default|,Use Icon|icon,None|none,Arrows|arrow,Balloon|balloon,Basket|basket,Book|book,Bookmark|bookmark,Chevron|chevron,Caret|caret,Diamond|diamond,Egg|egg,Exclamation|exclamation,Floppy|floppy,Heart|heart,Layers|layers,Light|light,Pentagon|pentagon,Pin|pin,Square|square,Star|star,Triangle|triangle,Sun|sun,Basic|basic",
 	"basicsizes": "Default|,Small|small,Medium|medium,Large|large,Big|big,Huge|huge",
-
+	"bulletspacing": "Default|,Relxed|relaxed,Tight|tight",
+	"linkformatting": "Default|,Basic|link-basic,Circular|link-circular,Squared|link-squared",
+	"linkicons": "Default|,Caret Outline|caret,Caret Solid|caret-fill,Caret Up Outline|caret-up,Caret Up Solid|caret-up-fill,Caret Down Outline|caret-down,Caret Down Solid|caret-down-fill,Caret Back Outline|caret-back,Caret Back Solid|caret-back-fill,Chevron Outline|chevron,Chevron Double Outline|chevron-double,Chevron Up Outline|chevron-up,Chevron Up Double Outline|chevron-up-double,Chevron Down Outline|chevron-down,Chevron Double Down Outline|chevron-down-double,Chevron Back Outline|chevron-back,Chevron Double Back Outline|chevron-back-double,Arrow Outline|arrow-forward,Arrow Solid|arrow-forward-fill,Arrow Thin|arrow-thin,Arrow Short|arrow-short,Arrow Back Thin|arrow-back-thin,Arrow Back Short|arrow-back-short",
 
 	"yesno": "Yes,No",
 	"states": "Alabama|AL,Alaska|AK,Arizona|AZ,Arkansas|AR,California|CA,Colorado|CO,Connecticut|CT,Delaware|DE,District Of Columbia|DC,Florida|FL,Georgia|GA,Hawaii|HI,Idaho|ID,Illinois|IL,Indiana|IN,Iowa|IA,Kansas|KS,Kentucky|KY,Louisiana|LA,Maine|ME,Maryland|MD,Massachusetts|MA,Michigan|MI,Minnesota|MN,Mississippi|MS,Missouri|MO,Montana|MT,Nebraska|NE,Nevada|NV,New Hampshire|NH,New Jersey|NJ,New Mexico|NM,New York|NY,North Carolina|NC,North Dakota|ND,Ohio|OH,Oklahoma|OK,Oregon|OR,Pennsylvania|PA,Rhode Island|RI,South Carolina|SC,South Dakota|SD,Tennessee|TN,Texas|TX,Utah|UT,Vermont|VT,Virginia|VA,Washington|WA,West Virginia|WV,Wisconsin|WI,Wyoming|WY",
