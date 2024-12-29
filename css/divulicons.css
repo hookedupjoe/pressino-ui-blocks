@@ -30,6 +30,12 @@
   padding-right: .8em;
 }
 
+
+[linkformat="icon"].link-basic.link-icon a {
+  padding-left: .2em;
+  padding-right: .2em;
+}
+
 [linkformat="icon"].link-icon a::after, [linkformat="icon"].link-icon a::before {
   font-family: 'bootstrap-icons';
   vertical-align: middle;
@@ -126,14 +132,17 @@
 /* SPACING */
 [appuse="iconlist"] li {
   padding: .3em 0em .3em 0em;
+  line-height: 1.5em;
+
 }
 [appuse="iconlist"].tight li {
   padding: .1em 0em .1em 0em;
+  line-height: 1.2em;
 }
 [appuse="iconlist"].relaxed li {
   padding: .5em 0em .5em 0em;
+  line-height: 1.7em;
 }
-
 
 [appuse="iconlist"] li:last-child {
   margin-bottom: 0em;
