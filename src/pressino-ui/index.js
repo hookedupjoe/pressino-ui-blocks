@@ -1,8 +1,7 @@
 import { __ } from '@wordpress/i18n';
-import { SelectControl, Button, TextControl, ToggleControl } from '@wordpress/components';
+import { PanelBody, SelectControl, Button, TextControl, ToggleControl } from '@wordpress/components';
 import { URLInput } from '@wordpress/block-editor';
 
-import { displayMessages } from './../utils';
 import { QuickInserterPopover, InserterModal } from './../components/';
 // isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen
 import { useEffect, useRef, useState } from '@wordpress/element';
@@ -32,6 +31,45 @@ function refreshBlockEditor() {
 
 }
 
+function getLinkFormattingOptions(props){
+	const {attributes} = props;
+	const {linkformatting,linkicon,linkcolored} = attributes;
+
+	var tmpCN = '';
+	var tmpDomAtts = false
+	if(linkformatting){
+		tmpDomAtts = {linkformat:"icon"}
+
+		tmpCN += ' ' + linkformatting;
+	}
+	if( linkicon ){
+		tmpCN += ' link-icon link-' + linkicon;
+	}
+	if( linkcolored ){
+		tmpCN += ' link-colored';
+	}
+
+
+	return {
+		className: tmpCN,
+		domAtts: tmpDomAtts
+	}
+}
+function addLinkFormattingAttributes(theAttsIndex){
+	addAttributes('text', theAttsIndex, ['linkformatting', 'linkicon']);
+	addAttributes('boolean', theAttsIndex, ['linkcolored']);
+}
+
+function getLinkFormattingSettings(props,options){
+	var tmpOptions = options || {};
+
+	return  <PanelBody title={istr('Link Formatting Options')}>
+		{getStandardProperty(props, 'linkformatting', "Link Formatting", 'linkformatting')}
+		{getStandardProperty(props, 'linkicon', "Link Formatting", 'linkicons')}
+		{tmpOptions.color !== false && getStandardProperty(props, 'linkcolored', "Use Parent Color for Link", 'checkbox')}
+	</PanelBody>
+
+}
 
 function getParentAttributes(theBlockID) {
 	var tmpParentAttributes = {};
@@ -921,6 +959,12 @@ export const PressinoUI = {
 		getCommonClass: getCommonClass
 	},
 	istr: istr
+}
+
+export const LinkFormat = {
+	getSettings: getLinkFormattingSettings,
+	addAttributes: addLinkFormattingAttributes,
+	getDisplayInfo: getLinkFormattingOptions
 }
 
 //--- Global Exposure of Root Entrypoint

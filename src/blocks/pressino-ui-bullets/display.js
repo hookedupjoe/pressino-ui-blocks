@@ -2,7 +2,7 @@
  * Return universal display element used by edit and save functions
  */
 import { InnerBlocks } from '@wordpress/block-editor';
-import { PressinoUI, el } from '../../pressino-ui';
+import { PressinoUI, el, LinkFormat } from '../../pressino-ui';
 import { getIconClass } from '../../icons';
 
 var classSpecs = {
@@ -23,6 +23,10 @@ export default function display({ props, editMode }) {
         const {iconname, icontype, bullettype, bulletsize, textsize} = tmpAtts;
         
         var tmpClass = getClass(props.attributes, true);
+        var tmpLinkFormats = LinkFormat.getDisplayInfo(props);
+        tmpClass += tmpLinkFormats?.className || '';
+
+
         if( bullettype && bullettype != 'basic' && bullettype != 'icon'){
             tmpClass += ' ' + bullettype;
         }
@@ -37,13 +41,17 @@ export default function display({ props, editMode }) {
         }
 
         var tmpProps = {className: tmpClass};
+        if( tmpLinkFormats?.domAtts?.linkformat ){
+            tmpProps = {...tmpProps,...tmpLinkFormats.domAtts}
+        }
+
         //--- If no bullets ..
         if( bullettype !== 'basic' ){
             tmpProps.appuse = 'iconlist';
         }
 
         //--- Support link formatting with icons
-        tmpProps.linkformat="icon"
+        //tmpProps.linkformat="icon"
 
     
         var template = [ [

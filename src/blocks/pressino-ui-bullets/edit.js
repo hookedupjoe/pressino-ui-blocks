@@ -4,7 +4,7 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
 import { PanelBody, TextControl, ToggleControl, ToolbarGroup, ToolbarButton } from '@wordpress/components';
-import { istr, PressinoUI, el, attNamesIcon } from '../../pressino-ui';
+import { istr, PressinoUI, el, attNamesIcon, LinkFormat } from '../../pressino-ui';
 import { BlockControls } from '@wordpress/block-editor';
 const { store: blockEditorStore } = wp.blockEditor;
 const { useSelect } = wp.data;
@@ -63,7 +63,7 @@ export default function Edit(theProps) {
         {PressinoUI.getStandardProperty(theProps, 'textsize', "Text Size", 'basicsizes')}
         
         </PanelBody>
-
+        {LinkFormat.getSettings(props)}
         <PanelBody title={istr('Advanced Settings')}>
         {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
 

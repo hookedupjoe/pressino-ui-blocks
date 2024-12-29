@@ -4,22 +4,22 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
 import { PanelBody } from '@wordpress/components';
-import { istr, PressinoUI } from '../../pressino-ui';
+import { istr, PressinoUI, LinkFormat } from '../../pressino-ui';
 import display from './display';
 
 /**
  * @return {Element} Element to render.
  */
-export default function Edit(theProps) {
-    const { attributes, setAttributes } = theProps;
+export default function Edit(props) {
+    const { attributes, setAttributes } = props;
     var tmpDisplay = display({ attributes, editMode: true });
     const blockProps = useBlockProps();
 
     return <>
         <InspectorControls>
-
-            <PanelBody title={istr('Formatting Options')}>
-                {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
+            {LinkFormat.getSettings(props,{color:false})}
+            <PanelBody title={istr('Advanced Options')}>
+                {PressinoUI.getStandardProperty(props, 'classes', "Additional CSS Class(es)", 'text')}
             </PanelBody>
 
         </InspectorControls>
