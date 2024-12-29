@@ -27,10 +27,10 @@ export default function Edit(theProps) {
    
 
     const onAddBlock = () => {
-        PressinoUI.addBlock({ blockName: 'pressino/cardsection' }, {
+        PressinoUI.addBlock({ blockName: 'pressino/cardsection', blockOptions: {
             extra: true,
             padding: 'pad0'
-        })
+        } })
     }
 
 

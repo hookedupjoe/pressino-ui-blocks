@@ -715,8 +715,8 @@ function getListAsObjects(theList) {
 function getBlockInEditor(theObjectOrID) {
 	return wp.data.select('core/block-editor').getBlock(theObjectOrID.clientId || theObjectOrID);
 }
-function getCommonBlock(theElementName) {
-	return CommonBlocks.getBlock(theElementName);
+function getCommonBlock(theElementName, theBlockOptions) {
+	return CommonBlocks.getBlock(theElementName,theBlockOptions);
 }
 
 
@@ -853,9 +853,13 @@ export const CommonBlocks = {
 	getBlock: function (theName, theBlockOptions) {
 		var tmpItem = this.lookup[theName];
 		if (!(tmpItem)) {
-			return wp.blocks.createBlock(theName, theBlockOptions || {});;
+			return wp.blocks.createBlock(theName, theBlockOptions || {});
 		}
-		return wp.blocks.createBlock(tmpItem.type, tmpItem.attr);
+		var tmpAttr = tmpItem.attr || {};
+		if( (theBlockOptions) ){
+			tmpAttr = {...tmpAttr,...theBlockOptions};
+		}
+		return wp.blocks.createBlock(tmpItem.type, tmpAttr);
 	}
 }
 
@@ -918,7 +922,7 @@ export const listSources = {
 }
 
 
-const addBlock = ({ blockName }) => {
+const addBlock = ({ blockName, blockOptions }) => {
 	var tmpThis = wp.data.select('core/block-editor').getSelectedBlock();
 	var tmpPos = 0;
 	if (tmpThis.innerBlocks && tmpThis.innerBlocks.length) {
@@ -929,10 +933,11 @@ const addBlock = ({ blockName }) => {
 		console.error("No elementname attribute found")
 		return;
 	}
-	var tmpToAddElement = getCommonBlock(tmpItemToAdd);
+	var tmpToAddElement = getCommonBlock(tmpItemToAdd,blockOptions);
 	if (!(tmpToAddElement)) {
 
 	}
+	console.log('tmpToAddElement',tmpToAddElement);
 	wp.data.dispatch('core/block-editor').insertBlocks(tmpToAddElement, tmpPos, tmpThis.clientId)
 }
 
