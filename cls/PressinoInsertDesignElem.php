@@ -127,7 +127,7 @@ if ( ! class_exists( 'PressinoInsertDesignElem' ) ) {
 			$attributes = shortcode_atts(
 				array(
 					'url'        => '0',
-					'public'      => false,
+					'postid'      => 0,
 				),
 				$atts,
 				'insert'
@@ -138,9 +138,10 @@ if ( ! class_exists( 'PressinoInsertDesignElem' ) ) {
 
 			
 			// Validation checks.
-			if ( '0' === $attributes['url'] ) {
+			if ( '0' === $attributes['url'] && 0 === $attributes['postid'] ) {
 				return $content;
 			}
+			$page = $attributes['url'] > 0 ? $attributes['url'] : $attributes['postid'];
 
 			
 			// Get options set in WordPress dashboard (Settings > Insert Pages).
@@ -149,17 +150,17 @@ if ( ! class_exists( 'PressinoInsertDesignElem' ) ) {
 				$options = wpip_set_defaults();
 			}
 
-			$url = $attributes['url'];
+			// $url = $attributes['url'];
 
 			// Get the WP_Post object from the provided slug, or ID.
-			if ( ! is_numeric( $url ) ) {
+			if ( ! is_numeric( $page ) ) {
 	
 					
 				//$url='de1';//test
 
-				$inserted_page = get_page_by_path( $url , OBJECT, 'actappelem');
+				$inserted_page = get_page_by_path( $page , OBJECT, 'actappelem');
 			} else {
-				$inserted_page = get_post( intval($url ) );
+				$inserted_page = get_post( intval($page ) );
 			}
 
 			

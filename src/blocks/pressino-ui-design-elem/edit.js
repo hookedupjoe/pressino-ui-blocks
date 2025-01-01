@@ -34,7 +34,11 @@ export default function Edit(theProps) {
 		}
 	}
     
-    
+    const onSuggestionSelected = (props) => {
+        setAttributes( { postid: '' + props.id } );
+        console.log('selected',props);
+    }
+
     const suggestionsRender = (props) => (
        
         <div className="components-dropdown-menu__menu" style={{height: '300px',overflow:'auto'}}>
@@ -42,7 +46,7 @@ export default function Edit(theProps) {
             <div class="ui header small blue">Select Design Element</div>
             { props.suggestions.map( ( suggestion, index ) => {
                     return (
-                        <div onClick={ () => {suggestion.url = suggestion.id; props.handleSuggestionClick( suggestion );console.log('suggestion',suggestion)} } className="ui button fluid blue basic compact marb3">{suggestion.title}</div>
+                        <div onClick={ () => {onSuggestionSelected(suggestion); props.handleSuggestionClick( suggestion );console.log('suggestion',suggestion)} } className="ui button fluid blue basic compact marb3">{suggestion.title}</div>
                     )
                 } )
             }

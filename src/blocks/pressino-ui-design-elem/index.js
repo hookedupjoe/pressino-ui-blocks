@@ -17,6 +17,7 @@ import {PressinoUI} from '../../pressino-ui';
 let tmpAttributes = {};
 PressinoUI.addAttributes('boolean', tmpAttributes,[]);
 PressinoUI.addAttributes('text', tmpAttributes,['url']);
+PressinoUI.addAttributes('number', tmpAttributes,['postid']);
 
 /**
  * Register Block
