@@ -231,7 +231,7 @@ function getCustomURLControl(theProps, theAttName, theLabel, theVal, theOnChange
 			refreshBlockEditor();
 		}
 	}
-	return <div className='marb10'><URLInput
+	return <div><URLInput
 		label={tmpLabel}
 		value={attributes[theAttName]}
 		onChange={tmpOnChangeFunc}
