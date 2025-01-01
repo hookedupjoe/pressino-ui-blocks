@@ -6,6 +6,7 @@ import { __experimentalLinkControlSearchInput as LinkControlSearchInput, URLInpu
 import { Button, PanelBody, TextControl, ToggleControl } from '@wordpress/components';
 import { istr, PressinoUI, el } from '../../pressino-ui';
 import display from './display';
+import ServerSideRender from '@wordpress/server-side-render';
 
 import { useState } from '@wordpress/element';
 
@@ -16,8 +17,22 @@ import { useState } from '@wordpress/element';
 export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
 
-    var tmpDisplay = display({ attributes, editMode: true });
-    tmpDisplay = el('div', {}, 'Insert Design Element');
+    var tmpDisplay = ''; //display({ attributes, editMode: true });
+   
+    //--- Trigger resize to assure all the dynamic content is refreshed
+    window.dispatchEvent(new Event('resize'));
+
+    tmpDisplay = theProps.attributes.postid > 0 ? (
+                    <ServerSideRender
+                        block="pressino/design-elem"
+                        key="pressino/design-elem"
+                        attributes={ theProps.attributes }
+                    />
+                ) : (
+                    <h2 key="pressino/design-elem">
+                        { istr( 'Choose a design element to insert.' ) }
+                    </h2>
+                )
 
     const blockProps = useBlockProps();
     const { url, postid } = attributes;

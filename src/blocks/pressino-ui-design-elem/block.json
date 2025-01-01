@@ -14,5 +14,16 @@
 	},
 	"textdomain": "pressino",
 	"editorScript": "file:./index.js",
-    "render": "file:./render.php"
+    "render": "file:./render.php", 
+	"attributes": {
+		"url": {
+			"type": "string"
+		},
+		"title": {
+			"type": "string"
+		},
+		"postid": {
+			"type": "number"
+		}
+	}
 }
