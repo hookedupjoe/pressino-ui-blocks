@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "pressino/splitcolumn",
+	"version": "0.1.0",
+	"title": "UI Split Column",
+	"category": "pressino-ui-blocks",
+	"description": "A split column, one of two.",
+	"example": {},
+	"supports": {
+		"html": false,
+		"inserter": false,
+		"className": false,
+		"customClassName": false
+	},
+	"textdomain": "pressino",
+	"editorScript": "file:./index.js"
+}

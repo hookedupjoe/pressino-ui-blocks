@@ -74,15 +74,14 @@ function create_block_pressino_ui_blocks_block_init() {
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-grid-column' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-richtext' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-bullets' );
-
-	//--- Register Special Server Side Blocks
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-design-elem' );
+	register_block_type( __DIR__ . '/build/blocks/pressino-ui-split-column' );
+	register_block_type( __DIR__ . '/build/blocks/pressino-ui-split' );
 
 
-
-	// register_block_type( __DIR__ . '/build/blocks/pressino-ui-list' );
-	// register_block_type( __DIR__ . '/build/blocks/pressino-ui-listitem' );
-	// register_block_type( __DIR__ . '/build/blocks/pressino-ui-listitem-section' );
+	//--- IN DEV - PENDING REVIEW --> register_block_type( __DIR__ . '/build/blocks/pressino-ui-list' );
+	//--- IN DEV - PENDING REVIEW --> register_block_type( __DIR__ . '/build/blocks/pressino-ui-listitem' );
+	//--- IN DEV - PENDING REVIEW --> register_block_type( __DIR__ . '/build/blocks/pressino-ui-listitem-section' );
 }
 
 // register_block_type(
