@@ -5,8 +5,8 @@ import { InnerBlocks } from '@wordpress/block-editor';
 import { PressinoUI, el } from '../../pressino-ui';
 
 var classSpecs = {
-    boolean: ['fluid', 'raised'],
-	string: ['color'],
+    boolean: [],
+	string: [],
 }
 
 
@@ -48,12 +48,12 @@ export default function display({ props, editMode }) {
         // var tmpEditHeader = el('div', {className:"ui message bolder center aligned pad8 grey small"}, tmpHM);
         // tmpContent.push(tmpEditHeader)
 
-        var tmpPrefix = el('div',{className: 'ui label grey right pointing'}, 'Split');
-        var tmpNameLabel = el('div',{className: 'ui label grey basic  padr10'}, tmpTitle || '(no title)');
+        // var tmpPrefix = el('div',{className: 'ui label grey right pointing'}, 'Split');
+        // var tmpNameLabel = el('div',{className: 'ui label grey basic  padr10'}, tmpTitle || '(no title)');
 
-        //var tmpHM = tmpTabLabel;
-        var tmpEditHeader = el('div', {className:"ui message pad8 grey small"}, tmpPrefix,tmpNameLabel);
-        tmpContent.push(tmpEditHeader)
+        // //var tmpHM = tmpTabLabel;
+        // var tmpEditHeader = el('div', {className:"ui message pad8 grey small"}, tmpPrefix,tmpNameLabel);
+        // tmpContent.push(tmpEditHeader)
 
        // tmpEditHeader
        
@@ -128,7 +128,7 @@ export default function display({ props, editMode }) {
     var tmpTemplate = [ 
         [
             'pressino/splitcolumn',
-            {},
+            {ismain:true},
             []
         ],
         [
@@ -138,24 +138,12 @@ export default function display({ props, editMode }) {
         ]
     ];
 
-    if( hasBottomCardByDefault ){
-        tmpTemplate.push([
-            'pressino/splitcolumn',
-            {
-                extra: true, 
-                padding: 'pad0'
-            },
-            [
-    
-            ]
-        ])
-    }
 
     
 
     if (editMode) {
         tmpContent.push(newEl('div', '', el(wp.blockEditor.InnerBlocks, {
-            allowedBlocks: ['pressino/splitcolumn'], templateLocked: true, renderAppender: false, norendetemplateLock: "insert",
+            allowedBlocks: ['pressino/splitcolumn'], templateLock: false, renderAppender: false, norendetemplateLock: "insert",
             template: tmpTemplate
         })));
     } else {

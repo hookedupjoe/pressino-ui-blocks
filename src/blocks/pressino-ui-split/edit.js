@@ -46,35 +46,9 @@ export default function Edit(theProps) {
 
     var tmpToolbarMods = '';
 
-    // if (!tmpHasMaxBlocks) {
-    //     tmpToolbarMods = <BlockControls>
-    //         <ToolbarGroup>
-    //             <ToolbarButton
-    //                 icon={PressinoUI.getBlockIcon('pressino/splitcolumn')}
-    //                 label="Add Bottom Section"
-    //                 text="Add Bottom Section"
-    //                 onClick={onAddBlock}
-    //             />
-    //         </ToolbarGroup>
-    //     </BlockControls>
-    // }
-
     let tmpSidebarControls = <InspectorControls>
         {tmpToolbarMods}
 
-
-        <PanelBody title={istr('General Settings')}>
-            {PressinoUI.getStandardProperty(theProps, 'title', 'Split Title', 'text')}
-            {PressinoUI.getStandardProperty(theProps, 'subtitle', 'Sub Title', 'text')}
-            {PressinoUI.getStandardProperty(theProps, 'color', 'Split Color', 'colors')}
-            {PressinoUI.getStandardProperty(theProps, { mediaID: 'mediaID', mediaURL: 'mediaURL' }, 'Split Image', 'image')}
-            {PressinoUI.getStandardProperty(theProps, 'url', 'Target Content or Link', 'url')}
-            {PressinoUI.getStandardProperty(theProps, 'urlopentab', 'Open link in new tab?', 'checkbox')}
-            {PressinoUI.getStandardProperty(theProps, 'title', 'fluid', 'Full width', 'checkbox')}
-            {PressinoUI.getStandardProperty(theProps, 'raised', 'Raised', 'checkbox')}
-            {PressinoUI.getStandardProperty(theProps, 'headerColor', 'Header Color', 'colors')}
-
-        </PanelBody>
 
 
     </InspectorControls>

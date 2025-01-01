@@ -19,10 +19,21 @@ export default function display({ attributes, editMode }) {
     let classNames = getClass(attributes,editMode);
    
     if(editMode === true){
+        var tmpContent = [];
+        var tmpName = attributes.ismain ? 'Main Panel' : 'Side Panel';
+        var tmpPrefix = el('div',{className: 'ui label grey right pointing'}, 'Split Column');
+        var tmpNameLabel = el('div',{className: 'ui label grey basic  padr10'}, tmpName);
+
+        //var tmpHM = tmpTabLabel;
+        var tmpEditHeader = el('div', {className:"ui message pad8 grey small"}, tmpPrefix, tmpNameLabel);
+        tmpContent.push(tmpEditHeader)
+
+        tmpContent.push(<div className={classNames} >
+            <InnerBlocks />
+        </div>)
+        
         return (
-            <div className={classNames} >
-                <InnerBlocks />
-            </div>
+            tmpContent
         );
     }
 
