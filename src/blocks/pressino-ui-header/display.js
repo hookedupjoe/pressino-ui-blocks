@@ -50,15 +50,11 @@ export default function display({ attributes, editMode }) {
 
         var tmpExtraEl = '';
         if( useicon && iconname){
-
             tmpExtraEl = PressinoUI.getIconEl(attributes);
-
             if( iconontop ){
                 tmpCN += ' icon';
             }
-            
         }
-    
 
         var tmpContent = !attached && !block && getExtraContent(attributes);
         

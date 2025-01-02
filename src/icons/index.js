@@ -4,10 +4,18 @@ import {biIcons} from './bi.js';
 import {categories} from './categories.js';
 
 
-export function getIconClass({iconname, icontype, iconclass, weight, isForSubItem = false}){
+export function getIconClass(attributes){
+	const {iconcolor, iconsize, iconname, icontype, iconclass, weight, isForSubItem = false} = attributes;
 	let tmpClasses = iconname || iconclass || '';
 	tmpClasses += ' icon';
 	let tmpPrefix = isForSubItem ? 's' : '';
+
+	if( iconcolor ){
+		tmpClasses += ' ' + iconcolor;
+	}
+	if( iconsize ){
+		tmpClasses += ' ' + iconsize;
+	}
 
 	var tmpOtherClasses = '';
     if( icontype == 'fa' ){
@@ -24,11 +32,12 @@ export function getIconClass({iconname, icontype, iconclass, weight, isForSubIte
 	return tmpClasses;
 }
 
-export function getIconEl(props){
-	const {iconname, icontype, iconclass, weight} = props;
+export function getIconEl(attributes){
+	const {iconname, icontype, iconclass, weight} = attributes;
 	let tmpClasses = iconname || iconclass || '';
 	tmpClasses += ' icon';
-	var tmpOtherClasses = '';
+	
+var tmpOtherClasses = '';
     if( icontype == 'fa' ){
 		tmpOtherClasses  = 'fa-' + (weight ? weight : 'solid') ;
     } else if( icontype == 'dash' ){
@@ -37,7 +46,7 @@ export function getIconEl(props){
 	if( tmpOtherClasses ){
 		tmpClasses += ' ' + tmpOtherClasses;
 	}
-	return <span class={getIconClass(props)}></span>;
+	return <span class={getIconClass(attributes)}></span>;
 }
 
 export const classIconIndex = {

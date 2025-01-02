@@ -15,7 +15,7 @@ import {PressinoUI} from '../../pressino-ui';
  * Setup Block Attributes
  */
 let tmpAttributes = {};
-PressinoUI.addAttributes('text', tmpAttributes,['name', 'ctl', 'text', 'color', 'size', 'subtext', 'attached', 'alignment', 'margin', 'bottommargin', 'padding', 'classes','iconname','icontype']);
+PressinoUI.addAttributes('text', tmpAttributes,['name', 'ctl', 'text', 'color', 'size', 'subtext', 'attached', 'alignment', 'margin', 'bottommargin', 'padding', 'classes','iconname','icontype','iconsize','iconcolor']);
 PressinoUI.addAttributes('boolean', tmpAttributes,['dividing', 'block', 'inverted','useicon','iconontop']);
 
 tmpAttributes.content = {
