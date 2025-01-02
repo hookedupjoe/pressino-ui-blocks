@@ -91,15 +91,15 @@ if ( ! class_exists( 'PressinoInsertWebElem' ) ) {
 	private static function custom_post_website_element() {
 
 		$labels = array(
-		'name'               => __( 'Website Elements' ),
-		'singular_name'      => __( 'Website Element' ),
-		'add_new'            => __( 'Add New Website Element' ),
-		'add_new_item'       => __( 'Add New Website Element' ),
-		'edit_item'          => __( 'Edit Website Element' ),
-		'new_item'           => __( 'New Website Element' ),
-		'all_items'          => __( 'All Website Elements' ),
-		'view_item'          => __( 'View Website Element' ),
-		'search_items'       => __( 'Search Website Element' )
+		'name'               => __( 'Web Elements' ),
+		'singular_name'      => __( 'Web Element' ),
+		'add_new'            => __( 'Add New Web Element' ),
+		'add_new_item'       => __( 'Add New Web Element' ),
+		'edit_item'          => __( 'Edit Web Element' ),
+		'new_item'           => __( 'New Web Element' ),
+		'all_items'          => __( 'All Web Elements' ),
+		'view_item'          => __( 'View Web Element' ),
+		'search_items'       => __( 'Search Web Element' )
 		);
 
 		$args = array(
@@ -107,6 +107,7 @@ if ( ! class_exists( 'PressinoInsertWebElem' ) ) {
 		'description'       => 'Content use as a part of the website.',
 		'public'            => true,
 		'menu_position'     => 22,
+		'menu_icon'			=> 'dashicons-screenoptions',
 		'show_in_rest'      => true,
 		'supports'          => array( 'title', 'editor', 'custom-fields' ),
 		'has_archive'       => false,
