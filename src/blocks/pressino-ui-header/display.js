@@ -34,11 +34,13 @@ export default function display({ attributes, editMode }) {
         var tmpText = tmpAtts.text;
         if( editMode ){
             if(  (!(tmpAtts.text || tmpAtts.subtext))){
-                tmpText = '(blank) - Update in settings sidebar';
+                tmpCN = ''; //---- Do not use header class - showing a message instead
+                tmpText = <div class="ui segment basic right aligned pad0 mar0"><div class="ui right pointing label orange">Add header text in sidebar</div></div>;
             }
+
         }
         var tmpContent = !attached && !block && getExtraContent(attributes);
         
-        var tmpDisplayObject = el('h2',{className:tmpCN},[tmpText,tmpContent]);
+        var tmpDisplayObject = el('h2',{className:tmpCN},el('div', {className: 'content'}, [tmpText,tmpContent]));
         return tmpDisplayObject;
 }

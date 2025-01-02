@@ -17,30 +17,33 @@ export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
     var tmpAtts = theProps.attributes;
 
+    var tmpDisplay = display({attributes, editMode: true});
+
     // var tmpDisplay = ''; //display({ attributes, editMode: true });
     const blockProps = useBlockProps();
     const { alignment, attached, block } = attributes;
     const checkboxList = ['', '', '', '', '', '', ''];
     const tmpExtra = getExtraContent(attributes);
-    var tmpClassName = getClass(attributes, true);
-    var tmpExtraClasses = tmpClassName;
+    // var tmpClassName = getClass(attributes, true);
+    // var tmpExtraClasses = tmpClassName;
 
-    if (attributes.subtext != '' && attributes.dividing) {
-        tmpClassName = tmpClassName.replace('dividing', '');
-    }
-    var tmpShowSub = !attached && !block && attributes.subtext != '';
+    // if (attributes.subtext != '' && attributes.dividing) {
+    //     tmpClassName = tmpClassName.replace('dividing', '');
+    // }
+    // var tmpShowSub = !attached && !block && attributes.subtext != '';
 
-    let tmpSubText = tmpShowSub ? <div className={'ui header  mar0  pad0 marb15 ' + attributes?.color + tmpExtraClasses}><div class="ui sub header">{attributes.subtext}</div></div> : <div class="marb15"></div>;
+    // let tmpSubText = tmpShowSub ? <div className={'ui header  mar0  pad0 marb15 ' + attributes?.color + tmpExtraClasses}><div class="ui sub header">{attributes.subtext}</div></div> : <div class="marb15"></div>;
 
-    let tmpDisplay = [<RichText
-        tagName="h2"
-        placeholder='Enter you header here'
-        className={tmpClassName + ' mar0'}
-        allowedFormats={ [ ] }
-        identifier="content"
-        value={attributes.text}
-        onChange={(content) => setAttributes({ text: content })}
-    />, tmpSubText]
+    
+    // let tmpDisplay = [<RichText
+    //     tagName="h2"
+    //     placeholder='Enter you header here'
+    //     className={tmpClassName + ' mar0'}
+    //     allowedFormats={ [ ] }
+    //     identifier="content"
+    //     value={attributes.text}
+    //     onChange={(content) => setAttributes({ text: content })}
+    // />, tmpSubText]
 
     return <>
         <div {...blockProps}>
