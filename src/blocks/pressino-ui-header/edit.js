@@ -70,8 +70,8 @@ export default function Edit(theProps) {
                     {PressinoUI.getStandardProperty(theProps, 'color', 'Header Color', 'colors')}
                     {PressinoUI.getStandardProperty(theProps, 'size', 'Header size', 'sizes')}
                     {PressinoUI.getStandardProperty(theProps, 'useicon', 'Use Icon', 'checkbox')}
-                    {(useicon && PressinoUI.getSettingsForIcon({ label: 'Select Icon', attname: attNamesIcon, isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes }))}
                     {(useicon && PressinoUI.getStandardProperty(theProps, 'iconontop', 'Icon on top (centers header)', 'checkbox'))}
+                    {(useicon && PressinoUI.getSettingsForIcon({ label: 'Select Icon', attname: attNamesIcon, isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes }))}
                     {(useicon && PressinoUI.getStandardProperty(theProps, 'iconcolor', 'Icon Color', 'colors'))}
                     {(useicon && PressinoUI.getStandardProperty(theProps, 'iconsize', 'Icon Size', 'iconsizes'))}
 

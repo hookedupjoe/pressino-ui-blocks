@@ -139,13 +139,9 @@ function getSettingsForIcon(props) {
 	}
 
 	
-	return <div className='marb10'>
-		<Button
-			variant="primary"
-			onClick={() => setQuickInserterOpen(true)}
-		>
-			{istr(label || 'Select Icon')}
-		</Button>
+	return <div>
+
+		
 		<InserterModal
 				onSelectedItem={ onSelectedItem }
 				isInserterOpen={ isInserterOpen }
@@ -157,6 +153,13 @@ function getSettingsForIcon(props) {
 			isQuickInserterOpen={ isQuickInserterOpen }
 			setQuickInserterOpen={ setQuickInserterOpen }
 		/>
+				<Button
+			__nextHasNoMarginBottom
+			variant="primary"
+			onClick={() => setQuickInserterOpen(true)}
+		>
+			{istr(label || 'Select Icon')}
+		</Button>
 	</div>
 
 

@@ -56,7 +56,7 @@ export default function display({ attributes, editMode }) {
             }
         }
 
-        var tmpContent = !attached && !block && getExtraContent(attributes);
+        var tmpContent = getExtraContent(attributes);
         
         var tmpDisplayObject = el('h2',{className:tmpCN},tmpExtraEl, el('div', {className: 'content'}, [tmpText,tmpContent]));
         return tmpDisplayObject;
