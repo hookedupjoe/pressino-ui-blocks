@@ -18,8 +18,8 @@ export default function display({ attributes, editMode }) {
     const { ratio, ismain, locationtb, locationlr } = attributes;
 
     let classNames = getClass(attributes,editMode);
-    classNames += ' flo-10-' + ratio;
-    const tmpRatioPerc = (ratio*10) + '%';
+    classNames += ' flo-flex-' + ratio;
+    const tmpRatioPerc = (ratio*5) + '%';
     if( ismain ){
         classNames += ' flo-main';
     } else {

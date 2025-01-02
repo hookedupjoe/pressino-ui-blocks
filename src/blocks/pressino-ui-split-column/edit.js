@@ -37,12 +37,12 @@ export default function Edit(theProps) {
     const blockProps = useBlockProps();
 
     var tmpParentAttributes = PressinoUI.getParentAttributes(props.clientId);
-    var tmpRatio = tmpParentAttributes.splitratio || '5';
+    var tmpRatio = tmpParentAttributes.splitratio || '10';
     tmpRatio = parseInt(tmpRatio);
     if( tmpRatio == 0 ){
-        tmpRatio = 5;
+        tmpRatio = 10;
     }
-    var tmpMyRatio = ismain ? tmpRatio : 10 - tmpRatio;
+    var tmpMyRatio = ismain ? tmpRatio : 20 - tmpRatio;
 
     if( props.attributes.ratio != tmpMyRatio ){
         props.attributes.ratio = tmpMyRatio;
