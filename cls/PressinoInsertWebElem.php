@@ -77,7 +77,7 @@ if ( ! class_exists( 'PressinoInsertWebElem' ) ) {
 	public static function override_tpl($template){
 		$post = get_post();
 		$pagename = isset($post->post_name) ? $post->post_name : '';
-		$post_types = array( 'pressinowebelem' );
+		$post_types = array( 'pressinowebpart' );
 		if ( is_singular( $post_types ) && file_exists( PRESSINO_UI_BLOCKS_BASE_DIR . '/tpl/webelem.php' ) ){
 			$template = PRESSINO_UI_BLOCKS_BASE_DIR . '/tpl/webelem.php';
 			return $template;
@@ -91,15 +91,15 @@ if ( ! class_exists( 'PressinoInsertWebElem' ) ) {
 	private static function custom_post_website_element() {
 
 		$labels = array(
-		'name'               => __( 'Web Elements' ),
-		'singular_name'      => __( 'Web Element' ),
-		'add_new'            => __( 'Add New Web Element' ),
-		'add_new_item'       => __( 'Add New Web Element' ),
-		'edit_item'          => __( 'Edit Web Element' ),
-		'new_item'           => __( 'New Web Element' ),
-		'all_items'          => __( 'All Web Elements' ),
-		'view_item'          => __( 'View Web Element' ),
-		'search_items'       => __( 'Search Web Element' )
+		'name'               => __( 'Web Parts' ),
+		'singular_name'      => __( 'Web Part' ),
+		'add_new'            => __( 'Add New Web Part' ),
+		'add_new_item'       => __( 'Add New Web Part' ),
+		'edit_item'          => __( 'Edit Web Part' ),
+		'new_item'           => __( 'New Web Part' ),
+		'all_items'          => __( 'All Web Parts' ),
+		'view_item'          => __( 'View Web Part' ),
+		'search_items'       => __( 'Search Web Part' )
 		);
 
 		$args = array(
@@ -125,7 +125,7 @@ if ( ! class_exists( 'PressinoInsertWebElem' ) ) {
 			),
 		);
 
-		register_post_type( 'pressinowebelem', $args);
+		register_post_type( 'pressinowebpart', $args);
 	}
 
 
@@ -217,7 +217,7 @@ if ( ! class_exists( 'PressinoInsertWebElem' ) ) {
 					
 				//$url='de1';//test
 
-				$inserted_page = get_page_by_path( $page , OBJECT, 'pressinowebelem');
+				$inserted_page = get_page_by_path( $page , OBJECT, 'pressinowebpart');
 			} else {
 				$inserted_page = get_post( intval($page ) );
 			}

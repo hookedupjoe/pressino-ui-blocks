@@ -45,9 +45,9 @@ export default function Edit(theProps) {
                     attributes={ theProps.attributes }
                 /></div></>
                 ) : (
-                    <h2 key="pressino/webelem">
-                        { istr( 'Choose a website element to insert.' ) }
-                    </h2>
+                    <div class="ui right pointing label orange large toright" key="pressino/webelem">
+                        { istr( 'Select a web part to insert in settings.' ) }
+                    </div>
                 )
 
     const blockProps = useBlockProps();
@@ -85,7 +85,7 @@ export default function Edit(theProps) {
             renderSuggestions={(props) => suggestionsRender(props)}
             suggestionsQuery={{
                 type: 'post',
-                subtype: 'pressinowebelem',
+                subtype: 'pressinowebpart',
             }}
             allowDirectEntry={false}
             withURLSuggestion={false}
@@ -94,7 +94,7 @@ export default function Edit(theProps) {
             withCreateSuggestion={false}
         />;
 
-        tmpRet.push(<div className="ui header small blue top attached mart0">{'Website Element'}</div>)
+        tmpRet.push(<div className="ui header small blue top attached mart0">{'Select a web part to insert'}</div>)
         //--- Show selection if none selected
         if( !(attributes.postid) ){
             tmpRet.push(tmpEl);
@@ -120,7 +120,7 @@ export default function Edit(theProps) {
 
         <div className="components-dropdown-menu__menu" style={{ height: '300px', overflow: 'auto' }}>
             <div className="ui message ">
-                <div class="ui header small blue">Select Website Element</div>
+                <div class="ui header small blue">Select Web Part</div>
                 {props.suggestions.map((suggestion, index) => {
                     return (
                         <div onClick={() => { onSuggestionSelected(suggestion); props.handleSuggestionClick(suggestion); }} className="ui button fluid blue basic compact marb3">{suggestion.title}</div>

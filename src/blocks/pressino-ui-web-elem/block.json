@@ -3,9 +3,9 @@
 	"apiVersion": 3,
 	"name": "pressino/webelem",
 	"version": "0.1.0",
-	"title": "UI Website Element",
+	"title": "UI Web Part",
 	"category": "pressino-ui-blocks",
-	"description": "Insert Website Element into Content",
+	"description": "Insert Web Part into Content",
 	"example": {},
 	"supports": {
 		"html": false,

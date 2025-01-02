@@ -4,7 +4,7 @@
  * Description:       Semantic UI styled block controls
  * Requires at least: 6.6
  * Requires PHP:      7.2
- * Version:           2.0.7d
+ * Version:           2.0.7e
  * Author:            W Joseph Francis
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -16,7 +16,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; 
 }
-define( 'PRESSINO_UI_BLOCKS_CORE_VERSION', '2.0.7d' );
+define( 'PRESSINO_UI_BLOCKS_CORE_VERSION', '2.0.7e' );
 
 
 define( 'PRESSINO_UI_BLOCKS_FILE', __FILE__ );
