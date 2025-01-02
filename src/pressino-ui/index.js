@@ -425,6 +425,28 @@ const iconPaths = {
 };
 
 const iconSVGs = {
+	'pressino/splitcolumn': (<svg width="80" height="80" version="1.1" viewBox="0 0 21.167 21.167" xmlns="http://www.w3.org/2000/svg">
+		<rect x="1.4359" y="1.6011" width="8.5278" height="18.054" fill="#fff" stroke="#000" stroke-width=".23896"/>
+		<rect x="1.4924" y="1.8543" width="8.4145" height="17.546" fill="#ffedde" stroke-width=".52335"/>
+		<rect x="11.176" y="1.6569" width="8.5278" height="18.054" fill="#fff" stroke="#000" stroke-width=".23896"/>
+		<rect x="11.232" y="1.9102" width="8.4145" height="17.546" fill="#f9f9f9" stroke-width=".52335"/>
+	   </svg>
+	   ),
+	'pressino/split': (<svg width="80" height="80" version="1.1" viewBox="0 0 21.167 21.167" xmlns="http://www.w3.org/2000/svg">
+		<rect x="1.4359" y="1.6011" width="8.5278" height="18.054" fill="#fff" stroke="#000" stroke-width=".23896"/>
+		<rect x="1.4924" y="1.8543" width="8.4145" height="17.546" fill="#ffedde" stroke-width=".52335"/>
+		<rect x="11.176" y="1.6569" width="8.5278" height="18.054" fill="#fff" stroke="#000" stroke-width=".23896"/>
+		<rect x="11.232" y="1.9102" width="8.4145" height="17.546" fill="#ffedde" stroke-width=".52335"/>
+	   </svg>
+	   ),
+	'pressino/webpart': (<svg width="80" height="80" version="1.1" viewBox="0 0 21.167 21.167" xmlns="http://www.w3.org/2000/svg">
+		<g fill="#de7a2f" stroke="#000" stroke-linecap="round" stroke-width=".4344">
+		 <path d="m9.1713 1.9786c0.29182 0 0.52838 0.84774 0.52838 1.8935v3.787c0 1.0457-0.23657 1.8935-0.52838 1.8935h-6.3405c-0.29181 0-0.52838-0.84778-0.52838-1.8935v-3.787c0-1.0458 0.23657-1.8935 0.52838-1.8935z"/>
+		 <path d="m18.596 1.9786c0.29182 0 0.52838 0.84774 0.52838 1.8935v3.787c0 1.0457-0.23657 1.8935-0.52838 1.8935h-6.3406c-0.29181 0-0.52838-0.84778-0.52838-1.8935v-3.787c0-1.0458 0.23657-1.8935 0.52838-1.8935z"/>
+		 <path d="m9.1713 11.654c0.29182 0 0.52838 0.84774 0.52838 1.8935v3.787c0 1.0457-0.23657 1.8935-0.52838 1.8935h-6.3405c-0.29181 0-0.52838-0.84778-0.52838-1.8935v-3.787c0-1.0458 0.23657-1.8935 0.52838-1.8935z"/>
+		 <path d="m18.596 11.654c0.29182 0 0.52838 0.84774 0.52838 1.8935v3.787c0 1.0457-0.23657 1.8935-0.52838 1.8935h-6.3406c-0.29181 0-0.52838-0.84778-0.52838-1.8935v-3.787c0-1.0458 0.23657-1.8935 0.52838-1.8935z"/>
+		</g>
+	   </svg>),
 	'pressino/bullets': (<svg width="80" height="80" version="1.1" viewBox="0 0 21.167 21.167" xmlns="http://www.w3.org/2000/svg">
 		<g stroke="#000">
 		 <path d="m18.865 2.911c0.4495 0 0.8139 0.33814 0.8139 0.75525v1.5105c0 0.4171-0.36441 0.75525-0.8139 0.75525h-9.7668c-0.4495 0-0.8139-0.33815-0.8139-0.75525v-1.5105c0-0.41712 0.36441-0.75525 0.8139-0.75525z" fill="#de7a2f" stroke-linecap="round" stroke-width=".3405"/>
@@ -587,9 +609,9 @@ const iconSVGs = {
 		<rect x="1.6236" y="6.9468" width="18.023" height="2.0686" fill="#de7a2f" stroke-width=".48642" />
 	</svg>),
 	'pressino/message': (<svg width="80" height="80" version="1.1" viewBox="0 0 21.167 21.167" xmlns="http://www.w3.org/2000/svg">
-		<rect x=".74218" y="5.5604" width="19.834" height="9.5168" fill="#fff" stroke="#000" stroke-width=".26459" />
-		<rect x="1.6236" y="6.8436" width="18.023" height="7.0764" fill="#de7a2f" stroke-width=".48642" />
-	</svg>),
+		<rect x=".74218" y="5.5604" width="19.834" height="9.5168" fill="#fff" stroke="#000" stroke-width=".26459"/>
+		<rect x=".87337" y="5.6939" width="19.57" height="9.2489" fill="#ffedde" stroke-width=".57948"/>
+	   </svg>),
 	'pressino/image': (<svg width="80" height="80" version="1.1" viewBox="0 0 21.167 21.167" xmlns="http://www.w3.org/2000/svg">
 		<g stroke="#000" stroke-linecap="round" stroke-linejoin="round">
 			<path d="m2.0732 5.1991c0-1.0991 1.0392-1.9901 2.321-1.9901h12.379c1.2819 0 2.321 0.89101 2.321 1.9901v10.614c0 1.0991-1.0392 1.9901-2.321 1.9901h-12.379c-1.2819 0-2.321-0.89101-2.321-1.9901z" fill="#fff" stroke-width=".52918" />

@@ -40,14 +40,14 @@ export default function Edit(theProps) {
     tmpDisplay = theProps.attributes.postid > 0 ? (
         
                     <><div className='ui segment pad3'><ServerSideRender
-                    block="pressino/webelem"
-                    key="pressino/webelem"
+                    block="pressino/webpart"
+                    key="pressino/webpart"
                     attributes={ theProps.attributes }
                 /></div></>
                 ) : (
-                    <div class="ui right pointing label orange large toright" key="pressino/webelem">
+                    <div class="ui segment basic right aligned pad5"><div class="ui right pointing label orange large" key="pressino/webpart">
                         { istr( 'Select a web part to insert in settings.' ) }
-                    </div>
+                    </div></div>
                 )
 
     const blockProps = useBlockProps();
