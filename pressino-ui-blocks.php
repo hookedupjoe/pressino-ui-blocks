@@ -4,7 +4,7 @@
  * Description:       Semantic UI styled block controls
  * Requires at least: 6.6
  * Requires PHP:      7.2
- * Version:           2.0.7c
+ * Version:           2.0.7d
  * Author:            W Joseph Francis
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -16,7 +16,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; 
 }
-define( 'PRESSINO_UI_BLOCKS_CORE_VERSION', '2.0.7c' );
+define( 'PRESSINO_UI_BLOCKS_CORE_VERSION', '2.0.7d' );
 
 
 define( 'PRESSINO_UI_BLOCKS_FILE', __FILE__ );
@@ -74,9 +74,10 @@ function create_block_pressino_ui_blocks_block_init() {
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-grid-column' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-richtext' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-bullets' );
-	register_block_type( __DIR__ . '/build/blocks/pressino-ui-design-elem' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-split-column' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-split' );
+	register_block_type( __DIR__ . '/build/blocks/pressino-ui-design-elem' );
+	register_block_type( __DIR__ . '/build/blocks/pressino-ui-web-elem' );
 
 
 	//--- IN DEV - PENDING REVIEW --> register_block_type( __DIR__ . '/build/blocks/pressino-ui-list' );
@@ -137,3 +138,4 @@ function create_block_pressino_ui_blocks_block_init() {
 
 add_action( 'init', 'create_block_pressino_ui_blocks_block_init' );
 require_once PRESSINO_UI_BLOCKS_BASE_DIR . '/cls/PressinoInsertDesignElem.php';
+require_once PRESSINO_UI_BLOCKS_BASE_DIR . '/cls/PressinoInsertWebElem.php';
