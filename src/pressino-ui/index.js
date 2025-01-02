@@ -65,7 +65,7 @@ function getLinkFormattingSettings(props,options){
 
 	return  <PanelBody title={istr('Link Formatting Options')}>
 		{getStandardProperty(props, 'linkformatting', "Link Formatting", 'linkformatting')}
-		{getStandardProperty(props, 'linkicon', "Link Formatting", 'linkicons')}
+		{getStandardProperty(props, 'linkicon', "Link Icon", 'linkicons')}
 		{tmpOptions.color !== false && getStandardProperty(props, 'linkcolored', "Use Parent Color for Link", 'checkbox')}
 	</PanelBody>
 

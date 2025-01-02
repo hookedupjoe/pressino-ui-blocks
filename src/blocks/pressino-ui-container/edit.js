@@ -4,7 +4,7 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
 import { PanelBody } from '@wordpress/components';
-import { istr, PressinoUI, LinkFormat } from '../../pressino-ui';
+import { istr, PressinoUI, LinkFormat, el } from '../../pressino-ui';
 import display from './display';
 
 /**
@@ -14,6 +14,8 @@ export default function Edit(props) {
     const { attributes, setAttributes } = props;
     var tmpDisplay = display({ attributes, editMode: true });
     const blockProps = useBlockProps();
+
+    tmpDisplay = el('div',{className: 'ui segment'}, tmpDisplay);
 
     return <>
         <InspectorControls>
