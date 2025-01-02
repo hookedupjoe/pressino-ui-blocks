@@ -66,13 +66,13 @@ export default function Edit(theProps) {
 
                 <PanelBody title={istr('General Settings')}>
                     {PressinoUI.getStandardProperty(theProps, 'text', 'Header Text', 'text')}
-                    {(!block && !attached && PressinoUI.getStandardProperty(theProps, 'subtext', 'Sub Text', 'text'))}
-                    {PressinoUI.getStandardProperty(theProps, 'useicon', 'Use Icon', 'checkbox')}
-                    {(useicon && PressinoUI.getSettingsForIcon({ label: 'Select Icon', attname: attNamesIcon, isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes }))}
-                    {/* {(useicon && PressinoUI.getStandardProperty(theProps, 'iconontop', 'Icon on top (centers header)', 'checkbox'))} */}
-                    {(! useicon && PressinoUI.getStandardProperty(theProps, 'alignment', 'Alignment', 'alignment'))}
+                    {(PressinoUI.getStandardProperty(theProps, 'subtext', 'Sub Text', 'text'))}
                     {PressinoUI.getStandardProperty(theProps, 'color', 'Header Color', 'colors')}
                     {PressinoUI.getStandardProperty(theProps, 'size', 'Header size', 'sizes')}
+                    {PressinoUI.getStandardProperty(theProps, 'useicon', 'Use Icon', 'checkbox')}
+                    {(useicon && PressinoUI.getSettingsForIcon({ label: 'Select Icon', attname: attNamesIcon, isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes }))}
+                    {(useicon && PressinoUI.getStandardProperty(theProps, 'iconontop', 'Icon on top (centers header)', 'checkbox'))}
+                    {(! useicon && PressinoUI.getStandardProperty(theProps, 'alignment', 'Alignment', 'alignment'))}
                     {PressinoUI.getStandardProperty(theProps, 'inverted', 'Inverted', 'checkbox')}
                     {PressinoUI.getStandardProperty(theProps, 'dividing', 'Line at bottom', 'checkbox')}
                     {PressinoUI.getStandardProperty(theProps, 'block', 'Show as block', 'checkbox')}

@@ -56,6 +56,7 @@ export default function Edit(theProps) {
                     {PressinoUI.getStandardProperty(theProps, 'basic', 'No Border', 'checkbox')}
                     {!basic && (PressinoUI.getStandardProperty(theProps, 'raised', 'Raised', 'checkbox'))}
                     {PressinoUI.getStandardProperty(theProps, 'color', 'Segment Color', 'colors')}
+                    {PressinoUI.getStandardProperty(theProps, 'inverted', 'Inverted', 'checkbox')}
                     {PressinoUI.getStandardProperty(theProps, 'size', 'Overall size', 'sizes')}
                     {PressinoUI.getStandardProperty(theProps, 'attached', 'Attached', 'attached')}
                     {PressinoUI.getStandardProperty(theProps, 'stacked', 'Stacked', 'checkbox')}

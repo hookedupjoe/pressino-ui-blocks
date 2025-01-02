@@ -5,7 +5,7 @@ import { PressinoUI, el } from '../../pressino-ui';
 
 var classSpecs = {
 	boolean: ['dividing','block','inverted'],
-    string: ['color','size', 'attached','margin','bottommargin','padding', 'classes']
+    string: ['color', 'attached','margin','bottommargin','padding', 'classes']
 }
 
 
@@ -18,6 +18,9 @@ export function getClass(theAtts, theIsEditMode) {
     //--- Only use alignment if icon is not in use
     if( !theAtts.useicon && theAtts.alignment ){
         tmpClasses += ' ' + theAtts.alignment;
+    }
+    if( theAtts.useicon && theAtts.iconontop ){
+        tmpClasses += ' icon center aligned'
     }
     tmpClasses = tmpClasses.trim().replace('  ',' ')
 	return tmpClasses
