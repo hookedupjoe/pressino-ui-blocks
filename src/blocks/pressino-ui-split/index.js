@@ -17,7 +17,7 @@ import {PressinoUI} from '../../pressino-ui';
 let tmpAttributes = {};
 PressinoUI.addAttributes('number', tmpAttributes, []);
 PressinoUI.addAttributes('boolean', tmpAttributes, []);
-PressinoUI.addAttributes('text', tmpAttributes, ['splitsize']);
+PressinoUI.addAttributes('text', tmpAttributes, ['splitratio']);
 
 /**
  * Register Block

@@ -29,15 +29,31 @@ const onAddMessageBlock = () => {
  * @return {Element} Element to render.
  */
 export default function Edit(theProps) {
+    const props = theProps;
+    const { attributes, setAttributes } = props;
+    const { ratio, ismain } = attributes;
 
-    const { attributes, setAttributes } = theProps;
     var tmpDisplay = display({ attributes, editMode: true });
     const blockProps = useBlockProps();
 
+    var tmpParentAttributes = PressinoUI.getParentAttributes(props.clientId);
+    var tmpRatio = tmpParentAttributes.splitratio || '5';
+    tmpRatio = parseInt(tmpRatio);
+    if( tmpRatio == 0 ){
+        tmpRatio = 5;
+    }
+    var tmpMyRatio = ismain ? tmpRatio : 10 - tmpRatio;
+
+    if( props.attributes.ratio != tmpMyRatio ){
+        props.attributes.ratio = tmpMyRatio;
+        PressinoUI.refreshBlockEditor();
+    }
+
+   
     var tmpContent = [];
     tmpContent.push(tmpDisplay);
 
-    let tmpEditToolbar = (!attributes.extra || !theProps.isSelected) ? '' : <Toolbar label="Options">
+    let tmpEditToolbar = (!attributes.extra || !props.isSelected) ? '' : <Toolbar label="Options">
         <ToolbarGroup>
             <ToolbarButton
                 icon={blockIcon}

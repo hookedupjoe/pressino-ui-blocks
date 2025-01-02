@@ -18,13 +18,12 @@ export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
     var tmpDisplayObject = display({ props: theProps, attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { raised, basic, attached } = attributes;
+    const { splitratio } = attributes;
     var props = theProps;
-    var tmpParentAttributes = PressinoUI.getParentAttributes(props.clientId);
-    props.attributes.parentColor = tmpParentAttributes.color || '';
-    props.attributes.parentMaxImgHeight = tmpParentAttributes.imageheight || 0;
-    props.attributes.parentHeaderType = tmpParentAttributes.headertype || 'default';
-   
+    
+    if( !(splitratio) ){
+        setAttributes({splitratio:'5'})
+    }
 
     const onAddBlock = () => {
         PressinoUI.addBlock({ blockName: 'pressino/splitcolumn', blockOptions: {
@@ -43,12 +42,11 @@ export default function Edit(theProps) {
     if (tmpChildren.length > 1) {
         tmpHasMaxBlocks = true;
     }
-
-    var tmpToolbarMods = '';
-
     let tmpSidebarControls = <InspectorControls>
-        {tmpToolbarMods}
-
+  
+        <PanelBody title={istr('General Settings')}>
+        {PressinoUI.getStandardProperty(theProps, 'splitratio', 'Split Ratio', 'splitlevels',true)}
+        </PanelBody>
 
 
     </InspectorControls>
