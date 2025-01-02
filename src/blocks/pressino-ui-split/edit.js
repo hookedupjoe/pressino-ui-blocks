@@ -46,6 +46,7 @@ export default function Edit(theProps) {
   
         <PanelBody title={istr('General Settings')}>
         {PressinoUI.getStandardProperty(theProps, 'splitratio', 'Split Ratio', 'splitlevels',true)}
+        {PressinoUI.getStandardProperty(theProps, 'gridspacing', 'Space Between Columns', 'slimwidenospacing')}
         </PanelBody>
 
 

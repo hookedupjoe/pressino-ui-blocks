@@ -16,7 +16,7 @@ import {PressinoUI} from '../../pressino-ui';
  */
 let tmpAttributes = {};
 PressinoUI.addAttributes('boolean', tmpAttributes, ['ismain']);
-PressinoUI.addAttributes('text', tmpAttributes, []);
+PressinoUI.addAttributes('text', tmpAttributes, ['locationlr','locationtb','classes']);
 PressinoUI.addAttributes('number', tmpAttributes, ['ratio']);
 
 /**

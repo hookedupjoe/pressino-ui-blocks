@@ -6,12 +6,12 @@ import { PressinoUI, el } from '../../pressino-ui';
 
 var classSpecs = {
     boolean: [],
-	string: [],
+	string: ['gridspacing'],
 }
-
 
 function getClass(theAtts, theIsEditMode) {
     var tmpClasses = PressinoUI.getStandardClass('flo-wrap', classSpecs, theAtts, theIsEditMode);
+    console.log('tmpClasses',tmpClasses);
 	return tmpClasses
 }
 
@@ -27,7 +27,7 @@ export default function display({ props, editMode }) {
 
     var tmpContent = [];
 
-    var tmpClass = getClass(theProps, editMode);
+    var tmpClass = getClass(theProps.attributes, editMode);
     var tmpTitle = '';
     if (tmpAtt.title) {
         tmpTitle = tmpAtt.title;

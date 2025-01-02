@@ -101,9 +101,11 @@ export default function Edit(theProps) {
         <div {...blockProps}>
             {tmpEditToolbar}
             <InspectorControls>
-                <PanelBody title={istr('Formatting Options')}>
-                    {PressinoUI.getStandardProperty(theProps, 'padding', "Padding", 'padding')}
-                    {PressinoUI.getStandardProperty(theProps, 'margin', "Margin", 'margin')}
+                <PanelBody title={istr('Sidebar Location Options')}>
+                    {(! ismain && PressinoUI.getStandardProperty(theProps, 'locationlr', "When Full Screen", 'locationlr'))}
+                    {(! ismain && PressinoUI.getStandardProperty(theProps, 'locationtb', "When Stacked", 'locationtb'))}
+                </PanelBody>
+                <PanelBody title={istr('Advanced Options')}>
                     {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
                 </PanelBody>
             </InspectorControls>

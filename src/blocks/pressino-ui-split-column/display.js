@@ -5,8 +5,8 @@ import { PressinoUI, el } from '../../pressino-ui';
 import { InnerBlocks } from '@wordpress/block-editor';
 
 var classSpecs = {
-    boolean: ['extra'],
-	string: ['padding','margin']
+    boolean: [],
+	string: ['classes']
 }
 
 function getClass(theAtts, theIsEditMode) {
@@ -15,11 +15,18 @@ function getClass(theAtts, theIsEditMode) {
 }
 
 export default function display({ attributes, editMode }) {
-    const { ratio, ismain } = attributes;
+    const { ratio, ismain, locationtb, locationlr } = attributes;
 
     let classNames = getClass(attributes,editMode);
     classNames += ' flo-10-' + ratio;
     const tmpRatioPerc = (ratio*10) + '%';
+    if( ismain ){
+        classNames += ' flo-main';
+    } else {
+        let tmpSideClass = locationtb == 'top' ? 'n' : 's';
+        tmpSideClass += locationlr == 'left' ? 'w' : 'e';
+        classNames += ' flo-side-' + tmpSideClass;
+    }
 
     if(editMode === true){
         var tmpContent = [];

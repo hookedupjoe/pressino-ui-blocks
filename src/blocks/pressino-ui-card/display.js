@@ -27,7 +27,7 @@ export default function display({ props, editMode }) {
 
     var tmpContent = [];
 
-    var tmpClass = getClass(theProps, editMode);
+    var tmpClass = getClass(theProps.attributes, editMode);
     var tmpTitle = '';
     if (tmpAtt.title) {
         tmpTitle = tmpAtt.title;
