@@ -15,8 +15,10 @@ import {PressinoUI} from '../../pressino-ui';
  * Setup Block Attributes
  */
 let tmpAttributes = {};
+
+PressinoUI.addAttributes('boolean', tmpAttributes, ['useicon']);
 PressinoUI.addAttributes('number', tmpAttributes, ['tabpos']);
-PressinoUI.addAttributes('text', tmpAttributes, ['itemname', 'groupname', 'tablabel','showstatus']);
+PressinoUI.addAttributes('text', tmpAttributes, ['itemname', 'groupname', 'tablabel','showstatus','iconname','icontype']);
 
 /**
  * Register Block

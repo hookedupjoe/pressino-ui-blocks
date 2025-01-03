@@ -27,7 +27,10 @@ export default function display({ attributes, editMode }) {
         if( useicon && iconname){
 
             tmpExtraEl = PressinoUI.getIconEl(attributes);
-            tmpExtraClasses += ' labeled icon';
+            tmpExtraClasses += ' icon';
+            if( attributes.text ){
+                tmpExtraClasses += ' labeled';
+            }
             if( ! iconaslabel ){
                 tmpExtraClasses += ' clear';
             }

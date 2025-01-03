@@ -4,8 +4,8 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls, BlockControls, RichText } from '@wordpress/block-editor';
 import { PanelBody } from '@wordpress/components';
-import { istr, PressinoUI } from '../../pressino-ui';
-import display from './display';
+import { istr, PressinoUI, attNamesIcon } from '../../pressino-ui';
+import display, { getExtraContent } from './display';
 import { PressinoAlignmentControl } from '../../components/pressino-alignment-control'
 import { useState } from '@wordpress/element';
 
@@ -18,6 +18,7 @@ export default function Edit(theProps) {
 
     var tmpDisplay = display({attributes, editMode: true});
 
+    // var tmpDisplay = ''; //display({ attributes, editMode: true });
     const blockProps = useBlockProps();
     const { useicon, alignment } = attributes;
 
@@ -64,7 +65,7 @@ export default function Edit(theProps) {
                     {PressinoUI.getStandardProperty(theProps, 'size', 'Header size', 'sizes')}
                     {PressinoUI.getStandardProperty(theProps, 'useicon', 'Use Icon', 'checkbox')}
                     {(useicon && PressinoUI.getStandardProperty(theProps, 'iconontop', 'Icon on top (centers header)', 'checkbox'))}
-                    {(useicon && PressinoUI.getSettingsForIcon({ useState, attributes, setAttributes }))}
+                    {(useicon && PressinoUI.getSettingsForIcon({ label: 'Select Icon', attname: attNamesIcon, useState, setAttributes }))}
                     {(useicon && PressinoUI.getStandardProperty(theProps, 'iconcolor', 'Icon Color', 'colors'))}
                     {(useicon && PressinoUI.getStandardProperty(theProps, 'iconsize', 'Icon Size', 'iconsizes'))}
 

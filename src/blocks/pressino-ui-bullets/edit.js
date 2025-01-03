@@ -3,8 +3,9 @@
  */
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody } from '@wordpress/components';
-import { istr, PressinoUI, el, LinkFormat } from '../../pressino-ui';
+import { PanelBody, TextControl, ToggleControl, ToolbarGroup, ToolbarButton } from '@wordpress/components';
+import { istr, PressinoUI, el, attNamesIcon, LinkFormat } from '../../pressino-ui';
+import { BlockControls } from '@wordpress/block-editor';
 const { store: blockEditorStore } = wp.blockEditor;
 const { useSelect } = wp.data;
 
@@ -19,12 +20,23 @@ export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
     var tmpDisplayObject = display({ props: theProps, attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { bullettype, iconname } = attributes;
+    const { bullettype, iconname} = attributes;
     var props = theProps;
     var tmpParentAttributes = PressinoUI.getParentAttributes(props.clientId);
     props.attributes.parentColor = tmpParentAttributes.color || '';
     props.attributes.parentMaxImgHeight = tmpParentAttributes.imageheight || 0;
     props.attributes.parentHeaderType = tmpParentAttributes.headertype || 'default';
+   
+    const [isQuickInserterOpen, setQuickInserterOpen] = useState(false);
+    const [isInserterOpen, setInserterOpen] = useState(false);
+
+    const onAddBlock = () => {
+        PressinoUI.addBlock({ blockName: 'pressino/cardsection' }, {
+            extra: true,
+            padding: 'pad0'
+        })
+    }
+
 
     const { clientId } = props;
     const tmpChildren = useSelect(
@@ -40,20 +52,20 @@ export default function Edit(theProps) {
 
     let tmpSidebarControls = <InspectorControls>
         {tmpToolbarMods}
-
+    
         <PanelBody title={istr('General Settings')}>
-            {PressinoUI.getStandardProperty(theProps, 'bulletsize', "Bullet Size", 'basicsizes')}
-            {PressinoUI.getStandardProperty(theProps, 'bullettype', "Bullet Type", 'bulletnames')}
-            {(bullettype == 'icon' && PressinoUI.getSettingsForIcon({ useState, attributes, setAttributes }))}
-            {(bullettype == 'none' && PressinoUI.getStandardProperty(theProps, 'flat', "Flatten", 'checkbox'))}
-            {PressinoUI.getStandardProperty(theProps, 'bulletcolor', 'Bullet Color', 'colors')}
-            {PressinoUI.getStandardProperty(theProps, 'bulletspacing', 'Spacing Between Bullets', 'bulletspacing')}
-            {PressinoUI.getStandardProperty(theProps, 'textsize', "Text Size", 'basicsizes')}
-
+        {PressinoUI.getStandardProperty(theProps, 'bulletsize', "Bullet Size", 'basicsizes')}
+        {PressinoUI.getStandardProperty(theProps, 'bullettype', "Bullet Type", 'bulletnames')}
+        {(bullettype == 'icon' && PressinoUI.getSettingsForIcon({ label: (iconname) ? 'Change Icon' : 'Select Icon', attname: attNamesIcon, isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes }))}
+        {(bullettype == 'none' && PressinoUI.getStandardProperty(theProps, 'flat', "Flatten", 'checkbox'))}
+        {PressinoUI.getStandardProperty(theProps, 'bulletcolor', 'Bullet Color', 'colors')}
+        {PressinoUI.getStandardProperty(theProps, 'bulletspacing', 'Spacing Between Bullets', 'bulletspacing')}
+        {PressinoUI.getStandardProperty(theProps, 'textsize', "Text Size", 'basicsizes')}
+        
         </PanelBody>
         {LinkFormat.getSettings(props)}
         <PanelBody title={istr('Advanced Settings')}>
-            {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
+        {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
 
         </PanelBody>
 

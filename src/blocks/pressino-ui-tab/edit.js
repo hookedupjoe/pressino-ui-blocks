@@ -3,9 +3,10 @@
  */
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
-import { istr, PressinoUI, el } from '../../pressino-ui';
+import { PanelBody } from '@wordpress/components';
+import { istr, PressinoUI, el, attNamesIcon } from '../../pressino-ui';
 import display from './display';
+import { useState } from '@wordpress/element';
 
 /**
  * @return {Element} Element to render.
@@ -14,11 +15,13 @@ export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
     var tmpDisplayObject = display({ props: theProps, attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { raised, basic, attached } = attributes;
+    const { useicon, iconname, icontype} = attributes;
     var props = theProps;
     //---
     var tmpAtts = props.attributes;
-
+    const [isQuickInserterOpen, setQuickInserterOpen] = useState(false);
+    const [isInserterOpen, setInserterOpen] = useState(false);
+    
     var tmpParentBlock = PressinoUI.getParentBlock(props.clientId);
     
     if( tmpParentBlock && tmpParentBlock.innerBlocks ){
@@ -49,6 +52,10 @@ export default function Edit(theProps) {
     <PanelBody title={istr('General Settings')}>
         {PressinoUI.getStandardProperty(theProps, 'itemname', 'Unique Item Name (Required)', 'text', true) } 
         {PressinoUI.getStandardProperty(theProps, 'tablabel', 'Tab Label (Required)', 'text', true)}
+        {PressinoUI.getStandardProperty(theProps, 'useicon', 'Use Icon', 'checkbox')}
+        {(useicon && PressinoUI.getSettingsForIcon({ label: 'Select Icon', attname: attNamesIcon, isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes }))}
+        
+        {/* {(useicon && PressinoUI.getSettingsForIcon({ useState, attributes, setAttributes }))} */}
     </PanelBody>
 {/* 
     <PanelBody title={istr('Formatting Options')}>
