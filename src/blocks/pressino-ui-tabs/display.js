@@ -70,6 +70,7 @@ export default function display({ props, editMode }) {
                     label: tmpTabLabel,
                     iconname: tmpTabAtts.iconname || '',
                     icontype: tmpTabAtts.icontype || '',
+                    useicon: tmpTabAtts.useicon || false,
                     position: iPos
                 };
 
@@ -132,7 +133,7 @@ export default function display({ props, editMode }) {
         for( var iPos in tmpTabsInfo ){
             var tmpTabInfo = tmpTabsInfo[iPos];
             var tmpIconEl = '';
-            if( tmpTabInfo.iconname ){
+            if( tmpTabInfo.useicon && tmpTabInfo.iconname ){
                 tmpIconEl = PressinoUI.getIconEl(tmpTabInfo);
                 if( ! tmpTabInfo.label ){
                     tmpTabInfo.className += ' icon';
@@ -147,6 +148,9 @@ export default function display({ props, editMode }) {
         }
 
         tmpInvertedClass += ' withicon'
+        if( tmpAtts.menuiconpos == 'top' ){
+            tmpInvertedClass += ' icon labeled'
+        }
         var tmpMenuClass = 'ui top attached tabular menu ' + tmpInvertedClass;
         
         if( tmpAtts.labelpadding ){

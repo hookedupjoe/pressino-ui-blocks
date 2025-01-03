@@ -137,11 +137,9 @@
 }
 [appuse="iconlist"].tight li {
   padding: .1em 0em .1em 0em;
-  line-height: 1.2em;
 }
 [appuse="iconlist"].relaxed li {
   padding: .5em 0em .5em 0em;
-  line-height: 1.7em;
 }
 
 [appuse="iconlist"] li:last-child {

@@ -18,7 +18,7 @@ let tmpAttributes = {};
 
 PressinoUI.addAttributes('boolean', tmpAttributes, ['useicon']);
 PressinoUI.addAttributes('number', tmpAttributes, ['tabpos']);
-PressinoUI.addAttributes('text', tmpAttributes, ['itemname', 'groupname', 'tablabel','showstatus','iconname','icontype']);
+PressinoUI.addAttributes('text', tmpAttributes, ['itemname', 'groupname', 'tablabel','showstatus','iconname','icontype', 'parentColor','parentMenuIconPos']);
 
 /**
  * Register Block

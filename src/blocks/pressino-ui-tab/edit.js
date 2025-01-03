@@ -15,15 +15,38 @@ export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
     var tmpDisplayObject = display({ props: theProps, attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { useicon, iconname, icontype} = attributes;
+    const { useicon, iconname, icontype, parentMenuIconPos, parentColor} = attributes;
     var props = theProps;
     //---
-    var tmpAtts = props.attributes;
+    var tmpAtts = attributes;
     const [isQuickInserterOpen, setQuickInserterOpen] = useState(false);
     const [isInserterOpen, setInserterOpen] = useState(false);
     
+    var tmpNeedToRefresh = false;
+
     var tmpParentBlock = PressinoUI.getParentBlock(props.clientId);
-    
+    if( tmpParentBlock ){
+        var tmpParentAttributes =  tmpParentBlock.attributes;
+        var tmpNeedToUpdate = false;
+        var tmpAttsToSet = {};
+        if( parentColor != tmpParentAttributes.color){
+            tmpAttsToSet.parentColor = tmpParentAttributes.color;
+            tmpNeedToUpdate = true;
+        }
+        if( parentMenuIconPos != tmpParentAttributes.menuiconpos){
+            tmpAttsToSet.parentMenuIconPos = tmpParentAttributes.menuiconpos;
+            tmpNeedToUpdate = true;
+            tmpNeedToRefresh = true;
+        }
+        if( tmpNeedToUpdate ){
+            setAttributes(tmpAttsToSet);
+          
+        }
+       
+    }
+
+
+
     if( tmpParentBlock && tmpParentBlock.innerBlocks ){
         var tmpIBs = tmpParentBlock.innerBlocks;
         for( var iPos in tmpIBs){
@@ -32,11 +55,16 @@ export default function Edit(theProps) {
                 //--- This is me
                 if( tmpAtts.tabpos != iPos ){
                     tmpAtts.tabpos = iPos;
-                    PressinoUI.refreshBlockEditor();
+                    tmpNeedToRefresh = true;
+                    
                 }
             }
             
         }
+    }
+    
+    if (tmpNeedToRefresh){
+        PressinoUI.refreshBlockEditor();
     }
 
     if( !(tmpAtts.itemname) ){
@@ -79,17 +107,42 @@ export default function Edit(theProps) {
     // }
     var tmpIconEl = '';
     if( useicon && iconname ){
-        tmpIconEl = PressinoUI.getIconEl({...attributes, ...{iconsize: 'large'}});
+        tmpIconEl = PressinoUI.getIconEl(attributes);
     }
 
-    var tmpTabNameLabel = el('div',{className: 'ui label grey basic  padr10'}, tmpIconEl, tmpTabLabel + tmpAddedInfo);
+    //var tmpTabNameLabel = el('div',{className: 'ui label grey basic  padr10'}, tmpIconEl, tmpTabLabel + tmpAddedInfo);
+    var tmpHasIcon = (!useicon || iconname == '');
 
-    if(tmpTabLabel == '' && iconname == '' ){
+    // var tmpEditHeader = el('div', {className:"ui message bolder center aligned pad8 grey small"}, tmpTabPrefix,tmpTabNameLabel);
+
+    var tmpItemClasses = '';
+    if( !tmpTabLabel && tmpHasIcon  ){
+        tmpItemClasses += ' icon';
+    }
+    
+    var tmpHeaderClasses = '';
+    if( parentMenuIconPos == 'top' ){
+        tmpHeaderClasses += ' icon labeled';
+    }
+    if( parentColor ){
+        tmpHeaderClasses += ' ' + parentColor;
+    }
+
+    var tmpEditHeader = <div className={'ui top attached tabular menu withicon ' + tmpHeaderClasses}>
+    <div className={'item active ' + tmpItemClasses}>
+        {tmpIconEl}
+        {tmpTabLabel}
+    </div>
+    </div>
+
+
+    if(tmpTabLabel == '' && tmpHasIcon){
         var tmpTabPrefix = el('div',{className: 'ui label orange right pointing'}, 'Required: ');
         var tmpTabNameLabel = el('div',{className: 'ui label grey basic  padr10'}, 'Every tab entry needs a tab label or an icon.', el('span',{'className': 'ui bolder padt8 larger marl10'}, 'Set value in settings.'));
+        tmpEditHeader = [tmpTabPrefix,tmpTabNameLabel]
     }
 
-    var tmpEditHeader = el('div', {className:"ui message bolder center aligned pad8 grey small"}, tmpTabPrefix,tmpTabNameLabel);
+
 
     var tmpRetEl = el(
         'div',

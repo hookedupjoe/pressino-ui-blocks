@@ -18,7 +18,7 @@ function getClass(theAtts, theIsEditMode) {
 
 export default function display({ attributes, editMode }) {
         var tmpCN = getClass(attributes, true);
-        const {useicon,iconname,icontype,iconalign,iconaslabel} = attributes;
+        const {useicon,iconname,icontype,iconalign,iconaslabel,largeicon} = attributes;
         var tmpAtts = attributes;
         var tmpText = tmpAtts.text;
         var tmpExtraEl = '';
@@ -36,6 +36,10 @@ export default function display({ attributes, editMode }) {
             }
             if(iconalign){
                 tmpExtraClasses += ' east';
+            }
+
+            if( largeicon ){
+                tmpExtraClasses += ' iconlarge';
             }
         }
 

@@ -54,6 +54,7 @@ export default function Edit(theProps) {
                 {PressinoUI.getStandardProperty(theProps, 'insidepadding', 'Inside Padding', 'padding')}
                 {PressinoUI.getStandardProperty(theProps, 'padding', 'Outside Padding', 'padding')}
                 {PressinoUI.getStandardProperty(theProps, 'labelpadding', 'Label Padding', 'slimwidespacing')}
+                {PressinoUI.getStandardProperty(theProps, 'menuiconpos', 'Show Icons On Top', 'menuiconpos', true)}
                 {PressinoUI.getStandardProperty(theProps, 'bodyonly', 'Exclude the tabs?', 'checkbox')}
             </PanelBody>
 

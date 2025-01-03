@@ -39,10 +39,12 @@ export default function Edit(theProps) {
                     {PressinoUI.getStandardProperty(theProps, 'attached', 'Attached', 'attached')}
                     {PressinoUI.getStandardProperty(theProps, 'useicon', 'Use Icon', 'checkbox')}
                     {(useicon && PressinoUI.getSettingsForIcon({ label: 'Select Icon', attname: attNamesIcon, isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes }))}
+                    {(useicon && PressinoUI.getStandardProperty(theProps, 'iconcolor', 'Icon Color', 'colors'))}
                     {/* {PressinoUI.getStandardProperty(theProps, 'iconnamesel', 'Icon', 'icon',false, false,{isQuickInserterOpen, setQuickInserterOpen})} */}
-                    {(useicon && PressinoUI.getStandardProperty(theProps, 'iconname', "Icon Name", 'text'))}
+                     {/* {(useicon && PressinoUI.getStandardProperty(theProps, 'iconname', "Icon Name", 'text'))} */}
                     {(useicon && PressinoUI.getStandardProperty(theProps, 'iconalign', 'Icon on Right Side', 'checkbox'))}
                     {(useicon && PressinoUI.getStandardProperty(theProps, 'iconaslabel', 'Icon as Label', 'checkbox'))}
+                    {(useicon && PressinoUI.getStandardProperty(theProps, 'largeicon', 'Use Larger Icon', 'checkbox'))}
                 </PanelBody>
 
 
