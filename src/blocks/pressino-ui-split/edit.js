@@ -22,7 +22,7 @@ export default function Edit(theProps) {
     var props = theProps;
     
     if( !(splitratio) ){
-        setAttributes({splitratio:'5'})
+        setAttributes({splitratio:'10'})
     }
 
     const onAddBlock = () => {

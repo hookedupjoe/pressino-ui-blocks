@@ -49,7 +49,8 @@ export default function Edit(theProps) {
             <PanelBody title={istr('General Settings')}>
                 {PressinoUI.getStandardProperty(theProps, 'groupname', 'Group Name', 'text')}
                 {PressinoUI.getStandardProperty(theProps, 'color', 'Tabs Color', 'colors')}
-                {PressinoUI.getStandardProperty(theProps, 'inverted', 'Inverted', 'checkbox')}
+                {PressinoUI.getStandardProperty(theProps, 'inverted', 'Tabs Inverted', 'checkbox')}
+                {PressinoUI.getStandardProperty(theProps, 'panelsinverted', 'Tab Panels Inverted', 'checkbox')}
                 {PressinoUI.getStandardProperty(theProps, 'insidepadding', 'Inside Padding', 'padding')}
                 {PressinoUI.getStandardProperty(theProps, 'padding', 'Outside Padding', 'padding')}
                 {PressinoUI.getStandardProperty(theProps, 'labelpadding', 'Label Padding', 'slimwidespacing')}

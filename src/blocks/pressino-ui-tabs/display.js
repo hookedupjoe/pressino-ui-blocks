@@ -129,7 +129,7 @@ export default function display({ props, editMode }) {
             var tmpTabInfo = tmpTabsInfo[iPos];
             tmpTabLinkEls.push(el('div',tmpTabInfo,tmpTabInfo.label));
         }
-        var tmpMenuClass = 'mar0 pad0 ui top attached tabular menu ' + tmpInvertedClass;
+        var tmpMenuClass = 'ui top attached tabular menu ' + tmpInvertedClass;
         
         if( tmpAtts.labelpadding ){
             tmpMenuClass += ' ' + tmpAtts.labelpadding;
@@ -139,12 +139,16 @@ export default function display({ props, editMode }) {
         if( tmpAtts.insidepadding ){
             tmpSegClass = tmpAtts.insidepadding;
         } 
-        tmpTablinksEl = el('div',{className: tmpMenuClass}, tmpTabLinkEls);
-        var tmpContents = el('div', {className:"ui segment theme-default-padding " + tmpSegClass + ' ' + tmpTabsColor}, el('div', {className:tmpClass}, el(wp.blockEditor.InnerBlocks.Content)));
+        if( tmpAtts.panelsinverted ){
+            tmpSegClass += ' inverted';
+        } 
         
-        var tmpTabsEl = el('div',{className: ''}, tmpContents);
+        tmpTablinksEl = el('div',{className: tmpMenuClass}, tmpTabLinkEls);
+        var tmpContents = el('div', {className:"ui segment attached theme-default-padding " + tmpSegClass + ' ' + tmpTabsColor}, el('div', {className:tmpClass}, el(wp.blockEditor.InnerBlocks.Content)));
+        
+        var tmpTabsEl = tmpContents;
         if( tmpAtts.bodyonly == true ){
-            tmpTablinksEl = el('div');
+            tmpTablinksEl = '';
             tmpTabsEl =  el(wp.blockEditor.InnerBlocks.Content);
         }
         
