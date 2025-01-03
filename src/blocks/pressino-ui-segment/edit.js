@@ -29,23 +29,23 @@ export default function Edit(theProps) {
     var tmpDisplay = display({ attributes, editMode: true });
     const blockProps = useBlockProps();
     const { raised, basic, attached } = attributes;
-
-    let tmpEditToolbar = !theProps.isSelected ?  '' : <Toolbar label="Options">
-        <ToolbarGroup>
-            <ToolbarButton
-                icon={blockIcon}
-                label="Add Header"
-                text="Add Header"
-                onClick={onAddHeaderBlock}
-            />
-            <ToolbarButton
-                icon={blockIcon}
-                label="Add Message"
-                text="Add Message"
-                onClick={onAddMessageBlock}
-            />
-        </ToolbarGroup>
-    </Toolbar>;
+    let tmpEditToolbar = '';
+    // let tmpEditToolbar = !theProps.isSelected ?  '' : <Toolbar label="Options">
+    //     <ToolbarGroup>
+    //         <ToolbarButton
+    //             icon={blockIcon}
+    //             label="Add Header"
+    //             text="Add Header"
+    //             onClick={onAddHeaderBlock}
+    //         />
+    //         <ToolbarButton
+    //             icon={blockIcon}
+    //             label="Add Message"
+    //             text="Add Message"
+    //             onClick={onAddMessageBlock}
+    //         />
+    //     </ToolbarGroup>
+    // </Toolbar>;
 
     return <>
         <div {...blockProps}>

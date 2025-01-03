@@ -403,3 +403,9 @@
   .format-library__pressino-std-popover.components-popover {
     z-index: 99998
   }
+
+  
+html :where(.wp-block) .wp-block-pressino-segment {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}

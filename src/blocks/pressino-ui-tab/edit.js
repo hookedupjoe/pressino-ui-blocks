@@ -16,7 +16,7 @@ export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
     var tmpDisplayObject = display({ props: theProps, attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { useicon, iconname, icontype, parentMenuIconPos, parentColor, parentInverted, parentBlackBack} = attributes;
+    const { useicon, iconname, icontype, parentMenuIconPos, parentColor, parentInverted, parentPanelsInverted, parentBlackBack, parentInsidePadding} = attributes;
     var props = theProps;
     //---
     var tmpAtts = attributes;
@@ -35,17 +35,36 @@ export default function Edit(theProps) {
         if( tmpParentAttributes.inverted === true ){
             tmpParentInvertVal = 'inverted';
         }
+        var tmpParentPanelInvertVal = '';
+        if( tmpParentAttributes.panelsinverted === true ){
+            tmpParentPanelInvertVal = 'inverted';
+        }
+
+        
 
         if( parentInverted != tmpParentInvertVal ){   
             tmpAttsToSet.parentInverted = tmpParentInvertVal;
             tmpNeedToUpdate = true;
             tmpNeedToRefresh = true;
         }
+        if( parentPanelsInverted != tmpParentPanelInvertVal ){   
+            tmpAttsToSet.parentPanelsInverted = tmpParentPanelInvertVal;
+            tmpNeedToUpdate = true;
+            tmpNeedToRefresh = true;
+        }
+
         if( parentBlackBack != tmpParentAttributes.blackback ){   
             tmpAttsToSet.parentBlackBack = tmpParentAttributes.blackback;
             tmpNeedToUpdate = true;
             tmpNeedToRefresh = true;
         }
+        if( parentInsidePadding != tmpParentAttributes.insidepadding ){   
+            tmpAttsToSet.parentInsidePadding = tmpParentAttributes.insidepadding;
+            tmpNeedToUpdate = true;
+            tmpNeedToRefresh = true;
+        }
+        
+
         
         if( parentColor != tmpParentAttributes.color){
             tmpAttsToSet.parentColor = tmpParentAttributes.color;
@@ -169,17 +188,16 @@ export default function Edit(theProps) {
     }
 
 
-
+    
     var tmpRetEl = el(
         'div',
         {className: tmpEditorClass},
         [
             tmpEditHeader,
-            el('div', {className: 'ui segment bottom attached blue inverted'}, 
+            el('div', {className: 'ui segment bottom attached ' + tmpParentInvertVal + ' ' + parentPanelsInverted + ' ' + parentPanelsInverted + ' ' + parentColor + ' ' + (parentInsidePadding || '')}, 
                 tmpSidebarControls,
                 tmpDisplayObject
             )
-           
         ]
     );
 
