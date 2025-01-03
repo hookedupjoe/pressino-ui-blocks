@@ -22,7 +22,7 @@ export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
     var tmpDisplay = display({ props: theProps, attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { raised, basic, attached } = attributes;
+    const { inverted } = attributes;
     var props = theProps;
     //---
 
@@ -50,12 +50,14 @@ export default function Edit(theProps) {
                 {PressinoUI.getStandardProperty(theProps, 'groupname', 'Group Name', 'text')}
                 {PressinoUI.getStandardProperty(theProps, 'color', 'Tabs Color', 'colors')}
                 {PressinoUI.getStandardProperty(theProps, 'inverted', 'Tabs Inverted', 'checkbox')}
+                {(inverted && PressinoUI.getStandardProperty(theProps, 'blackback', 'Use black inverted', 'checkbox'))}
                 {PressinoUI.getStandardProperty(theProps, 'panelsinverted', 'Tab Panels Inverted', 'checkbox')}
                 {PressinoUI.getStandardProperty(theProps, 'insidepadding', 'Inside Padding', 'padding')}
                 {PressinoUI.getStandardProperty(theProps, 'padding', 'Outside Padding', 'padding')}
                 {PressinoUI.getStandardProperty(theProps, 'labelpadding', 'Label Padding', 'slimwidespacing')}
-                {PressinoUI.getStandardProperty(theProps, 'menuiconpos', 'Show Icons On Top', 'menuiconpos', true)}
-                {PressinoUI.getStandardProperty(theProps, 'bodyonly', 'Exclude the tabs?', 'checkbox')}
+                {PressinoUI.getStandardProperty(theProps, 'menuiconpos', 'Show Icons On Top', 'menuiconpos')}
+                {PressinoUI.getStandardProperty(theProps, 'bodyonly', 'Exclude the tabs', 'checkbox')}
+                
             </PanelBody>
 
         </InspectorControls>

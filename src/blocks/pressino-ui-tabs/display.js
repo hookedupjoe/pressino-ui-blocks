@@ -116,7 +116,7 @@ export default function display({ props, editMode }) {
         
         var tmpRetEl = el('div', { className: 'ui segment pad3 mar0 ' + tmpSegClasses}, null,
             tmpHdr,
-            el('div', { className: 'edit-tabs' + props.attributes.color + ' ' + props.attributes.columns },
+            el('div', { className: 'edit-tabs ' + props.attributes.color + ' ' + props.attributes.columns },
                 [
                     el(wp.blockEditor.InnerBlocks, { allowedBlocks: ['pressino/tab'], renderAppender: false }),
                 ]
@@ -150,6 +150,9 @@ export default function display({ props, editMode }) {
         tmpInvertedClass += ' withicon'
         if( tmpAtts.menuiconpos == 'top' ){
             tmpInvertedClass += ' icon labeled'
+        }
+        if(  props.attributes.color && ! props.attributes.blackback === true ){
+            tmpInvertedClass += ' ' + props.attributes.color;
         }
         var tmpMenuClass = 'ui top attached tabular menu ' + tmpInvertedClass;
         

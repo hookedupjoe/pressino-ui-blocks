@@ -7,6 +7,7 @@ import { PanelBody } from '@wordpress/components';
 import { istr, PressinoUI, el, attNamesIcon } from '../../pressino-ui';
 import display from './display';
 import { useState } from '@wordpress/element';
+import classNames from 'classnames';
 
 /**
  * @return {Element} Element to render.
@@ -15,7 +16,7 @@ export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
     var tmpDisplayObject = display({ props: theProps, attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { useicon, iconname, icontype, parentMenuIconPos, parentColor} = attributes;
+    const { useicon, iconname, icontype, parentMenuIconPos, parentColor, parentInverted, parentBlackBack} = attributes;
     var props = theProps;
     //---
     var tmpAtts = attributes;
@@ -29,6 +30,23 @@ export default function Edit(theProps) {
         var tmpParentAttributes =  tmpParentBlock.attributes;
         var tmpNeedToUpdate = false;
         var tmpAttsToSet = {};
+        
+        var tmpParentInvertVal = '';
+        if( tmpParentAttributes.inverted === true ){
+            tmpParentInvertVal = 'inverted';
+        }
+
+        if( parentInverted != tmpParentInvertVal ){   
+            tmpAttsToSet.parentInverted = tmpParentInvertVal;
+            tmpNeedToUpdate = true;
+            tmpNeedToRefresh = true;
+        }
+        if( parentBlackBack != tmpParentAttributes.blackback ){   
+            tmpAttsToSet.parentBlackBack = tmpParentAttributes.blackback;
+            tmpNeedToUpdate = true;
+            tmpNeedToRefresh = true;
+        }
+        
         if( parentColor != tmpParentAttributes.color){
             tmpAttsToSet.parentColor = tmpParentAttributes.color;
             tmpNeedToUpdate = true;
@@ -124,11 +142,19 @@ export default function Edit(theProps) {
     if( parentMenuIconPos == 'top' ){
         tmpHeaderClasses += ' icon labeled';
     }
-    if( parentColor ){
+    if( parentColor && ! parentBlackBack ){
         tmpHeaderClasses += ' ' + parentColor;
     }
+    if( parentColor  ){
+        tmpItemClasses += ' ' + parentColor;
+    }
+    
 
-    var tmpEditHeader = <div className={'ui top attached tabular menu withicon ' + tmpHeaderClasses}>
+    if( parentInverted){
+       tmpHeaderClasses += ' inverted';
+    }
+
+    var tmpEditHeader = <div className={'mar0 pad0 ui top attached tabular menu withicon ' + tmpHeaderClasses}>
     <div className={'item active ' + tmpItemClasses}>
         {tmpIconEl}
         {tmpTabLabel}
@@ -149,8 +175,11 @@ export default function Edit(theProps) {
         {className: tmpEditorClass},
         [
             tmpEditHeader,
-            tmpSidebarControls,
-            tmpDisplayObject
+            el('div', {className: 'ui segment bottom attached blue inverted'}, 
+                tmpSidebarControls,
+                tmpDisplayObject
+            )
+           
         ]
     );
 

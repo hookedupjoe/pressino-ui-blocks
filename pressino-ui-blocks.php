@@ -59,23 +59,23 @@ require_once PRESSINO_UI_BLOCKS_BASE_DIR . '/cls/PressinoUIBlocks.php';
 function create_block_pressino_ui_blocks_block_init() {
 
 	//--- Register Standard UI Blocks
-	register_block_type( __DIR__ . '/build/blocks/pressino-ui-segment' );
-	register_block_type( __DIR__ . '/build/blocks/pressino-ui-image' );
-	register_block_type( __DIR__ . '/build/blocks/pressino-ui-tabs' );
-	register_block_type( __DIR__ . '/build/blocks/pressino-ui-tab' );
-	register_block_type( __DIR__ . '/build/blocks/pressino-ui-message' );
-	register_block_type( __DIR__ . '/build/blocks/pressino-ui-header' );
-	register_block_type( __DIR__ . '/build/blocks/pressino-ui-button' );
-	register_block_type( __DIR__ . '/build/blocks/pressino-ui-container' );
+	register_block_type( __DIR__ . '/build/blocks/pressino-ui-richtext' );
+	register_block_type( __DIR__ . '/build/blocks/pressino-ui-split' );
+	register_block_type( __DIR__ . '/build/blocks/pressino-ui-split-column' );
+	register_block_type( __DIR__ . '/build/blocks/pressino-ui-grid' );
+	register_block_type( __DIR__ . '/build/blocks/pressino-ui-grid-column' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-cards' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-card-section' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-card' );
-	register_block_type( __DIR__ . '/build/blocks/pressino-ui-grid' );
-	register_block_type( __DIR__ . '/build/blocks/pressino-ui-grid-column' );
-	register_block_type( __DIR__ . '/build/blocks/pressino-ui-richtext' );
+	register_block_type( __DIR__ . '/build/blocks/pressino-ui-tabs' );
+	register_block_type( __DIR__ . '/build/blocks/pressino-ui-tab' );
+	register_block_type( __DIR__ . '/build/blocks/pressino-ui-segment' );
+	register_block_type( __DIR__ . '/build/blocks/pressino-ui-message' );
+	register_block_type( __DIR__ . '/build/blocks/pressino-ui-header' );
+	register_block_type( __DIR__ . '/build/blocks/pressino-ui-image' );
+	register_block_type( __DIR__ . '/build/blocks/pressino-ui-button' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-bullets' );
-	register_block_type( __DIR__ . '/build/blocks/pressino-ui-split-column' );
-	register_block_type( __DIR__ . '/build/blocks/pressino-ui-split' );
+	register_block_type( __DIR__ . '/build/blocks/pressino-ui-container' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-web-elem' );
 
 

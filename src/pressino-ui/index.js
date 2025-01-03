@@ -189,9 +189,14 @@ function getStandardProperty(theProps, theAttName, theLabel, theControlType, the
 				var tmpAddedAtts = {};
 				tmpAddedAtts[theAttName] = !tmpVal;
 				setAttributes(tmpAddedAtts);
-				if (tmpDoRefresh) {
-					refreshBlockEditor();
-				}
+				// if (tmpDoRefresh) {
+				// 	console.log('refreshing block editor')
+				// 	refreshBlockEditor();
+				// }
+
+				//--- ToDo: 
+				//--- Always refresh block editor on change
+				refreshBlockEditor();
 			}
 		}
 

@@ -16,9 +16,9 @@ import {PressinoUI} from '../../pressino-ui';
  */
 let tmpAttributes = {};
 
-PressinoUI.addAttributes('boolean', tmpAttributes, ['useicon']);
+PressinoUI.addAttributes('boolean', tmpAttributes, ['useicon','parentBlackBack']);
 PressinoUI.addAttributes('number', tmpAttributes, ['tabpos']);
-PressinoUI.addAttributes('text', tmpAttributes, ['itemname', 'groupname', 'tablabel','showstatus','iconname','icontype', 'parentColor','parentMenuIconPos']);
+PressinoUI.addAttributes('text', tmpAttributes, ['itemname', 'groupname', 'tablabel','showstatus','iconname','icontype', 'parentColor','parentMenuIconPos','parentInverted','parentBlackBack']);
 
 /**
  * Register Block
