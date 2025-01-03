@@ -51,7 +51,7 @@ export default function Edit(theProps) {
 
     <PanelBody title={istr('General Settings')}>
         {PressinoUI.getStandardProperty(theProps, 'itemname', 'Unique Item Name (Required)', 'text', true) } 
-        {PressinoUI.getStandardProperty(theProps, 'tablabel', 'Tab Label (Required)', 'text', true)}
+        {PressinoUI.getStandardProperty(theProps, 'tablabel', 'Tab Label', 'text', true)}
         {PressinoUI.getStandardProperty(theProps, 'useicon', 'Use Icon', 'checkbox')}
         {(useicon && PressinoUI.getSettingsForIcon({ label: 'Select Icon', attname: attNamesIcon, isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes }))}
         
@@ -74,14 +74,19 @@ export default function Edit(theProps) {
 
     var tmpTabPrefix = el('div',{className: 'ui label grey right pointing'}, 'Tab');
     var tmpAddedInfo = '';
-    if(tmpItemName.length < 30){
-        tmpAddedInfo = ' [' + tmpItemName + ']'
+    // if(tmpItemName.length < 30){
+    //     tmpAddedInfo = ' [' + tmpItemName + ']'
+    // }
+    var tmpIconEl = '';
+    if( useicon && iconname ){
+        tmpIconEl = PressinoUI.getIconEl({...attributes, ...{iconsize: 'large'}});
     }
-    var tmpTabNameLabel = el('div',{className: 'ui label grey basic  padr10'}, tmpTabLabel + tmpAddedInfo);
 
-    if(tmpTabLabel == '' ){
+    var tmpTabNameLabel = el('div',{className: 'ui label grey basic  padr10'}, tmpIconEl, tmpTabLabel + tmpAddedInfo);
+
+    if(tmpTabLabel == '' && iconname == '' ){
         var tmpTabPrefix = el('div',{className: 'ui label orange right pointing'}, 'Required: ');
-        var tmpTabNameLabel = el('div',{className: 'ui label grey basic  padr10'}, 'Every tab entry needs a tab label.', el('span',{'className': 'ui bolder padt8 larger marl10'}, 'Set value in settings.'));
+        var tmpTabNameLabel = el('div',{className: 'ui label grey basic  padr10'}, 'Every tab entry needs a tab label or an icon.', el('span',{'className': 'ui bolder padt8 larger marl10'}, 'Set value in settings.'));
     }
 
     var tmpEditHeader = el('div', {className:"ui message bolder center aligned pad8 grey small"}, tmpTabPrefix,tmpTabNameLabel);

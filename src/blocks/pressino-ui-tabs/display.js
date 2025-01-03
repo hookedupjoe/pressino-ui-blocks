@@ -51,7 +51,9 @@ export default function display({ props, editMode }) {
 
                 var tmpTabGroup = tmpTabAtts.groupname;
                 var tmpTabItem = tmpTabAtts.itemname || 'tab-' + (iPos+1);
-                var tmpTabLabel = tmpTabAtts.tablabel || ('Tab: ' + tmpTabItem)
+                var tmpTabLabel = tmpTabAtts.tablabel || '';
+                // var tmpTabIcon = tmpTabAtts.iconname || '';
+         
                 if( !(tmpAtts.firsttabid)){
                     tmpAtts.firsttabid = tmpTabItem;
                 }
@@ -66,6 +68,8 @@ export default function display({ props, editMode }) {
                     action: "showSubPage",
                     className: "item " + tmpTabsColor + ' ' + tmpExtraClasses,
                     label: tmpTabLabel,
+                    iconname: tmpTabAtts.iconname || '',
+                    icontype: tmpTabAtts.icontype || '',
                     position: iPos
                 };
 
@@ -127,8 +131,22 @@ export default function display({ props, editMode }) {
 
         for( var iPos in tmpTabsInfo ){
             var tmpTabInfo = tmpTabsInfo[iPos];
-            tmpTabLinkEls.push(el('div',tmpTabInfo,tmpTabInfo.label));
+            var tmpIconEl = '';
+            if( tmpTabInfo.iconname ){
+                tmpIconEl = PressinoUI.getIconEl(tmpTabInfo);
+                if( ! tmpTabInfo.label ){
+                    tmpTabInfo.className += ' icon';
+                }
+            }
+            delete tmpTabInfo.iconname;
+            delete tmpTabInfo.icontype;
+
+
+
+            tmpTabLinkEls.push(el('div',tmpTabInfo,tmpIconEl, tmpTabInfo.label));
         }
+
+        tmpInvertedClass += ' withicon'
         var tmpMenuClass = 'ui top attached tabular menu ' + tmpInvertedClass;
         
         if( tmpAtts.labelpadding ){
