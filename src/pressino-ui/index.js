@@ -141,7 +141,7 @@ function getSettingsForIcon(props) {
 	}
 
 	
-	return <div>
+	return <div className="marb10">
 
 		
 		<InserterModal
@@ -160,7 +160,7 @@ function getSettingsForIcon(props) {
 			variant="primary"
 			onClick={() => setQuickInserterOpen(true)}
 		>
-			{istr(label || 'Select Icon')}
+			{istr(label || (attributes[tmpAttNames.iconname] ? 'Change Icon' : 'Select Icon'))}
 		</Button>
 	</div>
 
