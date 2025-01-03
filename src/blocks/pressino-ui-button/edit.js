@@ -3,8 +3,8 @@
  */
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
-import { istr, PressinoUI, attNamesIcon } from '../../pressino-ui';
+import { PanelBody } from '@wordpress/components';
+import { istr, PressinoUI } from '../../pressino-ui';
 import display from './display';
 
 import { useState } from '@wordpress/element';
@@ -19,8 +19,6 @@ export default function Edit(theProps) {
     var tmpDisplay = display({ attributes, editMode: true });
     const blockProps = useBlockProps();
     const { url, useicon } = attributes;
-    const [isQuickInserterOpen, setQuickInserterOpen] = useState(false);
-    const [isInserterOpen, setInserterOpen] = useState(false);
 
     return <>
         <div {...blockProps}>
@@ -38,8 +36,7 @@ export default function Edit(theProps) {
                     {PressinoUI.getStandardProperty(theProps, 'fluid', 'Full Width', 'checkbox')}
                     {PressinoUI.getStandardProperty(theProps, 'attached', 'Attached', 'attached')}
                     {PressinoUI.getStandardProperty(theProps, 'useicon', 'Use Icon', 'checkbox')}
-                    {(useicon && PressinoUI.getSettingsForIcon({ label: 'Select Icon', attname: attNamesIcon, isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes }))}
-                    {/* {PressinoUI.getStandardProperty(theProps, 'iconnamesel', 'Icon', 'icon',false, false,{isQuickInserterOpen, setQuickInserterOpen})} */}
+                    {(useicon && PressinoUI.getSettingsForIcon({ useState, attributes, setAttributes }))}
                     {(useicon && PressinoUI.getStandardProperty(theProps, 'iconname', "Icon Name", 'text'))}
                     {(useicon && PressinoUI.getStandardProperty(theProps, 'iconalign', 'Icon on Right Side', 'checkbox'))}
                     {(useicon && PressinoUI.getStandardProperty(theProps, 'iconaslabel', 'Icon as Label', 'checkbox'))}

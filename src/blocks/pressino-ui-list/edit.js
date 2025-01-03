@@ -3,20 +3,16 @@
  */
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
-import { istr, el, PressinoUI } from '../../pressino-ui';
+import { PanelBody } from '@wordpress/components';
+import { istr, PressinoUI } from '../../pressino-ui';
 import display from './display';
 
 import { BlockControls } from '@wordpress/block-editor';
 import { ToolbarGroup, ToolbarButton } from '@wordpress/components';
-import { plusCircle as blockIcon } from '@wordpress/icons';
 
 import { useState } from '@wordpress/element';
 
 
-function onChangeAlignment() {
-    alert('onChangeAlignment')
-}
 /**
  * @return {Element} Element to render.
  */
@@ -26,10 +22,6 @@ export default function Edit(theProps) {
     const blockProps = useBlockProps();
     const { bullettype } = attributes;
     var props = theProps;
-
-    const [isQuickInserterOpen, setQuickInserterOpen] = useState(false);
-    const [isInserterOpen, setInserterOpen] = useState(false);
-
 
     const onAddBlock = () => {
         PressinoUI.addBlock({ blockName: 'pressino/listitem' })
@@ -66,7 +58,7 @@ export default function Edit(theProps) {
 
                 <PanelBody title={istr('Bullet Settings')}>
                     {PressinoUI.getStandardProperty(theProps, 'bullettype', 'Bullet Type', 'bullettypes', true)}
-                    {(bullettype == 'icon' && PressinoUI.getSettingsForIcon({ label: 'Select Icon', isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes, refreshChildren: true }))}
+                    {(bullettype == 'icon' && PressinoUI.getSettingsForIcon({ label: 'Select Icon', useState, setAttributes, refreshChildren: true }))}
                     {PressinoUI.getStandardProperty(theProps, 'bulletcolor', 'Bullet Color', 'colors', true)}
                     {PressinoUI.getStandardProperty(theProps, 'bulletsize', 'Bullet size', 'sizes', true)}
                     {PressinoUI.getStandardProperty(theProps, 'bulletalign', 'Bullet Alignment', 'valignbasic', true)}

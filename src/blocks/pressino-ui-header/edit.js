@@ -3,12 +3,10 @@
  */
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls, BlockControls, RichText } from '@wordpress/block-editor';
-import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
-import { istr, PressinoUI, attNamesIcon } from '../../pressino-ui';
-import display, { getExtraContent } from './display';
+import { PanelBody } from '@wordpress/components';
+import { istr, PressinoUI } from '../../pressino-ui';
+import display from './display';
 import { PressinoAlignmentControl } from '../../components/pressino-alignment-control'
-import { getClass } from './display';
-import ReactDOMServer from 'react-dom/server';
 import { useState } from '@wordpress/element';
 
 /**
@@ -19,16 +17,11 @@ export default function Edit(theProps) {
     var tmpAtts = theProps.attributes;
 
     var tmpDisplay = display({attributes, editMode: true});
-    const [isQuickInserterOpen, setQuickInserterOpen] = useState(false);
-    const [isInserterOpen, setInserterOpen] = useState(false);
 
-    // var tmpDisplay = ''; //display({ attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { iconontop, useicon, alignment, attached, block } = attributes;
-    const checkboxList = ['', '', '', '', '', '', ''];
-    const tmpExtra = getExtraContent(attributes);
+    const { useicon, alignment } = attributes;
 
-
+//---- THIS WAS USING RICH TEXT FOR DIRECT ENTRY ------------
     // var tmpClassName = getClass(attributes, true);
     // var tmpExtraClasses = tmpClassName;
 
@@ -71,7 +64,7 @@ export default function Edit(theProps) {
                     {PressinoUI.getStandardProperty(theProps, 'size', 'Header size', 'sizes')}
                     {PressinoUI.getStandardProperty(theProps, 'useicon', 'Use Icon', 'checkbox')}
                     {(useicon && PressinoUI.getStandardProperty(theProps, 'iconontop', 'Icon on top (centers header)', 'checkbox'))}
-                    {(useicon && PressinoUI.getSettingsForIcon({ label: 'Select Icon', attname: attNamesIcon, isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes }))}
+                    {(useicon && PressinoUI.getSettingsForIcon({ useState, attributes, setAttributes }))}
                     {(useicon && PressinoUI.getStandardProperty(theProps, 'iconcolor', 'Icon Color', 'colors'))}
                     {(useicon && PressinoUI.getStandardProperty(theProps, 'iconsize', 'Icon Size', 'iconsizes'))}
 

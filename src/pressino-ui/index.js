@@ -106,11 +106,8 @@ function getSettingsForIcon(props) {
 	const {
 		label,
 		attname,
-		isInserterOpen,
-		setInserterOpen,
-		isQuickInserterOpen,
-		setQuickInserterOpen,
-		attributes,
+		useState,
+		attributes, 
 		setAttributes,
 		refreshChildren,
 	} = props;
@@ -122,10 +119,13 @@ function getSettingsForIcon(props) {
 	// 	setAttributes(tmpToSet);
 	// }
 
+	const [isQuickInserterOpenIcon, setQuickInserterOpenIcon] = useState(false);
+	const [isInserterOpenIcon, setInserterOpenIcon] = useState(false);
+
 	function onSelectedItem(theItem){
 		let tmpAttNames = attname || attNamesIcon;
-		setInserterOpen(false);
-		setQuickInserterOpen(false);
+		setInserterOpenIcon(false);
+		setQuickInserterOpenIcon(false);
 		var tmpAtts = {}
 		
 		tmpAtts[tmpAttNames.iconname] = theItem.className || 'icon users'
@@ -138,27 +138,28 @@ function getSettingsForIcon(props) {
 		
 	}
 
+	let attNames = attname || attNamesIcon;
 	
-	return <div>
+	return <div className="marb10">
 
 		
 		<InserterModal
 				onSelectedItem={ onSelectedItem }
-				isInserterOpen={ isInserterOpen }
-				setInserterOpen={ setInserterOpen }
+				isInserterOpen={ isInserterOpenIcon }
+				setInserterOpen={ setInserterOpenIcon }
 			/>
 		<QuickInserterPopover
 			onSelectedItem={ onSelectedItem }
-			setInserterOpen={ setInserterOpen }
-			isQuickInserterOpen={ isQuickInserterOpen }
-			setQuickInserterOpen={ setQuickInserterOpen }
+			setInserterOpen={ setInserterOpenIcon }
+			isQuickInserterOpen={ isQuickInserterOpenIcon }
+			setQuickInserterOpen={ setQuickInserterOpenIcon }
 		/>
 				<Button
 			__nextHasNoMarginBottom
 			variant="primary"
-			onClick={() => setQuickInserterOpen(true)}
+			onClick={() => setQuickInserterOpenIcon(true)}
 		>
-			{istr(label || 'Select Icon')}
+			{istr(label || (attributes[attNames.iconname] ? 'Change Icon' : 'Select Icon'))}
 		</Button>
 	</div>
 
