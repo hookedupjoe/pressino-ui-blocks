@@ -25,6 +25,9 @@ export default function Edit(props) {
                     {PressinoUI.getStandardProperty(props, 'attached', 'Attached', 'attached')}
                     {PressinoUI.getStandardProperty(props, 'floating', 'Floating', 'checkbox')}
                     {PressinoUI.getStandardProperty(props, 'compact', 'Compact', 'checkbox')}
+                </PanelBody>
+
+                <PanelBody title={istr('Formatting Options')}>
                     {PressinoUI.getStandardProperty(props, 'padding', 'Padding', 'padding')}
                     {PressinoUI.getStandardProperty(props, 'margin', 'Margin', 'margin')}
                     {PressinoUI.getStandardProperty(props, 'classes', "Additional CSS Class(es)", 'text')}
