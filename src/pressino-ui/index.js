@@ -945,6 +945,7 @@ export const listSources = {
 	"linkicons": "Default|,Caret Outline|caret,Caret Solid|caret-fill,Caret Up Outline|caret-up,Caret Up Solid|caret-up-fill,Caret Down Outline|caret-down,Caret Down Solid|caret-down-fill,Caret Back Outline|caret-back,Caret Back Solid|caret-back-fill,Chevron Outline|chevron,Chevron Double Outline|chevron-double,Chevron Up Outline|chevron-up,Chevron Up Double Outline|chevron-up-double,Chevron Down Outline|chevron-down,Chevron Double Down Outline|chevron-down-double,Chevron Back Outline|chevron-back,Chevron Double Back Outline|chevron-back-double,Arrow Outline|arrow-forward,Arrow Solid|arrow-forward-fill,Arrow Thin|arrow-thin,Arrow Short|arrow-short,Arrow Back Thin|arrow-back-thin,Arrow Back Short|arrow-back-short",
 	"splitlevels": "10%-90%|1,20%-80%|2,30%-70%|3,40%-60%|4,50%-50%|5,60%-40%|6,70%-30%|7,80%-20%|8,90%-10%|9",
 	"splitlevels20": "10%-90%|2,15%-85%|3,20%-80%|4,25%-75%|5,30%-70%|6,40%-60%|8,50%-50%|10,60%-40%|12,65%-35%|13,70%-30%|14,75%-25%|15,80%-20%|16,85%-15%|17,90%-10%|18",
+	"stackwhen": "Default 768px|,Wide 850px|t,Thin 450px|p",
 
 	"menuiconpos": "Default|,On Top Of Text|top",
 	"locationlr": "Default|,On the Left|left,On the Right|right",

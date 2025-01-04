@@ -15,17 +15,19 @@ function getClass(theAtts, theIsEditMode) {
 }
 
 export default function display({ attributes, editMode }) {
-    const { ratio, ismain, locationtb, locationlr } = attributes;
+    const { ratio, ismain, locationtb, locationlr, parentStackWhen } = attributes;
+    
+    let tmpSize = parentStackWhen || '';
 
     let classNames = getClass(attributes,editMode);
-    classNames += ' flo-flex-' + ratio;
+    classNames += ' flo' + tmpSize + '-flex-' + ratio;
     const tmpRatioPerc = (ratio*5) + '%';
     if( ismain ){
-        classNames += ' flo-main';
+        classNames += ' flo' + tmpSize + '-main';
     } else {
         let tmpSideClass = locationtb == 'top' ? 'n' : 's';
         tmpSideClass += locationlr == 'left' ? 'w' : 'e';
-        classNames += ' flo-side-' + tmpSideClass;
+        classNames += ' flo' + tmpSize + '-side-' + tmpSideClass;
     }
 
     if(editMode === true){

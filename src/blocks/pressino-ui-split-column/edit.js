@@ -31,10 +31,34 @@ const onAddMessageBlock = () => {
 export default function Edit(theProps) {
     const props = theProps;
     const { attributes, setAttributes } = props;
-    const { ratio, ismain } = attributes;
+    const { parentStackWhen, ismain } = attributes;
 
     var tmpDisplay = display({ attributes, editMode: true });
     const blockProps = useBlockProps();
+
+    var tmpParentBlock = PressinoUI.getParentBlock(props.clientId);
+    if( tmpParentBlock ){
+        var tmpParentAttributes =  tmpParentBlock.attributes;
+        var tmpNeedToUpdate = false;
+        var tmpAttsToSet = {};
+        
+
+        if( parentStackWhen != tmpParentAttributes.stackwhen ){   
+            tmpAttsToSet.parentStackWhen = tmpParentAttributes.stackwhen;
+            tmpNeedToUpdate = true;
+            // tmpNeedToRefresh = true;
+        }
+       
+        if( tmpNeedToUpdate ){
+            setAttributes(tmpAttsToSet);
+        }
+        //--- Not doing anything in the editor UI, so no need to refresh block editor
+        // if (tmpNeedToRefresh){
+        //     PressinoUI.refreshBlockEditor();
+        // }
+    
+    }
+
 
     var tmpParentAttributes = PressinoUI.getParentAttributes(props.clientId);
     var tmpRatio = tmpParentAttributes.splitratio || '10';
