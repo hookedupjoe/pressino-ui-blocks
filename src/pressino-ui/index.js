@@ -63,7 +63,7 @@ function addLinkFormattingAttributes(theAttsIndex){
 function getLinkFormattingSettings(props,options){
 	var tmpOptions = options || {};
 
-	return  <PanelBody title={istr('Link Formatting Options')}>
+	return  <PanelBody initialOpen={false} title={istr('Link Formatting Options')}>
 		{getStandardProperty(props, 'linkformatting', "Link Formatting", 'linkformatting')}
 		{getStandardProperty(props, 'linkicon', "Link Icon", 'linkicons')}
 		{tmpOptions.color !== false && getStandardProperty(props, 'linkcolored', "Use Parent Color for Link", 'checkbox')}
@@ -115,7 +115,7 @@ function getVisibilitySettings(props,options){
 	if( tmpHideWhen == 'over' ){
 		tmpVisLabel = 'Screen is at least';
 	}
-	return  <PanelBody title={istr('Visibility Options')}>
+	return  <PanelBody initialOpen={false} title={istr('Visibility Options')}>
 		{getStandardProperty(props, 'hidewhen', "Hide When", 'hidewhen')}
 		{(tmpHideWhen != '' && getStandardProperty(props, 'hidewhensize', tmpVisLabel, 'hidewhensizes'))}
 	</PanelBody>

@@ -21,7 +21,7 @@ export default function Edit(props) {
         <InspectorControls>
             {LinkFormat.getSettings(props,{color:false})}
             {VisibilityOptions.getSettings(props)}
-            <PanelBody title={istr('Advanced Options')}>
+            <PanelBody initialOpen={false} title={istr('Advanced Options')}>
                 {PressinoUI.getStandardProperty(props, 'classes', "Additional CSS Class(es)", 'text')}
             </PanelBody>
 
