@@ -92,9 +92,9 @@ function getVisibilityDisplayOptions(props){
 	} else if( hidewhensize == 'wide'){
 		tmpHideWhenSize = 'w';
 	}
-	if( hidewhen == 'over' ){
+	if( hidewhen == 'show' ){
 		tmpCN = 'mobileonly' + (tmpHideWhenSize || '');
-	} else if( hidewhen == 'under' ){
+	} else if( hidewhen == 'hide' ){
 		tmpCN = 'nomobile' + (tmpHideWhenSize || '');
 	}
 	return {
@@ -110,13 +110,13 @@ function addVisibilityAttributes(theAttsIndex){
 function getVisibilitySettings(props,options){
 	var tmpOptions = options || {};
 	const { hidewhen } = props.attributes;
-	var tmpVisLabel = 'Screen is smaller than';
+	var tmpVisLabel = 'Hide when screen smaller than';
 	var tmpHideWhen = hidewhen || '';
-	if( tmpHideWhen == 'over' ){
-		tmpVisLabel = 'Screen is at least';
+	if( tmpHideWhen == 'show' ){
+		tmpVisLabel = 'Show only when screen smaller than';
 	}
 	return  <PanelBody initialOpen={false} title={istr('Visibility Options')}>
-		{getStandardProperty(props, 'hidewhen', "Hide When", 'hidewhen')}
+		{getStandardProperty(props, 'hidewhen', "Hide / Show Only", 'hidewhen')}
 		{(tmpHideWhen != '' && getStandardProperty(props, 'hidewhensize', tmpVisLabel, 'hidewhensizes'))}
 	</PanelBody>
 
@@ -998,8 +998,8 @@ export const listSources = {
 	"splitlevels20": "10%-90%|2,15%-85%|3,20%-80%|4,25%-75%|5,30%-70%|6,40%-60%|8,50%-50%|10,60%-40%|12,65%-35%|13,70%-30%|14,75%-25%|15,80%-20%|16,85%-15%|17,90%-10%|18",
 	"stackwhen": "Default 768px|,Wide 850px|t,Thin 450px|p",
 
-	"hidewhen": "Not Hidden|,Screen size smaller than ...|under,Screen size larger than ...|over",
-	"hidewhensizes": "Small 450px|small,Medium 768px|medium,Wide 850px|wide",
+	"hidewhen": "Always Visible|,Hide based on screen size|hide,Show based on screen size|show",
+	"hidewhensizes": "Default 768px|,Small 450px|small,Wide 850px|wide",
 
 	"menuiconpos": "Default|,On Top Of Text|top",
 	"locationlr": "Default|,On the Left|left,On the Right|right",

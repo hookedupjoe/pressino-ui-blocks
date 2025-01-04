@@ -1,3 +1,9 @@
+
+
+[linkformat="icon"] a {
+  text-decoration: none !important;
+}
+
 [linkformat="icon"].link-circular a {
   border: solid 1px;
   border-bottom: solid 3px;
@@ -49,6 +55,14 @@
 [linkformat="icon"].link-icon a::before {
   padding-right: .7em;
 }
+
+[linkformat="icon"].link-icon.link-basic a::after {
+  padding-left: .2em;
+}
+[linkformat="icon"].link-icon.link-basic a::before {
+  padding-right: .2em;
+}
+
 
 [linkformat="icon"].link-caret a::after { content: "\F234";}
 [linkformat="icon"].link-caret-fill a::after { content: "\F231";}

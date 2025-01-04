@@ -4,37 +4,34 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
 import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
-import { istr, PressinoUI } from '../../pressino-ui';
+import { istr, PressinoUI, LinkFormat, VisibilityOptions } from '../../pressino-ui';
 import display from './display';
 
 /**
  * @return {Element} Element to render.
  */
-export default function Edit(theProps) {
-    const { attributes, setAttributes } = theProps;
+export default function Edit(props) {
+    const { attributes } = props;
     var tmpDisplay = display({ attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { raised, basic, attached } = attributes;
 
     return <>
         <div {...blockProps}>
             <InspectorControls>
 
                 <PanelBody title={istr('General Settings')}>
-                    {PressinoUI.getStandardProperty(theProps, 'color', 'Message Color', 'colors')}
-                    {PressinoUI.getStandardProperty(theProps, 'size', 'Overall Size', 'sizes')}
-                    {PressinoUI.getStandardProperty(theProps, 'attached', 'Attached', 'attached')}
-                    {PressinoUI.getStandardProperty(theProps, 'floating', 'Floating', 'checkbox')}
-                    {PressinoUI.getStandardProperty(theProps, 'compact', 'Compact', 'checkbox')}
-
+                    {PressinoUI.getStandardProperty(props, 'color', 'Message Color', 'colors')}
+                    {PressinoUI.getStandardProperty(props, 'size', 'Overall Size', 'sizes')}
+                    {PressinoUI.getStandardProperty(props, 'attached', 'Attached', 'attached')}
+                    {PressinoUI.getStandardProperty(props, 'floating', 'Floating', 'checkbox')}
+                    {PressinoUI.getStandardProperty(props, 'compact', 'Compact', 'checkbox')}
+                    {PressinoUI.getStandardProperty(props, 'padding', 'Padding', 'padding')}
+                    {PressinoUI.getStandardProperty(props, 'margin', 'Margin', 'margin')}
+                    {PressinoUI.getStandardProperty(props, 'classes', "Additional CSS Class(es)", 'text')}
                 </PanelBody>
 
-                <PanelBody title={istr('Formatting Options')}>
-                    {PressinoUI.getStandardProperty(theProps, 'padding', 'Padding', 'padding')}
-                    {PressinoUI.getStandardProperty(theProps, 'margin', 'Margin', 'margin')}
-                    {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
-                </PanelBody>
-
+                {LinkFormat.getSettings(props,{color:false})}
+                {VisibilityOptions.getSettings(props)}
 
             </InspectorControls>
 
