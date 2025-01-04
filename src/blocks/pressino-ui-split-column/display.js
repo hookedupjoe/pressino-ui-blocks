@@ -10,7 +10,7 @@ var classSpecs = {
 }
 
 function getClass(theAtts, theIsEditMode) {
-    var tmpClasses = PressinoUI.getStandardClass('flo-wrap', classSpecs, theAtts, theIsEditMode);
+    var tmpClasses = PressinoUI.getStandardClass('', classSpecs, theAtts, theIsEditMode);
     return tmpClasses
 }
 
