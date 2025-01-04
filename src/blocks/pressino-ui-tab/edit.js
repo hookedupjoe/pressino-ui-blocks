@@ -24,6 +24,8 @@ export default function Edit(theProps) {
     const [isInserterOpen, setInserterOpen] = useState(false);
     
     var tmpNeedToRefresh = false;
+    var tmpPanelClasses = '';
+    
 
     var tmpParentBlock = PressinoUI.getParentBlock(props.clientId);
     if( tmpParentBlock ){
@@ -37,7 +39,7 @@ export default function Edit(theProps) {
         }
         var tmpParentPanelInvertVal = '';
         if( tmpParentAttributes.panelsinverted === true ){
-            tmpParentPanelInvertVal = 'inverted';
+            tmpParentPanelInvertVal = 'inverted ' + parentColor;
         }
 
         
@@ -47,6 +49,7 @@ export default function Edit(theProps) {
             tmpNeedToUpdate = true;
             tmpNeedToRefresh = true;
         }
+
         if( parentPanelsInverted != tmpParentPanelInvertVal ){   
             tmpAttsToSet.parentPanelsInverted = tmpParentPanelInvertVal;
             tmpNeedToUpdate = true;
@@ -194,7 +197,7 @@ export default function Edit(theProps) {
         {className: tmpEditorClass},
         [
             tmpEditHeader,
-            el('div', {className: 'ui segment bottom attached ' + tmpParentInvertVal + ' ' + parentPanelsInverted + ' ' + parentPanelsInverted + ' ' + parentColor + ' ' + (parentInsidePadding || '')}, 
+            el('div', {className: 'ui segment bottom attached ' + parentPanelsInverted  + ' ' + (parentInsidePadding || '')}, 
                 tmpSidebarControls,
                 tmpDisplayObject
             )
