@@ -4,7 +4,7 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
 import { PanelBody } from '@wordpress/components';
-import { istr, PressinoUI, LinkFormat, el } from '../../pressino-ui';
+import { istr, PressinoUI, LinkFormat, VisibilityOptions, el } from '../../pressino-ui';
 import display from './display';
 
 /**
@@ -20,6 +20,7 @@ export default function Edit(props) {
     return <>
         <InspectorControls>
             {LinkFormat.getSettings(props,{color:false})}
+            {VisibilityOptions.getSettings(props)}
             <PanelBody title={istr('Advanced Options')}>
                 {PressinoUI.getStandardProperty(props, 'classes', "Additional CSS Class(es)", 'text')}
             </PanelBody>

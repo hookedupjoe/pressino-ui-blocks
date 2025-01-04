@@ -9,7 +9,7 @@ import { registerBlockType } from '@wordpress/blocks';
 import Edit from './edit';
 import save from './save';
 import metadata from './block.json';
-import {PressinoUI, LinkFormat} from '../../pressino-ui';
+import {PressinoUI, LinkFormat, VisibilityOptions} from '../../pressino-ui';
 
 /**
  * Setup Block Attributes
@@ -17,6 +17,7 @@ import {PressinoUI, LinkFormat} from '../../pressino-ui';
 let tmpAttributes = {};
 PressinoUI.addAttributes('text', tmpAttributes, ['classes']);
 LinkFormat.addAttributes(tmpAttributes);
+VisibilityOptions.addAttributes(tmpAttributes);
 
 /**
  * Register Block

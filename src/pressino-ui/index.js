@@ -71,6 +71,57 @@ function getLinkFormattingSettings(props,options){
 
 }
 
+
+
+function getVisibilityDisplayOptions(props){
+	const { attributes, editMode } = props;
+	const { hidewhen, hidewhensize } = attributes;
+	var tmpCN = '';
+	var tmpDomAtts = false;
+	//--- Do not set vis options in edit mode -- would hide content
+	if(editMode){
+		return {
+			className: tmpCN,
+			domAtts: tmpDomAtts
+		}
+	}
+
+	var tmpHideWhenSize = '';
+	if( hidewhensize == 'small'){
+		tmpHideWhenSize = 's';
+	} else if( hidewhensize == 'wide'){
+		tmpHideWhenSize = 'w';
+	}
+	if( hidewhen == 'over' ){
+		tmpCN = 'mobileonly' + (tmpHideWhenSize || '');
+	} else if( hidewhen == 'under' ){
+		tmpCN = 'nomobile' + (tmpHideWhenSize || '');
+	}
+	return {
+		className: tmpCN,
+		domAtts: tmpDomAtts
+	}
+}
+
+function addVisibilityAttributes(theAttsIndex){
+	addAttributes('text', theAttsIndex, ['hidewhen', 'hidewhensize']);
+}
+
+function getVisibilitySettings(props,options){
+	var tmpOptions = options || {};
+	const { hidewhen } = props.attributes;
+	var tmpVisLabel = 'Screen is smaller than';
+	var tmpHideWhen = hidewhen || '';
+	if( tmpHideWhen == 'over' ){
+		tmpVisLabel = 'Screen is at least';
+	}
+	return  <PanelBody title={istr('Visibility Options')}>
+		{getStandardProperty(props, 'hidewhen', "Hide When", 'hidewhen')}
+		{(tmpHideWhen != '' && getStandardProperty(props, 'hidewhensize', tmpVisLabel, 'hidewhensizes'))}
+	</PanelBody>
+
+}
+
 function getParentAttributes(theBlockID) {
 	var tmpParentAttributes = {};
 	var tmpParentBlock = getParentBlock(theBlockID);
@@ -947,6 +998,9 @@ export const listSources = {
 	"splitlevels20": "10%-90%|2,15%-85%|3,20%-80%|4,25%-75%|5,30%-70%|6,40%-60%|8,50%-50%|10,60%-40%|12,65%-35%|13,70%-30%|14,75%-25%|15,80%-20%|16,85%-15%|17,90%-10%|18",
 	"stackwhen": "Default 768px|,Wide 850px|t,Thin 450px|p",
 
+	"hidewhen": "Not Hidden|,Screen size smaller than ...|under,Screen size larger than ...|over",
+	"hidewhensizes": "Small 450px|small,Medium 768px|medium,Wide 850px|wide",
+
 	"menuiconpos": "Default|,On Top Of Text|top",
 	"locationlr": "Default|,On the Left|left,On the Right|right",
 	"locationtb": "Default|,On the Top|top,On the Bottom|bottom",
@@ -1012,6 +1066,11 @@ export const LinkFormat = {
 	getDisplayInfo: getLinkFormattingOptions
 }
 
+export const VisibilityOptions = {
+	getSettings: getVisibilitySettings,
+	addAttributes: addVisibilityAttributes,
+	getDisplayInfo: getVisibilityDisplayOptions
+}
 //--- Global Exposure of Root Entrypoint
 window.PressinoUI = PressinoUI;
 

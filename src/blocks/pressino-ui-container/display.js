@@ -1,7 +1,7 @@
 /**
  * Return universal display element used by edit and save functions
  */
-import { PressinoUI, LinkFormat, el } from '../../pressino-ui';
+import { PressinoUI, LinkFormat, VisibilityOptions, el } from '../../pressino-ui';
 import { InnerBlocks } from '@wordpress/block-editor';
 
 var classSpecs = {
@@ -17,13 +17,18 @@ function getClass(theAtts, theIsEditMode) {
 export default function display({ attributes, editMode }) {
 
     let classNames = getClass(attributes,editMode);
+
     var tmpLinkFormats = LinkFormat.getDisplayInfo({attributes});
-    classNames += tmpLinkFormats?.className || '';
+    classNames += ' ' + tmpLinkFormats?.className || '';
+
+    var tmpVisOptions = VisibilityOptions.getDisplayInfo({attributes,editMode});
+    classNames += ' ' + tmpVisOptions?.className || '';
 
     var tmpProps = {className: classNames};
     if( tmpLinkFormats?.domAtts?.linkformat ){
         tmpProps = {...tmpProps,...tmpLinkFormats.domAtts}
     }
+
 
     if(editMode === true){
         return (el('div',tmpProps, <InnerBlocks />));
