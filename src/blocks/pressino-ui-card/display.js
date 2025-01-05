@@ -78,7 +78,8 @@ export default function display({ props, editMode }) {
     var tmpHeaderSize = 'medium';
     var tmpHeaderColor = tmpAtts.color || tmpAtts.parentColor || '';
     var tmpInverted = '';
-    var headeClass = ' actappui ';   tmpInverted = ' inverted ';
+    var headeClass = ' actappui ';
+    tmpInverted = ' inverted ';
     if (tmpAtt.parentHeaderType == 'inverted') {
         var tmpItems = [];
 
@@ -89,8 +90,8 @@ export default function display({ props, editMode }) {
             if (!(tmpHeaderColor)) {
                 tmpHeaderColor = 'black';
             }
-            tmpItems.push(newEl('div', 'ui header inverted  attached mar0 ' + headeClass + tmpHeaderSize, [tmpTitle, tmpSub]));
-            tmpMainContent.push(newEl('div', '  ' + tmpInverted + tmpHeaderColor, [tmpItems]));
+            tmpItems.push(newEl('div', 'ui header inverted mar0 ' + headeClass + tmpHeaderSize, [tmpTitle, tmpSub]));
+            tmpMainContent.push(newEl('div', ' ui segment pad0 mar0 basic ' + tmpInverted + tmpHeaderColor, [tmpItems]));
         }
 
     } else if (tmpAtt.parentHeaderType == 'light') {

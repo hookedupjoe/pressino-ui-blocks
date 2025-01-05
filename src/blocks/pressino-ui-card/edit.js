@@ -18,13 +18,41 @@ export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
     var tmpDisplayObject = display({ props: theProps, attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { raised, basic, attached } = attributes;
+    const { parentColor, parentMaxImgHeight, parentHeaderType} = attributes;
     var props = theProps;
-    var tmpParentAttributes = PressinoUI.getParentAttributes(props.clientId);
-    props.attributes.parentColor = tmpParentAttributes.color || '';
-    props.attributes.parentMaxImgHeight = tmpParentAttributes.imageheight || 0;
-    props.attributes.parentHeaderType = tmpParentAttributes.headertype || 'default';
-   
+    // var tmpParentAttributes = PressinoUI.getParentAttributes(props.clientId);
+
+
+    // props.attributes.parentColor = tmpParentAttributes.color || '';
+    // props.attributes.parentMaxImgHeight = tmpParentAttributes.imageheight || 0;
+    // props.attributes.parentHeaderType = tmpParentAttributes.headertype || 'default';
+    var tmpParentBlock = PressinoUI.getParentBlock(props.clientId);
+    if( tmpParentBlock ){
+        var tmpParentAttributes =  tmpParentBlock.attributes;
+        var tmpNeedToUpdate = false;
+        var tmpAttsToSet = {};
+        
+
+        if( parentColor != tmpParentAttributes.color ){   
+            tmpAttsToSet.parentColor = tmpParentAttributes.color;
+            tmpNeedToUpdate = true;
+        }
+        if( parentMaxImgHeight != tmpParentAttributes.imageheight ){   
+            tmpAttsToSet.parentMaxImgHeight = tmpParentAttributes.imageheight;
+            tmpNeedToUpdate = true;
+        }
+        if( parentHeaderType != tmpParentAttributes.headertype ){   
+            tmpAttsToSet.parentHeaderType = tmpParentAttributes.headertype;
+            tmpNeedToUpdate = true;
+        }
+       
+        if( tmpNeedToUpdate ){
+            setAttributes(tmpAttsToSet);
+            PressinoUI.refreshBlockEditor();
+        }
+
+    
+    }
 
     const onAddBlock = () => {
         PressinoUI.addBlock({ blockName: 'pressino/cardsection', blockOptions: {
