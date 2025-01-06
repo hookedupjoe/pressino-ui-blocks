@@ -1,7 +1,6 @@
 /**
  * Return universal display element used by edit and save functions
  */
-import { InnerBlocks } from '@wordpress/block-editor';
 import { PressinoUI, el, LinkFormat } from '../../pressino-ui';
 import { getIconClass } from '../../icons';
 
@@ -10,13 +9,10 @@ var classSpecs = {
 	string: ['classes','bulletcolor','bulletspacing'],
 }
 
-
 function getClass(theAtts, theIsEditMode) {
     var tmpClasses = PressinoUI.getStandardClass('', classSpecs, theAtts, theIsEditMode);
 	return tmpClasses
 }
-
-
 
 export default function display({ props, editMode }) {
         var tmpAtts = props.attributes;
@@ -50,9 +46,6 @@ export default function display({ props, editMode }) {
             tmpProps.appuse = 'iconlist';
         }
 
-        //--- Support link formatting with icons
-        //tmpProps.linkformat="icon"
-
     
         var template = [ [
             'core/list',
@@ -63,7 +56,7 @@ export default function display({ props, editMode }) {
         ]];
 
         if (editMode) {
-            var tmpUIColor = ''; //was props.attributes.color || 
+            var tmpUIColor = ''; 
             var tmpHeaderText = 'UI Bullets';
             var tmpIcon = PressinoUI.getControlImage();
             var tmpHeaderMsg = el('div',{className: 'ui larger bolder'}, tmpHeaderText)
