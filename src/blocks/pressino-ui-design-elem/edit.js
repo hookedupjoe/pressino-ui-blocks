@@ -51,20 +51,6 @@ export default function Edit(theProps) {
                 )
 
     const blockProps = useBlockProps();
-    const { url, postid } = attributes;
-    const [isQuickInserterOpen, setQuickInserterOpen] = useState(false);
-    const [isInserterOpen, setInserterOpen] = useState(false);
-
-    var tmpOnChangeFunc = (theURL, thePost) => {
-        var tmpToSet = {};
-        tmpToSet[theAttName] = theURL;
-
-        theProps.setAttributes(tmpToSet);
-        if (tmpDoRefresh) {
-            refreshBlockEditor();
-        }
-    }
-
     
     const clearSelection = () => {
         setAttributes({ postid: 0, title: '', url: '' });
