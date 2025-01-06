@@ -76,64 +76,7 @@ function create_block_pressino_ui_blocks_block_init() {
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-bullets' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-container' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-web-elem' );
-
-
-	//--- IN DEV - PENDING USAGE SCENARIOS AND OPTIONS --> register_block_type( __DIR__ . '/build/blocks/pressino-ui-design-elem' );
-	//--- IN DEV - PENDING REVIEW --> register_block_type( __DIR__ . '/build/blocks/pressino-ui-list' );
-	//--- IN DEV - PENDING REVIEW --> register_block_type( __DIR__ . '/build/blocks/pressino-ui-listitem' );
-	//--- IN DEV - PENDING REVIEW --> register_block_type( __DIR__ . '/build/blocks/pressino-ui-listitem-section' );
 }
-
-// register_block_type(
-// 	'insert-pages/block',
-// 	array(
-// 		'editor_style' => 'insert-pages-gutenberg-block',
-// 		'editor_script' => 'insert-pages-gutenberg-block',
-// 		'attributes' => array(
-// 			'url' => array(
-// 				'type' => 'string',
-// 				'default' => '',
-// 			),
-// 			'page' => array(
-// 				'type' => 'number',
-// 				'default' => 0,
-// 			),
-// 			'display' => array(
-// 				'type' => 'string',
-// 				'default' => 'title',
-// 			),
-// 			'template' => array(
-// 				'type' => 'string',
-// 				'default' => '',
-// 			),
-// 			'class' => array(
-// 				'type' => 'string',
-// 				'default' => '',
-// 			),
-// 			'id' => array(
-// 				'type' => 'string',
-// 				'default' => '',
-// 			),
-// 			'inline' => array(
-// 				'type' => 'bool',
-// 				'default' => false,
-// 			),
-// 			'public' => array(
-// 				'type' => 'bool',
-// 				'default' => false,
-// 			),
-// 			'querystring' => array(
-// 				'type' => 'string',
-// 				'default' => '',
-// 			),
-// 			'size' => array(
-// 				'type' => 'string',
-// 				'default' => '',
-// 			),
-// 		),
-// 		'render_callback' => array( $this, 'block_render_callback' ),
-// 	)
-// );
 
 add_action( 'init', 'create_block_pressino_ui_blocks_block_init' );
 require_once PRESSINO_UI_BLOCKS_BASE_DIR . '/cls/PressinoInsertDesignElem.php';
