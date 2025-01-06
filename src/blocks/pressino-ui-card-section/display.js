@@ -9,8 +9,8 @@ var classSpecs = {
 	string: ['padding','margin']
 }
 
-function getClass(theAtts, theIsEditMode) {
-    var tmpClasses = PressinoUI.getStandardClass('content', classSpecs, theAtts, theIsEditMode);
+function getClass(attributes, isEditMode) {
+    var tmpClasses = PressinoUI.getStandardClass('content', classSpecs, attributes, isEditMode);
     return tmpClasses
 }
 

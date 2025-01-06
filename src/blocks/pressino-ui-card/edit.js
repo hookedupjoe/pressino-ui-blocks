@@ -3,7 +3,7 @@
  */
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, TextControl, ToggleControl, ToolbarGroup, ToolbarButton } from '@wordpress/components';
+import { PanelBody, ToolbarGroup, ToolbarButton } from '@wordpress/components';
 import { istr, PressinoUI, el } from '../../pressino-ui';
 import { BlockControls } from '@wordpress/block-editor';
 const { store: blockEditorStore } = wp.blockEditor;
@@ -14,24 +14,17 @@ import display from './display';
 /**
  * @return {Element} Element to render.
  */
-export default function Edit(theProps) {
-    const { attributes, setAttributes } = theProps;
-    var tmpDisplayObject = display({ props: theProps, attributes, editMode: true });
+export default function Edit(props) {
+    const { attributes, setAttributes } = props;
+    var tmpDisplayObject = display({ props, attributes, editMode: true });
     const blockProps = useBlockProps();
     const { parentColor, parentMaxImgHeight, parentHeaderType} = attributes;
-    var props = theProps;
-    // var tmpParentAttributes = PressinoUI.getParentAttributes(props.clientId);
 
-
-    // props.attributes.parentColor = tmpParentAttributes.color || '';
-    // props.attributes.parentMaxImgHeight = tmpParentAttributes.imageheight || 0;
-    // props.attributes.parentHeaderType = tmpParentAttributes.headertype || 'default';
     var tmpParentBlock = PressinoUI.getParentBlock(props.clientId);
     if( tmpParentBlock ){
         var tmpParentAttributes =  tmpParentBlock.attributes;
         var tmpNeedToUpdate = false;
         var tmpAttsToSet = {};
-        
 
         if( parentColor != tmpParentAttributes.color ){   
             tmpAttsToSet.parentColor = tmpParentAttributes.color;
@@ -90,23 +83,20 @@ export default function Edit(theProps) {
     let tmpSidebarControls = <InspectorControls>
         {tmpToolbarMods}
 
-
         <PanelBody title={istr('General Settings')}>
-            {PressinoUI.getStandardProperty(theProps, 'title', 'Card Title', 'text')}
-            {PressinoUI.getStandardProperty(theProps, 'subtitle', 'Sub Title', 'text')}
-            {PressinoUI.getStandardProperty(theProps, 'color', 'Card Color', 'colors')}
-            {PressinoUI.getStandardProperty(theProps, { mediaID: 'mediaID', mediaURL: 'mediaURL' }, 'Card Image', 'image')}
-            {PressinoUI.getStandardProperty(theProps, 'url', 'Target Content or Link', 'url')}
-            {PressinoUI.getStandardProperty(theProps, 'urlopentab', 'Open link in new tab?', 'checkbox')}
-            {PressinoUI.getStandardProperty(theProps, 'title', 'fluid', 'Full width', 'checkbox')}
-            {PressinoUI.getStandardProperty(theProps, 'raised', 'Raised', 'checkbox')}
-            {PressinoUI.getStandardProperty(theProps, 'headerColor', 'Header Color', 'colors')}
+            {PressinoUI.getStandardProperty(props, 'title', 'Card Title', 'text')}
+            {PressinoUI.getStandardProperty(props, 'subtitle', 'Sub Title', 'text')}
+            {PressinoUI.getStandardProperty(props, 'color', 'Card Color', 'colors')}
+            {PressinoUI.getStandardProperty(props, { mediaID: 'mediaID', mediaURL: 'mediaURL' }, 'Card Image', 'image')}
+            {PressinoUI.getStandardProperty(props, 'url', 'Target Content or Link', 'url')}
+            {PressinoUI.getStandardProperty(props, 'urlopentab', 'Open link in new tab?', 'checkbox')}
+            {PressinoUI.getStandardProperty(props, 'title', 'fluid', 'Full width', 'checkbox')}
+            {PressinoUI.getStandardProperty(props, 'raised', 'Raised', 'checkbox')}
+            {PressinoUI.getStandardProperty(props, 'headerColor', 'Header Color', 'colors')}
 
         </PanelBody>
 
-
     </InspectorControls>
-
 
     var tmpEditorClass = '';
     tmpEditorClass = PressinoUI.util.addClasses(tmpEditorClass, 'editorbox');
@@ -118,7 +108,6 @@ export default function Edit(theProps) {
         'div',
         { className: tmpEditorClass },
         [
-
             tmpSidebarControls,
             tmpDisplayObject
         ]

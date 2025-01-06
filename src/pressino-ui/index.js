@@ -19,7 +19,7 @@ export function istr(theString) {
 
 
 function refreshBlockEditor() {
-	return;
+	//return;
 	var tmpBlockClientId = '';
 	var tmpThis = wp.data.select('core/block-editor').getSelectedBlock();
 	if (tmpThis && tmpThis.clientId) {

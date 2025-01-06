@@ -17,7 +17,7 @@ import {PressinoUI} from '../../pressino-ui';
 let tmpAttributes = {};
 PressinoUI.addAttributes('text', tmpAttributes, ['columns', 'color', 'headertype','cardspacing','bottombydefault']);
 PressinoUI.addAttributes('boolean', tmpAttributes, ['centered']);
-PressinoUI.addAttributes('number', tmpAttributes, ['mincolwidth']);
+PressinoUI.addAttributes('number', tmpAttributes, ['mincolwidth','imageheight']);
 
 
 /**
