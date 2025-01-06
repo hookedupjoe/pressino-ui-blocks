@@ -16,7 +16,8 @@ export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
     var tmpDisplayObject = display({ props: theProps, attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { useicon, iconname, icontype, parent_color, parent_inverted, parent_panels_inverted, parent_black_back, parentMenuIconPos, parentBlackBack, parentInsidePadding} = attributes;
+    const { useicon, iconname, icontype, parent_color, parent_inverted, parent_panels_inverted, parent_insidepadding, 
+        parent_labelpaddingwide, parent_menuiconpos, parentInsidePadding} = attributes;
     var props = theProps;
     //---
     var tmpAtts = attributes;
@@ -78,8 +79,8 @@ export default function Edit(theProps) {
         //     tmpAttsToSet.parentColor = tmpParentAttributes.color;
         //     tmpNeedToUpdate = true;
         // }
-        // if( parentMenuIconPos != tmpParentAttributes.menuiconpos){
-        //     tmpAttsToSet.parentMenuIconPos = tmpParentAttributes.menuiconpos;
+        // if( parent_menuiconpos != tmpParentAttributes.menuiconpos){
+        //     tmpAttsToSet.parent_menuiconpos = tmpParentAttributes.menuiconpos;
         //     tmpNeedToUpdate = true;
         //     tmpNeedToRefresh = true;
         // }
@@ -174,7 +175,7 @@ export default function Edit(theProps) {
         //}
     }
 
-    if( parentMenuIconPos == 'top' ){
+    if( parent_menuiconpos == 'top' ){
         tmpHeaderClasses += ' icon labeled';
     }
     // if( parentColor && ! parentBlackBack ){
@@ -183,7 +184,12 @@ export default function Edit(theProps) {
     if( parentColor  ){
         tmpItemClasses += ' ' + parentColor;
     }
+
     
+    if( parent_labelpaddingwide ){
+        tmpHeaderClasses += ' widespace';
+     }
+ 
 
     if( parentInverted ){
        tmpHeaderClasses += ' inverted';
@@ -210,7 +216,7 @@ export default function Edit(theProps) {
         {className: tmpEditorClass},
         [
             tmpEditHeader,
-            el('div', {className: 'ui segment bottom attached ' + tmpEdiSegClasses  + ' ' + (parentInsidePadding || '')}, 
+            el('div', {className: 'ui segment bottom attached ' + tmpEdiSegClasses  + ' ' + (parent_insidepadding || '')}, 
                 tmpSidebarControls,
                 tmpDisplayObject
             )

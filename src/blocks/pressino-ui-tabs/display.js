@@ -8,7 +8,7 @@ const { updateBlockAttributes } = wp.data.dispatch( 'core/block-editor' )
 
 var classSpecs = {
 	boolean: [],
-	string: ['padding']
+	string: []
 }
 
 function getClass(theAtts, theIsEditMode) {
@@ -23,7 +23,7 @@ function getClass(theAtts, theIsEditMode) {
 export default function display({ props, editMode }) {
     const { attributes, setAttributes } = props;
     var tmpClass = getClass(attributes, true);
-    const { color, inverted, groupname, tabsinfo, menuiconpos, labelpadding, 
+    const { color, inverted, groupname, tabsinfo, menuiconpos, labelpaddingwide, 
         insidepadding, panelsinverted, bodyonly } = attributes;
 
     var tmpInvertedClass = '';
@@ -66,12 +66,21 @@ export default function display({ props, editMode }) {
                     tmpNeedToUpdate = true;
                     tmpTabUpdates.parent_panels_inverted = panelsinverted;
                 }
-                
-
+                if( tmpTabAtts.parent_insidepadding != insidepadding ){
+                    tmpNeedToUpdate = true;
+                    tmpTabUpdates.parent_insidepadding = insidepadding;
+                }
+                if( tmpTabAtts.parent_labelpaddingwide != labelpaddingwide ){
+                    tmpNeedToUpdate = true;
+                    tmpTabUpdates.parent_labelpaddingwide = labelpaddingwide;
+                }
+                if( tmpTabAtts.parent_menuiconpos != menuiconpos ){
+                    tmpNeedToUpdate = true;
+                    tmpTabUpdates.parent_menuiconpos = menuiconpos;
+                }
 
                 if( tmpNeedToUpdate ){
                     updateBlockAttributes(tmpTab.clientId, tmpTabUpdates);
-
                 }
                 tmpTabAtts.groupname = groupname;
                 tmpTabAtts.tabpos = iPos;
@@ -110,10 +119,8 @@ export default function display({ props, editMode }) {
 //                PressinoUI.refreshBlockEditor();
             }
             
-        } else {
-            tabsinfo = '[]';
-            //firsttabid = '';
         }
+        
     }
 
 
@@ -179,13 +186,11 @@ export default function display({ props, editMode }) {
         if( menuiconpos == 'top' ){
             tmpInvertedClass += ' icon labeled'
         }
-        // if(  props.attributes.color && ! props.attributes.blackback === true ){
-        //     tmpInvertedClass += ' ' + props.attributes.color;
-        // }
+
         var tmpMenuClass = 'ui top attached tabular menu ' + tmpInvertedClass;
         
-        if( labelpadding ){
-            tmpMenuClass += ' ' + labelpadding;
+        if( labelpaddingwide ){
+            tmpMenuClass += ' widespace';
         }
         
         var tmpSegClass = '';
