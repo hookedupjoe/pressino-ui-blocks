@@ -678,3 +678,7 @@ span.icons .inverted.corner.icon {
     float: none;
     margin: 0 .5em 0 0
 }
+
+.ui.top.attached.tabular.menu.inverted {
+    border-bottom: solid 1px white;
+}

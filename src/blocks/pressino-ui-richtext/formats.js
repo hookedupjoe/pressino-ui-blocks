@@ -80,16 +80,16 @@ const insertIconFormat = {
 		const [ openedBy, setOpenedBy ] = useState( null );
 
 
-		useEffect( () => {
-			// When the link becomes inactive (i.e. isActive is false), reset the editingLink state
-			// and the creatingLink state. This means that if the Link UI is displayed and the link
-			// becomes inactive (e.g. used arrow keys to move cursor outside of link bounds), the UI will close.
-			console.log('isActive',isActive,'isObjectActive',isObjectActive);
-			// if ( ! isActive ) {
-			// 	setAddingLink( false );
-			// }
+		// useEffect( () => {
+		// 	// When the link becomes inactive (i.e. isActive is false), reset the editingLink state
+		// 	// and the creatingLink state. This means that if the Link UI is displayed and the link
+		// 	// becomes inactive (e.g. used arrow keys to move cursor outside of link bounds), the UI will close.
+		// 	console.log('isActive',isActive,'isObjectActive',isObjectActive);
+		// 	// if ( ! isActive ) {
+		// 	// 	setAddingLink( false );
+		// 	// }
 
-		}, [ isActive, isObjectActive ] );
+		// }, [ isActive, isObjectActive ] );
 
 		const onToggle = () => {
 			// const text = getTextContent( slice( value ) );

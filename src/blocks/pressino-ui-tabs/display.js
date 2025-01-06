@@ -4,7 +4,8 @@
 import { PressinoUI, el } from '../../pressino-ui';
 const { store: blockEditorStore } = wp.blockEditor;
 const { useSelect } = wp.data;
- 
+const { updateBlockAttributes } = wp.data.dispatch( 'core/block-editor' )
+
 var classSpecs = {
 	boolean: [],
 	string: ['padding']
@@ -20,14 +21,16 @@ function getClass(theAtts, theIsEditMode) {
 }
 
 export default function display({ props, editMode }) {
-    var tmpAtts = props.attributes;
-    var tmpClass = getClass(tmpAtts, true);
+    const { attributes, setAttributes } = props;
+    var tmpClass = getClass(attributes, true);
+    const { color, inverted, groupname, tabsinfo, menuiconpos, labelpadding, 
+        insidepadding, panelsinverted, bodyonly } = attributes;
 
     var tmpInvertedClass = '';
-    if( tmpAtts.inverted == true ){
+    if( inverted == true ){
         tmpInvertedClass = 'inverted'
     }
-    var tmpTabsColor = tmpAtts.color || '';
+    var tmpTabsColor = color || '';
 
     var tmpTablinksEl = (el('div',{},''));
     if( editMode ){
@@ -40,13 +43,37 @@ export default function display({ props, editMode }) {
        // var tmpTabs = tmpMe.innerBlocks;
         var tmpTabCount = tmpTabs.length;
         var tmpTabLinks = [];
-        
+
         if(tmpTabCount){
-            tmpAtts.firsttabid = '';
+            //firsttabid = '';
             for( var iPos in tmpTabs){
                 var tmpTab = tmpTabs[iPos];
+               
+                var tmpNeedToUpdate = false;
+                var tmpTabUpdates = {};
+
+
                 var tmpTabAtts = tmpTab.attributes;
-                tmpTabAtts.groupname = tmpAtts.groupname;
+                if( tmpTabAtts.parent_color != color ){
+                    tmpNeedToUpdate = true;
+                    tmpTabUpdates.parent_color = tmpTabsColor;
+                }
+                if( tmpTabAtts.parent_inverted != inverted ){
+                    tmpNeedToUpdate = true;
+                    tmpTabUpdates.parent_inverted = inverted;
+                }
+                if( tmpTabAtts.parent_panels_inverted != panelsinverted ){
+                    tmpNeedToUpdate = true;
+                    tmpTabUpdates.parent_panels_inverted = panelsinverted;
+                }
+                
+
+
+                if( tmpNeedToUpdate ){
+                    updateBlockAttributes(tmpTab.clientId, tmpTabUpdates);
+
+                }
+                tmpTabAtts.groupname = groupname;
                 tmpTabAtts.tabpos = iPos;
 
                 var tmpTabGroup = tmpTabAtts.groupname;
@@ -54,9 +81,9 @@ export default function display({ props, editMode }) {
                 var tmpTabLabel = tmpTabAtts.tablabel || '';
                 // var tmpTabIcon = tmpTabAtts.iconname || '';
          
-                if( !(tmpAtts.firsttabid)){
-                    tmpAtts.firsttabid = tmpTabItem;
-                }
+                // if( !(firsttabid)){
+                //     firsttabid = tmpTabItem;
+                // }
                 var tmpExtraClasses = '';
                 if( iPos == 0){
                     tmpExtraClasses += 'active'
@@ -77,14 +104,15 @@ export default function display({ props, editMode }) {
                 tmpTabLinks.push(tmpAddAtts)
             }
             var tmpTabLinkText = JSON.stringify(tmpTabLinks);
-            if( tmpAtts.tabsinfo != tmpTabLinkText ){
-                tmpAtts.tabsinfo = tmpTabLinkText;
-                PressinoUI.refreshBlockEditor();
+            if( tabsinfo != tmpTabLinkText ){
+                setAttributes({tabsinfo: tmpTabLinkText});
+//                tabsinfo = tmpTabLinkText;
+//                PressinoUI.refreshBlockEditor();
             }
             
         } else {
-            tmpAtts.tabsinfo = '[]';
-            tmpAtts.firsttabid = '';
+            tabsinfo = '[]';
+            //firsttabid = '';
         }
     }
 
@@ -99,7 +127,7 @@ export default function display({ props, editMode }) {
         var tmpBtnBar = ''
         if (props.isSelected) {
             tmpIcon = PressinoUI.getControlImage();
-            if( tmpAtts.groupname != '' ){
+            if( groupname != '' ){
                 tmpAddBtn = el('div', { className: 'ui compact button basic grey ', elementname: 'tab', action: 'pressinoAddElement' }, 'Add New Tab');
             } else {
                 tmpAddBtn = el('div', { className: 'ui messsage orange compact small '}, 'Group Name Required. Add in settings.  Each set of tabs should have a unique group name.');
@@ -148,23 +176,23 @@ export default function display({ props, editMode }) {
         }
 
         tmpInvertedClass += ' withicon'
-        if( tmpAtts.menuiconpos == 'top' ){
+        if( menuiconpos == 'top' ){
             tmpInvertedClass += ' icon labeled'
         }
-        if(  props.attributes.color && ! props.attributes.blackback === true ){
-            tmpInvertedClass += ' ' + props.attributes.color;
-        }
+        // if(  props.attributes.color && ! props.attributes.blackback === true ){
+        //     tmpInvertedClass += ' ' + props.attributes.color;
+        // }
         var tmpMenuClass = 'ui top attached tabular menu ' + tmpInvertedClass;
         
-        if( tmpAtts.labelpadding ){
-            tmpMenuClass += ' ' + tmpAtts.labelpadding;
+        if( labelpadding ){
+            tmpMenuClass += ' ' + labelpadding;
         }
         
         var tmpSegClass = '';
-        if( tmpAtts.insidepadding ){
-            tmpSegClass = tmpAtts.insidepadding;
+        if( insidepadding ){
+            tmpSegClass = insidepadding;
         } 
-        if( tmpAtts.panelsinverted ){
+        if( panelsinverted ){
             tmpSegClass += ' inverted';
         } 
         
@@ -172,7 +200,7 @@ export default function display({ props, editMode }) {
         var tmpContents = el('div', {className:"ui segment attached theme-default-padding " + tmpSegClass + ' ' + tmpTabsColor}, el('div', {className:tmpClass}, el(wp.blockEditor.InnerBlocks.Content)));
         
         var tmpTabsEl = tmpContents;
-        if( tmpAtts.bodyonly == true ){
+        if( bodyonly == true ){
             tmpTablinksEl = '';
             tmpTabsEl =  el(wp.blockEditor.InnerBlocks.Content);
         }

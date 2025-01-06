@@ -16,10 +16,15 @@ export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
     var tmpDisplayObject = display({ props: theProps, attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { useicon, iconname, icontype, parentMenuIconPos, parentColor, parentInverted, parentPanelsInverted, parentBlackBack, parentInsidePadding} = attributes;
+    const { useicon, iconname, icontype, parent_color, parent_inverted, parent_panels_inverted, parent_black_back, parentMenuIconPos, parentBlackBack, parentInsidePadding} = attributes;
     var props = theProps;
     //---
     var tmpAtts = attributes;
+
+    const parentColor = parent_color;
+    const parentInverted = parent_inverted;
+    const parentPanelsInverted = parent_panels_inverted;
+
     const [isQuickInserterOpen, setQuickInserterOpen] = useState(false);
     const [isInserterOpen, setInserterOpen] = useState(false);
     
@@ -33,55 +38,55 @@ export default function Edit(theProps) {
         var tmpNeedToUpdate = false;
         var tmpAttsToSet = {};
         
-        var tmpParentInvertVal = '';
-        if( tmpParentAttributes.inverted === true ){
-            tmpParentInvertVal = 'inverted';
-        }
-        var tmpParentPanelInvertVal = '';
-        if( tmpParentAttributes.panelsinverted === true ){
-            tmpParentPanelInvertVal = 'inverted ' + parentColor;
-        }
+        // var tmpParentInvertVal = '';
+        // if( tmpParentAttributes.inverted === true ){
+        //     tmpParentInvertVal = 'inverted';
+        // }
+        // var tmpParentPanelInvertVal = '';
+        // if( tmpParentAttributes.panelsinverted === true ){
+        //     tmpParentPanelInvertVal = 'inverted ' + parentColor;
+        // }
 
         
 
-        if( parentInverted != tmpParentInvertVal ){   
-            tmpAttsToSet.parentInverted = tmpParentInvertVal;
-            tmpNeedToUpdate = true;
-            tmpNeedToRefresh = true;
-        }
+        // if( parentInverted != tmpParentInvertVal ){   
+        //     tmpAttsToSet.parentInverted = tmpParentInvertVal;
+        //     tmpNeedToUpdate = true;
+        //     tmpNeedToRefresh = true;
+        // }
 
-        if( parentPanelsInverted != tmpParentPanelInvertVal ){   
-            tmpAttsToSet.parentPanelsInverted = tmpParentPanelInvertVal;
-            tmpNeedToUpdate = true;
-            tmpNeedToRefresh = true;
-        }
+        // if( parentPanelsInverted != tmpParentPanelInvertVal ){   
+        //     tmpAttsToSet.parentPanelsInverted = tmpParentPanelInvertVal;
+        //     tmpNeedToUpdate = true;
+        //     tmpNeedToRefresh = true;
+        // }
 
-        if( parentBlackBack != tmpParentAttributes.blackback ){   
-            tmpAttsToSet.parentBlackBack = tmpParentAttributes.blackback;
-            tmpNeedToUpdate = true;
-            tmpNeedToRefresh = true;
-        }
-        if( parentInsidePadding != tmpParentAttributes.insidepadding ){   
-            tmpAttsToSet.parentInsidePadding = tmpParentAttributes.insidepadding;
-            tmpNeedToUpdate = true;
-            tmpNeedToRefresh = true;
-        }
+        // if( parentBlackBack != tmpParentAttributes.blackback ){   
+        //     tmpAttsToSet.parentBlackBack = tmpParentAttributes.blackback;
+        //     tmpNeedToUpdate = true;
+        //     tmpNeedToRefresh = true;
+        // }
+        // if( parentInsidePadding != tmpParentAttributes.insidepadding ){   
+        //     tmpAttsToSet.parentInsidePadding = tmpParentAttributes.insidepadding;
+        //     tmpNeedToUpdate = true;
+        //     tmpNeedToRefresh = true;
+        // }
         
 
         
-        if( parentColor != tmpParentAttributes.color){
-            tmpAttsToSet.parentColor = tmpParentAttributes.color;
-            tmpNeedToUpdate = true;
-        }
-        if( parentMenuIconPos != tmpParentAttributes.menuiconpos){
-            tmpAttsToSet.parentMenuIconPos = tmpParentAttributes.menuiconpos;
-            tmpNeedToUpdate = true;
-            tmpNeedToRefresh = true;
-        }
-        if( tmpNeedToUpdate ){
-            setAttributes(tmpAttsToSet);
+        // if( parentColor != tmpParentAttributes.color){
+        //     tmpAttsToSet.parentColor = tmpParentAttributes.color;
+        //     tmpNeedToUpdate = true;
+        // }
+        // if( parentMenuIconPos != tmpParentAttributes.menuiconpos){
+        //     tmpAttsToSet.parentMenuIconPos = tmpParentAttributes.menuiconpos;
+        //     tmpNeedToUpdate = true;
+        //     tmpNeedToRefresh = true;
+        // }
+        // if( tmpNeedToUpdate ){
+        //     setAttributes(tmpAttsToSet);
           
-        }
+        // }
        
     }
 
@@ -161,18 +166,26 @@ export default function Edit(theProps) {
     }
     
     var tmpHeaderClasses = '';
+    var tmpEdiSegClasses = '';
+    if( parentPanelsInverted ){
+        tmpEdiSegClasses += ' inverted';
+        //if( !parentBlackBack ){
+            tmpEdiSegClasses += ' ' + parentColor;
+        //}
+    }
+
     if( parentMenuIconPos == 'top' ){
         tmpHeaderClasses += ' icon labeled';
     }
-    if( parentColor && ! parentBlackBack ){
-        tmpHeaderClasses += ' ' + parentColor;
-    }
+    // if( parentColor && ! parentBlackBack ){
+    //     tmpHeaderClasses += ' ' + parentColor;
+    // }
     if( parentColor  ){
         tmpItemClasses += ' ' + parentColor;
     }
     
 
-    if( parentInverted){
+    if( parentInverted ){
        tmpHeaderClasses += ' inverted';
     }
 
@@ -197,7 +210,7 @@ export default function Edit(theProps) {
         {className: tmpEditorClass},
         [
             tmpEditHeader,
-            el('div', {className: 'ui segment bottom attached ' + parentPanelsInverted  + ' ' + (parentInsidePadding || '')}, 
+            el('div', {className: 'ui segment bottom attached ' + tmpEdiSegClasses  + ' ' + (parentInsidePadding || '')}, 
                 tmpSidebarControls,
                 tmpDisplayObject
             )

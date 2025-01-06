@@ -19,11 +19,17 @@ export function istr(theString) {
 
 
 function refreshBlockEditor() {
+	return;
 	var tmpBlockClientId = '';
 	var tmpThis = wp.data.select('core/block-editor').getSelectedBlock();
 	if (tmpThis && tmpThis.clientId) {
 		tmpBlockClientId = tmpThis.clientId;
+		ActionAppCore.lastBlockClientId = tmpBlockClientId;
+	} else {
+		tmpBlockClientId = ActionAppCore.lastBlockClientId || false;
 	}
+	console.log('tmpBlockClientId',tmpBlockClientId)
+
 	wp.data.dispatch('core/block-editor').synchronizeTemplate();
 	if (tmpBlockClientId) {
 		wp.data.dispatch('core/block-editor').selectBlock(tmpBlockClientId)
