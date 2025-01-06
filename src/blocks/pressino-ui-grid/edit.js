@@ -19,12 +19,10 @@ const onAddBlock = () => {
 /**
  * @return {Element} Element to render.
  */
-export default function Edit(theProps) {
-    const { attributes, setAttributes } = theProps;
-    var tmpDisplay = display({ props: theProps, attributes, editMode: true });
+export default function Edit(props) {
+    const { attributes } = props;
+    var tmpDisplay = display({ props, attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { raised, basic, attached } = attributes;
-    var props = theProps;
 
     var tmpAtts = props.attributes;
     if (!(tmpAtts.groupname)) {
@@ -46,12 +44,9 @@ export default function Edit(theProps) {
 
             <InspectorControls>
                 <PanelBody title={istr('General Settings')}>
-                    {PressinoUI.getStandardProperty(theProps, 'columns', 'Columns', 'columns')}
-                    {PressinoUI.getStandardProperty(theProps, 'mincolwidth', 'Min Column Width', 'number')}
-                    {PressinoUI.getStandardProperty(theProps, 'gridspacing', 'Space Between Columns', 'slimwidespacing')}
-                    {PressinoUI.getStandardProperty(theProps, 'imageheight', 'Cards Image Height', 'number', true)}
-                    {PressinoUI.getStandardProperty(theProps, 'color', 'Cards Color', 'colors')}
-                    {PressinoUI.getStandardProperty(theProps, 'centered', 'Centered', 'checkbox')}
+                    {PressinoUI.getStandardProperty(props, 'mincolwidth', 'Min Column Width', 'number')}
+                    {PressinoUI.getStandardProperty(props, 'gridspacing', 'Space Between Columns', 'slimwidespacing')}
+                    {PressinoUI.getStandardProperty(props, 'centered', 'Centered', 'checkbox')}
                 </PanelBody>
             </InspectorControls>
 

@@ -10,24 +10,24 @@ var classSpecs = {
 }
 
 
-function getClass(theAtts, theIsEditMode) {
-    var tmpClasses = PressinoUI.getStandardClass('ui column', classSpecs, theAtts, theIsEditMode);
+function getClass(attributes, isEditMode) {
+    var tmpClasses = PressinoUI.getStandardClass('ui column', classSpecs, attributes, isEditMode);
 	return tmpClasses
 }
 
 export default function display({ props, editMode }) {
-    var tmpAtts = props.attributes;
-    var tmpContent = [];
-    var tmpClass = getClass(tmpAtts, editMode);
-    
+    var { attributes, setAttributes } = props;
+    const { classes, centered, flexgrowbox} = attributes;
 
+    var tmpContent = [];
+    var tmpClass = getClass(attributes, editMode);
 
     if( editMode ){
         tmpClass += ' fluid';
     }
   
-    if( tmpAtts.classes ){
-        tmpClass += ' ' + tmpAtts.classes;
+    if( classes ){
+        tmpClass += ' ' + classes;
     }
 
     if (editMode) {
@@ -39,10 +39,6 @@ export default function display({ props, editMode }) {
     var tmpExtraContent = [];
    
     tmpContent.push(tmpExtraContent);
-
-    // if (editMode) {
-    //     return el('div', { className: tmpClass }, tmpContent);
-    // }
 
     return el('div', { className: tmpClass }, tmpContent);
     

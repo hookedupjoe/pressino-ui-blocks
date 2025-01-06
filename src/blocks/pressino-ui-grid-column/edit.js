@@ -3,33 +3,28 @@
  */
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
+import { PanelBody } from '@wordpress/components';
 import { istr, PressinoUI, el } from '../../pressino-ui';
 import display from './display';
 
 /**
  * @return {Element} Element to render.
  */
-export default function Edit(theProps) {
-    const { attributes, setAttributes } = theProps;
-    var tmpDisplayObject = display({ props: theProps, attributes, editMode: true });
+export default function Edit(props) {
+    const { attributes } = props;
+    var tmpDisplayObject = display({ props, attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { raised, basic, attached } = attributes;
-    var props = theProps;
-    //---
-    var tmpAtts = props.attributes;
-
 
     //ToDo: Add refresh option for itemname and label **
     let tmpSidebarControls = <InspectorControls>
 
         <PanelBody title={istr('General Settings')}>
-            {PressinoUI.getStandardProperty(theProps, 'centered', 'Centered', 'checkbox')}
-            {PressinoUI.getStandardProperty(theProps, 'flexgrowbox', 'Fill column with first item?', 'checkbox')}
+            {PressinoUI.getStandardProperty(props, 'centered', 'Centered', 'checkbox')}
+            {PressinoUI.getStandardProperty(props, 'flexgrowbox', 'Fill column with first item?', 'checkbox')}
         </PanelBody>
 
         <PanelBody title={istr('Formatting Options')}>
-            {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
+            {PressinoUI.getStandardProperty(props, 'classes', "Additional CSS Class(es)", 'text')}
         </PanelBody>
     </InspectorControls>
 

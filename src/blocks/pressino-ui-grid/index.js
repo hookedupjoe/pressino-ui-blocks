@@ -16,7 +16,7 @@ import {PressinoUI} from '../../pressino-ui';
  */
 let tmpAttributes = {};
 PressinoUI.addAttributes('number', tmpAttributes, ['mincolwidth','imageheight']);
-PressinoUI.addAttributes('text', tmpAttributes, ['columns','gridspacing']);
+PressinoUI.addAttributes('text', tmpAttributes, ['gridspacing']);
 PressinoUI.addAttributes('boolean', tmpAttributes, ['centered']);
 
 /**
