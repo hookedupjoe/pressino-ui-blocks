@@ -200,7 +200,7 @@ if ( ! class_exists( 'PressinoInsertWebElem' ) ) {
 			if ( '0' === $attributes['url'] && 0 === $attributes['postid'] ) {
 				return $content;
 			}
-			$page = $attributes['url'] > 0 ? $attributes['url'] : $attributes['postid'];
+			$page = $attributes['postid'] > 0 ? $attributes['postid'] : $attributes['url'];
 
 			
 			// Get options set in WordPress dashboard (Settings > Insert Pages).
@@ -209,20 +209,13 @@ if ( ! class_exists( 'PressinoInsertWebElem' ) ) {
 				$options = wpip_set_defaults();
 			}
 
-			// $url = $attributes['url'];
-
 			// Get the WP_Post object from the provided slug, or ID.
 			if ( ! is_numeric( $page ) ) {
-	
-					
-				//$url='de1';//test
-
 				$inserted_page = get_page_by_path( $page , OBJECT, 'pressinowebpart');
 			} else {
 				$inserted_page = get_post( intval($page ) );
 			}
 
-			
 			// // Prevent unprivileged users from inserting private posts from others.
 			// if ( is_object( $inserted_page ) && 'publish' !== $inserted_page->post_status ) {
 			// 	$post_type = get_post_type_object( $inserted_page->post_type );
