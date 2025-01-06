@@ -44,11 +44,12 @@ export default function display({ props, editMode }) {
         var tmpTabCount = tmpTabs.length;
         var tmpTabLinks = [];
 
+        var tmpFisrtHit = false;
         if(tmpTabCount){
             //firsttabid = '';
             for( var iPos in tmpTabs){
                 var tmpTab = tmpTabs[iPos];
-               
+
                 var tmpNeedToUpdate = false;
                 var tmpTabUpdates = {};
 
@@ -79,11 +80,23 @@ export default function display({ props, editMode }) {
                     tmpTabUpdates.parent_menuiconpos = menuiconpos;
                 }
 
+                if( tmpTabAtts.groupname != groupname ){
+                    tmpNeedToUpdate = true;
+                    tmpTabUpdates.groupname = groupname;
+                }
+
+                var tmpIsMain = (iPos == "0")
+                if( tmpTabAtts.ismain != tmpIsMain ){
+                    tmpNeedToUpdate = true;
+                    tmpTabUpdates.ismain = tmpIsMain;
+                }
+
                 if( tmpNeedToUpdate ){
                     updateBlockAttributes(tmpTab.clientId, tmpTabUpdates);
                 }
-                tmpTabAtts.groupname = groupname;
-                tmpTabAtts.tabpos = iPos;
+
+                //tmpTabAtts.groupname = groupname;
+                //tmpTabAtts.tabpos = iPos;
 
                 var tmpTabGroup = tmpTabAtts.groupname;
                 var tmpTabItem = tmpTabAtts.itemname || 'tab-' + (iPos+1);

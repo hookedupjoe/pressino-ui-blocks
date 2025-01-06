@@ -16,7 +16,7 @@ import {PressinoUI} from '../../pressino-ui';
  */
 let tmpAttributes = {};
 
-PressinoUI.addAttributes('boolean', tmpAttributes, ['useicon','parent_inverted','parent_panels_inverted', 'parent_labelpaddingwide']);
+PressinoUI.addAttributes('boolean', tmpAttributes, ['useicon','ismain', 'parent_inverted','parent_panels_inverted', 'parent_labelpaddingwide']);
 PressinoUI.addAttributes('number', tmpAttributes, ['tabpos']);
 PressinoUI.addAttributes('text', tmpAttributes, ['itemname', 'groupname', 'tablabel','showstatus','iconname','icontype', 'parent_color', 'parent_insidepadding', 'parent_menuiconpos']);
 

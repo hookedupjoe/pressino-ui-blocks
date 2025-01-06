@@ -65,7 +65,7 @@ export default function display({ props, editMode }) {
             return el('div', tmpNewElAtts, [el('div', {classname: tmpClass}, [tmpContent])]);
         }
 
-        if(tmpAtts.showstatus != 'first'){
+        if(!tmpAtts.ismain){
           tmpNewElAtts.className += ' hidden';
         }
         return el('div', tmpNewElAtts, tmpContent);
