@@ -9,8 +9,8 @@ var classSpecs = {
     string: ['classes']
 }
 
-function getClass(theAtts, theIsEditMode) {
-    var tmpClasses = PressinoUI.getStandardClass('', classSpecs, theAtts, theIsEditMode);
+function getClass(attributes, isEditMode) {
+    var tmpClasses = PressinoUI.getStandardClass('', classSpecs, attributes, isEditMode);
     return tmpClasses
 }
 
@@ -28,7 +28,6 @@ export default function display({ attributes, editMode }) {
     if( tmpLinkFormats?.domAtts?.linkformat ){
         tmpProps = {...tmpProps,...tmpLinkFormats.domAtts}
     }
-
 
     if(editMode === true){
         return (el('div',tmpProps, <InnerBlocks />));
