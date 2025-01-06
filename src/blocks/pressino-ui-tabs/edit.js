@@ -30,30 +30,11 @@ export default function Edit(theProps) {
     const blockProps = useBlockProps();
     const { inverted, color } = attributes;
     var props = theProps;
-    //---
 
     var tmpAtts = props.attributes;
     if (!(tmpAtts.groupname)) {
         tmpAtts.groupname = PressinoUI.getRandomID();
     }
-
-    
-    // function updateInnerAttributes(){
-    //     const { clientId } = props;
-    //     const tmpInnerBlocks = useSelect(
-    //         (select) => select(blockEditorStore).getBlock(clientId).innerBlocks,
-    //     );
-    //     console.log('tmpInnerBlocks len',tmpInnerBlocks?.length)
-    
-    // }
-
-    // useEffect( () => {
-	// 	// When the icon becomes inactive (i.e. isActive is false), reset the editingIcon state
-	// 	// and the creatingIcon state. This means that if the Icon UI is displayed and the icon
-	// 	// becomes inactive (e.g. used arrow keys to move cursor outside of icon bounds), the UI will close.
-	// 	updateInnerAttributes();
-	// }, [ color ] );
-
 
     return <>
 

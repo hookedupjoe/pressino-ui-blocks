@@ -11,11 +11,12 @@ var classSpecs = {
 	string: []
 }
 
-function getClass(theAtts, theIsEditMode) {
-    var tmpClasses = PressinoUI.getStandardClass('ui tabs', classSpecs, theAtts, theIsEditMode);
+function getClass(attributes, theIsEditMode) {
+    var tmpClasses = PressinoUI.getStandardClass('ui tabs', classSpecs, attributes, theIsEditMode);
+    const { classes } = attributes
     
-    if( theAtts.classes ){
-        tmpClasses +=  ' ' + theAtts.classes;
+    if( classes ){
+        tmpClasses +=  ' ' + classes;
     }
 	return tmpClasses
 }
@@ -34,25 +35,17 @@ export default function display({ props, editMode }) {
 
     var tmpTablinksEl = (el('div',{},''));
     if( editMode ){
-        //var tmpMe = PressinoUI.getBlockInEditor(props);
-
         const { clientId } = props;
         const tmpTabs = useSelect(
             (select) => select(blockEditorStore).getBlock(clientId).innerBlocks,
         );
-       // var tmpTabs = tmpMe.innerBlocks;
-        var tmpTabCount = tmpTabs.length;
         var tmpTabLinks = [];
-
-        var tmpFisrtHit = false;
-        if(tmpTabCount){
-            //firsttabid = '';
+        if(tmpTabs.length){
             for( var iPos in tmpTabs){
                 var tmpTab = tmpTabs[iPos];
 
                 var tmpNeedToUpdate = false;
                 var tmpTabUpdates = {};
-
 
                 var tmpTabAtts = tmpTab.attributes;
                 if( tmpTabAtts.parent_color != color ){
@@ -79,33 +72,26 @@ export default function display({ props, editMode }) {
                     tmpNeedToUpdate = true;
                     tmpTabUpdates.parent_menuiconpos = menuiconpos;
                 }
-
                 if( tmpTabAtts.groupname != groupname ){
                     tmpNeedToUpdate = true;
                     tmpTabUpdates.groupname = groupname;
                 }
-
                 var tmpIsMain = (iPos == "0")
                 if( tmpTabAtts.ismain != tmpIsMain ){
                     tmpNeedToUpdate = true;
                     tmpTabUpdates.ismain = tmpIsMain;
                 }
 
+
+
                 if( tmpNeedToUpdate ){
                     updateBlockAttributes(tmpTab.clientId, tmpTabUpdates);
                 }
 
-                //tmpTabAtts.groupname = groupname;
-                //tmpTabAtts.tabpos = iPos;
-
                 var tmpTabGroup = tmpTabAtts.groupname;
                 var tmpTabItem = tmpTabAtts.itemname || 'tab-' + (iPos+1);
                 var tmpTabLabel = tmpTabAtts.tablabel || '';
-                // var tmpTabIcon = tmpTabAtts.iconname || '';
-         
-                // if( !(firsttabid)){
-                //     firsttabid = tmpTabItem;
-                // }
+
                 var tmpExtraClasses = '';
                 if( iPos == 0){
                     tmpExtraClasses += 'active'
@@ -128,8 +114,6 @@ export default function display({ props, editMode }) {
             var tmpTabLinkText = JSON.stringify(tmpTabLinks);
             if( tabsinfo != tmpTabLinkText ){
                 setAttributes({tabsinfo: tmpTabLinkText});
-//                tabsinfo = tmpTabLinkText;
-//                PressinoUI.refreshBlockEditor();
             }
             
         }

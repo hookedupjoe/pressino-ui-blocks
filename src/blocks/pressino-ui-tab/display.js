@@ -1,7 +1,6 @@
 /**
  * Return universal display element used by edit and save functions
  */
-import { InnerBlocks } from '@wordpress/block-editor';
 import { PressinoUI, el } from '../../pressino-ui';
 
 var classSpecs = {
@@ -26,19 +25,8 @@ export default function display({ props, editMode }) {
         var tmpAtts = props.attributes;
 
         var tmpItemName = tmpAtts.itemname || ''
-        var tmpTabLabel = tmpAtts.tablabel || '';
         var tmpContent = [];
         var tmpClass = getClass(props, editMode);
-        var tmpParentAtts = PressinoUI.getParentAttributes(props.clientId);
-
-        if( tmpParentAtts.firsttabid ){
-            if( tmpParentAtts.firsttabid == tmpAtts.itemname ){
-                tmpAtts.showstatus = 'first';
-            } else {
-                tmpAtts.showstatus = '';
-            }
-        }
-       
 
         if( tmpAtts.classes ){
             tmpClass += ' ' + tmpAtts.classes;
