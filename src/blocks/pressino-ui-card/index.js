@@ -15,9 +15,9 @@ import {PressinoUI} from '../../pressino-ui';
  * Setup Block Attributes
  */
 let tmpAttributes = {};
-PressinoUI.addAttributes('number', tmpAttributes, ['mediaID','parentMaxImgHeight']);
+PressinoUI.addAttributes('number', tmpAttributes, ['mediaID','parent_imageheight']);
 PressinoUI.addAttributes('boolean', tmpAttributes, ['fluid', 'raised', 'urlopentab', 'includeBottom']);
-PressinoUI.addAttributes('text', tmpAttributes, ['text', 'title', 'text', 'subtitle', 'color', 'headerColor', 'parentColor', 'parentHeaderType', 'url', 'mediaURL', 'parent-color']);
+PressinoUI.addAttributes('text', tmpAttributes, ['parent_color', 'parent_headertype', 'text', 'title', 'text', 'subtitle', 'color', 'headerColor', 'url', 'mediaURL']);
 
 /**
  * Register Block

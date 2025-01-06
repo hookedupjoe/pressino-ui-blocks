@@ -2,7 +2,10 @@
  * Return universal display element used by edit and save functions
  */
 import { PressinoUI, el } from '../../pressino-ui';
- 
+const { store: blockEditorStore } = wp.blockEditor;
+const { useSelect } = wp.data;
+const { updateBlockAttributes } = wp.data.dispatch( 'core/block-editor' )
+
 var classSpecs = {
     boolean: ['centered'],
 	string: ['color','cardspacing', 'classes']
@@ -16,7 +19,48 @@ function getClass(attributes, theIsEditMode) {
 export default function display({ props, editMode }) {
     var tmpClass = getClass(props.attributes, true);
     const { attributes } = props;
-    const { color, columns } = attributes;
+    const { color, columns, imageheight, headertype } = attributes;
+
+
+    
+    if (editMode){
+        const { clientId } = props;
+        const tmpBlocks = useSelect(
+            (select) => select(blockEditorStore).getBlock(clientId).innerBlocks,
+        );
+        
+        if(tmpBlocks.length){
+            for( var iPos in tmpBlocks){
+                var tmpBlock = tmpBlocks[iPos];
+
+                var tmpNeedToUpdate = false;
+                var tmpBlockUpdates = {};
+
+                var tmpBlockAtts = tmpBlock.attributes;
+                if( tmpBlockAtts.parent_color != color ){
+                    tmpNeedToUpdate = true;
+                    tmpBlockUpdates.parent_color = color;
+                }
+                if( tmpBlockAtts.parent_imageheight != imageheight ){
+                    tmpNeedToUpdate = true;
+                    tmpBlockUpdates.parent_imageheight = imageheight;
+                }
+                if( tmpBlockAtts.parent_headertype != headertype ){
+                    tmpNeedToUpdate = true;
+                    tmpBlockUpdates.parent_headertype = headertype;
+                }
+
+                if( tmpNeedToUpdate ){
+                    updateBlockAttributes(tmpBlock.clientId, tmpBlockUpdates);
+                }
+
+               
+            }
+           
+            
+        }
+    }
+
 
     if (editMode) {
         var tmpUIColor = ''; 
@@ -54,5 +98,6 @@ export default function display({ props, editMode }) {
         return el('div', tmpProps, el(wp.blockEditor.InnerBlocks.Content));
     }
    
+
 
 }

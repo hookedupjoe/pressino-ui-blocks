@@ -17,35 +17,8 @@ import display from './display';
 export default function Edit(props) {
     const { attributes, setAttributes } = props;
     var tmpDisplayObject = display({ props, attributes, editMode: true });
+
     const blockProps = useBlockProps();
-    const { parentColor, parentMaxImgHeight, parentHeaderType} = attributes;
-
-    var tmpParentBlock = PressinoUI.getParentBlock(props.clientId);
-    if( tmpParentBlock ){
-        var tmpParentAttributes =  tmpParentBlock.attributes;
-        var tmpNeedToUpdate = false;
-        var tmpAttsToSet = {};
-
-        if( parentColor != tmpParentAttributes.color ){   
-            tmpAttsToSet.parentColor = tmpParentAttributes.color;
-            tmpNeedToUpdate = true;
-        }
-        if( parentMaxImgHeight != tmpParentAttributes.imageheight ){   
-            tmpAttsToSet.parentMaxImgHeight = tmpParentAttributes.imageheight;
-            tmpNeedToUpdate = true;
-        }
-        if( parentHeaderType != tmpParentAttributes.headertype ){   
-            tmpAttsToSet.parentHeaderType = tmpParentAttributes.headertype;
-            tmpNeedToUpdate = true;
-        }
-       
-        if( tmpNeedToUpdate ){
-            setAttributes(tmpAttsToSet);
-            PressinoUI.refreshBlockEditor();
-        }
-
-    
-    }
 
     const onAddBlock = () => {
         PressinoUI.addBlock({ blockName: 'pressino/cardsection', blockOptions: {
@@ -53,7 +26,6 @@ export default function Edit(props) {
             padding: 'pad0'
         } })
     }
-
 
     const { clientId } = props;
     const tmpChildren = useSelect(

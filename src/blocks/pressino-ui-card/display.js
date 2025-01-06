@@ -14,8 +14,8 @@ function getClass(attributes, isEditMode) {
 }
 
 export default function display({ props, editMode }) {
-    var attributes = props.attributes;
-    const { title, color, mediaURL, parentHeaderType, subtitle, text, url, parentMaxImgHeight, parentColor } = attributes;
+    var { attributes, setAttributes } = props;
+    const { parent_color, parent_imageheight, parent_headertype, title, color, mediaURL, subtitle, text, url } = attributes;
     var theProps = props;
 
     var tmpParentAttributes = PressinoUI.getParentAttributes(props.clientId);
@@ -49,8 +49,8 @@ export default function display({ props, editMode }) {
 
     if (mediaURL) {
         var tmpMediaAtts = { src: mediaURL };
-        if (parentMaxImgHeight > 0) {
-            tmpMediaAtts.style = { "height": parentMaxImgHeight + "px", "object-fit": "cover" };
+        if (parent_imageheight > 0) {
+            tmpMediaAtts.style = { "height": parent_imageheight + "px", "object-fit": "cover" };
         }
 
         tmpContent.push(newEl('div', 'image', el('img', tmpMediaAtts)));
@@ -58,11 +58,11 @@ export default function display({ props, editMode }) {
     var tmpMainContent = [];
     var tmpSub = [];
     var tmpHeaderSize = 'medium';
-    var tmpHeaderColor = color || parentColor || '';
+    var tmpHeaderColor = color || parent_color || '';
     var tmpInverted = '';
     var headeClass = ' actappui ';
     tmpInverted = ' inverted ';
-    if (parentHeaderType == 'inverted') {
+    if (parent_headertype == 'inverted') {
         var tmpItems = [];
 
         if (subtitle) {
@@ -76,7 +76,7 @@ export default function display({ props, editMode }) {
             tmpMainContent.push(newEl('div', ' ui segment pad0 mar0 basic ' + tmpInverted + tmpHeaderColor, [tmpItems]));
         }
 
-    } else if (parentHeaderType == 'light') {
+    } else if (parent_headertype == 'light') {
         var tmpItems = [];
 
         if (subtitle) {
