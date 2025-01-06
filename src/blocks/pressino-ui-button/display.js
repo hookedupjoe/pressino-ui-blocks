@@ -2,7 +2,6 @@
  * Return universal display element used by edit and save functions
  */
 import { PressinoUI, el } from '../../pressino-ui';
-// import { getIconEl } from '../../icons';
 
 var classSpecs = {
 	boolean: ['fluid','compact','basic','circular'],
@@ -13,8 +12,6 @@ function getClass(theAtts, theIsEditMode) {
     var tmpClasses = PressinoUI.getStandardClass('ui button ', classSpecs, theAtts, theIsEditMode);
 	return tmpClasses
 }
-
-
 
 export default function display({ attributes, editMode }) {
         var tmpCN = getClass(attributes, true);
