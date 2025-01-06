@@ -2,13 +2,11 @@
  * In-Edit UI
  */
 import { __ } from '@wordpress/i18n';
-import { useBlockProps, InspectorControls, BlockControls, RichText } from '@wordpress/block-editor';
-import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
+import { useBlockProps, InspectorControls, BlockControls } from '@wordpress/block-editor';
+import { PanelBody } from '@wordpress/components';
 import { istr, PressinoUI, attNamesIcon } from '../../pressino-ui';
-import display, { getExtraContent } from './display';
+import display from './display';
 import { PressinoAlignmentControl } from '../../components/pressino-alignment-control'
-import { getClass } from './display';
-import ReactDOMServer from 'react-dom/server';
 import { useState } from '@wordpress/element';
 
 /**
@@ -16,40 +14,13 @@ import { useState } from '@wordpress/element';
  */
 export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
-    var tmpAtts = theProps.attributes;
 
     var tmpDisplay = display({attributes, editMode: true});
     const [isQuickInserterOpen, setQuickInserterOpen] = useState(false);
     const [isInserterOpen, setInserterOpen] = useState(false);
-
-    // var tmpDisplay = ''; //display({ attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { iconontop, useicon, alignment, attached, block } = attributes;
-    const checkboxList = ['', '', '', '', '', '', ''];
-    const tmpExtra = getExtraContent(attributes);
-
-
-    // var tmpClassName = getClass(attributes, true);
-    // var tmpExtraClasses = tmpClassName;
-
-    // if (attributes.subtext != '' && attributes.dividing) {
-    //     tmpClassName = tmpClassName.replace('dividing', '');
-    // }
-    // var tmpShowSub = !attached && !block && attributes.subtext != '';
-
-    // let tmpSubText = tmpShowSub ? <div className={'ui header  mar0  pad0 marb15 ' + attributes?.color + tmpExtraClasses}><div class="ui sub header">{attributes.subtext}</div></div> : <div class="marb15"></div>;
-
+    const { useicon, alignment } = attributes;
     
-    // let tmpDisplay = [<RichText
-    //     tagName="h2"
-    //     placeholder='Enter you header here'
-    //     className={tmpClassName + ' mar0'}
-    //     allowedFormats={ [ ] }
-    //     identifier="content"
-    //     value={attributes.text}
-    //     onChange={(content) => setAttributes({ text: content })}
-    // />, tmpSubText]
-
     return <>
         <div {...blockProps}>
             <BlockControls group="block">
@@ -74,15 +45,11 @@ export default function Edit(theProps) {
                     {(useicon && PressinoUI.getStandardProperty(theProps, 'iconontop', 'Icon on top (centers header)', 'checkbox'))}
                     {(useicon && PressinoUI.getStandardProperty(theProps, 'iconcolor', 'Icon Color', 'colors'))}
                     {(useicon && PressinoUI.getStandardProperty(theProps, 'iconsize', 'Icon Size', 'iconsizes'))}
-
                     {(! useicon && PressinoUI.getStandardProperty(theProps, 'alignment', 'Alignment', 'alignment'))}
                     {PressinoUI.getStandardProperty(theProps, 'inverted', 'Inverted', 'checkbox')}
                     {PressinoUI.getStandardProperty(theProps, 'dividing', 'Line at bottom', 'checkbox')}
                     {PressinoUI.getStandardProperty(theProps, 'block', 'Show as block', 'checkbox')}
                     {PressinoUI.getStandardProperty(theProps, 'attached', 'Attached', 'attached')}
-
-
-
                 </PanelBody>
 
                 <PanelBody title={istr('Formatting Options')}>
@@ -91,7 +58,6 @@ export default function Edit(theProps) {
                     {PressinoUI.getStandardProperty(theProps, 'bottommargin', 'Bottom Margin', 'bottommargin')}
                     {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
                 </PanelBody>
-
 
             </InspectorControls>
 

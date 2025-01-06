@@ -9,17 +9,18 @@ var classSpecs = {
 }
 
 
-export function getClass(theAtts, theIsEditMode) {
-    var tmpClasses = PressinoUI.getStandardClass('ui header ', classSpecs, theAtts, theIsEditMode);
-    
-    if( !theAtts.fluid && theAtts.size ){
-        tmpClasses += ' ' + theAtts.size;
+export function getClass(attributes, isEditMode) {
+    var tmpClasses = PressinoUI.getStandardClass('ui header ', classSpecs, attributes, isEditMode);
+    const { fluid, size, useicon, alignment, iconontop } = attributes;
+
+    if( !fluid && size ){
+        tmpClasses += ' ' + size;
     }
     //--- Only use alignment if icon is not in use
-    if( !theAtts.useicon && theAtts.alignment ){
-        tmpClasses += ' ' + theAtts.alignment;
+    if( !useicon && alignment ){
+        tmpClasses += ' ' + alignment;
     }
-    if( theAtts.useicon && theAtts.iconontop ){
+    if( useicon && iconontop ){
         tmpClasses += ' icon center aligned'
     }
     tmpClasses = tmpClasses.trim().replace('  ',' ')
@@ -35,7 +36,7 @@ export function getExtraContent(attributes) {
 }
 
 export default function display({ attributes, editMode }) {
-        const { iconontop, useicon, iconname, attached, block } = attributes;
+        const { iconontop, useicon, iconname } = attributes;
         var tmpCN = getClass(attributes, true);
         
         var tmpAtts = attributes;
