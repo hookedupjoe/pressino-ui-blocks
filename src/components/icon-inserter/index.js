@@ -57,16 +57,18 @@ export default function InserterModal(props) {
 	// Get the default type, and if there is none, get the first type.
 	const defaultType = iconTypes
 
-
-	//--- Resize scrollable elements when dialog is openned
-	useEffect(() => {
+	function onInserterOpen(){
 		if( isInserterOpen ){
 			//--- Trigger looking for it
 			resizeScrollers();
 		}
-	}, [isInserterOpen]);
+	}
+	//--- Use reference for useEffects that run on an item
+	//--- Resize scrollable elements when dialog is openned
+	useEffect(onInserterOpen, [isInserterOpen]);
 
 
+	//--- This one runs only once, not using reference
 	//--- Resize scrollable on window change
 	useEffect(() => {
 		//--- Handle window resize

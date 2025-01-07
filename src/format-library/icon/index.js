@@ -29,15 +29,16 @@ function Edit( {
 
 	// We only need to store the button element that opened the popover. We can ignore the other states, as they will be handled by the onFocus prop to return to the rich text field.
 	const [ openedBy, setOpenedBy ] = useState( null );
-
-	useEffect( () => {
+	const onIsActive =  () => {
 		// When the icon becomes inactive (i.e. isActive is false), reset the editingIcon state
 		// and the creatingIcon state. This means that if the Icon UI is displayed and the icon
 		// becomes inactive (e.g. used arrow keys to move cursor outside of icon bounds), the UI will close.
 		if ( ! isActive ) {
 			setAddingIcon( false );
 		}
-	}, [ isActive ] );
+	}
+
+	useEffect(onIsActive, [ isActive ] );
 
 	useLayoutEffect( () => {
 		const editableContentElement = contentRef.current;

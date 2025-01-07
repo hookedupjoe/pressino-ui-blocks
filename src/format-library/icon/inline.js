@@ -160,6 +160,9 @@ function InlineIconUI( {
 		
 	let richIconTextValue = getRichTextValueFromSelection( value, isActive, controlname, noEditState.selectActive );
 	function checkCurrentIcon(){
+
+		if(isCollapsed( value )) return false;
+
 		var tmpFormats = richIconTextValue?.formats;
 		var tmpIcons = [];
 		noEditState.atIndex = 0;
@@ -222,7 +225,7 @@ function InlineIconUI( {
 		[]
 	);
 
-	useEffect( () => {
+	const onAddingIcon = () => {
 		checkCurrentIcon();
 		if ( addingIcon && !isActive && !(noEditState.selectActive)) {
 			setQuickInserterOpen(true);
@@ -230,8 +233,9 @@ function InlineIconUI( {
 		if(!addingIcon){
 			noEditState.selectActive = false;
 		}
-	}, [ addingIcon ] );
-	
+	}
+	//--- Using reference to useEffect
+	useEffect( onAddingIcon, [ addingIcon ] );
 	
 	const popoverAnchor = useAnchor( {
 		editableContentElement: contentRef.current,
