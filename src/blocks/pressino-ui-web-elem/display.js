@@ -9,8 +9,8 @@ var classSpecs = {
 	string: ['color','size', 'attached', 'float', 'classes','padding','margin','bottommargin']
 }
 
-function getClass(theAtts, theIsEditMode) {
-    var tmpClasses = PressinoUI.getStandardClass('ui button ', classSpecs, theAtts, theIsEditMode);
+function getClass(attributes, isEditMode) {
+    var tmpClasses = PressinoUI.getStandardClass('ui button ', classSpecs, attributes, isEditMode);
 	return tmpClasses
 }
 
@@ -18,7 +18,7 @@ function getClass(theAtts, theIsEditMode) {
 
 export default function display({ attributes, editMode }) {
         var tmpCN = getClass(attributes, true);
-        const {useicon,iconname,icontype,iconalign,iconaslabel} = attributes;
+        const {useicon,iconname,iconalign,iconaslabel} = attributes;
         var tmpAtts = attributes;
         var tmpText = tmpAtts.text;
         var tmpExtraEl = '';

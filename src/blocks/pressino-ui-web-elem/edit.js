@@ -15,11 +15,9 @@ let refreshedBlock = false;
 /**
  * @return {Element} Element to render.
  */
-export default function Edit(theProps) {
-    const { attributes, setAttributes } = theProps;
-    
-
-    var tmpDisplay = ''; //display({ attributes, editMode: true });
+export default function Edit(props) {
+    const { setAttributes } = props;
+    var tmpDisplay = ''; 
    
     //--- Trigger resize to assure all the dynamic content is refreshed
     window.dispatchEvent(new Event('resize'));
@@ -37,21 +35,19 @@ export default function Edit(theProps) {
     refreshIfNeeded()
 
 
-    tmpDisplay = theProps.attributes.postid > 0 ? (
-        
-                    <><div className='ui segment pad3'><ServerSideRender
-                    block="pressino/webpart"
-                    key="pressino/webpart"
-                    attributes={ theProps.attributes }
-                /></div></>
-                ) : (
-                    <div class="ui segment basic right aligned pad5"><div class="ui right pointing label orange large" key="pressino/webpart">
-                        { istr( 'Select a web part to insert in settings.' ) }
-                    </div></div>
-                )
+    tmpDisplay = props.attributes.postid > 0 ? (
+        <><div className='ui segment pad3'><ServerSideRender
+            block="pressino/webpart"
+            key="pressino/webpart"
+            attributes={ props.attributes }
+        /></div></>
+        ) : (
+            <div class="ui segment basic right aligned pad5"><div class="ui right pointing label orange large" key="pressino/webpart">
+                { istr( 'Select a web part to insert in settings.' ) }
+            </div></div>
+    )
 
     const blockProps = useBlockProps();
-    
     
     const clearSelection = () => {
         setAttributes({ postid: 0, title: '', url: '' });
@@ -123,12 +119,8 @@ export default function Edit(theProps) {
             <InspectorControls>
 
                 <PanelBody title={istr('General Settings')}>
-
-                    {postSelection(theProps)}
-
-                    {/* {PressinoUI.getStandardProperty(theProps, 'url', 'Target Content or Link', 'url')} */}
+                    {postSelection(props)}
                 </PanelBody>
-
 
             </InspectorControls>
 
