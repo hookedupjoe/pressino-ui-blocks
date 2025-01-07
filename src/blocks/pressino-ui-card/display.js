@@ -14,9 +14,8 @@ function getClass(attributes, isEditMode) {
 }
 
 export default function display({ props, editMode }) {
-    var { attributes, setAttributes } = props;
-    const { parent_color, parent_imageheight, parent_headertype, title, color, mediaURL, subtitle, text, url } = attributes;
-    var theProps = props;
+    const { attributes } = props;
+    const { parent_color, parent_imageheight, parent_headertype, title, color, mediaURL, subtitle, text, url, urlopentab } = attributes;
 
     var tmpParentAttributes = PressinoUI.getParentAttributes(props.clientId);
     var newEl = function(theType, theClass, theEl){
@@ -25,7 +24,7 @@ export default function display({ props, editMode }) {
 
     var tmpContent = [];
 
-    var tmpClass = getClass(theProps.attributes, editMode);
+    var tmpClass = getClass(attributes, editMode);
     var tmpTitle = '';
     if (title) {
         tmpTitle = title;
@@ -60,7 +59,7 @@ export default function display({ props, editMode }) {
     var tmpHeaderSize = 'medium';
     var tmpHeaderColor = color || parent_color || '';
     var tmpInverted = '';
-    var headeClass = ' actappui ';
+    var tmpHeadeClass = ' actappui ';
     tmpInverted = ' inverted ';
     if (parent_headertype == 'inverted') {
         var tmpItems = [];
@@ -72,7 +71,7 @@ export default function display({ props, editMode }) {
             if (!(tmpHeaderColor)) {
                 tmpHeaderColor = 'black';
             }
-            tmpItems.push(newEl('div', 'ui header inverted mar0 ' + headeClass + tmpHeaderSize, [tmpTitle, tmpSub]));
+            tmpItems.push(newEl('div', 'ui header inverted mar0 ' + tmpHeadeClass + tmpHeaderSize, [tmpTitle, tmpSub]));
             tmpMainContent.push(newEl('div', ' ui segment pad0 mar0 basic ' + tmpInverted + tmpHeaderColor, [tmpItems]));
         }
 
@@ -84,7 +83,7 @@ export default function display({ props, editMode }) {
         }
         if (tmpTitle) {
             tmpItems.push(newEl('div', 'ui header ' + tmpHeaderColor + ' ' + tmpHeaderSize, [tmpTitle, tmpSub]));
-            tmpMainContent.push(newEl('div', 'ui message attached mart0 marb0  '+ headeClass + tmpHeaderColor, [tmpItems]));
+            tmpMainContent.push(newEl('div', 'ui message attached mart0 marb0  '+ tmpHeadeClass + tmpHeaderColor, [tmpItems]));
         }
 
     } else {
@@ -93,7 +92,7 @@ export default function display({ props, editMode }) {
             tmpSub = newEl('div', 'subheader', subtitle);
         }
         if (tmpTitle) {
-            tmpItems.push(newEl('div', 'ui header ' + headeClass + tmpHeaderColor + ' ' + tmpHeaderSize, [tmpTitle, tmpSub]));
+            tmpItems.push(newEl('div', 'ui header ' + tmpHeadeClass + tmpHeaderColor + ' ' + tmpHeaderSize, [tmpTitle, tmpSub]));
             tmpMainContent.push(newEl('div', 'ui ' + tmpHeaderColor, [tmpItems]));
         }
     }
