@@ -5,7 +5,7 @@
 	"version": "0.1.0",
 	"title": "UI Segment",
 	"category": "pressino-ui-blocks",
-	"description": "A square to put stuff in.",
+	"description": "A content box with padding and other formatting options.",
 	"example": {},
 	"supports": {
 		"html": false,

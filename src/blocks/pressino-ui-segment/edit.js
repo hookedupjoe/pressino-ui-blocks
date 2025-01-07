@@ -25,28 +25,12 @@ const onAddMessageBlock = () => {
  * @return {Element} Element to render.
  */
 export default function Edit(props) {
-    const { attributes, setAttributes } = props;
+    const { attributes } = props;
     var tmpDisplay = display({ attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { raised, basic, attached } = attributes;
+    const { basic } = attributes;
     let tmpEditToolbar = '';
-    // let tmpEditToolbar = !props.isSelected ?  '' : <Toolbar label="Options">
-    //     <ToolbarGroup>
-    //         <ToolbarButton
-    //             icon={blockIcon}
-    //             label="Add Header"
-    //             text="Add Header"
-    //             onClick={onAddHeaderBlock}
-    //         />
-    //         <ToolbarButton
-    //             icon={blockIcon}
-    //             label="Add Message"
-    //             text="Add Message"
-    //             onClick={onAddMessageBlock}
-    //         />
-    //     </ToolbarGroup>
-    // </Toolbar>;
-
+  
     return <>
         <div {...blockProps}>
             {tmpEditToolbar}
