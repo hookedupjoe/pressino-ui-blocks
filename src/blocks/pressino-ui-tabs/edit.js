@@ -56,7 +56,7 @@ export default function Edit(theProps) {
                 {PressinoUI.getStandardProperty(theProps, 'color', 'Tabs Color', 'colors')}
                 {PressinoUI.getStandardProperty(theProps, 'inverted', 'Tabs Inverted', 'checkbox')}
                 {PressinoUI.getStandardProperty(theProps, 'panelsinverted', 'Tab Panels Inverted', 'checkbox')}
-                {PressinoUI.getStandardProperty(theProps, 'insidepadding', 'Tab Body Padding', 'padding', true)}
+                {PressinoUI.getStandardProperty(theProps, 'insidepadding', 'Tab Body Padding', 'padding')}
                 {PressinoUI.getStandardProperty(theProps, 'labelpaddingwide', 'Wide Label Padding', 'checkbox')}
                 {PressinoUI.getStandardProperty(theProps, 'menuiconpos', 'Tab Icon Position', 'menuiconpos')}
                 {PressinoUI.getStandardProperty(theProps, 'bodyonly', 'Exclude the tabs', 'checkbox')}

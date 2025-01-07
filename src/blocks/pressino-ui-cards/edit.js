@@ -50,9 +50,9 @@ export default function Edit(props) {
                     {PressinoUI.getStandardProperty(props, 'mincolwidth', 'Min Column Width', 'number')}
 
                     {PressinoUI.getStandardProperty(props, 'cardspacing', 'Space Between Cards', 'slimwidespacing')}
-                    {PressinoUI.getStandardProperty(props, 'imageheight', 'Cards Image Height', 'number', true)}
-                    {PressinoUI.getStandardProperty(props, 'color', 'Cards Color', 'colors', true)}
-                    {PressinoUI.getStandardProperty(props, 'headertype', 'Header Type', 'inverted', true)}
+                    {PressinoUI.getStandardProperty(props, 'imageheight', 'Cards Image Height', 'number')}
+                    {PressinoUI.getStandardProperty(props, 'color', 'Cards Color', 'colors')}
+                    {PressinoUI.getStandardProperty(props, 'headertype', 'Header Type', 'inverted')}
 
                     {PressinoUI.getStandardProperty(props, 'centered', 'Centered', 'checkbox')}
                     {PressinoUI.getStandardProperty(props, 'bottombydefault', 'Has Bottom Section by Default', 'checkbox')}

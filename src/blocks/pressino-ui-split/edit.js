@@ -36,9 +36,9 @@ export default function Edit(theProps) {
     let tmpSidebarControls = <InspectorControls>
   
         <PanelBody title={istr('General Settings')}>
-            {PressinoUI.getStandardProperty(theProps, 'splitratio', 'Split Ratio', 'splitlevels20',true)}
+            {PressinoUI.getStandardProperty(theProps, 'splitratio', 'Split Ratio', 'splitlevels20')}
             {PressinoUI.getStandardProperty(theProps, 'gridspacing', 'Space Between Columns', 'slimwidenospacing')}
-            {PressinoUI.getStandardProperty(theProps, 'stackwhen', 'Stack When', 'stackwhen', true)}
+            {PressinoUI.getStandardProperty(theProps, 'stackwhen', 'Stack When', 'stackwhen')}
         </PanelBody>
 
     </InspectorControls>

@@ -3,8 +3,6 @@ import { PanelBody, SelectControl, Button, TextControl, ToggleControl } from '@w
 import { URLInput } from '@wordpress/block-editor';
 
 import { QuickInserterPopover, InserterModal } from './../components/';
-// isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen
-import { useEffect, useRef, useState } from '@wordpress/element';
 import { getIconEl } from './../icons';
 
 export const attNamesIcon = { iconname: 'iconname', icontype: 'icontype' };
@@ -14,27 +12,6 @@ export const el = wp.element.createElement;
 export const PRIMARY_NAMESPACE = 'pressino-ui-blocks';
 export function istr(theString) {
 	return __(theString, PRIMARY_NAMESPACE);
-}
-
-
-
-function refreshBlockEditor() {
-	return;
-	var tmpBlockClientId = '';
-	var tmpThis = wp.data.select('core/block-editor').getSelectedBlock();
-	if (tmpThis && tmpThis.clientId) {
-		tmpBlockClientId = tmpThis.clientId;
-		ActionAppCore.lastBlockClientId = tmpBlockClientId;
-	} else {
-		tmpBlockClientId = ActionAppCore.lastBlockClientId || false;
-	}
-	console.log('tmpBlockClientId',tmpBlockClientId)
-
-	wp.data.dispatch('core/block-editor').synchronizeTemplate();
-	if (tmpBlockClientId) {
-		wp.data.dispatch('core/block-editor').selectBlock(tmpBlockClientId)
-	}
-
 }
 
 function getLinkFormattingOptions(props){
@@ -170,37 +147,20 @@ function getSettingsForIcon(props) {
 		setQuickInserterOpen,
 		attributes,
 		setAttributes,
-		refreshChildren,
 	} = props;
 
-	// var tmpOnChangeFunc = (theURL, thePost) => {
-	// 	var tmpToSet = {};
-	// 	tmpToSet[attname] = theURL;
-
-	// 	setAttributes(tmpToSet);
-	// }
-
-	
 	function onSelectedItem(theItem){
 		let tmpAttNames = attname || attNamesIcon;
 		setInserterOpen(false);
 		setQuickInserterOpen(false);
 		var tmpAtts = {}
-		
 		tmpAtts[tmpAttNames.iconname] = theItem.className || 'icon users'
 		tmpAtts[tmpAttNames.icontype] = theItem.type || 'default'
-	
 		setAttributes(tmpAtts)
-		if( refreshChildren ){
-			refreshBlockEditor();
-		}
-		
 	}
 
-	
 	return <div className="marb10">
 
-		
 		<InserterModal
 				onSelectedItem={ onSelectedItem }
 				isInserterOpen={ isInserterOpen }
@@ -224,36 +184,25 @@ function getSettingsForIcon(props) {
 
 }
 
-function getStandardProperty(theProps, theAttName, theLabel, theControlType, theOnChange, theSelectionList, theOptions) {
+function getStandardProperty(props, theAttName, theLabel, theControlType, theOnChange, theSelectionList, theOptions) {
 
-	const { attributes, setAttributes } = theProps;
+	const { attributes, setAttributes } = props;
 	var tmpContents = [];
 	var tmpAtts = attributes;
 
 
 	var tmpOnChange = theOnChange;
+	if( tmpOnChange === true ){
+		tmpOnChange = null;
+	}
 	var tmpVal = tmpAtts[theAttName];
 
 	if (theControlType == 'checkbox') {
-		var tmpDoRefresh = false;
-		if (theOnChange === true) {
-			tmpDoRefresh = true;
-			theOnChange = undefined;
-		}
-
-		if (!tmpOnChange) {
+		if (!(tmpOnChange)) {
 			tmpOnChange = () => {
 				var tmpAddedAtts = {};
 				tmpAddedAtts[theAttName] = !tmpVal;
 				setAttributes(tmpAddedAtts);
-				// if (tmpDoRefresh) {
-				// 	console.log('refreshing block editor')
-				// 	refreshBlockEditor();
-				// }
-
-				//--- ToDo: 
-				//--- Always refresh block editor on change
-				refreshBlockEditor();
 			}
 		}
 
@@ -263,40 +212,24 @@ function getStandardProperty(theProps, theAttName, theLabel, theControlType, the
 			onChange={tmpOnChange}
 		/>)
 	} else if (theControlType == 'text' || theControlType == 'number') {
-		tmpContents.push(getTextControl(theProps, theAttName, theLabel, tmpVal, tmpOnChange, theControlType));
+		tmpContents.push(getTextControl(props, theAttName, theLabel, tmpVal, tmpOnChange, theControlType));
 	} else if (theControlType == 'image') {
-		return getCustomImageSelection(theProps, theAttName, theLabel, tmpVal, tmpOnChange, theControlType)
-	// } else if (theControlType == 'icon') {
-	// 	return getCustomIconSelection(theProps, theAttName, theLabel, theControlType, theOnChange, theSelectionList, theOptions)
+		return getCustomImageSelection(props, theAttName, theLabel, tmpVal, tmpOnChange, theControlType)
 	} else if (theControlType == 'url') {
-		return getCustomURLControl(theProps, theAttName, theLabel, tmpVal, tmpOnChange, theControlType)
+		return getCustomURLControl(props, theAttName, theLabel, tmpVal, tmpOnChange, theControlType)
 	} else if (listSources[theControlType]) {
-		tmpContents.push(getSelectControl(theProps, theAttName, theLabel, tmpVal, tmpOnChange, theControlType));
+		tmpContents.push(getSelectControl(props, theAttName, theLabel, tmpVal, tmpOnChange, theControlType));
 	}
-	// if( tmpDoRefresh ){
-	// 	refreshBlockEditor();
-	// }
 	return tmpContents;
 }
 
-function getCustomURLControl(theProps, theAttName, theLabel, theVal, theOnChange, theControlType) {
-	var tmpDoRefresh = false;
-	if (theOnChange === true) {
-		tmpDoRefresh = true;
-		theOnChange = undefined;
-	}
+function getCustomURLControl(props, theAttName, theLabel, theVal, theOnChange, theControlType) {
 	var tmpLabel = theLabel || 'URL / Page to Open';
-
-	var attributes = theProps.attributes;
-
+	var attributes = props.attributes;
 	var tmpOnChangeFunc = (theURL, thePost) => {
 		var tmpToSet = {};
 		tmpToSet[theAttName] = theURL;
-
-		theProps.setAttributes(tmpToSet);
-		if (tmpDoRefresh) {
-			refreshBlockEditor();
-		}
+		props.setAttributes(tmpToSet);
 	}
 	return <div><URLInput
 		label={tmpLabel}
@@ -307,59 +240,32 @@ function getCustomURLControl(theProps, theAttName, theLabel, theVal, theOnChange
 }
 
 
-// function getCustomIconSelection(theProps, theAttName, theLabel, theControlType, theOnChange, theSelectionList, theOptions) {
-// 	return <div>
-// 		<Button
-// 			variant="primary"
-// 			onClick={() => setQuickInserterOpen(true)}
-// 		>
-// 			{istr('Select Icon')}
-// 		</Button>
-// 		<QuickInserterPopover
-// 			setInserterOpen={setInserterOpen}
-// 			isQuickInserterOpen={theOptions.isQuickInserterOpen}
-// 			setQuickInserterOpen={theOptions.setQuickInserterOpen}
-// 			setAttributes={theProps.setAttributes}
-// 		/>
-// 	</div>
 
-// 	// let tmpRet = <button className="ui button black basic circular fluid east labeled icon" onClick={onSelectClick}>Select Icon <i className='icon chevron up'></i></button>
-// 	// return tmpRet;
-// }
-
-function getCustomImageSelection(theProps, theAttName, theLabel, theVal, theOnChange, theControlType) {
-	if (theOnChange === true) {
-		tmpDoRefresh = true;
-		theOnChange = undefined;
-	}
-	//*** Not supporting refresh on image update .. shouldn't effect other items instantly */
-
-	var tmpAtts = theProps.attributes;
+function getCustomImageSelection(props, theAttName, theLabel, theVal, theOnChange, theControlType) {
+	var tmpAtts = props.attributes;
 	var onSelectImage = function (media) {
 		var tmpToSet = {};
 		tmpToSet[theAttName['mediaURL']] = media.url;
 		tmpToSet[theAttName['mediaID']] = media.id;
-		return theProps.setAttributes(tmpToSet);
+		return props.setAttributes(tmpToSet);
 	};
 
 	var onRemoveImage = function () {
 		var tmpToSet = {};
 		tmpToSet[theAttName['mediaURL']] = '';
 		tmpToSet[theAttName['mediaID']] = '';
-		return theProps.setAttributes(tmpToSet);
+		return props.setAttributes(tmpToSet);
 	}
 
 	var tmpMediaURL = tmpAtts[theAttName['mediaURL']];
 
-	//var tmpEl = el('div',{className:'ui label black fluid'},'Card Image');
-	//ToDo: Remove hard coded mediaID and mediaURL references
 	var tmpMediaEl = el(wp.blockEditor.MediaUpload, {
 		onSelect: onSelectImage,
 		type: 'image',
-		value: theProps.attributes[theAttName['mediaID']],
+		value: props.attributes[theAttName['mediaID']],
 		render: function (obj) {
 
-			if (!theProps.attributes.mediaID) {
+			if (!props.attributes.mediaID) {
 				return el('div', { className: 'pad2' },
 					el('div', { className: 'ui button blue basic', onClick: obj.open }, 'Select Image')
 				)
@@ -382,23 +288,14 @@ function getControlImage() {
 
 
 
-function getSelectControl(theProps, theName, theLabel, theValue, theOnChange, theControlType) {
-	var tmpDoRefresh = false;
-	if (theOnChange === true) {
-		tmpDoRefresh = true;
-		theOnChange = undefined;
-	}
-
-
+function getSelectControl(props, theName, theLabel, theValue, theOnChange, theControlType) {
+	
 	var tmpOnChange = theOnChange;
-	if (!tmpOnChange) {
+	if (!(tmpOnChange)) {
 		tmpOnChange = (value) => {
 			var tmpAddedAtts = {};
 			tmpAddedAtts[theName] = value;
-			theProps.setAttributes(tmpAddedAtts);
-			if (tmpDoRefresh) {
-				refreshBlockEditor();
-			}
+			props.setAttributes(tmpAddedAtts);
 		}
 	}
 
@@ -413,16 +310,10 @@ function getSelectControl(theProps, theName, theLabel, theValue, theOnChange, th
 	/>)
 }
 
-function getTextControl(theProps, theName, theLabel, theValue, theOnChange, theControlType) {
-
-	var tmpDoRefresh = false;
-	if (theOnChange === true) {
-		tmpDoRefresh = true;
-		theOnChange = undefined;
-	}
+function getTextControl(props, theName, theLabel, theValue, theOnChange, theControlType) {
 
 	var tmpOnChange = theOnChange;
-	if (!tmpOnChange) {
+	if (!(tmpOnChange)) {
 		tmpOnChange = (value) => {
 			var tmpVal = value;
 			if (theControlType == 'number') {
@@ -433,10 +324,7 @@ function getTextControl(theProps, theName, theLabel, theValue, theOnChange, theC
 			}
 			var tmpNew = {};
 			tmpNew[theName] = tmpVal;
-			theProps.setAttributes(tmpNew);
-			if (tmpDoRefresh) {
-				refreshBlockEditor();
-			}
+			props.setAttributes(tmpNew);
 		};
 	}
 
@@ -466,9 +354,7 @@ function getStandardClass(theTypeClass, theSpecs, theAtts, theIsEditMode) {
 	var tmpAtts = theAtts;
 	var tmpCN = theTypeClass || '';
 	var tmpSpecs = theSpecs;
-	// if( tmpSpecs.boolean.length || tmpSpecs.string.length ){
-	// 	return theTypeClass; 
-	// }
+
 	for (var iPos = 0; iPos < tmpSpecs.boolean.length; iPos++) {
 		var tmpName = tmpSpecs.boolean[iPos];
 		if (tmpAtts[tmpName]) {
@@ -1013,8 +899,6 @@ export const listSources = {
 	"slimwidenospacing": "Default|,None|nospace,Slim|slimspace,Wide|widespace,Extra Wide|xwidespace",
 	"iconsizes": "Default|,Tiny|itiny,Small|ismall,Medium|imedium,Large|ilarge,Huge|ihuge",
 	"yesno": "Yes,No",
-	"states": "Alabama|AL,Alaska|AK,Arizona|AZ,Arkansas|AR,California|CA,Colorado|CO,Connecticut|CT,Delaware|DE,District Of Columbia|DC,Florida|FL,Georgia|GA,Hawaii|HI,Idaho|ID,Illinois|IL,Indiana|IN,Iowa|IA,Kansas|KS,Kentucky|KY,Louisiana|LA,Maine|ME,Maryland|MD,Massachusetts|MA,Michigan|MI,Minnesota|MN,Mississippi|MS,Missouri|MO,Montana|MT,Nebraska|NE,Nevada|NV,New Hampshire|NH,New Jersey|NJ,New Mexico|NM,New York|NY,North Carolina|NC,North Dakota|ND,Ohio|OH,Oklahoma|OK,Oregon|OR,Pennsylvania|PA,Rhode Island|RI,South Carolina|SC,South Dakota|SD,Tennessee|TN,Texas|TX,Utah|UT,Vermont|VT,Virginia|VA,Washington|WA,West Virginia|WV,Wisconsin|WI,Wyoming|WY",
-	"countries": "Afghanistan|AF,Åland Islands|AX,Albania|AL,Algeria|DZ,American Samoa|AS,Andorra|AD,Angola|AO,Anguilla|AI,Antarctica|AQ,Antigua and Barbuda|AG,Argentina|AR,Armenia|AM,Aruba|AW,Australia|AU,Austria|AT,Azerbaijan|AZ,Bahamas|BS,Bahrain|BH,Bangladesh|BD,Barbados|BB,Belarus|BY,Belgium|BE,Belize|BZ,Benin|BJ,Bermuda|BM,Bhutan|BT,Bolivia, Plurinational State of|BO,Bonaire, Sint Eustatius and Saba|BQ,Bosnia and Herzegovina|BA,Botswana|BW,Bouvet Island|BV,Brazil|BR,British Indian Ocean Territory|IO,Brunei Darussalam|BN,Bulgaria|BG,Burkina Faso|BF,Burundi|BI,Cambodia|KH,Cameroon|CM,Canada|CA,Cape Verde|CV,Cayman Islands|KY,Central African Republic|CF,Chad|TD,Chile|CL,China|CN,Christmas Island|CX,Cocos (Keeling) Islands|CC,Colombia|CO,Comoros|KM,Congo|CG,Congo, the Democratic Republic of the|CD,Cook Islands|CK,Costa Rica|CR,Côte d'Ivoire|CI,Croatia|HR,Cuba|CU,Curaçao|CW,Cyprus|CY,Czech Republic|CZ,Denmark|DK,Djibouti|DJ,Dominica|DM,Dominican Republic|DO,Ecuador|EC,Egypt|EG,El Salvador|SV,Equatorial Guinea|GQ,Eritrea|ER,Estonia|EE,Ethiopia|ET,Falkland Islands (Malvinas|FK,Faroe Islands|FO,Fiji|FJ,Finland|FI,France|FR,French Guiana|GF,French Polynesia|PF,French Southern Territories|TF,Gabon|GA,Gambia|GM,Georgia|GE,Germany|DE,Ghana|GH,Gibraltar|GI,Greece|GR,Greenland|GL,Grenada|GD,Guadeloupe|GP,Guam|GU,Guatemala|GT,Guernsey|GG,Guinea|GN,Guinea-Bissau|GW,Guyana|GY,Haiti|HT,Heard Island and McDonald Islands|HM,Holy See (Vatican City State|VA,Honduras|HN,Hong Kong|HK,Hungary|HU,Iceland|IS,India|IN,Indonesia|ID,Iran, Islamic Republic of|IR,Iraq|IQ,Ireland|IE,Isle of Man|IM,Israel|IL,Italy|IT,Jamaica|JM,Japan|JP,Jersey|JE,Jordan|JO,Kazakhstan|KZ,Kenya|KE,Kiribati|KI,Korea, Democratic People's Republic of|KP,Korea, Republic of|KR,Kuwait|KW,Kyrgyzstan|KG,Lao People's Democratic Republic|LA,Latvia|LV,Lebanon|LB,Lesotho|LS,Liberia|LR,Libya|LY,Liechtenstein|LI,Lithuania|LT,Luxembourg|LU,Macao|MO,Macedonia, the former Yugoslav Republic of|MK,Madagascar|MG,Malawi|MW,Malaysia|MY,Maldives|MV,Mali|ML,Malta|MT,Marshall Islands|MH,Martinique|MQ,Mauritania|MR,Mauritius|MU,Mayotte|YT,Mexico|MX,Micronesia, Federated States of|FM,Moldova, Republic of|MD,Monaco|MC,Mongolia|MN,Montenegro|ME,Montserrat|MS,Morocco|MA,Mozambique|MZ,Myanmar|MM,Namibia|NA,Nauru|NR,Nepal|NP,Netherlands|NL,New Caledonia|NC,New Zealand|NZ,Nicaragua|NI,Niger|NE,Nigeria|NG,Niue|NU,Norfolk Island|NF,Northern Mariana Islands|MP,Norway|NO,Oman|OM,Pakistan|PK,Palau|PW,Palestinian Territory, Occupied|PS,Panama|PA,Papua New Guinea|PG,Paraguay|PY,Peru|PE,Philippines|PH,Pitcairn|PN,Poland|PL,Portugal|PT,Puerto Rico|PR,Qatar|QA,Réunion|RE,Romania|RO,Russian Federation|RU,Rwanda|RW,Saint Barthélemy|BL,Saint Helena, Ascension and Tristan da Cunha|SH,Saint Kitts and Nevis|KN,Saint Lucia|LC,Saint Martin (French part|MF,Saint Pierre and Miquelon|PM,Saint Vincent and the Grenadines|VC,Samoa|WS,San Marino|SM,Sao Tome and Principe|ST,Saudi Arabia|SA,Senegal|SN,Serbia|RS,Seychelles|SC,Sierra Leone|SL,Singapore|SG,Sint Maarten (Dutch part|SX,Slovakia|SK,Slovenia|SI,Solomon Islands|SB,Somalia|SO,South Africa|ZA,South Georgia and the South Sandwich Islands|GS,South Sudan|SS,Spain|ES,Sri Lanka|LK,Sudan|SD,Suriname|SR,Svalbard and Jan Mayen|SJ,Swaziland|SZ,Sweden|SE,Switzerland|CH,Syrian Arab Republic|SY,Taiwan, Province of China|TW,Tajikistan|TJ,Tanzania, United Republic of|TZ,Thailand|TH,Timor-Leste|TL,Togo|TG,Tokelau|TK,Tonga|TO,Trinidad and Tobago|TT,Tunisia|TN,Turkey|TR,Turkmenistan|TM,Turks and Caicos Islands|TC,Tuvalu|TV,Uganda|UG,Ukraine|UA,United Arab Emirates|AE,United Kingdom|GB,United States|US,United States Minor Outlying Islands|UM,Uruguay|UY,Uzbekistan|UZ,Vanuatu|VU,Venezuela, Bolivarian Republic of|VE,Viet Nam|VN,Virgin Islands, British|VG,Virgin Islands, U.S|VI,Wallis and Futuna|WF,Western Sahara|EH,Yemen|YE,Zambia|ZM,Zimbabwe|ZW",
 	"grid_sizes": "Default|,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",
 	"sizes_header": "Default|,Tiny|tiny,Small|small,Medium|medium,Large|large,Huge|huge",
 	"float": "Default|,Floated Left|floated left,Floated Right|floated right",
@@ -1053,7 +937,6 @@ export const PressinoUI = {
 	getParentAttributes: getParentAttributes,
 	getParentBlock: getParentBlock,
 	getCommonBlock: getCommonBlock,
-	refreshBlockEditor: refreshBlockEditor,
 	getControlImage: getControlImage,
 	getSettingsForIcon: getSettingsForIcon,
 	addBlock: addBlock,

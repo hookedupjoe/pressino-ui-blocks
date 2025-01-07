@@ -38,7 +38,7 @@ export default function Edit(theProps) {
 
     <PanelBody title={istr('General Settings')}>
         {PressinoUI.getStandardProperty(theProps, 'itemname', 'Unique Item Name (Required)', 'text', true) } 
-        {PressinoUI.getStandardProperty(theProps, 'tablabel', 'Tab Label', 'text', true)}
+        {PressinoUI.getStandardProperty(theProps, 'tablabel', 'Tab Label', 'text')}
         {PressinoUI.getStandardProperty(theProps, 'useicon', 'Use Icon', 'checkbox')}
         {(useicon && PressinoUI.getSettingsForIcon({ label: 'Select Icon', attname: attNamesIcon, isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes }))}
     </PanelBody>
