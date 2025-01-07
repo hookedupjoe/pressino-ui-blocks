@@ -8,12 +8,13 @@ var classSpecs = {
     boolean: ['floating', 'compact'],
     string: ['color','size', 'attached', 'margin', 'padding']
 }
-function getClass(theAtts, theIsEditMode) {
+function getClass(attributes, isEditMode) {
     //--- Added clearing so that content stays inside, no logical reason to use it other ways
-    var tmpClasses = PressinoUI.getStandardClass('ui message', classSpecs, theAtts, theIsEditMode);
-    
-    if( theAtts.classes ){
-        tmpClasses = tmpClasses.trim().replace('  ',' ') + ' ' + theAtts.classes;
+    var tmpClasses = PressinoUI.getStandardClass('ui message', classSpecs, attributes, isEditMode);
+    const { classes } = attributes;
+
+    if( classes ){
+        tmpClasses = tmpClasses.trim().replace('  ',' ') + ' ' + classes;
     }
 	return tmpClasses
 }
