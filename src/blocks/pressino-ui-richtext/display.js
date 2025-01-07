@@ -3,7 +3,6 @@
  */
 import { PressinoUI, el } from '../../pressino-ui';
 import { InnerBlocks } from '@wordpress/block-editor';
-import { RichText } from '@wordpress/block-editor';
 
 var classSpecs = {
     boolean: [],

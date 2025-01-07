@@ -38,17 +38,4 @@ export default function Edit(theProps) {
 
     );
 
-    return <>
-        <InspectorControls>
-
-            <PanelBody title={istr('General Options')}>
-                {PressinoUI.getStandardProperty(theProps, 'color', "Color", 'colors')}
-            </PanelBody>
-
-        </InspectorControls>
-        <div {...blockProps}>
-            {tmpDisplay}
-        </div>
-    </>
-
 }
