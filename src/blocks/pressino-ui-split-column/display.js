@@ -9,15 +9,22 @@ var classSpecs = {
 	string: ['classes']
 }
 
-function getClass(theAtts, theIsEditMode) {
-    var tmpClasses = PressinoUI.getStandardClass('', classSpecs, theAtts, theIsEditMode);
+function getClass(attributes, isEditMode) {
+    var tmpClasses = PressinoUI.getStandardClass('', classSpecs, attributes, isEditMode);
     return tmpClasses
 }
 
 export default function display({ attributes, editMode }) {
-    const { ratio, ismain, locationtb, locationlr, parentStackWhen } = attributes;
+    const { ismain, locationtb, locationlr, parent_stackwhen, parent_splitratio } = attributes;
     
-    let tmpSize = parentStackWhen || '';
+    var tmpRatio = parent_splitratio || '10';
+    tmpRatio = parseInt(tmpRatio);
+    if( tmpRatio == 0 ){
+        tmpRatio = 10;
+    }
+    const ratio = ismain ? tmpRatio : 20 - tmpRatio;
+
+    let tmpSize = parent_stackwhen || '';
 
     let classNames = getClass(attributes,editMode);
     classNames += ' flo' + tmpSize + '-flex-' + ratio;
@@ -36,8 +43,7 @@ export default function display({ attributes, editMode }) {
         var tmpPrefix = el('div',{className: 'ui label grey right pointing'}, 'Split Column');
         var tmpNameLabel = el('div',{className: 'ui label grey basic  padr10'}, tmpName);
         var tmpPercLabel = el('div',{className: 'ui label blue basic marr10 toright'}, tmpRatioPerc);
-        
-        //var tmpHM = tmpTabLabel;
+
         var tmpEditHeader = el('div', {className:"ui message pad8 grey small"}, tmpPrefix, tmpNameLabel, tmpPercLabel);
         tmpContent.push(tmpEditHeader)
 

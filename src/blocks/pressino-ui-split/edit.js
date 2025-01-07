@@ -3,13 +3,11 @@
  */
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, TextControl, ToggleControl, ToolbarGroup, ToolbarButton } from '@wordpress/components';
+import { PanelBody } from '@wordpress/components';
 import { istr, PressinoUI, el } from '../../pressino-ui';
-import { BlockControls } from '@wordpress/block-editor';
+import display from './display';
 const { store: blockEditorStore } = wp.blockEditor;
 const { useSelect } = wp.data;
-
-import display from './display';
 
 /**
  * @return {Element} Element to render.
@@ -25,13 +23,6 @@ export default function Edit(theProps) {
         setAttributes({splitratio:'10'})
     }
 
-    const onAddBlock = () => {
-        PressinoUI.addBlock({ blockName: 'pressino/splitcolumn', blockOptions: {
-            extra: true,
-            padding: 'pad0'
-        } })
-    }
-
 
     const { clientId } = props;
     const tmpChildren = useSelect(
@@ -45,12 +36,10 @@ export default function Edit(theProps) {
     let tmpSidebarControls = <InspectorControls>
   
         <PanelBody title={istr('General Settings')}>
-        {PressinoUI.getStandardProperty(theProps, 'splitratio', 'Split Ratio', 'splitlevels20',true)}
-        {PressinoUI.getStandardProperty(theProps, 'gridspacing', 'Space Between Columns', 'slimwidenospacing')}
-        {PressinoUI.getStandardProperty(theProps, 'stackwhen', 'Stack When', 'stackwhen', true)}
-        
+            {PressinoUI.getStandardProperty(theProps, 'splitratio', 'Split Ratio', 'splitlevels20',true)}
+            {PressinoUI.getStandardProperty(theProps, 'gridspacing', 'Space Between Columns', 'slimwidenospacing')}
+            {PressinoUI.getStandardProperty(theProps, 'stackwhen', 'Stack When', 'stackwhen', true)}
         </PanelBody>
-
 
     </InspectorControls>
 
