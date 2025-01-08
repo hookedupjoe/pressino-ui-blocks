@@ -157,8 +157,12 @@ export default function display({ props, editMode }) {
         tmpUIColor = 'grey';
        
         var tmpHdr = el('div', { className: 'ui mar2 pad5 segment inverted center aligned fluid ' + tmpUIColor },  tmpHeaderMsg);
-        var tmpSegClasses = props.attributes.color || '' ;
+        var tmpSegClasses = '';
         
+        // if( ! panelsblack && (color) ){
+        //     tmpSegClasses += color;
+        // }
+
         var tmpRetEl = el('div', { className: 'ui segment pad3 mar0 ' + tmpSegClasses}, null,
             tmpHdr,
             el('div', { className: 'edit-tabs ' + props.attributes.color + ' ' + props.attributes.columns },
@@ -210,9 +214,12 @@ export default function display({ props, editMode }) {
         if( panelsinverted ){
             tmpSegClass += ' inverted';
         } 
+        if( ! panelsblack && (tmpTabsColor) ){
+            tmpSegClass += ' ' + tmpTabsColor;
+        }
         
         tmpTablinksEl = el('div',{className: tmpMenuClass}, tmpTabLinkEls);
-        var tmpContents = el('div', {className:"ui segment attached theme-default-padding " + tmpSegClass + ' ' + tmpTabsColor}, el('div', {className:tmpClass}, el(wp.blockEditor.InnerBlocks.Content)));
+        var tmpContents = el('div', {className:"ui segment attached theme-default-padding " + tmpSegClass}, el('div', {className:tmpClass}, el(wp.blockEditor.InnerBlocks.Content)));
         
         var tmpTabsEl = tmpContents;
         if( bodyonly == true ){
