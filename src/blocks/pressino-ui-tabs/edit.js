@@ -26,7 +26,7 @@ export default function Edit(theProps) {
 
     var tmpAtts = props.attributes;
     if (!(tmpAtts.groupname)) {
-        tmpAtts.groupname = PressinoUI.getRandomID();
+        tmpAtts.groupname = window.crypto.randomUUID();
     }
 
     return <>
