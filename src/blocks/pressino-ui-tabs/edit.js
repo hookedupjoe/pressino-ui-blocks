@@ -3,19 +3,12 @@
  */
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
-import { istr, el, PressinoUI } from '../../pressino-ui';
+import { PanelBody } from '@wordpress/components';
+import { istr, PressinoUI } from '../../pressino-ui';
 import display from './display';
 
 import { BlockControls } from '@wordpress/block-editor';
 import { ToolbarGroup, ToolbarButton } from '@wordpress/components';
-import { plusCircle as blockIcon } from '@wordpress/icons';
-
-import { useEffect } from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
-const { store: blockEditorStore } = wp.blockEditor;
-// const { useSelect } = wp.data;
-
 
 const onAddBlock = () => {
     PressinoUI.addBlock({ blockName: 'pressino/tab' })
