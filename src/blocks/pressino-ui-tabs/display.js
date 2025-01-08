@@ -32,6 +32,7 @@ export default function display({ props, editMode }) {
         tmpInvertedClass = 'inverted'
     }
     var tmpTabsColor = color || '';
+    var tmpCheckIndex = {};
 
     var tmpTablinksEl = (el('div',{},''));
     if( editMode ){
@@ -48,6 +49,14 @@ export default function display({ props, editMode }) {
                 var tmpTabUpdates = {};
 
                 var tmpTabAtts = tmpTab.attributes;
+                const tmpItemName = tmpTabAtts?.itemname || '';
+                if( (tmpItemName) && (tmpCheckIndex[tmpItemName]) ){
+                    tmpNeedToUpdate = true;
+                    tmpTabUpdates.itemname =  PressinoUI.getRandomID();
+                } else {
+                    tmpCheckIndex[tmpItemName] = tmpTabAtts;
+                }
+
                 if( tmpTabAtts.parent_color != color ){
                     tmpNeedToUpdate = true;
                     tmpTabUpdates.parent_color = tmpTabsColor;
