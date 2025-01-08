@@ -1,7 +1,6 @@
 /**
  * Return universal display element used by edit and save functions
  */
-import { InnerBlocks } from '@wordpress/block-editor';
 import { PressinoUI, el } from '../../pressino-ui';
 
 var classSpecs = {
@@ -16,8 +15,8 @@ function getClass(attributes, isEditMode) {
 }
 
 export default function display({ props, editMode }) {
-    var { attributes, setAttributes } = props;
-    const { classes, centered, flexgrowbox} = attributes;
+    var { attributes } = props;
+    const { classes } = attributes;
 
     var tmpContent = [];
     var tmpClass = getClass(attributes, editMode);
