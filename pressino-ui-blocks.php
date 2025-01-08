@@ -10,8 +10,9 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       pressino-ui-blocks
  *
- * @package pressino
+ * @package Pressino
  */
+
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; 
@@ -81,3 +82,35 @@ function create_block_pressino_ui_blocks_block_init() {
 add_action( 'init', 'create_block_pressino_ui_blocks_block_init' );
 require_once PRESSINO_UI_BLOCKS_BASE_DIR . '/cls/PressinoInsertDesignElem.php';
 require_once PRESSINO_UI_BLOCKS_BASE_DIR . '/cls/PressinoInsertWebElem.php';
+
+
+
+function pressino_ui_blocks_frontend_assets() {
+
+	wp_enqueue_style(
+		'pressino-ui-blocks-frontend-style',
+		PRESSINO_UI_BLOCKS_BASE_DIR . '/assets/frontend.css',
+		[],
+		'0.1.0'
+	);
+}
+add_action( 'wp_enqueue_scripts', 'pressino_ui_blocks_frontend_assets' );
+
+
+
+function pressino_ui_blocks_editor_assets() {
+	wp_enqueue_script(
+		'pressino-ui-blocks-editor-script',
+		PRESSINO_UI_BLOCKS_BASE_URL . '/build/index.js',
+		[ 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor' ],
+		'0.1.0'
+	);
+
+	wp_enqueue_style(
+		'pressino-ui-blocks-editor-style',
+		PRESSINO_UI_BLOCKS_BASE_URL . '/assets/editor.css',
+		[],
+		'0.1.0'
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'pressino_ui_blocks_editor_assets' );

@@ -5,6 +5,28 @@ import { URLInput } from '@wordpress/block-editor';
 import { QuickInserterPopover, InserterModal } from './../components/';
 import { getIconEl } from './../icons';
 
+
+// const { createHigherOrderComponent } = wp.compose;
+// const withYourCustomBlockClass = createHigherOrderComponent( ( BlockListBlock ) => { 
+// 	return ( props ) => { window.debugProps = props; return <BlockListBlock { ...props } />; }; 
+// }, 'withYourCustomBlockClass' );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export const attNamesIcon = { iconname: 'iconname', icontype: 'icontype' };
 export const attNamesMedia = { mediaID: 'mediaID', mediaURL: 'mediaURL' };
 export const el = wp.element.createElement;
