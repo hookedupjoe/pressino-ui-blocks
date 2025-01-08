@@ -16,7 +16,7 @@ export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
     var tmpDisplayObject = display({ props: theProps, attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { useicon, iconname, icontype, parent_color, parent_inverted, parent_panels_inverted, parent_insidepadding, 
+    const { setname, useicon, iconname, icontype, parent_color, parent_inverted, parent_panels_inverted, parent_insidepadding, 
         parent_labelpaddingwide, parent_menuiconpos, parentInsidePadding} = attributes;
     var props = theProps;
     //---
@@ -37,10 +37,12 @@ export default function Edit(theProps) {
     let tmpSidebarControls = <InspectorControls>
 
     <PanelBody title={istr('General Settings')}>
-        {PressinoUI.getStandardProperty(theProps, 'itemname', 'Unique Item Name (Required)', 'text', true) } 
         {PressinoUI.getStandardProperty(theProps, 'tablabel', 'Tab Label', 'text')}
         {PressinoUI.getStandardProperty(theProps, 'useicon', 'Use Icon', 'checkbox')}
         {(useicon && PressinoUI.getSettingsForIcon({ label: 'Select Icon', attname: attNamesIcon, isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes }))}
+        {PressinoUI.getStandardProperty(theProps, 'setname', 'Set name of tab', 'checkbox')}
+        {(setname && <div className="ui message orange"><strong>Advanced Setting</strong> - Only use for special purposes.</div>)}
+        {(setname && PressinoUI.getStandardProperty(theProps, 'itemname', 'Unique Item Name (Required)', 'text', true))} 
     </PanelBody>
 
 </InspectorControls>

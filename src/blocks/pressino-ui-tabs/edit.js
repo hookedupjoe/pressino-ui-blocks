@@ -21,7 +21,7 @@ export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
     var tmpDisplay = display({ props: theProps, attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { inverted, color } = attributes;
+    const { setname } = attributes;
     var props = theProps;
 
     var tmpAtts = props.attributes;
@@ -45,7 +45,6 @@ export default function Edit(theProps) {
         <InspectorControls>
 
             <PanelBody title={istr('General Settings')}>
-                {PressinoUI.getStandardProperty(theProps, 'groupname', 'Group Name', 'text')}
                 {PressinoUI.getStandardProperty(theProps, 'color', 'Tabs Color', 'colors')}
                 {PressinoUI.getStandardProperty(theProps, 'inverted', 'Tabs Inverted', 'checkbox')}
                 {PressinoUI.getStandardProperty(theProps, 'panelsinverted', 'Tab Panels Inverted', 'checkbox')}
@@ -53,6 +52,9 @@ export default function Edit(theProps) {
                 {PressinoUI.getStandardProperty(theProps, 'labelpaddingwide', 'Wide Label Padding', 'checkbox')}
                 {PressinoUI.getStandardProperty(theProps, 'menuiconpos', 'Tab Icon Position', 'menuiconpos')}
                 {PressinoUI.getStandardProperty(theProps, 'bodyonly', 'Exclude the tabs', 'checkbox')}
+                {PressinoUI.getStandardProperty(theProps, 'setname', 'Set name of tabs', 'checkbox')}
+                {(setname && <div className="ui message orange"><strong>Advanced Setting</strong> - Only use for special purposes.</div>)}
+                {(setname && PressinoUI.getStandardProperty(theProps, 'groupname', 'Group Name', 'text'))}
                 
             </PanelBody>
 
