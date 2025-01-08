@@ -59,7 +59,6 @@ require_once PRESSINO_UI_BLOCKS_BASE_DIR . '/cls/PressinoUIBlocks.php';
 function create_block_pressino_ui_blocks_block_init() {
 
 	//--- Register Standard UI Blocks
-	register_block_type( __DIR__ . '/build/blocks/pressino-ui-richtext' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-split' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-split-column' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-grid' );
@@ -80,7 +79,7 @@ function create_block_pressino_ui_blocks_block_init() {
 }
 
 add_action( 'init', 'create_block_pressino_ui_blocks_block_init' );
-require_once PRESSINO_UI_BLOCKS_BASE_DIR . '/cls/PressinoInsertDesignElem.php';
+//require_once PRESSINO_UI_BLOCKS_BASE_DIR . '/cls/PressinoInsertDesignElem.php';
 require_once PRESSINO_UI_BLOCKS_BASE_DIR . '/cls/PressinoInsertWebElem.php';
 
 

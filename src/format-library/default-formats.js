@@ -8,5 +8,6 @@ import { underline } from './underline';
 
 export default [
 	image,
+	icon,
 	underline,
 ];
