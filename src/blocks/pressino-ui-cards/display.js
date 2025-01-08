@@ -67,6 +67,14 @@ export default function display({ props, editMode }) {
         var tmpHeaderText = 'UI Cards Container';
         var tmpHeaderMsg = el('div',{className: 'ui larger bolder'}, tmpHeaderText)
 
+        var tmpTemplate = [ [
+            'pressino/card',
+            {},
+            [
+    
+            ]
+        ]];
+
         var tmpAddBtn = '';
         if (props.isSelected) {
             tmpAddBtn = el('div', { className: 'ui compact button basic grey ', elementname: 'card', action: 'pressinoAddElement' }, 'Add Card');
@@ -78,7 +86,7 @@ export default function display({ props, editMode }) {
             tmpHdr,
             el('div', { className: 'edit-cards' + color + ' ' + columns },
                 [
-                    el(wp.blockEditor.InnerBlocks, { allowedBlocks: ['pressino/card'], renderAppender: false }),
+                    el(wp.blockEditor.InnerBlocks, { template: tmpTemplate, allowedBlocks: ['pressino/card'], renderAppender: false }),
                 ]
             )
         )
