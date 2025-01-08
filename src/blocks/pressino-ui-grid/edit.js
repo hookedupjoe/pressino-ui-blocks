@@ -13,7 +13,7 @@ import { ToolbarGroup, ToolbarButton } from '@wordpress/components';
 import { plusCircle as blockIcon } from '@wordpress/icons';
 
 const onAddBlock = () => {
-    PressinoUI.addBlock({ blockName: 'pressino/gridcolumn' })
+    PressinoUI.addBlock({ blockName: 'gridcolumn' })
 }
 
 /**
