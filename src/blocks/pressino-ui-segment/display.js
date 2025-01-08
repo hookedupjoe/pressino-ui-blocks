@@ -20,8 +20,17 @@ function getClass(attributes, isEditMode) {
 }
 
 export default function display({ attributes, editMode }) {
+    const { bordertype, borderwidth } = attributes;
 
     let classNames = getClass(attributes,editMode);
+
+    if( bordertype ){
+        classNames += ' ' + bordertype;
+
+        if( bordertype ){
+            classNames += ' ' + borderwidth;
+        }
+    }
   
     var tmpLinkFormats = LinkFormat.getDisplayInfo({attributes});
     classNames += ' ' + tmpLinkFormats?.className || '';

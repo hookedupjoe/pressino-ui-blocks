@@ -8,9 +8,9 @@
   border: solid 1px;
   border-bottom: solid 3px;
   border-radius: 1em;
-  /* padding: 5px 12px 5px 12px; */
-  padding: .2em .5em .2em .5em;
   text-decoration-line: none;
+  padding: .1em .4em .1em .4em;
+  line-height: 2em;
 }
 
 [linkformat="icon"].link-squared a {
@@ -18,17 +18,18 @@
   border-bottom: solid 3px;
   border-radius: .2em;
   /* padding: 5px 12px 5px 12px; */
-  padding: .2em .5em .2em .5em;
   text-decoration-line: none;
+  padding: .1em .4em .1em .4em;
+  line-height: 2em;
 }
 
 [linkformat="icon"].link-basic a {
   border: solid 0px;
-  border-bottom: solid 3px;
+  border-bottom: solid 2px;
   border-radius: .2em;
-  /* padding: 5px 12px 5px 12px; */
-  padding: .2em .5em .2em .5em;
   text-decoration-line: none;
+  padding: .2em .25em 0em .25em;
+  line-height: 1.7em;
 }
 
 [linkformat="icon"].link-icon a {
@@ -50,10 +51,10 @@
 }
 
 [linkformat="icon"].link-icon a::after {
-  padding-left: .7em;
+  padding-left: .4em;
 }
 [linkformat="icon"].link-icon a::before {
-  padding-right: .7em;
+  padding-right: .4em;
 }
 
 [linkformat="icon"].link-icon.link-basic a::after {

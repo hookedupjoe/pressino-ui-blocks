@@ -16,7 +16,7 @@ import {PressinoUI, LinkFormat, VisibilityOptions} from '../../pressino-ui';
  */
 let tmpAttributes = {};
 PressinoUI.addAttributes('boolean', tmpAttributes, ['raised', 'stacked', 'vertical', 'inverted']);
-PressinoUI.addAttributes('text', tmpAttributes, ['color', 'size', 'attached', 'alignment', 'basic', 'padding', 'classes']);
+PressinoUI.addAttributes('text', tmpAttributes, ['color', 'size', 'attached', 'alignment', 'basic', 'padding', 'classes', 'bordertype', 'borderwidth']);
 
 LinkFormat.addAttributes(tmpAttributes);
 VisibilityOptions.addAttributes(tmpAttributes);

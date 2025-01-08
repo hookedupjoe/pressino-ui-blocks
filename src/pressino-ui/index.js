@@ -889,7 +889,7 @@ export const listSources = {
 	"splitlevels": "10%-90%|1,20%-80%|2,30%-70%|3,40%-60%|4,50%-50%|5,60%-40%|6,70%-30%|7,80%-20%|8,90%-10%|9",
 	"splitlevels20": "10%-90%|2,15%-85%|3,20%-80%|4,25%-75%|5,30%-70%|6,40%-60%|8,50%-50%|10,60%-40%|12,65%-35%|13,70%-30%|14,75%-25%|15,80%-20%|16,85%-15%|17,90%-10%|18",
 	"stackwhen": "Default 768px|,Wide 850px|t,Thin 450px|p",
-
+	"bordertypes": "Default|,Solid Border|bordered,Inset|inset",
 	"hidewhen": "Always Visible|,Hide based on screen size|hide,Show based on screen size|show",
 	"hidewhensizes": "Default 768px|,Small 450px|small,Wide 850px|wide",
 

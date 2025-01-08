@@ -28,7 +28,8 @@ export default function Edit(props) {
     const { attributes } = props;
     var tmpDisplay = display({ attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { basic } = attributes;
+    const { basic, bordertype } = attributes;
+   
     let tmpEditToolbar = '';
   
     return <>
@@ -44,6 +45,8 @@ export default function Edit(props) {
                     {PressinoUI.getStandardProperty(props, 'size', 'Overall size', 'sizes')}
                     {PressinoUI.getStandardProperty(props, 'attached', 'Attached', 'attached')}
                     {PressinoUI.getStandardProperty(props, 'stacked', 'Stacked', 'checkbox')}
+                    {PressinoUI.getStandardProperty(props, 'bordertype', 'Border Type', 'bordertypes')}
+                    {( (bordertype == 'inset' || bordertype == 'bordered') && PressinoUI.getStandardProperty(props, 'borderwidth', 'Border Width', 'slimwidespacing'))}
                 </PanelBody>
 
                 <PanelBody title={istr('Formatting Options')}>
