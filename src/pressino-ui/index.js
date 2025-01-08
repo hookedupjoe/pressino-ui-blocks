@@ -741,7 +741,8 @@ export const CommonBlocks = {
 		"gridcolumn": {
 			type: 'pressino/gridcolumn',
 			name: "Grid Column",
-			attr: {}
+			attr: {flexgrowbox: true},
+			content: [{type: 'pressino/segment'}]
 		},
 		"tabs": {
 			type: 'pressino/tabs',
@@ -834,7 +835,17 @@ export const CommonBlocks = {
 		if( (theBlockOptions) ){
 			tmpAttr = {...tmpAttr,...theBlockOptions};
 		}
-		return wp.blocks.createBlock(tmpItem.type, tmpAttr);
+		var tmpContent = tmpItem?.content || null;
+		var tmpAddContent = [];
+		if( tmpContent ){
+			for( var iPos in tmpContent ){
+				var tmpCItem = tmpContent[iPos];
+				if( tmpCItem?.type){
+					tmpAddContent.push( wp.blocks.createBlock(tmpCItem.type, tmpCItem?.attr || {}) )
+				}
+			}
+		}
+		return wp.blocks.createBlock(tmpItem.type, tmpAttr, tmpAddContent);
 	}
 }
 
