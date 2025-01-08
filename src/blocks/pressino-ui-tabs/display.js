@@ -25,7 +25,7 @@ export default function display({ props, editMode }) {
     const { attributes, setAttributes } = props;
     var tmpClass = getClass(attributes, true);
     const { color, inverted, groupname, tabsinfo, menuiconpos, labelpaddingwide, 
-        insidepadding, panelsinverted, bodyonly } = attributes;
+        insidepadding, panelsinverted, panelsblack, bodyonly } = attributes;
 
     var tmpInvertedClass = '';
     if( inverted == true ){
@@ -68,6 +68,10 @@ export default function display({ props, editMode }) {
                 if( tmpTabAtts.parent_panels_inverted != panelsinverted ){
                     tmpNeedToUpdate = true;
                     tmpTabUpdates.parent_panels_inverted = panelsinverted;
+                }
+                if( tmpTabAtts.parent_panels_black != panelsblack ){
+                    tmpNeedToUpdate = true;
+                    tmpTabUpdates.parent_panels_black = panelsblack;
                 }
                 if( tmpTabAtts.parent_insidepadding != insidepadding ){
                     tmpNeedToUpdate = true;

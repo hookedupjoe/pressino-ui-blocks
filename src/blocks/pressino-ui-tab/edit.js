@@ -16,8 +16,8 @@ export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
     var tmpDisplayObject = display({ props: theProps, attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { setname, useicon, iconname, icontype, parent_color, parent_inverted, parent_panels_inverted, parent_insidepadding, 
-        parent_labelpaddingwide, parent_menuiconpos, parentInsidePadding} = attributes;
+    const { setname, useicon, iconname, parent_color, parent_inverted, parent_panels_inverted, parent_panels_black, parent_insidepadding, 
+        parent_labelpaddingwide, parent_menuiconpos} = attributes;
     var props = theProps;
     //---
     var tmpAtts = attributes;
@@ -25,7 +25,7 @@ export default function Edit(theProps) {
     const parentColor = parent_color;
     const parentInverted = parent_inverted;
     const parentPanelsInverted = parent_panels_inverted;
-
+    
     const [isQuickInserterOpen, setQuickInserterOpen] = useState(false);
     const [isInserterOpen, setInserterOpen] = useState(false);
     
@@ -67,7 +67,10 @@ export default function Edit(theProps) {
     var tmpHeaderClasses = '';
     var tmpEdiSegClasses = '';
     if( parentPanelsInverted ){
-        tmpEdiSegClasses += ' inverted ' + parentColor;
+        tmpEdiSegClasses += ' inverted' ;
+        if( ! parent_panels_black ){
+            tmpEdiSegClasses += ' ' + parentColor;
+        }
     }
 
     if( parent_menuiconpos == 'top' ){
@@ -78,6 +81,7 @@ export default function Edit(theProps) {
         tmpItemClasses += ' ' + parentColor;
     }
 
+
     
     if( parent_labelpaddingwide ){
         tmpHeaderClasses += ' widespace';
@@ -86,6 +90,10 @@ export default function Edit(theProps) {
 
     if( parentInverted ){
        tmpHeaderClasses += ' inverted';
+    }
+    
+    if( parentColor && !parentPanelsInverted ){
+        tmpEdiSegClasses += ' ' + parentColor;
     }
 
     var tmpEditHeader = <div className={'mar0 pad0 ui top attached tabular menu withicon ' + tmpHeaderClasses}>

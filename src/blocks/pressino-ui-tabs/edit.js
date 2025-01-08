@@ -21,7 +21,7 @@ export default function Edit(theProps) {
     const { attributes, setAttributes } = theProps;
     var tmpDisplay = display({ props: theProps, attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { setname } = attributes;
+    const { setname,panelsinverted } = attributes;
     var props = theProps;
 
     var tmpAtts = props.attributes;
@@ -48,6 +48,7 @@ export default function Edit(theProps) {
                 {PressinoUI.getStandardProperty(theProps, 'color', 'Tabs Color', 'colors')}
                 {PressinoUI.getStandardProperty(theProps, 'inverted', 'Tabs Inverted', 'checkbox')}
                 {PressinoUI.getStandardProperty(theProps, 'panelsinverted', 'Tab Panels Inverted', 'checkbox')}
+                {(panelsinverted && PressinoUI.getStandardProperty(theProps, 'panelsblack', 'Panels Inverted Black', 'checkbox'))}
                 {PressinoUI.getStandardProperty(theProps, 'insidepadding', 'Tab Body Padding', 'padding')}
                 {PressinoUI.getStandardProperty(theProps, 'labelpaddingwide', 'Wide Label Padding', 'checkbox')}
                 {PressinoUI.getStandardProperty(theProps, 'menuiconpos', 'Tab Icon Position', 'menuiconpos')}
