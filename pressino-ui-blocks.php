@@ -89,7 +89,7 @@ function pressino_ui_blocks_frontend_assets() {
 
 	wp_enqueue_style(
 		'pressino-ui-blocks-frontend-style',
-		PRESSINO_UI_BLOCKS_BASE_DIR . '/assets/frontend.css',
+		PRESSINO_UI_BLOCKS_BASE_URL . '/assets/frontend.css',
 		[],
 		'0.1.0'
 	);
