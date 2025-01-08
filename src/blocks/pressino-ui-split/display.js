@@ -8,7 +8,7 @@ const { updateBlockAttributes } = wp.data.dispatch( 'core/block-editor' )
 
 var classSpecs = {
     boolean: [],
-	string: ['gridspacing'],
+	string: ['gridspacing', 'gridgap'],
 }
 
 function getClass(attributes, isEditMode) {

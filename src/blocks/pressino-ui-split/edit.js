@@ -37,7 +37,8 @@ export default function Edit(theProps) {
   
         <PanelBody title={istr('General Settings')}>
             {PressinoUI.getStandardProperty(theProps, 'splitratio', 'Split Ratio', 'splitlevels20')}
-            {PressinoUI.getStandardProperty(theProps, 'gridspacing', 'Space Between Columns', 'slimwidenospacing')}
+            {PressinoUI.getStandardProperty(theProps, 'gridspacing', 'Column Spacing when wide', 'slimwidenospacing')}
+            {PressinoUI.getStandardProperty(theProps, 'gridgap', 'Row Spacing when stacked', 'slimwidenogap')}
             {PressinoUI.getStandardProperty(theProps, 'stackwhen', 'Stack When', 'stackwhen')}
         </PanelBody>
 

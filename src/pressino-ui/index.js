@@ -877,6 +877,7 @@ export const listSources = {
 	"valignment": "Default|,Top|top aligned,Middle|middle aligned,Bottom|bottom aligned",
 	"valignbasic": "Default|,Top|top,Middle|middle,Bottom|bottom",
 	"slimwidespacing": "Default|,Slim|slimspace,Wide|widespace",
+	"slimwidegap": "Default|,Slim|slimgap,Wide|widegap",
 	"inverted": "Default|,Light|light,Inverted|inverted",
 	"topmargin": "Default|,0px|mart0,1px|mart1,2px|mart2,3px|mart3,4px|mart4,5px|mart5,6px|mart6,7px|mart7,8px|mart8,9px|mart9,10px|mart10",
 	"bottommargin": "Default|,0px|marb0,1px|marb1,2px|marb2,3px|marb3,4px|marb4,5px|marb5,6px|marb6,7px|marb7,8px|marb8,9px|marb9,10px|marb10",
@@ -896,7 +897,10 @@ export const listSources = {
 	"menuiconpos": "Default|,On Top Of Text|top",
 	"locationlr": "Default|,On the Left|left,On the Right|right",
 	"locationtb": "Default|,On the Top|top,On the Bottom|bottom",
+
 	"slimwidenospacing": "Default|,None|nospace,Slim|slimspace,Wide|widespace,Extra Wide|xwidespace",
+	"slimwidenogap": "Default|,None|nogap,Slim|slimgap,Wide|widegap,Extra Wide|xwidegap",
+
 	"iconsizes": "Default|,Tiny|itiny,Small|ismall,Medium|imedium,Large|ilarge,Huge|ihuge",
 	"yesno": "Yes,No",
 	"grid_sizes": "Default|,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",
