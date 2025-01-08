@@ -69,6 +69,10 @@ export default function Edit(theProps) {
         <div {...blockProps}>
             {tmpEditToolbar}
             <InspectorControls>
+                <PanelBody title={istr('General  Options')}>
+                    {PressinoUI.getStandardProperty(props, 'flexgrowbox', 'Fill column with first item?', 'checkbox')}
+                </PanelBody>
+
                 {! ismain && <PanelBody title={istr('Sidebar Location Options')}>
                     {PressinoUI.getStandardProperty(theProps, 'locationlr', "When Full Screen", 'locationlr')}
                     {PressinoUI.getStandardProperty(theProps, 'locationtb', "When Stacked", 'locationtb')}

@@ -5,7 +5,7 @@ import { PressinoUI, el } from '../../pressino-ui';
 import { InnerBlocks } from '@wordpress/block-editor';
 
 var classSpecs = {
-    boolean: [],
+    boolean: ['flexgrowbox'],
 	string: ['classes']
 }
 

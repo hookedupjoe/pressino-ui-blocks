@@ -15,7 +15,7 @@ import {PressinoUI} from '../../pressino-ui';
  * Setup Block Attributes
  */
 let tmpAttributes = {};
-PressinoUI.addAttributes('boolean', tmpAttributes, ['ismain']);
+PressinoUI.addAttributes('boolean', tmpAttributes, ['ismain','flexgrowbox']);
 PressinoUI.addAttributes('text', tmpAttributes, ['locationlr','locationtb','classes', 'parent_stackwhen', 'parent_splitratio']);
 PressinoUI.addAttributes('number', tmpAttributes, ['ratio']);
 
