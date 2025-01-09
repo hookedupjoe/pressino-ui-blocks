@@ -15,11 +15,11 @@
  .block-editor-block-list__block.wp-block-paragraph.is-selected {
   border: dashed .5px;
  }
-
+/* 
  .block-editor-block-list__block.wp-block-paragraph.is-selected:not([data-empty="true"]) {
   border-top: dashed 2px;
   margin-top: 55px;
- }
+ } */
 
  
  /* General Drop Zone CSS */

@@ -25,7 +25,7 @@ export default function display({ props, editMode }) {
     var tmpTemplate = [ 
         [
             'pressino/splitcolumn',
-            {},
+            {ismain: true},
             []
     ],
         [
