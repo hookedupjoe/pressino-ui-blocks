@@ -1,11 +1,18 @@
 /**
- * Editor only styles for the Icons Inserters
+ * Editor only styles 
  */
 
- .debugiconsloaded {
-    border: solid 2px red !important;
+ .block-editor-block-list__block.wp-block-paragraph {
+  margin: 2px;
+  padding: 3px;
  }
 
+ .block-editor-block-list__block.wp-block-paragraph.is-selected {
+  border: dashed .5px;
+  /* margin-top: 45px; */
+ }
+
+ 
  .wp-pressino-ui-icon-inserter-block .components-drop-zone__content {
     container-type: size;
   }
