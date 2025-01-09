@@ -64,8 +64,9 @@ export default function Edit(theProps) {
                 <PanelBody title={istr('Formatting Options')}>
                     {PressinoUI.getStandardProperty(theProps, 'padding', "Padding", 'padding')}
                     {PressinoUI.getStandardProperty(theProps, 'margin', "Margin", 'margin')}
+                    {PressinoUI.getStandardProperty(theProps, 'flexgrowbox', 'Fill column with first item?', 'checkbox')}
                     {PressinoUI.getStandardProperty(theProps, 'classes', "Additional CSS Class(es)", 'text')}
-                </PanelBody>
+                    </PanelBody>
             </InspectorControls>
             {tmpContent}
         </div>

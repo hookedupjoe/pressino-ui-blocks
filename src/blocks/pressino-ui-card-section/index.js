@@ -15,7 +15,7 @@ import {PressinoUI} from '../../pressino-ui';
  * Setup Block Attributes
  */
 let tmpAttributes = {};
-PressinoUI.addAttributes('boolean', tmpAttributes, ['extra']);
+PressinoUI.addAttributes('boolean', tmpAttributes, ['extra','flexgrowbox']);
 PressinoUI.addAttributes('text', tmpAttributes, ['padding','margin','classes']);
 
 /**
