@@ -143,15 +143,6 @@ if ( ! class_exists( 'PressinoInsertDesignElem' ) ) {
 			}
 			$page = $attributes['url'] > 0 ? $attributes['url'] : $attributes['postid'];
 
-			
-			// Get options set in WordPress dashboard (Settings > Insert Pages).
-			$options = get_option( 'wpip_settings' );
-			if ( false === $options || ! is_array( $options ) || ! array_key_exists( 'wpip_format', $options ) || ! array_key_exists( 'wpip_wrapper', $options ) || ! array_key_exists( 'wpip_insert_method', $options ) || ! array_key_exists( 'wpip_tinymce_filter', $options ) ) {
-				$options = wpip_set_defaults();
-			}
-
-			// $url = $attributes['url'];
-
 			// Get the WP_Post object from the provided slug, or ID.
 			if ( ! is_numeric( $page ) ) {
 	
