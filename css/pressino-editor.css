@@ -6,8 +6,10 @@
 
  /* Style the Paragraph and when there is content - make room for toolbar */
  .block-editor-block-list__block.wp-block-paragraph {
-  margin: 2px;
-  padding: 3px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding-top: 3px;
+  padding-bottom: 3px;
  }
 
  .block-editor-block-list__block.wp-block-paragraph.is-selected {
