@@ -763,8 +763,7 @@ export const CommonBlocks = {
 		"gridcolumn": {
 			type: 'pressino/gridcolumn',
 			name: "Grid Column",
-			attr: {flexgrowbox: true},
-			content: [{type: 'pressino/segment'}]
+			attr: {}
 		},
 		"tabs": {
 			type: 'pressino/tabs',

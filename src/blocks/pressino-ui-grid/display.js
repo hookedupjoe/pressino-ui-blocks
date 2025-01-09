@@ -32,29 +32,13 @@ export default function display({ props, editMode }) {
             var tmpHdr = el('div', { className: 'ui mar2 pad5 segment inverted center aligned fluid ' + tmpUIColor }, tmpHeaderMsg);
             var tmpTemplate = [ [
                 'pressino/gridcolumn',
-                {flexgrowbox: true},
-                [
-                    [
-                        'pressino/segment',
-                        {},
-                        [
-                
-                        ]
-                    ]
-                ]
+                {},
+                []
             ],
             [
                 'pressino/gridcolumn',
-                {flexgrowbox: true},
-                [
-                    [
-                        'pressino/segment',
-                        {},
-                        [
-                
-                        ]
-                    ]
-                ]
+                {},
+                []
             ]];
             return el('div', { className: 'ui segment pad3 mar0 ' + theProps.attributes.color || '' }, null,
                 tmpHdr,

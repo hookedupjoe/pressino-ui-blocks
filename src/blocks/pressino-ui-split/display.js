@@ -25,14 +25,14 @@ export default function display({ props, editMode }) {
     var tmpTemplate = [ 
         [
             'pressino/splitcolumn',
-            {ismain:true, flexgrowbox: true},
-            [['pressino/segment']]
-        ],
+            {},
+            []
+    ],
         [
             'pressino/splitcolumn',
-            {flexgrowbox: true},
-            [['pressino/segment']]
-        ]
+            {},
+            []
+    ]
     ];
 
 
