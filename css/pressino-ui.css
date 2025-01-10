@@ -156,6 +156,7 @@ kbd {
     width: 100% !important;
 }
 
+
 .pui.image-list:not(.stacked)>.item .imgwrap {
     align-items: center;
     padding: 10px;

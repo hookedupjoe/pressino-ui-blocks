@@ -363,11 +363,17 @@ function getTextControl(props, theName, theLabel, theValue, theOnChange, theCont
 	/>
 }
 
-function addAttributes(theType, theAtts, theList) {
-	theList.map((item, i) => {
-		theAtts[item] = {
+function addAttributes(theType, theAtts, theList, theOptionalProps) {
+	var tmpOpts = theOptionalProps || {};
+	theList.map((item) => {
+		let tmpNew = {
 			"type": theType
 		}
+		var tmpOps = tmpOpts[item];
+		if(tmpOps){
+			tmpNew = { ...tmpOps, ...tmpNew}
+		}
+		theAtts[item] = tmpNew;
 	});
 	return true;
 }

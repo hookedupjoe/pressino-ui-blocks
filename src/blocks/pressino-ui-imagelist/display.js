@@ -86,9 +86,10 @@ export default function display({ props, editMode }) {
     } else {
         
         var tmpNewAtts = {className: tmpClass};
-        // if (props.attributes.mincolwidth) {
-        //     tmpNewAtts["mincolwidth"] = props.attributes.mincolwidth;
-        // }
+        if (props.attributes.stackat) {
+            tmpNewAtts["stackat"] = props.attributes.stackat;
+        }
+        tmpNewAtts["auto-adapt"] = "stackable";
 
         return el('div', tmpNewAtts, el(wp.blockEditor.InnerBlocks.Content));
     }
