@@ -11,179 +11,204 @@ kbd {
 }
 
 
-/* UI Image Wrap */
-.pui.imgwrap-list>.item {
+/* UI Image List */
+.pui.image-list>.item {
     display: flex;
 }
-.pui.imgwrap-list.mobile>.item {
+
+.pui.image-list.stacked>.item {
     flex-direction: column;
 }
 
-.pui.imgwrap-list.middle>.item {
+.pui.image-list.middle:not(.stacked)>.item {
+    align-items: center;
+}
+.pui.image-list.stacked.centered>.item {
     align-items: center;
 }
 
-.pui.imgwrap-list.celled>.item {
+.pui.image-list.stacked>.item {
+    padding: 10px;
+}
+
+.pui.image-list.dividing>.item {
     border-bottom: solid 1px;
     text-align: center
 }
 
-.pui.imgwrap-list.celled>.item:first-child {
+.pui.image-list.dividing>.item:first-child {
     border-top: solid 1px;
 }
 
 /* Icons Sizes */
 
 
-.pui.imgwrap-list.small.icon>.item .imgwrap .icon {
+.pui.image-list.small.icon>.item .imgwrap .icon {
     width: 15px;
     min-width: 15px;
 }
 
-.pui.imgwrap-list.medium.icon>.item .imgwrap .icon {
+.pui.image-list.medium.icon>.item .imgwrap .icon {
     width: 24px;
     min-width: 24px;
 }
 
-.pui.imgwrap-list.large.icon>.item .imgwrap .icon {
+.pui.image-list.large.icon>.item .imgwrap .icon {
     width: 28px;
     min-width: 28px;
 }
 
-.pui.imgwrap-list.big.icon>.item .imgwrap .icon {
+.pui.image-list.big.icon>.item .imgwrap .icon {
     width: 35px;
     min-width: 35px;
 }
 
-.pui.imgwrap-list.huge.icon>.item .imgwrap .icon {
+.pui.image-list.huge.icon>.item .imgwrap .icon {
     width: 75px;
     min-width: 75px;
 }
 
 /* Image Sizes */
 
-.pui.imgwrap-list  .image {
+.pui.image-list  .image {
     width: 110px;
     min-width: 120px;
 }
 
-.pui.imgwrap-list.mini  .image {
+.pui.image-list.mini  .image {
     width: 40px;
     min-width: 40px;
 }
-.pui.imgwrap-list.tiny  .image {
+.pui.image-list.tiny  .image {
     width: 60px;
     min-width: 60px;
 }
-.pui.imgwrap-list.small  .image {
+.pui.image-list.small  .image {
     width: 100px;
     min-width: 100px;
 }
-.pui.imgwrap-list.medium  .image {
+.pui.image-list.medium  .image {
     width: 130px;
     min-width: 130px;
 }
-.pui.imgwrap-list.large  .image {
+.pui.image-list.large  .image {
     width: 160px;
     min-width: 160px;
 }
-.pui.imgwrap-list.big  .image {
+.pui.image-list.big  .image {
     width: 200px;
     min-width: 200px;
 }
-.pui.imgwrap-list.huge  .image {
+.pui.image-list.huge  .image {
     width: 250px;
     min-width: 250px;
 }
-.pui.imgwrap-list.massive  .image {
+.pui.image-list.massive  .image {
     width: 300px;
     min-width: 300px;
 }
 
-.pui.imgwrap-list.medium  .image {
+.pui.image-list.medium  .image {
     width: 130px;
     min-width: 130px;
 }
 /* 
-.pui.imgwrap-list.small.icon>.item .imgwrap .image {
+.pui.image-list.small.icon>.item .imgwrap .image {
     width: 15px;
     min-width: 15px;
 }
 
-.pui.imgwrap-list.medium.icon>.item .imgwrap .image {
+.pui.image-list.medium.icon>.item .imgwrap .image {
     width: 24px;
     min-width: 24px;
 }
 
-.pui.imgwrap-list.large.icon>.item .imgwrap .image {
+.pui.image-list.large.icon>.item .imgwrap .image {
     width: 28px;
     min-width: 28px;
 }
 
-.pui.imgwrap-list.big.icon>.item .imgwrap .image {
+.pui.image-list.big.icon>.item .imgwrap .image {
     width: 35px;
     min-width: 35px;
 }
 
-.pui.imgwrap-list.huge.icon>.item .imgwrap .image {
+.pui.image-list.huge.icon>.item .imgwrap .image {
     width: 75px;
     min-width: 75px;
 } */
 
 
 /* 
-  .pui.imgwrap-list.small.icon > .item .imgwrap {
+  .pui.image-list.small.icon > .item .imgwrap {
     width: 60px;
     min-width: 60px;
  }
 
 
 
-  .pui.imgwrap-list.large > .item .imgwrap {
+  .pui.image-list.large > .item .imgwrap {
      width: 190px;
      min-width: 190px;
   } */
 
-.pui.imgwrap-list.medium>.item .imgwrap>span.icon {
+.pui.image-list.medium>.item .imgwrap>span.icon {
     width: 100% !important;
 }
 
-.pui.imgwrap-list>.item .imgwrap {
-    padding: 10px;
+.pui.image-list:not(.stacked)>.item .imgwrap {
     align-items: center;
+    padding: 10px;
+}
+/* .pui.image-list.stacked>.item .imgwrap {
+    align-items: center;
+} */
+
+
+.pui.image-list:not(.stacked)>.item .content {
+    justify-content: center;
 }
 
-
-.pui.imgwrap-list>.item .content {
-    justify-content: center;
-    padding: 10px;
+.pui.image-list>.item .content {
     text-align: left;
 }
+.pui.image-list:not(.stacked) > .item .content {
+    padding: 10px;
+}
+.pui.image-list.stacked>.item .content {
+    padding-top: 10px;
+}
+/* .pui.image-list.stacked.separated > .item  .content   {
+    border-top: solid 1px;
+    margin-top: 5px;
+    padding-top: 5px;
+} */
 
-.pui.imgwrap-list.tight>.item .content {
+.pui.image-list.tight>.item .content {
     padding: 5px;
 }
 
-.pui.imgwrap-list.relaxed>.item .content {
+.pui.image-list.relaxed>.item .content {
     padding: 15px;
 }
 
-.pui.imgwrap-list:not(.mobile).separated>.item .content {
+/* .pui.image-list:not(.stacked).separated>.item .content {
     border-left: solid 1px;
-}
-.pui.imgwrap-list.mobile >.item .content {
+} */
+.pui.image-list.stacked >.item .content {
     width:100%;
 }
-.pui.imgwrap-list.mobile.middle >.item .content {
-  text-align:center;
-}
 
 
 
-.pui.imgwrap-list.mobile.middle >.item .content {
+/* .pui.image-list.stacked.middle >.item .content {
     align-items: left;
+} */
+.pui.image-list.stacked.centered >.item .content {
+    text-align: center;
 }
-/* UI Image Wrap  END*/
+  
+/* UI Image List  END*/
 
 
 

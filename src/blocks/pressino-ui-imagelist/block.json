@@ -1,15 +1,14 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "pressino/iconlistitem",
+	"name": "pressino/imagelist",
 	"version": "0.1.0",
-	"title": "UI Grid Column",
+	"title": "UI Image List",
 	"category": "pressino-ui-blocks",
-	"description": "A panel that lives with other panels in a grid.",
+	"description": "List that has images on the side that stacks when needed.",
 	"example": {},
 	"supports": {
 		"html": false,
-		"inserter": false,
 		"className": false,
 		"customClassName": false
 	},

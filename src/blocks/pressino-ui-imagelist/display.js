@@ -7,13 +7,13 @@ const { useSelect } = wp.data;
 const { updateBlockAttributes } = wp.data.dispatch( 'core/block-editor' )
 
 var classSpecs = {
-    boolean: ['celled','separated','middle'],
+    boolean: ['dividing','middle','centered'],
 	string: ['size']
 }
 
 
 function getClass(theAtts, theIsEditMode) {
-    var tmpClasses = PressinoUI.getStandardClass('pui imgwrap-list', classSpecs, theAtts, theIsEditMode);
+    var tmpClasses = PressinoUI.getStandardClass('pui image-list', classSpecs, theAtts, theIsEditMode);
     if( theAtts.classes ){
         tmpClasses +=  ' ' + theAtts.classes;
     }
@@ -24,8 +24,8 @@ export default function display({ props, editMode }) {
     const { attributes } = props;
     var tmpClass = getClass(attributes, true);
     var theProps = props;
-    const { size, useimage } = attributes;
-    tmpClass += ' ' + (useimage ? 'image' : 'icon');
+    const { size, useicon } = attributes;
+    tmpClass += ' ' + (useicon ? 'icon' : 'image');
 
     if (editMode){
         const { clientId } = props;
@@ -45,9 +45,9 @@ export default function display({ props, editMode }) {
                     tmpNeedToUpdate = true;
                     tmpBlockUpdates.parent_size = size;
                 }
-                if( tmpBlockAtts.parent_useimage != useimage ){
+                if( tmpBlockAtts.parent_useicon != useicon ){
                     tmpNeedToUpdate = true;
-                    tmpBlockUpdates.parent_useimage = useimage;
+                    tmpBlockUpdates.parent_useicon = useicon;
                 }
                
                 if( tmpNeedToUpdate ){
@@ -64,13 +64,13 @@ export default function display({ props, editMode }) {
 
     if (editMode) {
         var tmpUIColor = ''; //was props.attributes.color || 
-        var tmpHeaderText = 'UI Icon List';
+        var tmpHeaderText = 'UI Image List';
         var tmpHeaderMsg = el('div',{className: 'ui larger bolder'}, tmpHeaderText)
 
         tmpUIColor = 'grey';
         var tmpHdr = el('div', { className: 'ui mar2 pad5 segment inverted center aligned fluid ' + tmpUIColor }, tmpHeaderMsg);
         var tmpTemplate = [ [
-            'pressino/iconlistitem',
+            'pressino/imagelistitem',
             {},
             []
         ]];
@@ -78,7 +78,7 @@ export default function display({ props, editMode }) {
             tmpHdr,
             el('div', { className: 'edit-grid' + props.attributes.color  },
                 [
-                    el(wp.blockEditor.InnerBlocks, { template: tmpTemplate, allowedBlocks: ['pressino/iconlistitem'], renderAppender: wp.blockEditor.InnerBlocks.DefaultBlockAppender }),
+                    el(wp.blockEditor.InnerBlocks, { template: tmpTemplate, allowedBlocks: ['pressino/imagelistitem'], renderAppender: wp.blockEditor.InnerBlocks.DefaultBlockAppender }),
                 ]
             )
 

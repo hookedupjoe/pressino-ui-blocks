@@ -14,17 +14,17 @@ export default function Edit(props) {
     const { attributes } = props;
     var tmpDisplayObject = display({ props, attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { parent_useimage } = attributes;
+    const { parent_useicon } = attributes;
 
 
-//true is parent_useimage
+//true is parent_useicon
 
     //ToDo: Add refresh option for itemname and label **
     let tmpSidebarControls = <InspectorControls>
 
         <PanelBody title={istr('General Settings')}>
-        {/* {(!parent_useimage && PressinoUI.getSettingsForIcon({ label: 'Select Icon', attname: attNamesIcon, isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes }))} */}
-        {(true && PressinoUI.getStandardProperty(props, { mediaID: 'mediaID', mediaURL: 'mediaURL' }, 'Card Image', 'image'))}
+        {/* {(parent_useicon && PressinoUI.getSettingsForIcon({ label: 'Select Icon', attname: attNamesIcon, isInserterOpen, setInserterOpen, isQuickInserterOpen, setQuickInserterOpen, attributes, setAttributes }))} */}
+        {(!parent_useicon && PressinoUI.getStandardProperty(props, { mediaID: 'mediaID', mediaURL: 'mediaURL' }, 'Card Image', 'image'))}
         </PanelBody>
 {/* 
         <PanelBody title={istr('Formatting Options')}>

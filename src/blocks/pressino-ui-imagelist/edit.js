@@ -13,7 +13,7 @@ import { ToolbarGroup, ToolbarButton } from '@wordpress/components';
 import { plusCircle as blockIcon } from '@wordpress/icons';
 
 const onAddBlock = () => {
-    PressinoUI.addBlock({ blockName: 'pressino/iconlistitem' })
+    PressinoUI.addBlock({ blockName: 'pressino/imagelistitem' })
 }
 
 /**
@@ -23,7 +23,7 @@ export default function Edit(props) {
     const { attributes } = props;
     var tmpDisplay = display({ props, attributes, editMode: true });
     const blockProps = useBlockProps();
-    const { useimage } = attributes;
+    const { useicon } = attributes;
 
     var tmpAtts = props.attributes;
     if (!(tmpAtts.groupname)) {
@@ -35,9 +35,9 @@ export default function Edit(props) {
             <BlockControls>
                 <ToolbarGroup>
                     <ToolbarButton
-                        icon={PressinoUI.getBlockIcon('pressino/iconlistitem')}
-                        label="Add New Item"
-                        text="Add New Item"
+                        icon={PressinoUI.getBlockIcon('pressino/imagelistitem')}
+                        label="Add List Item"
+                        text="Add List Item"
                         onClick={onAddBlock}
                     />
                 </ToolbarGroup>
@@ -45,11 +45,11 @@ export default function Edit(props) {
 
             <InspectorControls>
                 <PanelBody title={istr('General Settings')}>
-                    {PressinoUI.getStandardProperty(props, 'useimage', 'Use Image', 'checkbox')}
-                    {PressinoUI.getStandardProperty(props, 'size', useimage ? 'Image Size' : 'Icon Size', 'sizes')}
+                    {/* {PressinoUI.getStandardProperty(props, 'useicon', 'Use Icon', 'checkbox')} */}
+                    {PressinoUI.getStandardProperty(props, 'size', useicon ? 'Icon Size' : 'Image Size', 'sizes')}
                     {PressinoUI.getStandardProperty(props, 'middle', 'Centered', 'checkbox')}
-                    {PressinoUI.getStandardProperty(props, 'celled', 'Lines Between Items', 'checkbox')}
-                    {PressinoUI.getStandardProperty(props, 'separated', 'Vertical Lines', 'checkbox')}
+                    {PressinoUI.getStandardProperty(props, 'centered', 'Centered when stacked', 'checkbox')}
+                    {PressinoUI.getStandardProperty(props, 'dividing', 'Lines Between Items', 'checkbox')}
                 </PanelBody>
             </InspectorControls>
 
