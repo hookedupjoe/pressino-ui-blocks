@@ -1,4 +1,3 @@
-
 kbd {
     border-radius: 3px;
     margin: 0px 3px 0px 3px;
@@ -7,15 +6,136 @@ kbd {
 }
 
 
+.ui.table.nopad td {
+    padding: 0px 0px 0px 10px;
+}
+
+
+/* UI Image Wrap */
+.pui.imgwrap-list>.item {
+    display: flex;
+    align-items: center;
+}
+
+.pui.imgwrap-list.celled>.item {
+    border-bottom: solid 1px;
+    text-align: center
+}
+
+.pui.imgwrap-list.celled>.item:first-child {
+    border-top: solid 1px;
+}
+
+/* Icons Sizes */
+
+
+.pui.imgwrap-list.small.icon>.item .imgwrap .icon {
+    width: 15px;
+    min-width: 15px;
+}
+
+.pui.imgwrap-list.medium.icon>.item .imgwrap .icon {
+    width: 24px;
+    min-width: 24px;
+}
+
+.pui.imgwrap-list.large.icon>.item .imgwrap .icon {
+    width: 28px;
+    min-width: 28px;
+}
+
+.pui.imgwrap-list.big.icon>.item .imgwrap .icon {
+    width: 35px;
+    min-width: 35px;
+}
+
+.pui.imgwrap-list.huge.icon>.item .imgwrap .icon {
+    width: 75px;
+    min-width: 75px;
+}
+
+/* Image Sizes */
+
+/* 
+.pui.imgwrap-list.small.icon>.item .imgwrap .image {
+    width: 15px;
+    min-width: 15px;
+}
+
+.pui.imgwrap-list.medium.icon>.item .imgwrap .image {
+    width: 24px;
+    min-width: 24px;
+}
+
+.pui.imgwrap-list.large.icon>.item .imgwrap .image {
+    width: 28px;
+    min-width: 28px;
+}
+
+.pui.imgwrap-list.big.icon>.item .imgwrap .image {
+    width: 35px;
+    min-width: 35px;
+}
+
+.pui.imgwrap-list.huge.icon>.item .imgwrap .image {
+    width: 75px;
+    min-width: 75px;
+} */
+
+
+/* 
+  .pui.imgwrap-list.small.icon > .item .imgwrap {
+    width: 60px;
+    min-width: 60px;
+ }
+
+
+
+  .pui.imgwrap-list.large > .item .imgwrap {
+     width: 190px;
+     min-width: 190px;
+  } */
+
+.pui.imgwrap-list.medium>.item .imgwrap>span.icon {
+    width: 100% !important;
+}
+
+.pui.imgwrap-list>.item .imgwrap {
+    padding: 10px;
+    align-items: center;
+}
+
+
+.pui.imgwrap-list>.item .content {
+    justify-content: center;
+    padding: 10px;
+    text-align: left;
+}
+
+.pui.imgwrap-list.tight>.item .content {
+    padding: 5px;
+}
+
+.pui.imgwrap-list.relaxed>.item .content {
+    padding: 15px;
+}
+
+.pui.imgwrap-list.separated>.item .content {
+    border-left: solid 1px;
+}
+
+/* UI Image Wrap  END*/
+
+
 
 .pressino.editor-boxed {
-    border:dashed 1px gray;
-    min-height:30px;
+    border: dashed 1px gray;
+    min-height: 30px;
 }
 
 .pressino.editor-boxed.selected {
-    border:dashed 5px #767676;
-    min-height:80px;
+    border: dashed 5px #767676;
+    min-height: 80px;
 }
 
 .debug-show {
@@ -24,48 +144,60 @@ kbd {
 
 /* URL Control was pushing past the allocated area */
 @media (min-width: 600px) {
-    body .block-editor-block-list__block .block-editor-url-input,.block-editor-url-input,.components-popover .block-editor-url-input {
-        min-width:unset;
+
+    body .block-editor-block-list__block .block-editor-url-input,
+    .block-editor-url-input,
+    .components-popover .block-editor-url-input {
+        min-width: unset;
     }
 }
 
-body i.icon.fafont, body i.icon.faicon{
+body i.icon.fafont,
+body i.icon.faicon {
     font-weight: unset !important;
     font-family: 'Font Awesome 6 Free' !important;
 }
 
-body i.icon.dashicons{
+body i.icon.dashicons {
     font-family: 'dashicons' !important;
 }
 
 
 /* Update to allow i tags to work with font awesome */
 
-i.icon.faicon{
+i.icon.faicon {
     font-weight: unset !important;
 }
 
 body .icon.inlist {
-    min-width:25px;
+    min-width: 25px;
 }
-body .icon.inlist.small, body .icon.inlist.tiny {
-    min-width:20px;
+
+body .icon.inlist.small,
+body .icon.inlist.tiny {
+    min-width: 20px;
 }
-body .icon.inlist.large, body .icon.inlist.big {
-    min-width:35px;
+
+body .icon.inlist.large,
+body .icon.inlist.big {
+    min-width: 35px;
 }
+
 body .icon.inlist.huge {
-    min-width:80px;
+    min-width: 80px;
 }
 
 body .icon.inlist.massive {
-    min-width:145px;
+    min-width: 145px;
 }
 
-.ui.list .list>.item>i.icon.middle, .ui.list>.item>i.icon.middle {
+.ui.list .list>.item>i.icon.middle,
+.ui.list>.item>i.icon.middle {
     vertical-align: middle;
 }
-.ui.list .list>.item>i.icon.bottom, .ui.list>.item>i.icon.bottom {
+
+.ui.list .list>.item>i.icon.bottom,
+.ui.list>.item>i.icon.bottom {
     vertical-align: bottom;
 }
 
@@ -74,38 +206,42 @@ body ul:not(.wp-block).useicon {
     --icon-space: 1.3em;
     list-style: none;
     padding: 0;
-  }
-  
-  body ul:not(.wp-block).useicon>li {
+}
+
+body ul:not(.wp-block).useicon>li {
     padding-left: var(--icon-space);
-  }
-  
-  body ul:not(.wp-block).useicon>li:before {
+}
+
+body ul:not(.wp-block).useicon>li:before {
     font-family: "Icons" !important;
     display: inline-block;
-    margin-left: calc( var(--icon-space) * -.5 );
-    margin-right: calc( var(--icon-space) * .5 );
+    margin-left: calc(var(--icon-space) * -.5);
+    margin-right: calc(var(--icon-space) * .5);
     width: var(--icon-space);
-  }
+}
 
 
-  body ul:not(.wp-block).circle>li:before {
-    content: "\f111" !important; 
-  }
-  body ul:not(.wp-block).circle.check>li:before {
-    content: "\f058" !important; 
-  }
-  body ul:not(.wp-block).circle.right.arrow>li:before {
-    content: "\f35a" !important; 
-  }  body ul:not(.wp-block).circle.question>li:before {
-    content: "\f059" !important; 
-  }
-  
+body ul:not(.wp-block).circle>li:before {
+    content: "\f111" !important;
+}
 
-  /* Span Icon Integration */
+body ul:not(.wp-block).circle.check>li:before {
+    content: "\f058" !important;
+}
+
+body ul:not(.wp-block).circle.right.arrow>li:before {
+    content: "\f35a" !important;
+}
+
+body ul:not(.wp-block).circle.question>li:before {
+    content: "\f059" !important;
+}
 
 
-  span.icon {
+/* Span Icon Integration */
+
+
+span.icon {
     display: inline-block;
     opacity: 1;
     margin: 0 .25rem 0 0;
@@ -121,7 +257,7 @@ body ul:not(.wp-block).useicon {
 }
 
 span.icon:before {
-    background: 0 0!important
+    background: 0 0 !important
 }
 
 span.icon.loading {
@@ -156,45 +292,47 @@ span.icon.loading {
 }
 
 span.icon.hover {
-    opacity: 1!important
+    opacity: 1 !important
 }
 
 span.icon.active {
-    opacity: 1!important
+    opacity: 1 !important
 }
 
 span.emphasized.icon {
-    opacity: 1!important
+    opacity: 1 !important
 }
 
 span.disabled.icon {
-    opacity: .45!important
+    opacity: .45 !important
 }
 
 span.fitted.icon {
     width: auto;
-    margin: 0!important
+    margin: 0 !important
 }
 
-span.link.icon,span.link.icons {
+span.link.icon,
+span.link.icons {
     cursor: pointer;
     opacity: .8;
     -webkit-transition: opacity .1s ease;
     transition: opacity .1s ease
 }
 
-span.link.icon:hover,span.link.icons:hover {
-    opacity: 1!important
+span.link.icon:hover,
+span.link.icons:hover {
+    opacity: 1 !important
 }
 
 span.circular.icon {
-    border-radius: 500em!important;
-    line-height: 1!important;
-    padding: .5em 0!important;
-    -webkit-box-shadow: 0 0 0 .1em rgba(0,0,0,.1) inset;
-    box-shadow: 0 0 0 .1em rgba(0,0,0,.1) inset;
-    width: 2em!important;
-    height: 2em!important
+    border-radius: 500em !important;
+    line-height: 1 !important;
+    padding: .5em 0 !important;
+    -webkit-box-shadow: 0 0 0 .1em rgba(0, 0, 0, .1) inset;
+    box-shadow: 0 0 0 .1em rgba(0, 0, 0, .1) inset;
+    width: 2em !important;
+    height: 2em !important
 }
 
 span.circular.inverted.icon {
@@ -203,22 +341,26 @@ span.circular.inverted.icon {
     box-shadow: none
 }
 
-span.flipped.icon,span.horizontally.flipped.icon {
-    -webkit-transform: scale(-1,1);
-    transform: scale(-1,1)
+span.flipped.icon,
+span.horizontally.flipped.icon {
+    -webkit-transform: scale(-1, 1);
+    transform: scale(-1, 1)
 }
 
 span.vertically.flipped.icon {
-    -webkit-transform: scale(1,-1);
-    transform: scale(1,-1)
+    -webkit-transform: scale(1, -1);
+    transform: scale(1, -1)
 }
 
-span.clockwise.rotated.icon,span.right.rotated.icon,span.rotated.icon {
+span.clockwise.rotated.icon,
+span.right.rotated.icon,
+span.rotated.icon {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg)
 }
 
-span.counterclockwise.rotated.icon,span.left.rotated.icon {
+span.counterclockwise.rotated.icon,
+span.left.rotated.icon {
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg)
 }
@@ -228,9 +370,9 @@ span.bordered.icon {
     vertical-align: baseline;
     width: 2em;
     height: 2em;
-    padding: .5em 0!important;
-    -webkit-box-shadow: 0 0 0 .1em rgba(0,0,0,.1) inset;
-    box-shadow: 0 0 0 .1em rgba(0,0,0,.1) inset
+    padding: .5em 0 !important;
+    -webkit-box-shadow: 0 0 0 .1em rgba(0, 0, 0, .1) inset;
+    box-shadow: 0 0 0 .1em rgba(0, 0, 0, .1) inset
 }
 
 span.bordered.inverted.icon {
@@ -239,9 +381,10 @@ span.bordered.inverted.icon {
     box-shadow: none
 }
 
-span.inverted.bordered.icon,span.inverted.circular.icon {
-    background-color: #1b1c1d!important;
-    color: #fff!important
+span.inverted.bordered.icon,
+span.inverted.circular.icon {
+    background-color: #1b1c1d !important;
+    color: #fff !important
 }
 
 span.inverted.icon {
@@ -249,212 +392,233 @@ span.inverted.icon {
 }
 
 span.red.icon {
-    color: #db2828!important
+    color: #db2828 !important
 }
 
 span.inverted.red.icon {
-    color: #ff695e!important
+    color: #ff695e !important
 }
 
-span.inverted.bordered.red.icon,span.inverted.circular.red.icon {
-    background-color: #db2828!important;
-    color: #fff!important
+span.inverted.bordered.red.icon,
+span.inverted.circular.red.icon {
+    background-color: #db2828 !important;
+    color: #fff !important
 }
 
 span.orange.icon {
-    color: #f2711c!important
+    color: #f2711c !important
 }
 
 span.inverted.orange.icon {
-    color: #ff851b!important
+    color: #ff851b !important
 }
 
-span.inverted.bordered.orange.icon,span.inverted.circular.orange.icon {
-    background-color: #f2711c!important;
-    color: #fff!important
+span.inverted.bordered.orange.icon,
+span.inverted.circular.orange.icon {
+    background-color: #f2711c !important;
+    color: #fff !important
 }
 
 span.yellow.icon {
-    color: #fbbd08!important
+    color: #fbbd08 !important
 }
 
 span.inverted.yellow.icon {
-    color: #ffe21f!important
+    color: #ffe21f !important
 }
 
-span.inverted.bordered.yellow.icon,span.inverted.circular.yellow.icon {
-    background-color: #fbbd08!important;
-    color: #fff!important
+span.inverted.bordered.yellow.icon,
+span.inverted.circular.yellow.icon {
+    background-color: #fbbd08 !important;
+    color: #fff !important
 }
 
 span.olive.icon {
-    color: #b5cc18!important
+    color: #b5cc18 !important
 }
 
 span.inverted.olive.icon {
-    color: #d9e778!important
+    color: #d9e778 !important
 }
 
-span.inverted.bordered.olive.icon,span.inverted.circular.olive.icon {
-    background-color: #b5cc18!important;
-    color: #fff!important
+span.inverted.bordered.olive.icon,
+span.inverted.circular.olive.icon {
+    background-color: #b5cc18 !important;
+    color: #fff !important
 }
 
 span.green.icon {
-    color: #21ba45!important
+    color: #21ba45 !important
 }
 
 span.inverted.green.icon {
-    color: #2ecc40!important
+    color: #2ecc40 !important
 }
 
-span.inverted.bordered.green.icon,span.inverted.circular.green.icon {
-    background-color: #21ba45!important;
-    color: #fff!important
+span.inverted.bordered.green.icon,
+span.inverted.circular.green.icon {
+    background-color: #21ba45 !important;
+    color: #fff !important
 }
 
 span.teal.icon {
-    color: #00b5ad!important
+    color: #00b5ad !important
 }
 
 span.inverted.teal.icon {
-    color: #6dffff!important
+    color: #6dffff !important
 }
 
-span.inverted.bordered.teal.icon,span.inverted.circular.teal.icon {
-    background-color: #00b5ad!important;
-    color: #fff!important
+span.inverted.bordered.teal.icon,
+span.inverted.circular.teal.icon {
+    background-color: #00b5ad !important;
+    color: #fff !important
 }
 
 span.blue.icon {
-    color: #2185d0!important
+    color: #2185d0 !important
 }
 
 span.inverted.blue.icon {
-    color: #54c8ff!important
+    color: #54c8ff !important
 }
 
-span.inverted.bordered.blue.icon,span.inverted.circular.blue.icon {
-    background-color: #2185d0!important;
-    color: #fff!important
+span.inverted.bordered.blue.icon,
+span.inverted.circular.blue.icon {
+    background-color: #2185d0 !important;
+    color: #fff !important
 }
 
 span.violet.icon {
-    color: #6435c9!important
+    color: #6435c9 !important
 }
 
 span.inverted.violet.icon {
-    color: #a291fb!important
+    color: #a291fb !important
 }
 
-span.inverted.bordered.violet.icon,span.inverted.circular.violet.icon {
-    background-color: #6435c9!important;
-    color: #fff!important
+span.inverted.bordered.violet.icon,
+span.inverted.circular.violet.icon {
+    background-color: #6435c9 !important;
+    color: #fff !important
 }
 
 span.purple.icon {
-    color: #a333c8!important
+    color: #a333c8 !important
 }
 
 span.inverted.purple.icon {
-    color: #dc73ff!important
+    color: #dc73ff !important
 }
 
-span.inverted.bordered.purple.icon,span.inverted.circular.purple.icon {
-    background-color: #a333c8!important;
-    color: #fff!important
+span.inverted.bordered.purple.icon,
+span.inverted.circular.purple.icon {
+    background-color: #a333c8 !important;
+    color: #fff !important
 }
 
 span.pink.icon {
-    color: #e03997!important
+    color: #e03997 !important
 }
 
 span.inverted.pink.icon {
-    color: #ff8edf!important
+    color: #ff8edf !important
 }
 
-span.inverted.bordered.pink.icon,span.inverted.circular.pink.icon {
-    background-color: #e03997!important;
-    color: #fff!important
+span.inverted.bordered.pink.icon,
+span.inverted.circular.pink.icon {
+    background-color: #e03997 !important;
+    color: #fff !important
 }
 
 span.brown.icon {
-    color: #a5673f!important
+    color: #a5673f !important
 }
 
 span.inverted.brown.icon {
-    color: #d67c1c!important
+    color: #d67c1c !important
 }
 
-span.inverted.bordered.brown.icon,span.inverted.circular.brown.icon {
-    background-color: #a5673f!important;
-    color: #fff!important
+span.inverted.bordered.brown.icon,
+span.inverted.circular.brown.icon {
+    background-color: #a5673f !important;
+    color: #fff !important
 }
 
 span.grey.icon {
-    color: #767676!important
+    color: #767676 !important
 }
 
 span.inverted.grey.icon {
-    color: #dcddde!important
+    color: #dcddde !important
 }
 
-span.inverted.bordered.grey.icon,span.inverted.circular.grey.icon {
-    background-color: #767676!important;
-    color: #fff!important
+span.inverted.bordered.grey.icon,
+span.inverted.circular.grey.icon {
+    background-color: #767676 !important;
+    color: #fff !important
 }
 
 span.black.icon {
-    color: #1b1c1d!important
+    color: #1b1c1d !important
 }
 
 span.inverted.black.icon {
-    color: #545454!important
+    color: #545454 !important
 }
 
-span.inverted.bordered.black.icon,span.inverted.circular.black.icon {
-    background-color: #1b1c1d!important;
-    color: #fff!important
+span.inverted.bordered.black.icon,
+span.inverted.circular.black.icon {
+    background-color: #1b1c1d !important;
+    color: #fff !important
 }
 
-span.mini.icon,span.mini.icons {
+span.mini.icon,
+span.mini.icons {
     line-height: 1;
     font-size: .4em
 }
 
-span.tiny.icon,span.tiny.icons {
+span.tiny.icon,
+span.tiny.icons {
     line-height: 1;
     font-size: .5em
 }
 
-span.small.icon,span.small.icons {
+span.small.icon,
+span.small.icons {
     line-height: 1;
     font-size: .75em
 }
 
-span.icon,span.icons {
+span.icon,
+span.icons {
     font-size: 1em
 }
 
-span.large.icon,span.large.icons {
+span.large.icon,
+span.large.icons {
     line-height: 1;
     vertical-align: middle;
     font-size: 1.5em
 }
 
-span.big.icon,span.big.icons {
+span.big.icon,
+span.big.icons {
     line-height: 1;
     vertical-align: middle;
     font-size: 2em
 }
 
-span.huge.icon,span.huge.icons {
+span.huge.icon,
+span.huge.icons {
     line-height: 1;
     vertical-align: middle;
     font-size: 4em
 }
 
-span.massive.icon,span.massive.icons {
+span.massive.icon,
+span.massive.icons {
     line-height: 1;
     vertical-align: middle;
     font-size: 8em
@@ -494,7 +658,7 @@ span.icons .corner.icon {
     -webkit-transform: none;
     transform: none;
     font-size: .45em;
-    text-shadow: -1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff
 }
 
 span.icons .top.right.corner.icon {
@@ -526,7 +690,7 @@ span.icons .bottom.right.corner.icon {
 }
 
 span.icons .inverted.corner.icon {
-    text-shadow: -1px -1px 0 #1b1c1d,1px -1px 0 #1b1c1d,-1px 1px 0 #1b1c1d,1px 1px 0 #1b1c1d
+    text-shadow: -1px -1px 0 #1b1c1d, 1px -1px 0 #1b1c1d, -1px 1px 0 #1b1c1d, 1px 1px 0 #1b1c1d
 }
 
 
@@ -539,7 +703,7 @@ span.icons .inverted.corner.icon {
     width: 1.28571429em;
     height: 1.28571429em;
     border-radius: 500rem;
-    border: .2em solid rgba(0,0,0,.1)
+    border: .2em solid rgba(0, 0, 0, .1)
 }
 
 .ui.loading.loading.input>span.icon:after {
@@ -587,10 +751,11 @@ span.icons .inverted.corner.icon {
 }
 
 .ui.icon.input>input {
-    padding-right: 2.67142857em!important
+    padding-right: 2.67142857em !important
 }
 
-.ui.icon.input>span.icon:after,.ui.icon.input>span.icon:before {
+.ui.icon.input>span.icon:after,
+.ui.icon.input>span.icon:before {
     left: 0;
     position: absolute;
     text-align: center;
@@ -620,8 +785,8 @@ span.icons .inverted.corner.icon {
 }
 
 .ui[class*="left icon"].input>input {
-    padding-left: 2.67142857em!important;
-    padding-right: 1em!important
+    padding-left: 2.67142857em !important;
+    padding-right: 1em !important
 }
 
 .ui.icon.input>input:focus~span.icon {
@@ -650,7 +815,8 @@ span.icons .inverted.corner.icon {
     opacity: 1
 }
 
-.ui.list .list>.item>span.icon,.ui.list>.item>span.icon {
+.ui.list .list>.item>span.icon,
+.ui.list>.item>span.icon {
     display: table-cell;
     margin: 0;
     padding-top: 0;
@@ -660,7 +826,8 @@ span.icons .inverted.corner.icon {
     transition: color .1s ease
 }
 
-.ui.list .list>.item>span.icon:only-child,.ui.list>.item>span.icon:only-child {
+.ui.list .list>.item>span.icon:only-child,
+.ui.list>.item>span.icon:only-child {
     display: inline-block;
     vertical-align: top
 }

@@ -76,6 +76,8 @@ function create_block_pressino_ui_blocks_block_init() {
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-bullets' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-container' );
 	register_block_type( __DIR__ . '/build/blocks/pressino-ui-web-elem' );
+	register_block_type( __DIR__ . '/build/blocks/pressino-ui-iconlist' );
+	register_block_type( __DIR__ . '/build/blocks/pressino-ui-iconlist-item' );
 }
 
 add_action( 'init', 'create_block_pressino_ui_blocks_block_init' );
