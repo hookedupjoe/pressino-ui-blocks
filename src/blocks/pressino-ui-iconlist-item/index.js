@@ -15,7 +15,9 @@ import {PressinoUI} from '../../pressino-ui';
  * Setup Block Attributes
  */
 let tmpAttributes = {};
-PressinoUI.addAttributes('text', tmpAttributes, ['parent_size']);
+
+PressinoUI.addAttributes('number', tmpAttributes, ['mediaID']);
+PressinoUI.addAttributes('text', tmpAttributes, ['parent_size','parent_useimage','mediaURL']);
 
 /**
  * Register Block

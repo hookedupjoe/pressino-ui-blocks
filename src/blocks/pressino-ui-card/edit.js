@@ -59,7 +59,7 @@ export default function Edit(props) {
             {PressinoUI.getStandardProperty(props, 'title', 'Card Title', 'text')}
             {PressinoUI.getStandardProperty(props, 'subtitle', 'Sub Title', 'text')}
             {PressinoUI.getStandardProperty(props, 'color', 'Card Color', 'colors')}
-            {PressinoUI.getStandardProperty(props, { mediaID: 'mediaID', mediaURL: 'mediaURL' }, 'Card Image', 'image')}
+            {PressinoUI.getStandardProperty(props, { mediaID: 'mediaID', mediaURL: 'mediaURL' }, 'Image', 'image')}
             {PressinoUI.getStandardProperty(props, 'url', 'Target Content or Link', 'url')}
             {PressinoUI.getStandardProperty(props, 'urlopentab', 'Open link in new tab?', 'checkbox')}
             {PressinoUI.getStandardProperty(props, 'title', 'fluid', 'Full width', 'checkbox')}

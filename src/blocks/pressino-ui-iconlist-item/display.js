@@ -16,14 +16,25 @@ function getClass(attributes, isEditMode) {
 
 export default function display({ props, editMode }) {
     var { attributes } = props;
-    const { classes } = attributes;
+    const { mediaURL } = attributes;
 
     var tmpContent = [];
     var tmpClass = getClass(attributes, editMode);
-    
     var tmpIconEl = <div class="imgwrap">
         <img class="ui image bordered mini" src="https://pressino.com/wp-content/uploads/2025/01/gimp-tool-move.png" alt="" />
     </div>;
+
+    if (mediaURL) {
+        
+        var tmpMClassName = 'ui image small';
+
+        var tmpMediaAtts = { src: mediaURL, className: tmpMClassName };
+        // if (parent_imageheight > 0) {
+        //     tmpMediaAtts.style = { "height": parent_imageheight + "px", "object-fit": "cover" };
+        // }
+        tmpIconEl = el('div', {className: 'imgwrap'}, el('img', tmpMediaAtts));
+    }
+   
 
     if (editMode) {
         var tmpViewContent = [];
