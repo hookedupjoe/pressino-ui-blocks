@@ -931,7 +931,7 @@ export const listSources = {
 	"bordertypes": "Default|,Solid Border|bordered,Inset|inset",
 	"hidewhen": "Always Visible|,Hide based on screen size|hide,Show based on screen size|show",
 	"hidewhensizes": "Default 768px|,Small 450px|small,Wide 850px|wide",
-
+	"imagestyles": "None|,Rounded Corers|rounded,Circular|circular",
 	"menuiconpos": "Default|,On Top Of Text|top",
 	"locationlr": "Default|,On the Left|left,On the Right|right",
 	"locationtb": "Default|,On the Top|top,On the Bottom|bottom",

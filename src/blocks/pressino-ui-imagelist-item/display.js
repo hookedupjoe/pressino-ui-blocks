@@ -16,7 +16,7 @@ function getClass(attributes, isEditMode) {
 
 export default function display({ props, editMode }) {
     var { attributes } = props;
-    const { mediaURL,parent_useicon, parent_size } = attributes;
+    const { mediaURL,parent_useicon, parent_size, parent_imagestyle } = attributes;
 
     var tmpContent = [];
     var tmpClass = getClass(attributes, editMode);
@@ -25,23 +25,13 @@ export default function display({ props, editMode }) {
     </div>;
 
     if (!parent_useicon && mediaURL) {
-        //ui image 
         var tmpMClassName = 'ui image';
-
-        //ToDo: Use class not style here
-                // The class can have a media setting to have smaller graphics and/or stack ??
+        if( parent_imagestyle ){
+            tmpMClassName += ' ' + parent_imagestyle;
+        }
         var tmpMediaAtts = { src: mediaURL, className: tmpMClassName };
-         //, style: {width: '150px'}
-
-
-
-        // if (parent_imageheight > 0) {
-        //     tmpMediaAtts.style = { "height": parent_imageheight + "px", "object-fit": "cover" };
-        // }
         tmpIconEl = el('div', {className: 'imgwrap'}, el('img', tmpMediaAtts));
     }
-   
-
 
     if (editMode) {
         var tmpViewContent = [];

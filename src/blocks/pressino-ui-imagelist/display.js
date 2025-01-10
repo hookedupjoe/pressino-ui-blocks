@@ -24,7 +24,7 @@ export default function display({ props, editMode }) {
     const { attributes } = props;
     var tmpClass = getClass(attributes, true);
     var theProps = props;
-    const { size, useicon, stackat } = attributes;
+    const { size, useicon, stackat, imagestyle } = attributes;
     tmpClass += ' ' + (useicon ? 'icon' : 'image');
 
     if (editMode){
@@ -48,6 +48,10 @@ export default function display({ props, editMode }) {
                 if( tmpBlockAtts.parent_useicon != useicon ){
                     tmpNeedToUpdate = true;
                     tmpBlockUpdates.parent_useicon = useicon;
+                }
+                if( tmpBlockAtts.parent_imagestyle != imagestyle ){
+                    tmpNeedToUpdate = true;
+                    tmpBlockUpdates.parent_imagestyle = imagestyle;
                 }
                
                 if( tmpNeedToUpdate ){

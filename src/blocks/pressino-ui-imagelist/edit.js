@@ -47,6 +47,7 @@ export default function Edit(props) {
                 <PanelBody title={istr('General Settings')}>
                     {/* {PressinoUI.getStandardProperty(props, 'useicon', 'Use Icon', 'checkbox')} */}
                     {PressinoUI.getStandardProperty(props, 'size', useicon ? 'Icon Size' : 'Image Size', 'sizes')}
+                    {PressinoUI.getStandardProperty(props, 'imagestyle', useicon ? 'Icon Style' : 'Image Style', 'imagestyles')}
                     {PressinoUI.getStandardProperty(props, 'middle', 'Centered', 'checkbox')}
                     {PressinoUI.getStandardProperty(props, 'centered', 'Centered when stacked', 'checkbox')}
                     {PressinoUI.getStandardProperty(props, 'dividing', 'Lines Between Items', 'checkbox')}
