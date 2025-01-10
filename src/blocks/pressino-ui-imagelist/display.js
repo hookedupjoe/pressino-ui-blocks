@@ -24,7 +24,7 @@ export default function display({ props, editMode }) {
     const { attributes } = props;
     var tmpClass = getClass(attributes, true);
     var theProps = props;
-    const { size, useicon } = attributes;
+    const { size, useicon, stackat } = attributes;
     tmpClass += ' ' + (useicon ? 'icon' : 'image');
 
     if (editMode){
@@ -76,7 +76,7 @@ export default function display({ props, editMode }) {
         ]];
         return el('div', { className: 'ui segment pad3 mar0 ' + theProps.attributes.color || '' }, null,
             tmpHdr,
-            el('div', { className: 'edit-grid' + props.attributes.color  },
+            el('div', { className: 'edit-grid' + ' ' + tmpClass  },
                 [
                     el(wp.blockEditor.InnerBlocks, { template: tmpTemplate, allowedBlocks: ['pressino/imagelistitem'], renderAppender: wp.blockEditor.InnerBlocks.DefaultBlockAppender }),
                 ]
@@ -86,11 +86,27 @@ export default function display({ props, editMode }) {
     } else {
         
         var tmpNewAtts = {className: tmpClass};
-        if (props.attributes.stackat) {
-            tmpNewAtts["stackat"] = props.attributes.stackat;
-        }
-        tmpNewAtts["auto-adapt"] = "stackable";
+        var tmpStackAt = 0;
 
+        if (stackat) {
+            tmpStackAt = stackat;
+        } else {
+            // //--- Use Defaults
+            // if( !(size == 'mini' || size == 'mini' || size == 'tiny' || size == 'small' || size == 'medium') ){
+            //     tmpStackAt = 450;
+            // }
+            if( size == 'medium' || size == 'large' ){
+                tmpStackAt = 420;
+            } else if( size == 'big' || size == 'huge' || size == 'massive' ){
+                tmpStackAt = 700;
+            }
+        }
+        if( tmpStackAt ){
+            //--- Only trigger the action if needed
+            tmpNewAtts["stackat"] = tmpStackAt;
+            tmpNewAtts["auto-adapt"] = "stackable";
+        }
+    
         return el('div', tmpNewAtts, el(wp.blockEditor.InnerBlocks.Content));
     }
 
