@@ -21,6 +21,8 @@ export default function display({ props, editMode }) {
     var tmpAtts = props.attributes;
     var tmpClass = getClass(tmpAtts, true);
     var theProps = props;
+    tmpClass += ' small';
+
 
     if (editMode) {
         var tmpUIColor = ''; //was props.attributes.color || 

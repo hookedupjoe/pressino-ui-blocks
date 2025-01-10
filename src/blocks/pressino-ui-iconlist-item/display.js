@@ -25,10 +25,16 @@ export default function display({ props, editMode }) {
     </div>;
 
     if (mediaURL) {
-        
-        var tmpMClassName = 'ui image small';
+        //ui image 
+        var tmpMClassName = 'ui image';
 
+        //ToDo: Use class not style here
+                // The class can have a media setting to have smaller graphics and/or stack ??
         var tmpMediaAtts = { src: mediaURL, className: tmpMClassName };
+         //, style: {width: '150px'}
+
+
+
         // if (parent_imageheight > 0) {
         //     tmpMediaAtts.style = { "height": parent_imageheight + "px", "object-fit": "cover" };
         // }
@@ -40,7 +46,7 @@ export default function display({ props, editMode }) {
         var tmpViewContent = [];
         var tmpInnerContent = el(wp.blockEditor.InnerBlocks,{});
 
-        tmpViewContent.push(<table className="ui table nopad basic celled" cellpadding="0" cellspacing="0"  width="100%"><tr><td width="100">{tmpIconEl}</td><td>{tmpInnerContent}</td></tr></table>)
+        tmpViewContent.push(<table className={"ui table nopad basic celled pui imgwrap-list small"} cellpadding="0" cellspacing="0"  width="100%"><tr><td width="100">{tmpIconEl}</td><td>{tmpInnerContent}</td></tr></table>)
         tmpContent.push(tmpViewContent);
 
         return el('div', { }, tmpContent);
