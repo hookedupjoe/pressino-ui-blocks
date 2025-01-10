@@ -3,9 +3,9 @@
 	"apiVersion": 3,
 	"name": "pressino/imagelistitem",
 	"version": "0.1.0",
-	"title": "UI Grid Column",
+	"title": "UI Image List Item",
 	"category": "pressino-ui-blocks",
-	"description": "A panel that lives with other panels in a grid.",
+	"description": "A list item with an image on the side",
 	"example": {},
 	"supports": {
 		"html": false,

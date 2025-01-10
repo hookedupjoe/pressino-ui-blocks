@@ -406,6 +406,43 @@ const iconPaths = {
 };
 
 const iconSVGs = {
+	'pressino/imagelistitem' : (<svg width="80" height="80" version="1.1" viewBox="0 0 21.167 21.167" xmlns="http://www.w3.org/2000/svg">
+		<rect x="1.5762" y="3.4779" width="18.236" height="6.78" fill="#fff" opacity=".999" stroke="#000" stroke-width=".25348"/>
+		<g stroke="#de7a2f" stroke-width=".25348">
+		 <rect x="8.9155" y="5.8495" width="9.6679" height=".9355" opacity=".999"/>
+		 <rect x="8.9155" y="7.4562" width="9.6679" height=".9355" opacity=".999"/>
+		 <rect x="2.8928" y="4.665" width="4.8054" height="4.333" fill="#de7a2f" opacity=".999"/>
+		 <ellipse cx="5.2193" cy="6.8051" rx="1.8916" ry="1.8936" opacity=".999"/>
+		</g>
+		<g stroke-width=".25348">
+		 <rect x="1.5762" y="11.847" width="18.236" height="6.78" fill="#fff" opacity=".999" stroke="#000"/>
+		 <rect x="8.9155" y="14.218" width="9.6679" height=".9355" fill="#b3b3b3" opacity=".999" stroke="#808080"/>
+		 <rect x="8.9155" y="15.825" width="9.6679" height=".9355" fill="#b3b3b3" opacity=".999" stroke="#808080"/>
+		 <rect x="2.8928" y="13.034" width="4.8054" height="4.333" fill="#999" opacity=".999" stroke="#4d4d4d"/>
+		 <ellipse cx="5.2193" cy="15.174" rx="1.8916" ry="1.8936" fill="#ccc" opacity=".999" stroke="#808080"/>
+		</g>
+	   </svg>
+	   ),
+	'pressino/imagelist' : (<svg width="80" height="80" version="1.1" viewBox="0 0 21.167 21.167" xmlns="http://www.w3.org/2000/svg">
+		<g transform="matrix(.91712 0 0 1.0007 1.0091 -.087661)" stroke-width=".26459">
+		 <rect x=".61841" y="3.563" width="19.884" height="6.7751" fill="#fff" opacity=".999" stroke="#000"/>
+		 <g stroke="#de7a2f">
+		  <rect x="8.621" y="5.9328" width="10.542" height=".93481" opacity=".999"/>
+		  <rect x="8.621" y="7.5384" width="10.542" height=".93481" opacity=".999"/>
+		  <rect x="2.054" y="4.7492" width="5.2396" height="4.3298" fill="#de7a2f" opacity=".999"/>
+		  <ellipse cx="4.5908" cy="6.8878" rx="2.0625" ry="1.8922" opacity=".999"/>
+		 </g>
+		 <g transform="translate(0 8.3626)">
+		  <rect x=".61841" y="3.563" width="19.884" height="6.7751" fill="#fff" opacity=".999" stroke="#000"/>
+		  <g stroke="#de7a2f">
+		   <rect x="8.621" y="5.9328" width="10.542" height=".93481" opacity=".999"/>
+		   <rect x="8.621" y="7.5384" width="10.542" height=".93481" opacity=".999"/>
+		   <rect x="2.054" y="4.7492" width="5.2396" height="4.3298" fill="#de7a2f" opacity=".999"/>
+		   <ellipse cx="4.5908" cy="6.8878" rx="2.0625" ry="1.8922" opacity=".999"/>
+		  </g>
+		 </g>
+		</g>
+	   </svg>),
 	'pressino/splitcolumn': (<svg width="80" height="80" version="1.1" viewBox="0 0 21.167 21.167" xmlns="http://www.w3.org/2000/svg">
 		<rect x="1.4359" y="1.6011" width="8.5278" height="18.054" fill="#fff" stroke="#000" stroke-width=".23896"/>
 		<rect x="1.4924" y="1.8543" width="8.4145" height="17.546" fill="#ffedde" stroke-width=".52335"/>
