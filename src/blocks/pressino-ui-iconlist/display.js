@@ -2,9 +2,12 @@
  * Return universal display element used by edit and save functions
  */
 import { PressinoUI, el } from '../../pressino-ui';
- 
+const { store: blockEditorStore } = wp.blockEditor;
+const { useSelect } = wp.data;
+const { updateBlockAttributes } = wp.data.dispatch( 'core/block-editor' )
+
 var classSpecs = {
-    boolean: ['celled','separated'],
+    boolean: ['celled','separated','middle'],
 	string: ['size']
 }
 
@@ -18,11 +21,46 @@ function getClass(theAtts, theIsEditMode) {
 }
 
 export default function display({ props, editMode }) {
-    var tmpAtts = props.attributes;
-    var tmpClass = getClass(tmpAtts, true);
+    const { attributes } = props;
+    var tmpClass = getClass(attributes, true);
     var theProps = props;
-    tmpClass += ' small';
+    const { size, useimage } = attributes;
+    tmpClass += ' ' + (useimage ? 'image' : 'icon');
 
+    if (editMode){
+        const { clientId } = props;
+        const tmpBlocks = useSelect(
+            (select) => select(blockEditorStore).getBlock(clientId).innerBlocks,
+        );
+        
+        if(tmpBlocks.length){
+            for( var iPos in tmpBlocks){
+                var tmpBlock = tmpBlocks[iPos];
+
+                var tmpNeedToUpdate = false;
+                var tmpBlockUpdates = {};
+
+                var tmpBlockAtts = tmpBlock.attributes;
+                if( tmpBlockAtts.parent_size != size ){
+                    tmpNeedToUpdate = true;
+                    tmpBlockUpdates.parent_size = size;
+                }
+                if( tmpBlockAtts.parent_useimage != useimage ){
+                    tmpNeedToUpdate = true;
+                    tmpBlockUpdates.parent_useimage = useimage;
+                }
+               
+                if( tmpNeedToUpdate ){
+                    updateBlockAttributes(tmpBlock.clientId, tmpBlockUpdates);
+                }
+
+               
+            }
+           
+            
+        }
+    }
+    
 
     if (editMode) {
         var tmpUIColor = ''; //was props.attributes.color || 

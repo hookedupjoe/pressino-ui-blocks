@@ -15,16 +15,13 @@ kbd {
 .pui.imgwrap-list>.item {
     display: flex;
 }
+.pui.imgwrap-list.mobile>.item {
+    flex-direction: column;
+}
 
 .pui.imgwrap-list.middle>.item {
-    display: flex;
     align-items: center;
 }
-.pui.imgwrap-list.bottom>.item {
-    display: flex;
-    align-items: bottom;
-}
-
 
 .pui.imgwrap-list.celled>.item {
     border-bottom: solid 1px;
@@ -65,16 +62,48 @@ kbd {
 
 /* Image Sizes */
 
+.pui.imgwrap-list  .image {
+    width: 110px;
+    min-width: 120px;
+}
 
+.pui.imgwrap-list.mini  .image {
+    width: 40px;
+    min-width: 40px;
+}
+.pui.imgwrap-list.tiny  .image {
+    width: 60px;
+    min-width: 60px;
+}
 .pui.imgwrap-list.small  .image {
     width: 100px;
     min-width: 100px;
 }
-.pui.imgwrap-list.medium>.item .imgwrap {
-    width: 125px;
-    min-width: 125px;
+.pui.imgwrap-list.medium  .image {
+    width: 130px;
+    min-width: 130px;
+}
+.pui.imgwrap-list.large  .image {
+    width: 160px;
+    min-width: 160px;
+}
+.pui.imgwrap-list.big  .image {
+    width: 200px;
+    min-width: 200px;
+}
+.pui.imgwrap-list.huge  .image {
+    width: 250px;
+    min-width: 250px;
+}
+.pui.imgwrap-list.massive  .image {
+    width: 300px;
+    min-width: 300px;
 }
 
+.pui.imgwrap-list.medium  .image {
+    width: 130px;
+    min-width: 130px;
+}
 /* 
 .pui.imgwrap-list.small.icon>.item .imgwrap .image {
     width: 15px;
@@ -139,10 +168,21 @@ kbd {
     padding: 15px;
 }
 
-.pui.imgwrap-list.separated>.item .content {
+.pui.imgwrap-list:not(.mobile).separated>.item .content {
     border-left: solid 1px;
 }
+.pui.imgwrap-list.mobile >.item .content {
+    width:100%;
+}
+.pui.imgwrap-list.mobile.middle >.item .content {
+  text-align:center;
+}
 
+
+
+.pui.imgwrap-list.mobile.middle >.item .content {
+    align-items: left;
+}
 /* UI Image Wrap  END*/
 
 

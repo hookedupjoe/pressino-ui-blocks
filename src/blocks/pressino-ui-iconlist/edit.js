@@ -36,8 +36,8 @@ export default function Edit(props) {
                 <ToolbarGroup>
                     <ToolbarButton
                         icon={PressinoUI.getBlockIcon('pressino/iconlistitem')}
-                        label="Add New Line"
-                        text="Add New Line"
+                        label="Add New Item"
+                        text="Add New Item"
                         onClick={onAddBlock}
                     />
                 </ToolbarGroup>
@@ -47,6 +47,7 @@ export default function Edit(props) {
                 <PanelBody title={istr('General Settings')}>
                     {PressinoUI.getStandardProperty(props, 'useimage', 'Use Image', 'checkbox')}
                     {PressinoUI.getStandardProperty(props, 'size', useimage ? 'Image Size' : 'Icon Size', 'sizes')}
+                    {PressinoUI.getStandardProperty(props, 'middle', 'Centered', 'checkbox')}
                     {PressinoUI.getStandardProperty(props, 'celled', 'Lines Between Items', 'checkbox')}
                     {PressinoUI.getStandardProperty(props, 'separated', 'Vertical Lines', 'checkbox')}
                 </PanelBody>
