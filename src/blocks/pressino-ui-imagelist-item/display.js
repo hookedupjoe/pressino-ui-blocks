@@ -16,13 +16,24 @@ function getClass(attributes, isEditMode) {
 
 export default function display({ props, editMode }) {
     var { attributes } = props;
-    const { mediaURL,parent_useicon, parent_size, parent_imagestyle, parent_bordertype } = attributes;
+    const { mediaURL,parent_useicon, parent_size, parent_imagestyle, parent_borderstyle, parent_color } = attributes;
 
     var tmpContent = [];
     var tmpClass = getClass(attributes, editMode);
 
+    if( parent_borderstyle == 'segment' ){
+        tmpClass += ' ui segment pad0';
+    } else if( parent_borderstyle == 'bordered' ){
+        tmpClass += ' ui segment bordered pad0';
+    } else if( parent_borderstyle == 'inverted' ){
+        tmpClass += ' ui segment inverted pad0';
+    } else if( parent_borderstyle == 'message' ){
+        tmpClass += ' ui message pad0';
+    }
+    if( parent_color ){
+        tmpClass += ' ' + parent_color;
+    }
 
-    tmpClass += ' ui segment blue pad0';
     //bordered 
 
     //tmpClass += ' ui message pad0';

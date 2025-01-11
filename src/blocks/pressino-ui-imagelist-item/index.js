@@ -17,7 +17,7 @@ import {PressinoUI} from '../../pressino-ui';
 let tmpAttributes = {};
 
 PressinoUI.addAttributes('number', tmpAttributes, ['mediaID']);
-PressinoUI.addAttributes('text', tmpAttributes, ['parent_size','parent_useicon','parent_imagestyle','mediaURL']);
+PressinoUI.addAttributes('text', tmpAttributes, ['parent_size','parent_color', 'parent_useicon','parent_imagestyle','parent_borderstyle','mediaURL']);
 
 /**
  * Register Block

@@ -237,6 +237,8 @@ function getStandardProperty(props, theAttName, theLabel, theControlType, theOnC
 		tmpContents.push(getTextControl(props, theAttName, theLabel, tmpVal, tmpOnChange, theControlType));
 	} else if (theControlType == 'image') {
 		return getCustomImageSelection(props, theAttName, theLabel, tmpVal, tmpOnChange, theControlType)
+	} else if (theControlType == 'select') {
+		return getSelectControl(props, theAttName, theLabel, tmpVal, tmpOnChange, theControlType, theSelectionList)
 	} else if (theControlType == 'url') {
 		return getCustomURLControl(props, theAttName, theLabel, tmpVal, tmpOnChange, theControlType)
 	} else if (listSources[theControlType]) {
@@ -310,7 +312,7 @@ function getControlImage() {
 
 
 
-function getSelectControl(props, theName, theLabel, theValue, theOnChange, theControlType) {
+function getSelectControl(props, theName, theLabel, theValue, theOnChange, theControlType, theSelectionList) {
 	
 	var tmpOnChange = theOnChange;
 	if (!(tmpOnChange)) {
@@ -320,8 +322,11 @@ function getSelectControl(props, theName, theLabel, theValue, theOnChange, theCo
 			props.setAttributes(tmpAddedAtts);
 		}
 	}
-
-	var tmpOptions = getSelectionListForAttribute(theControlType);
+	var tmpSelection = theSelectionList || theControlType;
+	if( theControlType == 'select' ){
+		console.log('theSelectionList',theSelectionList)
+	}
+	var tmpOptions = getSelectionListForAttribute(tmpSelection);
 	return (<SelectControl
 		label={theLabel}
 		value={theValue}
@@ -681,7 +686,7 @@ function getSelectionListForAttribute(thePropName) {
 	if (listSources[tmpName]) {
 		return getListAsObjects(listSources[tmpName]);
 	}
-	return {}
+	return getListAsObjects(thePropName)
 }
 
 function getListAsArrays(theList) {

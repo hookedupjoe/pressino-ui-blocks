@@ -167,21 +167,21 @@ kbd {
 
 
 
-.pui.image-list>.item .content {
+.pui.image-list>.item > .content {
     width: 100%
 }
-.pui.image-list:not(.stacked)>.item .content {
+.pui.image-list:not(.stacked)>.item > .content {
     justify-content: center;
 }
 
-.pui.image-list>.item .content {
+.pui.image-list>.item > .content {
     text-align: left;
 }
-.pui.image-list:not(.stacked) > .item .content {
+.pui.image-list:not(.stacked) > .item > .content {
     padding: 10px;
 }
-.pui.image-list.stacked>.item .content {
-    padding-top: 10px;
+.pui.image-list.stacked>.item > .content {
+    padding: 10px;
 }
 /* .pui.image-list.stacked.separated > .item  .content   {
     border-top: solid 1px;
@@ -189,7 +189,7 @@ kbd {
     padding-top: 5px;
 } */
 
-.pui.image-list.tight>.item .content {
+.pui.image-list.tight>.item > .content {
     padding: 5px;
 }
 
@@ -205,10 +205,9 @@ kbd {
 .pui.image-list.stacked>.item.ui.segment .imgwrap, .pui.image-list.stacked>.item.ui.message .imgwrap{
     margin: 10px;
 }
-.pui.image-list.stacked>.item.ui.segment .content, .pui.image-list.stacked>.item.ui.message .content {
-    margin-bottom: 10px;
+.pui.image-list.stacked>.item.ui.segment .item > .content, .pui.image-list.stacked>.item.ui.message .item > .content {
+    margin: 0px 0px 10px 0px;
     padding: 10px;
-    padding-top: 0px;
 }
 
 

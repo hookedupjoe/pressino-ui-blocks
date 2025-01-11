@@ -48,6 +48,8 @@ export default function Edit(props) {
                     {/* {PressinoUI.getStandardProperty(props, 'useicon', 'Use Icon', 'checkbox')} */}
                     {PressinoUI.getStandardProperty(props, 'size', useicon ? 'Icon Size' : 'Image Size', 'sizes')}
                     {PressinoUI.getStandardProperty(props, 'imagestyle', useicon ? 'Icon Style' : 'Image Style', 'imagestyles')}
+                    {PressinoUI.getStandardProperty(props, 'borderstyle','Border Style', 'select', null, 'None|,Segment|segment,Segment Bordered|bordered,Segment Inverted|inverted,Message|message')}
+                    {PressinoUI.getStandardProperty(props, 'color', 'Color', 'colors')}
                     {PressinoUI.getStandardProperty(props, 'middle', 'Centered', 'checkbox')}
                     {PressinoUI.getStandardProperty(props, 'centered', 'Centered when stacked', 'checkbox')}
                     {PressinoUI.getStandardProperty(props, 'dividing', 'Lines Between Items', 'checkbox')}

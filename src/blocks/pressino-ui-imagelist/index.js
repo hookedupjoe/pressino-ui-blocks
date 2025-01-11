@@ -16,8 +16,8 @@ import {PressinoUI} from '../../pressino-ui';
  */
 let tmpAttributes = {};
 PressinoUI.addAttributes('number', tmpAttributes, ['stackat']);
-PressinoUI.addAttributes('text', tmpAttributes, ['size']);
 PressinoUI.addAttributes('boolean', tmpAttributes, ['useicon', 'dividing','centered','middle','imagestyle']);
+PressinoUI.addAttributes('text', tmpAttributes, ['size','borderstyle','color']);
 
 /**
  * Register Block

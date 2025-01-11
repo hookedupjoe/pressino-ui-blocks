@@ -24,7 +24,7 @@ export default function display({ props, editMode }) {
     const { attributes } = props;
     var tmpClass = getClass(attributes, true);
     var theProps = props;
-    const { size, useicon, stackat, imagestyle } = attributes;
+    const { size, useicon, stackat, imagestyle, borderstyle, color } = attributes;
     tmpClass += ' ' + (useicon ? 'icon' : 'image');
 
     if (editMode){
@@ -53,6 +53,16 @@ export default function display({ props, editMode }) {
                     tmpNeedToUpdate = true;
                     tmpBlockUpdates.parent_imagestyle = imagestyle;
                 }
+                if( tmpBlockAtts.parent_borderstyle != borderstyle ){
+                    tmpNeedToUpdate = true;
+                    tmpBlockUpdates.parent_borderstyle = borderstyle;
+                }
+                if( tmpBlockAtts.parent_color != color ){
+                    tmpNeedToUpdate = true;
+                    tmpBlockUpdates.parent_color = color;
+                }
+                
+                
                
                 if( tmpNeedToUpdate ){
                     updateBlockAttributes(tmpBlock.clientId, tmpBlockUpdates);
