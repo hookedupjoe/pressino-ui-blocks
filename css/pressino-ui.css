@@ -39,7 +39,7 @@ kbd {
 .pui.image-list.dividing>.item:first-child {
     border-top: solid 1px;
 }
-
+/* 
 /* Icons Sizes */
 
 
@@ -66,7 +66,7 @@ kbd {
 .pui.image-list.huge.icon>.item .imgwrap .icon {
     width: 75px;
     min-width: 75px;
-}
+} */
 
 /* Image Sizes */
 
@@ -166,6 +166,10 @@ kbd {
 } */
 
 
+
+.pui.image-list>.item .content {
+    width: 100%
+}
 .pui.image-list:not(.stacked)>.item .content {
     justify-content: center;
 }
@@ -188,6 +192,25 @@ kbd {
 .pui.image-list.tight>.item .content {
     padding: 5px;
 }
+
+.pui.image-list>.item.ui.segment, .pui.image-list>.item.ui.message {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* .pui.image-list.stacked>.item.ui.segment, .pui.image-list.stacked>.item.ui.message {
+    padding: 0px;
+} */
+
+.pui.image-list.stacked>.item.ui.segment .imgwrap, .pui.image-list.stacked>.item.ui.message .imgwrap{
+    margin: 10px;
+}
+.pui.image-list.stacked>.item.ui.segment .content, .pui.image-list.stacked>.item.ui.message .content {
+    margin-bottom: 10px;
+    padding: 10px;
+    padding-top: 0px;
+}
+
 
 .pui.image-list.relaxed>.item .content {
     padding: 15px;
