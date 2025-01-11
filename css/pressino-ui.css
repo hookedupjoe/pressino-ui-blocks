@@ -193,9 +193,17 @@ kbd {
     padding: 5px;
 }
 
-.pui.image-list>.item.ui.segment, .pui.image-list>.item.ui.message {
+/* .pui.image-list>.item.ui.segment, .pui.image-list>.item.ui.message {
     margin-top: 2px;
     margin-bottom: 2px;
+} */
+
+.pui.image-list>.item.ui.segment, .pui.image-list>.item.ui.message {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.pui.image-list>.item.ui.segment:first-child, .pui.image-list>.item.ui.message:first-child {
+    margin-top: 0px;
 }
 
 /* .pui.image-list.stacked>.item.ui.segment, .pui.image-list.stacked>.item.ui.message {
