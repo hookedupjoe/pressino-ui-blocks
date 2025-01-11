@@ -16,7 +16,7 @@ function getClass(attributes, isEditMode) {
 
 export default function display({ props, editMode }) {
     var { attributes } = props;
-    const { mediaURL,parent_useicon, parent_size, parent_imagestyle, parent_borderstyle, parent_color } = attributes;
+    const { mediaURL,parent_useicon, parent_size, parent_imagestyle, parent_borderstyle, parent_color,parent_imagebordered } = attributes;
 
     var tmpContent = [];
     var tmpClass = getClass(attributes, editMode);
@@ -46,6 +46,9 @@ export default function display({ props, editMode }) {
         var tmpMClassName = 'ui image';
         if( parent_imagestyle ){
             tmpMClassName += ' ' + parent_imagestyle;
+        }
+        if( parent_imagebordered ){
+            tmpMClassName += ' bordered';
         }
         var tmpMediaAtts = { src: mediaURL, className: tmpMClassName };
         tmpIconEl = el('div', {className: 'imgwrap'}, el('img', tmpMediaAtts));

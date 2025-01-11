@@ -18,6 +18,7 @@ let tmpAttributes = {};
 
 PressinoUI.addAttributes('number', tmpAttributes, ['mediaID']);
 PressinoUI.addAttributes('text', tmpAttributes, ['parent_size','parent_color', 'parent_useicon','parent_imagestyle','parent_borderstyle','mediaURL']);
+PressinoUI.addAttributes('boolean', tmpAttributes, ['parent_imagebordered']);
 
 /**
  * Register Block

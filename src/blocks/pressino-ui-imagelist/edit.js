@@ -47,11 +47,12 @@ export default function Edit(props) {
                 <PanelBody title={istr('General Settings')}>
                     {/* {PressinoUI.getStandardProperty(props, 'useicon', 'Use Icon', 'checkbox')} */}
                     {PressinoUI.getStandardProperty(props, 'size', useicon ? 'Icon Size' : 'Image Size', 'sizes')}
-                    {PressinoUI.getStandardProperty(props, 'imagestyle', useicon ? 'Icon Style' : 'Image Style', 'imagestyles')}
                     {PressinoUI.getStandardProperty(props, 'borderstyle','Border Style', 'select', null, 'None|,Segment|segment,Segment Bordered|bordered,Segment Inverted|inverted,Message|message')}
                     {PressinoUI.getStandardProperty(props, 'color', 'Color', 'colors')}
                     {PressinoUI.getStandardProperty(props, 'middle', 'Centered', 'checkbox')}
                     {PressinoUI.getStandardProperty(props, 'centered', 'Centered when stacked', 'checkbox')}
+                    {PressinoUI.getStandardProperty(props, 'imagestyle', useicon ? 'Icon Style' : 'Image Style', 'imagestyles')}
+                    {PressinoUI.getStandardProperty(props, 'imagebordered', 'Add Image Border', 'checkbox')}
                     {PressinoUI.getStandardProperty(props, 'dividing', 'Lines Between Items', 'checkbox')}
                     {PressinoUI.getStandardProperty(props, 'stackat', 'Stack when parent at (px)', 'number')}
                     <div class="ui message blue small"><string>Note:</string>Leave blank and it will break or not break based on image size.  Set if you need to change how it works.</div>
